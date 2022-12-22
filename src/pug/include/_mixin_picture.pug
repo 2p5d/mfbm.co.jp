@@ -1,0 +1,70 @@
+//- {ファイル名}, {拡張子,フォールバック拡張子}、[alt]、{class[配列]}、{高},{幅},{ブレークポイント：boolean},{lazyload：boolean},{レティナ画像：boolean}
+mixin picture(filename, type, alt, classes, width, height, breakpoint, lazyload, retina)
+	-
+		function typeCheck() {
+			const isIncludes = (arr, target) => arr.some((el) => target.includes(el));
+			if((isIncludes(["webp", "jpg", "png", "svg"], [type.type]))) {
+				if((type.type === "webp") && !(isIncludes(["jpg", "png"], [type.fallbackType])) ) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		}
+	if typeCheck()
+		picture
+			each val in type
+				source(
+					type=(
+						val==="jpg"?
+							"image/jpeg"
+						:
+						val==="svg"?
+							"image/svg+xml"
+						:
+							"image/" + val
+					),
+					media=(
+						breakpoint.breakpoint?
+							"(min-width: 768px)"
+						:
+							false
+					),
+					srcset!=(
+						retina.retina && type.type !== 'svg'?
+							assets_path + image_dir + filename.filename + "." + val + " 1x," + assets_path + image_dir + filename.filename + "@2x." + val + " 2x,"
+						:
+							assets_path + image_dir + filename.filename + "." + val
+					),
+				)
+				if breakpoint.breakpoint
+					source(
+						type=(
+							val==="jpg"?
+								"image/jpeg"
+							:
+							val==="svg"?
+								"image/svg+xml"
+							:
+								"image/" + val
+						),
+						media="(max-width: 767px)",
+						srcset!=assets_path + image_dir + filename.filename + "-sp." + val
+					)
+				if type.type==="svg" || type.type === type.fallbackType
+					- break
+				//- if val.type==="svg" || val.type===val.fallbackType
+				//- 	- break
+			img(
+				src!=assets_path + image_dir + filename.filename + "." + (
+						type.type==="webp"?
+							type.fallbackType
+						:
+							type.type
+					),
+				width=width.width, height=height.height, alt=alt.alt,
+				loading=lazyload.lazyload?"lazy":"eager",
+				class=classes.classes,
+			)
+	else
+		p(style="font-size: 16px;position:fixed; top: 50%; left: 50%; color: red") type error

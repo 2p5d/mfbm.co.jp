@@ -1,0 +1,53 @@
+[data-modal-content] {
+	display: none;
+	.modal & {
+		display: block;
+	}
+}
+
+.modal {
+	z-index: 99;
+	&.modal--pop-up {
+		z-index: 9999;
+	}
+}
+
+.modal__inner {
+	background-color: white;
+	.modal.modal--menu & {
+		// ↓ヘッダーの重なりを考慮するケース
+		margin-top: 8.8rem;
+		height: calc(100vh - 8.8rem) !important;
+	}
+	.modal.modal--pop-up & {
+		// ↓ヘッダーの重なりを考慮するケース
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.85);
+	}
+	// ↓ [data-modal-content]の値をmodal.jsでclassにふるので、個別のスタイルの設定
+	// .modal.modal--値 & {
+	//   background-color: rgba(255, 255, 255, .95);
+	// }
+}
+
+// 開発用　↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+// .modal {
+// 	position: fixed;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 100vw; // ガタツキ防止
+// 	height: 100vh; // iosでアドレスバー変化のガタツキ防止
+// 	overflow: hidden;
+// }
+
+// .modal__inner {
+// 	width: 100%;
+// 	height: 100%;
+// 	overflow-y: auto;
+// 	paddingright: 15px; // 暫定のスクロールバーサイズ
+// }

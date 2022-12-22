@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 314.68 196.39">
+  <defs>
+    <linearGradient id="_名称未設定グラデーション_499" data-name="名称未設定グラデーション 499" x1="0" y1="98.2" x2="314.68" y2="98.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#429888"/>
+      <stop offset=".63" stop-color="#91bd9f"/>
+      <stop offset="1" stop-color="#bcd2ac"/>
+    </linearGradient>
+  </defs>
+  <g id="_デザイン" data-name="デザイン">
+    <path id="top-section-03-park-grass" d="M158.86,0L0,93.92l144.92,83.76c43.06,24.88,96.1,24.96,139.24,.21h0c40.63-23.32,40.72-81.91,.16-105.35L158.86,0Z" fill="url(#_名称未設定グラデーション_499)" fill-rule="evenodd"/>
+  </g>
+</svg>

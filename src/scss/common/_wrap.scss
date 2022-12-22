@@ -1,0 +1,75 @@
+/* wrap
+   ========================================================================== */
+
+:root {
+	font-size: calc(
+		10px + (16 - 12) * ((100vw - 1400px) / (2560 - 1400))
+	) !important;
+	@include mq-down(pc-lg) {
+		font-size: 0.714286vw !important; // 100vw / 1400(design canvas size);
+	}
+	@include mq-down() {
+		font-size: 1.5625vw !important; // 100vw / 640(design canvas size);
+		// font-size: 3.125vw !important; // 100vw / 320;
+	}
+
+	/* custom properties
+    jsのみで値を設定する場合”空"になる可能性があるのでフォールバック推奨
+  */
+
+	// size unit
+	--vh: 1vh;
+	// parts
+	--header-height: 8rem;
+	--header-menu-button-width: 4.5rem;
+
+	// animation（@keyframes内で使う値はアニメーション化出来ない：animation-tainted）
+	--hover-transition: 0.5s;
+	// font
+	--font-sans: "YakuHanJPs_Noto", "Noto Sans JP", sans-serif;
+	--font-sans-yakuhan-all: "YakuHanJP_Noto", "Noto Sans JP", sans-serif;
+	--font-sans-no-yakuhan: "Noto Sans JP", sans-serif;
+	--font-serif: "YakuHanMPs_Noto", "Noto Serif JP", serif;
+	--font-serif-yakuhan-all: "YakuHanMP_Noto", "Noto Serif JP", serif;
+	--font-serif-no-yakuhan: "Noto Serif JP", serif;
+	// color
+	--key-color01: #000f3c;
+	--key-color02: #c81212;
+	--key-color03: #003383;
+}
+
+body {
+	font-family: var(--font-sans);
+	line-height: 1.8;
+	font-size: 1.6em;
+	@include mq-down() {
+		font-size: 2.6em;
+	}
+	&[unresolved] {
+		visibility: hidden;
+	}
+}
+
+// @keyframes fade_in_content {
+//     0% {
+//         visibility: hidden;
+//         opacity: 0;
+//     }
+
+//     100% {
+//         visibility: visible;
+//         opacity: 1;
+//     }
+// }
+
+#content {
+	// opacity: 0;
+	// visibility: hidden;
+	// &.visible {
+	//   animation: fade_in_content 1s cubic-bezier(0,.9,.9,1) 1 forwards;
+	// }
+}
+
+.main {
+	overflow: hidden;
+}

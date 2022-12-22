@@ -1,0 +1,78 @@
+.button {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24rem;
+	padding-top: 0.75em;
+	padding-right: 2em;
+	padding-bottom: 0.75em;
+	padding-left: 1em;
+	// height: 4.8rem;
+	&:hover {
+		cursor: pointer;
+	}
+	@include mq-down() {
+		width: 100%;
+	}
+	&.button--black {
+		border: solid 2px var(--key-color01);
+		background-color: var(--key-color01);
+		transition: background-color var(--hover-transition) ease-out;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+	&.button--border {
+		border: solid 2px var(--key-color01);
+		background-color: transparent;
+		transition: background-color var(--hover-transition);
+		&:hover {
+			background-color: var(--key-color01);
+		}
+	}
+}
+
+.button__text {
+	margin-top: -0.175em; // フォントによって微調整
+	text-align: center;
+	font-weight: bold;
+	.button.button--black & {
+		color: var(--key-color01-inverted);
+		transition: color var(--hover-transition);
+	}
+	.button.button--black:hover & {
+		color: var(--key-color01);
+		transition: color var(--hover-transition);
+	}
+	.button.button--border:hover & {
+		color: var(--key-color01-inverted);
+		transition: color var(--hover-transition);
+	}
+}
+
+.button__icon {
+	position: absolute;
+	top: 50%;
+	right: 1em;
+	transform: translateY(-50%);
+	&.button__icon--arrow {
+		width: 0.35em;
+		height: 1em;
+		.button_icon-image {
+			height: 100%;
+		}
+	}
+	svg {
+		transition: fill var(--hover-transition) ease-out;
+		.button.button--black & {
+			fill: var(--key-color01-inverted);
+		}
+		.button.button--black:hover & {
+			fill: var(--key-color01);
+		}
+		.button.button--border:hover & {
+			fill: var(--key-color01-inverted);
+		}
+	}
+}

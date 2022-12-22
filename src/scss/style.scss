@@ -1,0 +1,25 @@
+/* function, value */
+@import "mixin/_mixins.scss";
+
+/* reset */
+@import "reset/_css-wipe.scss";
+@import "reset/_reset.scss";
+
+/* common */
+@import "common/_utility.scss";
+@import "common/_wrap.scss";
+@import "common/_haeder.scss";
+@import "common/_footer.scss";
+@import "common/_modal.scss";
+@import "common/_menu.scss";
+
+/* each page common */
+// @import "common/_button.scss";
+// @import "common/_hero.scss";
+// @import "common/_pop-up.scss";
+// @import "common/_section.scss";
+// @import "common/_media.scss";
+
+/* top */
+@import "top/_top-sections.scss";
+@import "top/_top-slide-01.scss";

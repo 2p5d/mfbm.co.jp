@@ -1,0 +1,19 @@
+/* .Footer
+   ========================================================================== */
+.footer {
+  border-top: 1px solid black;
+  padding-top: 1.5rem;
+  padding-right: 3rem;
+  padding-bottom: 1.5rem;
+  padding-left: 3rem;
+	@include mq-down() {
+		padding-right:6.25vw;
+		padding-left: 6.25vw;
+	}
+}
+
+.footer__copyright {
+	@include mq-down() {
+		text-align: center;
+	}
+}

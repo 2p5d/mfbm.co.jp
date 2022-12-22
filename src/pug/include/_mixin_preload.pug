@@ -1,0 +1,6 @@
+//- ファイル名, [拡張子,フォールバック拡張子]
+mixin preload(name, type)
+	each val in type
+		link(rel="preload" as="image" type="image/" + val media="(min-width: 767px)and (-webkit-min-device-pixel-ratio: 2)" href=assets_path + image_dir + name + "@2x." + val)
+		link(rel="preload" as="image" type="image/" + val media="(min-width: 767px)" href=assets_path + image_dir + name + "." + val)
+		link(rel="preload" as="image" type="image/" + val media="(max-width: 767px)" href=assets_path + image_dir + name + "-sp." + val)

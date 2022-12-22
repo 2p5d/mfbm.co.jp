@@ -1,0 +1,47 @@
+/* utility
+   ========================================================================== */
+
+.active-tb-pc {
+	display: initial;
+	display: revert;
+	@include mq-down() {
+		display: none;
+	}
+}
+
+.active-sp {
+	display: none;
+	@include mq-down() {
+		display: initial;
+		display: revert;
+	}
+}
+
+.deactive-tb-sp {
+	display: initial;
+	display: revert;
+	@include mq-down() {
+		display: none;
+	}
+}
+
+.negative-spacing- {
+	letter-spacing: -0.0125em !important;
+}
+
+.negative-spacing-pc {
+	letter-spacing: -0.0125em !important;
+	@include mq-down() {
+		letter-spacing: normal;
+	}
+}
+.negative-spacing-sp {
+	letter-spacing: normal;
+	@include mq-down() {
+		letter-spacing: -0.0125em !important;
+	}
+}
+
+.fullscreen-pd-right-item {
+	box-sizing: content-box;
+}

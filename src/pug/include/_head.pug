@@ -1,0 +1,65 @@
+//- header pug
+
+head
+	//- meta(name="robots" content="noindex")
+	//- meta(name="robots" content="nofollow")
+	meta(charset="utf-8")
+	meta(
+		name="viewport",
+		content="width=device-width, height=device-height, initial-scale=1.0"
+	)
+	meta(name="format-detection", content="telephone=no")
+
+	if page.title !== ''
+		title #{page.title}
+
+	if page.description !== ''
+		meta(name="description", content=page.description)
+	if page.keywords !== ''
+		meta(name="keywords", content=page.keywords)
+
+	//- favicon
+	if android_icon !== ''
+		link(
+			rel="icon",
+			sizes="192x192",
+			href=assets_path + favicon_dir + android_icon
+		)
+	if apple_icon !== ''
+		link(rel="apple-touch-icon", href=assets_path + favicon_dir + apple_icon)
+	if favicon !== ''
+		link(rel="shortcut icon", href=assets_path + favicon_dir + favicon)
+	if favicon !== ''
+		link(
+			rel="icon",
+			type="image/x-icon",
+			href=assets_path + favicon_dir + favicon
+		)
+
+	//- sns
+	if page.title !== ''
+		meta(property="og:title", content=page.title)
+	if domain !== '' && page.url !== ''
+		meta(property="og:url", content=domain + page.url)
+	if page.description !== ''
+		meta(property="og:description", content=page.description)
+	if og_image !== ''
+		meta(
+			property="og:image",
+			content=domain + assets_path + favicon_dir + og_image
+		)
+	if twitter_card !== ''
+		meta(
+			property="twitter:card",
+			content=domain + assets_path + favicon_dir + twitter_card
+		)
+
+	//- preconnect
+	link(rel="preconnect", href="https://fonts.googleapis.com")
+	link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+	link(rel="preconnect", href="https://cdn.jsdelivr.net/")
+
+	//- css
+	link(rel="stylesheet", href=assets_path + css_dir + 'style.css' + version)
+
+	block preload

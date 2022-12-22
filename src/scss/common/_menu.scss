@@ -1,0 +1,23 @@
+/* menu
+   ========================================================================== */
+
+.menu {
+	padding-top: 8.8rem;
+	padding-bottom: 8.8rem;
+}
+
+.menu__inner {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu__list {
+  // padding-top: 5.3rem;
+}
+
+.menu__item + .menu__item {
+  margin-top: 1.6rem;
+}

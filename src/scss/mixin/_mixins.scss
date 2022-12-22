@@ -1,0 +1,73 @@
+// media queries =========================== //
+
+// min-width
+$breakpoint-up: (
+	"sp-sm": "screen and (min-width: 320px)",
+	"sp-md": "screen and (min-width: 640px)",
+	"tb-sm": "screen and (min-width: 768px)",
+	"tb-md": "screen and (min-width: 1024px)",
+	"tb-lg": "screen and (min-width: 1114px)",
+	"pc-sm": "screen and (min-width: 1280px)",
+	"pc-md": "screen and (min-width: 1366px)",
+	"pc-lg": "screen and (min-width: 1440px)",
+	"pc-xl": "screen and (min-width: 1680px)",
+	"pc-xxl": "screen and (min-width: 1920px)",
+	"pc-xxxl": "screen and (min-width: 2560px)",
+) !default;
+
+// max-width
+$breakpoint-down: (
+	"sp-sm": "screen and (max-width: 320px)",
+	"sp-md": "screen and (max-width: 640px)",
+	"sp-lg": "screen and (max-width: 767px)",
+	"tb-md": "screen and (max-width: 1023px)",
+	"tb-lg": "screen and (max-width: 1113px)",
+	"pc-sm": "screen and (max-width: 1279px)",
+	"pc-md": "screen and (max-width: 1365px)",
+	"pc-lg": "screen and (max-width: 1439px)",
+	"pc-xl": "screen and (max-width: 1679px)",
+	"pc-xxl": "screen and (max-width: 1919px)",
+	"pc-xxxl": "screen and (max-width: 2559px)",
+) !default;
+
+// ratio
+$breakpoint-ratio: (
+	"16-9": "screen and (device-aspect-ratio: 16/9)",
+	"16-10": "screen and (device-aspect-ratio: 16/10)",
+	"4-3": "screen and (device-aspect-ratio: 4/3)",
+	"1366-1024": "screen and (device-aspect-ratio: 1366/1024)",
+	"5-4": "screen and (device-aspect-ratio: 5/4)",
+	"portrait": "screen and (orientation: portrait)",
+) !default;
+
+@mixin mq-up($breakpoint: tb-sm) {
+	@media #{map-get($breakpoint-up, $breakpoint)} {
+		@content;
+	}
+}
+
+@mixin mq-down($breakpoint: sp-lg) {
+	@media #{map-get($breakpoint-down, $breakpoint)} {
+		@content;
+	}
+}
+
+@mixin mq-ratio($breakpoint: 16/9) {
+	@media #{map-get($breakpoint-ratio, $breakpoint)} {
+		@content;
+	}
+}
+
+// art board ratio =========================== //
+
+@function containerRatio($value, $containerValue) {
+	@return calc((#{$value} / #{$containerValue}) * 100%);
+}
+
+@function artBoardRatio($value, $viewport) {
+	@return calc((#{$value} / 1400) * #{$viewport});
+}
+
+@function artBoardRatioSp($value, $viewport) {
+	@return calc((#{$value} / 640) * #{$viewport});
+}

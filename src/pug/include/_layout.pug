@@ -1,0 +1,27 @@
+
+//- include _mixin_preload.pug
+include _mixin_picture.pug
+
+doctype html
+block vars
+html(lang="ja")
+	include _head.pug
+
+	block append preload
+
+	body(class="page-" + key unresolved)
+		#content
+
+			#to-top
+			
+			include _header.pug
+
+			include _menu.pug
+
+			block contents
+
+			//- include _footer.pug
+
+	include _script.pug
+
+	block append script

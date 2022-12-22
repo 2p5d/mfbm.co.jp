@@ -1,0 +1,21 @@
+
+header.header
+	.header__inner
+		//- h1.header__logo
+		//- 	a(href=root_path + "")
+		//- 		svg
+		//- 			use(xlink:href=assets_path + image_dir + "splite.svg#icon-logo")
+
+		button.header__menu-button(data-modal-trigger="menu")
+			.header__menu-button-icon
+				span
+				span
+				span
+
+		.header__links
+			a(href="https://mfbm.snar.jp/index.aspx?id=X00VqWzmC_k" target="_blank" rel="noopener noreferrer").header__link.header__link--entry
+				svg(aria-label="" viewBox="0 0 146 32")
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-entry')
+			a(href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer").header__link.header__link--mypage
+				svg(aria-label="" viewBox="0 0 182 32")
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-mypage')
