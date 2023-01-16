@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 187.96 187.96">
+  <g class="culture-donuts-chart">
+    <circle cx="93.98" cy="93.98" r="93.98" fill="#ffd6a5"/>
+    <path d="m93.98,0C42.08,0,0,42.08,0,93.98h93.98V0Z" fill="#003383"/>
+    <circle cx="93.98" cy="93.98" r="54.82" fill="#003383"/>
+  </g>
+</svg>

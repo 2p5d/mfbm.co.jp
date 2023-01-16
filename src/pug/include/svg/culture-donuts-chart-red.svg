@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 182.7 182.7">
+  <g class="culture-donuts-chart">
+    <g>
+      <g>
+        <g>
+          <circle cx="91.35" cy="91.35" r="91.35" fill="#c81212"/>
+        </g>
+      </g>
+      <path d="m91.35,91.34L90.65,0c-23.33.18-44.57,9.09-60.61,23.62l61.31,67.72Z" fill="#003383"/>
+    </g>
+    <circle cx="91.35" cy="91.35" r="55.84" fill="#003383"/>
+  </g>
+</svg>

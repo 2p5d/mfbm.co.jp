@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142.45 83.17">
+  <g class="culture-fukidashi-deep-green">
+    <g>
+      <rect x="0" y="0" width="142.45" height="72.82" rx="6.74" ry="6.74" fill="#1c7584"/>
+      <polygon points="86.97 64.88 55.48 64.88 71.23 83.17 86.97 64.88" fill="#1c7584"/>
+    </g>
+    <g class="chars">
+      <rect x="26.17" y="22.05" width="10.81" height="10.81" transform="translate(63.16 54.91) rotate(-180)" fill="#1c8c95"/>
+      <rect x="42.03" y="39.96" width="10.81" height="10.81" transform="translate(94.88 90.74) rotate(-180)" fill="#1c8c95"/>
+      <rect x="89.6" y="39.96" width="10.81" height="10.81" transform="translate(190.02 90.74) rotate(-180)" fill="#1c8c95"/>
+      <circle cx="47.44" cy="27.45" r="5.41" fill="#1c8c95"/>
+      <polygon points="57.89 32.86 68.7 32.86 63.3 22.05 57.89 32.86" fill="#1c8c95"/>
+      <rect x="73.75" y="22.05" width="10.81" height="10.81" transform="translate(158.31 54.91) rotate(-180)" fill="#1c8c95"/>
+      <circle cx="95.01" cy="27.45" r="5.41" fill="#1c8c95"/>
+      <polygon points="105.46 22.05 105.46 32.86 116.28 27.45 105.46 22.05" fill="#1c8c95"/>
+      <polygon points="36.99 50.78 36.99 39.96 26.17 45.37 36.99 50.78" fill="#1c8c95"/>
+      <polygon points="105.46 50.78 116.28 50.78 110.87 39.96 105.46 50.78" fill="#1c8c95"/>
+      <circle cx="63.3" cy="45.37" r="5.41" fill="#1c8c95"/>
+      <polygon points="84.56 39.96 73.75 39.96 79.15 50.78 84.56 39.96" fill="#1c8c95"/>
+    </g>
+  </g>
+</svg>

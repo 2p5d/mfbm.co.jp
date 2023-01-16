@@ -1,0 +1,109 @@
+/* .persons
+   ========================================================================== */
+
+.persons {
+	position: relative;
+	height: 100vh;
+	background-color: var(--key-color03);
+}
+
+.persons__solo {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	// visibility: hidden; // 開発用
+}
+
+.persons__solo-item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	img {
+		object-fit: cover;
+		object-position: top;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.persons__bg {
+	position: absolute;
+	bottom: 0;
+
+	width: 100%;
+	height: 100%;
+	background-color: var(--key-color03);
+	overflow: hidden;
+}
+
+.persons__bg-images-wrap {
+	--containerWidth: 1400;
+	--containerHeight: 750;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	aspect-ratio: var(--containerWidth) / var(--containerHeight);
+	@supports not (aspect-ratio: var(--containerWidth) / var(--containerHeight)) {
+		padding-top: calc((var(--containerHeight) / var(--containerWidth)) * 100%);
+		height: 0;
+	}
+	// background-color: rgba(255, 0, 0, 0.5); //　開発用
+	// transform-origin: bottom; // 開発用
+	// transform: scale(0.8424) translateY(8rem); // 開発用
+	img {
+		position: absolute;
+		display: block;
+		&[src*="person-all-01"] {
+			left: containerRatio(39.7299, var(--containerWidth));
+			top: containerRatio(48, var(--containerHeight));
+			width: containerRatio(596, var(--containerWidth));
+		}
+		&[src*="person-all-02"] {
+			left: containerRatio(787.7299, var(--containerWidth));
+			top: containerRatio(49, var(--containerHeight));
+			width: containerRatio(543, var(--containerWidth));
+		}
+		&[src*="person-all-03"] {
+			left: containerRatio(461.7299, var(--containerWidth));
+			top: containerRatio(84, var(--containerHeight));
+			width: containerRatio(534, var(--containerWidth));
+		}
+		&[src*="person-all-04"] {
+			left: containerRatio(724.7299, var(--containerWidth));
+			top: containerRatio(231, var(--containerHeight));
+			width: containerRatio(624, var(--containerWidth));
+		}
+		&[src*="person-all-05"] {
+			left: containerRatio(150.7299, var(--containerWidth));
+			top: containerRatio(206, var(--containerHeight));
+			width: containerRatio(397, var(--containerWidth));
+		}
+	}
+}
+
+.persons__title {
+	--person-all-title-bottom-margin: 50vw;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+	height: calc(100% - var(--person-all-title-bottom-margin));
+	bottom: var(--person-all-title-bottom-margin);
+	background-color: white;
+	@include mq-ratio("16-9") {
+		top: 0;
+		bottom: auto;
+		height: 20vh;
+	}
+	visibility: hidden; // 開発用
+}
+
+.persons__title-text {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	display: block;
+	// width: 96.8rem;
+	width: 65vw;
+}

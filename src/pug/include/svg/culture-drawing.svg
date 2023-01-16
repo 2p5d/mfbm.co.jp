@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.05 111.6">
+  <g class="culture-drawing">
+    <g class="culture-drawing-body">
+      <g class="Group_2465" data-name="Group 2465">
+        <path class="Ellipse_177" data-name="Ellipse 177" d="m44.52,6.48c2.63,0,4.75,2.13,4.75,4.75,0,2.63-2.13,6.37-4.75,6.37-2.63,0-4.75-3.75-4.75-6.37s2.13-4.75,4.75-4.75Z" fill="#fff"/>
+      </g>
+      <g class="Group_2466" data-name="Group 2466">
+        <path class="Path_2520" data-name="Path 2520" d="m61.12,53.89l-4.68-27.1h-23.85l-4.68,27.1h33.21Z" fill="#fff"/>
+      </g>
+      <g class="Group_2470" data-name="Group 2470">
+        <path class="Path_2523" data-name="Path 2523" d="m44.82,62.81l4.65,40.75h17.83s-6.18-49.67-6.18-49.67H27.91s-6.18,49.67-6.18,49.67h17.83l4.65-40.75h.6Z" fill="#000f3c"/>
+      </g>
+      <g class="Group_2474" data-name="Group 2474">
+        <g class="Group_2471" data-name="Group 2471">
+          <path class="Path_2524" data-name="Path 2524" d="m73.56,111.6s-.41-3.37-2.05-4.02-7.46-1.25-7.7-4.02h-11.96v8.04h21.71Z" fill="#000f3c"/>
+        </g>
+      </g>
+      <g class="Group_2478" data-name="Group 2478">
+        <g class="Group_2475" data-name="Group 2475">
+          <path class="Path_2527" data-name="Path 2527" d="m15.14,111.6s.41-3.37,2.05-4.02c1.64-.65,7.46-1.25,7.7-4.02h11.96v8.04H15.14Z" fill="#000f3c"/>
+        </g>
+      </g>
+      <g class="Group_2479" data-name="Group 2479">
+        <path class="Path_2530" data-name="Path 2530" d="m61.12,53.89l-.65-3.74h-31.92l-.65,3.74h33.21Z" fill="#800900"/>
+      </g>
+      <path class="Path_2531" data-name="Path 2531" d="m36.67,21.12c2.45-1.17,5.13-1.76,7.85-1.71,4.16.19,7.16.96,8.59,1.91l-1.59,27.83h-11.06l-3.77-28.03Z" fill="#fff"/>
+      <path class="Path_2532" data-name="Path 2532" d="m60.52,38.94c-4.11-13.38-4.96-17.88-11.26-18.96-3.14,5.9-5.36,10.69-5.33,17.37,0,4.79-.81,16.87.71,20.36,2.92,6.73,10.61,4.81,17.67,5.64l-.34-2.72-1.45-21.7Z" fill="#bfcce0"/>
+      <path class="Path_2533" data-name="Path 2533" d="m25.53,36.89c3.93-11.31,7.96-15.83,14.25-16.91,3.14,5.9,4.77,12.49,4.74,19.18,0,6.13,1.95,15.66-.46,19.63-3.11,5.1-11.29,3.86-17.32,4.57l1.58-17.85-2.79-8.62Z" fill="#bfcce0"/>
+      <g class="Group_2482" data-name="Group 2482">
+        <path class="Path_2534" data-name="Path 2534" d="m49.26,19.99s6.91.36,11.08,10.29c5.17,12.33,7.87,21.6.79,23.61-7.08,2.02-9.58,2.91-9.58,2.91l-1.93-21.92-.36-6.06v-8.83Z" fill="#bfcce0"/>
+      </g>
+    </g>
+    <g class="culture-drawing-left-hand">
+      <g class="Group_2486" data-name="Group 2486">
+        <g class="Group_2485" data-name="Group 2485">
+          <path class="Path_2535" data-name="Path 2535" d="m79.93,35.31c-1.42-.36-2.3-.97-3.25,1.33-.95,2.3-4.41,3.07-4.41,3.07l1.65,5.05c1.57-.34,8-2.92,8.36-5.65.43-1.32-1.05-3.47-2.35-3.81Z" fill="#fff"/>
+        </g>
+      </g>
+      <path class="Path_2536" data-name="Path 2536" d="m76.75,44.83l-4.63-8.57s-13.99,8.03-15.71,10.96c-1.72,2.94-.23,6.87,2.6,8.78,2.83,1.92,17.74-11.18,17.74-11.18Z" fill="#bfcce0"/>
+    </g>
+    <g class="culture-drawing-pencil">
+      <rect x="34.16" y="1.92" width="21.35" height="105.47" transform="translate(37.9 125) rotate(-135)" fill="#c81212"/>
+      <polygon points="74.58 9.82 91.21 8.28 89.68 24.91 74.58 9.82" fill="#fff"/>
+      <polygon points="85.3 8.83 90.66 14.19 91.21 8.28 85.3 8.83" fill="#c81212"/>
+      <rect x="43.27" y="5.69" width="10.68" height="105.47" transform="translate(41.67 134.12) rotate(-135)" fill="#800900"/>
+    </g>
+    <g class="culture-drawing-line">
+      <path d="m105.98,42.5c11.28,0,20.43-9.15,20.43-20.43,0-11.28-9.15-20.43-20.43-20.43-4.23,0-8.16,1.29-11.42,3.49" fill="none" stroke="#c81212" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.28"/>
+      <path d="m105.98,42.5c11.28,0,20.43-9.15,20.43-20.43" fill="none" stroke="#800900" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.28"/>
+      <path d="m110.01,79.98c-9.42,6.21-22.09,3.6-28.3-5.82-6.21-9.42-3.6-22.09,5.82-28.3,3.53-2.33,7.52-3.42,11.46-3.37" fill="none" stroke="#c81212" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.28"/>
+      <path d="m110.01,79.98c-9.42,6.21-22.09,3.6-28.3-5.82" fill="none" stroke="#800900" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.28"/>
+    </g>
+    <g class="culture-drawing-right-hand">
+      <g class="Group_2486-2" data-name="Group 2486">
+        <g class="Group_2485-2" data-name="Group 2485">
+          <path class="Path_2535-2" data-name="Path 2535" d="m44.7,57.03c.36-1.42.97-2.3-1.33-3.25-2.3-.95-3.07-4.41-3.07-4.41l-5.05,1.65c.34,1.57,2.92,8,5.65,8.36,1.32.43,3.47-1.05,3.81-2.35Z" fill="#fff"/>
+        </g>
+      </g>
+      <path class="Path_2536-2" data-name="Path 2536" d="m35.32,55.35l8.57-4.63s-8.03-13.99-10.96-15.71c-2.94-1.72-9.18-1.24-7.52,6.18.9,4.01,9.92,14.17,9.92,14.17Z" fill="#bfcce0"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,109 @@
+extends include/_layout.pug
+
+block vars
+	include include/_vars.pug
+	- var key = "test"
+	- var page = pages[key]
+	- var root_path = '';
+	- var assets_path = 'assets/';
+
+
+block contents
+
+	main.main
+
+		.ep
+			section.ep__01
+				.ep__01-01
+					.ep__01-01-content
+						h1.ep__01-01-title
+							| ep__01-01-title
+						p.ep__01-01-body
+							| テスト41テスト41テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1
+				.ep__01-02
+					.ep__01-02-content
+						h1.ep__01-02-title
+							| ep__01-02-title
+						p.ep__01-02-body
+							| テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2
+				//- .ep__01-03
+				//- 	.ep__01-03-content
+				//- 		h1.ep__01-03-title
+				//- 			| ep__01-03-title
+				//- 		p.ep__01-03-body
+				//- 			| テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3
+				//- .ep__01-04
+				//- 	.ep__01-04-content
+				//- 		h1.ep__01-04-title
+				//- 			| ep__01-04-title
+				//- 		p.ep__01-04-body
+				//- 			| テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4
+
+				.ep__01-triggers
+					.ep__01-01-trigger
+					.ep__01-02-trigger
+					.ep__01-03-trigger
+					.ep__01-04-trigger
+
+
+			//- section.ep__02
+			//- 	.ep__02-01
+			//- 		.ep__02-01-content
+			//- 			h1.ep__02-01-title
+			//- 				| ep__02-01-title
+			//- 			p.ep__02-01-body
+			//- 				| テスト41テスト41テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1テスト1
+			//- 	.ep__02-02
+			//- 		.ep__02-02-content
+			//- 			h1.ep__02-02-title
+			//- 				| ep__02-02-title
+			//- 			p.ep__02-02-body
+			//- 				| テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2テスト2
+			//- 	.ep__02-03
+			//- 		.ep__02-03-content
+			//- 			h1.ep__02-03-title
+			//- 				| ep__02-03-title
+			//- 			p.ep__02-03-body
+			//- 				| テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3テスト3
+			//- 	.ep__02-04
+			//- 		.ep__02-04-content
+			//- 			h1.ep__02-04-title
+			//- 				| ep__02-04-title
+			//- 			p.ep__02-04-body
+			//- 				| テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4テスト4
+
+		
+
+			.top-sections__navigation
+				a(href="#top-section-01").top-sections__navigation-link.--active
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| TOP
+				a(href="#top-section-02").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| ABOUT
+				a(href="#top-section-03").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| BUSINESS
+				a(href="#top-section-04").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| JOB
+				a(href="#top-section-04").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| JOB
+				a(href="#top-section-05").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| PROJECT
+				a(href="#top-section-06").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| CULTURE
+				a(href="#top-section-07").top-sections__navigation-link
+					span.top-sections__navigation-link-icon
+					span.top-sections__navigation-link-text
+						| FOOTER

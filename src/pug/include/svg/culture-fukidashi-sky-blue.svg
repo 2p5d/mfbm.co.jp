@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.18 128.6">
+  <g class="culture-fukidashi-sky-blue">
+    <g>
+      <rect x="0" y="0" width="251.18" height="112.6" rx="10.42" ry="10.42" fill="#63b2e0"/>
+      <polygon points="149.94 100.32 101.24 100.32 125.59 128.6 149.94 100.32" fill="#63b2e0"/>
+    </g>
+    <g class="chars">
+      <rect x="23.19" y="23.17" width="11.99" height="11.99" transform="translate(58.36 58.33) rotate(-180)" fill="#fff"/>
+      <rect x="199.33" y="23.17" width="11.99" height="11.99" transform="translate(176.16 234.49) rotate(-90)" fill="#fff"/>
+      <polygon points="217.82 23.17 217.82 35.16 229.81 35.16 217.82 23.17" fill="#fff"/>
+      <rect x="149.42" y="23.17" width="11.99" height="11.99" transform="translate(310.83 58.33) rotate(-180)" fill="#fff"/>
+      <circle cx="45.74" cy="29.17" r="6" fill="#fff"/>
+      <circle cx="105.75" cy="29.17" r="6" fill="#fff"/>
+      <rect x="72.85" y="23.17" width="22.34" height="11.99" rx="6" ry="6" transform="translate(168.04 58.33) rotate(180)" fill="#fff"/>
+      <polygon points="56.3 35.16 68.29 35.16 62.29 23.17 56.3 35.16" fill="#fff"/>
+      <circle cx="171.97" cy="29.17" r="6" fill="#fff"/>
+      <polygon points="182.53 35.16 194.52 35.16 188.52 23.17 182.53 35.16" fill="#fff"/>
+      <polygon points="116.31 35.16 128.3 35.16 122.3 23.17 116.31 35.16" fill="#fff"/>
+      <polygon points="144.85 23.17 132.86 23.17 138.86 35.16 144.85 23.17" fill="#fff"/>
+      <polygon points="117.2 74.97 117.2 86.96 129.19 86.96 117.2 74.97" fill="#fff"/>
+      <polygon points="117.2 74.97 117.2 86.96 105.21 86.96 117.2 74.97" fill="#fff"/>
+      <rect x="23.19" y="75.12" width="11.99" height="11.99" transform="translate(58.36 162.23) rotate(180)" fill="#fff"/>
+      <rect x="184.61" y="75.12" width="11.99" height="11.99" transform="translate(271.72 -109.49) rotate(90)" fill="#fff"/>
+      <rect x="134.8" y="75.12" width="11.99" height="11.99" transform="translate(281.59 162.23) rotate(180)" fill="#fff"/>
+      <circle cx="45.79" cy="81.11" r="6" fill="#fff"/>
+      <circle cx="78.99" cy="81.11" r="6" fill="#fff"/>
+      <polygon points="56.39 75.12 68.38 75.12 62.39 87.11 56.39 75.12" fill="#fff"/>
+      <circle cx="157.4" cy="81.11" r="6" fill="#fff"/>
+      <circle cx="207.21" cy="81.11" r="6" fill="#fff"/>
+      <polygon points="168.01 75.12 180 75.12 174 87.11 168.01 75.12" fill="#fff"/>
+      <polygon points="217.82 87.11 217.82 75.12 229.81 81.11 217.82 87.11" fill="#fff"/>
+      <polygon points="89.6 75.12 101.59 75.12 95.6 87.11 89.6 75.12" fill="#fff"/>
+      <rect x="137.17" y="49.07" width="11.99" height="11.99" transform="translate(88.1 198.22) rotate(-90)" fill="#fff"/>
+      <rect x="102.62" y="49.07" width="11.99" height="11.99" transform="translate(53.55 163.68) rotate(-90)" fill="#fff"/>
+      <rect x="85.35" y="49.07" width="11.99" height="11.99" transform="translate(182.69 110.13) rotate(-180)" fill="#fff"/>
+      <circle cx="56.8" cy="55.06" r="6" fill="#fff"/>
+      <rect x="23.19" y="49.07" width="22.34" height="11.99" rx="6" ry="6" transform="translate(68.71 110.13) rotate(180)" fill="#fff"/>
+      <polygon points="80.07 61.06 80.07 49.07 68.08 55.06 80.07 61.06" fill="#fff"/>
+      <circle cx="188.05" cy="55.06" r="6" fill="#fff"/>
+      <rect x="154.44" y="49.07" width="22.34" height="11.99" rx="6" ry="6" transform="translate(331.22 110.13) rotate(180)" fill="#fff"/>
+      <polygon points="211.32 61.06 211.32 49.07 199.33 55.06 211.32 61.06" fill="#fff"/>
+      <polygon points="131.88 49.07 119.89 49.07 125.89 61.06 131.88 49.07" fill="#fff"/>
+    </g>
+  </g>
+</svg>

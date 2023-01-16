@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 174.65 89.42">
+  <g class="culture-fukidashi-purple">
+    <g>
+      <rect x="0" y="0" width="174.65" height="78.3" rx="7.24" ry="7.24" fill="#6373bc"/>
+      <polygon points="104.26 69.76 70.39 69.76 87.33 89.42 104.26 69.76" fill="#6373bc"/>
+    </g>
+    <g class="chars">
+      <rect x="25.24" y="20.9" width="52.64" height="7.24" rx="3.62" ry="3.62" transform="translate(103.12 49.03) rotate(-180)" fill="#9eb1d0"/>
+      <rect x="81.95" y="20.9" width="44.85" height="7.24" rx="3.62" ry="3.62" transform="translate(208.74 49.03) rotate(-180)" fill="#9eb1d0"/>
+      <circle cx="134.48" cy="24.52" r="3.62" fill="#9eb1d0"/>
+      <circle cx="145.79" cy="24.52" r="3.62" fill="#9eb1d0"/>
+      <rect x="26.07" y="35.53" width="36.14" height="7.24" rx="3.62" ry="3.62" transform="translate(88.27 78.3) rotate(180)" fill="#9eb1d0"/>
+      <circle cx="70.97" cy="39.08" r="3.62" fill="#9eb1d0"/>
+      <circle cx="83.36" cy="39.08" r="3.62" fill="#9eb1d0"/>
+      <circle cx="95.75" cy="39.08" r="3.62" fill="#9eb1d0"/>
+      <rect x="25.24" y="50.16" width="41.19" height="7.24" rx="3.62" ry="3.62" transform="translate(91.68 107.56) rotate(180)" fill="#9eb1d0"/>
+      <rect x="71.33" y="50.16" width="20.43" height="7.24" rx="3.62" ry="3.62" transform="translate(163.1 107.56) rotate(180)" fill="#9eb1d0"/>
+      <rect x="96.67" y="50.16" width="16.33" height="7.24" rx="3.62" ry="3.62" transform="translate(209.66 107.56) rotate(180)" fill="#9eb1d0"/>
+      <circle cx="121.51" cy="53.78" r="3.62" fill="#9eb1d0"/>
+      <circle cx="133.65" cy="53.78" r="3.62" fill="#9eb1d0"/>
+      <circle cx="145.79" cy="53.78" r="3.62" fill="#9eb1d0"/>
+    </g>
+  </g>
+</svg>

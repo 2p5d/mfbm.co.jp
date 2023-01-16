@@ -1,10 +1,13 @@
 /* bace import */
 import "./include/webFontConfig";
 import { modal } from "./include/modal";
-import { viewPortHeight } from "./include/viewPortHeight";
+import Chart from "chart.js/auto";
+// import { viewPortHeight } from "./include/viewPortHeight";
 import { smoothScroll } from "./include/smoothScroll";
 // import "./libs/css_browser_selector.min";
-import { fadeUp } from "./include/scrollTrigger";
+// import { fadeUp } from "./include/scrollTrigger";
+import { topSections } from "./include/topSections";
+import { topVideo } from "./include/topVideo";
 
 if (
 	document.readyState === "interactive" ||
@@ -21,7 +24,7 @@ function resolve() {
 }
 
 function init() {
-	fadeUp();
+	// fadeUp();
 	modal();
 	smoothScroll();
 	if (document.body.classList.contains("page-top")) {
@@ -33,5 +36,6 @@ function init() {
 
 // top
 function top() {
-	// viewPortHeight();
+	topVideo();
+	topSections();
 }

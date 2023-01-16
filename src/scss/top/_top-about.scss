@@ -1,0 +1,137 @@
+/* .top-about
+   ========================================================================== */
+
+.top-about {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.top-about__lead {
+	position: absolute;
+	width: 59.1rem;
+	top: 50%;
+	left: calc(50% - 3rem);
+	transform: translate(-100%, -50%);
+}
+
+.top-about__lead__title {
+	width: 100%;
+	will-change: transform;
+}
+
+.top-about__lead__body {
+	margin-top: 7rem;
+	text-align: justify;
+	line-height: calc(36 / 15);
+	font-family: var(--font-serif);
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: white;
+	will-change: transform;
+	p {
+		width: 47.7rem;
+		& + p {
+			margin-top: 2.5em;
+		}
+	}
+	// background-color: rgba(255, 0, 0, 0.5); // 開発用
+}
+
+.top-about__blocks-content {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: calc(50% - 8.5rem);
+	width: 85.7rem;
+	// height: 100%;
+}
+
+.top-about__blocks-items {
+	--containerWidth: 844;
+	--containerHeight: 1051;
+	position: relative;
+	// transform: translateY(-50%);
+	aspect-ratio: var(--containerWidth) / var(--containerHeight);
+	@supports not (aspect-ratio: var(--containerWidth) / var(--containerHeight)) {
+		padding-top: calc((var(--containerHeight) / var(--containerWidth)) * 100%);
+		height: 0;
+	}
+}
+
+.top-about__blocks-item {
+	position: absolute;
+	&:nth-of-type(1) {
+		left: containerRatio(250.8089, var(--containerWidth));
+		top: containerRatio(0, var(--containerHeight));
+		width: containerRatio(372, var(--containerWidth));
+	}
+	&:nth-of-type(2) {
+		left: containerRatio(451.8089, var(--containerWidth));
+		top: containerRatio(185, var(--containerHeight));
+		width: containerRatio(405, var(--containerWidth));
+	}
+	&:nth-of-type(3) {
+		left: containerRatio(390.8089, var(--containerWidth));
+		top: containerRatio(476, var(--containerHeight));
+		width: containerRatio(240, var(--containerWidth));
+	}
+	&:nth-of-type(4) {
+		left: containerRatio(525.9354, var(--containerWidth));
+		top: containerRatio(611, var(--containerHeight));
+		width: containerRatio(240, var(--containerWidth));
+	}
+	&:nth-of-type(5) {
+		left: containerRatio(155.9354, var(--containerWidth));
+		top: containerRatio(611, var(--containerHeight));
+		width: containerRatio(440, var(--containerWidth));
+	}
+	&:nth-of-type(6) {
+		left: containerRatio(12.9354, var(--containerWidth));
+		top: containerRatio(611, var(--containerHeight));
+		width: containerRatio(220, var(--containerWidth));
+	}
+	&:nth-of-type(7) {
+		left: containerRatio(0, var(--containerWidth));
+		top: containerRatio(213.2284, var(--containerHeight));
+		width: containerRatio(496, var(--containerWidth));
+	}
+}
+
+.top-about__bg {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+.top-about__bg-fill {
+	position: absolute;
+	// inset: 0;
+	width: 100%;
+
+	z-index: 2;
+	background-color: #003383;
+	mix-blend-mode: multiply;
+
+	/*
+		斜めの角度を画像と同じく45度にしたいので、正方形をポリゴンでクリップパスすることで、2等辺3角形になるようにした。scaleは位置調整。ウィンドウの縦横比でscaleなど要再調整
+		scaleで再調整しなくとも計算でできそうな感じだがとりあえず
+	*/
+	aspect-ratio: 1;
+	clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0% 100%);
+	transform-origin: right;
+	transform: scale(1.4);
+	will-change: transform;
+}
+
+.top-about__bg-image {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	img {
+		width: calc((1544 / 1400) * 100%);
+		height: 100%;
+		object-fit: cover;
+		object-position: left center;
+	}
+}

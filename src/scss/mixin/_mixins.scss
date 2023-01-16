@@ -32,12 +32,12 @@ $breakpoint-down: (
 
 // ratio
 $breakpoint-ratio: (
-	"16-9": "screen and (device-aspect-ratio: 16/9)",
-	"16-10": "screen and (device-aspect-ratio: 16/10)",
-	"4-3": "screen and (device-aspect-ratio: 4/3)",
-	"1366-1024": "screen and (device-aspect-ratio: 1366/1024)",
-	"5-4": "screen and (device-aspect-ratio: 5/4)",
-	"portrait": "screen and (orientation: portrait)",
+	"16-9": "(min-aspect-ratio: 16/9)",
+	"16-10": "(min-aspect-ratio: 16/10)",
+	"4-3": "(min-aspect-ratio: 4/3)",
+	"1366-1024": "(min-aspect-ratio: 1366/1024)",
+	"5-4": "(min-aspect-ratio: 5/4)",
+	"portrait": "(orientation: portrait)",
 ) !default;
 
 @mixin mq-up($breakpoint: tb-sm) {

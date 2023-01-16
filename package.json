@@ -4,6 +4,7 @@
   "description": "This is a dummy package.json file created by Prepros to manage packages with NPM. You can edit this file to add your own information.",
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
-    "gsap": "^3.9.1"
+    "chart.js": "^4.1.2",
+    "gsap": "^3.11.4"
   }
 }
