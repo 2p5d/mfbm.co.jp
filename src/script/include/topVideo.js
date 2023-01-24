@@ -17,7 +17,7 @@ function topVideo() {
 	video.setAttribute("loop", "");
 	// video.setAttribute("autoplay", "");
 	wrapper.appendChild(video);
-	video.play();
+	// video.play();
 	image.remove();
 }
 

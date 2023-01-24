@@ -5,22 +5,26 @@
 	position: relative;
 	height: 100vh;
 	background-color: #ebebeb;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .mfbm-field__map {
 	position: absolute;
 	top: 50%;
 	left: 4rem;
-	width: 152.69049rem;
+	width: calc((1527 / 1400) * 100vw);
 	transform: translateY(calc(-50% - 2vh));
+}
+
+.mfbm-field__map-inner {
+	will-change: transform;
 }
 
 .mfbm-field__map-items {
 	--containerWidth: 1526.9049;
 	--containerHeight: 1049.7572;
 	position: relative;
-	transform: translateX(calc(50vw - 13rem));
+	// transform: translateX(calc(50vw - 13rem)); // 開発用
 	aspect-ratio: var(--containerWidth) / var(--containerHeight);
 	// transform: translateX(56.91821rem);
 	@supports not (aspect-ratio: var(--containerWidth) / var(--containerHeight)) {
@@ -37,42 +41,45 @@
 			width: 100%;
 		}
 		&[src*="top-section-03-park-grass"] {
-			left: containerRatio(455.4829, var(--containerWidth));
+			left: containerRatio(414.9522, var(--containerWidth));
 			top: containerRatio(403.2286, var(--containerHeight));
 			width: containerRatio(314.6831, var(--containerWidth));
 		}
 		&[src*="top-section-03-park-building"] {
-			left: containerRatio(479.561, var(--containerWidth));
+			will-change: transform;
+			left: containerRatio(439.3578, var(--containerWidth));
 			top: containerRatio(362.9284, var(--containerHeight));
 			width: containerRatio(192.28941, var(--containerWidth));
 		}
 		&[src*="top-section-03-park-people"] {
-			left: containerRatio(568.4891, var(--containerWidth));
+			left: containerRatio(528.286, var(--containerWidth));
 			top: containerRatio(449.1924, var(--containerHeight));
 			width: containerRatio(244.9394, var(--containerWidth));
 		}
 		&[src*="top-section-03-park-over-layer"] {
-			left: containerRatio(309.4709, var(--containerWidth));
+			left: containerRatio(269.2678, var(--containerWidth));
 			top: containerRatio(449.6971, var(--containerHeight));
 			width: containerRatio(399.3015, var(--containerWidth));
 		}
 		&[src*="top-section-03-building-02"] {
-			left: containerRatio(823.7101, var(--containerWidth));
+			will-change: transform;
+			left: containerRatio(783.507, var(--containerWidth));
 			top: containerRatio(476.4312, var(--containerHeight));
 			width: containerRatio(95.3642, var(--containerWidth));
 		}
 		&[src*="top-section-03-building-02-over-layer"] {
-			left: containerRatio(844.9481, var(--containerWidth));
+			left: containerRatio(804.7551, var(--containerWidth));
 			top: containerRatio(523.9317, var(--containerHeight));
 			width: containerRatio(316.7965, var(--containerWidth));
 		}
 		&[src*="top-section-03-building-03"] {
-			left: containerRatio(377.7702, var(--containerWidth));
+			will-change: transform;
+			left: containerRatio(337.5755, var(--containerWidth));
 			top: containerRatio(729.4276, var(--containerHeight));
 			width: containerRatio(259.0139, var(--containerWidth));
 		}
 		&[src*="top-section-03-building-03-over-layer"] {
-			left: containerRatio(386.4836, var(--containerWidth));
+			left: containerRatio(325.7369, var(--containerWidth));
 			top: containerRatio(750.5525, var(--containerHeight));
 			width: containerRatio(392.6983, var(--containerWidth));
 		}
@@ -119,6 +126,7 @@
 
 .mfbm-field__lead {
 	position: absolute;
+	z-index: 1;
 	width: 40.3rem;
 	top: 50%;
 	left: 25%;

@@ -15345,17 +15345,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "CSSRulePlugin": function() { return /* reexport safe */ _CSSRulePlugin_js__WEBPACK_IMPORTED_MODULE_4__.CSSRulePlugin; },
 /* harmony export */   "Circ": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Circ; },
 /* harmony export */   "Cubic": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Cubic; },
+/* harmony export */   "CustomBounce": function() { return /* reexport safe */ _CustomBounce_js__WEBPACK_IMPORTED_MODULE_18__.CustomBounce; },
 /* harmony export */   "CustomEase": function() { return /* reexport safe */ _CustomEase_js__WEBPACK_IMPORTED_MODULE_2__.CustomEase; },
+/* harmony export */   "CustomWiggle": function() { return /* reexport safe */ _CustomWiggle_js__WEBPACK_IMPORTED_MODULE_19__.CustomWiggle; },
 /* harmony export */   "Draggable": function() { return /* reexport safe */ _Draggable_js__WEBPACK_IMPORTED_MODULE_3__.Draggable; },
+/* harmony export */   "DrawSVGPlugin": function() { return /* reexport safe */ _DrawSVGPlugin_js__WEBPACK_IMPORTED_MODULE_14__.DrawSVGPlugin; },
 /* harmony export */   "EasePack": function() { return /* reexport safe */ _EasePack_js__WEBPACK_IMPORTED_MODULE_6__.EasePack; },
 /* harmony export */   "EaselPlugin": function() { return /* reexport safe */ _EaselPlugin_js__WEBPACK_IMPORTED_MODULE_5__.EaselPlugin; },
 /* harmony export */   "Elastic": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Elastic; },
 /* harmony export */   "Expo": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Expo; },
 /* harmony export */   "ExpoScaleEase": function() { return /* reexport safe */ _EasePack_js__WEBPACK_IMPORTED_MODULE_6__.ExpoScaleEase; },
 /* harmony export */   "Flip": function() { return /* reexport safe */ _Flip_js__WEBPACK_IMPORTED_MODULE_7__.Flip; },
+/* harmony export */   "GSDevTools": function() { return /* reexport safe */ _GSDevTools_js__WEBPACK_IMPORTED_MODULE_20__.GSDevTools; },
+/* harmony export */   "InertiaPlugin": function() { return /* reexport safe */ _InertiaPlugin_js__WEBPACK_IMPORTED_MODULE_21__.InertiaPlugin; },
 /* harmony export */   "Linear": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Linear; },
+/* harmony export */   "MorphSVGPlugin": function() { return /* reexport safe */ _MorphSVGPlugin_js__WEBPACK_IMPORTED_MODULE_22__.MorphSVGPlugin; },
+/* harmony export */   "MotionPathHelper": function() { return /* reexport safe */ _MotionPathHelper_js__WEBPACK_IMPORTED_MODULE_23__.MotionPathHelper; },
 /* harmony export */   "MotionPathPlugin": function() { return /* reexport safe */ _MotionPathPlugin_js__WEBPACK_IMPORTED_MODULE_8__.MotionPathPlugin; },
 /* harmony export */   "Observer": function() { return /* reexport safe */ _Observer_js__WEBPACK_IMPORTED_MODULE_9__.Observer; },
+/* harmony export */   "Physics2DPlugin": function() { return /* reexport safe */ _Physics2DPlugin_js__WEBPACK_IMPORTED_MODULE_15__.Physics2DPlugin; },
+/* harmony export */   "PhysicsPropsPlugin": function() { return /* reexport safe */ _PhysicsPropsPlugin_js__WEBPACK_IMPORTED_MODULE_16__.PhysicsPropsPlugin; },
 /* harmony export */   "PixiPlugin": function() { return /* reexport safe */ _PixiPlugin_js__WEBPACK_IMPORTED_MODULE_10__.PixiPlugin; },
 /* harmony export */   "Power0": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power0; },
 /* harmony export */   "Power1": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Power1; },
@@ -15366,10 +15375,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "Quart": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Quart; },
 /* harmony export */   "Quint": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Quint; },
 /* harmony export */   "RoughEase": function() { return /* reexport safe */ _EasePack_js__WEBPACK_IMPORTED_MODULE_6__.RoughEase; },
+/* harmony export */   "ScrambleTextPlugin": function() { return /* reexport safe */ _ScrambleTextPlugin_js__WEBPACK_IMPORTED_MODULE_17__.ScrambleTextPlugin; },
+/* harmony export */   "ScrollSmoother": function() { return /* reexport safe */ _ScrollSmoother_js__WEBPACK_IMPORTED_MODULE_24__.ScrollSmoother; },
 /* harmony export */   "ScrollToPlugin": function() { return /* reexport safe */ _ScrollToPlugin_js__WEBPACK_IMPORTED_MODULE_11__.ScrollToPlugin; },
 /* harmony export */   "ScrollTrigger": function() { return /* reexport safe */ _ScrollTrigger_js__WEBPACK_IMPORTED_MODULE_12__.ScrollTrigger; },
 /* harmony export */   "Sine": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Sine; },
 /* harmony export */   "SlowMo": function() { return /* reexport safe */ _EasePack_js__WEBPACK_IMPORTED_MODULE_6__.SlowMo; },
+/* harmony export */   "SplitText": function() { return /* reexport safe */ _SplitText_js__WEBPACK_IMPORTED_MODULE_25__.SplitText; },
 /* harmony export */   "SteppedEase": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.SteppedEase; },
 /* harmony export */   "Strong": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Strong; },
 /* harmony export */   "TextPlugin": function() { return /* reexport safe */ _TextPlugin_js__WEBPACK_IMPORTED_MODULE_13__.TextPlugin; },
@@ -15377,6 +15389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "TimelineMax": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.TimelineMax; },
 /* harmony export */   "TweenLite": function() { return /* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.TweenLite; },
 /* harmony export */   "TweenMax": function() { return /* binding */ TweenMaxWithCSS; },
+/* harmony export */   "VelocityTracker": function() { return /* reexport safe */ _InertiaPlugin_js__WEBPACK_IMPORTED_MODULE_21__.VelocityTracker; },
 /* harmony export */   "_getProxyProp": function() { return /* reexport safe */ _Observer_js__WEBPACK_IMPORTED_MODULE_9__._getProxyProp; },
 /* harmony export */   "_getScrollFunc": function() { return /* reexport safe */ _Observer_js__WEBPACK_IMPORTED_MODULE_9__._getScrollFunc; },
 /* harmony export */   "_getTarget": function() { return /* reexport safe */ _Observer_js__WEBPACK_IMPORTED_MODULE_9__._getTarget; },
@@ -15419,6 +15432,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ScrollToPlugin_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(24);
 /* harmony import */ var _ScrollTrigger_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(25);
 /* harmony import */ var _TextPlugin_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(26);
+/* harmony import */ var _DrawSVGPlugin_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(28);
+/* harmony import */ var _Physics2DPlugin_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(29);
+/* harmony import */ var _PhysicsPropsPlugin_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(30);
+/* harmony import */ var _ScrambleTextPlugin_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(31);
+/* harmony import */ var _CustomBounce_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(32);
+/* harmony import */ var _CustomWiggle_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(33);
+/* harmony import */ var _GSDevTools_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(34);
+/* harmony import */ var _InertiaPlugin_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(35);
+/* harmony import */ var _MorphSVGPlugin_js__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(37);
+/* harmony import */ var _MotionPathHelper_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(38);
+/* harmony import */ var _ScrollSmoother_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(40);
+/* harmony import */ var _SplitText_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(41);
 
 
 var gsapWithCSS = _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(_CSSPlugin_js__WEBPACK_IMPORTED_MODULE_1__["default"]) || _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -15438,18 +15463,19 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
 
 
  //BONUS EXPORTS
-// export * from "./DrawSVGPlugin.js";
-// export * from "./Physics2DPlugin.js";
-// export * from "./PhysicsPropsPlugin.js";
-// export * from "./ScrambleTextPlugin.js";
-// export * from "./CustomBounce.js";
-// export * from "./CustomWiggle.js";
-// export * from "./GSDevTools.js";
-// export * from "./InertiaPlugin.js";
-// export * from "./MorphSVGPlugin.js";
-// export * from "./MotionPathHelper.js";
-// export * from "./ScrollSmoother.js";
-// export * from "./SplitText.js";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /***/ }),
 /* 11 */
@@ -33431,20 +33457,8521 @@ function emojiSafeSplit(text, delimiter, trim, preserveSpaces) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "DrawSVGPlugin": function() { return /* binding */ DrawSVGPlugin; },
+/* harmony export */   "default": function() { return /* binding */ DrawSVGPlugin; }
+/* harmony export */ });
+/*!
+ * DrawSVGPlugin 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _toArray,
+    _doc,
+    _win,
+    _isEdge,
+    _coreInitted,
+    _warned,
+    _getStyleSaver,
+    _reverting,
+    _windowExists = function _windowExists() {
+  return typeof window !== "undefined";
+},
+    _getGSAP = function _getGSAP() {
+  return gsap || _windowExists() && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _numExp = /[-+=\.]*\d+[\.e\-\+]*\d*[e\-\+]*\d*/gi,
+    //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
+_types = {
+  rect: ["width", "height"],
+  circle: ["r", "r"],
+  ellipse: ["rx", "ry"],
+  line: ["x2", "y2"]
+},
+    _round = function _round(value) {
+  return Math.round(value * 10000) / 10000;
+},
+    _parseNum = function _parseNum(value) {
+  return parseFloat(value) || 0;
+},
+    _parseSingleVal = function _parseSingleVal(value, length) {
+  var num = _parseNum(value);
+
+  return ~value.indexOf("%") ? num / 100 * length : num;
+},
+    _getAttributeAsNumber = function _getAttributeAsNumber(target, attr) {
+  return _parseNum(target.getAttribute(attr));
+},
+    _sqrt = Math.sqrt,
+    _getDistance = function _getDistance(x1, y1, x2, y2, scaleX, scaleY) {
+  return _sqrt(Math.pow((_parseNum(x2) - _parseNum(x1)) * scaleX, 2) + Math.pow((_parseNum(y2) - _parseNum(y1)) * scaleY, 2));
+},
+    _warn = function _warn(message) {
+  return console.warn(message);
+},
+    _hasNonScalingStroke = function _hasNonScalingStroke(target) {
+  return target.getAttribute("vector-effect") === "non-scaling-stroke";
+},
+    _bonusValidated = 1,
+    //<name>DrawSVGPlugin</name>
+//accepts values like "100%" or "20% 80%" or "20 50" and parses it into an absolute start and end position on the line/stroke based on its length. Returns an an array with the start and end values, like [0, 243]
+_parse = function _parse(value, length, defaultStart) {
+  var i = value.indexOf(" "),
+      s,
+      e;
+
+  if (i < 0) {
+    s = defaultStart !== undefined ? defaultStart + "" : value;
+    e = value;
+  } else {
+    s = value.substr(0, i);
+    e = value.substr(i + 1);
+  }
+
+  s = _parseSingleVal(s, length);
+  e = _parseSingleVal(e, length);
+  return s > e ? [e, s] : [s, e];
+},
+    _getLength = function _getLength(target) {
+  target = _toArray(target)[0];
+
+  if (!target) {
+    return 0;
+  }
+
+  var type = target.tagName.toLowerCase(),
+      style = target.style,
+      scaleX = 1,
+      scaleY = 1,
+      length,
+      bbox,
+      points,
+      prevPoint,
+      i,
+      rx,
+      ry;
+
+  if (_hasNonScalingStroke(target)) {
+    //non-scaling-stroke basically scales the shape and then strokes it at the screen-level (after transforms), thus we need to adjust the length accordingly.
+    scaleY = target.getScreenCTM();
+    scaleX = _sqrt(scaleY.a * scaleY.a + scaleY.b * scaleY.b);
+    scaleY = _sqrt(scaleY.d * scaleY.d + scaleY.c * scaleY.c);
+  }
+
+  try {
+    //IE bug: calling <path>.getTotalLength() locks the repaint area of the stroke to whatever its current dimensions are on that frame/tick. To work around that, we must call getBBox() to force IE to recalculate things.
+    bbox = target.getBBox(); //solely for fixing bug in IE - we don't actually use the bbox.
+  } catch (e) {
+    //firefox has a bug that throws an error if the element isn't visible.
+    _warn("Some browsers won't measure invisible elements (like display:none or masks inside defs).");
+  }
+
+  var _ref = bbox || {
+    x: 0,
+    y: 0,
+    width: 0,
+    height: 0
+  },
+      x = _ref.x,
+      y = _ref.y,
+      width = _ref.width,
+      height = _ref.height;
+
+  if ((!bbox || !width && !height) && _types[type]) {
+    //if the element isn't visible, try to discern width/height using its attributes.
+    width = _getAttributeAsNumber(target, _types[type][0]);
+    height = _getAttributeAsNumber(target, _types[type][1]);
+
+    if (type !== "rect" && type !== "line") {
+      //double the radius for circles and ellipses
+      width *= 2;
+      height *= 2;
+    }
+
+    if (type === "line") {
+      x = _getAttributeAsNumber(target, "x1");
+      y = _getAttributeAsNumber(target, "y1");
+      width = Math.abs(width - x);
+      height = Math.abs(height - y);
+    }
+  }
+
+  if (type === "path") {
+    prevPoint = style.strokeDasharray;
+    style.strokeDasharray = "none";
+    length = target.getTotalLength() || 0;
+    _round(scaleX) !== _round(scaleY) && !_warned && (_warned = 1) && _warn("Warning: <path> length cannot be measured when vector-effect is non-scaling-stroke and the element isn't proportionally scaled.");
+    length *= (scaleX + scaleY) / 2;
+    style.strokeDasharray = prevPoint;
+  } else if (type === "rect") {
+    length = width * 2 * scaleX + height * 2 * scaleY;
+  } else if (type === "line") {
+    length = _getDistance(x, y, x + width, y + height, scaleX, scaleY);
+  } else if (type === "polyline" || type === "polygon") {
+    points = target.getAttribute("points").match(_numExp) || [];
+    type === "polygon" && points.push(points[0], points[1]);
+    length = 0;
+
+    for (i = 2; i < points.length; i += 2) {
+      length += _getDistance(points[i - 2], points[i - 1], points[i], points[i + 1], scaleX, scaleY) || 0;
+    }
+  } else if (type === "circle" || type === "ellipse") {
+    rx = width / 2 * scaleX;
+    ry = height / 2 * scaleY;
+    length = Math.PI * (3 * (rx + ry) - _sqrt((3 * rx + ry) * (rx + 3 * ry)));
+  }
+
+  return length || 0;
+},
+    _getPosition = function _getPosition(target, length) {
+  target = _toArray(target)[0];
+
+  if (!target) {
+    return [0, 0];
+  }
+
+  length || (length = _getLength(target) + 1);
+
+  var cs = _win.getComputedStyle(target),
+      dash = cs.strokeDasharray || "",
+      offset = _parseNum(cs.strokeDashoffset),
+      i = dash.indexOf(",");
+
+  i < 0 && (i = dash.indexOf(" "));
+  dash = i < 0 ? length : _parseNum(dash.substr(0, i));
+  dash > length && (dash = length);
+  return [-offset || 0, dash - offset || 0];
+},
+    _initCore = function _initCore() {
+  if (_windowExists()) {
+    _doc = document;
+    _win = window;
+    _coreInitted = gsap = _getGSAP();
+    _toArray = gsap.utils.toArray;
+    _getStyleSaver = gsap.core.getStyleSaver;
+
+    _reverting = gsap.core.reverting || function () {};
+
+    _isEdge = ((_win.navigator || {}).userAgent || "").indexOf("Edge") !== -1; //Microsoft Edge has a bug that causes it not to redraw the path correctly if the stroke-linecap is anything other than "butt" (like "round") and it doesn't match the stroke-linejoin. A way to trigger it is to change the stroke-miterlimit, so we'll only do that if/when we have to (to maximize performance)
+  }
+};
+
+var DrawSVGPlugin = {
+  version: "3.11.4",
+  name: "drawSVG",
+  register: function register(core) {
+    gsap = core;
+
+    _initCore();
+  },
+  init: function init(target, value, tween, index, targets) {
+    if (!target.getBBox) {
+      return false;
+    }
+
+    _coreInitted || _initCore();
+
+    var length = _getLength(target),
+        start,
+        end,
+        cs;
+
+    this.styles = _getStyleSaver && _getStyleSaver(target, "strokeDashoffset,strokeDasharray,strokeMiterlimit");
+    this.tween = tween;
+    this._style = target.style;
+    this._target = target;
+
+    if (value + "" === "true") {
+      value = "0 100%";
+    } else if (!value) {
+      value = "0 0";
+    } else if ((value + "").indexOf(" ") === -1) {
+      value = "0 " + value;
+    }
+
+    start = _getPosition(target, length);
+    end = _parse(value, length, start[0]);
+    this._length = _round(length);
+    this._dash = _round(start[1] - start[0]); //some browsers render artifacts if dash is 0, so we use a very small number in that case.
+
+    this._offset = _round(-start[0]);
+    this._dashPT = this.add(this, "_dash", this._dash, _round(end[1] - end[0]), 0, 0, 0, 0, 0, 1);
+    this._offsetPT = this.add(this, "_offset", this._offset, _round(-end[0]), 0, 0, 0, 0, 0, 1);
+
+    if (_isEdge) {
+      //to work around a bug in Microsoft Edge, animate the stroke-miterlimit by 0.0001 just to trigger the repaint (unnecessary if it's "round" and stroke-linejoin is also "round"). Imperceptible, relatively high-performance, and effective. Another option was to set the "d" <path> attribute to its current value on every tick, but that seems like it'd be much less performant.
+      cs = _win.getComputedStyle(target);
+
+      if (cs.strokeLinecap !== cs.strokeLinejoin) {
+        end = _parseNum(cs.strokeMiterlimit);
+        this.add(target.style, "strokeMiterlimit", end, end + 0.01);
+      }
+    }
+
+    this._live = _hasNonScalingStroke(target) || ~(value + "").indexOf("live");
+    this._nowrap = ~(value + "").indexOf("nowrap");
+
+    this._props.push("drawSVG");
+
+    return _bonusValidated;
+  },
+  render: function render(ratio, data) {
+    if (data.tween._time || !_reverting()) {
+      var pt = data._pt,
+          style = data._style,
+          length,
+          lengthRatio,
+          dash,
+          offset;
+
+      if (pt) {
+        //when the element has vector-effect="non-scaling-stroke" and the SVG is resized (like on a window resize), it actually changes the length of the stroke! So we must sense that and make the proper adjustments.
+        if (data._live) {
+          length = _getLength(data._target);
+
+          if (length !== data._length) {
+            lengthRatio = length / data._length;
+            data._length = length;
+
+            if (data._offsetPT) {
+              data._offsetPT.s *= lengthRatio;
+              data._offsetPT.c *= lengthRatio;
+            }
+
+            if (data._dashPT) {
+              data._dashPT.s *= lengthRatio;
+              data._dashPT.c *= lengthRatio;
+            } else {
+              data._dash *= lengthRatio;
+            }
+          }
+        }
+
+        while (pt) {
+          pt.r(ratio, pt.d);
+          pt = pt._next;
+        }
+
+        dash = data._dash || ratio && ratio !== 1 && 0.0001 || 0; // only let it be zero if it's at the start or end of the tween.
+
+        length = data._length - dash + 0.1;
+        offset = data._offset;
+        dash && offset && dash + Math.abs(offset % data._length) > data._length - 0.2 && (offset += offset < 0 ? 0.1 : -0.1) && (length += 0.1);
+        style.strokeDashoffset = dash ? offset : offset + 0.001;
+        style.strokeDasharray = length < 0.2 ? "none" : dash ? dash + "px," + (data._nowrap ? 999999 : length) + "px" : "0px, 999999px";
+      }
+    } else {
+      data.styles.revert();
+    }
+  },
+  getLength: _getLength,
+  getPosition: _getPosition
+};
+_getGSAP() && gsap.registerPlugin(DrawSVGPlugin);
+
+
+/***/ }),
+/* 29 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Physics2DPlugin": function() { return /* binding */ Physics2DPlugin; },
+/* harmony export */   "default": function() { return /* binding */ Physics2DPlugin; }
+/* harmony export */ });
+/*!
+ * Physics2DPlugin 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _coreInitted,
+    _getUnit,
+    _getStyleSaver,
+    _reverting,
+    _DEG2RAD = Math.PI / 180,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _round = function _round(value) {
+  return Math.round(value * 10000) / 10000;
+},
+    _bonusValidated = 1,
+    //<name>Physics2DPlugin</name>
+_initCore = function _initCore(core) {
+  gsap = core || _getGSAP();
+
+  if (!_coreInitted) {
+    _getUnit = gsap.utils.getUnit;
+    _getStyleSaver = gsap.core.getStyleSaver;
+
+    _reverting = gsap.core.reverting || function () {};
+
+    _coreInitted = 1;
+  }
+};
+
+var PhysicsProp = function PhysicsProp(target, p, velocity, acceleration, stepsPerTimeUnit) {
+  var cache = target._gsap,
+      curVal = cache.get(target, p);
+  this.p = p;
+  this.set = cache.set(target, p); //setter
+
+  this.s = this.val = parseFloat(curVal);
+  this.u = _getUnit(curVal) || 0;
+  this.vel = velocity || 0;
+  this.v = this.vel / stepsPerTimeUnit;
+
+  if (acceleration || acceleration === 0) {
+    this.acc = acceleration;
+    this.a = this.acc / (stepsPerTimeUnit * stepsPerTimeUnit);
+  } else {
+    this.acc = this.a = 0;
+  }
+};
+
+var Physics2DPlugin = {
+  version: "3.11.4",
+  name: "physics2D",
+  register: _initCore,
+  init: function init(target, value, tween) {
+    _coreInitted || _initCore();
+    var data = this,
+        angle = +value.angle || 0,
+        velocity = +value.velocity || 0,
+        acceleration = +value.acceleration || 0,
+        xProp = value.xProp || "x",
+        yProp = value.yProp || "y",
+        aAngle = value.accelerationAngle || value.accelerationAngle === 0 ? +value.accelerationAngle : angle;
+    data.styles = _getStyleSaver && _getStyleSaver(target, value.xProp && value.xProp !== "x" ? value.xProp + "," + value.yProp : "transform");
+    data.target = target;
+    data.tween = tween;
+    data.step = 0;
+    data.sps = 30; //steps per second
+
+    if (value.gravity) {
+      acceleration = +value.gravity;
+      aAngle = 90;
+    }
+
+    angle *= _DEG2RAD;
+    aAngle *= _DEG2RAD;
+    data.fr = 1 - (+value.friction || 0);
+
+    data._props.push(xProp, yProp);
+
+    data.xp = new PhysicsProp(target, xProp, Math.cos(angle) * velocity, Math.cos(aAngle) * acceleration, data.sps);
+    data.yp = new PhysicsProp(target, yProp, Math.sin(angle) * velocity, Math.sin(aAngle) * acceleration, data.sps);
+    data.skipX = data.skipY = 0;
+  },
+  render: function render(ratio, data) {
+    var xp = data.xp,
+        yp = data.yp,
+        tween = data.tween,
+        target = data.target,
+        step = data.step,
+        sps = data.sps,
+        fr = data.fr,
+        skipX = data.skipX,
+        skipY = data.skipY,
+        time = tween._from ? tween._dur - tween._time : tween._time,
+        x,
+        y,
+        tt,
+        steps,
+        remainder,
+        i;
+
+    if (tween._time || !_reverting()) {
+      if (fr === 1) {
+        tt = time * time * 0.5;
+        x = xp.s + xp.vel * time + xp.acc * tt;
+        y = yp.s + yp.vel * time + yp.acc * tt;
+      } else {
+        time *= sps;
+        steps = i = (time | 0) - step;
+        /*
+        Note: rounding errors build up if we walk the calculations backward which we used to do like this to maximize performance:
+        	i = -i;
+        	while (i--) {
+        		xp.val -= xp.v;
+        		yp.val -= yp.v;
+        		xp.v /= fr;
+        		yp.v /= fr;
+        		xp.v -= xp.a;
+        		yp.v -= yp.a;
+        	}
+        but now for the sake of accuracy (to ensure rewinding always goes back to EXACTLY the same spot), we force the calculations to go forward every time. So if the tween is going backward, we just start from the beginning and iterate. This is only necessary with friction.
+         */
+
+        if (i < 0) {
+          xp.v = xp.vel / sps;
+          yp.v = yp.vel / sps;
+          xp.val = xp.s;
+          yp.val = yp.s;
+          data.step = 0;
+          steps = i = time | 0;
+        }
+
+        remainder = time % 1 * fr;
+
+        while (i--) {
+          xp.v += xp.a;
+          yp.v += yp.a;
+          xp.v *= fr;
+          yp.v *= fr;
+          xp.val += xp.v;
+          yp.val += yp.v;
+        }
+
+        x = xp.val + xp.v * remainder;
+        y = yp.val + yp.v * remainder;
+        data.step += steps;
+      }
+
+      skipX || xp.set(target, xp.p, _round(x) + xp.u);
+      skipY || yp.set(target, yp.p, _round(y) + yp.u);
+    } else {
+      data.styles.revert();
+    }
+  },
+  kill: function kill(property) {
+    if (this.xp.p === property) {
+      this.skipX = 1;
+    }
+
+    if (this.yp.p === property) {
+      this.skipY = 1;
+    }
+  }
+};
+_getGSAP() && gsap.registerPlugin(Physics2DPlugin);
+
+
+/***/ }),
+/* 30 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PhysicsPropsPlugin": function() { return /* binding */ PhysicsPropsPlugin; },
+/* harmony export */   "default": function() { return /* binding */ PhysicsPropsPlugin; }
+/* harmony export */ });
+/*!
+ * PhysicsPropsPlugin 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _coreInitted,
+    _getUnit,
+    _getStyleSaver,
+    _reverting,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _round = function _round(value) {
+  return Math.round(value * 10000) / 10000;
+},
+    _bonusValidated = 1,
+    //<name>PhysicsPropsPlugin</name>
+_initCore = function _initCore(core) {
+  gsap = core || _getGSAP();
+
+  if (!_coreInitted) {
+    _getUnit = gsap.utils.getUnit;
+    _getStyleSaver = gsap.core.getStyleSaver;
+
+    _reverting = gsap.core.reverting || function () {};
+
+    _coreInitted = 1;
+  }
+};
+
+var PhysicsProp = function PhysicsProp(target, p, velocity, acceleration, friction, stepsPerTimeUnit) {
+  var cache = target._gsap,
+      curVal = cache.get(target, p);
+  this.p = p;
+  this.set = cache.set(target, p); //setter
+
+  this.s = this.val = parseFloat(curVal);
+  this.u = _getUnit(curVal) || 0;
+  this.vel = velocity || 0;
+  this.v = this.vel / stepsPerTimeUnit;
+
+  if (acceleration || acceleration === 0) {
+    this.acc = acceleration;
+    this.a = this.acc / (stepsPerTimeUnit * stepsPerTimeUnit);
+  } else {
+    this.acc = this.a = 0;
+  }
+
+  this.fr = 1 - (friction || 0);
+};
+
+var PhysicsPropsPlugin = {
+  version: "3.11.4",
+  name: "physicsProps",
+  register: _initCore,
+  init: function init(target, value, tween) {
+    _coreInitted || _initCore();
+    var data = this,
+        p;
+    data.styles = _getStyleSaver && _getStyleSaver(target);
+    data.target = target;
+    data.tween = tween;
+    data.step = 0;
+    data.sps = 30; //steps per second
+
+    data.vProps = [];
+
+    for (p in value) {
+      var _value$p = value[p],
+          velocity = _value$p.velocity,
+          acceleration = _value$p.acceleration,
+          friction = _value$p.friction;
+
+      if (velocity || acceleration) {
+        data.vProps.push(new PhysicsProp(target, p, velocity, acceleration, friction, data.sps));
+
+        data._props.push(p);
+
+        _getStyleSaver && data.styles.save(p);
+        friction && (data.hasFr = 1);
+      }
+    }
+  },
+  render: function render(ratio, data) {
+    var vProps = data.vProps,
+        tween = data.tween,
+        target = data.target,
+        step = data.step,
+        hasFr = data.hasFr,
+        sps = data.sps,
+        i = vProps.length,
+        time = tween._from ? tween._dur - tween._time : tween._time,
+        curProp,
+        steps,
+        remainder,
+        j,
+        tt;
+
+    if (tween._time || !_reverting()) {
+      if (hasFr) {
+        time *= sps;
+        steps = (time | 0) - step;
+        /*
+        Note: rounding errors build up if we walk the calculations backward which we used to do like this to maximize performance:
+        while (i--) {
+        	curProp = vProps[i];
+        	j = -steps;
+        	while (j--) {
+        		curProp.val -= curProp.v;
+        		curProp.v /= curProp.fr;
+        		curProp.v -= curProp.a;
+        	}
+        	curProp.set(target, curProp.p, _round(curProp.val + (curProp.v * remainder * curProp.fr)) + curProp.u);
+        }
+        but now for the sake of accuracy (to ensure rewinding always goes back to EXACTLY the same spot), we force the calculations to go forward every time. So if the tween is going backward, we just start from the beginning and iterate. This is only necessary with friction.
+         */
+
+        if (steps < 0) {
+          while (i--) {
+            curProp = vProps[i];
+            curProp.v = curProp.vel / sps;
+            curProp.val = curProp.s;
+          }
+
+          i = vProps.length;
+          data.step = step = 0;
+          steps = time | 0;
+        }
+
+        remainder = time % 1;
+
+        while (i--) {
+          curProp = vProps[i];
+          j = steps;
+
+          while (j--) {
+            curProp.v += curProp.a;
+            curProp.v *= curProp.fr;
+            curProp.val += curProp.v;
+          }
+
+          curProp.set(target, curProp.p, _round(curProp.val + curProp.v * remainder * curProp.fr) + curProp.u);
+        }
+
+        data.step += steps;
+      } else {
+        tt = time * time * 0.5;
+
+        while (i--) {
+          curProp = vProps[i];
+          curProp.set(target, curProp.p, _round(curProp.s + curProp.vel * time + curProp.acc * tt) + curProp.u);
+        }
+      }
+    } else {
+      data.styles.revert();
+    }
+  },
+  kill: function kill(property) {
+    var vProps = this.vProps,
+        i = vProps.length;
+
+    while (i--) {
+      vProps[i].p === property && vProps.splice(i, 1);
+    }
+  }
+};
+_getGSAP() && gsap.registerPlugin(PhysicsPropsPlugin);
+
+
+/***/ }),
+/* 31 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ScrambleTextPlugin": function() { return /* binding */ ScrambleTextPlugin; },
+/* harmony export */   "default": function() { return /* binding */ ScrambleTextPlugin; }
+/* harmony export */ });
+/* harmony import */ var _utils_strings_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+/*!
+ * ScrambleTextPlugin 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+var CharSet = /*#__PURE__*/function () {
+  function CharSet(chars) {
+    this.chars = (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(chars);
+    this.sets = [];
+    this.length = 50;
+
+    for (var i = 0; i < 20; i++) {
+      this.sets[i] = _scrambleText(80, this.chars); //we create 20 strings that are 80 characters long, randomly chosen and pack them into an array. We then randomly choose the scrambled text from this array in order to greatly improve efficiency compared to creating new randomized text from scratch each and every time it's needed. This is a simple lookup whereas the other technique requires looping through as many times as there are characters needed, and calling Math.random() each time through the loop, building the string, etc.
+    }
+  }
+
+  var _proto = CharSet.prototype;
+
+  _proto.grow = function grow(newLength) {
+    //if we encounter a tween that has more than 80 characters, we'll need to add to the character sets accordingly. Once it's cached, it'll only need to grow again if we exceed that new length. Again, this is an efficiency tactic.
+    for (var i = 0; i < 20; i++) {
+      this.sets[i] += _scrambleText(newLength - this.length, this.chars);
+    }
+
+    this.length = newLength;
+  };
+
+  return CharSet;
+}();
+
+var gsap,
+    _coreInitted,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _bonusValidated = 1,
+    //<name>ScrambleTextPlugin</name>
+_spacesExp = /\s+/g,
+    _scrambleText = function _scrambleText(length, chars) {
+  var l = chars.length,
+      s = "";
+
+  while (--length > -1) {
+    s += chars[~~(Math.random() * l)];
+  }
+
+  return s;
+},
+    _upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    _lower = _upper.toLowerCase(),
+    _charsLookup = {
+  upperCase: new CharSet(_upper),
+  lowerCase: new CharSet(_lower),
+  upperAndLowerCase: new CharSet(_upper + _lower)
+},
+    _initCore = function _initCore() {
+  _coreInitted = gsap = _getGSAP();
+};
+
+var ScrambleTextPlugin = {
+  version: "3.11.4",
+  name: "scrambleText",
+  register: function register(core, Plugin, propTween) {
+    gsap = core;
+
+    _initCore();
+  },
+  init: function init(target, value, tween, index, targets) {
+    _coreInitted || _initCore();
+    this.prop = "innerHTML" in target ? "innerHTML" : "textContent" in target ? "textContent" : 0; // SVG text in IE doesn't have innerHTML, but it does have textContent.
+
+    if (!this.prop) {
+      return;
+    }
+
+    this.target = target;
+
+    if (typeof value !== "object") {
+      value = {
+        text: value
+      };
+    }
+
+    var text = value.text || value.value || "",
+        trim = value.trim !== false,
+        data = this,
+        delim,
+        maxLength,
+        charset,
+        splitByChars;
+    data.delimiter = delim = value.delimiter || "";
+    data.original = (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)((0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.getText)(target).replace(_spacesExp, " ").split("&nbsp;").join(""), delim, trim);
+
+    if (text === "{original}" || text === true || text == null) {
+      text = data.original.join(delim);
+    }
+
+    data.text = (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)((text || "").replace(_spacesExp, " "), delim, trim);
+    data.hasClass = !!(value.newClass || value.oldClass);
+    data.newClass = value.newClass;
+    data.oldClass = value.oldClass;
+    splitByChars = delim === "";
+    data.textHasEmoji = splitByChars && !!data.text.emoji;
+    data.charsHaveEmoji = !!value.chars && !!(0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(value.chars).emoji;
+    data.length = splitByChars ? data.original.length : data.original.join(delim).length;
+    data.lengthDif = (splitByChars ? data.text.length : data.text.join(delim).length) - data.length;
+    data.fillChar = value.fillChar || value.chars && ~value.chars.indexOf(" ") ? "&nbsp;" : "";
+    data.charSet = charset = _charsLookup[value.chars || "upperCase"] || new CharSet(value.chars);
+    data.speed = 0.05 / (value.speed || 1);
+    data.prevScrambleTime = 0;
+    data.setIndex = Math.random() * 20 | 0;
+    maxLength = data.length + Math.max(data.lengthDif, 0);
+
+    if (maxLength > charset.length) {
+      charset.grow(maxLength);
+    }
+
+    data.chars = charset.sets[data.setIndex];
+    data.revealDelay = value.revealDelay || 0;
+    data.tweenLength = value.tweenLength !== false;
+    data.tween = tween;
+    data.rightToLeft = !!value.rightToLeft;
+
+    data._props.push("scrambleText", "text");
+
+    return _bonusValidated;
+  },
+  render: function render(ratio, data) {
+    var target = data.target,
+        prop = data.prop,
+        text = data.text,
+        delimiter = data.delimiter,
+        tween = data.tween,
+        prevScrambleTime = data.prevScrambleTime,
+        revealDelay = data.revealDelay,
+        setIndex = data.setIndex,
+        chars = data.chars,
+        charSet = data.charSet,
+        length = data.length,
+        textHasEmoji = data.textHasEmoji,
+        charsHaveEmoji = data.charsHaveEmoji,
+        lengthDif = data.lengthDif,
+        tweenLength = data.tweenLength,
+        oldClass = data.oldClass,
+        newClass = data.newClass,
+        rightToLeft = data.rightToLeft,
+        fillChar = data.fillChar,
+        speed = data.speed,
+        original = data.original,
+        hasClass = data.hasClass,
+        l = text.length,
+        time = tween._time,
+        timeDif = time - prevScrambleTime,
+        i,
+        i2,
+        startText,
+        endText,
+        applyNew,
+        applyOld,
+        str,
+        startClass,
+        endClass,
+        position,
+        r;
+
+    if (revealDelay) {
+      if (tween._from) {
+        time = tween._dur - time; //invert the time for from() tweens
+      }
+
+      ratio = time === 0 ? 0 : time < revealDelay ? 0.000001 : time === tween._dur ? 1 : tween._ease((time - revealDelay) / (tween._dur - revealDelay));
+    }
+
+    if (ratio < 0) {
+      ratio = 0;
+    } else if (ratio > 1) {
+      ratio = 1;
+    }
+
+    if (rightToLeft) {
+      ratio = 1 - ratio;
+    }
+
+    i = ~~(ratio * l + 0.5);
+
+    if (ratio) {
+      if (timeDif > speed || timeDif < -speed) {
+        data.setIndex = setIndex = (setIndex + (Math.random() * 19 | 0)) % 20;
+        data.chars = charSet.sets[setIndex];
+        data.prevScrambleTime += timeDif;
+      }
+
+      endText = chars;
+    } else {
+      endText = original.join(delimiter);
+    }
+
+    r = tween._from ? ratio : 1 - ratio;
+    position = length + (tweenLength ? tween._from ? r * r * r : 1 - r * r * r : 1) * lengthDif;
+
+    if (rightToLeft) {
+      if (ratio === 1 && (tween._from || tween.data === "isFromStart")) {
+        //special case for from() tweens
+        startText = "";
+        endText = original.join(delimiter);
+      } else {
+        str = text.slice(i).join(delimiter);
+
+        if (charsHaveEmoji) {
+          startText = (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(endText).slice(0, position - (textHasEmoji ? (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(str) : str).length + 0.5 | 0).join("");
+        } else {
+          startText = endText.substr(0, position - (textHasEmoji ? (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(str) : str).length + 0.5 | 0);
+        }
+
+        endText = str;
+      }
+    } else {
+      startText = text.slice(0, i).join(delimiter);
+      i2 = (textHasEmoji ? (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(startText) : startText).length;
+
+      if (charsHaveEmoji) {
+        endText = (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit)(endText).slice(i2, position + 0.5 | 0).join("");
+      } else {
+        endText = endText.substr(i2, position - i2 + 0.5 | 0);
+      }
+    }
+
+    if (hasClass) {
+      startClass = rightToLeft ? oldClass : newClass;
+      endClass = rightToLeft ? newClass : oldClass;
+      applyNew = startClass && i !== 0;
+      applyOld = endClass && i !== l;
+      str = (applyNew ? "<span class='" + startClass + "'>" : "") + startText + (applyNew ? "</span>" : "") + (applyOld ? "<span class='" + endClass + "'>" : "") + delimiter + endText + (applyOld ? "</span>" : "");
+    } else {
+      str = startText + delimiter + endText;
+    }
+
+    target[prop] = fillChar === "&nbsp;" && ~str.indexOf("  ") ? str.split("  ").join("&nbsp;&nbsp;") : str;
+  }
+};
+ScrambleTextPlugin.emojiSafeSplit = _utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiSafeSplit;
+ScrambleTextPlugin.getText = _utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.getText;
+_getGSAP() && gsap.registerPlugin(ScrambleTextPlugin);
+
+
+/***/ }),
+/* 32 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CustomBounce": function() { return /* binding */ CustomBounce; },
+/* harmony export */   "default": function() { return /* binding */ CustomBounce; }
+/* harmony export */ });
+/*!
+ * CustomBounce 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _coreInitted,
+    createCustomEase,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _initCore = function _initCore(required) {
+  gsap = _getGSAP();
+  createCustomEase = gsap && gsap.parseEase("_CE");
+
+  if (createCustomEase) {
+    _coreInitted = 1;
+
+    gsap.parseEase("bounce").config = function (vars) {
+      return typeof vars === "object" ? _create("", vars) : _create("bounce(" + vars + ")", {
+        strength: +vars
+      });
+    };
+  } else {
+    required && console.warn("Please gsap.registerPlugin(CustomEase, CustomBounce)");
+  }
+},
+    _normalizeX = function _normalizeX(a) {
+  //scales all the x values in an array [x, y, x, y...] AND rounds them to the closest hundredth (decimal)
+  var l = a.length,
+      s = 1 / a[l - 2],
+      rnd = 1000,
+      i;
+
+  for (i = 2; i < l; i += 2) {
+    a[i] = ~~(a[i] * s * rnd) / rnd;
+  }
+
+  a[l - 2] = 1; //in case there are any rounding errors. x should always end at 1.
+},
+    _bonusValidated = 1,
+    //<name>CustomBounce</name>
+_create = function _create(id, vars) {
+  if (!_coreInitted) {
+    _initCore(1);
+  }
+
+  vars = vars || {};
+
+  if (_bonusValidated) {
+    var max = 0.999,
+        decay = Math.min(max, vars.strength || 0.7),
+        // Math.min(0.999, 1 - 0.3 / (vars.strength || 1)),
+    decayX = decay,
+        gap = (vars.squash || 0) / 100,
+        originalGap = gap,
+        slope = 1 / 0.03,
+        w = 0.2,
+        h = 1,
+        prevX = 0.1,
+        path = [0, 0, 0.07, 0, 0.1, 1, 0.1, 1],
+        squashPath = [0, 0, 0, 0, 0.1, 0, 0.1, 0],
+        cp1,
+        cp2,
+        x,
+        y,
+        i,
+        nextX,
+        squishMagnitude;
+
+    for (i = 0; i < 200; i++) {
+      w *= decayX * ((decayX + 1) / 2);
+      h *= decay * decay;
+      nextX = prevX + w;
+      x = prevX + w * 0.49;
+      y = 1 - h;
+      cp1 = prevX + h / slope;
+      cp2 = x + (x - cp1) * 0.8;
+
+      if (gap) {
+        prevX += gap;
+        cp1 += gap;
+        x += gap;
+        cp2 += gap;
+        nextX += gap;
+        squishMagnitude = gap / originalGap;
+        squashPath.push(prevX - gap, 0, prevX - gap, squishMagnitude, prevX - gap / 2, squishMagnitude, //center peak anchor
+        prevX, squishMagnitude, prevX, 0, prevX, 0, //base anchor
+        prevX, squishMagnitude * -0.6, prevX + (nextX - prevX) / 6, 0, nextX, 0);
+        path.push(prevX - gap, 1, prevX, 1, prevX, 1);
+        gap *= decay * decay;
+      }
+
+      path.push(prevX, 1, cp1, y, x, y, cp2, y, nextX, 1, nextX, 1);
+      decay *= 0.95;
+      slope = h / (nextX - cp2);
+      prevX = nextX;
+
+      if (y > max) {
+        break;
+      }
+    }
+
+    if (vars.endAtStart && vars.endAtStart !== "false") {
+      x = -0.1;
+      path.unshift(x, 1, x, 1, -0.07, 0);
+
+      if (originalGap) {
+        gap = originalGap * 2.5; //make the initial anticipation squash longer (more realistic)
+
+        x -= gap;
+        path.unshift(x, 1, x, 1, x, 1);
+        squashPath.splice(0, 6);
+        squashPath.unshift(x, 0, x, 0, x, 1, x + gap / 2, 1, x + gap, 1, x + gap, 0, x + gap, 0, x + gap, -0.6, x + gap + 0.033, 0);
+
+        for (i = 0; i < squashPath.length; i += 2) {
+          squashPath[i] -= x;
+        }
+      }
+
+      for (i = 0; i < path.length; i += 2) {
+        path[i] -= x;
+        path[i + 1] = 1 - path[i + 1];
+      }
+    }
+
+    if (gap) {
+      _normalizeX(squashPath);
+
+      squashPath[2] = "C" + squashPath[2];
+      createCustomEase(vars.squashID || id + "-squash", "M" + squashPath.join(","));
+    }
+
+    _normalizeX(path);
+
+    path[2] = "C" + path[2];
+    return createCustomEase(id, "M" + path.join(","));
+  }
+};
+
+var CustomBounce = /*#__PURE__*/function () {
+  function CustomBounce(id, vars) {
+    this.ease = _create(id, vars);
+  }
+
+  CustomBounce.create = function create(id, vars) {
+    return _create(id, vars);
+  };
+
+  CustomBounce.register = function register(core) {
+    gsap = core;
+
+    _initCore();
+  };
+
+  return CustomBounce;
+}();
+_getGSAP() && gsap.registerPlugin(CustomBounce);
+CustomBounce.version = "3.11.4";
+
+
+/***/ }),
+/* 33 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CustomWiggle": function() { return /* binding */ CustomWiggle; },
+/* harmony export */   "default": function() { return /* binding */ CustomWiggle; }
+/* harmony export */ });
+/*!
+ * CustomWiggle 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _coreInitted,
+    createCustomEase,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _eases = {
+  easeOut: "M0,1,C0.7,1,0.6,0,1,0",
+  easeInOut: "M0,0,C0.1,0,0.24,1,0.444,1,0.644,1,0.6,0,1,0",
+  anticipate: "M0,0,C0,0.222,0.024,0.386,0,0.4,0.18,0.455,0.65,0.646,0.7,0.67,0.9,0.76,1,0.846,1,1",
+  uniform: "M0,0,C0,0.95,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1,0"
+},
+    _linearEase = function _linearEase(p) {
+  return p;
+},
+    _initCore = function _initCore(required) {
+  if (!_coreInitted) {
+    gsap = _getGSAP();
+    createCustomEase = gsap && gsap.parseEase("_CE");
+
+    if (createCustomEase) {
+      for (var p in _eases) {
+        _eases[p] = createCustomEase("", _eases[p]);
+      }
+
+      _coreInitted = 1;
+
+      _create("wiggle").config = function (vars) {
+        return typeof vars === "object" ? _create("", vars) : _create("wiggle(" + vars + ")", {
+          wiggles: +vars
+        });
+      };
+    } else {
+      required && console.warn("Please gsap.registerPlugin(CustomEase, CustomWiggle)");
+    }
+  }
+},
+    _parseEase = function _parseEase(ease, invertNonCustomEases) {
+  if (typeof ease !== "function") {
+    ease = gsap.parseEase(ease) || createCustomEase("", ease);
+  }
+
+  return ease.custom || !invertNonCustomEases ? ease : function (p) {
+    return 1 - ease(p);
+  };
+},
+    _bonusValidated = 1,
+    //<name>CustomWiggle</name>
+_create = function _create(id, vars) {
+  if (!_coreInitted) {
+    _initCore(1);
+  }
+
+  vars = vars || {};
+  var wiggles = (vars.wiggles || 10) | 0,
+      inc = 1 / wiggles,
+      x = inc / 2,
+      anticipate = vars.type === "anticipate",
+      yEase = _eases[vars.type] || _eases.easeOut,
+      xEase = _linearEase,
+      rnd = 1000,
+      nextX,
+      nextY,
+      angle,
+      handleX,
+      handleY,
+      easedX,
+      y,
+      path,
+      i;
+
+  if (_bonusValidated) {
+    if (anticipate) {
+      //the anticipate ease is actually applied on the x-axis (timing) and uses easeOut for amplitude.
+      xEase = yEase;
+      yEase = _eases.easeOut;
+    }
+
+    if (vars.timingEase) {
+      xEase = _parseEase(vars.timingEase);
+    }
+
+    if (vars.amplitudeEase) {
+      yEase = _parseEase(vars.amplitudeEase, true);
+    }
+
+    easedX = xEase(x);
+    y = anticipate ? -yEase(x) : yEase(x);
+    path = [0, 0, easedX / 4, 0, easedX / 2, y, easedX, y];
+
+    if (vars.type === "random") {
+      //if we just select random values on the y-axis and plug them into the "normal" algorithm, since the control points are always straight horizontal, it creates a bit of a slowdown at each anchor which just didn't seem as desirable, so we switched to an algorithm that bends the control points to be more in line with their context.
+      path.length = 4;
+      nextX = xEase(inc);
+      nextY = Math.random() * 2 - 1;
+
+      for (i = 2; i < wiggles; i++) {
+        x = nextX;
+        y = nextY;
+        nextX = xEase(inc * i);
+        nextY = Math.random() * 2 - 1;
+        angle = Math.atan2(nextY - path[path.length - 3], nextX - path[path.length - 4]);
+        handleX = Math.cos(angle) * inc;
+        handleY = Math.sin(angle) * inc;
+        path.push(x - handleX, y - handleY, x, y, x + handleX, y + handleY);
+      }
+
+      path.push(nextX, 0, 1, 0);
+    } else {
+      for (i = 1; i < wiggles; i++) {
+        path.push(xEase(x + inc / 2), y);
+        x += inc;
+        y = (y > 0 ? -1 : 1) * yEase(i * inc);
+        easedX = xEase(x);
+        path.push(xEase(x - inc / 2), y, easedX, y);
+      }
+
+      path.push(xEase(x + inc / 4), y, xEase(x + inc / 4), 0, 1, 0);
+    }
+
+    i = path.length;
+
+    while (--i > -1) {
+      path[i] = ~~(path[i] * rnd) / rnd; //round values to avoid odd strings for super tiny values
+    }
+
+    path[2] = "C" + path[2];
+    return createCustomEase(id, "M" + path.join(","));
+  }
+};
+
+var CustomWiggle = /*#__PURE__*/function () {
+  function CustomWiggle(id, vars) {
+    this.ease = _create(id, vars);
+  }
+
+  CustomWiggle.create = function create(id, vars) {
+    return _create(id, vars);
+  };
+
+  CustomWiggle.register = function register(core) {
+    gsap = core;
+
+    _initCore();
+  };
+
+  return CustomWiggle;
+}();
+_getGSAP() && gsap.registerPlugin(CustomWiggle);
+CustomWiggle.version = "3.11.4";
+
+
+/***/ }),
+/* 34 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "GSDevTools": function() { return /* binding */ GSDevTools; },
+/* harmony export */   "default": function() { return /* binding */ GSDevTools; }
+/* harmony export */ });
+/* harmony import */ var _Draggable_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
+/*!
+ * GSDevTools 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+var gsap,
+    _coreInitted,
+    _doc,
+    _docEl,
+    _win,
+    _recordedRoot,
+    Animation,
+    _rootTween,
+    _rootInstance,
+    _rootIsDirty,
+    _keyboardInstance,
+    _globalTimeline,
+    _independentRoot,
+    _delayedCall,
+    _recording = true,
+    _startupPhase = true,
+    //for the first 2 seconds, we don't record any zero-duration tweens because they're typically just setup stuff and/or the "from" or "startAt" tweens. In version 1.20.3 we started flagging those with data:"isStart"|"isFromStart" but this logic helps GSDevTools work with older versions too.
+_globalStartTime = 0,
+    _windowExists = function _windowExists() {
+  return typeof window !== "undefined";
+},
+    _getGSAP = function _getGSAP() {
+  return gsap || _windowExists() && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _isString = function _isString(value) {
+  return typeof value === "string";
+},
+    _isFunction = function _isFunction(value) {
+  return typeof value === "function";
+},
+    _isObject = function _isObject(value) {
+  return typeof value === "object";
+},
+    _isUndefined = function _isUndefined(value) {
+  return typeof value === "undefined";
+},
+    _bonusValidated = 1,
+    //<name>GSDevTools</name>
+_svgNS = "http://www.w3.org/2000/svg",
+    _domNS = "http://www.w3.org/1999/xhtml",
+    _idSeed = 0,
+    //we assign an ID to each GSDevTools instance so that we can segregate the sessionStorage data accordingly.
+_lookup = {},
+    _supportsStorage = function () {
+  try {
+    sessionStorage.setItem("gsTest", "1");
+    sessionStorage.removeItem("gsTest");
+    return true;
+  } catch (e) {
+    return false;
+  }
+}(),
+    _parseAnimation = function _parseAnimation(animationOrId) {
+  return animationOrId instanceof Animation ? animationOrId : animationOrId ? gsap.getById(animationOrId) : null;
+},
+    _createElement = function _createElement(type, container, cssText) {
+  var element = _doc.createElementNS ? _doc.createElementNS(type === "svg" ? _svgNS : _domNS, type) : _doc.createElement(type);
+
+  if (container) {
+    if (_isString(container)) {
+      container = _doc.querySelector(container);
+    }
+
+    container.appendChild(element);
+  }
+
+  if (type === "svg") {
+    element.setAttribute("xmlns", _svgNS);
+    element.setAttribute("xmlns:xlink", _domNS);
+  }
+
+  cssText && (element.style.cssText = cssText);
+  return element;
+},
+    _clearSelection = function _clearSelection() {
+  if (_doc.selection) {
+    _doc.selection.empty();
+  } else if (_win.getSelection) {
+    _win.getSelection().removeAllRanges();
+  }
+},
+    _getChildrenOf = function _getChildrenOf(timeline, includeTimelines) {
+  var a = [],
+      cnt = 0,
+      Tween = gsap.core.Tween,
+      tween = timeline._first;
+
+  while (tween) {
+    if (tween instanceof Tween) {
+      if (tween.vars.id) {
+        a[cnt++] = tween;
+      }
+    } else {
+      if (includeTimelines && tween.vars.id) {
+        a[cnt++] = tween;
+      }
+
+      a = a.concat(_getChildrenOf(tween, includeTimelines));
+      cnt = a.length;
+    }
+
+    tween = tween._next;
+  }
+
+  return a;
+},
+    _getClippedDuration = function _getClippedDuration(animation, excludeRootRepeats) {
+  var max = 0,
+      repeat = Math.max(0, animation._repeat),
+      t = animation._first;
+
+  if (!t) {
+    max = animation.duration();
+  }
+
+  while (t) {
+    max = Math.max(max, t.totalDuration() > 999 ? t.endTime(false) : t._start + t._tDur / t._ts);
+    t = t._next;
+  }
+
+  return !excludeRootRepeats && repeat ? max * (repeat + 1) + animation._rDelay * repeat : max;
+},
+    _globalizeTime = function _globalizeTime(animation, rawTime) {
+  var a = animation,
+      time = arguments.length > 1 ? +rawTime : a.rawTime();
+
+  while (a) {
+    time = a._start + time / (a._ts || 1);
+    a = a.parent;
+  }
+
+  return time;
+},
+    _timeToProgress = function _timeToProgress(time, animation, defaultValue, relativeProgress) {
+  var add, i, a;
+
+  if (_isString(time)) {
+    if (time.charAt(1) === "=") {
+      add = parseInt(time.charAt(0) + "1", 10) * parseFloat(time.substr(2));
+
+      if (add < 0 && relativeProgress === 0) {
+        //if something like inTime:"-=2", we measure it from the END, not the beginning
+        relativeProgress = 100;
+      }
+
+      time = relativeProgress / 100 * animation.duration() + add;
+    } else if (isNaN(time) && animation.labels && animation.labels[time] !== -1) {
+      time = animation.labels[time];
+    } else if (animation === _recordedRoot) {
+      //perhaps they defined an id of an animation, like "myAnimation+=2"
+      i = time.indexOf("=");
+
+      if (i > 0) {
+        add = parseInt(time.charAt(i - 1) + "1", 10) * parseFloat(time.substr(i + 1));
+        time = time.substr(0, i - 1);
+      } else {
+        add = 0;
+      }
+
+      a = gsap.getById(time);
+
+      if (a) {
+        time = _globalizeTime(a, defaultValue / 100 * a.duration()) + add;
+      }
+    }
+  }
+
+  time = isNaN(time) ? defaultValue : parseFloat(time);
+  return Math.min(100, Math.max(0, time / animation.duration() * 100));
+},
+    _addedCSS,
+    _createRootElement = function _createRootElement(element, minimal, css) {
+  if (!_addedCSS) {
+    _createElement("style", _docEl).innerHTML = '.gs-dev-tools{height:51px;bottom:0;left:0;right:0;display:block;position:fixed;overflow:visible;padding:0}.gs-dev-tools *{box-sizing:content-box;visibility:visible}.gs-dev-tools .gs-top{position:relative;z-index:499}.gs-dev-tools .gs-bottom{display:flex;align-items:center;justify-content:space-between;background-color:rgba(0,0,0,.6);height:42px;border-top:1px solid #999;position:relative}.gs-dev-tools .timeline{position:relative;height:8px;margin-left:15px;margin-right:15px;overflow:visible}.gs-dev-tools .progress-bar,.gs-dev-tools .timeline-track{height:8px;width:100%;position:absolute;top:0;left:0}.gs-dev-tools .timeline-track{background-color:#999;opacity:.6}.gs-dev-tools .progress-bar{background-color:#91e600;height:8px;top:0;width:0;pointer-events:none}.gs-dev-tools .seek-bar{width:100%;position:absolute;height:24px;top:-12px;left:0;background-color:transparent}.gs-dev-tools .in-point,.gs-dev-tools .out-point{width:15px;height:26px;position:absolute;top:-18px}.gs-dev-tools .in-point-shape{fill:#6d9900;stroke:rgba(0,0,0,.5);stroke-width:1}.gs-dev-tools .out-point-shape{fill:#994242;stroke:rgba(0,0,0,.5);stroke-width:1}.gs-dev-tools .in-point{transform:translateX(-100%)}.gs-dev-tools .out-point{left:100%}.gs-dev-tools .grab{stroke:rgba(255,255,255,.3);stroke-width:1}.gs-dev-tools .playhead{position:absolute;top:-5px;transform:translate(-50%,0);left:0;border-radius:50%;width:16px;height:16px;border:1px solid #6d9900;background-color:#91e600}.gs-dev-tools .gs-btn-white{fill:#fff}.gs-dev-tools .pause{opacity:0}.gs-dev-tools .select-animation{vertical-align:middle;position:relative;padding:6px 10px}.gs-dev-tools .select-animation-container{flex-grow:4;width:40%}.gs-dev-tools .select-arrow{display:inline-block;width:12px;height:7px;margin:0 7px;transform:translate(0,-2px)}.gs-dev-tools .select-arrow-shape{stroke:rgba(255,255,255,.6);stroke-width:2px;fill:none}.gs-dev-tools .rewind{height:16px;width:19px;padding:10px 4px;min-width:24px}.gs-dev-tools .rewind-path{opacity:.6}.gs-dev-tools .play-pause{width:24px;height:24px;padding:6px 10px;min-width:24px}.gs-dev-tools .ease{width:30px;height:30px;padding:10px;min-width:30px;display:none}.gs-dev-tools .ease-path{fill:none;stroke:rgba(255,255,255,.6);stroke-width:2px}.gs-dev-tools .ease-border{fill:rgba(255,255,255,.25)}.gs-dev-tools .time-scale{font-family:monospace;font-size:18px;text-align:center;color:rgba(255,255,255,.6);padding:4px 4px 4px 0;min-width:30px;margin-left:7px}.gs-dev-tools .loop{width:20px;padding:5px;min-width:20px}.gs-dev-tools .loop-path{fill:rgba(255,255,255,.6)}.gs-dev-tools label span{color:#fff;font-family:monospace;text-decoration:none;font-size:16px;line-height:18px}.gs-dev-tools .time-scale span{color:rgba(255,255,255,.6)}.gs-dev-tools button:focus,.gs-dev-tools select:focus{outline:0}.gs-dev-tools label{position:relative;cursor:pointer}.gs-dev-tools label.locked{text-decoration:none;cursor:auto}.gs-dev-tools label input,.gs-dev-tools label select{position:absolute;left:0;top:0;z-index:1;font:inherit;font-size:inherit;line-height:inherit;height:100%;width:100%;color:#000!important;opacity:0;background:0 0;border:none;padding:0;margin:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer}.gs-dev-tools label input+.display{position:relative;z-index:2}.gs-dev-tools .gs-bottom-right{vertical-align:middle;display:flex;align-items:center;flex-grow:4;width:40%;justify-content:flex-end}.gs-dev-tools .time-container{font-size:18px;font-family:monospace;color:rgba(255,255,255,.6);margin:0 5px}.gs-dev-tools .logo{width:32px;height:32px;position:relative;top:2px;margin:0 12px}.gs-dev-tools .gs-hit-area{background-color:transparent;width:100%;height:100%;top:0;position:absolute}.gs-dev-tools.minimal{height:auto;display:flex;align-items:stretch}.gs-dev-tools.minimal .gs-top{order:2;flex-grow:4;background-color:rgba(0,0,0,1)}.gs-dev-tools.minimal .gs-bottom{background-color:rgba(0,0,0,1);border-top:none}.gs-dev-tools.minimal .timeline{top:50%;transform:translate(0,-50%)}.gs-dev-tools.minimal .in-point,.gs-dev-tools.minimal .out-point{display:none}.gs-dev-tools.minimal .select-animation-container{display:none}.gs-dev-tools.minimal .rewind{display:none}.gs-dev-tools.minimal .play-pause{width:20px;height:20px;padding:4px 6px;margin-left:14px}.gs-dev-tools.minimal .time-scale{min-width:26px}.gs-dev-tools.minimal .loop{width:18px;min-width:18px;display:none}.gs-dev-tools.minimal .gs-bottom-right{display:none}@media only screen and (max-width:600px){.gs-dev-tools{height:auto;display:flex;align-items:stretch}.gs-dev-tools .gs-top{order:2;flex-grow:4;background-color:rgba(0,0,0,1);height:42px}.gs-dev-tools .gs-bottom{background-color:rgba(0,0,0,1);border-top:none}.gs-dev-tools .timeline{top:50%;transform:translate(0,-50%)}.gs-dev-tools .in-point,.gs-dev-tools .out-point{display:none}.gs-dev-tools .select-animation-container{display:none}.gs-dev-tools .rewind{display:none}.gs-dev-tools .play-pause{width:20px;height:20px;padding:4px 6px;margin-left:14px}.gs-dev-tools .time-scale{min-width:26px}.gs-dev-tools .loop{width:18px;min-width:18px;display:none}.gs-dev-tools .gs-bottom-right{display:none}}';
+    _addedCSS = true;
+  }
+
+  if (_isString(element)) {
+    element = _doc.querySelector(element);
+  }
+
+  var root = _createElement("div", element || _docEl.getElementsByTagName("body")[0] || _docEl);
+
+  root.setAttribute("class", "gs-dev-tools" + (minimal ? " minimal" : ""));
+  root.innerHTML = '<div class=gs-hit-area></div><div class=gs-top><div class=timeline><div class=timeline-track></div><div class=progress-bar></div><div class=seek-bar></div><svg class=in-point viewBox="0 0 15 26" xmlns=http://www.w3.org/2000/svg><polygon class=in-point-shape points=".5 .5 14.5 .5 14.5 25.5 .5 17.5"/><polyline class=grab points="5.5 4 5.5 15"/><polyline class=grab points="9.5 4 9.5 17"/></svg><svg class=out-point viewBox="0 0 15 26" xmlns=http://www.w3.org/2000/svg><polygon class=out-point-shape points=".5 .5 14.5 .5 14.5 17.5 .5 25.5"/><polyline class=grab points="5.5 4 5.5 17"/><polyline class=grab points="9.5 4 9.5 15"/></svg><div class=playhead></div></div></div><div class=gs-bottom><div class=select-animation-container><label class=select-animation><select class=animation-list><option>Global Timeline<option>myTimeline</select><nobr><span class="display animation-label">Global Timeline</span><svg class=select-arrow viewBox="0 0 12.05 6.73" xmlns=http://www.w3.org/2000/svg><polyline class=select-arrow-shape points="0.35 0.35 6.03 6.03 11.7 0.35"/></svg></nobr></label></div><svg class=rewind viewBox="0 0 12 15.38" xmlns=http://www.w3.org/2000/svg><path d=M0,.38H2v15H0Zm2,7,10,7.36V0Z class="gs-btn-white rewind-path"/></svg><svg class=play-pause viewBox="0 0 20.97 25.67" xmlns=http://www.w3.org/2000/svg><g class=play><path d="M8,4.88 C8,10.18 8,15.48 8,20.79 5.33,22.41 2.66,24.04 0,25.67 0,17.11 0,8.55 0,0 2.66,1.62 5.33,3.25 8,4.88" class="gs-btn-white play-1" style=stroke:#fff;stroke-width:.6px /><path d="M14.485,8.855 C16.64,10.18 18.8,11.5 20.97,12.83 16.64,15.48 12.32,18.13 8,20.79 8,15.48 8,10.18 8,4.88 10.16,6.2 12.32,7.53 14.48,8.85" class="gs-btn-white play-2" style=stroke:#fff;stroke-width:.6px /></g></svg> <svg class=loop viewBox="0 0 29 25.38" xmlns=http://www.w3.org/2000/svg><path d=M27.44,5.44,20.19,0V3.06H9.06A9.31,9.31,0,0,0,0,12.41,9.74,9.74,0,0,0,.69,16l3.06-2.23a6,6,0,0,1-.12-1.22,5.49,5.49,0,0,1,5.43-5.5H20.19v3.81Z class=loop-path /><path d=M25.25,11.54a5.18,5.18,0,0,1,.12,1.12,5.41,5.41,0,0,1-5.43,5.41H9.19V14.5L1.94,19.94l7.25,5.44V22.06H19.94A9.2,9.2,0,0,0,29,12.84a9.42,9.42,0,0,0-.68-3.53Z class=loop-path /></svg> <svg class=ease viewBox="0 0 25.67 25.67" xmlns=http://www.w3.org/2000/svg><path d=M.48,25.12c1.74-3.57,4.28-12.6,8.8-10.7s4.75,1.43,6.5-1.11S19.89,1.19,25.2.55 class=ease-path /><path d=M24.67,1V24.67H1V1H24.67m1-1H0V25.67H25.67V0Z class=ease-border /></svg><label class=time-scale><select><option value=10>10x<option value=5>5x<option value=2>2x<option value=1 selected>1x<option value=0.5>0.5x<option value=0.25>0.25x<option value=0.1>0.1x</select><span class="display time-scale-label">1x</span></label><div class=gs-bottom-right><div class=time-container><span class=time>0.00</span> / <span class=duration>0.00</span></div><a href="https://greensock.com/docs/v3/Plugins/GSDevTools?source=GSDevTools" target=_blank title=Docs><svg class=logo viewBox="0 0 100 100" xmlns=http://www.w3.org/2000/svg><path d="M60 15.4c-.3-.4-.5-.6-.5-.7.1-.6.2-1 .2-1.7v-.4c.6.6 1.3 1.3 1.8 1.7.2.2.5.3.8.3.2 0 .3 0 .5.1h1.6c.8 0 1.6.1 2 0 .1 0 .2 0 .3-.1.6-.3 1.4-1 2.1-1.6 0 .6.1 1.2.1 1.7v1.5c0 .3 0 .5.1.7-.1.1-.2.1-.4.2-.7.4-1.7 1-2.3.9-.5-.1-1.5-.3-2.6-.7-1.2-.3-2.4-.8-3.2-1.2 0 0-.1 0-.1-.1s-.2-.4-.4-.6zm24.6 21.9c-.5-1.7-1.9-2-4.2-.7.9-1.5 2.1-1.5 2.3-2.1.9-2.5-.6-4.6-1.2-5.3.7-1.8 1.4-4.5-1-6.8-1-1-2.4-1.2-3.6-1.1 1.8 1.7 3.4 4.4 2.5 7.2-.1.3-.9.7-1.7 1 0 0 .4 2-.3 3.5-.3.6-.8 1.5-1.3 2.6 1 .9 1.6 1 3 1.3-.9.1-1.2.4-1.2.5-.7 3 1 3.4 1.4 4.8 0 .1 0 .2.1.3v.4c-.3.3-1.4.5-2.5.5s-1.8 1-1.8 1c-.2.1-.3.3-.4.4v1c0 .1 0 .4.1.6.1.5.3 1.3.4 1.8.9.6 1.4.9 2.2 1.1.5.1 1 .2 1.5.1.3-.1.7-.3 1-.7 1.5-1.7 1.9-3.2 2.2-4.1 0-.1 0-.2.1-.2 0 .1.1.1.1.2 0 0 .1-.1.1-.2l.1-.1c1.3-1.6 2.9-4.5 2.1-7zM74.3 49.9c-.1-.3-.1-.7-.2-1.1v-.2c-.1-.2-.1-.4-.2-.6 0-.1-.1-.3-.1-.5s-.1-.5-.1-.7v-.1c0-.2-.1-.5-.1-.7-.1-.3-.1-.7-.2-1.1v-.1c0-.2 0-.3-.1-.5v-.9c0-.1 0-.2.1-.3V43h-.3c-1.1.1-3.8.4-6.7.2-1.2-.1-2.4-.3-3.6-.6-1-.3-1.8-.5-2.3-.7-1.2-.4-1.6-.6-1.8-.7 0 .2-.1.4-.1.7 0 .3-.1.5-.1.8-.1.2-.1.4-.2.6l.1.1c.5.5 1.5 1.3 1.5 2.1v.2c-.1.4-.4.5-.8.9-.1.1-.6.7-1.1 1.1l-.6.6c-.1 0-.1.1-.2.1-.1.1-.3.2-.4.3-.2.1-.7.5-.8.6-.1.1-.2.1-.3.1-2.8 8.8-2.2 13.5-1.5 16.1.1.5.3 1 .4 1.3-.4.5-.8 1-1.2 1.4-1.2 1.5-2 2.6-2.6 4.2 0 .1 0 .1-.1.2 0 .1 0 .2-.1.2-.2.5-.3 1-.4 1.5-.6 2.3-.8 4.5-.9 6.6-.1 2.4-.2 4.6-.5 6.9.7.3 3.1.9 4.7.6.2-.1 0-3.9.6-5.7l.6-1.5c.4-.9.9-1.9 1.3-3.1.3-.7.5-1.5.7-2.4.1-.5.2-1 .3-1.6V74v-.1c.1-.6.1-1.3.1-2 0-.2-.7.3-1.1.9.3-1.8 1.3-2.1 2-3.2.3-.5.6-1.1.6-2 2.5-1.7 4-3.7 5-5.7.2-.4.4-.9.6-1.4.3-.8.5-1.6.7-2.4.3-1.4.8-3.2 1.2-4.8v-.1c.4-1.2.8-2.2 1.2-2.6-.2.9-.4 1.7-.6 2.5v.2c-.6 3.5-.7 6.2-2 9.2 1 2.6 1.9 3.9 2 7.6-2 0-3.2 1.6-3.7 3.2 1.2.3 3.9.7 8.3.1h.3c.1-.5.3-1.1.5-1.5.3-.8.5-1.5.6-2.2.2-1.3.1-2.4 0-3.2 3.9-3.7 2.6-11 1.6-16.6zm.3-15.1c.1-.3.2-.6.4-.8.2-.3.3-.7.5-1 .1-.3.3-.6.4-.9.5-1.5.4-2.8.3-3.5-.1 0-.1-.1-.2-.1-.5-.2-.9-.4-1.4-.6-.1 0-.2-.1-.3-.1-3.8-1.2-7.9-.9-11.9.1-1 .2-1.9.5-2.9.1-2.3-.8-3.9-1.9-4.6-2.8l-.2-.2c-.1.2-.2.4-.4.6.2 2.3-.5 3.9-1.4 5.1.9 1.2 2.6 2.8 3.6 3.4 1.1.6 1.7.7 3.4.4-.6.7-1.1 1-1.9 1.4.1.7.2 2 .5 3.4.3.3 1.2.8 2.3 1.3.5.3 1.1.5 1.7.7.8.3 1.7.6 2.4.8.1 0 .2.1.3.1.5.1 1.1.2 1.8.2h.9c2.1 0 4.5-.2 5.4-.3h.1c-.1-2.7.2-4.6.7-6.2.2-.3.4-.7.5-1.1zm-23.2 9.3v.2c-.3 1.7.5 2.4 1.9 3.4.6.5 0 .5.5.8.3.2.7.3 1 .3.3 0 .5 0 .8-.1.2-.1.4-.3.6-.5.1-.1.3-.2.5-.4.3-.2.6-.5.7-.6.1-.1.2-.1.3-.2.2-.2.5-.5.6-.7.2-.2.4-.5.5-.7 0-.1.1-.1.1-.1v-.1c.1-.4-.3-.8-.8-1.3-.2-.2-.4-.3-.5-.5-.3-.3-.6-.5-1-.7-.9-.5-1.9-.7-3-.7l-.3-.3c-2.2-2.5-3.2-4.8-3.9-6.5-.9-2.1-1.9-3.3-3.9-4.9 1 .4 1.8.8 2.3 1.1.5.4 1.3.4 1.9.2.2-.1.5-.2.7-.3.2-.1.4-.2.6-.4 1.6-1.3 2.5-3.8 2.6-5.6v-.1c.2-.3.6-1.1.8-1.4l.1.1c.1.1.3.2.6.5.1 0 .1.1.2.1.1.1.2.1.2.2.8.6 1.9 1.3 2.6 1.7 1.4.7 2.3.7 5.3-.1 2.2-.6 4.8-.8 6.8-.8 1.4 0 2.7.3 4 .7.2.1.4.1.5.2.3.1.6.2.9.4 0 0 .1 0 .1.1.8.4 2.1 1.2 2.5-.3.1-2-.6-3.9-1.6-5.3 0 0-.1 0-.1-.1-.1-.1-.2-.2-.4-.3-.1-.1-.2-.1-.3-.2-.1-.1-.2-.2-.4-.2-.6-.4-1.2-.8-1.6-.9-.1-.1-.3-.1-.4-.2h-.1-.1c-.1 0-.3-.1-.4-.1-.1 0-.1 0-.2-.1h-.1l-.2-.4c-.2-.1-.4-.2-.5-.2h-.6c-.3 0-.5.1-.7.1-.7.1-1.2.3-1.7.4-.2 0-.3.1-.5.1-.5.1-1 .2-1.6.2-.4 0-.9-.1-1.5-.2-.4-.1-.8-.2-1.1-.3-.2-.1-.4-.1-.6-.2-.6-.2-1.1-.3-1.7-.4h-.2-1.8c-.3 0-.6.1-1 .1H57.9c-.8 0-1.5 0-2.3-.1-.2 0-.5-.1-.7-.1-.5-.1-.9-.2-1.3-.4-.2-.1-.3-.1-.4-.2-.1 0-.2 0-.2-.1-.3-.1-.6-.1-.9-.1H51h-.1c-.4 0-.9.1-1.4.2-1.1.2-2.1.6-3 1.3-.3.2-.6.5-.8.8-.1.1-.2.2-.2.3-.4.6-.8 1.2-.9 2 0 .2-.1.4-.1.6 0 .2 1.7.7 2.3 2.8-.8-1.2-2.3-2.5-4.1-1.4-1.5 1-1.1 3.1-2.4 5.4-.3.5-.6.9-1 1.4-.8 1-.7 2.1.2 4.4 1.4 3.4 7.6 5.3 11.5 8.3l.4.4zm8.7-36.3c0 .6.1 1 .2 1.6v.1c0 .3.1.6.1.9.1 1.2.4 2 1 2.9 0 .1.1.1.1.2.3.2.5.3.8.4 1.1.2 3.1.3 4.2 0 .2-.1.5-.3.7-.5.4-.4.7-1.1.9-1.7.1-.7.3-1.3.4-1.8 0-.2.1-.4.1-.5v-.1c0-.2 0-.3.1-.5.2-.7.2-2.4.3-2.8.1-.7 0-1.8-.1-2.5 0-.2-.1-.4-.1-.5v-.1c-.2-.5-1.4-1.4-4.3-1.4-3.1 0-4 1-4.1 1.5v.1c0 .1 0 .3-.1.5-.1.4-.2 1.4-.2 1.9v2.3zm-6 88.6c0-.1-.1-.2-.1-.3-.7-1.5-1.1-3.5-1.3-4.6.4.1.7.6.8.3.2-.5-.4-1.5-.5-2.2v-.1c-.5-.5-4-.5-3.7-.3-.4.8-1 .6-1.3 2.1-.1.7.8.1 1.7.1-1.4.9-3 2.1-3.4 3.2-.1.1-.1.2-.1.3 0 .2-.1.4-.1.5-.1 1.2.5 1.6 2 2.4H48.4c1.4.3 3 .3 4.3.3 1.2-.2 1.6-.7 1.6-1.4-.2-.1-.2-.2-.2-.3z" style=fill:#efefef /><path d="M56.1 36.5c.3 1.4.5 2.4.8 4.2h-.2c-.1.5-.1.9-.1 1.3-1-.4-2.2-.5-2.6-.5-3.7-4.4-2.9-6.1-4.4-8.3.4-.2 1-.4 1.5-.8 1.6 1.9 3.3 3 5 4.1zm-1.7 13.2s-1.4 0-2.3-1c0 0-.1-.5.1-.7 0 0-1.2-1-1.5-1.7-.2-.5-.3-1.1-.2-1.6-4.4-3.7-10.9-4.2-12.9-9.1-.5-1.2-1.3-2.9-.9-3.9-.3.1-.5.2-.8.3-2.9.9-11.7 5.3-17.9 8.8 1.6 1.7 2.6 4.3 3.2 7.2l.3 1.5c.1.5.1 1 .2 1.5.1 1.4.4 2.7.8 3.9.2.8.6 1.5.9 2.2.6 1 1.2 1.9 2.1 2.6.6.5 1.2.9 1.9 1.3 2.1 1.1 5 1.6 8.6 1.5H37.9c.5 0 1 .1 1.5.1h.1c.4.1.9.1 1.3.2h.2c.4.1.9.2 1.3.4h.1c.4.1.8.3 1.1.5h.1c.4.2.7.4 1.1.6h.1c.7.4 1.3.9 1.9 1.5l.1.1c.6.5 1.1 1.1 1.5 1.8 0 .1.1.1.1.2s.1.1.1.2c.4.6 1.2 1.1 1.9 1.3.7-.9 1.5-1.8 2.2-2.8-1.6-6 0-11.7 1.8-16.9zm-26-15.9c5-2.4 9-4.1 9.9-4.5.3-.6.6-1.4.9-2.6.1-.3.2-.5.3-.8 1-2.7 2.7-2.8 3.5-3v-.2c.1-1.1.5-2 1-2.8-8.8 2.5-18 5.5-28 11.7-.1.1-.2.2-.4.2C11.3 34.5 3 40.3 1.3 51c2.4-2.7 6-5.6 10.5-8.5.1-.1.3-.2.5-.3.2-.1.5-.3.7-.4 1.2-.7 2.4-1.4 3.6-2.2 2.2-1.2 4.5-2.4 6.7-3.5 1.8-.8 3.5-1.6 5.1-2.3zm54.9 61.3l-.3-.3c-.8-.6-4.1-1.2-5.5-2.3-.4-.3-1.1-.7-1.7-1.1-1.6-.9-3.5-1.8-3.5-2.1v-.1c-.2-1.7-.2-7 .1-8.8.3-1.8.7-4.4.8-5.1.1-.6.5-1.2.1-1.2h-.4c-.2 0-.4.1-.8.1-1.5.3-4.3.6-6.6.4-.9-.1-1.6-.2-2-.3-.5-.1-.7-.2-.9-.3H62.3c-.4.5 0 2.7.6 4.8.3 1.1.8 2 1.2 3 .3.8.6 1.8.8 3.1 0 .2.1.4.1.7.2 2.8.3 3.6-.2 4.9-.1.3-.3.6-.4 1-.4.9-.7 1.7-.6 2.3 0 .2.1.4.1.5.2.4.6.7 1.2.8.2 0 .3.1.5.1.3 0 .6.1.9.1 3.4 0 5.2 0 8.6.4 2.5.4 3.9.6 5.1.5.4 0 .9-.1 1.4-.1 1.2-.2 1.8-.5 1.9-.9-.1.2-.1.1-.2-.1zM60.2 16.4zm-.5 1.7zm3.8.5c.1 0 .3.1.5.1.4.1.7.2 1.2.3.3.1.6.1.9.1h1.3c.3-.1.7-.1 1-.2.7-.2 1.5-.4 2.7-.6h.3c.3 0 .6.1.9.3.1.1.2.1.4.2.3.2.8.2 1.2.4h.1c.1 0 .1.1.2.1.6.3 1.3.7 1.9 1.1l.3.3c.9-.1 1.6-.2 2.1-.2h.1c-.2-.4-.3-1.3-1.8-.6-.6-.7-.8-1.3-2.1-.9-.1-.2-.2-.3-.3-.4l-.1-.1c-.1-.1-.2-.3-.3-.4 0-.1-.1-.1-.1-.2-.2-.3-.5-.5-.9-.7-.7-.4-1.5-.6-2.3-.5-.2 0-.4.1-.6.2-.1 0-.2.1-.2.1-.1 0-.2.1-.3.2-.5.3-1.3.8-2.1 1-.1 0-.1 0-.2.1-.2 0-.4.1-.5.1H66.5h-.1c-.4-.1-1.1-.2-2-.5-.1 0-.2-.1-.3-.1-.9-.2-1.8-.5-2.7-.8-.3-.1-.7-.2-1-.3-.1 0-.1 0-.2-.1h-.1s-.1 0-.1-.1c-.3-.3-.7-.6-1.3-.8-.5-.2-1.2-.4-2.1-.5-.2 0-.5 0-.7.1-.4.2-.8.6-1.2.9.1.1.3.3.4.5.1.2.2.4.3.7l-.6-.6c-.5-.4-1.1-.8-1.7-.9-.8-.2-1.4.4-2.3.9 1 0 1.8.1 2.5.4.1 0 .1 0 .2.1h.1c.1 0 .2.1.3.1.9.4 1.8.6 2.7.6h1.3c.5 0 .8-.1 1.1-.1.1 0 .4 0 .7-.1h2.2c.4.4.9.6 1.6.8z" style=fill:#88ce02 /><path d="M100 51.8c0-19.5-12.5-36.1-30-42.1.1-1.2.2-2.4.3-3.1.1-1.5.2-3.9-.5-4.9-1.6-2.3-9.1-2.1-10.5-.1-.4.6-.7 3.6-.6 5.9-1.1-.1-2.2-.1-3.3-.1-16.5 0-30.9 9-38.6 22.3-2.4 1.4-4.7 2.8-6.1 4C5.4 38 2.2 43.2 1 47c-1.6 4.7-1.1 7.6.4 5.8 1.2-1.5 6.6-5.9 10.1-8.2-.4 2.3-.6 4.8-.6 7.2 0 21 14.5 38.5 34 43.3-.1 1.1.1 2 .7 2.6.9.8 3.2 2 6.4 1.6 2.9-.3 3.5-.5 3.2-2.9h.2c2.7 0 5.3-.2 7.8-.7.1.1.2.2.4.3 1.5 1 7.1.8 9.6.7s6.2.9 8.6.5c2.9-.5 3.4-2.3 1.6-3.2-1.5-.8-3.8-1.3-6.7-3.1C90.6 83.4 100 68.7 100 51.8zM60.1 5.5c0-.5.1-1.5.2-2.1 0-.2 0-.4.1-.5v-.1c.1-.5 1-1.5 4.1-1.5 2.9 0 4.2.9 4.3 1.4v.1c0 .1 0 .3.1.5.1.8.2 1.9.1 2.7 0 .5-.1 2.1-.2 2.9 0 .1 0 .3-.1.5v.1c0 .2-.1.3-.1.5-.1.5-.2 1.1-.4 1.8-.1.6-.5 1.2-.9 1.7-.2.3-.5.5-.7.5-1.1.3-3.1.3-4.2 0-.3-.1-.5-.2-.8-.4 0-.1-.1-.1-.1-.2-.6-.9-.9-1.7-1-2.9 0-.4-.1-.6-.1-.9v-.1c-.1-.6-.2-1-.2-1.6v-.3c-.1-1.3-.1-2.1-.1-2.1zm-.4 7.5v-.4c.6.6 1.3 1.3 1.8 1.7.2.2.5.3.8.3.2 0 .3 0 .5.1h1.6c.8 0 1.6.1 2 0 .1 0 .2 0 .3-.1.6-.3 1.4-1 2.1-1.6 0 .6.1 1.2.1 1.7v1.5c0 .3 0 .5.1.7-.1.1-.2.1-.4.2-.7.4-1.7 1-2.3.9-.5-.1-1.5-.3-2.6-.7-1.2-.3-2.4-.8-3.2-1.2 0 0-.1 0-.1-.1-.2-.3-.4-.5-.6-.7-.3-.4-.5-.6-.5-.7.3-.4.4-.9.4-1.6zm.5 3.4zm-7.3-.3c.6.1 1.2.5 1.7.9.2.2.5.4.6.6-.1-.2-.2-.5-.3-.7-.1-.2-.3-.4-.4-.5.4-.3.8-.7 1.2-.9.2-.1.4-.1.7-.1.9.1 1.6.2 2.1.5.6.2 1 .5 1.3.8 0 0 .1 0 .1.1h.1c.1 0 .1 0 .2.1.3.1.6.2 1 .3.9.3 1.9.6 2.7.8.1 0 .2.1.3.1.9.2 1.6.4 2 .5h.4c.2 0 .4 0 .5-.1.1 0 .1 0 .2-.1.7-.2 1.5-.7 2.1-1 .1-.1.2-.1.3-.2.1 0 .2-.1.2-.1.2-.1.4-.2.6-.2.8-.2 1.7.1 2.3.5.3.2.6.4.9.7 0 .1.1.1.1.2.1.2.2.3.3.4l.1.1c.1.1.2.2.3.4 1.3-.4 1.5.2 2.1.9 1.6-.7 1.7.2 1.8.6h-.1c-.5 0-1.2 0-2.1.2l-.3-.3c-.5-.4-1.2-.8-1.9-1.1-.1 0-.1-.1-.2-.1h-.1c-.4-.2-.8-.2-1.2-.4-.1-.1-.2-.1-.4-.2-.3-.1-.6-.3-.9-.3h-.3c-1.2.1-2 .4-2.7.6-.3.1-.7.2-1 .2-.4.1-.8.1-1.3 0-.3 0-.6-.1-.9-.1-.5-.1-.8-.2-1.2-.3-.2 0-.3-.1-.5-.1h-.1c-.6-.2-1.2-.3-1.8-.4h-.1-2.1c-.4.1-.6.1-.7.1-.3 0-.7.1-1.1.1h-1.3c-.9 0-1.9-.2-2.7-.6-.1 0-.2-.1-.3-.1H53c-.1 0-.1 0-.2-.1-.7-.3-1.6-.4-2.5-.4 1.2-.8 1.8-1.4 2.6-1.3zm6.8 2zm-15.2 4.1c.1-.7.4-1.4.9-2 .1-.1.2-.2.2-.3l.8-.8c.9-.6 1.9-1.1 3-1.3.5-.1 1-.2 1.4-.2H52c.3 0 .6.1.9.1.1 0 .2 0 .2.1.1.1.2.1.4.2.4.2.8.3 1.3.4.2 0 .5.1.7.1.7.1 1.5.1 2.3.1H58.7c.4 0 .7-.1 1-.1H61.7c.6.1 1.1.2 1.7.4.2 0 .4.1.6.2.3.1.7.2 1.1.3.6.1 1.1.2 1.5.2.6 0 1.1-.1 1.6-.2.2 0 .3-.1.5-.1.5-.1 1-.3 1.7-.4.2 0 .5-.1.7-.1h.6c.2 0 .4.1.5.2l.1.1h.1c.1 0 .1 0 .2.1.2.1.3.1.4.1h.2c.1.1.3.1.4.2.4.2 1 .6 1.6.9.1.1.2.2.4.2.1.1.2.1.3.2.2.1.3.3.4.3l.1.1c1.1 1.4 1.8 3.3 1.6 5.3-.3 1.5-1.6.7-2.5.3 0 0-.1 0-.1-.1-.3-.1-.6-.2-.9-.4-.2-.1-.4-.1-.5-.2-1.2-.4-2.5-.7-4-.7-2 0-4.6.1-6.8.8-3 .8-4 .8-5.3.1-.8-.4-1.8-1.1-2.6-1.7-.1-.1-.2-.1-.2-.2-.1-.1-.1-.1-.2-.1-.3-.2-.6-.4-.6-.5l-.1-.1c-.2.3-.6 1-.8 1.4v.1c-.1 1.7-1 4.2-2.6 5.6-.2.1-.4.3-.6.4-.2.1-.5.2-.7.3-.7.2-1.4.2-1.9-.2-.5-.3-1.3-.7-2.3-1.1 2 1.6 3 2.8 3.9 4.9.7 1.7 1.7 4 3.9 6.5l.3.3c1.1 0 2.1.2 3 .7.4.2.7.4 1 .7.2.2.4.3.5.5.5.4.9.8.8 1.3v.1s0 .1-.1.1c-.1.2-.3.5-.5.7-.1.1-.4.4-.6.7-.1.1-.2.2-.3.2-.1.1-.4.3-.7.6-.2.2-.4.3-.5.4-.2.1-.4.4-.6.5-.3.1-.5.2-.8.1-.3 0-.7-.2-1-.3-.5-.3.1-.3-.5-.8-1.4-1-2.2-1.7-1.9-3.4v-.2c-.2-.1-.3-.3-.5-.4-3.9-3-10.1-4.9-11.5-8.3-.9-2.3-1-3.4-.2-4.4.4-.5.8-1 1-1.4 1.3-2.3.9-4.4 2.4-5.4 1.8-1.2 3.3.2 4.1 1.4-.5-2.1-2.3-2.6-2.3-2.8.3.1.3-.1.3-.3zm29 20s-.1 0 0 0c-.1 0-.1 0 0 0-.9.1-3.3.3-5.4.3h-.9c-.7 0-1.3-.1-1.8-.2-.1 0-.2 0-.3-.1-.7-.2-1.6-.5-2.4-.8-.6-.2-1.2-.5-1.7-.7-1.1-.5-2.1-1.1-2.3-1.3-.5-1.4-.7-2.7-.7-3.4.8-.4 1.3-.7 1.9-1.4-1.7.3-2.4.2-3.4-.4-1-.5-2.6-2.2-3.6-3.4 1-1.2 1.7-2.9 1.4-5.1.1-.2.3-.4.4-.6 0 .1.1.1.2.2.7.9 2.4 2 4.6 2.8 1.1.4 2 .1 2.9-.1 4-1 8.1-1.3 11.9-.1.1 0 .2.1.3.1.5.2.9.4 1.4.6.1 0 .1.1.2.1.1.7.2 2-.3 3.5-.1.3-.2.6-.4.9-.2.3-.3.6-.5 1-.1.3-.2.5-.4.8-.2.4-.3.8-.5 1.3-.4 1.4-.7 3.4-.6 6zm-23.9-9c.4-.2 1-.4 1.5-.8 1.6 1.8 3.3 3 5 4.1.3 1.4.5 2.4.8 4.2h-.2c-.1.5-.1.9-.1 1.3-1-.4-2.2-.5-2.6-.5-3.7-4.3-3-6-4.4-8.3zm-32.9 6.5c-1.3.7-2.5 1.4-3.6 2.2-.2.1-.5.3-.7.4-.1.1-.3.2-.5.3-4.5 2.9-8.1 5.8-10.5 8.5 1.7-10.8 10-16.5 14.3-19.2.1-.1.2-.2.4-.2 10-6.2 19.2-9.2 28-11.7-.5.8-.9 1.7-1 2.8v.2c-.8.1-2.5.2-3.5 3-.1.2-.2.5-.3.8-.3 1.2-.6 2-.9 2.6-.9.4-5 2.2-9.9 4.5-1.6.8-3.3 1.6-5 2.4-2.3 1-4.6 2.2-6.8 3.4zm28 24.8s0-.1 0 0c-.4-.3-.8-.5-1.2-.7h-.1c-.4-.2-.7-.3-1.1-.5h-.1c-.4-.1-.8-.3-1.3-.4h-.2c-.4-.1-.8-.2-1.3-.2h-.1c-.5-.1-1-.1-1.5-.1H35.9c-3.7.1-6.5-.4-8.6-1.5-.7-.4-1.4-.8-1.9-1.3-.9-.7-1.5-1.6-2.1-2.6-.4-.7-.7-1.4-.9-2.2-.4-1.2-.6-2.5-.8-3.9 0-.5-.1-1-.2-1.5l-.3-1.5c-.6-2.9-1.6-5.5-3.2-7.2 6.3-3.5 15-7.9 17.8-8.8.3-.1.6-.2.8-.3-.3 1.1.4 2.7.9 3.9 2.1 4.9 8.6 5.4 12.9 9.1 0 .5 0 1.1.2 1.6.5.6 1.7 1.6 1.7 1.6-.2.2-.1.7-.1.7.9 1 2.3 1 2.3 1-1.8 5.2-3.4 10.9-1.9 16.9-.7 1-1.5 1.8-2.2 2.8-.7-.2-1.4-.6-1.9-1.3 0-.1-.1-.1-.1-.2s-.1-.1-.1-.2l-1.5-1.8-.1-.1c-.5-.4-1.2-.9-1.9-1.3zm7.9 33.6c-1.3.1-2.9 0-4.3-.3h-.2-.1c-1.5-.8-2.1-1.2-2-2.4 0-.2 0-.3.1-.5 0-.1.1-.2.1-.3.5-1.1 2.1-2.2 3.4-3.2-.8 0-1.8.7-1.7-.1.2-1.5.9-1.3 1.3-2.1-.2-.3 3.3-.2 3.8.3v.1c0 .7.7 1.7.5 2.2-.1.3-.4-.2-.8-.3.2 1.1.6 3.1 1.3 4.6.1.1.1.2.1.3 0 .1.1.2.1.3 0 .7-.4 1.2-1.6 1.4zM59 67.7c0 .9-.3 1.6-.6 2-.7 1.1-1.7 1.4-2 3.2.4-.6 1.1-1.1 1.1-.9 0 .8-.1 1.4-.1 2v.2c-.1.6-.2 1.1-.3 1.6-.2.9-.5 1.7-.7 2.4-.4 1.2-.9 2.1-1.3 3.1l-.6 1.5c-.6 1.7-.4 5.6-.6 5.7-1.6.3-4.1-.3-4.7-.6.3-2.2.4-4.5.5-6.9.1-2.1.3-4.3.9-6.6.1-.5.3-1 .4-1.5 0-.1 0-.2.1-.2 0-.1 0-.1.1-.2.5-1.6 1.4-2.7 2.6-4.2.4-.4.7-.9 1.2-1.4-.1-.4-.2-.8-.4-1.3-.7-2.6-1.3-7.3 1.5-16.1.1 0 .2-.1.3-.1.2-.1.7-.5.8-.6.1-.1.3-.2.4-.3.1 0 .1-.1.2-.1l.6-.6 1.1-1.1c.4-.4.7-.5.8-.9v-.2c0-.8-1.1-1.5-1.5-2.1l-.1-.1c.1-.2.1-.4.2-.6 0-.2.1-.5.1-.8 0-.2.1-.5.1-.7.1.1.6.4 1.8.7.6.2 1.3.4 2.3.7 1.1.3 2.4.5 3.6.6 2.9.2 5.6 0 6.7-.2h.3v.1c0 .1 0 .2-.1.3v.9c0 .2 0 .3.1.5v.1c0 .4.1.7.2 1.1 0 .3.1.5.1.7v.1c0 .3.1.5.1.7 0 .2.1.3.1.5.1.2.1.4.2.6v.2c.1.4.2.8.2 1.1 1 5.7 2.3 12.9-1.1 16.7.2.8.3 1.9 0 3.2-.1.7-.3 1.4-.6 2.2-.2.5-.3 1-.5 1.5h-.3c-4.5.6-7.1.2-8.3-.1.5-1.6 1.7-3.3 3.7-3.2-.1-3.7-1.1-5-2-7.6 1.3-3 1.3-5.7 2-9.2v-.2c.2-.8.3-1.6.6-2.5-.4.5-.8 1.5-1.2 2.6v.1c-.5 1.5-.9 3.4-1.2 4.8-.2.8-.4 1.6-.7 2.4-.2.5-.4.9-.6 1.4-1.5 1.9-3 3.9-5.5 5.6zm18.5 24.9c1.5 1.1 4.7 1.8 5.5 2.3l.3.3c.1.1.1.2.1.3-.1.4-.7.7-1.9.9-.5.1-.9.1-1.4.1-1.3 0-2.6-.2-5.1-.5-3.4-.5-5.2-.4-8.6-.4-.3 0-.6 0-.9-.1-.2 0-.4-.1-.5-.1-.6-.2-1-.5-1.2-.8-.1-.2-.1-.3-.1-.5-.1-.7.2-1.5.6-2.3.2-.4.3-.7.4-1 .5-1.3.4-2.1.2-4.9 0-.2-.1-.4-.1-.7-.2-1.3-.5-2.3-.8-3.1-.4-1.1-.9-1.9-1.2-3-.6-2.1-1-4.3-.6-4.8H62.5c.2.1.5.2.9.3.5.1 1.1.2 2 .3 2.2.2 5.1-.2 6.6-.4.3-.1.6-.1.8-.1h.4c.4 0 .1.6-.1 1.2-.1.7-.5 3.3-.8 5.1-.3 1.8-.2 7.1-.1 8.8v.1c0 .3 1.9 1.2 3.5 2.1.7.2 1.4.5 1.8.9zm4.8-48.2c0 .1 0 .1 0 0-.1.1-.2.2-.2.3 0-.1-.1-.1-.1-.2 0 .1 0 .2-.1.2-.2.9-.6 2.4-2.2 4.1-.4.4-.7.6-1 .7-.5.1-.9 0-1.5-.1-.9-.2-1.3-.6-2.2-1.1-.1-.6-.3-1.3-.4-1.8 0-.3-.1-.5-.1-.6v-1l.4-.4s.7-1 1.8-1 2.2-.2 2.5-.5v-.1-.3c0-.1 0-.2-.1-.3-.4-1.4-2.1-1.8-1.4-4.8 0-.2.3-.5 1.2-.5-1.4-.3-2-.4-3-1.3.5-1.1 1-1.9 1.3-2.6.8-1.5.3-3.5.3-3.5.8-.3 1.6-.7 1.7-1 .9-2.8-.7-5.5-2.5-7.2 1.2-.1 2.6.1 3.6 1.1 2.4 2.4 1.8 5 1 6.8.6.7 2.1 2.9 1.2 5.3-.2.6-1.4.6-2.3 2.1 2.3-1.3 3.7-1 4.2.7 1 2.4-.6 5.3-2.1 7z"/><path d="M22 53.4v-.2c0-.2-.1-.5-.2-.9s-.1-.8-.2-1.3c-.5-4.7-1.9-9.4-4.9-11.3 3.7-2 16.8-8.5 21.9-10.5 2.9-1.2.8-.4-.2 1.4-.8 1.4-.3 2.9-.5 3.2-.6.8-12.6 10.5-15.9 19.6zm32.2-2.3c-3.4 3.8-12 11-18.2 11.4 8.7-.2 12.2 4.1 14.7 9.7 2.6-5.2 2.7-10.3 2.6-16.1 0-2.6 1.8-6 .9-5zm5.3-23L54.3 24s-1.1 3.1-1 4.6c.1 1.6-1.8 2.7-.9 3.6.9.9 3.2 2.5 4 3.4.7.9 1.1 7.1 1.1 7.1l2.2 2.7s1-1.8 1.1-6.3c.2-5.4-2.9-7.1-3.3-8.6-.4-1.4.6-2.9 2-2.4zm3.1 45.6l3.9.3s1.2-2.2 2.1-3.5c.9-1.4.4-1.6 0-4.6-.4-3-1.4-9.3-1.2-13.6l-3.1 10.2s1.8 5.6 1.6 6.4c-.1.8-3.3 4.8-3.3 4.8zm5 18.8c-1.1 0-2.5-.4-3.5-.8l-1 .3.2 4s5.2.7 4.6-.4c-.6-1.2-.3-3.1-.3-3.1zm12 .6c-1 0-.3.2.4 1.2.8 1 .1 2-.8 2.3l3.2.5 1.9-1.7c.1 0-3.7-2.3-4.7-2.3zM73 76c-1.6.5-4.2.8-5.9.8-1.7.1-3.7-.1-5-.5v1.4s1.2.5 5.4.5c3.5.1 5.7-.8 5.7-.8l.9-.8c-.1.1.5-1.1-1.1-.6zm-.2 3.1c-1.6.6-3.9.6-5.6.7-1.7.1-3.7-.1-5-.5l.1 1.4s.7.3 4.9.4c3.5.1 5.7-.7 5.7-.7l.3-.5c-.1-.1.3-1-.4-.8zm5.9-42.7c-.9-.8-1.4-2.4-1.5-3.3l-1.9 2.5.7 1.2s2.5.1 2.8.1c.4 0 .3-.1-.1-.5zM69 14.7c.6-.7.2-2.7.2-2.7L66 14.6l-4.4-.8-.5-1.3-1.3-.1c.8 1.8 1.8 2.5 3.3 3.1.9.4 4.5.9 5.9-.8z" style=opacity:.4;fill-rule:evenodd;clip-rule:evenodd /></svg></a></div></div>';
+
+  if (element) {
+    root.style.position = "absolute";
+    root.style.top = minimal ? "calc(100% - 42px)" : "calc(100% - 51px)";
+  }
+
+  if (css) {
+    if (_isString(css)) {
+      root.style.cssText = css;
+    } else if (_isObject(css)) {
+      css.data = "root";
+      gsap.set(root, css).kill();
+    }
+
+    if (root.style.top) {
+      root.style.bottom = "auto";
+    }
+
+    if (root.style.width) {
+      gsap.set(root, {
+        xPercent: -50,
+        left: "50%",
+        right: "auto",
+        data: "root"
+      }).kill();
+    }
+  }
+
+  if (!minimal && root.offsetWidth < 600) {
+    root.setAttribute("class", "gs-dev-tools minimal");
+
+    if (element) {
+      root.style.top = "calc(100% - 42px)";
+    }
+  }
+
+  return root;
+},
+    _clickedOnce = true,
+    //perhaps we shouldn't preventDefault() on the first mousedown/touchstart/pointerdown so that iframes get focus properly. Did that previously, but now it seems to prevent interaction on the first click (annoying).
+_addListener = function _addListener(e, type, callback, capture) {
+  var handler, altType;
+
+  if (type === "mousedown" || type === "mouseup") {
+    e.style.cursor = "pointer";
+  }
+
+  if (type === "mousedown") {
+    //some browsers call BOTH mousedown AND touchstart, for example, on a single interaction so we need to skip one of them if both are called within 100ms.
+    altType = !_isUndefined(e.onpointerdown) ? "pointerdown" : !_isUndefined(e.ontouchstart) ? "touchstart" : null;
+
+    if (altType) {
+      handler = function handler(event) {
+        if (event.target.nodeName.toLowerCase() !== "select" && event.type === altType) {
+          //don't preventDefault() on a <select> or else it won't open!
+          event.stopPropagation();
+
+          if (_clickedOnce) {
+            //otherwise, both touchstart and mousedown will get called.
+            event.preventDefault();
+            callback.call(e, event);
+          }
+        } else if (event.type !== altType) {
+          callback.call(e, event);
+        }
+
+        _clickedOnce = true;
+      };
+
+      e.addEventListener(altType, handler, capture);
+
+      if (altType !== "pointerdown") {
+        e.addEventListener(type, handler, capture);
+      }
+
+      return;
+    }
+  }
+
+  e.addEventListener(type, callback, capture);
+},
+    _removeListener = function _removeListener(e, type, callback) {
+  e.removeEventListener(type, callback);
+  type = type !== "mousedown" ? null : !_isUndefined(e.onpointerdown) ? "pointerdown" : !_isUndefined(e.ontouchstart) ? "touchstart" : null;
+
+  if (type) {
+    e.removeEventListener(type, callback);
+  }
+},
+    _selectValue = function _selectValue(element, value, label, insertIfAbsent) {
+  var options = element.options,
+      i = options.length,
+      option;
+  value += "";
+
+  while (--i > -1) {
+    if (options[i].innerHTML === value || options[i].value === value) {
+      element.selectedIndex = i;
+      label.innerHTML = options[i].innerHTML;
+      return options[i];
+    }
+  }
+
+  if (insertIfAbsent) {
+    option = _createElement("option", element);
+    option.setAttribute("value", value);
+    option.innerHTML = label.innerHTML = _isString(insertIfAbsent) ? insertIfAbsent : value;
+    element.selectedIndex = options.length - 1;
+  }
+},
+    //increments the selected value of a <select> up or down by a certain amount.
+_shiftSelectedValue = function _shiftSelectedValue(element, amount, label) {
+  var options = element.options,
+      i = Math.min(options.length - 1, Math.max(0, element.selectedIndex + amount));
+  element.selectedIndex = i;
+
+  if (label) {
+    label.innerHTML = options[i].innerHTML;
+  }
+
+  return options[i].value;
+},
+    //moves everything from _globalTimeline into _recordedRoot and updates the _rootTween if it is currently controlling the Global timeline (_recordedRoot). _recordedTemp is just a temporary recording area for anything that happens while _recordedRoot is paused. Returns true if the _recordedRoot's duration changed due to the merge.
+_merge = function _merge() {
+  var t = _globalTimeline._first,
+      duration,
+      next,
+      target;
+
+  if (_rootInstance) {
+    duration = _recordedRoot._dur;
+
+    while (t) {
+      next = t._next;
+      target = t._targets && t._targets[0];
+
+      if (!(_isFunction(target) && target === t.vars.onComplete && !t._dur) && !(target && target._gsIgnore)) {
+        //typically, delayedCalls aren't included in the _recordedTemp, but since the hijacked add() below fires BEFORE TweenLite's constructor sets the target, we couldn't check that target === vars.onComplete there. And Draggable creates a tween with just an onComplete (no onReverseComplete), thus it fails that test. Therefore, we test again here to avoid merging that in.
+        _recordedRoot.add(t, t._start - t._delay);
+      }
+
+      t = next;
+    }
+
+    return duration !== _recordedRoot.duration();
+  }
+},
+    _updateRootDuration = function _updateRootDuration() {
+  if (_rootInstance) {
+    _rootInstance.update();
+
+    _rootIsDirty = false;
+  }
+
+  gsap.ticker.remove(_updateRootDuration);
+},
+    _buildPlayPauseMorph = function _buildPlayPauseMorph(svg) {
+  var tl = gsap.timeline({
+    data: "root",
+    parent: _independentRoot,
+    onComplete: function onComplete() {
+      return tl.kill();
+    }
+  }, _independentRoot._time);
+  tl.to(svg.querySelector(".play-1"), {
+    duration: 0.4,
+    attr: {
+      d: "M5.75,3.13 C5.75,9.79 5.75,16.46 5.75,23.13 4.08,23.13 2.41,23.13 0.75,23.13 0.75,16.46 0.75,9.79 0.75,3.12 2.41,3.12 4.08,3.12 5.75,3.12"
+    },
+    ease: "power2.inOut",
+    rotation: 360,
+    transformOrigin: "50% 50%"
+  }).to(svg.querySelector(".play-2"), {
+    duration: 0.4,
+    attr: {
+      d: "M16.38,3.13 C16.38,9.79 16.38,16.46 16.38,23.13 14.71,23.13 13.04,23.13 11.38,23.13 11.38,16.46 11.38,9.79 11.38,3.12 13.04,3.12 14.71,3.12 16.38,3.12"
+    },
+    ease: "power2.inOut",
+    rotation: 360,
+    transformOrigin: "50% 50%"
+  }, 0.05);
+  return tl;
+},
+    _buildLoopAnimation = function _buildLoopAnimation(svg) {
+  var tl = gsap.timeline({
+    data: "root",
+    id: "loop",
+    parent: _independentRoot,
+    paused: true,
+    onComplete: function onComplete() {
+      return tl.kill();
+    }
+  }, _independentRoot._time);
+  tl.to(svg, {
+    duration: 0.5,
+    rotation: 360,
+    ease: "power3.inOut",
+    transformOrigin: "50% 50%"
+  }).to(svg.querySelectorAll(".loop-path"), {
+    duration: 0.5,
+    fill: "#91e600",
+    ease: "none"
+  }, 0);
+  return tl;
+},
+    _getAnimationById = function _getAnimationById(id) {
+  return gsap.getById(id) || _independentRoot.getById(id) || id === _recordedRoot.vars.id && _recordedRoot;
+},
+    _initCore = function _initCore(core) {
+  gsap = core || _getGSAP();
+
+  if (!_coreInitted) {
+    if (gsap && _windowExists()) {
+      _doc = document;
+      _docEl = _doc.documentElement;
+      _win = window;
+      gsap.registerPlugin(_Draggable_js__WEBPACK_IMPORTED_MODULE_0__.Draggable);
+      _globalTimeline = gsap.globalTimeline;
+      _globalTimeline._sort = true;
+      _globalTimeline.autoRemoveChildren = false;
+      Animation = gsap.core.Animation;
+      _independentRoot = gsap.timeline({
+        data: "indy",
+        autoRemoveChildren: true,
+        smoothChildTiming: true
+      });
+
+      _independentRoot.kill();
+
+      _independentRoot._dp = 0; //don't let it revert to the global timeline as its parent.
+
+      _independentRoot.to({}, {
+        duration: 1e12
+      });
+
+      _recordedRoot = gsap.timeline({
+        data: "root",
+        id: "Global Timeline",
+        autoRemoveChildren: false,
+        smoothChildTiming: true,
+        parent: _independentRoot
+      }, 0);
+      _rootTween = gsap.to(_recordedRoot, {
+        duration: 1,
+        time: 1,
+        ease: "none",
+        data: "root",
+        id: "_rootTween",
+        paused: true,
+        immediateRender: false,
+        parent: _independentRoot
+      }, 0); // so that auto-overwriting works. Initially we transferred the tweens to the _recordedRoot.
+
+      _globalTimeline.killTweensOf = function (targets, props, onlyActive) {
+        _recordedRoot.killTweensOf(targets, props, onlyActive);
+
+        _recordedRoot.killTweensOf.call(_globalTimeline, targets, props, onlyActive);
+      };
+
+      _independentRoot._start = gsap.ticker.time;
+      gsap.ticker.add(function (time) {
+        return _independentRoot.render(time - _independentRoot._start);
+      }); // before 3.7.0, the listener below was necessary (in place of the line above)
+      // gsap.ticker.add(time => {
+      // 	_independentRoot._initted || _independentRoot.render(0.001, true); // to prevent callbacks from being fired on the first tick, like onComplete would fire immediately and then again at the correct time.
+      // 	_independentRoot.render(time - _independentRoot._start);
+      // });
+      //align the all of the playheads so they're starting at 0 now.
+
+      _globalTimeline._start += _globalTimeline._time;
+      _recordedRoot._start = _globalTimeline._time = _globalTimeline._tTime = 0;
+
+      _delayedCall = function _delayedCall(delay, callback, params, scope) {
+        return gsap.to(callback, {
+          delay: delay,
+          duration: 0,
+          onComplete: callback,
+          onReverseComplete: callback,
+          onCompleteParams: params,
+          onReverseCompleteParams: params,
+          callbackScope: scope,
+          parent: _independentRoot
+        }, _independentRoot._time);
+      }; //in case GSDevTools.create() is called before anything is actually on the global timeline, we've gotta update it or else the duration will be 0 and it'll be stuck.
+
+
+      _delayedCall(0.01, function () {
+        return _rootInstance ? _rootInstance.update() : _merge();
+      }); //initially we record everything into the _recordedRoot Timeline because developers might call GSDevTools.create() AFTER some of their code executes, but after 2 seconds if there aren't any GSDevTool instances that have globalSync enabled, we should dump all the stuff from _recordedRoot into the global timeline to improve performance and avoid issues where _recordedRoot is paused and reaches its end and wants to stop the playhead.
+
+
+      _delayedCall(2, function () {
+        var t, next, offset;
+
+        if (!_rootInstance) {
+          _merge();
+
+          t = _recordedRoot._first;
+          offset = _recordedRoot._start;
+
+          while (t) {
+            next = t._next; //any animations that aren't finished should be dumped into the root timeline. If they're done, just kill them.
+
+            if (t._tDur !== t._tTime || !t._dur && t.progress() !== 1) {
+              _globalTimeline.add(t, t._start - t._delay + offset);
+            } else {
+              t.kill();
+            }
+
+            t = next;
+          }
+        }
+
+        if (GSDevTools.globalRecordingTime > 2) {
+          _delayedCall(GSDevTools.globalRecordingTime - 2, function () {
+            _rootInstance && _rootInstance.update();
+            _recording = false;
+            _globalTimeline.autoRemoveChildren = true;
+          });
+        } else {
+          _recording = false;
+          _globalTimeline.autoRemoveChildren = true;
+        }
+
+        _startupPhase = false;
+      });
+
+      _coreInitted = 1;
+    }
+  }
+},
+    _checkIndependence = function _checkIndependence(animation, vars) {
+  if (!vars.globalSync && animation.parent !== _globalTimeline) {
+    //in case it's nested in a timeline (playing it won't help if the parent timeline isn't playing).
+    _globalTimeline.add(animation, _globalTimeline.time());
+  }
+},
+    GSDevTools = function GSDevTools(vars) {
+  if (!_coreInitted) {
+    _initCore();
+
+    gsap || console.warn("Please gsap.registerPlugin(GSDevTools)");
+  }
+
+  this.vars = vars = vars || {};
+
+  if (vars.animation) {
+    (GSDevTools.getByAnimation(vars.animation) || {
+      kill: function kill() {
+        return 0;
+      }
+    }).kill();
+  }
+
+  vars.id = vars.id || (_isString(vars.animation) ? vars.animation : _idSeed++); //try to find a unique ID so that sessionStorage can be mapped to it (otherwise, for example, all the embedded codepens on a page would share the same settings). So if no id is defined, see if there's a string-based "animation" defined. Last of all, we default to a numeric counter that we increment.
+
+  _lookup[vars.id + ""] = this;
+  "globalSync" in vars || (vars.globalSync = !vars.animation); //if the user calls create() and passes in an animation AFTER the initial recording time has elapsed, there's a good chance the animation won't be in the recordedRoot, so we change the default globalSync to false because that's the most intuitive behavior.
+  //GENERAL/UTILITY
+
+  var _self = this,
+      root = _createRootElement(vars.container, vars.minimal, vars.css),
+      find = function find(s) {
+    return root.querySelector(s);
+  },
+      record = function record(key, value) {
+    if (vars.persist !== false && _supportsStorage) {
+      sessionStorage.setItem("gs-dev-" + key + vars.id, value);
+    }
+
+    return value;
+  },
+      recall = function recall(key) {
+    var value;
+
+    if (vars.persist !== false && _supportsStorage) {
+      value = sessionStorage.getItem("gs-dev-" + key + vars.id);
+      return key === "animation" ? value : key === "loop" ? value === "true" : parseFloat(value); // handle data typing too.
+    }
+  },
+      //SCRUBBER/PROGRESS
+  playhead = find(".playhead"),
+      timelineTrack = find(".timeline-track"),
+      progressBar = find(".progress-bar"),
+      timeLabel = find(".time"),
+      durationLabel = find(".duration"),
+      pixelToTimeRatio,
+      timeAtDragStart,
+      dragged,
+      skipDragUpdates,
+      progress = 0,
+      inPoint = find(".in-point"),
+      outPoint = find(".out-point"),
+      inProgress = 0,
+      outProgress = 100,
+      pausedWhenDragStarted,
+      list = find(".animation-list"),
+      animationLabel = find(".animation-label"),
+      selectedAnimation,
+      //the currently selected animation
+  linkedAnimation,
+      //the animation that's linked to all the controls and scrubber. This is always _rootTween if globalSync is true, so it can be different than the selectedAnimation!
+  declaredAnimation,
+      //whatever the user defines in the config object initially (often this will be null). If the user defines a string, it'll be resolved to a real Animation instance for this variable.
+  startTime,
+      endTime,
+      _fullyInitialized,
+      //we call initialize() initially, and then again on the very next tick just in case someone called GSDevTools.create() BEFORE they create their animations. This variable tracks that state. Note: we don't record sessionStorage.setItem() until we're fully initialized, otherwise we may inadvertently set in/out points to the defaults just because the animation couldn't be found (yet).
+  keyboardHandler,
+      playPauseButton = find(".play-pause"),
+      playPauseMorph = _buildPlayPauseMorph(playPauseButton),
+      paused = false,
+      loopButton = find(".loop"),
+      loopAnimation = _buildLoopAnimation(loopButton),
+      loopEnabled,
+      timeScale = find(".time-scale select"),
+      timeScaleLabel = find(".time-scale-label"),
+      //spits back a common onPress function for anything that's dragged along the timeline (playhead, inPoint, outPoint). The originRatio is a value from 0-1 indicating how far along the x-axis the origin is located (0.5 is in the center, 0 is left, 1 is on right side). limitElement is optional, and sets the bounds such that the element can't be dragged past the limitElement.
+  onPressTimeline = function onPressTimeline(element, originRatio, limitToInOut) {
+    return function (e) {
+      var trackBounds = timelineTrack.getBoundingClientRect(),
+          elementBounds = element.getBoundingClientRect(),
+          left = elementBounds.width * originRatio,
+          x = gsap.getProperty(element, "x"),
+          minX = trackBounds.left - elementBounds.left - left + x,
+          maxX = trackBounds.right - elementBounds.right + (elementBounds.width - left) + x,
+          unlimitedMinX = minX,
+          limitBounds;
+
+      if (limitToInOut) {
+        if (element !== inPoint) {
+          limitBounds = inPoint.getBoundingClientRect();
+
+          if (limitBounds.left) {
+            //if inPoint is hidden (like display:none), ignore.
+            minX += limitBounds.left + limitBounds.width - trackBounds.left;
+          }
+        }
+
+        if (element !== outPoint) {
+          limitBounds = outPoint.getBoundingClientRect();
+
+          if (limitBounds.left) {
+            //if outPoint is hidden (like display:none), ignore.
+            maxX -= trackBounds.left + trackBounds.width - limitBounds.left;
+          }
+        }
+      }
+
+      pausedWhenDragStarted = paused;
+      this.applyBounds({
+        minX: minX,
+        maxX: maxX
+      });
+      pixelToTimeRatio = linkedAnimation.duration() / trackBounds.width;
+      timeAtDragStart = -unlimitedMinX * pixelToTimeRatio;
+
+      if (!skipDragUpdates) {
+        linkedAnimation.pause(timeAtDragStart + pixelToTimeRatio * this.x);
+      } else {
+        linkedAnimation.pause();
+      }
+
+      if (this.target === playhead) {
+        if (this.activated) {
+          this.allowEventDefault = false;
+        }
+
+        this.activated = true;
+      }
+
+      dragged = true;
+    };
+  },
+      progressDrag = _Draggable_js__WEBPACK_IMPORTED_MODULE_0__.Draggable.create(playhead, {
+    type: "x",
+    cursor: "ew-resize",
+    allowNativeTouchScrolling: false,
+    allowEventDefault: true,
+    //otherwise, when dragged outside an iframe, the mouseup doesn't bubble up so it could seem "stuck" to the mouse.
+    onPress: onPressTimeline(playhead, 0.5, true),
+    onDrag: function onDrag() {
+      var time = timeAtDragStart + pixelToTimeRatio * this.x;
+
+      if (time < 0) {
+        time = 0;
+      } else if (time > linkedAnimation._dur) {
+        time = linkedAnimation._dur;
+      }
+
+      if (!skipDragUpdates) {
+        linkedAnimation.time(time);
+      }
+
+      progressBar.style.width = Math.min(outProgress - inProgress, Math.max(0, time / linkedAnimation._dur * 100 - inProgress)) + "%";
+      timeLabel.innerHTML = time.toFixed(2);
+    },
+    onRelease: function onRelease() {
+      paused || linkedAnimation.resume();
+    }
+  })[0],
+      resetInOut = function resetInOut() {
+    inProgress = 0;
+    outProgress = 100;
+    inPoint.style.left = "0%";
+    outPoint.style.left = "100%";
+    record("in", inProgress);
+    record("out", outProgress);
+    updateProgress(true);
+  },
+      inDrag = _Draggable_js__WEBPACK_IMPORTED_MODULE_0__.Draggable.create(inPoint, {
+    type: "x",
+    cursor: "ew-resize",
+    zIndexBoost: false,
+    allowNativeTouchScrolling: false,
+    allowEventDefault: true,
+    //otherwise, when dragged outside an iframe, the mouseup doesn't bubble up so it could seem "stuck" to the mouse.
+    onPress: onPressTimeline(inPoint, 1, true),
+    onDoubleClick: resetInOut,
+    onDrag: function onDrag() {
+      inProgress = (timeAtDragStart + pixelToTimeRatio * this.x) / linkedAnimation.duration() * 100;
+      linkedAnimation.progress(inProgress / 100);
+      updateProgress(true);
+    },
+    onRelease: function onRelease() {
+      if (inProgress < 0) {
+        inProgress = 0;
+      }
+
+      _clearSelection(); //for responsiveness, convert the px-based transform into %-based left position.
+
+
+      inPoint.style.left = inProgress + "%";
+      record("in", inProgress);
+      gsap.set(inPoint, {
+        x: 0,
+        data: "root",
+        display: "block"
+      }); //set display:block so that it remains visible even when the minimal skin is enabled.
+
+      if (!paused) {
+        linkedAnimation.resume();
+      }
+    }
+  })[0],
+      outDrag = _Draggable_js__WEBPACK_IMPORTED_MODULE_0__.Draggable.create(outPoint, {
+    type: "x",
+    cursor: "ew-resize",
+    allowNativeTouchScrolling: false,
+    allowEventDefault: true,
+    //otherwise, when dragged outside an iframe, the mouseup doesn't bubble up so it could seem "stuck" to the mouse.
+    zIndexBoost: false,
+    onPress: onPressTimeline(outPoint, 0, true),
+    onDoubleClick: resetInOut,
+    onDrag: function onDrag() {
+      outProgress = (timeAtDragStart + pixelToTimeRatio * this.x) / linkedAnimation.duration() * 100;
+      linkedAnimation.progress(outProgress / 100);
+      updateProgress(true);
+    },
+    onRelease: function onRelease() {
+      if (outProgress > 100) {
+        outProgress = 100;
+      }
+
+      _clearSelection(); //for responsiveness, convert the px-based transform into %-based left position.
+
+
+      outPoint.style.left = outProgress + "%";
+      record("out", outProgress);
+      gsap.set(outPoint, {
+        x: 0,
+        data: "root",
+        display: "block"
+      }); //set display:block so that it remains visible even when the minimal skin is enabled.
+
+      if (!pausedWhenDragStarted) {
+        play();
+        linkedAnimation.resume();
+      }
+    }
+  })[0],
+      updateProgress = function updateProgress(force) {
+    // NOTE: "force" is actually the "time" when this method gets called by the gsap.ticker!
+    if (progressDrag.isPressed && force !== true) {
+      return;
+    }
+
+    var p = !loopEnabled && selectedAnimation._repeat === -1 ? selectedAnimation.totalTime() / selectedAnimation.duration() * 100 : linkedAnimation.progress() * 100 || 0,
+        repeatDelayPhase = selectedAnimation._repeat && selectedAnimation._rDelay && selectedAnimation.totalTime() % (selectedAnimation.duration() + selectedAnimation._rDelay) > selectedAnimation.duration(),
+        target;
+
+    if (p > 100) {
+      p = 100;
+    }
+
+    if (p >= outProgress) {
+      if (loopEnabled && !linkedAnimation.paused() && !progressDrag.isDragging) {
+        if (!repeatDelayPhase) {
+          p = inProgress;
+          target = linkedAnimation._targets && linkedAnimation._targets[0];
+
+          if (target === selectedAnimation) {
+            //in case there are callbacks on the timeline, when we jump back to the start we should seek() so that the playhead doesn't drag [backward] past those and trigger them.
+            target.seek(startTime + (endTime - startTime) * inProgress / 100);
+          }
+
+          if (selectedAnimation._repeat > 0 && !inProgress && outProgress === 100) {
+            if (selectedAnimation.totalProgress() === 1) {
+              linkedAnimation.totalProgress(0, true).resume();
+            }
+          } else {
+            linkedAnimation.progress(p / 100, true).resume();
+          }
+        }
+      } else {
+        if (p !== outProgress || selectedAnimation._repeat === -1) {
+          p = outProgress;
+          linkedAnimation.progress(p / 100);
+        }
+
+        if (!paused && (outProgress < 100 || selectedAnimation.totalProgress() === 1 || selectedAnimation._repeat === -1)) {
+          pause();
+        }
+      }
+    } else if (p < inProgress) {
+      p = inProgress;
+      linkedAnimation.progress(p / 100, true);
+    }
+
+    if (p !== progress || force === true) {
+      progressBar.style.left = inProgress + "%";
+      progressBar.style.width = Math.max(0, p - inProgress) + "%";
+      playhead.style.left = p + "%";
+      timeLabel.innerHTML = linkedAnimation._time.toFixed(2);
+      durationLabel.innerHTML = linkedAnimation._dur.toFixed(2);
+
+      if (dragged) {
+        playhead.style.transform = "translate(-50%,0)";
+        playhead._gsap.x = "0px";
+        playhead._gsap.xPercent = -50;
+        dragged = false;
+      }
+
+      progress = p;
+    }
+
+    linkedAnimation.paused() !== paused && togglePlayPause(); // if the user has an addPause() in the middle of the animation.
+  },
+      onPressSeekBar = function onPressSeekBar(e) {
+    if (progressDrag.isPressed) {
+      return;
+    }
+
+    var bounds = e.target.getBoundingClientRect(),
+        x = (e.changedTouches ? e.changedTouches[0] : e).clientX,
+        p = (x - bounds.left) / bounds.width * 100;
+
+    if (p < inProgress) {
+      inProgress = p = Math.max(0, p);
+      inPoint.style.left = inProgress + "%";
+      inDrag.startDrag(e);
+      return;
+    } else if (p > outProgress) {
+      outProgress = p = Math.min(100, p);
+      outPoint.style.left = outProgress + "%";
+      outDrag.startDrag(e);
+      return;
+    }
+
+    linkedAnimation.progress(p / 100).pause();
+    updateProgress(true);
+    progressDrag.startDrag(e);
+  },
+      //PLAY/PAUSE button
+  play = function play() {
+    if (linkedAnimation.progress() >= outProgress / 100) {
+      _checkIndependence(linkedAnimation, vars);
+
+      var target = linkedAnimation._targets && linkedAnimation._targets[0];
+
+      if (target === selectedAnimation) {
+        //in case there are callbacks on the timeline, when we jump back to the start we should seek() so that the playhead doesn't drag [backward] past those and trigger them.
+        target.seek(startTime + (endTime - startTime) * inProgress / 100);
+      }
+
+      if (linkedAnimation._repeat && !inProgress) {
+        linkedAnimation.totalProgress(0, true); //for repeating animations, don't get stuck in the last iteration - jump all the way back to the start.
+      } else if (!linkedAnimation.reversed()) {
+        linkedAnimation.progress(inProgress / 100, true);
+      }
+    }
+
+    playPauseMorph.play();
+    linkedAnimation.resume();
+
+    if (paused) {
+      _self.update();
+    }
+
+    paused = false;
+  },
+      pause = function pause() {
+    playPauseMorph.reverse();
+
+    if (linkedAnimation) {
+      linkedAnimation.pause();
+    }
+
+    paused = true;
+  },
+      togglePlayPause = function togglePlayPause() {
+    if (paused) {
+      play();
+    } else {
+      pause();
+    }
+  },
+      //REWIND button
+  onPressRewind = function onPressRewind(e) {
+    if (progressDrag.isPressed) {
+      return;
+    } //_self.update();
+
+
+    _checkIndependence(linkedAnimation, vars);
+
+    var target = linkedAnimation._targets && linkedAnimation._targets[0];
+
+    if (target === selectedAnimation) {
+      //in case there are callbacks on the timeline, when we jump back to the start we should seek() so that the playhead doesn't drag [backward] past those and trigger them.
+      target.seek(startTime + (endTime - startTime) * inProgress / 100);
+    }
+
+    linkedAnimation.progress(inProgress / 100, true);
+
+    if (!paused) {
+      linkedAnimation.resume();
+    }
+  },
+      //LOOP button
+  loop = function loop(value) {
+    loopEnabled = value;
+    record("loop", loopEnabled);
+
+    if (loopEnabled) {
+      loopAnimation.play();
+
+      if (linkedAnimation.progress() >= outProgress / 100) {
+        var target = linkedAnimation._targets && linkedAnimation._targets[0];
+
+        if (target === selectedAnimation) {
+          //in case there are callbacks on the timeline, when we jump back to the start we should seek() so that the playhead doesn't drag [backward] past those and trigger them.
+          target.seek(startTime + (endTime - startTime) * inProgress / 100);
+        }
+
+        if (selectedAnimation._repeat && !inProgress && outProgress === 100) {
+          linkedAnimation.totalProgress(0, true);
+        } else {
+          linkedAnimation.progress(inProgress / 100, true);
+        }
+
+        play();
+      }
+    } else {
+      loopAnimation.reverse();
+    }
+  },
+      toggleLoop = function toggleLoop() {
+    return loop(!loopEnabled);
+  },
+      //ANIMATIONS list
+  updateList = function updateList() {
+    var animations = _getChildrenOf(declaredAnimation && !vars.globalSync ? declaredAnimation : _recordedRoot, true),
+        options = list.children,
+        matches = 0,
+        option,
+        i;
+
+    if (declaredAnimation && !vars.globalSync) {
+      animations.unshift(declaredAnimation);
+    } else if (!vars.hideGlobalTimeline) {
+      animations.unshift(_recordedRoot);
+    }
+
+    for (i = 0; i < animations.length; i++) {
+      option = options[i] || _createElement("option", list);
+      option.animation = animations[i];
+      matches = i && animations[i].vars.id === animations[i - 1].vars.id ? matches + 1 : 0;
+      option.setAttribute("value", option.innerHTML = animations[i].vars.id + (matches ? " [" + matches + "]" : animations[i + 1] && animations[i + 1].vars.id === animations[i].vars.id ? " [0]" : ""));
+    }
+
+    for (; i < options.length; i++) {
+      list.removeChild(options[i]);
+    }
+  },
+      animation = function animation(anim) {
+    var ts = parseFloat(timeScale.options[timeScale.selectedIndex].value) || 1,
+        tl,
+        maxDuration;
+
+    if (!arguments.length) {
+      return selectedAnimation;
+    }
+
+    if (_isString(anim)) {
+      anim = _getAnimationById(anim);
+    } //console.log("animation() ", anim.vars.id);
+
+
+    if (!(anim instanceof Animation)) {
+      console.warn("GSDevTools error: invalid animation.");
+    }
+
+    if (anim.scrollTrigger) {
+      console.warn("GSDevTools can't work with ScrollTrigger-based animations; either the scrollbar -OR- the GSDevTools scrubber can control the animation.");
+    }
+
+    if (anim === selectedAnimation) {
+      return;
+    }
+
+    if (selectedAnimation) {
+      selectedAnimation._inProgress = inProgress;
+      selectedAnimation._outProgress = outProgress;
+    }
+
+    selectedAnimation = anim;
+
+    if (linkedAnimation) {
+      ts = linkedAnimation.timeScale();
+
+      if (linkedAnimation._targets && linkedAnimation._targets[0] === declaredAnimation) {
+        declaredAnimation.resume();
+        linkedAnimation.kill();
+      }
+    }
+
+    inProgress = selectedAnimation._inProgress || 0;
+    outProgress = selectedAnimation._outProgress || 100;
+    inPoint.style.left = inProgress + "%";
+    outPoint.style.left = outProgress + "%";
+
+    if (_fullyInitialized) {
+      //don't record inProgress/outProgress unless we're fully instantiated because people may call GSDevTools.create() before creating/defining their animations, thus the inTime/outTime may not exist yet.
+      record("animation", selectedAnimation.vars.id);
+      record("in", inProgress);
+      record("out", outProgress);
+    }
+
+    startTime = 0;
+    maxDuration = vars.maxDuration || Math.min(1000, _getClippedDuration(selectedAnimation));
+
+    if (selectedAnimation === _recordedRoot || vars.globalSync) {
+      _merge();
+
+      linkedAnimation = _rootTween;
+      _rootInstance && _rootInstance !== _self && console.warn("Error: GSDevTools can only have one instance that's globally synchronized.");
+      _rootInstance = _self;
+
+      if (selectedAnimation !== _recordedRoot) {
+        tl = selectedAnimation;
+        endTime = tl.totalDuration();
+
+        if (endTime > 99999999) {
+          //in the case of an infinitely repeating animation, just use a single iteration's duration instead.
+          endTime = tl.duration();
+        }
+
+        while (tl.parent) {
+          startTime = startTime / tl._ts + tl._start;
+          endTime = endTime / tl._ts + tl._start;
+          tl = tl.parent;
+        }
+      } else {
+        endTime = _recordedRoot.duration();
+      }
+
+      if (endTime - startTime > maxDuration) {
+        //cap end time at 1000 because it doesn't seem reasonable to accommodate super long stuff.
+        endTime = startTime + maxDuration;
+      }
+
+      _recordedRoot.pause(startTime);
+
+      _rootTween.vars.time = endTime;
+
+      _rootTween.invalidate();
+
+      _rootTween.duration(endTime - startTime).timeScale(ts); //wait for a tick before starting because some browsers freeze things immediately following a <select> selection, like on MacOS it flashes a few times before disappearing, so this prevents a "jump".
+
+
+      if (paused) {
+        //jump forward and then back in order to make sure the start/end values are recorded internally right away and don't drift outside this tween.
+        _rootTween.progress(1, true).pause(0, true);
+      } else {
+        _delayedCall(0.01, function () {
+          _rootTween.resume().progress(inProgress / 100);
+
+          paused && play();
+        });
+      }
+    } else {
+      if (_rootInstance === _self) {
+        _rootInstance = null;
+      }
+
+      startTime = Math.min(inProgress * selectedAnimation.duration(), selectedAnimation.time());
+
+      if (selectedAnimation === declaredAnimation || !declaredAnimation) {
+        linkedAnimation = selectedAnimation;
+
+        if (!loopEnabled && linkedAnimation._repeat) {
+          loop(true);
+        }
+      } else {
+        //if an animation is declared in the config object, and the user chooses a sub-animation (nested), we tween the playhead of the declaredAnimation to keep everything synchronized even though globalSync isn't true.
+        tl = selectedAnimation;
+        endTime = tl.totalDuration();
+
+        if (endTime > 99999999) {
+          //in the case of an infinitely repeating animation, just use a single iteration's duration instead.
+          endTime = tl.duration();
+        }
+
+        while (tl.parent.parent && tl !== declaredAnimation) {
+          startTime = startTime / (tl._ts || tl._pauseTS) + tl._start;
+          endTime = endTime / (tl._ts || tl._pauseTS) + tl._start;
+          tl = tl.parent;
+        }
+
+        if (endTime - startTime > maxDuration) {
+          //cap end time at 1000 because it doesn't seem reasonable to accommodate super long stuff.
+          endTime = startTime + maxDuration;
+        }
+
+        declaredAnimation.pause(startTime);
+        linkedAnimation = gsap.to(declaredAnimation, {
+          duration: endTime - startTime,
+          time: endTime,
+          ease: "none",
+          data: "root",
+          parent: _independentRoot
+        }, _independentRoot._time);
+      }
+
+      linkedAnimation.timeScale(ts);
+
+      _rootTween.pause();
+
+      _recordedRoot.resume();
+
+      linkedAnimation.seek(0);
+    }
+
+    durationLabel.innerHTML = linkedAnimation.duration().toFixed(2);
+
+    _selectValue(list, selectedAnimation.vars.id, animationLabel);
+  },
+      updateRootDuration = function updateRootDuration() {
+    var time, ratio, duration;
+
+    if (selectedAnimation === _recordedRoot) {
+      time = _recordedRoot._time;
+
+      _recordedRoot.progress(1, true).time(time, true); //jump to the end and back again because sometimes a tween that hasn't rendered yet will affect duration, like a TimelineMax.tweenTo() where the duration gets set in the onStart.
+
+
+      time = (_rootTween._dp._time - _rootTween._start) * _rootTween._ts;
+      duration = Math.min(1000, _recordedRoot.duration());
+
+      if (duration === 1000) {
+        duration = Math.min(1000, _getClippedDuration(_recordedRoot));
+      }
+
+      ratio = _rootTween.duration() / duration;
+
+      if (ratio !== 1 && duration) {
+        inProgress *= ratio;
+
+        if (outProgress < 100) {
+          outProgress *= ratio;
+        }
+
+        _rootTween.seek(0);
+
+        _rootTween.vars.time = duration;
+
+        _rootTween.invalidate();
+
+        _rootTween.duration(duration);
+
+        _rootTween.time(time);
+
+        durationLabel.innerHTML = duration.toFixed(2);
+        inPoint.style.left = inProgress + "%";
+        outPoint.style.left = outProgress + "%";
+        updateProgress(true);
+      }
+    }
+  },
+      onChangeAnimation = function onChangeAnimation(e) {
+    animation(list.options[list.selectedIndex].animation);
+
+    if (e.target && e.target.blur) {
+      //so that if an option is selected, and then the user tries to hit the up/down arrow, it doesn't just try selecting something else in the <select>.
+      e.target.blur();
+    }
+
+    paused && play();
+  },
+      //TIMESCALE button
+  onChangeTimeScale = function onChangeTimeScale(e) {
+    var ts = parseFloat(timeScale.options[timeScale.selectedIndex].value) || 1,
+        target;
+    linkedAnimation.timeScale(ts);
+    record("timeScale", ts);
+
+    if (!paused) {
+      if (linkedAnimation.progress() >= outProgress / 100) {
+        target = linkedAnimation._targets && linkedAnimation._targets[0];
+
+        if (target === selectedAnimation) {
+          //in case there are callbacks on the timeline, when we jump back to the start we should seek() so that the playhead doesn't drag [backward] past those and trigger them.
+          target.seek(startTime + (endTime - startTime) * inProgress / 100);
+        }
+
+        linkedAnimation.progress(inProgress / 100, true).pause();
+      } else {
+        linkedAnimation.pause();
+      }
+
+      _delayedCall(0.01, function () {
+        return linkedAnimation.resume();
+      });
+    }
+
+    timeScaleLabel.innerHTML = ts + "x";
+
+    if (timeScale.blur) {
+      //so that if an option is selected, and then the user tries to hit the up/down arrow, it doesn't just try selecting something else in the <select>.
+      timeScale.blur();
+    }
+  },
+      //AUTOHIDE
+  autoHideTween = gsap.to([find(".gs-bottom"), find(".gs-top")], {
+    duration: 0.3,
+    autoAlpha: 0,
+    y: 50,
+    ease: "power2.in",
+    data: "root",
+    paused: true,
+    parent: _independentRoot
+  }, _independentRoot._time),
+      hidden = false,
+      onMouseOut = function onMouseOut(e) {
+    if (!_Draggable_js__WEBPACK_IMPORTED_MODULE_0__.Draggable.hitTest(e, root) && !progressDrag.isDragging && !inDrag.isDragging && !outDrag.isDragging) {
+      autoHideDelayedCall.restart(true);
+    }
+  },
+      hide = function hide() {
+    if (!hidden) {
+      autoHideTween.play();
+      autoHideDelayedCall.pause();
+      hidden = true;
+    }
+  },
+      show = function show() {
+    autoHideDelayedCall.pause();
+
+    if (hidden) {
+      autoHideTween.reverse();
+      hidden = false;
+    }
+  },
+      toggleHide = function toggleHide() {
+    if (hidden) {
+      show();
+    } else {
+      hide();
+    }
+  },
+      autoHideDelayedCall = _delayedCall(1.3, hide).pause(),
+      initialize = function initialize(preliminary) {
+    //if on startup, someone does a timeline.seek(), we must honor it, so when initialize() is called, we record _recordedRoot._start so that we can use that as an offset. Remember, however, that we call initialize() twice on startup, once after a tick has elapsed just in case someone called GSDevTools.create() before their animation code, so we must record the value (once).
+    if (_startupPhase && !_globalStartTime) {
+      _globalStartTime = _recordedRoot._start;
+    }
+
+    _fullyInitialized = !preliminary;
+    declaredAnimation = _parseAnimation(vars.animation);
+
+    if (declaredAnimation && !declaredAnimation.vars.id) {
+      declaredAnimation.vars.id = "[no id]";
+    }
+
+    _merge();
+
+    updateList();
+
+    var savedAnimation = _getAnimationById(recall("animation"));
+
+    if (savedAnimation) {
+      savedAnimation._inProgress = recall("in") || 0;
+      savedAnimation._outProgress = recall("out") || 100;
+    }
+
+    vars.paused && pause();
+    selectedAnimation = null;
+    animation(declaredAnimation || savedAnimation || _recordedRoot);
+    var ts = vars.timeScale || recall("timeScale"),
+        savedInOut = savedAnimation === selectedAnimation;
+
+    if (ts) {
+      _selectValue(timeScale, ts, timeScaleLabel, ts + "x");
+
+      linkedAnimation.timeScale(ts);
+    }
+
+    inProgress = ("inTime" in vars ? _timeToProgress(vars.inTime, selectedAnimation, 0, 0) : savedInOut ? savedAnimation._inProgress : 0) || 0;
+
+    if (inProgress === 100 && !vars.animation && savedAnimation) {
+      //in case there's a recorded animation (sessionStorage) and then the user defines an inTime that exceeds that animation's duration, just default back to the Global Timeline. Otherwise the in/out point will be at the very end and it'd be weird.
+      animation(_recordedRoot);
+      inProgress = _timeToProgress(vars.inTime, selectedAnimation, 0, 0) || 0;
+    }
+
+    if (inProgress) {
+      inPoint.style.left = inProgress + "%";
+      inPoint.style.display = outPoint.style.display = "block"; //set display:block so that it remains visible even when the minimal skin is enabled.
+    }
+
+    outProgress = ("outTime" in vars ? _timeToProgress(vars.outTime, selectedAnimation, 100, inProgress) : savedInOut ? savedAnimation._outProgress : 0) || 100;
+
+    if (outProgress < inProgress) {
+      outProgress = 100;
+    }
+
+    if (outProgress !== 100) {
+      outPoint.style.left = outProgress + "%";
+      inPoint.style.display = outPoint.style.display = "block"; //set display:block so that it remains visible even when the minimal skin is enabled.
+    }
+
+    loopEnabled = "loop" in vars ? vars.loop : recall("loop");
+    loopEnabled && loop(true);
+    vars.paused && linkedAnimation.progress(inProgress / 100, true).pause();
+
+    if (_startupPhase && selectedAnimation === _recordedRoot && _globalStartTime && vars.globalSync && !paused) {
+      linkedAnimation.time(-_globalStartTime, true);
+    }
+
+    updateProgress(true);
+  }; //INITIALIZATION TASKS
+
+
+  _addListener(list, "change", onChangeAnimation);
+
+  _addListener(list, "mousedown", updateList);
+
+  _addListener(playPauseButton, "mousedown", togglePlayPause);
+
+  _addListener(find(".seek-bar"), "mousedown", onPressSeekBar);
+
+  _addListener(find(".rewind"), "mousedown", onPressRewind);
+
+  _addListener(loopButton, "mousedown", toggleLoop);
+
+  _addListener(timeScale, "change", onChangeTimeScale);
+
+  if (vars.visibility === "auto") {
+    _addListener(root, "mouseout", onMouseOut); //_addListener(find(".gs-hit-area"), "mouseover", show);
+
+
+    _addListener(root, "mouseover", show);
+  } else if (vars.visibility === "hidden") {
+    hidden = true;
+    autoHideTween.progress(1);
+  }
+
+  if (vars.keyboard !== false) {
+    if (_keyboardInstance && vars.keyboard) {
+      console.warn("[GSDevTools warning] only one instance can be affected by keyboard shortcuts. There is already one active.");
+    } else {
+      _keyboardInstance = _self; //we can't have multiple instances all affected by the keyboard.
+
+      keyboardHandler = function keyboardHandler(e) {
+        //window.parent allows things to work inside of an iframe, like on codepen.
+        var key = e.keyCode ? e.keyCode : e.which,
+            ts;
+
+        if (key === 32) {
+          //spacebar
+          togglePlayPause();
+        } else if (key === 38) {
+          //up arrow
+          ts = parseFloat(_shiftSelectedValue(timeScale, -1, timeScaleLabel));
+          linkedAnimation.timeScale(ts);
+          record("timeScale", ts);
+        } else if (key === 40) {
+          //down arrow
+          ts = parseFloat(_shiftSelectedValue(timeScale, 1, timeScaleLabel));
+          linkedAnimation.timeScale(ts);
+          record("timeScale", ts);
+        } else if (key === 37) {
+          //left arrow
+          onPressRewind(e);
+        } else if (key === 39) {
+          //right arrow
+          linkedAnimation.progress(outProgress / 100);
+        } else if (key === 76) {
+          //"L" key
+          toggleLoop();
+        } else if (key === 72) {
+          //"H" key
+          toggleHide();
+        } else if (key === 73) {
+          //"I" key
+          inProgress = linkedAnimation.progress() * 100;
+          record("in", inProgress);
+          inPoint.style.left = inProgress + "%";
+          updateProgress(true);
+        } else if (key === 79) {
+          //"O" key
+          outProgress = linkedAnimation.progress() * 100;
+          record("out", outProgress);
+          outPoint.style.left = outProgress + "%";
+          updateProgress(true);
+        }
+      };
+
+      _addListener(_docEl, "keydown", keyboardHandler);
+    }
+  }
+
+  gsap.set(playhead, {
+    xPercent: -50,
+    x: 0,
+    data: "root"
+  }); //so that when we drag, x is properly discerned (browsers report in pure pixels rather than percents)
+
+  gsap.set(inPoint, {
+    xPercent: -100,
+    x: 0,
+    data: "root"
+  });
+  inPoint._gsIgnore = outPoint._gsIgnore = playhead._gsIgnore = playPauseButton._gsIgnore = loopButton._gsIgnore = true; //Draggable fires off a TweenLite.set() that affects the transforms, and we don't want them to get into the _recordedRoot, so kill those tweens.
+
+  gsap.killTweensOf([inPoint, outPoint, playhead]);
+  initialize(_startupPhase);
+
+  if (_startupPhase) {
+    //developers may call GSDevTools.create() before they even create some of their animations, so the inTime/outTime or animation values may not exist, thus we wait for 1 tick and initialize again, just in case.
+    _delayedCall(0.0001, initialize, [false], this);
+  }
+
+  gsap.ticker.add(updateProgress);
+
+  this.update = function (forceMerge) {
+    if (_rootInstance === _self) {
+      if (!_rootTween.paused() || forceMerge) {
+        _merge();
+      }
+
+      updateRootDuration();
+    }
+  };
+
+  this.kill = function () {
+    _removeListener(list, "change", onChangeAnimation);
+
+    _removeListener(list, "mousedown", updateList);
+
+    _removeListener(playPauseButton, "mousedown", togglePlayPause);
+
+    _removeListener(find(".seek-bar"), "mousedown", onPressSeekBar);
+
+    _removeListener(find(".rewind"), "mousedown", onPressRewind);
+
+    _removeListener(loopButton, "mousedown", toggleLoop);
+
+    _removeListener(timeScale, "change", onChangeTimeScale);
+
+    progressDrag.disable();
+    inDrag.disable();
+    outDrag.disable();
+    gsap.ticker.remove(updateProgress);
+
+    _removeListener(root, "mouseout", onMouseOut);
+
+    _removeListener(root, "mouseover", show);
+
+    root.parentNode.removeChild(root);
+
+    if (_rootInstance === _self) {
+      _rootInstance = null;
+    }
+
+    if (_keyboardInstance === _self) {
+      _keyboardInstance = null;
+
+      _removeListener(_docEl, "keydown", keyboardHandler);
+    }
+
+    delete _lookup[vars.id + ""];
+  };
+
+  this.minimal = function (value) {
+    var isMinimal = root.classList.contains("minimal"),
+        p;
+
+    if (!arguments.length || isMinimal === value) {
+      return isMinimal;
+    }
+
+    if (value) {
+      root.classList.add("minimal");
+    } else {
+      root.classList.remove("minimal");
+    }
+
+    if (vars.container) {
+      root.style.top = value ? "calc(100% - 42px)" : "calc(100% - 51px)";
+    }
+
+    if (progressDrag.isPressed) {
+      skipDragUpdates = true; //just in case there's actually a tween/timeline in the linkedAnimation that is altering this GSDevTool instance's "minimal()" value, it could trigger a recursive loop in the drag handlers, like if they update linkedAnimation's time/progress which in turn triggers this minimal() function which in turn dues the same, and so on.
+
+      progressDrag.endDrag(progressDrag.pointerEvent);
+      skipDragUpdates = false;
+      p = linkedAnimation.progress() * 100;
+      progressBar.style.width = Math.max(0, p - inProgress) + "%";
+      playhead.style.left = p + "%";
+      playhead.style.transform = "translate(-50%,0)";
+      playhead._gsap.x = "0px";
+      playhead._gsap.xPercent = -50;
+      progressDrag.startDrag(progressDrag.pointerEvent, true);
+    }
+  }; //expose methods:
+
+
+  this.animation = animation;
+  this.updateList = updateList;
+}; //if on startup, someone does a timeline.seek(), we need to honor it, so when initialize() is called, it'll check the _recordedRoot._start so that we can use that as an offset. Remember, however, that we call initialize() twice on startup, once after a tick has elapsed just in case someone called GSDevTools.create() before their animation code, so we must record the value (once).
+
+
+GSDevTools.version = "3.11.4";
+GSDevTools.globalRecordingTime = 2;
+
+GSDevTools.getById = function (id) {
+  return id ? _lookup[id] : _rootInstance;
+};
+
+GSDevTools.getByAnimation = function (animation) {
+  if (_isString(animation)) {
+    animation = gsap.getById(animation);
+  }
+
+  for (var p in _lookup) {
+    if (_lookup[p].animation() === animation) {
+      return _lookup[p];
+    }
+  }
+};
+
+GSDevTools.create = function (vars) {
+  return new GSDevTools(vars);
+};
+
+GSDevTools.register = _initCore;
+_getGSAP() && gsap.registerPlugin(GSDevTools);
+
+
+/***/ }),
+/* 35 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "InertiaPlugin": function() { return /* binding */ InertiaPlugin; },
+/* harmony export */   "VelocityTracker": function() { return /* reexport safe */ _utils_VelocityTracker_js__WEBPACK_IMPORTED_MODULE_0__.VelocityTracker; },
+/* harmony export */   "default": function() { return /* binding */ InertiaPlugin; }
+/* harmony export */ });
+/* harmony import */ var _utils_VelocityTracker_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(36);
+/*!
+ * InertiaPlugin 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+var gsap,
+    _coreInitted,
+    _parseEase,
+    _toArray,
+    _power3,
+    _config,
+    _getUnit,
+    PropTween,
+    _getCache,
+    _checkPointRatio,
+    _clamp,
+    _processingVars,
+    _getStyleSaver,
+    _reverting,
+    _getTracker = _utils_VelocityTracker_js__WEBPACK_IMPORTED_MODULE_0__.VelocityTracker.getByTarget,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _isString = function _isString(value) {
+  return typeof value === "string";
+},
+    _isNumber = function _isNumber(value) {
+  return typeof value === "number";
+},
+    _isObject = function _isObject(value) {
+  return typeof value === "object";
+},
+    _isFunction = function _isFunction(value) {
+  return typeof value === "function";
+},
+    _bonusValidated = 1,
+    //<name>InertiaPlugin</name>
+_isArray = Array.isArray,
+    _emptyFunc = function _emptyFunc(p) {
+  return p;
+},
+    _bigNum = 1e10,
+    _tinyNum = 1 / _bigNum,
+    _checkPoint = 0.05,
+    _round = function _round(value) {
+  return Math.round(value * 10000) / 10000;
+},
+    _extend = function _extend(obj, defaults, exclude) {
+  for (var p in defaults) {
+    if (!(p in obj) && p !== exclude) {
+      obj[p] = defaults[p];
+    }
+  }
+
+  return obj;
+},
+    _deepClone = function _deepClone(obj) {
+  var copy = {},
+      p,
+      v;
+
+  for (p in obj) {
+    copy[p] = _isObject(v = obj[p]) && !_isArray(v) ? _deepClone(v) : v;
+  }
+
+  return copy;
+},
+    _getClosest = function _getClosest(n, values, max, min, radius) {
+  var i = values.length,
+      closest = 0,
+      absDif = _bigNum,
+      val,
+      dif,
+      p,
+      dist;
+
+  if (_isObject(n)) {
+    while (i--) {
+      val = values[i];
+      dif = 0;
+
+      for (p in n) {
+        dist = val[p] - n[p];
+        dif += dist * dist;
+      }
+
+      if (dif < absDif) {
+        closest = i;
+        absDif = dif;
+      }
+    }
+
+    if ((radius || _bigNum) < _bigNum && radius < Math.sqrt(absDif)) {
+      return n;
+    }
+  } else {
+    while (i--) {
+      val = values[i];
+      dif = val - n;
+
+      if (dif < 0) {
+        dif = -dif;
+      }
+
+      if (dif < absDif && val >= min && val <= max) {
+        closest = i;
+        absDif = dif;
+      }
+    }
+  }
+
+  return values[closest];
+},
+    _parseEnd = function _parseEnd(curProp, end, max, min, name, radius, velocity) {
+  if (curProp.end === "auto") {
+    return curProp;
+  }
+
+  var endVar = curProp.end,
+      adjustedEnd,
+      p;
+  max = isNaN(max) ? _bigNum : max;
+  min = isNaN(min) ? -_bigNum : min;
+
+  if (_isObject(end)) {
+    //for objects, like {x, y} where they're linked and we must pass an object to the function or find the closest value in an array.
+    adjustedEnd = end.calculated ? end : (_isFunction(endVar) ? endVar(end, velocity) : _getClosest(end, endVar, max, min, radius)) || end;
+
+    if (!end.calculated) {
+      for (p in adjustedEnd) {
+        end[p] = adjustedEnd[p];
+      }
+
+      end.calculated = true;
+    }
+
+    adjustedEnd = adjustedEnd[name];
+  } else {
+    adjustedEnd = _isFunction(endVar) ? endVar(end, velocity) : _isArray(endVar) ? _getClosest(end, endVar, max, min, radius) : parseFloat(endVar);
+  }
+
+  if (adjustedEnd > max) {
+    adjustedEnd = max;
+  } else if (adjustedEnd < min) {
+    adjustedEnd = min;
+  }
+
+  return {
+    max: adjustedEnd,
+    min: adjustedEnd,
+    unitFactor: curProp.unitFactor
+  };
+},
+    _getNumOrDefault = function _getNumOrDefault(vars, property, defaultValue) {
+  return isNaN(vars[property]) ? defaultValue : +vars[property];
+},
+    _calculateChange = function _calculateChange(velocity, duration) {
+  return duration * _checkPoint * velocity / _checkPointRatio;
+},
+    _calculateDuration = function _calculateDuration(start, end, velocity) {
+  return Math.abs((end - start) * _checkPointRatio / velocity / _checkPoint);
+},
+    _reservedProps = {
+  resistance: 1,
+  checkpoint: 1,
+  preventOvershoot: 1,
+  linkedProps: 1,
+  radius: 1,
+  duration: 1
+},
+    _processLinkedProps = function _processLinkedProps(target, vars, getVal, resistance) {
+  if (vars.linkedProps) {
+    //when there are linkedProps (typically "x,y" where snapping has to factor in multiple properties, we must first populate an object with all of those end values, then feed it to the function that make any necessary alterations. So the point of this first loop is to simply build an object (like {x:100, y:204.5}) for feeding into that function which we'll do later in the "real" loop.
+    var linkedPropNames = vars.linkedProps.split(","),
+        linkedProps = {},
+        i,
+        p,
+        curProp,
+        curVelocity,
+        tracker,
+        curDuration;
+
+    for (i = 0; i < linkedPropNames.length; i++) {
+      p = linkedPropNames[i];
+      curProp = vars[p];
+
+      if (curProp) {
+        if (_isNumber(curProp.velocity)) {
+          curVelocity = curProp.velocity;
+        } else {
+          tracker = tracker || _getTracker(target);
+          curVelocity = tracker && tracker.isTracking(p) ? tracker.get(p) : 0;
+        }
+
+        curDuration = Math.abs(curVelocity / _getNumOrDefault(curProp, "resistance", resistance));
+        linkedProps[p] = parseFloat(getVal(target, p)) + _calculateChange(curVelocity, curDuration);
+      }
+    }
+
+    return linkedProps;
+  }
+},
+    _calculateTweenDuration = function _calculateTweenDuration(target, vars, maxDuration, minDuration, overshootTolerance, recordEnd) {
+  if (maxDuration === void 0) {
+    maxDuration = 10;
+  }
+
+  if (minDuration === void 0) {
+    minDuration = 0.2;
+  }
+
+  if (overshootTolerance === void 0) {
+    overshootTolerance = 1;
+  }
+
+  if (recordEnd === void 0) {
+    recordEnd = 0;
+  }
+
+  _isString(target) && (target = _toArray(target)[0]);
+
+  if (!target) {
+    return 0;
+  }
+
+  var duration = 0,
+      clippedDuration = _bigNum,
+      inertiaVars = vars.inertia || vars,
+      getVal = _getCache(target).get,
+      resistance = _getNumOrDefault(inertiaVars, "resistance", _config.resistance),
+      p,
+      curProp,
+      curDuration,
+      curVelocity,
+      curVal,
+      end,
+      curClippedDuration,
+      tracker,
+      unitFactor,
+      linkedProps; //when there are linkedProps (typically "x,y" where snapping has to factor in multiple properties, we must first populate an object with all of those end values, then feed it to the function that make any necessary alterations. So the point of this first loop is to simply build an object (like {x:100, y:204.5}) for feeding into that function which we'll do later in the "real" loop.
+
+
+  linkedProps = _processLinkedProps(target, inertiaVars, getVal, resistance);
+
+  for (p in inertiaVars) {
+    if (!_reservedProps[p]) {
+      curProp = inertiaVars[p];
+
+      if (!_isObject(curProp)) {
+        tracker = tracker || _getTracker(target);
+
+        if (tracker && tracker.isTracking(p)) {
+          curProp = _isNumber(curProp) ? {
+            velocity: curProp
+          } : {
+            velocity: tracker.get(p)
+          }; //if we're tracking this property, we should use the tracking velocity and then use the numeric value that was passed in as the min and max so that it tweens exactly there.
+        } else {
+          curVelocity = +curProp || 0;
+          curDuration = Math.abs(curVelocity / resistance);
+        }
+      }
+
+      if (_isObject(curProp)) {
+        if (_isNumber(curProp.velocity)) {
+          curVelocity = curProp.velocity;
+        } else {
+          tracker = tracker || _getTracker(target);
+          curVelocity = tracker && tracker.isTracking(p) ? tracker.get(p) : 0;
+        }
+
+        curDuration = _clamp(minDuration, maxDuration, Math.abs(curVelocity / _getNumOrDefault(curProp, "resistance", resistance)));
+        curVal = parseFloat(getVal(target, p)) || 0;
+        end = curVal + _calculateChange(curVelocity, curDuration);
+
+        if ("end" in curProp) {
+          curProp = _parseEnd(curProp, linkedProps && p in linkedProps ? linkedProps : end, curProp.max, curProp.min, p, inertiaVars.radius, curVelocity);
+
+          if (recordEnd) {
+            _processingVars === vars && (_processingVars = inertiaVars = _deepClone(vars));
+            inertiaVars[p] = _extend(curProp, inertiaVars[p], "end");
+          }
+        }
+
+        if ("max" in curProp && end > +curProp.max + _tinyNum) {
+          unitFactor = curProp.unitFactor || _config.unitFactors[p] || 1; //some values are measured in special units like radians in which case our thresholds need to be adjusted accordingly.
+          //if the value is already exceeding the max or the velocity is too low, the duration can end up being uncomfortably long but in most situations, users want the snapping to occur relatively quickly (0.75 seconds), so we implement a cap here to make things more intuitive. If the max and min match, it means we're animating to a particular value and we don't want to shorten the time unless the velocity is really slow. Example: a rotation where the start and natural end value are less than the snapping spot, but the natural end is pretty close to the snap.
+
+          curClippedDuration = curVal > curProp.max && curProp.min !== curProp.max || curVelocity * unitFactor > -15 && curVelocity * unitFactor < 45 ? minDuration + (maxDuration - minDuration) * 0.1 : _calculateDuration(curVal, curProp.max, curVelocity);
+
+          if (curClippedDuration + overshootTolerance < clippedDuration) {
+            clippedDuration = curClippedDuration + overshootTolerance;
+          }
+        } else if ("min" in curProp && end < +curProp.min - _tinyNum) {
+          unitFactor = curProp.unitFactor || _config.unitFactors[p] || 1; //some values are measured in special units like radians in which case our thresholds need to be adjusted accordingly.
+          //if the value is already exceeding the min or if the velocity is too low, the duration can end up being uncomfortably long but in most situations, users want the snapping to occur relatively quickly (0.75 seconds), so we implement a cap here to make things more intuitive.
+
+          curClippedDuration = curVal < curProp.min && curProp.min !== curProp.max || curVelocity * unitFactor > -45 && curVelocity * unitFactor < 15 ? minDuration + (maxDuration - minDuration) * 0.1 : _calculateDuration(curVal, curProp.min, curVelocity);
+
+          if (curClippedDuration + overshootTolerance < clippedDuration) {
+            clippedDuration = curClippedDuration + overshootTolerance;
+          }
+        }
+
+        curClippedDuration > duration && (duration = curClippedDuration);
+      }
+
+      curDuration > duration && (duration = curDuration);
+    }
+  }
+
+  duration > clippedDuration && (duration = clippedDuration);
+  return duration > maxDuration ? maxDuration : duration < minDuration ? minDuration : duration;
+},
+    _initCore = function _initCore() {
+  gsap = _getGSAP();
+
+  if (gsap) {
+    _parseEase = gsap.parseEase;
+    _toArray = gsap.utils.toArray;
+    _getUnit = gsap.utils.getUnit;
+    _getCache = gsap.core.getCache;
+    _clamp = gsap.utils.clamp;
+    _getStyleSaver = gsap.core.getStyleSaver;
+
+    _reverting = gsap.core.reverting || function () {};
+
+    _power3 = _parseEase("power3");
+    _checkPointRatio = _power3(0.05);
+    PropTween = gsap.core.PropTween;
+    gsap.config({
+      resistance: 100,
+      unitFactors: {
+        time: 1000,
+        totalTime: 1000,
+        progress: 1000,
+        totalProgress: 1000
+      }
+    });
+    _config = gsap.config();
+    gsap.registerPlugin(_utils_VelocityTracker_js__WEBPACK_IMPORTED_MODULE_0__.VelocityTracker);
+    _coreInitted = 1;
+  }
+};
+
+var InertiaPlugin = {
+  version: "3.11.4",
+  name: "inertia",
+  register: function register(core) {
+    gsap = core;
+
+    _initCore();
+  },
+  init: function init(target, vars, tween, index, targets) {
+    _coreInitted || _initCore();
+
+    var tracker = _getTracker(target);
+
+    if (vars === "auto") {
+      if (!tracker) {
+        console.warn("No inertia tracking on " + target + ". InertiaPlugin.track(target) first.");
+        return;
+      }
+
+      vars = tracker.getAll();
+    }
+
+    this.styles = _getStyleSaver && typeof target.style === "object" && _getStyleSaver(target);
+    this.target = target;
+    this.tween = tween;
+    _processingVars = vars; // gets swapped inside _calculateTweenDuration() if there's a function-based value encountered (to avoid double-calling it)
+
+    var cache = target._gsap,
+        getVal = cache.get,
+        dur = vars.duration,
+        durIsObj = _isObject(dur),
+        preventOvershoot = vars.preventOvershoot || durIsObj && dur.overshoot === 0,
+        resistance = _getNumOrDefault(vars, "resistance", _config.resistance),
+        duration = _isNumber(dur) ? dur : _calculateTweenDuration(target, vars, durIsObj && dur.max || 10, durIsObj && dur.min || 0.2, durIsObj && "overshoot" in dur ? +dur.overshoot : preventOvershoot ? 0 : 1, true),
+        p,
+        curProp,
+        curVal,
+        unit,
+        velocity,
+        change1,
+        end,
+        change2,
+        linkedProps;
+
+    vars = _processingVars;
+    _processingVars = 0; //when there are linkedProps (typically "x,y" where snapping has to factor in multiple properties, we must first populate an object with all of those end values, then feed it to the function that make any necessary alterations. So the point of this first loop is to simply build an object (like {x:100, y:204.5}) for feeding into that function which we'll do later in the "real" loop.
+
+    linkedProps = _processLinkedProps(target, vars, getVal, resistance);
+
+    for (p in vars) {
+      if (!_reservedProps[p]) {
+        curProp = vars[p];
+        _isFunction(curProp) && (curProp = curProp(index, target, targets));
+
+        if (_isNumber(curProp)) {
+          velocity = curProp;
+        } else if (_isObject(curProp) && !isNaN(curProp.velocity)) {
+          velocity = +curProp.velocity;
+        } else {
+          if (tracker && tracker.isTracking(p)) {
+            velocity = tracker.get(p);
+          } else {
+            console.warn("ERROR: No velocity was defined for " + target + " property: " + p);
+          }
+        }
+
+        change1 = _calculateChange(velocity, duration);
+        change2 = 0;
+        curVal = getVal(target, p);
+        unit = _getUnit(curVal);
+        curVal = parseFloat(curVal);
+
+        if (_isObject(curProp)) {
+          end = curVal + change1;
+
+          if ("end" in curProp) {
+            curProp = _parseEnd(curProp, linkedProps && p in linkedProps ? linkedProps : end, curProp.max, curProp.min, p, vars.radius, velocity);
+          }
+
+          if ("max" in curProp && +curProp.max < end) {
+            if (preventOvershoot || curProp.preventOvershoot) {
+              change1 = curProp.max - curVal;
+            } else {
+              change2 = curProp.max - curVal - change1;
+            }
+          } else if ("min" in curProp && +curProp.min > end) {
+            if (preventOvershoot || curProp.preventOvershoot) {
+              change1 = curProp.min - curVal;
+            } else {
+              change2 = curProp.min - curVal - change1;
+            }
+          }
+        }
+
+        this._props.push(p);
+
+        this.styles && this.styles.save(p);
+        this._pt = new PropTween(this._pt, target, p, curVal, 0, _emptyFunc, 0, cache.set(target, p, this));
+        this._pt.u = unit || 0;
+        this._pt.c1 = change1;
+        this._pt.c2 = change2;
+      }
+    }
+
+    tween.duration(duration);
+    return _bonusValidated;
+  },
+  render: function render(ratio, data) {
+    var pt = data._pt;
+    ratio = _power3(data.tween._time / data.tween._dur);
+
+    if (ratio || !_reverting()) {
+      while (pt) {
+        pt.set(pt.t, pt.p, _round(pt.s + pt.c1 * ratio + pt.c2 * ratio * ratio) + pt.u, pt.d, ratio);
+        pt = pt._next;
+      }
+    } else {
+      data.styles.revert();
+    }
+  }
+};
+"track,untrack,isTracking,getVelocity,getByTarget".split(",").forEach(function (name) {
+  return InertiaPlugin[name] = _utils_VelocityTracker_js__WEBPACK_IMPORTED_MODULE_0__.VelocityTracker[name];
+});
+_getGSAP() && gsap.registerPlugin(InertiaPlugin);
+
+
+/***/ }),
+/* 36 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "VelocityTracker": function() { return /* binding */ VelocityTracker; },
+/* harmony export */   "default": function() { return /* binding */ VelocityTracker; }
+/* harmony export */ });
+/*!
+ * VelocityTracker: 3.11.4
+ * https://greensock.com
+ *
+ * Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _coreInitted,
+    _toArray,
+    _getUnit,
+    _first,
+    _ticker,
+    _time1,
+    _time2,
+    _getCache,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap);
+},
+    _lookup = {},
+    _round = function _round(value) {
+  return Math.round(value * 10000) / 10000;
+},
+    _getID = function _getID(target) {
+  return _getCache(target).id;
+},
+    _getByTarget = function _getByTarget(target) {
+  return _lookup[_getID(typeof target === "string" ? _toArray(target)[0] : target)];
+},
+    _onTick = function _onTick(time) {
+  var pt = _first,
+      val; //if the frame rate is too high, we won't be able to track the velocity as well, so only update the values about 20 times per second
+
+  if (time - _time1 >= 0.05) {
+    _time2 = _time1;
+    _time1 = time;
+
+    while (pt) {
+      val = pt.g(pt.t, pt.p);
+
+      if (val !== pt.v1 || time - pt.t1 > 0.2) {
+        //use a threshold of 0.2 seconds for zeroing-out velocity. If we only use 0.05 and things update slightly slower, like some Android devices dispatch "touchmove" events sluggishly so 2 or 3 ticks of the gsap.ticker may elapse inbetween, thus it may appear like the object is not moving but it actually is but it's not updating as frequently. A threshold of 0.2 seconds seems to be a good balance. We want to update things frequently (0.05 seconds) when they're moving so that we can respond to fast motions accurately, but we want to be more resistant to go back to a zero velocity.
+        pt.v2 = pt.v1;
+        pt.v1 = val;
+        pt.t2 = pt.t1;
+        pt.t1 = time;
+      }
+
+      pt = pt._next;
+    }
+  }
+},
+    _types = {
+  deg: 360,
+  rad: Math.PI * 2
+},
+    _initCore = function _initCore() {
+  gsap = _getGSAP();
+
+  if (gsap) {
+    _toArray = gsap.utils.toArray;
+    _getUnit = gsap.utils.getUnit;
+    _getCache = gsap.core.getCache;
+    _ticker = gsap.ticker;
+    _coreInitted = 1;
+  }
+};
+
+var PropTracker = function PropTracker(target, property, type, next) {
+  this.t = target;
+  this.p = property;
+  this.g = target._gsap.get;
+  this.rCap = _types[type || _getUnit(this.g(target, property))]; //rotational cap (for degrees, "deg", it's 360 and for radians, "rad", it's Math.PI * 2)
+
+  this.v1 = this.v2 = 0;
+  this.t1 = this.t2 = _ticker.time;
+
+  if (next) {
+    this._next = next;
+    next._prev = this;
+  }
+};
+
+var VelocityTracker = /*#__PURE__*/function () {
+  function VelocityTracker(target, property) {
+    if (!_coreInitted) {
+      _initCore();
+    }
+
+    this.target = _toArray(target)[0];
+    _lookup[_getID(this.target)] = this;
+    this._props = {};
+    property && this.add(property);
+  }
+
+  VelocityTracker.register = function register(core) {
+    gsap = core;
+
+    _initCore();
+  };
+
+  var _proto = VelocityTracker.prototype;
+
+  _proto.get = function get(property, skipRecentTick) {
+    var pt = this._props[property] || console.warn("Not tracking " + property + " velocity."),
+        val,
+        dif,
+        rotationCap;
+    val = parseFloat(skipRecentTick ? pt.v1 : pt.g(pt.t, pt.p));
+    dif = val - parseFloat(pt.v2);
+    rotationCap = pt.rCap;
+
+    if (rotationCap) {
+      //rotational values need special interpretation so that if, for example, they go from 179 to -178 degrees it is interpreted as a change of 3 instead of -357.
+      dif = dif % rotationCap;
+
+      if (dif !== dif % (rotationCap / 2)) {
+        dif = dif < 0 ? dif + rotationCap : dif - rotationCap;
+      }
+    }
+
+    return _round(dif / ((skipRecentTick ? pt.t1 : _ticker.time) - pt.t2));
+  };
+
+  _proto.getAll = function getAll() {
+    var result = {},
+        props = this._props,
+        p;
+
+    for (p in props) {
+      result[p] = this.get(p);
+    }
+
+    return result;
+  };
+
+  _proto.isTracking = function isTracking(property) {
+    return property in this._props;
+  };
+
+  _proto.add = function add(property, type) {
+    if (!(property in this._props)) {
+      if (!_first) {
+        _ticker.add(_onTick);
+
+        _time1 = _time2 = _ticker.time;
+      }
+
+      _first = this._props[property] = new PropTracker(this.target, property, type, _first);
+    }
+  };
+
+  _proto.remove = function remove(property) {
+    var pt = this._props[property],
+        prev,
+        next;
+
+    if (pt) {
+      prev = pt._prev;
+      next = pt._next;
+
+      if (prev) {
+        prev._next = next;
+      }
+
+      if (next) {
+        next._prev = prev;
+      } else if (_first === pt) {
+        _ticker.remove(_onTick);
+
+        _first = 0;
+      }
+
+      delete this._props[property];
+    }
+  };
+
+  _proto.kill = function kill(shallow) {
+    for (var p in this._props) {
+      this.remove(p);
+    }
+
+    if (!shallow) {
+      delete _lookup[_getID(this.target)];
+    }
+  };
+
+  VelocityTracker.track = function track(targets, properties, types) {
+    if (!_coreInitted) {
+      _initCore();
+    }
+
+    var result = [],
+        targs = _toArray(targets),
+        a = properties.split(","),
+        t = (types || "").split(","),
+        i = targs.length,
+        tracker,
+        j;
+
+    while (i--) {
+      tracker = _getByTarget(targs[i]) || new VelocityTracker(targs[i]);
+      j = a.length;
+
+      while (j--) {
+        tracker.add(a[j], t[j] || t[0]);
+      }
+
+      result.push(tracker);
+    }
+
+    return result;
+  };
+
+  VelocityTracker.untrack = function untrack(targets, properties) {
+    var props = (properties || "").split(",");
+
+    _toArray(targets).forEach(function (target) {
+      var tracker = _getByTarget(target);
+
+      if (tracker) {
+        if (!props.length) {
+          tracker.kill(1);
+        } else {
+          props.forEach(function (p) {
+            return tracker.remove(p);
+          });
+        }
+      }
+    });
+  };
+
+  VelocityTracker.isTracking = function isTracking(target, property) {
+    var tracker = _getByTarget(target);
+
+    return tracker && tracker.isTracking(property);
+  };
+
+  VelocityTracker.getVelocity = function getVelocity(target, property) {
+    var tracker = _getByTarget(target);
+
+    return !tracker || !tracker.isTracking(property) ? console.warn("Not tracking velocity of " + property) : tracker.get(property);
+  };
+
+  return VelocityTracker;
+}();
+VelocityTracker.getByTarget = _getByTarget;
+_getGSAP() && gsap.registerPlugin(VelocityTracker);
+
+
+/***/ }),
+/* 37 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MorphSVGPlugin": function() { return /* binding */ MorphSVGPlugin; },
+/* harmony export */   "default": function() { return /* binding */ MorphSVGPlugin; }
+/* harmony export */ });
+/* harmony import */ var _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/*!
+ * MorphSVGPlugin 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+var gsap,
+    _toArray,
+    _lastLinkedAnchor,
+    _doc,
+    _coreInitted,
+    PluginClass,
+    _getGSAP = function _getGSAP() {
+  return gsap || typeof window !== "undefined" && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _isFunction = function _isFunction(value) {
+  return typeof value === "function";
+},
+    _atan2 = Math.atan2,
+    _cos = Math.cos,
+    _sin = Math.sin,
+    _sqrt = Math.sqrt,
+    _PI = Math.PI,
+    _2PI = _PI * 2,
+    _angleMin = _PI * 0.3,
+    _angleMax = _PI * 0.7,
+    _bigNum = 1e20,
+    _numExp = /[-+=\.]*\d+[\.e\-\+]*\d*[e\-\+]*\d*/gi,
+    //finds any numbers, including ones that start with += or -=, negative numbers, and ones in scientific notation like 1e-8.
+_selectorExp = /(^[#\.][a-z]|[a-y][a-z])/i,
+    _commands = /[achlmqstvz]/i,
+    _log = function _log(message) {
+  return console && console.warn(message);
+},
+    _bonusValidated = 1,
+    //<name>MorphSVGPlugin</name>
+_getAverageXY = function _getAverageXY(segment) {
+  var l = segment.length,
+      x = 0,
+      y = 0,
+      i;
+
+  for (i = 0; i < l; i++) {
+    x += segment[i++];
+    y += segment[i];
+  }
+
+  return [x / (l / 2), y / (l / 2)];
+},
+    _getSize = function _getSize(segment) {
+  //rough estimate of the bounding box (based solely on the anchors) of a single segment. sets "size", "centerX", and "centerY" properties on the bezier array itself, and returns the size (width * height)
+  var l = segment.length,
+      xMax = segment[0],
+      xMin = xMax,
+      yMax = segment[1],
+      yMin = yMax,
+      x,
+      y,
+      i;
+
+  for (i = 6; i < l; i += 6) {
+    x = segment[i];
+    y = segment[i + 1];
+
+    if (x > xMax) {
+      xMax = x;
+    } else if (x < xMin) {
+      xMin = x;
+    }
+
+    if (y > yMax) {
+      yMax = y;
+    } else if (y < yMin) {
+      yMin = y;
+    }
+  }
+
+  segment.centerX = (xMax + xMin) / 2;
+  segment.centerY = (yMax + yMin) / 2;
+  return segment.size = (xMax - xMin) * (yMax - yMin);
+},
+    _getTotalSize = function _getTotalSize(rawPath, samplesPerBezier) {
+  if (samplesPerBezier === void 0) {
+    samplesPerBezier = 3;
+  }
+
+  //rough estimate of the bounding box of the entire list of Bezier segments (based solely on the anchors). sets "size", "centerX", and "centerY" properties on the bezier array itself, and returns the size (width * height)
+  var j = rawPath.length,
+      xMax = rawPath[0][0],
+      xMin = xMax,
+      yMax = rawPath[0][1],
+      yMin = yMax,
+      inc = 1 / samplesPerBezier,
+      l,
+      x,
+      y,
+      i,
+      segment,
+      k,
+      t,
+      inv,
+      x1,
+      y1,
+      x2,
+      x3,
+      x4,
+      y2,
+      y3,
+      y4;
+
+  while (--j > -1) {
+    segment = rawPath[j];
+    l = segment.length;
+
+    for (i = 6; i < l; i += 6) {
+      x1 = segment[i];
+      y1 = segment[i + 1];
+      x2 = segment[i + 2] - x1;
+      y2 = segment[i + 3] - y1;
+      x3 = segment[i + 4] - x1;
+      y3 = segment[i + 5] - y1;
+      x4 = segment[i + 6] - x1;
+      y4 = segment[i + 7] - y1;
+      k = samplesPerBezier;
+
+      while (--k > -1) {
+        t = inc * k;
+        inv = 1 - t;
+        x = (t * t * x4 + 3 * inv * (t * x3 + inv * x2)) * t + x1;
+        y = (t * t * y4 + 3 * inv * (t * y3 + inv * y2)) * t + y1;
+
+        if (x > xMax) {
+          xMax = x;
+        } else if (x < xMin) {
+          xMin = x;
+        }
+
+        if (y > yMax) {
+          yMax = y;
+        } else if (y < yMin) {
+          yMin = y;
+        }
+      }
+    }
+  }
+
+  rawPath.centerX = (xMax + xMin) / 2;
+  rawPath.centerY = (yMax + yMin) / 2;
+  rawPath.left = xMin;
+  rawPath.width = xMax - xMin;
+  rawPath.top = yMin;
+  rawPath.height = yMax - yMin;
+  return rawPath.size = (xMax - xMin) * (yMax - yMin);
+},
+    _sortByComplexity = function _sortByComplexity(a, b) {
+  return b.length - a.length;
+},
+    _sortBySize = function _sortBySize(a, b) {
+  var sizeA = a.size || _getSize(a),
+      sizeB = b.size || _getSize(b);
+
+  return Math.abs(sizeB - sizeA) < (sizeA + sizeB) / 20 ? b.centerX - a.centerX || b.centerY - a.centerY : sizeB - sizeA; //if the size is within 10% of each other, prioritize position from left to right, then top to bottom.
+},
+    _offsetSegment = function _offsetSegment(segment, shapeIndex) {
+  var a = segment.slice(0),
+      l = segment.length,
+      wrap = l - 2,
+      i,
+      index;
+  shapeIndex = shapeIndex | 0;
+
+  for (i = 0; i < l; i++) {
+    index = (i + shapeIndex) % wrap;
+    segment[i++] = a[index];
+    segment[i] = a[index + 1];
+  }
+},
+    _getTotalMovement = function _getTotalMovement(sb, eb, shapeIndex, offsetX, offsetY) {
+  var l = sb.length,
+      d = 0,
+      wrap = l - 2,
+      index,
+      i,
+      x,
+      y;
+  shapeIndex *= 6;
+
+  for (i = 0; i < l; i += 6) {
+    index = (i + shapeIndex) % wrap;
+    y = sb[index] - (eb[i] - offsetX);
+    x = sb[index + 1] - (eb[i + 1] - offsetY);
+    d += _sqrt(x * x + y * y);
+  }
+
+  return d;
+},
+    _getClosestShapeIndex = function _getClosestShapeIndex(sb, eb, checkReverse) {
+  //finds the index in a closed cubic bezier array that's closest to the angle provided (angle measured from the center or average x/y).
+  var l = sb.length,
+      sCenter = _getAverageXY(sb),
+      //when comparing distances, adjust the coordinates as if the shapes are centered with each other.
+  eCenter = _getAverageXY(eb),
+      offsetX = eCenter[0] - sCenter[0],
+      offsetY = eCenter[1] - sCenter[1],
+      min = _getTotalMovement(sb, eb, 0, offsetX, offsetY),
+      minIndex = 0,
+      copy,
+      d,
+      i;
+
+  for (i = 6; i < l; i += 6) {
+    d = _getTotalMovement(sb, eb, i / 6, offsetX, offsetY);
+
+    if (d < min) {
+      min = d;
+      minIndex = i;
+    }
+  }
+
+  if (checkReverse) {
+    copy = sb.slice(0);
+    (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.reverseSegment)(copy);
+
+    for (i = 6; i < l; i += 6) {
+      d = _getTotalMovement(copy, eb, i / 6, offsetX, offsetY);
+
+      if (d < min) {
+        min = d;
+        minIndex = -i;
+      }
+    }
+  }
+
+  return minIndex / 6;
+},
+    _getClosestAnchor = function _getClosestAnchor(rawPath, x, y) {
+  //finds the x/y of the anchor that's closest to the provided x/y coordinate (returns an array, like [x, y]). The bezier should be the top-level type that contains an array for each segment.
+  var j = rawPath.length,
+      closestDistance = _bigNum,
+      closestX = 0,
+      closestY = 0,
+      segment,
+      dx,
+      dy,
+      d,
+      i,
+      l;
+
+  while (--j > -1) {
+    segment = rawPath[j];
+    l = segment.length;
+
+    for (i = 0; i < l; i += 6) {
+      dx = segment[i] - x;
+      dy = segment[i + 1] - y;
+      d = _sqrt(dx * dx + dy * dy);
+
+      if (d < closestDistance) {
+        closestDistance = d;
+        closestX = segment[i];
+        closestY = segment[i + 1];
+      }
+    }
+  }
+
+  return [closestX, closestY];
+},
+    _getClosestSegment = function _getClosestSegment(bezier, pool, startIndex, sortRatio, offsetX, offsetY) {
+  //matches the bezier to the closest one in a pool (array) of beziers, assuming they are in order of size and we shouldn't drop more than 20% of the size, otherwise prioritizing location (total distance to the center). Extracts the segment out of the pool array and returns it.
+  var l = pool.length,
+      index = 0,
+      minSize = Math.min(bezier.size || _getSize(bezier), pool[startIndex].size || _getSize(pool[startIndex])) * sortRatio,
+      //limit things based on a percentage of the size of either the bezier or the next element in the array, whichever is smaller.
+  min = _bigNum,
+      cx = bezier.centerX + offsetX,
+      cy = bezier.centerY + offsetY,
+      size,
+      i,
+      dx,
+      dy,
+      d;
+
+  for (i = startIndex; i < l; i++) {
+    size = pool[i].size || _getSize(pool[i]);
+
+    if (size < minSize) {
+      break;
+    }
+
+    dx = pool[i].centerX - cx;
+    dy = pool[i].centerY - cy;
+    d = _sqrt(dx * dx + dy * dy);
+
+    if (d < min) {
+      index = i;
+      min = d;
+    }
+  }
+
+  d = pool[index];
+  pool.splice(index, 1);
+  return d;
+},
+    _subdivideSegmentQty = function _subdivideSegmentQty(segment, quantity) {
+  var tally = 0,
+      max = 0.999999,
+      l = segment.length,
+      newPointsPerSegment = quantity / ((l - 2) / 6),
+      ax,
+      ay,
+      cp1x,
+      cp1y,
+      cp2x,
+      cp2y,
+      bx,
+      by,
+      x1,
+      y1,
+      x2,
+      y2,
+      i,
+      t;
+
+  for (i = 2; i < l; i += 6) {
+    tally += newPointsPerSegment;
+
+    while (tally > max) {
+      //compare with 0.99999 instead of 1 in order to prevent rounding errors
+      ax = segment[i - 2];
+      ay = segment[i - 1];
+      cp1x = segment[i];
+      cp1y = segment[i + 1];
+      cp2x = segment[i + 2];
+      cp2y = segment[i + 3];
+      bx = segment[i + 4];
+      by = segment[i + 5];
+      t = 1 / ((Math.floor(tally) || 1) + 1); //progress along the bezier (value between 0 and 1)
+
+      x1 = ax + (cp1x - ax) * t;
+      x2 = cp1x + (cp2x - cp1x) * t;
+      x1 += (x2 - x1) * t;
+      x2 += (cp2x + (bx - cp2x) * t - x2) * t;
+      y1 = ay + (cp1y - ay) * t;
+      y2 = cp1y + (cp2y - cp1y) * t;
+      y1 += (y2 - y1) * t;
+      y2 += (cp2y + (by - cp2y) * t - y2) * t;
+      segment.splice(i, 4, ax + (cp1x - ax) * t, //first control point
+      ay + (cp1y - ay) * t, x1, //second control point
+      y1, x1 + (x2 - x1) * t, //new fabricated anchor on line
+      y1 + (y2 - y1) * t, x2, //third control point
+      y2, cp2x + (bx - cp2x) * t, //fourth control point
+      cp2y + (by - cp2y) * t);
+      i += 6;
+      l += 6;
+      tally--;
+    }
+  }
+
+  return segment;
+},
+    _equalizeSegmentQuantity = function _equalizeSegmentQuantity(start, end, shapeIndex, map, fillSafe) {
+  //returns an array of shape indexes, 1 for each segment.
+  var dif = end.length - start.length,
+      longer = dif > 0 ? end : start,
+      shorter = dif > 0 ? start : end,
+      added = 0,
+      sortMethod = map === "complexity" ? _sortByComplexity : _sortBySize,
+      sortRatio = map === "position" ? 0 : typeof map === "number" ? map : 0.8,
+      i = shorter.length,
+      shapeIndices = typeof shapeIndex === "object" && shapeIndex.push ? shapeIndex.slice(0) : [shapeIndex],
+      reverse = shapeIndices[0] === "reverse" || shapeIndices[0] < 0,
+      log = shapeIndex === "log",
+      eb,
+      sb,
+      b,
+      x,
+      y,
+      offsetX,
+      offsetY;
+
+  if (!shorter[0]) {
+    return;
+  }
+
+  if (longer.length > 1) {
+    start.sort(sortMethod);
+    end.sort(sortMethod);
+    offsetX = longer.size || _getTotalSize(longer); //ensures centerX and centerY are defined (used below).
+
+    offsetX = shorter.size || _getTotalSize(shorter);
+    offsetX = longer.centerX - shorter.centerX;
+    offsetY = longer.centerY - shorter.centerY;
+
+    if (sortMethod === _sortBySize) {
+      for (i = 0; i < shorter.length; i++) {
+        longer.splice(i, 0, _getClosestSegment(shorter[i], longer, i, sortRatio, offsetX, offsetY));
+      }
+    }
+  }
+
+  if (dif) {
+    if (dif < 0) {
+      dif = -dif;
+    }
+
+    if (longer[0].length > shorter[0].length) {
+      //since we use shorter[0] as the one to map the origination point of any brand new fabricated segments, do any subdividing first so that there are more points to choose from (if necessary)
+      _subdivideSegmentQty(shorter[0], (longer[0].length - shorter[0].length) / 6 | 0);
+    }
+
+    i = shorter.length;
+
+    while (added < dif) {
+      x = longer[i].size || _getSize(longer[i]); //just to ensure centerX and centerY are calculated which we use on the next line.
+
+      b = _getClosestAnchor(shorter, longer[i].centerX, longer[i].centerY);
+      x = b[0];
+      y = b[1];
+      shorter[i++] = [x, y, x, y, x, y, x, y];
+      shorter.totalPoints += 8;
+      added++;
+    }
+  }
+
+  for (i = 0; i < start.length; i++) {
+    eb = end[i];
+    sb = start[i];
+    dif = eb.length - sb.length;
+
+    if (dif < 0) {
+      _subdivideSegmentQty(eb, -dif / 6 | 0);
+    } else if (dif > 0) {
+      _subdivideSegmentQty(sb, dif / 6 | 0);
+    }
+
+    if (reverse && fillSafe !== false && !sb.reversed) {
+      (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.reverseSegment)(sb);
+    }
+
+    shapeIndex = shapeIndices[i] || shapeIndices[i] === 0 ? shapeIndices[i] : "auto";
+
+    if (shapeIndex) {
+      //if start shape is closed, find the closest point to the start/end, and re-organize the bezier points accordingly so that the shape morphs in a more intuitive way.
+      if (sb.closed || Math.abs(sb[0] - sb[sb.length - 2]) < 0.5 && Math.abs(sb[1] - sb[sb.length - 1]) < 0.5) {
+        if (shapeIndex === "auto" || shapeIndex === "log") {
+          shapeIndices[i] = shapeIndex = _getClosestShapeIndex(sb, eb, !i || fillSafe === false);
+
+          if (shapeIndex < 0) {
+            reverse = true;
+            (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.reverseSegment)(sb);
+            shapeIndex = -shapeIndex;
+          }
+
+          _offsetSegment(sb, shapeIndex * 6);
+        } else if (shapeIndex !== "reverse") {
+          if (i && shapeIndex < 0) {
+            //only happens if an array is passed as shapeIndex and a negative value is defined for an index beyond 0. Very rare, but helpful sometimes.
+            (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.reverseSegment)(sb);
+          }
+
+          _offsetSegment(sb, (shapeIndex < 0 ? -shapeIndex : shapeIndex) * 6);
+        } //otherwise, if it's not a closed shape, consider reversing it if that would make the overall travel less
+
+      } else if (!reverse && (shapeIndex === "auto" && Math.abs(eb[0] - sb[0]) + Math.abs(eb[1] - sb[1]) + Math.abs(eb[eb.length - 2] - sb[sb.length - 2]) + Math.abs(eb[eb.length - 1] - sb[sb.length - 1]) > Math.abs(eb[0] - sb[sb.length - 2]) + Math.abs(eb[1] - sb[sb.length - 1]) + Math.abs(eb[eb.length - 2] - sb[0]) + Math.abs(eb[eb.length - 1] - sb[1]) || shapeIndex % 2)) {
+        (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.reverseSegment)(sb);
+        shapeIndices[i] = -1;
+        reverse = true;
+      } else if (shapeIndex === "auto") {
+        shapeIndices[i] = 0;
+      } else if (shapeIndex === "reverse") {
+        shapeIndices[i] = -1;
+      }
+
+      if (sb.closed !== eb.closed) {
+        //if one is closed and one isn't, don't close either one otherwise the tweening will look weird (but remember, the beginning and final states will honor the actual values, so this only affects the inbetween state)
+        sb.closed = eb.closed = false;
+      }
+    }
+  }
+
+  log && _log("shapeIndex:[" + shapeIndices.join(",") + "]");
+  start.shapeIndex = shapeIndices;
+  return shapeIndices;
+},
+    _pathFilter = function _pathFilter(a, shapeIndex, map, precompile, fillSafe) {
+  var start = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.stringToRawPath)(a[0]),
+      end = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.stringToRawPath)(a[1]);
+
+  if (!_equalizeSegmentQuantity(start, end, shapeIndex || shapeIndex === 0 ? shapeIndex : "auto", map, fillSafe)) {
+    return; //malformed path data or null target
+  }
+
+  a[0] = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.rawPathToString)(start);
+  a[1] = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.rawPathToString)(end);
+
+  if (precompile === "log" || precompile === true) {
+    _log('precompile:["' + a[0] + '","' + a[1] + '"]');
+  }
+},
+    _offsetPoints = function _offsetPoints(text, offset) {
+  if (!offset) {
+    return text;
+  }
+
+  var a = text.match(_numExp) || [],
+      l = a.length,
+      s = "",
+      inc,
+      i,
+      j;
+
+  if (offset === "reverse") {
+    i = l - 1;
+    inc = -2;
+  } else {
+    i = ((parseInt(offset, 10) || 0) * 2 + 1 + l * 100) % l;
+    inc = 2;
+  }
+
+  for (j = 0; j < l; j += 2) {
+    s += a[i - 1] + "," + a[i] + " ";
+    i = (i + inc) % l;
+  }
+
+  return s;
+},
+    //adds a certain number of points while maintaining the polygon/polyline shape (so that the start/end values can have a matching quantity of points to animate). Returns the revised string.
+_equalizePointQuantity = function _equalizePointQuantity(a, quantity) {
+  var tally = 0,
+      x = parseFloat(a[0]),
+      y = parseFloat(a[1]),
+      s = x + "," + y + " ",
+      max = 0.999999,
+      newPointsPerSegment,
+      i,
+      l,
+      j,
+      factor,
+      nextX,
+      nextY;
+  l = a.length;
+  newPointsPerSegment = quantity * 0.5 / (l * 0.5 - 1);
+
+  for (i = 0; i < l - 2; i += 2) {
+    tally += newPointsPerSegment;
+    nextX = parseFloat(a[i + 2]);
+    nextY = parseFloat(a[i + 3]);
+
+    if (tally > max) {
+      //compare with 0.99999 instead of 1 in order to prevent rounding errors
+      factor = 1 / (Math.floor(tally) + 1);
+      j = 1;
+
+      while (tally > max) {
+        s += (x + (nextX - x) * factor * j).toFixed(2) + "," + (y + (nextY - y) * factor * j).toFixed(2) + " ";
+        tally--;
+        j++;
+      }
+    }
+
+    s += nextX + "," + nextY + " ";
+    x = nextX;
+    y = nextY;
+  }
+
+  return s;
+},
+    _pointsFilter = function _pointsFilter(a) {
+  var startNums = a[0].match(_numExp) || [],
+      endNums = a[1].match(_numExp) || [],
+      dif = endNums.length - startNums.length;
+
+  if (dif > 0) {
+    a[0] = _equalizePointQuantity(startNums, dif);
+  } else {
+    a[1] = _equalizePointQuantity(endNums, -dif);
+  }
+},
+    _buildPointsFilter = function _buildPointsFilter(shapeIndex) {
+  return !isNaN(shapeIndex) ? function (a) {
+    _pointsFilter(a);
+
+    a[1] = _offsetPoints(a[1], parseInt(shapeIndex, 10));
+  } : _pointsFilter;
+},
+    _parseShape = function _parseShape(shape, forcePath, target) {
+  var isString = typeof shape === "string",
+      e,
+      type;
+
+  if (!isString || _selectorExp.test(shape) || (shape.match(_numExp) || []).length < 3) {
+    e = _toArray(shape)[0];
+
+    if (e) {
+      type = (e.nodeName + "").toUpperCase();
+
+      if (forcePath && type !== "PATH") {
+        //if we were passed an element (or selector text for an element) that isn't a path, convert it.
+        e = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.convertToPath)(e, false);
+        type = "PATH";
+      }
+
+      shape = e.getAttribute(type === "PATH" ? "d" : "points") || "";
+
+      if (e === target) {
+        //if the shape matches the target element, the user wants to revert to the original which should have been stored in the data-original attribute
+        shape = e.getAttributeNS(null, "data-original") || shape;
+      }
+    } else {
+      _log("WARNING: invalid morph to: " + shape);
+
+      shape = false;
+    }
+  }
+
+  return shape;
+},
+    //adds an "isSmooth" array to each segment and populates it with a boolean value indicating whether or not it's smooth (the control points have basically the same slope). For any smooth control points, it converts the coordinates into angle (x, in radians) and length (y) and puts them into the same index value in a smoothData array.
+_populateSmoothData = function _populateSmoothData(rawPath, tolerance) {
+  var j = rawPath.length,
+      limit = 0.2 * (tolerance || 1),
+      smooth,
+      segment,
+      x,
+      y,
+      x2,
+      y2,
+      i,
+      l,
+      a,
+      a2,
+      isSmooth,
+      smoothData;
+
+  while (--j > -1) {
+    segment = rawPath[j];
+    isSmooth = segment.isSmooth = segment.isSmooth || [0, 0, 0, 0];
+    smoothData = segment.smoothData = segment.smoothData || [0, 0, 0, 0];
+    isSmooth.length = 4;
+    l = segment.length - 2;
+
+    for (i = 6; i < l; i += 6) {
+      x = segment[i] - segment[i - 2];
+      y = segment[i + 1] - segment[i - 1];
+      x2 = segment[i + 2] - segment[i];
+      y2 = segment[i + 3] - segment[i + 1];
+      a = _atan2(y, x);
+      a2 = _atan2(y2, x2);
+      smooth = Math.abs(a - a2) < limit;
+
+      if (smooth) {
+        smoothData[i - 2] = a;
+        smoothData[i + 2] = a2;
+        smoothData[i - 1] = _sqrt(x * x + y * y);
+        smoothData[i + 3] = _sqrt(x2 * x2 + y2 * y2);
+      }
+
+      isSmooth.push(smooth, smooth, 0, 0, smooth, smooth);
+    } //if the first and last points are identical, check to see if there's a smooth transition. We must handle this a bit differently due to their positions in the array.
+
+
+    if (segment[l] === segment[0] && segment[l + 1] === segment[1]) {
+      x = segment[0] - segment[l - 2];
+      y = segment[1] - segment[l - 1];
+      x2 = segment[2] - segment[0];
+      y2 = segment[3] - segment[1];
+      a = _atan2(y, x);
+      a2 = _atan2(y2, x2);
+
+      if (Math.abs(a - a2) < limit) {
+        smoothData[l - 2] = a;
+        smoothData[2] = a2;
+        smoothData[l - 1] = _sqrt(x * x + y * y);
+        smoothData[3] = _sqrt(x2 * x2 + y2 * y2);
+        isSmooth[l - 2] = isSmooth[l - 1] = true; //don't change indexes 2 and 3 because we'll trigger everything from the END, and this will optimize file size a bit.
+      }
+    }
+  }
+
+  return rawPath;
+},
+    _parseOriginFactors = function _parseOriginFactors(v) {
+  var a = v.trim().split(" "),
+      x = ~v.indexOf("left") ? 0 : ~v.indexOf("right") ? 100 : isNaN(parseFloat(a[0])) ? 50 : parseFloat(a[0]),
+      y = ~v.indexOf("top") ? 0 : ~v.indexOf("bottom") ? 100 : isNaN(parseFloat(a[1])) ? 50 : parseFloat(a[1]);
+  return {
+    x: x / 100,
+    y: y / 100
+  };
+},
+    _shortAngle = function _shortAngle(dif) {
+  return dif !== dif % _PI ? dif + (dif < 0 ? _2PI : -_2PI) : dif;
+},
+    _morphMessage = "Use MorphSVGPlugin.convertToPath() to convert to a path before morphing.",
+    _tweenRotation = function _tweenRotation(start, end, i, linkedPT) {
+  var so = this._origin,
+      //starting origin
+  eo = this._eOrigin,
+      //ending origin
+  dx = start[i] - so.x,
+      dy = start[i + 1] - so.y,
+      d = _sqrt(dx * dx + dy * dy),
+      //length from starting origin to starting point
+  sa = _atan2(dy, dx),
+      angleDif,
+      _short;
+
+  dx = end[i] - eo.x;
+  dy = end[i + 1] - eo.y;
+  angleDif = _atan2(dy, dx) - sa;
+  _short = _shortAngle(angleDif); //in the case of control points, we ALWAYS link them to their anchor so that they don't get torn apart and rotate the opposite direction. If it's not a control point, we look at the most recently linked point as long as they're within a certain rotational range of each other.
+
+  if (!linkedPT && _lastLinkedAnchor && Math.abs(_short + _lastLinkedAnchor.ca) < _angleMin) {
+    linkedPT = _lastLinkedAnchor;
+  }
+
+  return this._anchorPT = _lastLinkedAnchor = {
+    _next: this._anchorPT,
+    t: start,
+    sa: sa,
+    //starting angle
+    ca: linkedPT && _short * linkedPT.ca < 0 && Math.abs(_short) > _angleMax ? angleDif : _short,
+    //change in angle
+    sl: d,
+    //starting length
+    cl: _sqrt(dx * dx + dy * dy) - d,
+    //change in length
+    i: i
+  };
+},
+    _initCore = function _initCore(required) {
+  gsap = _getGSAP();
+  PluginClass = PluginClass || gsap && gsap.plugins.morphSVG;
+
+  if (gsap && PluginClass) {
+    _toArray = gsap.utils.toArray;
+    _doc = document;
+    PluginClass.prototype._tweenRotation = _tweenRotation;
+    _coreInitted = 1;
+  } else if (required) {
+    _log("Please gsap.registerPlugin(MorphSVGPlugin)");
+  }
+};
+
+var MorphSVGPlugin = {
+  version: "3.11.4",
+  name: "morphSVG",
+  rawVars: 1,
+  // otherwise "render" would be interpreted as a function-based value.
+  register: function register(core, Plugin) {
+    gsap = core;
+    PluginClass = Plugin;
+
+    _initCore();
+  },
+  init: function init(target, value, tween, index, targets) {
+    _coreInitted || _initCore(1);
+
+    if (!value) {
+      _log("invalid shape");
+
+      return false;
+    }
+
+    _isFunction(value) && (value = value.call(tween, index, target, targets));
+    var type, p, pt, shape, isPoly, shapeIndex, map, startSmooth, endSmooth, start, end, i, j, l, startSeg, endSeg, precompiled, sData, eData, originFactors, useRotation, offset;
+
+    if (typeof value === "string" || value.getBBox || value[0]) {
+      value = {
+        shape: value
+      };
+    } else if (typeof value === "object") {
+      // if there are any function-based values, parse them here (and make a copy of the object so we're not modifying the original)
+      type = {};
+
+      for (p in value) {
+        type[p] = _isFunction(value[p]) && p !== "render" ? value[p].call(tween, index, target, targets) : value[p];
+      }
+
+      value = type;
+    }
+
+    var cs = target.nodeType ? window.getComputedStyle(target) : {},
+        fill = cs.fill + "",
+        fillSafe = !(fill === "none" || (fill.match(_numExp) || [])[3] === "0" || cs.fillRule === "evenodd"),
+        origins = (value.origin || "50 50").split(",");
+    type = (target.nodeName + "").toUpperCase();
+    isPoly = type === "POLYLINE" || type === "POLYGON";
+
+    if (type !== "PATH" && !isPoly && !value.prop) {
+      _log("Cannot morph a <" + type + "> element. " + _morphMessage);
+
+      return false;
+    }
+
+    p = type === "PATH" ? "d" : "points";
+
+    if (!value.prop && !_isFunction(target.setAttribute)) {
+      return false;
+    }
+
+    shape = _parseShape(value.shape || value.d || value.points || "", p === "d", target);
+
+    if (isPoly && _commands.test(shape)) {
+      _log("A <" + type + "> cannot accept path data. " + _morphMessage);
+
+      return false;
+    }
+
+    shapeIndex = value.shapeIndex || value.shapeIndex === 0 ? value.shapeIndex : "auto";
+    map = value.map || MorphSVGPlugin.defaultMap;
+    this._prop = value.prop;
+    this._render = value.render || MorphSVGPlugin.defaultRender;
+    this._apply = "updateTarget" in value ? value.updateTarget : MorphSVGPlugin.defaultUpdateTarget;
+    this._rnd = Math.pow(10, isNaN(value.precision) ? 2 : +value.precision);
+    this._tween = tween;
+
+    if (shape) {
+      this._target = target;
+      precompiled = typeof value.precompile === "object";
+      start = this._prop ? target[this._prop] : target.getAttribute(p);
+
+      if (!this._prop && !target.getAttributeNS(null, "data-original")) {
+        target.setAttributeNS(null, "data-original", start); //record the original state in a data-original attribute so that we can revert to it later.
+      }
+
+      if (p === "d" || this._prop) {
+        start = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.stringToRawPath)(precompiled ? value.precompile[0] : start);
+        end = (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.stringToRawPath)(precompiled ? value.precompile[1] : shape);
+
+        if (!precompiled && !_equalizeSegmentQuantity(start, end, shapeIndex, map, fillSafe)) {
+          return false; //malformed path data or null target
+        }
+
+        if (value.precompile === "log" || value.precompile === true) {
+          _log('precompile:["' + (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.rawPathToString)(start) + '","' + (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.rawPathToString)(end) + '"]');
+        }
+
+        useRotation = (value.type || MorphSVGPlugin.defaultType) !== "linear";
+
+        if (useRotation) {
+          start = _populateSmoothData(start, value.smoothTolerance);
+          end = _populateSmoothData(end, value.smoothTolerance);
+
+          if (!start.size) {
+            _getTotalSize(start); //adds top/left/width/height values
+
+          }
+
+          if (!end.size) {
+            _getTotalSize(end);
+          }
+
+          originFactors = _parseOriginFactors(origins[0]);
+          this._origin = start.origin = {
+            x: start.left + originFactors.x * start.width,
+            y: start.top + originFactors.y * start.height
+          };
+
+          if (origins[1]) {
+            originFactors = _parseOriginFactors(origins[1]);
+          }
+
+          this._eOrigin = {
+            x: end.left + originFactors.x * end.width,
+            y: end.top + originFactors.y * end.height
+          };
+        }
+
+        this._rawPath = target._gsRawPath = start;
+        j = start.length;
+
+        while (--j > -1) {
+          startSeg = start[j];
+          endSeg = end[j];
+          startSmooth = startSeg.isSmooth || [];
+          endSmooth = endSeg.isSmooth || [];
+          l = startSeg.length;
+          _lastLinkedAnchor = 0; //reset; we use _lastLinkedAnchor in the _tweenRotation() method to help make sure that close points don't get ripped apart and rotate opposite directions. Typically we want to go the shortest direction, but if the previous anchor is going a different direction, we override this logic (within certain thresholds)
+
+          for (i = 0; i < l; i += 2) {
+            if (endSeg[i] !== startSeg[i] || endSeg[i + 1] !== startSeg[i + 1]) {
+              if (useRotation) {
+                if (startSmooth[i] && endSmooth[i]) {
+                  //if BOTH starting and ending values are smooth (meaning control points have basically the same slope), interpolate the rotation and length instead of the coordinates (this is what makes things smooth).
+                  sData = startSeg.smoothData;
+                  eData = endSeg.smoothData;
+                  offset = i + (i === l - 4 ? 7 - l : 5); //helps us accommodate wrapping (like if the end and start anchors are identical and the control points are smooth).
+
+                  this._controlPT = {
+                    _next: this._controlPT,
+                    i: i,
+                    j: j,
+                    l1s: sData[i + 1],
+                    l1c: eData[i + 1] - sData[i + 1],
+                    l2s: sData[offset],
+                    l2c: eData[offset] - sData[offset]
+                  };
+                  pt = this._tweenRotation(startSeg, endSeg, i + 2);
+
+                  this._tweenRotation(startSeg, endSeg, i, pt);
+
+                  this._tweenRotation(startSeg, endSeg, offset - 1, pt);
+
+                  i += 4;
+                } else {
+                  this._tweenRotation(startSeg, endSeg, i);
+                }
+              } else {
+                pt = this.add(startSeg, i, startSeg[i], endSeg[i], 0, 0, 0, 0, 0, 1);
+                pt = this.add(startSeg, i + 1, startSeg[i + 1], endSeg[i + 1], 0, 0, 0, 0, 0, 1) || pt;
+              }
+            }
+          }
+        }
+      } else {
+        pt = this.add(target, "setAttribute", target.getAttribute(p) + "", shape + "", index, targets, 0, _buildPointsFilter(shapeIndex), p);
+      }
+
+      if (useRotation) {
+        this.add(this._origin, "x", this._origin.x, this._eOrigin.x, 0, 0, 0, 0, 0, 1);
+        pt = this.add(this._origin, "y", this._origin.y, this._eOrigin.y, 0, 0, 0, 0, 0, 1);
+      }
+
+      if (pt) {
+        this._props.push("morphSVG");
+
+        pt.end = shape;
+        pt.endProp = p;
+      }
+    }
+
+    return _bonusValidated;
+  },
+  render: function render(ratio, data) {
+    var rawPath = data._rawPath,
+        controlPT = data._controlPT,
+        anchorPT = data._anchorPT,
+        rnd = data._rnd,
+        target = data._target,
+        pt = data._pt,
+        s,
+        space,
+        easeInOut,
+        segment,
+        l,
+        angle,
+        i,
+        j,
+        x,
+        y,
+        sin,
+        cos,
+        offset;
+
+    while (pt) {
+      pt.r(ratio, pt.d);
+      pt = pt._next;
+    }
+
+    if (ratio === 1 && data._apply) {
+      pt = data._pt;
+
+      while (pt) {
+        if (pt.end) {
+          if (data._prop) {
+            target[data._prop] = pt.end;
+          } else {
+            target.setAttribute(pt.endProp, pt.end); //make sure the end value is exactly as specified (in case we had to add fabricated points during the tween)
+          }
+        }
+
+        pt = pt._next;
+      }
+    } else if (rawPath) {
+      //rotationally position the anchors
+      while (anchorPT) {
+        angle = anchorPT.sa + ratio * anchorPT.ca;
+        l = anchorPT.sl + ratio * anchorPT.cl; //length
+
+        anchorPT.t[anchorPT.i] = data._origin.x + _cos(angle) * l;
+        anchorPT.t[anchorPT.i + 1] = data._origin.y + _sin(angle) * l;
+        anchorPT = anchorPT._next;
+      } //smooth out the control points
+
+
+      easeInOut = ratio < 0.5 ? 2 * ratio * ratio : (4 - 2 * ratio) * ratio - 1;
+
+      while (controlPT) {
+        i = controlPT.i;
+        segment = rawPath[controlPT.j];
+        offset = i + (i === segment.length - 4 ? 7 - segment.length : 5); //accommodates wrapping around of smooth points, like if the start and end anchors are on top of each other and their handles are smooth.
+
+        angle = _atan2(segment[offset] - segment[i + 1], segment[offset - 1] - segment[i]); //average the angles
+
+        sin = _sin(angle);
+        cos = _cos(angle);
+        x = segment[i + 2];
+        y = segment[i + 3];
+        l = controlPT.l1s + easeInOut * controlPT.l1c; //length
+
+        segment[i] = x - cos * l;
+        segment[i + 1] = y - sin * l;
+        l = controlPT.l2s + easeInOut * controlPT.l2c;
+        segment[offset - 1] = x + cos * l;
+        segment[offset] = y + sin * l;
+        controlPT = controlPT._next;
+      }
+
+      target._gsRawPath = rawPath;
+
+      if (data._apply) {
+        s = "";
+        space = " ";
+
+        for (j = 0; j < rawPath.length; j++) {
+          segment = rawPath[j];
+          l = segment.length;
+          s += "M" + (segment[0] * rnd | 0) / rnd + space + (segment[1] * rnd | 0) / rnd + " C";
+
+          for (i = 2; i < l; i++) {
+            //this is actually faster than just doing a join() on the array, possibly because the numbers have so many decimal places
+            s += (segment[i] * rnd | 0) / rnd + space;
+          }
+        }
+
+        if (data._prop) {
+          target[data._prop] = s;
+        } else {
+          target.setAttribute("d", s);
+        }
+      }
+    }
+
+    data._render && rawPath && data._render.call(data._tween, rawPath, target);
+  },
+  kill: function kill(property) {
+    this._pt = this._rawPath = 0;
+  },
+  getRawPath: _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.getRawPath,
+  stringToRawPath: _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.stringToRawPath,
+  rawPathToString: _utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.rawPathToString,
+  normalizeStrings: function normalizeStrings(shape1, shape2, _ref) {
+    var shapeIndex = _ref.shapeIndex,
+        map = _ref.map;
+    var result = [shape1, shape2];
+
+    _pathFilter(result, shapeIndex, map);
+
+    return result;
+  },
+  pathFilter: _pathFilter,
+  pointsFilter: _pointsFilter,
+  getTotalSize: _getTotalSize,
+  equalizeSegmentQuantity: _equalizeSegmentQuantity,
+  convertToPath: function convertToPath(targets, swap) {
+    return _toArray(targets).map(function (target) {
+      return (0,_utils_paths_js__WEBPACK_IMPORTED_MODULE_0__.convertToPath)(target, swap !== false);
+    });
+  },
+  defaultType: "linear",
+  defaultUpdateTarget: true,
+  defaultMap: "size"
+};
+_getGSAP() && gsap.registerPlugin(MorphSVGPlugin);
+
+
+/***/ }),
+/* 38 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "MotionPathHelper": function() { return /* binding */ MotionPathHelper; },
+/* harmony export */   "default": function() { return /* binding */ MotionPathHelper; }
+/* harmony export */ });
+/* harmony import */ var _utils_PathEditor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(39);
+/*!
+ * MotionPathHelper 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+var gsap,
+    _win,
+    _doc,
+    _docEl,
+    _body,
+    MotionPathPlugin,
+    _arrayToRawPath,
+    _rawPathToString,
+    _context,
+    _bonusValidated = 1,
+    //<name>MotionPathHelper</name>
+_selectorExp = /(^[#\.][a-z]|[a-y][a-z])/i,
+    _isString = function _isString(value) {
+  return typeof value === "string";
+},
+    _createElement = function _createElement(type, ns) {
+  var e = _doc.createElementNS ? _doc.createElementNS((ns || "http://www.w3.org/1999/xhtml").replace(/^https/, "http"), type) : _doc.createElement(type); //some servers swap in https for http in the namespace which can break things, making "style" inaccessible.
+
+  return e.style ? e : _doc.createElement(type); //some environments won't allow access to the element's style when created with a namespace in which case we default to the standard createElement() to work around the issue. Also note that when GSAP is embedded directly inside an SVG file, createElement() won't allow access to the style object in Firefox (see https://greensock.com/forums/topic/20215-problem-using-tweenmax-in-standalone-self-containing-svg-file-err-cannot-set-property-csstext-of-undefined/).
+},
+    _getPositionOnPage = function _getPositionOnPage(target) {
+  var bounds = target.getBoundingClientRect(),
+      windowOffsetY = _docEl.clientTop - (_win.pageYOffset || _docEl.scrollTop || _body.scrollTop || 0),
+      windowOffsetX = _docEl.clientLeft - (_win.pageXOffset || _docEl.scrollLeft || _body.scrollLeft || 0);
+  return {
+    left: bounds.left + windowOffsetX,
+    top: bounds.top + windowOffsetY,
+    right: bounds.right + windowOffsetX,
+    bottom: bounds.bottom + windowOffsetY
+  };
+},
+    _getInitialPath = function _getInitialPath(x, y) {
+  var coordinates = [0, 31, 8, 58, 24, 75, 40, 90, 69, 100, 100, 100],
+      i;
+
+  for (i = 0; i < coordinates.length; i += 2) {
+    coordinates[i] += x;
+    coordinates[i + 1] += y;
+  }
+
+  return "M" + x + "," + y + "C" + coordinates.join(",");
+},
+    _getGlobalTime = function _getGlobalTime(animation) {
+  var time = animation.totalTime();
+
+  while (animation) {
+    time = animation.startTime() + time / (animation.timeScale() || 1);
+    animation = animation.parent;
+  }
+
+  return time;
+},
+    _copyElement,
+    _initCopyToClipboard = function _initCopyToClipboard() {
+  _copyElement = _createElement("textarea");
+  _copyElement.style.display = "none";
+
+  _body.appendChild(_copyElement);
+},
+    _parsePath = function _parsePath(path, target, vars) {
+  return _isString(path) && _selectorExp.test(path) ? _doc.querySelector(path) : Array.isArray(path) ? _rawPathToString(_arrayToRawPath([{
+    x: gsap.getProperty(target, "x"),
+    y: gsap.getProperty(target, "y")
+  }].concat(path), vars)) : _isString(path) || path && (path.tagName + "").toLowerCase() === "path" ? path : 0;
+},
+    _addCopyToClipboard = function _addCopyToClipboard(target, getter, onComplete) {
+  target.addEventListener('click', function (e) {
+    if (e.target._gsHelper) {
+      var c = getter(e.target);
+      _copyElement.value = c;
+
+      if (c && _copyElement.select) {
+        console.log(c);
+        _copyElement.style.display = "block";
+
+        _copyElement.select();
+
+        try {
+          _doc.execCommand('copy');
+
+          _copyElement.blur();
+
+          onComplete && onComplete(target);
+        } catch (err) {
+          console.warn("Copy didn't work; this browser doesn't permit that.");
+        }
+
+        _copyElement.style.display = "none";
+      }
+    }
+  });
+},
+    _identityMatrixObject = {
+  matrix: {
+    a: 1,
+    b: 0,
+    c: 0,
+    d: 1,
+    e: 0,
+    f: 0
+  }
+},
+    _getConsolidatedMatrix = function _getConsolidatedMatrix(target) {
+  return (target.transform.baseVal.consolidate() || _identityMatrixObject).matrix;
+},
+    _findMotionPathTween = function _findMotionPathTween(target) {
+  var tweens = gsap.getTweensOf(target),
+      i = 0;
+
+  for (; i < tweens.length; i++) {
+    if (tweens[i].vars.motionPath) {
+      return tweens[i];
+    } else if (tweens[i].timeline) {
+      tweens.push.apply(tweens, tweens[i].timeline.getChildren());
+    }
+  }
+},
+    _initCore = function _initCore(core, required) {
+  var message = "Please gsap.registerPlugin(MotionPathPlugin)";
+  _win = window;
+  gsap = gsap || core || _win.gsap || console.warn(message);
+  gsap && _utils_PathEditor_js__WEBPACK_IMPORTED_MODULE_0__["default"].register(gsap);
+  _doc = document;
+  _body = _doc.body;
+  _docEl = _doc.documentElement;
+
+  if (gsap) {
+    MotionPathPlugin = gsap.plugins.motionPath;
+
+    _context = gsap.core.context || function () {};
+  }
+
+  if (!MotionPathPlugin) {
+    required === true && console.warn(message);
+  } else {
+    _initCopyToClipboard();
+
+    _arrayToRawPath = MotionPathPlugin.arrayToRawPath;
+    _rawPathToString = MotionPathPlugin.rawPathToString;
+  }
+};
+
+var MotionPathHelper = /*#__PURE__*/function () {
+  function MotionPathHelper(targetOrTween, vars) {
+    var _this = this;
+
+    if (vars === void 0) {
+      vars = {};
+    }
+
+    if (!MotionPathPlugin) {
+      _initCore(vars.gsap, 1);
+    }
+
+    var copyButton = _createElement("div"),
+        self = this,
+        offset = {
+      x: 0,
+      y: 0
+    },
+        target,
+        path,
+        isSVG,
+        startX,
+        startY,
+        position,
+        svg,
+        animation,
+        svgNamespace,
+        temp,
+        matrix,
+        refreshPath,
+        animationToScrub;
+
+    if (targetOrTween instanceof gsap.core.Tween) {
+      animation = targetOrTween;
+      target = animation.targets()[0];
+    } else {
+      target = gsap.utils.toArray(targetOrTween)[0];
+      animation = _findMotionPathTween(target);
+    }
+
+    path = _parsePath(vars.path, target, vars);
+    this.offset = offset;
+    position = _getPositionOnPage(target);
+    startX = parseFloat(gsap.getProperty(target, "x", "px"));
+    startY = parseFloat(gsap.getProperty(target, "y", "px"));
+    isSVG = target.getCTM && target.tagName.toLowerCase() !== "svg";
+
+    if (animation && !path) {
+      path = _parsePath(animation.vars.motionPath.path || animation.vars.motionPath, target, animation.vars.motionPath);
+    }
+
+    copyButton.setAttribute("class", "copy-motion-path");
+    copyButton.style.cssText = "border-radius:8px; background-color:rgba(85, 85, 85, 0.7); color:#fff; cursor:pointer; padding:6px 12px; font-family:Signika Negative, Arial, sans-serif; position:fixed; left:50%; transform:translate(-50%, 0); font-size:19px; bottom:10px";
+    copyButton.innerText = "COPY MOTION PATH";
+    copyButton._gsHelper = self;
+
+    (gsap.utils.toArray(vars.container)[0] || _body).appendChild(copyButton);
+
+    _addCopyToClipboard(copyButton, function () {
+      return self.getString();
+    }, function () {
+      return gsap.fromTo(copyButton, {
+        backgroundColor: "white"
+      }, {
+        duration: 0.5,
+        backgroundColor: "rgba(85, 85, 85, 0.6)"
+      });
+    });
+
+    svg = path && path.ownerSVGElement;
+
+    if (!svg) {
+      svgNamespace = isSVG && target.ownerSVGElement && target.ownerSVGElement.getAttribute("xmlns") || "http://www.w3.org/2000/svg";
+
+      if (isSVG) {
+        svg = target.ownerSVGElement;
+        temp = target.getBBox();
+        matrix = _getConsolidatedMatrix(target);
+        startX = matrix.e;
+        startY = matrix.f;
+        offset.x = temp.x;
+        offset.y = temp.y;
+      } else {
+        svg = _createElement("svg", svgNamespace);
+
+        _body.appendChild(svg);
+
+        svg.setAttribute("viewBox", "0 0 100 100");
+        svg.setAttribute("class", "motion-path-helper");
+        svg.style.cssText = "overflow:visible; background-color: transparent; position:absolute; z-index:5000; width:100px; height:100px; top:" + (position.top - startY) + "px; left:" + (position.left - startX) + "px;";
+      }
+
+      temp = _isString(path) && !_selectorExp.test(path) ? path : _getInitialPath(startX, startY);
+      path = _createElement("path", svgNamespace);
+      path.setAttribute("d", temp);
+      path.setAttribute("vector-effect", "non-scaling-stroke");
+      path.style.cssText = "fill:transparent; stroke-width:" + (vars.pathWidth || 3) + "; stroke:" + (vars.pathColor || "#555") + "; opacity:" + (vars.pathOpacity || 0.6);
+      svg.appendChild(path);
+    } else {
+      vars.pathColor && gsap.set(path, {
+        stroke: vars.pathColor
+      });
+      vars.pathWidth && gsap.set(path, {
+        strokeWidth: vars.pathWidth
+      });
+      vars.pathOpacity && gsap.set(path, {
+        opacity: vars.pathOpacity
+      });
+    }
+
+    if (offset.x || offset.y) {
+      gsap.set(path, {
+        x: offset.x,
+        y: offset.y
+      });
+    }
+
+    if (!("selected" in vars)) {
+      vars.selected = true;
+    }
+
+    if (!("anchorSnap" in vars)) {
+      vars.anchorSnap = function (p) {
+        if (p.x * p.x + p.y * p.y < 16) {
+          p.x = p.y = 0;
+        }
+      };
+    }
+
+    animationToScrub = animation && animation.parent.data === "nested" ? animation.parent.parent : animation;
+
+    vars.onPress = function () {
+      animationToScrub.pause(0);
+    };
+
+    refreshPath = function refreshPath() {
+      //let m = _getConsolidatedMatrix(path);
+      //animation.vars.motionPath.offsetX = m.e - offset.x;
+      //animation.vars.motionPath.offsetY = m.f - offset.y;
+      animation.invalidate();
+      animationToScrub.restart();
+    };
+
+    vars.onRelease = vars.onDeleteAnchor = refreshPath;
+    this.editor = _utils_PathEditor_js__WEBPACK_IMPORTED_MODULE_0__["default"].create(path, vars);
+
+    if (vars.center) {
+      gsap.set(target, {
+        transformOrigin: "50% 50%",
+        xPercent: -50,
+        yPercent: -50
+      });
+    }
+
+    if (animation) {
+      if (animation.vars.motionPath.path) {
+        animation.vars.motionPath.path = path;
+      } else {
+        animation.vars.motionPath = {
+          path: path
+        };
+      }
+
+      if (animationToScrub.parent !== gsap.globalTimeline) {
+        gsap.globalTimeline.add(animationToScrub, _getGlobalTime(animationToScrub) - animationToScrub.delay());
+      }
+
+      animationToScrub.repeat(-1).repeatDelay(1);
+    } else {
+      animation = animationToScrub = gsap.to(target, {
+        motionPath: {
+          path: path,
+          start: vars.start || 0,
+          end: "end" in vars ? vars.end : 1,
+          autoRotate: "autoRotate" in vars ? vars.autoRotate : false,
+          align: path,
+          alignOrigin: vars.alignOrigin
+        },
+        duration: vars.duration || 5,
+        ease: vars.ease || "power1.inOut",
+        repeat: -1,
+        repeatDelay: 1,
+        paused: !vars.path
+      });
+    }
+
+    this.animation = animation;
+
+    _context(this);
+
+    this.kill = this.revert = function () {
+      _this.editor.kill();
+
+      copyButton.parentNode && copyButton.parentNode.removeChild(copyButton);
+      isSVG || svg.parentNode && svg.parentNode.removeChild(svg);
+      animationToScrub && animationToScrub.revert();
+    };
+  }
+
+  var _proto = MotionPathHelper.prototype;
+
+  _proto.getString = function getString() {
+    return this.editor.getString(true, -this.offset.x, -this.offset.y);
+  };
+
+  return MotionPathHelper;
+}();
+MotionPathHelper.register = _initCore;
+
+MotionPathHelper.create = function (target, vars) {
+  return new MotionPathHelper(target, vars);
+};
+
+MotionPathHelper.editPath = function (path, vars) {
+  return _utils_PathEditor_js__WEBPACK_IMPORTED_MODULE_0__["default"].create(path, vars);
+};
+
+MotionPathHelper.version = "3.11.4";
+
+
+/***/ }),
+/* 39 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "PathEditor": function() { return /* binding */ PathEditor; },
+/* harmony export */   "default": function() { return /* binding */ PathEditor; }
+/* harmony export */ });
+/* harmony import */ var _paths_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
+/* harmony import */ var _matrix_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+/*!
+ * PathEditor 3.11.4
+ * https://greensock.com
+ *
+ * Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+
+var _numbersExp = /(?:(-)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/ig,
+    _doc,
+    _supportsPointer,
+    _win,
+    _body,
+    gsap,
+    _context,
+    _selectionColor = "#4e7fff",
+    _minimumMovement = 1,
+    _DEG2RAD = Math.PI / 180,
+    _getTime = Date.now || function () {
+  return new Date().getTime();
+},
+    _lastInteraction = 0,
+    _isPressed = 0,
+    _emptyFunc = function _emptyFunc() {
+  return false;
+},
+    _interacted = function _interacted() {
+  return _lastInteraction = _getTime();
+},
+    _CTRL,
+    _ALT,
+    _SHIFT,
+    _CMD,
+    _recentlyAddedAnchor,
+    _editingAxis = {},
+    //stores the x/y of the most recently-selected anchor point's x and y axis. We tap into this for snapping horizontally and vertically.
+_history = [],
+    _point = {},
+    //reuse to minimize memory and maximize performance (mostly for snapping)
+_temp = [],
+    //reuse this in places like getNormalizedSVG() to conserve memory
+_comma = ",",
+    _selectedPaths = [],
+    _preventDefault = function _preventDefault(event) {
+  if (event.preventDefault) {
+    event.preventDefault();
+
+    if (event.preventManipulation) {
+      event.preventManipulation(); //for some Microsoft browsers
+    }
+  }
+},
+    _createElement = function _createElement(type) {
+  return _doc.createElementNS ? _doc.createElementNS("http://www.w3.org/1999/xhtml", type) : _doc.createElement(type);
+},
+    _createSVG = function _createSVG(type, container, attributes) {
+  var element = _doc.createElementNS("http://www.w3.org/2000/svg", type),
+      reg = /([a-z])([A-Z])/g,
+      p;
+
+  attributes = attributes || {};
+  attributes["class"] = attributes["class"] || "path-editor";
+
+  for (p in attributes) {
+    if (element.style[p] !== undefined) {
+      element.style[p] = attributes[p];
+    } else {
+      element.setAttributeNS(null, p.replace(reg, "$1-$2").toLowerCase(), attributes[p]);
+    }
+  }
+
+  container.appendChild(element);
+  return element;
+},
+    _identityMatrixObject = {
+  matrix: new _matrix_js__WEBPACK_IMPORTED_MODULE_0__.Matrix2D()
+},
+    _getConsolidatedMatrix = function _getConsolidatedMatrix(target) {
+  return (target.transform && target.transform.baseVal.consolidate() || _identityMatrixObject).matrix;
+},
+    _getConcatenatedTransforms = function _getConcatenatedTransforms(target) {
+  var m = _getConsolidatedMatrix(target),
+      owner = target.ownerSVGElement;
+
+  while ((target = target.parentNode) && target.ownerSVGElement === owner) {
+    m.multiply(_getConsolidatedMatrix(target));
+  }
+
+  return "matrix(" + m.a + "," + m.b + "," + m.c + "," + m.d + "," + m.e + "," + m.f + ")";
+},
+    _addHistory = function _addHistory(pathEditor) {
+  var selectedIndexes = [],
+      a = pathEditor._selectedAnchors,
+      i;
+
+  for (i = 0; i < a.length; i++) {
+    selectedIndexes[i] = a[i].i;
+  }
+
+  _history.unshift({
+    path: pathEditor,
+    d: pathEditor.path.getAttribute("d"),
+    transform: pathEditor.path.getAttribute("transform") || "",
+    selectedIndexes: selectedIndexes
+  });
+
+  if (_history.length > 30) {
+    _history.length = 30;
+  }
+},
+    _round = function _round(value) {
+  return ~~(value * 1000 + (value < 0 ? -.5 : .5)) / 1000;
+},
+    _getSquarePathData = function _getSquarePathData(size) {
+  size = _round(size);
+  return ["M-" + size, -size, size, -size, size, size, -size, size + "z"].join(_comma);
+},
+    _getCirclePathData = function _getCirclePathData(size) {
+  var circ = 0.552284749831,
+      rcirc = _round(size * circ);
+
+  size = _round(size);
+  return "M" + size + ",0C" + [size, rcirc, rcirc, size, 0, size, -rcirc, size, -size, rcirc, -size, 0, -size, -rcirc, -rcirc, -size, 0, -size, rcirc, -size, size, -rcirc, size, 0].join(_comma) + "z";
+},
+    _checkDeselect = function _checkDeselect(e) {
+  if (!e.target._gsSelection && !_isPressed && _getTime() - _lastInteraction > 100) {
+    var i = _selectedPaths.length;
+
+    while (--i > -1) {
+      _selectedPaths[i].deselect();
+    }
+
+    _selectedPaths.length = 0;
+  }
+},
+    _tempDiv,
+    _touchEventLookup,
+    _isMultiTouching = 0,
+    _addListener = function _addListener(element, type, func, capture) {
+  if (element.addEventListener) {
+    var touchType = _touchEventLookup[type];
+    capture = capture || {
+      passive: false
+    };
+    element.addEventListener(touchType || type, func, capture);
+
+    if (touchType && type !== touchType && touchType.substr(0, 7) !== "pointer") {
+      //some browsers actually support both, so must we. But pointer events cover all.
+      element.addEventListener(type, func, capture);
+    }
+  } else if (element.attachEvent) {
+    element.attachEvent("on" + type, func);
+  }
+},
+    _removeListener = function _removeListener(element, type, func) {
+  if (element.removeEventListener) {
+    var touchType = _touchEventLookup[type];
+    element.removeEventListener(touchType || type, func);
+
+    if (touchType && type !== touchType && touchType.substr(0, 7) !== "pointer") {
+      element.removeEventListener(type, func);
+    }
+  } else if (element.detachEvent) {
+    element.detachEvent("on" + type, func);
+  }
+},
+    _hasTouchID = function _hasTouchID(list, ID) {
+  var i = list.length;
+
+  while (--i > -1) {
+    if (list[i].identifier === ID) {
+      return true;
+    }
+  }
+
+  return false;
+},
+    _onMultiTouchDocumentEnd = function _onMultiTouchDocumentEnd(e) {
+  _isMultiTouching = e.touches && _dragCount < e.touches.length;
+
+  _removeListener(e.target, "touchend", _onMultiTouchDocumentEnd);
+},
+    _onMultiTouchDocument = function _onMultiTouchDocument(e) {
+  _isMultiTouching = e.touches && _dragCount < e.touches.length;
+
+  _addListener(e.target, "touchend", _onMultiTouchDocumentEnd);
+},
+    _bind = function _bind(func, scope) {
+  return function (e) {
+    return func.call(scope, e);
+  };
+},
+    _callback = function _callback(type, self, param) {
+  var callback = self.vars[type];
+
+  if (callback) {
+    callback.call(self.vars.callbackScope || self, param || self);
+  }
+
+  return self;
+},
+    _copyElement,
+    _resetSelection = function _resetSelection() {
+  _copyElement.style.display = "block";
+
+  _copyElement.select();
+
+  _copyElement.style.display = "none";
+},
+    _coreInitted,
+    _initCore = function _initCore(core) {
+  _doc = document;
+  _win = window;
+  _body = _doc.body;
+  gsap = gsap || core || _win.gsap || console.warn("Please gsap.registerPlugin(PathEditor)");
+
+  _context = gsap && gsap.core.context || function () {};
+
+  _tempDiv = _createElement("div");
+  _copyElement = _createElement("textarea");
+  _copyElement.style.display = "none";
+  _body && _body.appendChild(_copyElement);
+
+  _touchEventLookup = function (types) {
+    //we create an object that makes it easy to translate touch event types into their "pointer" counterparts if we're in a browser that uses those instead. Like IE10 uses "MSPointerDown" instead of "touchstart", for example.
+    var standard = types.split(","),
+        converted = (_tempDiv.onpointerdown !== undefined ? "pointerdown,pointermove,pointerup,pointercancel" : _tempDiv.onmspointerdown !== undefined ? "MSPointerDown,MSPointerMove,MSPointerUp,MSPointerCancel" : types).split(","),
+        obj = {},
+        i = 4;
+
+    while (--i > -1) {
+      obj[standard[i]] = converted[i];
+      obj[converted[i]] = standard[i];
+    }
+
+    return obj;
+  }("touchstart,touchmove,touchend,touchcancel");
+
+  SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function (e) {
+    //adds Chrome support
+    return e.getScreenCTM().inverse().multiply(this.getScreenCTM());
+  };
+
+  _doc.addEventListener("keydown", function (e) {
+    var key = e.keyCode || e.which,
+        keyString = e.key || key,
+        i,
+        state,
+        a,
+        path;
+
+    if (keyString === "Shift" || key === 16) {
+      _SHIFT = true;
+    } else if (keyString === "Control" || key === 17) {
+      _CTRL = true;
+    } else if (keyString === "Meta" || key === 91) {
+      _CMD = true;
+    } else if (keyString === "Alt" || key === 18) {
+      _ALT = true;
+      i = _selectedPaths.length;
+
+      while (--i > -1) {
+        _selectedPaths[i]._onPressAlt();
+      }
+    } else if ((keyString === "z" || key === 90) && (_CTRL || _CMD) && _history.length > 1) {
+      //UNDO
+      _history.shift();
+
+      state = _history[0];
+
+      if (state) {
+        path = state.path;
+        path.path.setAttribute("d", state.d);
+        path.path.setAttribute("transform", state.transform);
+        path.init();
+        a = path._anchors;
+
+        for (i = 0; i < a.length; i++) {
+          if (state.selectedIndexes.indexOf(a[i].i) !== -1) {
+            path._selectedAnchors.push(a[i]);
+          }
+        }
+
+        path._updateAnchors();
+
+        path.update();
+
+        if (path.vars.onUndo) {
+          path.vars.onUndo.call(path);
+        }
+      }
+    } else if (keyString === "Delete" || keyString === "Backspace" || key === 8 || key === 46 || key === 63272 || key === "d" && (_CTRL || _CMD)) {
+      //DELETE
+      i = _selectedPaths.length;
+
+      while (--i > -1) {
+        _selectedPaths[i]._deleteSelectedAnchors();
+      }
+    } else if ((keyString === "a" || key === 65) && (_CMD || _CTRL)) {
+      //SELECT ALL
+      i = _selectedPaths.length;
+
+      while (--i > -1) {
+        _selectedPaths[i].select(true);
+      }
+    }
+  }, true);
+
+  _doc.addEventListener("keyup", function (e) {
+    var key = e.key || e.keyCode || e.which;
+
+    if (key === "Shift" || key === 16) {
+      _SHIFT = false;
+    } else if (key === "Control" || key === 17) {
+      _CTRL = false;
+    } else if (key === "Meta" || key === 91) {
+      _CMD = false;
+    } else if (key === "Alt" || key === 18) {
+      _ALT = false;
+      var i = _selectedPaths.length;
+
+      while (--i > -1) {
+        _selectedPaths[i]._onReleaseAlt();
+      }
+    }
+  }, true);
+
+  _supportsPointer = !!_win.PointerEvent;
+
+  _addListener(_doc, "mouseup", _checkDeselect);
+
+  _addListener(_doc, "touchend", _checkDeselect);
+
+  _addListener(_doc, "touchcancel", _emptyFunc); //some older Android devices intermittently stop dispatching "touchmove" events if we don't listen for "touchcancel" on the document. Very strange indeed.
+
+
+  _addListener(_win, "touchmove", _emptyFunc); //works around Safari bugs that still allow the page to scroll even when we preventDefault() on the touchmove event.
+
+
+  _body && _body.addEventListener("touchstart", _emptyFunc); //works around Safari bug: https://greensock.com/forums/topic/21450-draggable-in-iframe-on-mobile-is-buggy/
+
+  _coreInitted = 1;
+},
+    _onPress = function _onPress(e) {
+  var self = this,
+      ctm = (0,_matrix_js__WEBPACK_IMPORTED_MODULE_0__.getGlobalMatrix)(self.target.parentNode, true),
+      //previously used self.target.parentNode.getScreenCTM().inverse() but there's a major bug in Firefox that prevents it from working properly when there's an ancestor with a transform applied, so we bootstrapped our own solution that seems to work great across all browsers.
+  touchEventTarget,
+      temp;
+  this._matrix = this.target.transform.baseVal.getItem(0).matrix;
+  this._ctm = ctm;
+
+  if (_touchEventLookup[e.type]) {
+    //note: on iOS, BOTH touchmove and mousemove are dispatched, but the mousemove has pageY and pageX of 0 which would mess up the calculations and needlessly hurt performance.
+    touchEventTarget = e.type.indexOf("touch") !== -1 ? e.currentTarget || e.target : _doc; //pointer-based touches (for Microsoft browsers) don't remain locked to the original target like other browsers, so we must use the document instead. The event type would be "MSPointerDown" or "pointerdown".
+
+    _addListener(touchEventTarget, "touchend", self._onRelease);
+
+    _addListener(touchEventTarget, "touchmove", self._onMove);
+
+    _addListener(touchEventTarget, "touchcancel", self._onRelease);
+
+    _addListener(_doc, "touchstart", _onMultiTouchDocument);
+
+    _addListener(_win, "touchforcechange", _preventDefault); //otherwise iOS will scroll when dragging.
+
+  } else {
+    touchEventTarget = null;
+
+    _addListener(_doc, "mousemove", self._onMove); //attach these to the document instead of the box itself so that if the user's mouse moves too quickly (and off of the box), things still work.
+
+  }
+
+  if (!_supportsPointer) {
+    _addListener(_doc, "mouseup", self._onRelease);
+  }
+
+  _preventDefault(e);
+
+  _resetSelection(); // when a PathEditor is in an iframe in an environment like codepen, this helps avoid situations where the DELETE key won't actually work because the parent frame is intercepting the event.
+
+
+  if (e.changedTouches) {
+    //touch events store the data slightly differently
+    e = self.touch = e.changedTouches[0];
+    self.touchID = e.identifier;
+  } else if (e.pointerId) {
+    self.touchID = e.pointerId; //for some Microsoft browsers
+  } else {
+    self.touch = self.touchID = null;
+  }
+
+  self._startPointerY = self.pointerY = e.pageY; //record the starting x and y so that we can calculate the movement from the original in _onMouseMove
+
+  self._startPointerX = self.pointerX = e.pageX;
+  self._startElementX = self._matrix.e;
+  self._startElementY = self._matrix.f;
+
+  if (this._ctm.a === 1 && this._ctm.b === 0 && this._ctm.c === 0 && this._ctm.d === 1) {
+    this._ctm = null;
+  } else {
+    temp = self._startPointerX * this._ctm.a + self._startPointerY * this._ctm.c + this._ctm.e;
+    self._startPointerY = self._startPointerX * this._ctm.b + self._startPointerY * this._ctm.d + this._ctm.f;
+    self._startPointerX = temp;
+  }
+
+  self.isPressed = _isPressed = true;
+  self.touchEventTarget = touchEventTarget;
+
+  if (self.vars.onPress) {
+    self.vars.onPress.call(self.vars.callbackScope || self, self.pointerEvent);
+  }
+},
+    _onMove = function _onMove(e) {
+  var self = this,
+      originalEvent = e,
+      touches,
+      i;
+
+  if (!self._enabled || _isMultiTouching || !self.isPressed || !e) {
+    return;
+  }
+
+  self.pointerEvent = e;
+  touches = e.changedTouches;
+
+  if (touches) {
+    //touch events store the data slightly differently
+    e = touches[0];
+
+    if (e !== self.touch && e.identifier !== self.touchID) {
+      //Usually changedTouches[0] will be what we're looking for, but in case it's not, look through the rest of the array...(and Android browsers don't reuse the event like iOS)
+      i = touches.length;
+
+      while (--i > -1 && (e = touches[i]).identifier !== self.touchID) {}
+
+      if (i < 0) {
+        return;
+      }
+    }
+  } else if (e.pointerId && self.touchID && e.pointerId !== self.touchID) {
+    //for some Microsoft browsers, we must attach the listener to the doc rather than the trigger so that when the finger moves outside the bounds of the trigger, things still work. So if the event we're receiving has a pointerId that doesn't match the touchID, ignore it (for multi-touch)
+    return;
+  }
+
+  _preventDefault(originalEvent);
+
+  self.setPointerPosition(e.pageX, e.pageY);
+
+  if (self.vars.onDrag) {
+    self.vars.onDrag.call(self.vars.callbackScope || self, self.pointerEvent);
+  }
+},
+    _onRelease = function _onRelease(e, force) {
+  var self = this;
+
+  if (!self._enabled || !self.isPressed || e && self.touchID != null && !force && (e.pointerId && e.pointerId !== self.touchID || e.changedTouches && !_hasTouchID(e.changedTouches, self.touchID))) {
+    //for some Microsoft browsers, we must attach the listener to the doc rather than the trigger so that when the finger moves outside the bounds of the trigger, things still work. So if the event we're receiving has a pointerId that doesn't match the touchID, ignore it (for multi-touch)
+    return;
+  }
+
+  _interacted();
+
+  self.isPressed = _isPressed = false; //TODO: if we want to accommodate multi-touch, we'd need to introduce a counter to track how many touches there are and only toggle this when they're all off.
+
+  var originalEvent = e,
+      wasDragging = self.isDragging,
+      touchEventTarget = self.touchEventTarget,
+      touches,
+      i;
+
+  if (touchEventTarget) {
+    _removeListener(touchEventTarget, "touchend", self._onRelease);
+
+    _removeListener(touchEventTarget, "touchmove", self._onMove);
+
+    _removeListener(touchEventTarget, "touchcancel", self._onRelease);
+
+    _removeListener(_doc, "touchstart", _onMultiTouchDocument);
+  } else {
+    _removeListener(_doc, "mousemove", self._onMove);
+  }
+
+  if (!_supportsPointer) {
+    _removeListener(_doc, "mouseup", self._onRelease);
+
+    if (e && e.target) {
+      _removeListener(e.target, "mouseup", self._onRelease);
+    }
+  }
+
+  if (wasDragging) {
+    self.isDragging = false;
+  } else if (self.vars.onClick) {
+    self.vars.onClick.call(self.vars.callbackScope || self, originalEvent);
+  }
+
+  if (e) {
+    touches = e.changedTouches;
+
+    if (touches) {
+      //touch events store the data slightly differently
+      e = touches[0];
+
+      if (e !== self.touch && e.identifier !== self.touchID) {
+        //Usually changedTouches[0] will be what we're looking for, but in case it's not, look through the rest of the array...(and Android browsers don't reuse the event like iOS)
+        i = touches.length;
+
+        while (--i > -1 && (e = touches[i]).identifier !== self.touchID) {}
+
+        if (i < 0) {
+          return;
+        }
+      }
+    }
+
+    self.pointerEvent = originalEvent;
+    self.pointerX = e.pageX;
+    self.pointerY = e.pageY;
+  }
+
+  if (originalEvent && !wasDragging && self.vars.onDragRelease) {
+    self.vars.onDragRelease.call(self, self.pointerEvent);
+  } else {
+    if (originalEvent) {
+      _preventDefault(originalEvent);
+    }
+
+    if (self.vars.onRelease) {
+      self.vars.onRelease.call(self.vars.callbackScope || self, self.pointerEvent);
+    }
+  }
+
+  if (wasDragging && self.vars.onDragEnd) {
+    self.vars.onDragEnd.call(self.vars.callbackScope || self, self.pointerEvent);
+  }
+
+  return true;
+},
+    _createSegmentAnchors = function _createSegmentAnchors(rawPath, j, editor, vars) {
+  var segment = rawPath[j],
+      l = segment.length - (segment.closed ? 6 : 0),
+      a = [],
+      i;
+
+  for (i = 0; i < l; i += 6) {
+    a.push(new Anchor(editor, rawPath, j, i, vars));
+  }
+
+  segment.closed && (a[0].isClosedStart = true);
+  return a;
+},
+    _getLength = function _getLength(segment, i, i2) {
+  //i is the starting index, and it'll return the length to the next x/y pair. So if you're looking for the length to handle1, you'd feed in the index of the handle control point x whereas if you're looking for the length to handle2, i would be the x of the anchor.
+  var x = segment[i2] - segment[i],
+      y = segment[i2 + 1] - segment[i + 1];
+  return Math.sqrt(x * x + y * y);
+};
+
+var DraggableSVG = /*#__PURE__*/function () {
+  function DraggableSVG(target, vars) {
+    this.target = typeof target === "string" ? _doc.querySelectorAll(target)[0] : target;
+    this.vars = vars || {};
+    this._onPress = _bind(_onPress, this);
+    this._onMove = _bind(_onMove, this);
+    this._onRelease = _bind(_onRelease, this);
+    this.target.setAttribute("transform", (this.target.getAttribute("transform") || "") + " translate(0,0)");
+    this._matrix = _getConsolidatedMatrix(this.target);
+    this.x = this._matrix.e;
+    this.y = this._matrix.f;
+    this.snap = vars.snap;
+
+    if (!isNaN(vars.maxX) || !isNaN(vars.minX)) {
+      this._bounds = 1;
+      this.maxX = +vars.maxX;
+      this.minX = +vars.minX;
+    } else {
+      this._bounds = 0;
+    }
+
+    this.enabled(true);
+  }
+
+  var _proto = DraggableSVG.prototype;
+
+  _proto.setPointerPosition = function setPointerPosition(pointerX, pointerY) {
+    var rnd = 1000,
+        xChange,
+        yChange,
+        x,
+        y,
+        temp;
+    this.pointerX = pointerX;
+    this.pointerY = pointerY;
+
+    if (this._ctm) {
+      temp = pointerX * this._ctm.a + pointerY * this._ctm.c + this._ctm.e;
+      pointerY = pointerX * this._ctm.b + pointerY * this._ctm.d + this._ctm.f;
+      pointerX = temp;
+    }
+
+    yChange = pointerY - this._startPointerY;
+    xChange = pointerX - this._startPointerX;
+
+    if (yChange < _minimumMovement && yChange > -_minimumMovement) {
+      yChange = 0;
+    }
+
+    if (xChange < _minimumMovement && xChange > -_minimumMovement) {
+      xChange = 0;
+    }
+
+    x = ((this._startElementX + xChange) * rnd | 0) / rnd;
+    y = ((this._startElementY + yChange) * rnd | 0) / rnd;
+
+    if (this.snap && !_SHIFT) {
+      _point.x = x;
+      _point.y = y;
+      this.snap.call(this, _point);
+      x = _point.x;
+      y = _point.y;
+    }
+
+    if (this.x !== x || this.y !== y) {
+      this._matrix.f = this.y = y;
+      this._matrix.e = this.x = x;
+
+      if (!this.isDragging && this.isPressed) {
+        this.isDragging = true;
+
+        _callback("onDragStart", this, this.pointerEvent);
+      }
+    }
+  };
+
+  _proto.enabled = function enabled(_enabled) {
+    if (!arguments.length) {
+      return this._enabled;
+    }
+
+    var dragging;
+    this._enabled = _enabled;
+
+    if (_enabled) {
+      if (!_supportsPointer) {
+        _addListener(this.target, "mousedown", this._onPress);
+      }
+
+      _addListener(this.target, "touchstart", this._onPress);
+
+      _addListener(this.target, "click", this._onClick, true); //note: used to pass true for capture but it prevented click-to-play-video functionality in Firefox.
+
+    } else {
+      dragging = this.isDragging;
+
+      _removeListener(this.target, "mousedown", this._onPress);
+
+      _removeListener(this.target, "touchstart", this._onPress);
+
+      _removeListener(_win, "touchforcechange", _preventDefault);
+
+      _removeListener(this.target, "click", this._onClick);
+
+      if (this.touchEventTarget) {
+        _removeListener(this.touchEventTarget, "touchcancel", this._onRelease);
+
+        _removeListener(this.touchEventTarget, "touchend", this._onRelease);
+
+        _removeListener(this.touchEventTarget, "touchmove", this._onMove);
+      }
+
+      _removeListener(_doc, "mouseup", this._onRelease);
+
+      _removeListener(_doc, "mousemove", this._onMove);
+
+      this.isDragging = this.isPressed = false;
+
+      if (dragging) {
+        _callback("onDragEnd", this, this.pointerEvent);
+      }
+    }
+
+    return this;
+  };
+
+  _proto.endDrag = function endDrag(e) {
+    this._onRelease(e);
+  };
+
+  return DraggableSVG;
+}();
+
+var Anchor = /*#__PURE__*/function () {
+  function Anchor(editor, rawPath, j, i, vars) {
+    this.editor = editor;
+    this.element = _createSVG("path", editor._selection, {
+      fill: _selectionColor,
+      stroke: _selectionColor,
+      strokeWidth: 2,
+      vectorEffect: "non-scaling-stroke"
+    });
+    this.update(rawPath, j, i);
+    this.element._gsSelection = true;
+    this.vars = vars || {};
+    this._draggable = new DraggableSVG(this.element, {
+      callbackScope: this,
+      onDrag: this.onDrag,
+      snap: this.vars.snap,
+      onPress: this.onPress,
+      onRelease: this.onRelease,
+      onClick: this.onClick,
+      onDragEnd: this.onDragEnd
+    });
+  }
+
+  var _proto2 = Anchor.prototype;
+
+  _proto2.onPress = function onPress() {
+    _callback("onPress", this);
+  };
+
+  _proto2.onClick = function onClick() {
+    _callback("onClick", this);
+  };
+
+  _proto2.onDrag = function onDrag() {
+    var s = this.segment;
+    this.vars.onDrag.call(this.vars.callbackScope || this, this, this._draggable.x - s[this.i], this._draggable.y - s[this.i + 1]);
+  };
+
+  _proto2.onDragEnd = function onDragEnd() {
+    _callback("onDragEnd", this);
+  };
+
+  _proto2.onRelease = function onRelease() {
+    _callback("onRelease", this);
+  };
+
+  _proto2.update = function update(rawPath, j, i) {
+    if (rawPath) {
+      this.rawPath = rawPath;
+    }
+
+    if (arguments.length <= 1) {
+      j = this.j;
+      i = this.i;
+    } else {
+      this.j = j;
+      this.i = i;
+    }
+
+    var prevSmooth = this.smooth,
+        segment = this.rawPath[j],
+        pi = i === 0 && segment.closed ? segment.length - 4 : i - 2;
+    this.segment = segment;
+    this.smooth = i > 0 && i < segment.length - 2 && Math.abs(Math.atan2(segment[i + 1] - segment[pi + 1], segment[i] - segment[pi]) - Math.atan2(segment[i + 3] - segment[i + 1], segment[i + 2] - segment[i])) < 0.09 ? 2 : 0; //0: corner, 1: smooth but not mirrored, 2: smooth and mirrored.
+
+    if (this.smooth !== prevSmooth) {
+      this.element.setAttribute("d", this.smooth ? this.editor._circleHandle : this.editor._squareHandle);
+    }
+
+    this.element.setAttribute("transform", "translate(" + segment[i] + "," + segment[i + 1] + ")");
+  };
+
+  return Anchor;
+}();
+
+var PathEditor = /*#__PURE__*/function () {
+  function PathEditor(target, vars) {
+    vars = vars || {};
+    _coreInitted || _initCore();
+    this.vars = vars;
+    this.path = typeof target === "string" ? _doc.querySelectorAll(target)[0] : target;
+    this._g = _createSVG("g", this.path.ownerSVGElement, {
+      "class": "path-editor-g path-editor"
+    });
+    this._selectionHittest = _createSVG("path", this._g, {
+      stroke: "transparent",
+      strokeWidth: 16,
+      fill: "none",
+      vectorEffect: "non-scaling-stroke"
+    });
+    this._selection = vars._selection || _createSVG("g", this._g, {
+      "class": "path-editor-selection path-editor"
+    });
+    this._selectionPath = _createSVG("path", this._selection, {
+      stroke: _selectionColor,
+      strokeWidth: 2,
+      fill: "none",
+      vectorEffect: "non-scaling-stroke"
+    });
+    this._selectedAnchors = [];
+    this._line1 = _createSVG("polyline", this._selection, {
+      stroke: _selectionColor,
+      strokeWidth: 2,
+      vectorEffect: "non-scaling-stroke"
+    });
+    this._line2 = _createSVG("polyline", this._selection, {
+      stroke: _selectionColor,
+      strokeWidth: 2,
+      vectorEffect: "non-scaling-stroke"
+    });
+    this._line1.style.pointerEvents = this._line2.style.pointerEvents = this._selectionPath.style.pointerEvents = "none";
+    this._enabled = true;
+    var ctm = this.path.parentNode.getScreenCTM().inverse(),
+        size = (ctm.a + ctm.d) / 2 * (vars.handleSize || 5);
+    this._squareHandle = _getSquarePathData(size);
+    this._circleHandle = _getCirclePathData(size * 1.15);
+    this._handle1 = _createSVG("path", this._selection, {
+      d: this._squareHandle,
+      fill: _selectionColor,
+      stroke: "transparent",
+      strokeWidth: 6
+    });
+    this._handle2 = _createSVG("path", this._selection, {
+      d: this._squareHandle,
+      fill: _selectionColor,
+      stroke: "transparent",
+      strokeWidth: 6
+    });
+    this._handle1._draggable = new DraggableSVG(this._handle1, {
+      onDrag: this._onDragHandle1,
+      callbackScope: this,
+      onPress: this._onPressHandle1,
+      onRelease: this._onReleaseHandle,
+      onClick: this._onClickHandle1,
+      snap: vars.handleSnap
+    });
+    this._handle2._draggable = new DraggableSVG(this._handle2, {
+      onDrag: this._onDragHandle2,
+      callbackScope: this,
+      onPress: this._onPressHandle2,
+      onRelease: this._onReleaseHandle,
+      onClick: this._onClickHandle2,
+      snap: vars.handleSnap
+    });
+    this._handle1.style.visibility = this._handle2.style.visibility = "hidden";
+    var selectionItems = [this._handle1, this._handle2, this._line1, this._line2, this._selection, this._selectionPath, this._selectionHittest],
+        i = selectionItems.length;
+
+    while (--i > -1) {
+      selectionItems[i]._gsSelection = true; //just a flag we can check in the _checkDeselect() method to detect clicks on things that are selection-related.
+    }
+
+    if (vars.draggable !== false) {
+      this._draggable = new DraggableSVG(this._selectionHittest, {
+        callbackScope: this,
+        onPress: this.select,
+        onRelease: this._onRelease,
+        onDrag: this._onDragPath,
+        onDragEnd: this._saveState,
+        maxX: this.vars.maxX,
+        minX: this.vars.minX
+      });
+    }
+
+    this.init();
+    this._selection.style.visibility = vars.selected === false ? "hidden" : "visible";
+
+    if (vars.selected !== false) {
+      this.path._gsSelection = true;
+
+      _selectedPaths.push(this);
+    }
+
+    this._saveState();
+
+    if (!_supportsPointer) {
+      _addListener(this._selectionHittest, "mousedown", _bind(this._onClickSelectionPath, this));
+
+      _addListener(this._selectionHittest, "mouseup", _bind(this._onRelease, this));
+    }
+
+    _addListener(this._selectionHittest, "touchstart", _bind(this._onClickSelectionPath, this));
+
+    _addListener(this._selectionHittest, "touchend", _bind(this._onRelease, this));
+
+    _context(this);
+  }
+
+  var _proto3 = PathEditor.prototype;
+
+  _proto3._onRelease = function _onRelease(e) {
+    var anchor = this._editingAnchor;
+
+    if (anchor) {
+      _editingAxis.x = anchor.segment[anchor.i];
+      _editingAxis.y = anchor.segment[anchor.i + 1];
+    }
+
+    _removeListener(_win, "touchforcechange", _preventDefault); //otherwise iOS will scroll when dragging.
+
+
+    _callback("onRelease", this, e);
+  };
+
+  _proto3.init = function init() {
+    var pathData = this.path.getAttribute("d"),
+        rawPath = (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.stringToRawPath)(pathData),
+        transform = this.path.getAttribute("transform") || "translate(0,0)",
+        createAnchors = !this._rawPath || rawPath.totalPoints !== this._rawPath.totalPoints || rawPath.length !== this._rawPath.length,
+        anchorVars = {
+      callbackScope: this,
+      snap: this.vars.anchorSnap,
+      onDrag: this._onDragAnchor,
+      onPress: this._onPressAnchor,
+      onRelease: this._onRelease,
+      onClick: this._onClickAnchor,
+      onDragEnd: this._onDragEndAnchor,
+      maxX: this.vars.maxX,
+      minX: this.vars.minX
+    },
+        l,
+        i;
+
+    if (createAnchors && this._anchors && this._anchors.length) {
+      for (i = 0; i < this._anchors.length; i++) {
+        this._anchors[i].element.parentNode.removeChild(this._anchors[i].element);
+
+        this._anchors[i]._draggable.enabled(false);
+      }
+
+      this._selectedAnchors.length = 0;
+    }
+
+    this._rawPath = rawPath;
+
+    if (createAnchors) {
+      this._anchors = _createSegmentAnchors(rawPath, 0, this, anchorVars);
+      l = rawPath.length;
+
+      if (l > 1) {
+        for (i = 1; i < l; i++) {
+          this._anchors = this._anchors.concat(_createSegmentAnchors(rawPath, i, this, anchorVars));
+        }
+      }
+    } else {
+      i = this._anchors.length;
+
+      while (--i > -1) {
+        this._anchors[i].update(rawPath);
+      }
+    }
+
+    this._selection.appendChild(this._handle1); //for stacking order (handles should always be on top)
+
+
+    this._selection.appendChild(this._handle2); //		this._selectedAnchors.length = 0;
+
+
+    this._selectionPath.setAttribute("d", pathData);
+
+    this._selectionHittest.setAttribute("d", pathData);
+
+    this._g.setAttribute("transform", _getConcatenatedTransforms(this.path.parentNode) || "translate(0,0)");
+
+    this._selection.setAttribute("transform", transform);
+
+    this._selectionHittest.setAttribute("transform", transform);
+
+    this._updateAnchors();
+
+    return this;
+  };
+
+  _proto3._saveState = function _saveState() {
+    _addHistory(this);
+  };
+
+  _proto3._onClickSelectionPath = function _onClickSelectionPath(e) {
+    if (this._selection.style.visibility === "hidden") {
+      this.select();
+    } else if (_ALT || e && e.altKey) {
+      var anchorVars = {
+        callbackScope: this,
+        snap: this.vars.anchorSnap,
+        onDrag: this._onDragAnchor,
+        onPress: this._onPressAnchor,
+        onRelease: this._onRelease,
+        onClick: this._onClickAnchor,
+        onDragEnd: this._onDragEndAnchor,
+        maxX: this.vars.maxX,
+        minX: this.vars.minX
+      },
+          ctm = this._selection.getScreenCTM().inverse(),
+          newIndex,
+          _i,
+          anchor,
+          x,
+          y,
+          closestData;
+
+      if (this._draggable) {
+        this._draggable._onRelease(e); //otherwise, ALT-click/dragging on a path would create a new anchor AND drag the entire path.
+
+      }
+
+      if (ctm) {
+        x = e.clientX * ctm.a + e.clientY * ctm.c + ctm.e;
+        y = e.clientX * ctm.b + e.clientY * ctm.d + ctm.f;
+      } //DEBUG: _createSVG("circle", this._selection, {fill:"red", r:5, cx:x, cy:y});
+
+
+      closestData = (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.getClosestData)(this._rawPath, x, y);
+      (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.subdivideSegment)(this._rawPath[closestData.j], closestData.i, closestData.t);
+      newIndex = closestData.i + 6;
+
+      for (_i = 0; _i < this._anchors.length; _i++) {
+        if (this._anchors[_i].i >= newIndex) {
+          this._anchors[_i].i += 6;
+        }
+      }
+
+      anchor = new Anchor(this, this._rawPath, closestData.j, newIndex, anchorVars);
+
+      this._selection.appendChild(this._handle1); //for stacking order (handles should always be on top)
+
+
+      this._selection.appendChild(this._handle2);
+
+      anchor._draggable._onPress(e);
+
+      _recentlyAddedAnchor = anchor;
+
+      this._anchors.push(anchor);
+
+      this._selectedAnchors.length = 0;
+
+      this._selectedAnchors.push(anchor);
+
+      this._updateAnchors();
+
+      this.update();
+
+      this._saveState();
+    }
+
+    _resetSelection();
+
+    _addListener(_win, "touchforcechange", _preventDefault); //otherwise iOS will scroll when dragging.
+
+
+    _callback("onPress", this);
+  };
+
+  _proto3._onClickHandle1 = function _onClickHandle1() {
+    var anchor = this._editingAnchor,
+        i = anchor.i,
+        s = anchor.segment,
+        pi = anchor.isClosedStart ? s.length - 4 : i - 2;
+
+    if (_ALT && Math.abs(s[i] - s[pi]) < 5 && Math.abs(s[i + 1] - s[pi + 1]) < 5) {
+      this._onClickAnchor(anchor);
+    }
+  };
+
+  _proto3._onClickHandle2 = function _onClickHandle2() {
+    var anchor = this._editingAnchor,
+        i = anchor.i,
+        s = anchor.segment;
+
+    if (_ALT && Math.abs(s[i] - s[i + 2]) < 5 && Math.abs(s[i + 1] - s[i + 3]) < 5) {
+      this._onClickAnchor(anchor);
+    }
+  };
+
+  _proto3._onDragEndAnchor = function _onDragEndAnchor(e) {
+    _recentlyAddedAnchor = null;
+
+    this._saveState();
+  };
+
+  _proto3.isSelected = function isSelected() {
+    return this._selectedAnchors.length > 0;
+  };
+
+  _proto3.select = function select(allAnchors) {
+    this._selection.style.visibility = "visible";
+    this._editingAnchor = null;
+    this.path._gsSelection = true;
+
+    if (allAnchors === true) {
+      var _i2 = this._anchors.length;
+
+      while (--_i2 > -1) {
+        this._selectedAnchors[_i2] = this._anchors[_i2];
+      }
+    }
+
+    if (_selectedPaths.indexOf(this) === -1) {
+      _selectedPaths.push(this);
+    }
+
+    this._updateAnchors();
+
+    return this;
+  };
+
+  _proto3.deselect = function deselect() {
+    this._selection.style.visibility = "hidden";
+    this._selectedAnchors.length = 0;
+    this._editingAnchor = null;
+    this.path._gsSelection = false;
+
+    _selectedPaths.splice(_selectedPaths.indexOf(this), 1);
+
+    this._updateAnchors();
+
+    return this;
+  };
+
+  _proto3._onDragPath = function _onDragPath(e) {
+    var transform = this._selectionHittest.getAttribute("transform") || "translate(0,0)";
+
+    this._selection.setAttribute("transform", transform);
+
+    this.path.setAttribute("transform", transform);
+  };
+
+  _proto3._onPressAnchor = function _onPressAnchor(anchor) {
+    if (this._selectedAnchors.indexOf(anchor) === -1) {
+      //if it isn't already selected...
+      if (!_SHIFT) {
+        this._selectedAnchors.length = 0;
+      }
+
+      this._selectedAnchors.push(anchor);
+    } else if (_SHIFT) {
+      this._selectedAnchors.splice(this._selectedAnchors.indexOf(anchor), 1);
+
+      anchor._draggable.endDrag();
+    }
+
+    _editingAxis.x = anchor.segment[anchor.i];
+    _editingAxis.y = anchor.segment[anchor.i + 1];
+
+    this._updateAnchors();
+
+    _callback("onPress", this);
+  };
+
+  _proto3._deleteSelectedAnchors = function _deleteSelectedAnchors() {
+    var anchors = this._selectedAnchors,
+        i = anchors.length,
+        anchor,
+        index,
+        j;
+
+    while (--i > -1) {
+      anchor = anchors[i];
+      anchor.element.parentNode.removeChild(anchor.element);
+
+      anchor._draggable.enabled(false);
+
+      index = anchor.i;
+
+      if (!index) {
+        //first
+        anchor.segment.splice(index, 6);
+      } else if (index < anchor.segment.length - 2) {
+        anchor.segment.splice(index - 2, 6);
+      } else {
+        //last
+        anchor.segment.splice(index - 4, 6);
+      }
+
+      anchors.splice(i, 1);
+
+      this._anchors.splice(this._anchors.indexOf(anchor), 1);
+
+      for (j = 0; j < this._anchors.length; j++) {
+        if (this._anchors[j].i >= index) {
+          this._anchors[j].i -= 6;
+        }
+      }
+    }
+
+    this._updateAnchors();
+
+    this.update();
+
+    this._saveState();
+
+    if (this.vars.onDeleteAnchor) {
+      this.vars.onDeleteAnchor.call(this.vars.callbackScope || this);
+    }
+  };
+
+  _proto3._onClickAnchor = function _onClickAnchor(anchor) {
+    var i = anchor.i,
+        segment = anchor.segment,
+        pi = anchor.isClosedStart ? segment.length - 4 : i - 2,
+        rnd = 1000,
+        isEnd = !i || i >= segment.length - 2,
+        angle1,
+        angle2,
+        length1,
+        length2,
+        sin,
+        cos;
+
+    if (_ALT && _recentlyAddedAnchor !== anchor && this._editingAnchor) {
+      anchor.smooth = !anchor.smooth;
+
+      if (isEnd && !anchor.isClosedStart) {
+        //the very ends can't be "smooth"
+        anchor.smooth = false;
+      }
+
+      anchor.element.setAttribute("d", anchor.smooth ? this._circleHandle : this._squareHandle);
+
+      if (anchor.smooth && (!isEnd || anchor.isClosedStart)) {
+        angle1 = Math.atan2(segment[i + 1] - segment[pi + 1], segment[i] - segment[pi]);
+        angle2 = Math.atan2(segment[i + 3] - segment[i + 1], segment[i + 2] - segment[i]);
+        angle1 = (angle1 + angle2) / 2;
+        length1 = _getLength(segment, pi, i);
+        length2 = _getLength(segment, i, i + 2);
+
+        if (length1 < 0.2) {
+          length1 = _getLength(segment, i, pi - 4) / 4;
+          angle1 = angle2 || Math.atan2(segment[i + 7] - segment[pi - 3], segment[i + 6] - segment[pi - 4]);
+        }
+
+        if (length2 < 0.2) {
+          length2 = _getLength(segment, i, i + 6) / 4;
+          angle2 = angle1 || Math.atan2(segment[i + 7] - segment[pi - 3], segment[i + 6] - segment[pi - 4]);
+        }
+
+        sin = Math.sin(angle1);
+        cos = Math.cos(angle1);
+
+        if (Math.abs(angle2 - angle1) < Math.PI / 2) {
+          sin = -sin;
+          cos = -cos;
+        }
+
+        segment[pi] = ((segment[i] + cos * length1) * rnd | 0) / rnd;
+        segment[pi + 1] = ((segment[i + 1] + sin * length1) * rnd | 0) / rnd;
+        segment[i + 2] = ((segment[i] - cos * length2) * rnd | 0) / rnd;
+        segment[i + 3] = ((segment[i + 1] - sin * length2) * rnd | 0) / rnd;
+
+        this._updateAnchors();
+
+        this.update();
+
+        this._saveState();
+      } else if (!anchor.smooth && (!isEnd || anchor.isClosedStart)) {
+        if (i || anchor.isClosedStart) {
+          segment[pi] = segment[i];
+          segment[pi + 1] = segment[i + 1];
+        }
+
+        if (i < segment.length - 2) {
+          segment[i + 2] = segment[i];
+          segment[i + 3] = segment[i + 1];
+        }
+
+        this._updateAnchors();
+
+        this.update();
+
+        this._saveState();
+      }
+    } else if (!_SHIFT) {
+      this._selectedAnchors.length = 0;
+
+      this._selectedAnchors.push(anchor);
+    }
+
+    _recentlyAddedAnchor = null;
+
+    this._updateAnchors();
+  };
+
+  _proto3._updateAnchors = function _updateAnchors() {
+    var anchor = this._selectedAnchors.length === 1 ? this._selectedAnchors[0] : null,
+        segment = anchor ? anchor.segment : null,
+        i,
+        x,
+        y;
+    this._editingAnchor = anchor;
+
+    for (i = 0; i < this._anchors.length; i++) {
+      this._anchors[i].element.style.fill = this._selectedAnchors.indexOf(this._anchors[i]) !== -1 ? _selectionColor : "white"; //this._anchors[i].element.setAttribute("fill", (this._selectedAnchors.indexOf(this._anchors[i]) !== -1) ? _selectionColor : "white");
+    }
+
+    if (anchor) {
+      this._handle1.setAttribute("d", anchor.smooth ? this._circleHandle : this._squareHandle);
+
+      this._handle2.setAttribute("d", anchor.smooth ? this._circleHandle : this._squareHandle);
+    }
+
+    i = anchor ? anchor.i : 0;
+
+    if (anchor && (i || anchor.isClosedStart)) {
+      x = anchor.isClosedStart ? segment[segment.length - 4] : segment[i - 2];
+      y = anchor.isClosedStart ? segment[segment.length - 3] : segment[i - 1]; //TODO: if they equal the anchor coordinates, just hide it.
+
+      this._handle1.style.visibility = this._line1.style.visibility = !_ALT && x === segment[i] && y === segment[i + 1] ? "hidden" : "visible";
+
+      this._handle1.setAttribute("transform", "translate(" + x + _comma + y + ")");
+
+      this._line1.setAttribute("points", x + _comma + y + _comma + segment[i] + _comma + segment[i + 1]);
+    } else {
+      this._handle1.style.visibility = this._line1.style.visibility = "hidden";
+    }
+
+    if (anchor && i < segment.length - 2) {
+      x = segment[i + 2];
+      y = segment[i + 3];
+      this._handle2.style.visibility = this._line2.style.visibility = !_ALT && x === segment[i] && y === segment[i + 1] ? "hidden" : "visible";
+
+      this._handle2.setAttribute("transform", "translate(" + x + _comma + y + ")");
+
+      this._line2.setAttribute("points", segment[i] + _comma + segment[i + 1] + _comma + x + _comma + y);
+    } else {
+      this._handle2.style.visibility = this._line2.style.visibility = "hidden";
+    }
+  };
+
+  _proto3._onPressAlt = function _onPressAlt() {
+    var anchor = this._editingAnchor;
+
+    if (anchor) {
+      if (anchor.i || anchor.isClosedStart) {
+        this._handle1.style.visibility = this._line1.style.visibility = "visible";
+      }
+
+      if (anchor.i < anchor.segment.length - 2) {
+        this._handle2.style.visibility = this._line2.style.visibility = "visible";
+      }
+    }
+  };
+
+  _proto3._onReleaseAlt = function _onReleaseAlt() {
+    var anchor = this._editingAnchor,
+        s,
+        i,
+        pi;
+
+    if (anchor) {
+      s = anchor.segment;
+      i = anchor.i;
+      pi = anchor.isClosedStart ? s.length - 4 : i - 2;
+
+      if (s[i] === s[pi] && s[i + 1] === s[pi + 1]) {
+        this._handle1.style.visibility = this._line1.style.visibility = "hidden";
+      }
+
+      if (s[i] === s[i + 2] && s[i + 1] === s[i + 3]) {
+        this._handle2.style.visibility = this._line2.style.visibility = "hidden";
+      }
+    }
+  };
+
+  _proto3._onPressHandle1 = function _onPressHandle1() {
+    if (this._editingAnchor.smooth) {
+      this._oppositeHandleLength = _getLength(this._editingAnchor.segment, this._editingAnchor.i, this._editingAnchor.i + 2);
+    }
+
+    _callback("onPress", this);
+  };
+
+  _proto3._onPressHandle2 = function _onPressHandle2() {
+    if (this._editingAnchor.smooth) {
+      this._oppositeHandleLength = _getLength(this._editingAnchor.segment, this._editingAnchor.isClosedStart ? this._editingAnchor.segment.length - 4 : this._editingAnchor.i - 2, this._editingAnchor.i);
+    }
+
+    _callback("onPress", this);
+  };
+
+  _proto3._onReleaseHandle = function _onReleaseHandle(e) {
+    this._onRelease(e);
+
+    this._saveState();
+  };
+
+  _proto3._onDragHandle1 = function _onDragHandle1() {
+    var anchor = this._editingAnchor,
+        s = anchor.segment,
+        i = anchor.i,
+        pi = anchor.isClosedStart ? s.length - 4 : i - 2,
+        rnd = 1000,
+        x = this._handle1._draggable.x,
+        y = this._handle1._draggable.y,
+        angle;
+    s[pi] = x = (x * rnd | 0) / rnd;
+    s[pi + 1] = y = (y * rnd | 0) / rnd;
+
+    if (anchor.smooth) {
+      if (_ALT) {
+        anchor.smooth = false;
+        anchor.element.setAttribute("d", this._squareHandle);
+
+        this._handle1.setAttribute("d", this._squareHandle);
+
+        this._handle2.setAttribute("d", this._squareHandle);
+      } else {
+        angle = Math.atan2(s[i + 1] - y, s[i] - x);
+        x = this._oppositeHandleLength * Math.cos(angle);
+        y = this._oppositeHandleLength * Math.sin(angle);
+        s[i + 2] = ((s[i] + x) * rnd | 0) / rnd;
+        s[i + 3] = ((s[i + 1] + y) * rnd | 0) / rnd;
+      }
+    }
+
+    this.update();
+  };
+
+  _proto3._onDragHandle2 = function _onDragHandle2() {
+    var anchor = this._editingAnchor,
+        s = anchor.segment,
+        i = anchor.i,
+        pi = anchor.isClosedStart ? s.length - 4 : i - 2,
+        rnd = 1000,
+        x = this._handle2._draggable.x,
+        y = this._handle2._draggable.y,
+        angle;
+    s[i + 2] = x = (x * rnd | 0) / rnd;
+    s[i + 3] = y = (y * rnd | 0) / rnd;
+
+    if (anchor.smooth) {
+      if (_ALT) {
+        anchor.smooth = false;
+        anchor.element.setAttribute("d", this._squareHandle);
+
+        this._handle1.setAttribute("d", this._squareHandle);
+
+        this._handle2.setAttribute("d", this._squareHandle);
+      } else {
+        angle = Math.atan2(s[i + 1] - y, s[i] - x);
+        x = this._oppositeHandleLength * Math.cos(angle);
+        y = this._oppositeHandleLength * Math.sin(angle);
+        s[pi] = ((s[i] + x) * rnd | 0) / rnd;
+        s[pi + 1] = ((s[i + 1] + y) * rnd | 0) / rnd;
+      }
+    }
+
+    this.update();
+  };
+
+  _proto3._onDragAnchor = function _onDragAnchor(anchor, changeX, changeY) {
+    var anchors = this._selectedAnchors,
+        l = anchors.length,
+        rnd = 1000,
+        i,
+        j,
+        s,
+        a,
+        pi;
+
+    for (j = 0; j < l; j++) {
+      a = anchors[j];
+      i = a.i;
+      s = a.segment;
+
+      if (i) {
+        s[i - 2] = ((s[i - 2] + changeX) * rnd | 0) / rnd;
+        s[i - 1] = ((s[i - 1] + changeY) * rnd | 0) / rnd;
+      } else if (a.isClosedStart) {
+        pi = s.length - 2;
+        s[pi] = _round(s[pi] + changeX);
+        s[pi + 1] = _round(s[pi + 1] + changeY);
+        s[pi - 2] = _round(s[pi - 2] + changeX);
+        s[pi - 1] = _round(s[pi - 1] + changeY);
+      }
+
+      s[i] = ((s[i] + changeX) * rnd | 0) / rnd;
+      s[i + 1] = ((s[i + 1] + changeY) * rnd | 0) / rnd;
+
+      if (i < s.length - 2) {
+        s[i + 2] = ((s[i + 2] + changeX) * rnd | 0) / rnd;
+        s[i + 3] = ((s[i + 3] + changeY) * rnd | 0) / rnd;
+      }
+
+      if (a !== anchor) {
+        a.element.setAttribute("transform", "translate(" + s[i] + _comma + s[i + 1] + ")");
+      }
+    }
+
+    this.update();
+  };
+
+  _proto3.enabled = function enabled(_enabled2) {
+    if (!arguments.length) {
+      return this._enabled;
+    }
+
+    var i = this._anchors.length;
+
+    while (--i > -1) {
+      this._anchors[i]._draggable.enabled(_enabled2);
+    }
+
+    this._enabled = _enabled2;
+
+    this._handle1._draggable.enabled(_enabled2);
+
+    this._handle2._draggable.enabled(_enabled2);
+
+    if (this._draggable) {
+      this._draggable.enabled(_enabled2);
+    }
+
+    if (!_enabled2) {
+      this.deselect();
+      this._selectionHittest.parentNode && this._selectionHittest.parentNode.removeChild(this._selectionHittest);
+      this._selection.parentNode && this._selection.parentNode.removeChild(this._selection);
+    } else if (!this._selection.parentNode) {
+      this.path.ownerSVGElement.appendChild(this._selectionHittest);
+      this.path.ownerSVGElement.appendChild(this._selection);
+      this.init();
+
+      this._saveState();
+    }
+
+    this._updateAnchors();
+
+    return this.update();
+  };
+
+  _proto3.update = function update(readPath) {
+    var d = "",
+        anchor = this._editingAnchor,
+        i,
+        s,
+        x,
+        y,
+        pi;
+
+    if (readPath) {
+      this.init();
+    }
+
+    if (anchor) {
+      i = anchor.i;
+      s = anchor.segment;
+
+      if (i || anchor.isClosedStart) {
+        pi = anchor.isClosedStart ? s.length - 4 : i - 2;
+        x = s[pi];
+        y = s[pi + 1];
+
+        this._handle1.setAttribute("transform", "translate(" + x + _comma + y + ")");
+
+        this._line1.setAttribute("points", x + _comma + y + _comma + s[i] + _comma + s[i + 1]);
+      }
+
+      if (i < s.length - 2) {
+        x = s[i + 2];
+        y = s[i + 3];
+
+        this._handle2.setAttribute("transform", "translate(" + x + _comma + y + ")");
+
+        this._line2.setAttribute("points", s[i] + _comma + s[i + 1] + _comma + x + _comma + y);
+      }
+    }
+
+    if (readPath) {
+      d = this.path.getAttribute("d");
+    } else {
+      for (i = 0; i < this._rawPath.length; i++) {
+        s = this._rawPath[i];
+
+        if (s.length > 7) {
+          d += "M" + s[0] + _comma + s[1] + "C" + s.slice(2).join(_comma);
+        }
+      }
+
+      this.path.setAttribute("d", d);
+
+      this._selectionPath.setAttribute("d", d);
+
+      this._selectionHittest.setAttribute("d", d);
+    }
+
+    if (this.vars.onUpdate && this._enabled) {
+      _callback("onUpdate", this, d);
+    }
+
+    return this;
+  };
+
+  _proto3.getRawPath = function getRawPath(applyTransforms, offsetX, offsetY) {
+    if (applyTransforms) {
+      var m = _getConsolidatedMatrix(this.path);
+
+      return (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.transformRawPath)((0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.copyRawPath)(this._rawPath), 1, 0, 0, 1, m.e + (offsetX || 0), m.f + (offsetY || 0));
+    }
+
+    return this._rawPath;
+  };
+
+  _proto3.getString = function getString(applyTransforms, offsetX, offsetY) {
+    if (applyTransforms) {
+      var m = _getConsolidatedMatrix(this.path);
+
+      return (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.rawPathToString)((0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.transformRawPath)((0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.copyRawPath)(this._rawPath), 1, 0, 0, 1, m.e + (offsetX || 0), m.f + (offsetY || 0)));
+    }
+
+    return this.path.getAttribute("d");
+  };
+
+  _proto3.getNormalizedSVG = function getNormalizedSVG(height, originY, shorten, onEaseError) {
+    var s = this._rawPath[0],
+        tx = s[0] * -1,
+        ty = originY === 0 ? 0 : -(originY || s[1]),
+        l = s.length,
+        sx = 1 / (s[l - 2] + tx),
+        sy = -height || s[l - 1] + ty,
+        rnd = 1000,
+        points,
+        i,
+        x1,
+        y1,
+        x2,
+        y2;
+    _temp.length = 0;
+
+    if (sy) {
+      //typically y ends at 1 (so that the end values are reached)
+      sy = 1 / sy;
+    } else {
+      //in case the ease returns to its beginning value, scale everything proportionally
+      sy = -sx;
+    }
+
+    sx *= rnd;
+    sy *= rnd;
+
+    for (i = 0; i < l; i += 2) {
+      _temp[i] = ((s[i] + tx) * sx | 0) / rnd;
+      _temp[i + 1] = ((s[i + 1] + ty) * sy | 0) / rnd;
+    }
+
+    if (onEaseError) {
+      points = [];
+      l = _temp.length;
+
+      for (i = 2; i < l; i += 6) {
+        x1 = _temp[i - 2];
+        y1 = _temp[i - 1];
+        x2 = _temp[i + 4];
+        y2 = _temp[i + 5];
+        points.push(x1, y1, x2, y2);
+        (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.bezierToPoints)(x1, y1, _temp[i], _temp[i + 1], _temp[i + 2], _temp[i + 3], x2, y2, 0.001, points, points.length - 2);
+      }
+
+      x1 = points[0];
+      l = points.length;
+
+      for (i = 2; i < l; i += 2) {
+        x2 = points[i];
+
+        if (x2 < x1 || x2 > 1 || x2 < 0) {
+          onEaseError();
+          break;
+        }
+
+        x1 = x2;
+      }
+    }
+
+    if (shorten && l === 8 && _temp[0] === 0 && _temp[1] === 0 && _temp[l - 2] === 1 && _temp[l - 1] === 1) {
+      return _temp.slice(2, 6).join(",");
+    }
+
+    _temp[2] = "C" + _temp[2];
+    return "M" + _temp.join(",");
+  };
+
+  _proto3.kill = function kill() {
+    this.enabled(false);
+    this._g.parentNode && this._g.parentNode.removeChild(this._g);
+  };
+
+  _proto3.revert = function revert() {
+    this.kill();
+  };
+
+  return PathEditor;
+}();
+PathEditor.simplifyPoints = _paths_js__WEBPACK_IMPORTED_MODULE_1__.simplifyPoints;
+PathEditor.pointsToSegment = _paths_js__WEBPACK_IMPORTED_MODULE_1__.pointsToSegment;
+
+PathEditor.simplifySVG = function (data, vars) {
+  //takes a <path> element or data string and simplifies it according to whatever tolerance you set (default:1, the bigger the number the more variance there can be). vars: {tolerance:1, cornerThreshold:degrees, curved:true}
+  var element, points, i, x1, x2, y1, y2, bezier, precision, tolerance, l, cornerThreshold;
+  vars = vars || {};
+  tolerance = vars.tolerance || 1;
+  precision = vars.precision || 1 / tolerance;
+  cornerThreshold = (vars.cornerThreshold === undefined ? 18 : +vars.cornerThreshold) * _DEG2RAD;
+
+  if (typeof data !== "string") {
+    //element
+    element = data;
+    data = element.getAttribute("d");
+  }
+
+  if (data.charAt(0) === "#" || data.charAt(0) === ".") {
+    //selector text
+    element = _doc.querySelector(data);
+
+    if (element) {
+      data = element.getAttribute("d");
+    }
+  }
+
+  points = vars.curved === false && !/[achqstvz]/ig.test(data) ? data.match(_numbersExp) : (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.stringToRawPath)(data)[0];
+
+  if (vars.curved !== false) {
+    bezier = points;
+    points = [];
+    l = bezier.length;
+
+    for (i = 2; i < l; i += 6) {
+      x1 = +bezier[i - 2];
+      y1 = +bezier[i - 1];
+      x2 = +bezier[i + 4];
+      y2 = +bezier[i + 5];
+      points.push(_round(x1), _round(y1), _round(x2), _round(y2));
+      (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.bezierToPoints)(x1, y1, +bezier[i], +bezier[i + 1], +bezier[i + 2], +bezier[i + 3], x2, y2, 1 / (precision * 200000), points, points.length - 2);
+    }
+
+    points = (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.pointsToSegment)((0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.simplifyPoints)(points, tolerance), vars.curviness, cornerThreshold);
+    points[2] = "C" + points[2];
+  } else {
+    points = (0,_paths_js__WEBPACK_IMPORTED_MODULE_1__.simplifyPoints)(points, tolerance);
+  }
+
+  data = "M" + points.join(",");
+
+  if (element) {
+    element.setAttribute("d", data);
+  }
+
+  return data;
+};
+
+PathEditor.create = function (target, vars) {
+  return new PathEditor(target, vars);
+};
+
+PathEditor.editingAxis = _editingAxis;
+
+PathEditor.getSnapFunction = function (vars) {
+  //{gridSize, radius, x, y, width, height}
+  var r = vars.radius || 2,
+      big = 1e20,
+      minX = vars.x || vars.x === 0 ? vars.x : vars.width ? 0 : -big,
+      minY = vars.y || vars.y === 0 ? vars.y : vars.height ? 0 : -big,
+      maxX = minX + (vars.width || big * big),
+      maxY = minY + (vars.height || big * big),
+      containX = vars.containX !== false,
+      containY = vars.containY !== false,
+      axis = vars.axis,
+      grid = vars.gridSize;
+  r *= r;
+  return function (p) {
+    var x = p.x,
+        y = p.y,
+        gridX,
+        gridY,
+        dx,
+        dy;
+
+    if (containX && x < minX || (dx = x - minX) * dx < r) {
+      x = minX;
+    } else if (containX && x > maxX || (dx = maxX - x) * dx < r) {
+      x = maxX;
+    }
+
+    if (containY && y < minY || (dy = y - minY) * dy < r) {
+      y = minY;
+    } else if (containY && y > maxY || (dy = maxY - y) * dy < r) {
+      y = maxY;
+    }
+
+    if (axis) {
+      dx = x - axis.x;
+      dy = y - axis.y;
+
+      if (dx * dx < r) {
+        x = axis.x;
+      }
+
+      if (dy * dy < r) {
+        y = axis.y;
+      }
+    }
+
+    if (grid) {
+      gridX = minX + Math.round((x - minX) / grid) * grid; //closest grid slot on x-axis
+
+      dx = gridX - x;
+      gridY = minY + Math.round((y - minY) / grid) * grid; //closest grid slot on y-axis
+
+      dy = gridY - y;
+
+      if (dx * dx + dy * dy < r) {
+        x = gridX;
+        y = gridY;
+      }
+    }
+
+    p.x = x;
+    p.y = y;
+  };
+};
+
+PathEditor.version = "3.11.4";
+PathEditor.register = _initCore;
+
+
+/***/ }),
+/* 40 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ScrollSmoother": function() { return /* binding */ ScrollSmoother; },
+/* harmony export */   "default": function() { return /* binding */ ScrollSmoother; }
+/* harmony export */ });
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/*!
+ * ScrollSmoother 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+var gsap,
+    _coreInitted,
+    _win,
+    _doc,
+    _docEl,
+    _body,
+    _root,
+    _toArray,
+    _clamp,
+    ScrollTrigger,
+    _mainInstance,
+    _expo,
+    _getVelocityProp,
+    _inputObserver,
+    _context,
+    _onResizeDelayedCall,
+    _windowExists = function _windowExists() {
+  return typeof window !== "undefined";
+},
+    _getGSAP = function _getGSAP() {
+  return gsap || _windowExists() && (gsap = window.gsap) && gsap.registerPlugin && gsap;
+},
+    _bonusValidated = 1,
+    //<name>ScrollSmoother</name>
+_isViewport = function _isViewport(e) {
+  return !!~_root.indexOf(e);
+},
+    _getTime = Date.now,
+    _round = function _round(value) {
+  return Math.round(value * 100000) / 100000 || 0;
+},
+    _autoDistance = function _autoDistance(el, progress) {
+  // for calculating the distance (and offset) for elements with speed: "auto". Progress is for if it's "above the fold" (negative start position), so we can crop as little as possible.
+  var parent = el.parentNode || _docEl,
+      b1 = el.getBoundingClientRect(),
+      b2 = parent.getBoundingClientRect(),
+      gapTop = b2.top - b1.top,
+      gapBottom = b2.bottom - b1.bottom,
+      change = (Math.abs(gapTop) > Math.abs(gapBottom) ? gapTop : gapBottom) / (1 - progress),
+      offset = -change * progress,
+      ratio,
+      extraChange;
+
+  if (change > 0) {
+    // if the image starts at the BOTTOM of the container, adjust things so that it shows as much of the image as possible while still covering.
+    ratio = b2.height / (_win.innerHeight + b2.height);
+    extraChange = ratio === 0.5 ? b2.height * 2 : Math.min(b2.height, -change * ratio / (2 * ratio - 1)) * 2 * (progress || 1);
+    offset += progress ? -extraChange * progress : -extraChange / 2; // whatever the offset, we must double that in the opposite direction to compensate.
+
+    change += extraChange;
+  }
+
+  return {
+    change: change,
+    offset: offset
+  };
+},
+    _wrap = function _wrap(el) {
+  var wrapper = _doc.querySelector(".ScrollSmoother-wrapper"); // some frameworks load multiple times, so one already exists, just use that to avoid duplicates
+
+
+  if (!wrapper) {
+    wrapper = _doc.createElement("div");
+    wrapper.classList.add("ScrollSmoother-wrapper");
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+  }
+
+  return wrapper;
+};
+
+var ScrollSmoother = /*#__PURE__*/function () {
+  function ScrollSmoother(vars) {
+    var _this = this;
+
+    _coreInitted || ScrollSmoother.register(gsap) || console.warn("Please gsap.registerPlugin(ScrollSmoother)");
+    vars = this.vars = vars || {};
+    _mainInstance && _mainInstance.kill();
+    _mainInstance = this;
+
+    _context(this);
+
+    var _vars = vars,
+        smoothTouch = _vars.smoothTouch,
+        _onUpdate = _vars.onUpdate,
+        onStop = _vars.onStop,
+        smooth = _vars.smooth,
+        onFocusIn = _vars.onFocusIn,
+        normalizeScroll = _vars.normalizeScroll,
+        wholePixels = _vars.wholePixels,
+        content,
+        wrapper,
+        height,
+        mainST,
+        effects,
+        sections,
+        intervalID,
+        wrapperCSS,
+        contentCSS,
+        paused,
+        pausedNormalizer,
+        recordedRefreshScroll,
+        recordedRefreshScrub,
+        self = this,
+        resizeObserver = typeof ResizeObserver !== "undefined" && vars.autoResize !== false && new ResizeObserver(function () {
+      return ScrollTrigger.isRefreshing || _onResizeDelayedCall.restart(true);
+    }),
+        effectsPrefix = vars.effectsPrefix || "",
+        scrollFunc = ScrollTrigger.getScrollFunc(_win),
+        smoothDuration = ScrollTrigger.isTouch === 1 ? smoothTouch === true ? 0.8 : parseFloat(smoothTouch) || 0 : smooth === 0 || smooth === false ? 0 : parseFloat(smooth) || 0.8,
+        speed = smoothDuration && +vars.speed || 1,
+        currentY = 0,
+        delta = 0,
+        startupPhase = 1,
+        tracker = _getVelocityProp(0),
+        updateVelocity = function updateVelocity() {
+      return tracker.update(-currentY);
+    },
+        scroll = {
+      y: 0
+    },
+        removeScroll = function removeScroll() {
+      return content.style.overflow = "visible";
+    },
+        isProxyScrolling,
+        killScrub = function killScrub(trigger) {
+      trigger.update(); // it's possible that it hasn't been synchronized with the actual scroll position yet, like if it's later in the _triggers Array. If it was already updated, it'll skip the processing anyway.
+
+      var scrub = trigger.getTween();
+
+      if (scrub) {
+        scrub.pause();
+        scrub._time = scrub._dur; // force the playhead to completion without rendering just so that when it resumes, it doesn't jump back in the .resetTo().
+
+        scrub._tTime = scrub._tDur;
+      }
+
+      isProxyScrolling = false;
+      trigger.animation.progress(trigger.progress, true);
+    },
+        render = function render(y, force) {
+      if (y !== currentY && !paused || force) {
+        wholePixels && (y = Math.round(y));
+
+        if (smoothDuration) {
+          content.style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, " + y + ", 0, 1)"; //content.style.transform = "translateY(" + y + "px)"; // NOTE: when we used matrix3d() or set will-change: transform, it performed noticeably worse on iOS counter-intuitively!
+
+          content._gsap.y = y + "px";
+        }
+
+        delta = y - currentY;
+        currentY = y;
+        ScrollTrigger.isUpdating || ScrollTrigger.update();
+      }
+    },
+        scrollTop = function scrollTop(value) {
+      if (arguments.length) {
+        value < 0 && (value = 0);
+        scroll.y = -value; // don't use currentY because we must accurately track the delta variable (in render() method)
+
+        isProxyScrolling = true; // otherwise, if snapping was applied (or anything that attempted to SET the scroll proxy's scroll position), we'd set the scroll here which would then (on the next tick) update the content tween/ScrollTrigger which would try to smoothly animate to that new value, thus the scrub tween would impede the progress. So we use this flag to respond accordingly in the ScrollTrigger's onUpdate and effectively force the scrub to its end immediately.
+
+        paused ? currentY = -value : render(-value);
+        ScrollTrigger.isRefreshing ? mainST.update() : scrollFunc(value); // during a refresh, we revert all scrollers to 0 and then put them back. We shouldn't force the window to that value too during the refresh.
+
+        return this;
+      }
+
+      return -currentY;
+    },
+        lastFocusElement,
+        _onFocusIn = function _onFocusIn(e) {
+      // when the focus changes, make sure that element is on-screen
+      wrapper.scrollTop = 0;
+
+      if (e.target.contains && e.target.contains(wrapper) || onFocusIn && onFocusIn(_this, e) === false) {
+        return;
+      }
+
+      ScrollTrigger.isInViewport(e.target) || e.target === lastFocusElement || _this.scrollTo(e.target, false, "center center");
+      lastFocusElement = e.target;
+    },
+        adjustParallaxPosition = function adjustParallaxPosition(triggers, createdAfterEffectWasApplied) {
+      var pins, start, dif, markers;
+      effects.forEach(function (st) {
+        pins = st.pins;
+        markers = st.markers;
+        triggers.forEach(function (trig) {
+          if (st.trigger && trig.trigger && st !== trig && (trig.trigger === st.trigger || trig.pinnedContainer === st.trigger || st.trigger.contains(trig.trigger))) {
+            start = trig.start;
+            dif = (start - st.start - st.offset) / st.ratio - (start - st.start); // createdAfterEffectWasApplied && (dif -= (gsap.getProperty(st.trigger, "y") - st.startY) / st.ratio); // the effect applied a y offset, so if the ScrollTrigger was created after that, it'll be based on that position so we must compensate. Later we added code to ScrollTrigger to roll back in this situation anyway, so this isn't necessary. Saving it in case a situation arises where it comes in handy.
+
+            pins.forEach(function (p) {
+              return dif -= p.distance / st.ratio - p.distance;
+            });
+            trig.setPositions(start + dif, trig.end + dif);
+            trig.markerStart && markers.push(gsap.quickSetter([trig.markerStart, trig.markerEnd], "y", "px"));
+
+            if (trig.pin && trig.end > 0) {
+              dif = trig.end - trig.start;
+              pins.push({
+                start: trig.start,
+                end: trig.end,
+                distance: dif,
+                trig: trig
+              });
+              st.setPositions(st.start, st.end + dif);
+              st.vars.onRefresh(st);
+            }
+          }
+        });
+      });
+    },
+        onRefresh = function onRefresh() {
+      removeScroll();
+      requestAnimationFrame(removeScroll);
+
+      if (effects) {
+        // adjust all the effect start/end positions including any pins!
+        effects.forEach(function (st) {
+          var start = st.start,
+              end = st.auto ? Math.min(ScrollTrigger.maxScroll(st.scroller), st.end) : start + (st.end - start) / st.ratio,
+              offset = (end - st.end) / 2; // we split the difference so that it reaches its natural position in the MIDDLE of the viewport
+
+          start -= offset;
+          end -= offset;
+          st.offset = offset || 0.0001; // we assign at least a tiny value because we check in the onUpdate for .offset being set in order to apply values.
+
+          st.pins.length = 0;
+          st.setPositions(Math.min(start, end), Math.max(start, end));
+          st.vars.onRefresh(st);
+        });
+        adjustParallaxPosition(ScrollTrigger.sort());
+      }
+
+      tracker.reset();
+    },
+        addOnRefresh = function addOnRefresh() {
+      return ScrollTrigger.addEventListener("refresh", onRefresh);
+    },
+        restoreEffects = function restoreEffects() {
+      return effects && effects.forEach(function (st) {
+        return st.vars.onRefresh(st);
+      });
+    },
+        revertEffects = function revertEffects() {
+      effects && effects.forEach(function (st) {
+        return st.vars.onRefreshInit(st);
+      });
+      return restoreEffects;
+    },
+        effectValueGetter = function effectValueGetter(name, value, index, el) {
+      return function () {
+        var v = typeof value === "function" ? value(index, el) : value;
+        v || v === 0 || (v = el.getAttribute("data-" + effectsPrefix + name) || (name === "speed" ? 1 : 0));
+        el.setAttribute("data-" + effectsPrefix + name, v);
+        return v === "auto" ? v : parseFloat(v);
+      };
+    },
+        createEffect = function createEffect(el, speed, lag, index, effectsPadding) {
+      effectsPadding = (typeof effectsPadding === "function" ? effectsPadding(index, el) : effectsPadding) || 0;
+
+      var getSpeed = effectValueGetter("speed", speed, index, el),
+          getLag = effectValueGetter("lag", lag, index, el),
+          startY = gsap.getProperty(el, "y"),
+          cache = el._gsap,
+          ratio,
+          st,
+          autoSpeed,
+          scrub,
+          progressOffset,
+          yOffset,
+          initDynamicValues = function initDynamicValues() {
+        speed = getSpeed();
+        lag = getLag();
+        ratio = parseFloat(speed) || 1;
+        autoSpeed = speed === "auto";
+        progressOffset = autoSpeed ? 0 : 0.5;
+        scrub && scrub.kill();
+        scrub = lag && gsap.to(el, {
+          ease: _expo,
+          overwrite: false,
+          y: "+=0",
+          duration: lag
+        });
+
+        if (st) {
+          st.ratio = ratio;
+          st.autoSpeed = autoSpeed;
+        }
+      },
+          revert = function revert() {
+        cache.y = startY + "px";
+        cache.renderTransform(1);
+        initDynamicValues();
+      },
+          pins = [],
+          markers = [],
+          change = 0,
+          updateChange = function updateChange(self) {
+        if (autoSpeed) {
+          revert();
+
+          var auto = _autoDistance(el, _clamp(0, 1, -self.start / (self.end - self.start)));
+
+          change = auto.change;
+          yOffset = auto.offset;
+        } else {
+          change = (self.end - self.start) * (1 - ratio);
+          yOffset = 0;
+        }
+
+        pins.forEach(function (p) {
+          return change -= p.distance * (1 - ratio);
+        });
+        self.vars.onUpdate(self);
+        scrub && scrub.progress(1);
+      };
+
+      initDynamicValues();
+
+      if (ratio !== 1 || autoSpeed || scrub) {
+        st = ScrollTrigger.create({
+          trigger: autoSpeed ? el.parentNode : el,
+          start: "top bottom+=" + effectsPadding,
+          end: "bottom top-=" + effectsPadding,
+          scroller: wrapper,
+          scrub: true,
+          refreshPriority: -999,
+          // must update AFTER any other ScrollTrigger pins
+          onRefreshInit: revert,
+          onRefresh: updateChange,
+          onKill: function onKill(self) {
+            var i = effects.indexOf(self);
+            i >= 0 && effects.splice(i, 1);
+            revert();
+          },
+          onUpdate: function onUpdate(self) {
+            var y = startY + change * (self.progress - progressOffset),
+                i = pins.length,
+                extraY = 0,
+                pin,
+                scrollY,
+                end;
+
+            if (self.offset) {
+              // wait until the effects are adjusted.
+              if (i) {
+                // pinning must be handled in a special way because when pinned, slope changes to 1.
+                scrollY = -currentY; // -scroll.y;
+
+                end = self.end;
+
+                while (i--) {
+                  pin = pins[i];
+
+                  if (pin.trig.isActive || scrollY >= pin.start && scrollY <= pin.end) {
+                    // currently pinned so no need to set anything
+                    if (scrub) {
+                      pin.trig.progress += pin.trig.direction < 0 ? 0.001 : -0.001; // just to make absolutely sure that it renders (if the progress didn't change, it'll skip)
+
+                      pin.trig.update(0, 0, 1);
+                      scrub.resetTo("y", parseFloat(cache.y), -delta, true);
+                      startupPhase && scrub.progress(1);
+                    }
+
+                    return;
+                  }
+
+                  scrollY > pin.end && (extraY += pin.distance);
+                  end -= pin.distance;
+                }
+
+                y = startY + extraY + change * ((gsap.utils.clamp(self.start, self.end, scrollY) - self.start - extraY) / (end - self.start) - progressOffset);
+              }
+
+              y = _round(y + yOffset);
+              markers.length && !autoSpeed && markers.forEach(function (setter) {
+                return setter(y - extraY);
+              });
+
+              if (scrub) {
+                scrub.resetTo("y", y, -delta, true);
+                startupPhase && scrub.progress(1);
+              } else {
+                cache.y = y + "px";
+                cache.renderTransform(1);
+              }
+            }
+          }
+        });
+        updateChange(st);
+        gsap.core.getCache(st.trigger).stRevert = revertEffects; // if user calls ScrollSmoother.create() with effects and THEN creates a ScrollTrigger on the same trigger element, the effect would throw off the start/end positions thus we needed a way to revert things when creating a new ScrollTrigger in that scenario, so we use this stRevert property of the GSCache inside ScrollTrigger.
+
+        st.startY = startY;
+        st.pins = pins;
+        st.markers = markers;
+        st.ratio = ratio;
+        st.autoSpeed = autoSpeed;
+        el.style.willChange = "transform";
+      }
+
+      return st;
+    };
+
+    addOnRefresh();
+    ScrollTrigger.addEventListener("killAll", addOnRefresh);
+    gsap.delayedCall(0.5, function () {
+      return startupPhase = 0;
+    });
+    this.scrollTop = scrollTop;
+
+    this.scrollTo = function (target, smooth, position) {
+      var p = gsap.utils.clamp(0, ScrollTrigger.maxScroll(_win), isNaN(target) ? _this.offset(target, position) : +target);
+      !smooth ? scrollTop(p) : paused ? gsap.to(_this, {
+        duration: smoothDuration,
+        scrollTop: p,
+        overwrite: "auto",
+        ease: _expo
+      }) : scrollFunc(p);
+    };
+
+    this.offset = function (target, position) {
+      target = _toArray(target)[0];
+      var cssText = target.style.cssText,
+          // because if there's an effect applied, we revert(). We need to restore.
+      st = ScrollTrigger.create({
+        trigger: target,
+        start: position || "top top"
+      }),
+          y;
+      effects && adjustParallaxPosition([st], true);
+      y = st.start;
+      st.kill(false);
+      target.style.cssText = cssText;
+      gsap.core.getCache(target).uncache = 1;
+      return y;
+    };
+
+    function refreshHeight() {
+      height = content.clientHeight;
+      content.style.overflow = "visible";
+      _body.style.height = _win.innerHeight + (height - _win.innerHeight) / speed + "px";
+      return height - _win.innerHeight;
+    }
+
+    this.content = function (element) {
+      if (arguments.length) {
+        var newContent = _toArray(element || "#smooth-content")[0] || console.warn("ScrollSmoother needs a valid content element.") || _body.children[0];
+
+        if (newContent !== content) {
+          content = newContent;
+          contentCSS = content.getAttribute("style") || "";
+          resizeObserver && resizeObserver.observe(content);
+          gsap.set(content, {
+            overflow: "visible",
+            width: "100%",
+            boxSizing: "border-box",
+            y: "+=0"
+          });
+          smoothDuration || gsap.set(content, {
+            clearProps: "transform"
+          });
+        }
+
+        return this;
+      }
+
+      return content;
+    };
+
+    this.wrapper = function (element) {
+      if (arguments.length) {
+        wrapper = _toArray(element || "#smooth-wrapper")[0] || _wrap(content);
+        wrapperCSS = wrapper.getAttribute("style") || "";
+        refreshHeight();
+        gsap.set(wrapper, smoothDuration ? {
+          overflow: "hidden",
+          position: "fixed",
+          height: "100%",
+          width: "100%",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0
+        } : {
+          overflow: "visible",
+          position: "relative",
+          width: "100%",
+          height: "auto",
+          top: "auto",
+          bottom: "auto",
+          left: "auto",
+          right: "auto"
+        });
+        return this;
+      }
+
+      return wrapper;
+    };
+
+    this.effects = function (targets, config) {
+      var _effects;
+
+      effects || (effects = []);
+
+      if (!targets) {
+        return effects.slice(0);
+      }
+
+      targets = _toArray(targets);
+      targets.forEach(function (target) {
+        var i = effects.length;
+
+        while (i--) {
+          effects[i].trigger === target && effects[i].kill(); // will automatically splice() it from the effects Array in the onKill
+        }
+      });
+      config = config || {};
+      var _config = config,
+          speed = _config.speed,
+          lag = _config.lag,
+          effectsPadding = _config.effectsPadding,
+          effectsToAdd = [],
+          i,
+          st;
+
+      for (i = 0; i < targets.length; i++) {
+        st = createEffect(targets[i], speed, lag, i, effectsPadding);
+        st && effectsToAdd.push(st);
+      }
+
+      (_effects = effects).push.apply(_effects, effectsToAdd);
+
+      return effectsToAdd;
+    };
+
+    this.sections = function (targets, config) {
+      var _sections;
+
+      sections || (sections = []);
+
+      if (!targets) {
+        return sections.slice(0);
+      }
+
+      var newSections = _toArray(targets).map(function (el) {
+        return ScrollTrigger.create({
+          trigger: el,
+          start: "top 120%",
+          end: "bottom -20%",
+          onToggle: function onToggle(self) {
+            el.style.opacity = self.isActive ? "1" : "0";
+            el.style.pointerEvents = self.isActive ? "all" : "none";
+          }
+        });
+      });
+
+      config && config.add ? (_sections = sections).push.apply(_sections, newSections) : sections = newSections.slice(0);
+      return newSections;
+    };
+
+    this.content(vars.content);
+    this.wrapper(vars.wrapper);
+
+    this.render = function (y) {
+      return render(y || y === 0 ? y : currentY);
+    };
+
+    this.getVelocity = function () {
+      return tracker.getVelocity(-currentY);
+    };
+
+    ScrollTrigger.scrollerProxy(wrapper, {
+      scrollTop: scrollTop,
+      scrollHeight: function scrollHeight() {
+        return refreshHeight() && _body.scrollHeight;
+      },
+      fixedMarkers: vars.fixedMarkers !== false && !!smoothDuration,
+      content: content,
+      getBoundingClientRect: function getBoundingClientRect() {
+        return {
+          top: 0,
+          left: 0,
+          width: _win.innerWidth,
+          height: _win.innerHeight
+        };
+      }
+    });
+    ScrollTrigger.defaults({
+      scroller: wrapper
+    });
+    var existingScrollTriggers = ScrollTrigger.getAll().filter(function (st) {
+      return st.scroller === _win || st.scroller === wrapper;
+    });
+    existingScrollTriggers.forEach(function (st) {
+      return st.revert(true, true);
+    }); // in case it's in an environment like React where child components that have ScrollTriggers instantiate BEFORE the parent that does ScrollSmoother.create(...);
+
+    mainST = ScrollTrigger.create({
+      animation: gsap.fromTo(scroll, {
+        y: 0
+      }, {
+        y: function y() {
+          return -refreshHeight();
+        },
+        immediateRender: false,
+        ease: "none",
+        data: "ScrollSmoother",
+        duration: 100,
+        // for added precision
+        onUpdate: function onUpdate() {
+          if (this._dur) {
+            // skip when it's the "from" part of the tween (setting the startAt)
+            var force = isProxyScrolling;
+
+            if (force) {
+              killScrub(mainST);
+              scroll.y = currentY;
+            }
+
+            render(scroll.y, force);
+            updateVelocity();
+            _onUpdate && !paused && _onUpdate(self);
+          }
+        }
+      }),
+      onRefreshInit: function onRefreshInit(self) {
+        if (effects) {
+          var pins = ScrollTrigger.getAll().filter(function (st) {
+            return !!st.pin;
+          });
+          effects.forEach(function (st) {
+            if (!st.vars.pinnedContainer) {
+              pins.forEach(function (pinST) {
+                if (pinST.pin.contains(st.trigger)) {
+                  var v = st.vars;
+                  v.pinnedContainer = pinST.pin;
+                  st.vars = null; // otherwise, it'll self.kill(), triggering the onKill()
+
+                  st.init(v, st.animation);
+                }
+              });
+            }
+          });
+        }
+
+        var scrub = self.getTween();
+        recordedRefreshScrub = scrub && scrub._end > scrub._dp._time; // don't use scrub.progress() < 1 because we may have called killScrub() recently in which case it'll report progress() as 1 when we were actually in the middle of a scrub. That's why we tap into the _end instead.
+
+        recordedRefreshScroll = currentY;
+        scroll.y = 0;
+
+        if (smoothDuration) {
+          // Safari 16 has a major bug - if you set wrapper.scrollTop to 0 (even if it's already 0), it blocks the whole page from scrolling page non-scrollable! See https://bugs.webkit.org/show_bug.cgi?id=245300 and https://codepen.io/GreenSock/pen/YzLZVOz An alternate is to set position to absolute and then back to fixed after setting scrollTop, but that's less performant.
+          wrapper.style.pointerEvents = "none"; // Safari 16 has a major bug - if you set wrapper.scrollTop to 0 (even if it's already 0), it makes the entire page non-scrollable! The only workaround I know of is to change to position absolute and then back again. See https://bugs.webkit.org/show_bug.cgi?id=245300 and https://codepen.io/GreenSock/pen/YzLZVOz
+
+          wrapper.scrollTop = 0; // set wrapper.scrollTop to 0 because in some very rare situations, the browser will auto-set that, like if there's a hash in the link or changing focus to an off-screen input
+
+          setTimeout(function () {
+            return wrapper.style.removeProperty("pointer-events");
+          }, 50);
+        }
+      },
+      onRefresh: function onRefresh(self) {
+        self.animation.invalidate(); // because pinnedContainers may have been found in ScrollTrigger's _refreshAll() that extend the height. Without this, it may prevent the user from being able to scroll all the way down.
+
+        self.setPositions(self.start, refreshHeight() / speed);
+        recordedRefreshScrub || killScrub(self);
+        scroll.y = -scrollFunc(); // in 3.11.1, we shifted to forcing the scroll position to 0 during the entire refreshAll() in ScrollTrigger and then restored the scroll position AFTER everything had been updated, thus we should always make these adjustments AFTER a full refresh rather than putting it in the onRefresh() of the individual mainST ScrollTrigger which would fire before the scroll position was restored.
+
+        render(scroll.y);
+        startupPhase || self.animation.progress(gsap.utils.clamp(0, 1, recordedRefreshScroll / -self.end));
+
+        if (recordedRefreshScrub) {
+          // we need to trigger the scrub to happen again
+          self.progress -= 0.001;
+          self.update();
+        }
+      },
+      id: "ScrollSmoother",
+      scroller: _win,
+      invalidateOnRefresh: true,
+      start: 0,
+      refreshPriority: -9999,
+      // because all other pins, etc. should be calculated first before this figures out the height of the body. BUT this should also update FIRST so that the scroll position on the proxy is up-to-date when all the ScrollTriggers calculate their progress! -9999 is a special number that ScrollTrigger looks for to handle in this way.
+      end: function end() {
+        return refreshHeight() / speed;
+      },
+      onScrubComplete: function onScrubComplete() {
+        tracker.reset();
+        onStop && onStop(_this);
+      },
+      scrub: smoothDuration || true
+    });
+
+    this.smooth = function (value) {
+      if (arguments.length) {
+        smoothDuration = value || 0;
+        speed = smoothDuration && +vars.speed || 1;
+        mainST.scrubDuration(value);
+      }
+
+      return mainST.getTween() ? mainST.getTween().duration() : 0;
+    };
+
+    mainST.getTween() && (mainST.getTween().vars.ease = vars.ease || _expo);
+    this.scrollTrigger = mainST;
+    vars.effects && this.effects(vars.effects === true ? "[data-" + effectsPrefix + "speed], [data-" + effectsPrefix + "lag]" : vars.effects, {
+      effectsPadding: vars.effectsPadding
+    });
+    vars.sections && this.sections(vars.sections === true ? "[data-section]" : vars.sections);
+    existingScrollTriggers.forEach(function (st) {
+      st.vars.scroller = wrapper;
+      st.revert(false, true);
+      st.init(st.vars, st.animation);
+    });
+
+    this.paused = function (value, allowNestedScroll) {
+      if (arguments.length) {
+        if (!!paused !== value) {
+          if (value) {
+            // pause
+            mainST.getTween() && mainST.getTween().pause();
+            scrollFunc(-currentY);
+            tracker.reset();
+            pausedNormalizer = ScrollTrigger.normalizeScroll();
+            pausedNormalizer && pausedNormalizer.disable(); // otherwise the normalizer would try to scroll the page on things like wheel events.
+
+            paused = ScrollTrigger.observe({
+              preventDefault: true,
+              type: "wheel,touch,scroll",
+              debounce: false,
+              allowClicks: true,
+              onChangeY: function onChangeY() {
+                return scrollTop(-currentY);
+              } // refuse to scroll
+
+            });
+            paused.nested = _inputObserver(_docEl, "wheel,touch,scroll", true, allowNestedScroll !== false); // allow nested scrolling, like modals
+          } else {
+            // resume
+            paused.nested.kill();
+            paused.kill();
+            paused = 0;
+            pausedNormalizer && pausedNormalizer.enable();
+            mainST.progress = (-currentY - mainST.start) / (mainST.end - mainST.start);
+            killScrub(mainST);
+          }
+        }
+
+        return this;
+      }
+
+      return !!paused;
+    };
+
+    this.kill = this.revert = function () {
+      _this.paused(false);
+
+      killScrub(mainST);
+      mainST.kill();
+      var triggers = (effects || []).concat(sections || []),
+          i = triggers.length;
+
+      while (i--) {
+        // make sure we go backwards because the onKill() will effects.splice(index, 1) and we don't want to skip
+        triggers[i].kill();
+      }
+
+      ScrollTrigger.scrollerProxy(wrapper);
+      ScrollTrigger.removeEventListener("killAll", addOnRefresh);
+      ScrollTrigger.removeEventListener("refresh", onRefresh);
+      wrapper.style.cssText = wrapperCSS;
+      content.style.cssText = contentCSS;
+      var defaults = ScrollTrigger.defaults({});
+      defaults && defaults.scroller === wrapper && ScrollTrigger.defaults({
+        scroller: _win
+      });
+      _this.normalizer && ScrollTrigger.normalizeScroll(false);
+      clearInterval(intervalID);
+      _mainInstance = null;
+      resizeObserver && resizeObserver.disconnect();
+
+      _body.style.removeProperty("height");
+
+      _win.removeEventListener("focusin", _onFocusIn);
+    };
+
+    this.refresh = function (soft, force) {
+      return mainST.refresh(soft, force);
+    };
+
+    if (normalizeScroll) {
+      this.normalizer = ScrollTrigger.normalizeScroll(normalizeScroll === true ? {
+        debounce: true,
+        content: !smoothDuration && content
+      } : normalizeScroll);
+    }
+
+    ScrollTrigger.config(vars); // in case user passes in ignoreMobileResize for example
+
+    "overscrollBehavior" in _win.getComputedStyle(_body) && gsap.set([_body, _docEl], {
+      overscrollBehavior: "none"
+    });
+    "scrollBehavior" in _win.getComputedStyle(_body) && gsap.set([_body, _docEl], {
+      scrollBehavior: "auto"
+    }); // if the user hits the tab key (or whatever) to shift focus to an element that's off-screen, center that element.
+
+    _win.addEventListener("focusin", _onFocusIn);
+
+    intervalID = setInterval(updateVelocity, 250);
+    _doc.readyState === "loading" || requestAnimationFrame(function () {
+      return ScrollTrigger.refresh();
+    });
+  }
+
+  ScrollSmoother.register = function register(core) {
+    if (!_coreInitted) {
+      gsap = core || _getGSAP();
+
+      if (_windowExists() && window.document) {
+        _win = window;
+        _doc = document;
+        _docEl = _doc.documentElement;
+        _body = _doc.body;
+      }
+
+      if (gsap) {
+        _toArray = gsap.utils.toArray;
+        _clamp = gsap.utils.clamp;
+        _expo = gsap.parseEase("expo");
+
+        _context = gsap.core.context || function () {};
+
+        _onResizeDelayedCall = gsap.delayedCall(0.2, function () {
+          return ScrollTrigger.isRefreshing || _mainInstance && _mainInstance.refresh();
+        }).pause();
+        ScrollTrigger = gsap.core.globals().ScrollTrigger;
+        gsap.core.globals("ScrollSmoother", ScrollSmoother); // must register the global manually because in Internet Explorer, functions (classes) don't have a "name" property.
+        //	gsap.ticker.lagSmoothing(50, 100); // generally people don't want things to jump (honoring smoothness over time is better with smooth scrolling)
+
+        if (_body && ScrollTrigger) {
+          _root = [_win, _doc, _docEl, _body];
+          _getVelocityProp = ScrollTrigger.core._getVelocityProp;
+          _inputObserver = ScrollTrigger.core._inputObserver;
+          ScrollSmoother.refresh = ScrollTrigger.refresh;
+          _coreInitted = 1;
+        }
+      }
+    }
+
+    return _coreInitted;
+  };
+
+  _createClass(ScrollSmoother, [{
+    key: "progress",
+    get: function get() {
+      return this.scrollTrigger ? this.scrollTrigger.animation._time / 100 : 0;
+    }
+  }]);
+
+  return ScrollSmoother;
+}();
+ScrollSmoother.version = "3.11.4";
+
+ScrollSmoother.create = function (vars) {
+  return _mainInstance && vars && _mainInstance.content() === _toArray(vars.content)[0] ? _mainInstance : new ScrollSmoother(vars);
+};
+
+ScrollSmoother.get = function () {
+  return _mainInstance;
+};
+
+_getGSAP() && gsap.registerPlugin(ScrollSmoother);
+
+
+/***/ }),
+/* 41 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "SplitText": function() { return /* binding */ SplitText; },
+/* harmony export */   "default": function() { return /* binding */ SplitText; }
+/* harmony export */ });
+/* harmony import */ var _utils_strings_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
+/*!
+ * SplitText: 3.11.4
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/* eslint-disable */
+
+
+var _doc,
+    _win,
+    _coreInitted,
+    gsap,
+    _context,
+    _toArray,
+    _stripExp = /(?:\r|\n|\t\t)/g,
+    //find carriage returns, new line feeds and double-tabs.
+_multipleSpacesExp = /(?:\s\s+)/g,
+    _initCore = function _initCore(core) {
+  _doc = document;
+  _win = window;
+  gsap = gsap || core || _win.gsap || console.warn("Please gsap.registerPlugin(SplitText)");
+
+  if (gsap) {
+    _toArray = gsap.utils.toArray;
+
+    _context = gsap.core.context || function () {};
+
+    _coreInitted = 1;
+  }
+},
+    _bonusValidated = 1,
+    //<name>SplitText</name>
+_getComputedStyle = function _getComputedStyle(element) {
+  return _win.getComputedStyle(element);
+},
+    _isAbsolute = function _isAbsolute(vars) {
+  return vars.position === "absolute" || vars.absolute === true;
+},
+    //some characters are combining marks (think diacritics/accents in European languages) which involve 2 or 4 characters that combine in the browser to form a single character. Pass in the remaining text and an array of the special characters to search for and if the text starts with one of those special characters, it'll spit back the number of characters to retain (often 2 or 4). Used in the specialChars features that was introduced in 0.6.0.
+_findSpecialChars = function _findSpecialChars(text, chars) {
+  var i = chars.length,
+      s;
+
+  while (--i > -1) {
+    s = chars[i];
+
+    if (text.substr(0, s.length) === s) {
+      return s.length;
+    }
+  }
+},
+    _divStart = " style='position:relative;display:inline-block;'",
+    _cssClassFunc = function _cssClassFunc(cssClass, tag) {
+  if (cssClass === void 0) {
+    cssClass = "";
+  }
+
+  var iterate = ~cssClass.indexOf("++"),
+      num = 1;
+
+  if (iterate) {
+    cssClass = cssClass.split("++").join("");
+  }
+
+  return function () {
+    return "<" + tag + _divStart + (cssClass ? " class='" + cssClass + (iterate ? num++ : "") + "'>" : ">");
+  };
+},
+    _swapText = function _swapText(element, oldText, newText) {
+  var type = element.nodeType;
+
+  if (type === 1 || type === 9 || type === 11) {
+    for (element = element.firstChild; element; element = element.nextSibling) {
+      _swapText(element, oldText, newText);
+    }
+  } else if (type === 3 || type === 4) {
+    element.nodeValue = element.nodeValue.split(oldText).join(newText);
+  }
+},
+    _pushReversed = function _pushReversed(a, merge) {
+  var i = merge.length;
+
+  while (--i > -1) {
+    a.push(merge[i]);
+  }
+},
+    _isBeforeWordDelimiter = function _isBeforeWordDelimiter(e, root, wordDelimiter) {
+  var next;
+
+  while (e && e !== root) {
+    next = e._next || e.nextSibling;
+
+    if (next) {
+      return next.textContent.charAt(0) === wordDelimiter;
+    }
+
+    e = e.parentNode || e._parent;
+  }
+},
+    _deWordify = function _deWordify(e) {
+  var children = _toArray(e.childNodes),
+      l = children.length,
+      i,
+      child;
+
+  for (i = 0; i < l; i++) {
+    child = children[i];
+
+    if (child._isSplit) {
+      _deWordify(child);
+    } else {
+      if (i && child.previousSibling && child.previousSibling.nodeType === 3) {
+        child.previousSibling.nodeValue += child.nodeType === 3 ? child.nodeValue : child.firstChild.nodeValue;
+        e.removeChild(child);
+      } else if (child.nodeType !== 3) {
+        e.insertBefore(child.firstChild, child);
+        e.removeChild(child);
+      }
+    }
+  }
+},
+    _getStyleAsNumber = function _getStyleAsNumber(name, computedStyle) {
+  return parseFloat(computedStyle[name]) || 0;
+},
+    _setPositionsAfterSplit = function _setPositionsAfterSplit(element, vars, allChars, allWords, allLines, origWidth, origHeight) {
+  var cs = _getComputedStyle(element),
+      paddingLeft = _getStyleAsNumber("paddingLeft", cs),
+      lineOffsetY = -999,
+      borderTopAndBottom = _getStyleAsNumber("borderBottomWidth", cs) + _getStyleAsNumber("borderTopWidth", cs),
+      borderLeftAndRight = _getStyleAsNumber("borderLeftWidth", cs) + _getStyleAsNumber("borderRightWidth", cs),
+      padTopAndBottom = _getStyleAsNumber("paddingTop", cs) + _getStyleAsNumber("paddingBottom", cs),
+      padLeftAndRight = _getStyleAsNumber("paddingLeft", cs) + _getStyleAsNumber("paddingRight", cs),
+      lineThreshold = _getStyleAsNumber("fontSize", cs) * (vars.lineThreshold || 0.2),
+      textAlign = cs.textAlign,
+      charArray = [],
+      wordArray = [],
+      lineArray = [],
+      wordDelimiter = vars.wordDelimiter || " ",
+      tag = vars.tag ? vars.tag : vars.span ? "span" : "div",
+      types = vars.type || vars.split || "chars,words,lines",
+      lines = allLines && ~types.indexOf("lines") ? [] : null,
+      words = ~types.indexOf("words"),
+      chars = ~types.indexOf("chars"),
+      absolute = _isAbsolute(vars),
+      linesClass = vars.linesClass,
+      iterateLine = ~(linesClass || "").indexOf("++"),
+      spaceNodesToRemove = [],
+      isFlex = cs.display === "flex",
+      prevInlineDisplay = element.style.display,
+      i,
+      j,
+      l,
+      node,
+      nodes,
+      isChild,
+      curLine,
+      addWordSpaces,
+      style,
+      lineNode,
+      lineWidth,
+      offset;
+
+  iterateLine && (linesClass = linesClass.split("++").join(""));
+  isFlex && (element.style.display = "block"); //copy all the descendant nodes into an array (we can't use a regular nodeList because it's live and we may need to renest things)
+
+  j = element.getElementsByTagName("*");
+  l = j.length;
+  nodes = [];
+
+  for (i = 0; i < l; i++) {
+    nodes[i] = j[i];
+  } //for absolute positioning, we need to record the x/y offsets and width/height for every <div>. And even if we're not positioning things absolutely, in order to accommodate lines, we must figure out where the y offset changes so that we can sense where the lines break, and we populate the lines array.
+
+
+  if (lines || absolute) {
+    for (i = 0; i < l; i++) {
+      node = nodes[i];
+      isChild = node.parentNode === element;
+
+      if (isChild || absolute || chars && !words) {
+        offset = node.offsetTop;
+
+        if (lines && isChild && Math.abs(offset - lineOffsetY) > lineThreshold && (node.nodeName !== "BR" || i === 0)) {
+          //we found some rare occasions where a certain character like &#8209; could cause the offsetTop to be off by 1 pixel, so we build in a threshold.
+          curLine = [];
+          lines.push(curLine);
+          lineOffsetY = offset;
+        }
+
+        if (absolute) {
+          //record offset x and y, as well as width and height so that we can access them later for positioning. Grabbing them at once ensures we don't trigger a browser paint & we maximize performance.
+          node._x = node.offsetLeft;
+          node._y = offset;
+          node._w = node.offsetWidth;
+          node._h = node.offsetHeight;
+        }
+
+        if (lines) {
+          if (node._isSplit && isChild || !chars && isChild || words && isChild || !words && node.parentNode.parentNode === element && !node.parentNode._isSplit) {
+            curLine.push(node);
+            node._x -= paddingLeft;
+
+            if (_isBeforeWordDelimiter(node, element, wordDelimiter)) {
+              node._wordEnd = true;
+            }
+          }
+
+          if (node.nodeName === "BR" && (node.nextSibling && node.nextSibling.nodeName === "BR" || i === 0)) {
+            //two consecutive <br> tags signify a new [empty] line. Also, if the entire block of content STARTS with a <br>, add a line.
+            lines.push([]);
+          }
+        }
+      }
+    }
+  }
+
+  for (i = 0; i < l; i++) {
+    node = nodes[i];
+    isChild = node.parentNode === element;
+
+    if (node.nodeName === "BR") {
+      if (lines || absolute) {
+        node.parentNode && node.parentNode.removeChild(node);
+        nodes.splice(i--, 1);
+        l--;
+      } else if (!words) {
+        element.appendChild(node);
+      }
+
+      continue;
+    }
+
+    if (absolute) {
+      style = node.style;
+
+      if (!words && !isChild) {
+        node._x += node.parentNode._x;
+        node._y += node.parentNode._y;
+      }
+
+      style.left = node._x + "px";
+      style.top = node._y + "px";
+      style.position = "absolute";
+      style.display = "block"; //if we don't set the width/height, things collapse in older versions of IE and the origin for transforms is thrown off in all browsers.
+
+      style.width = node._w + 1 + "px"; //IE is 1px short sometimes. Avoid wrapping
+
+      style.height = node._h + "px";
+    }
+
+    if (!words && chars) {
+      //we always start out wrapping words in their own <div> so that line breaks happen correctly, but here we'll remove those <div> tags if necessary and re-nest the characters directly into the element rather than inside the word <div>
+      if (node._isSplit) {
+        node._next = j = node.nextSibling;
+        node.parentNode.appendChild(node); //put it at the end to keep the order correct.
+
+        while (j && j.nodeType === 3 && j.textContent === " ") {
+          // if there are nodes that are just a space right afterward, go ahead and append them to the end so they're not out of order.
+          node._next = j.nextSibling;
+          node.parentNode.appendChild(j);
+          j = j.nextSibling;
+        }
+      } else if (node.parentNode._isSplit) {
+        node._parent = node.parentNode;
+
+        if (!node.previousSibling && node.firstChild) {
+          node.firstChild._isFirst = true;
+        }
+
+        if (node.nextSibling && node.nextSibling.textContent === " " && !node.nextSibling.nextSibling) {
+          //if the last node inside a nested element is just a space (like T<span>nested </span>), remove it otherwise it'll get placed in the wrong order. Don't remove it right away, though, because we need to sense when words/characters are before a space like _isBeforeWordDelimiter(). Removing it now would make that a false negative.
+          spaceNodesToRemove.push(node.nextSibling);
+        }
+
+        node._next = node.nextSibling && node.nextSibling._isFirst ? null : node.nextSibling;
+        node.parentNode.removeChild(node);
+        nodes.splice(i--, 1);
+        l--;
+      } else if (!isChild) {
+        offset = !node.nextSibling && _isBeforeWordDelimiter(node.parentNode, element, wordDelimiter); //if this is the last letter in the word (and we're not breaking by lines and not positioning things absolutely), we need to add a space afterwards so that the characters don't just mash together
+
+        node.parentNode._parent && node.parentNode._parent.appendChild(node);
+        offset && node.parentNode.appendChild(_doc.createTextNode(" "));
+
+        if (tag === "span") {
+          node.style.display = "inline"; //so that word breaks are honored properly.
+        }
+
+        charArray.push(node);
+      }
+    } else if (node.parentNode._isSplit && !node._isSplit && node.innerHTML !== "") {
+      wordArray.push(node);
+    } else if (chars && !node._isSplit) {
+      if (tag === "span") {
+        node.style.display = "inline";
+      }
+
+      charArray.push(node);
+    }
+  }
+
+  i = spaceNodesToRemove.length;
+
+  while (--i > -1) {
+    spaceNodesToRemove[i].parentNode.removeChild(spaceNodesToRemove[i]);
+  }
+
+  if (lines) {
+    //the next 7 lines just give us the line width in the most reliable way and figure out the left offset (if position isn't relative or absolute). We must set the width along with text-align to ensure everything works properly for various alignments.
+    if (absolute) {
+      lineNode = _doc.createElement(tag);
+      element.appendChild(lineNode);
+      lineWidth = lineNode.offsetWidth + "px";
+      offset = lineNode.offsetParent === element ? 0 : element.offsetLeft;
+      element.removeChild(lineNode);
+    }
+
+    style = element.style.cssText;
+    element.style.cssText = "display:none;"; //to improve performance, set display:none on the element so that the browser doesn't have to worry about reflowing or rendering while we're renesting things. We'll revert the cssText later.
+    //we can't use element.innerHTML = "" because that causes IE to literally delete all the nodes and their content even though we've stored them in an array! So we must loop through the children and remove them.
+
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+
+    addWordSpaces = wordDelimiter === " " && (!absolute || !words && !chars);
+
+    for (i = 0; i < lines.length; i++) {
+      curLine = lines[i];
+      lineNode = _doc.createElement(tag);
+      lineNode.style.cssText = "display:block;text-align:" + textAlign + ";position:" + (absolute ? "absolute;" : "relative;");
+
+      if (linesClass) {
+        lineNode.className = linesClass + (iterateLine ? i + 1 : "");
+      }
+
+      lineArray.push(lineNode);
+      l = curLine.length;
+
+      for (j = 0; j < l; j++) {
+        if (curLine[j].nodeName !== "BR") {
+          node = curLine[j];
+          lineNode.appendChild(node);
+          addWordSpaces && node._wordEnd && lineNode.appendChild(_doc.createTextNode(" "));
+
+          if (absolute) {
+            if (j === 0) {
+              lineNode.style.top = node._y + "px";
+              lineNode.style.left = paddingLeft + offset + "px";
+            }
+
+            node.style.top = "0px";
+
+            if (offset) {
+              node.style.left = node._x - offset + "px";
+            }
+          }
+        }
+      }
+
+      if (l === 0) {
+        //if there are no nodes in the line (typically meaning there were two consecutive <br> tags, just add a non-breaking space so that things display properly.
+        lineNode.innerHTML = "&nbsp;";
+      } else if (!words && !chars) {
+        _deWordify(lineNode);
+
+        _swapText(lineNode, String.fromCharCode(160), " ");
+      }
+
+      if (absolute) {
+        lineNode.style.width = lineWidth;
+        lineNode.style.height = node._h + "px";
+      }
+
+      element.appendChild(lineNode);
+    }
+
+    element.style.cssText = style;
+  } //if everything shifts to being position:absolute, the container can collapse in terms of height or width, so fix that here.
+
+
+  if (absolute) {
+    if (origHeight > element.clientHeight) {
+      element.style.height = origHeight - padTopAndBottom + "px";
+
+      if (element.clientHeight < origHeight) {
+        //IE8 and earlier use a different box model - we must include padding and borders
+        element.style.height = origHeight + borderTopAndBottom + "px";
+      }
+    }
+
+    if (origWidth > element.clientWidth) {
+      element.style.width = origWidth - padLeftAndRight + "px";
+
+      if (element.clientWidth < origWidth) {
+        //IE8 and earlier use a different box model - we must include padding and borders
+        element.style.width = origWidth + borderLeftAndRight + "px";
+      }
+    }
+  }
+
+  isFlex && (prevInlineDisplay ? element.style.display = prevInlineDisplay : element.style.removeProperty("display"));
+
+  _pushReversed(allChars, charArray);
+
+  words && _pushReversed(allWords, wordArray);
+
+  _pushReversed(allLines, lineArray);
+},
+    _splitRawText = function _splitRawText(element, vars, wordStart, charStart) {
+  var tag = vars.tag ? vars.tag : vars.span ? "span" : "div",
+      types = vars.type || vars.split || "chars,words,lines",
+      //words = (types.indexOf("words") !== -1),
+  chars = ~types.indexOf("chars"),
+      absolute = _isAbsolute(vars),
+      wordDelimiter = vars.wordDelimiter || " ",
+      space = wordDelimiter !== " " ? "" : absolute ? "&#173; " : " ",
+      wordEnd = "</" + tag + ">",
+      wordIsOpen = 1,
+      specialChars = vars.specialChars ? typeof vars.specialChars === "function" ? vars.specialChars : _findSpecialChars : null,
+      //specialChars can be an array or a function. For performance reasons, we always set this local "specialChars" to a function to which we pass the remaining text and whatever the original vars.specialChars was so that if it's an array, it works with the _findSpecialChars() function.
+  text,
+      splitText,
+      i,
+      j,
+      l,
+      character,
+      hasTagStart,
+      testResult,
+      container = _doc.createElement("div"),
+      parent = element.parentNode;
+
+  parent.insertBefore(container, element);
+  container.textContent = element.nodeValue;
+  parent.removeChild(element);
+  element = container;
+  text = (0,_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.getText)(element);
+  hasTagStart = text.indexOf("<") !== -1;
+
+  if (vars.reduceWhiteSpace !== false) {
+    text = text.replace(_multipleSpacesExp, " ").replace(_stripExp, "");
+  }
+
+  if (hasTagStart) {
+    text = text.split("<").join("{{LT}}"); //we can't leave "<" in the string, or when we set the innerHTML, it can be interpreted as a node
+  }
+
+  l = text.length;
+  splitText = (text.charAt(0) === " " ? space : "") + wordStart();
+
+  for (i = 0; i < l; i++) {
+    character = text.charAt(i);
+
+    if (specialChars && (testResult = specialChars(text.substr(i), vars.specialChars))) {
+      // look for any specialChars that were declared. Remember, they can be passed in like {specialChars:["मी", "पा", "है"]} or a function could be defined instead. Either way, the function should return the number of characters that should be grouped together for this "character".
+      character = text.substr(i, testResult || 1);
+      splitText += chars && character !== " " ? charStart() + character + "</" + tag + ">" : character;
+      i += testResult - 1;
+    } else if (character === wordDelimiter && text.charAt(i - 1) !== wordDelimiter && i) {
+      splitText += wordIsOpen ? wordEnd : "";
+      wordIsOpen = 0;
+
+      while (text.charAt(i + 1) === wordDelimiter) {
+        //skip over empty spaces (to avoid making them words)
+        splitText += space;
+        i++;
+      }
+
+      if (i === l - 1) {
+        splitText += space;
+      } else if (text.charAt(i + 1) !== ")") {
+        splitText += space + wordStart();
+        wordIsOpen = 1;
+      }
+    } else if (character === "{" && text.substr(i, 6) === "{{LT}}") {
+      splitText += chars ? charStart() + "{{LT}}" + "</" + tag + ">" : "{{LT}}";
+      i += 5;
+    } else if (character.charCodeAt(0) >= 0xD800 && character.charCodeAt(0) <= 0xDBFF || text.charCodeAt(i + 1) >= 0xFE00 && text.charCodeAt(i + 1) <= 0xFE0F) {
+      //special emoji characters use 2 or 4 unicode characters that we must keep together.
+      j = ((text.substr(i, 12).split(_utils_strings_js__WEBPACK_IMPORTED_MODULE_0__.emojiExp) || [])[1] || "").length || 2;
+      splitText += chars && character !== " " ? charStart() + text.substr(i, j) + "</" + tag + ">" : text.substr(i, j);
+      i += j - 1;
+    } else {
+      splitText += chars && character !== " " ? charStart() + character + "</" + tag + ">" : character;
+    }
+  }
+
+  element.outerHTML = splitText + (wordIsOpen ? wordEnd : "");
+  hasTagStart && _swapText(parent, "{{LT}}", "<"); //note: don't perform this on "element" because that gets replaced with all new elements when we set element.outerHTML.
+},
+    _split = function _split(element, vars, wordStart, charStart) {
+  var children = _toArray(element.childNodes),
+      l = children.length,
+      absolute = _isAbsolute(vars),
+      i,
+      child;
+
+  if (element.nodeType !== 3 || l > 1) {
+    vars.absolute = false;
+
+    for (i = 0; i < l; i++) {
+      child = children[i];
+      child._next = child._isFirst = child._parent = child._wordEnd = null;
+
+      if (child.nodeType !== 3 || /\S+/.test(child.nodeValue)) {
+        if (absolute && child.nodeType !== 3 && _getComputedStyle(child).display === "inline") {
+          //if there's a child node that's display:inline, switch it to inline-block so that absolute positioning works properly (most browsers don't report offsetTop/offsetLeft properly inside a <span> for example)
+          child.style.display = "inline-block";
+          child.style.position = "relative";
+        }
+
+        child._isSplit = true;
+
+        _split(child, vars, wordStart, charStart); //don't split lines on child elements
+
+      }
+    }
+
+    vars.absolute = absolute;
+    element._isSplit = true;
+    return;
+  }
+
+  _splitRawText(element, vars, wordStart, charStart);
+};
+
+var SplitText = /*#__PURE__*/function () {
+  function SplitText(element, vars) {
+    _coreInitted || _initCore();
+    this.elements = _toArray(element);
+    this.chars = [];
+    this.words = [];
+    this.lines = [];
+    this._originals = [];
+    this.vars = vars || {};
+
+    _context(this);
+
+    _bonusValidated && this.split(vars);
+  }
+
+  var _proto = SplitText.prototype;
+
+  _proto.split = function split(vars) {
+    this.isSplit && this.revert();
+    this.vars = vars = vars || this.vars;
+    this._originals.length = this.chars.length = this.words.length = this.lines.length = 0;
+
+    var i = this.elements.length,
+        tag = vars.tag ? vars.tag : vars.span ? "span" : "div",
+        wordStart = _cssClassFunc(vars.wordsClass, tag),
+        charStart = _cssClassFunc(vars.charsClass, tag),
+        origHeight,
+        origWidth,
+        e; //we split in reversed order so that if/when we position:absolute elements, they don't affect the position of the ones after them in the document flow (shifting them up as they're taken out of the document flow).
+
+
+    while (--i > -1) {
+      e = this.elements[i];
+      this._originals[i] = e.innerHTML;
+      origHeight = e.clientHeight;
+      origWidth = e.clientWidth;
+
+      _split(e, vars, wordStart, charStart);
+
+      _setPositionsAfterSplit(e, vars, this.chars, this.words, this.lines, origWidth, origHeight);
+    }
+
+    this.chars.reverse();
+    this.words.reverse();
+    this.lines.reverse();
+    this.isSplit = true;
+    return this;
+  };
+
+  _proto.revert = function revert() {
+    var originals = this._originals;
+
+    if (!originals) {
+      throw "revert() call wasn't scoped properly.";
+    }
+
+    this.elements.forEach(function (e, i) {
+      return e.innerHTML = originals[i];
+    });
+    this.chars = [];
+    this.words = [];
+    this.lines = [];
+    this.isSplit = false;
+    return this;
+  };
+
+  SplitText.create = function create(element, vars) {
+    return new SplitText(element, vars);
+  };
+
+  return SplitText;
+}();
+SplitText.version = "3.11.4";
+SplitText.register = _initCore;
+
+
+/***/ }),
+/* 42 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "topCover": function() { return /* binding */ topCover; },
 /* harmony export */   "topSections": function() { return /* binding */ topSections; }
 /* harmony export */ });
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
-/* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
-/* harmony import */ var _topVideo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(29);
+/* harmony import */ var gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(28);
+/* harmony import */ var _topVideo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(43);
 
 
-gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_all__WEBPACK_IMPORTED_MODULE_3__.Observer);
+
+gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 
-/* hero align height
-==================================ove======================================== */
+let firstSt;
+
+const noscroll = (event) => {
+	event.preventDefault();
+};
+
+function topCover() {
+	window.addEventListener("touchmove", noscroll, {
+		passive: false,
+	});
+	window.addEventListener("wheel", noscroll, { passive: false });
+
+	const content = document.querySelector(".top-cover");
+	const title = content.querySelector(".top-cover__title");
+	setTimeout(() => {
+		title.classList.add("--active");
+		setTimeout(() => {
+			window.removeEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.removeEventListener("wheel", noscroll, { passive: false });
+			content.classList.add("--disable");
+			_topVideo__WEBPACK_IMPORTED_MODULE_4__.video.play();
+			setTimeout(() => {
+				firstSt.enable();
+			}, 1000);
+		}, 2000);
+	}, 1000);
+}
+
+
 function topSections() {
 	window.onbeforeunload = () => window.scrollTo(0, 0);
 
@@ -33472,12 +41999,17 @@ function topSections() {
 			index = index + 1;
 			const epTrigger = document.createElement("div");
 			epTrigger.className = `ep-trigger-${index.toString().padStart(2, "0")}`;
+			if (!ep.previousElementSibling) {
+				const parentElm = ep.parentElement;
+				const id = parentElm.id;
+				epTrigger.id = id;
+				parentElm.id = "";
+			}
 			scroller.appendChild(epTrigger);
 			epTriggers.push(epTrigger);
-
 			switch (index) {
 				case 1:
-					epTrigger.style.height = "25vh";
+					epTrigger.style.height = "50vh";
 					break;
 				case 2:
 					epTrigger.style.height = `${ep.clientHeight}px`;
@@ -33485,10 +42017,40 @@ function topSections() {
 					autoTriggers.push(epTrigger);
 					break;
 				case 3:
-					epTrigger.style.height = "150vh";
+					epTrigger.style.height = "200vh";
 					break;
 				case 4:
 					epTrigger.style.height = "100vh";
+					break;
+				case 5:
+					epTrigger.style.height = "125vh";
+					break;
+				case 6:
+					epTrigger.style.height = "100vh";
+					break;
+				case 7:
+					epTrigger.style.height = "125vh";
+					break;
+				case 8:
+					epTrigger.style.height = "100vh";
+					break;
+				case 9:
+					epTrigger.style.height = "125vh";
+					break;
+				case 10:
+					epTrigger.style.height = "100vh";
+					break;
+				case 11:
+					epTrigger.style.height = "125vh";
+					break;
+				case 12:
+					epTrigger.style.height = "100vh";
+					break;
+				case 13:
+					epTrigger.style.height = "50vh";
+					break;
+				case 14:
+					epTrigger.style.height = "75vh";
 					break;
 				default:
 					epTrigger.style.height = "100vh";
@@ -33521,8 +42083,53 @@ function topSections() {
 	};
 	epsInit();
 
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.defaults({
+		preventOverlaps: true,
+		fastScrollEnd: true,
+		// markers: {
+		// 	startColor: "skyBlue",
+		// 	endColor: "red",
+		// 	fontSize: "18px",
+		// 	fontWeight: "bold",
+		// },
+	});
+
+	const epsWrapperTween = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.to(epsWrapper, {
+		duration: 0.25,
+		autoAlpha: 0,
+		paused: true,
+	});
+
+	const navigationInit = () => {
+		const navigationLinks = document.querySelectorAll(".ep__navigation-link");
+		navigationLinks.forEach((link) => {
+			link.addEventListener("click", (event) => {
+				// event.preventDefault;
+				// const triggers = ScrollTrigger.getAll();
+				// triggers.forEach((trigger) => {
+				// 	trigger.disable();
+				// });
+				// epsWrapperTween.play();
+
+				// setTimeout(() => {
+				// 	triggers.forEach((trigger) => {
+				// 		trigger.enable(true);
+				// 	});
+
+				// 	// epsWrapperTween.reverse();
+				// }, 100);
+
+				navigationLinks.forEach((link) => {
+					link.classList.remove("--active");
+				});
+				event.currentTarget.classList.add("--active");
+			});
+		});
+	};
+	navigationInit();
+
 	/* 
-		---------- ep01_01 ----------
+		---------- prologue ----------
 	*/
 
 	const section01Title = document.querySelector(".top-section__title");
@@ -33534,17 +42141,9 @@ function topSections() {
 		".top-section__5minute",
 	]);
 
-	const noscroll = (event) => {
-		event.preventDefault();
-	};
-
-	const ep01_01InTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+	const prologueInTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
 			onComplete: () => {
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
@@ -33593,13 +42192,9 @@ function topSections() {
 		// },
 	});
 
-	const ep01_01BackTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+	const prologueBackTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
 			onComplete: () => {
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
@@ -33631,31 +42226,41 @@ function topSections() {
 			"<25%"
 		);
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+	firstSt = gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "prologue",
 		trigger: epTriggers[0],
 		start: "top center",
 		end: "bottom top",
 		onToggle: (self) => {
+			window.addEventListener("touchmove", noscroll, { passive: false });
+			window.addEventListener("wheel", noscroll, { passive: false });
 			if (self.direction === 1) {
-				ep01_01InTl.play();
+				prologueInTl.play();
 			} else {
-				ep01_01BackTl.restart();
+				window.addEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.addEventListener("wheel", noscroll, { passive: false });
+				prologueBackTl.restart();
 			}
 		},
 	});
+	firstSt.disable();
 
 	/* 
-		---------- ep01_02 ----------
+		---------- topLead ----------
 	*/
 
-	const ep01_02inTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+	const topLeadTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
 			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
 				});
@@ -33696,7 +42301,28 @@ function topSections() {
 			"<25%"
 		);
 
-	const ep01_02BodyTween = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.fromTo(
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topLeadTl",
+		trigger: epTriggers[1],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topLeadTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topLeadTl.reverse();
+		},
+	});
+
+	const topLeadBodyTween = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.fromTo(
 		".top-lead__body",
 		{
 			y: 0,
@@ -33706,154 +42332,24 @@ function topSections() {
 		}
 	);
 
-	const ep01_02BackTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onStart: () => {
-				if (_topVideo__WEBPACK_IMPORTED_MODULE_4__.video) {
-					_topVideo__WEBPACK_IMPORTED_MODULE_4__.video.play();
-				}
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to(".top-about__blocks-item:nth-of-type(1) img", {
-			duration: 2,
-			ease: "power4.inOut",
-			autoAlpha: 0,
-			y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-20),
-		})
-		.to(
-			".top-about__blocks-item:nth-of-type(2) img",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-				autoAlpha: 0,
-			},
-			"<"
-		)
-		.to(
-			".top-about__blocks-item:nth-of-type(3) img",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-			},
-			"<"
-		)
-		.to(
-			".top-about__blocks-item:nth-of-type(4) img",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-			},
-			"<"
-		)
-		.to(
-			".top-about__blocks-item:nth-of-type(5) img",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-			},
-			"<"
-		)
-		.to(
-			".top-about__blocks-item:nth-of-type(6) img",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-			},
-			"<"
-		)
-		.to(
-			".top-about__blocks-item:nth-of-type(7) img",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-			},
-			"<"
-		)
-		.to(
-			".top-about__bg-fill",
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(24),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(24),
-			},
-			"<"
-		)
-		.to(
-			".top-about__bg",
-			{
-				autoAlpha: 0,
-			},
-			"<50%"
-		)
-		.to(
-			eps[1],
-			{
-				autoAlpha: 1,
-			},
-			"<"
-		);
-
 	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topLeadBodyTween",
 		trigger: epTriggers[1],
-		start: "top top",
-		end: "bottom top",
-		onEnter: (self) => {
-			ep01_02inTl.restart();
-		},
-		onEnterBack: (self) => {
-			ep01_02BackTl.restart();
-		},
-		// markers: true,
-	});
-
-	const ep01_02BodySt = gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
-		trigger: epTriggers[1],
-		animation: ep01_02BodyTween,
+		animation: topLeadBodyTween,
 		pin: true,
 		pinSpacing: false,
 		start: "top -1", // 反応を遅らせる
 		end: "bottom 1", // 反応を遅らせる
 		scrub: 1,
-		// markers: true,
 	});
 
 	/* 
-		---------- ep02_01 ----------
+		---------- about ----------
 	*/
 
-	const ep02_01InTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+	const aboutTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
 			onComplete: () => {
 				if (_topVideo__WEBPACK_IMPORTED_MODULE_4__.video) {
 					_topVideo__WEBPACK_IMPORTED_MODULE_4__.video.pause();
@@ -33863,12 +42359,18 @@ function topSections() {
 				});
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
+			onReverseComplete: () => {
+				if (_topVideo__WEBPACK_IMPORTED_MODULE_4__.video) {
+					_topVideo__WEBPACK_IMPORTED_MODULE_4__.video.play();
+				}
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
 		})
-		.set(eps[2], {
+		.to(eps[2], {
 			autoAlpha: 1,
-		})
-		.to(eps[1], {
-			autoAlpha: 0,
 		})
 		.fromTo(
 			".top-about__bg",
@@ -33879,7 +42381,7 @@ function topSections() {
 				duration: 2,
 				autoAlpha: 1,
 			},
-			"<"
+			"<25%"
 		)
 		.fromTo(
 			".top-about__blocks-item:nth-of-type(1) img",
@@ -34005,51 +42507,35 @@ function topSections() {
 			"<"
 		);
 
-	const ep02_01BackTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "aboutTl",
+		trigger: epTriggers[2],
+		start: "top top",
+		end: "center top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			aboutTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, { passive: false });
+			window.addEventListener("wheel", noscroll, { passive: false });
+			aboutTl.reverse();
+		},
+	});
+
+	const about_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
 			onComplete: () => {
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
 				});
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
-		})
-		.to(".top-about__bg-fill", {
-			duration: 0.75,
-			ease: "none",
-			scale: "1.4",
-		})
-		.to(
-			".top-about__lead__title",
-			{
-				autoAlpha: 0,
-				y: "10vh",
-			},
-			"<25%"
-		)
-		.to(
-			".top-about__lead__body p",
-			{
-				autoAlpha: 0,
-				y: "10vh",
-				stagger: 0.1,
-			},
-			"<25%"
-		);
-
-	const ep02_01_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
-			onComplete: () => {
+			onReverseComplete: () => {
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
 				});
@@ -34094,33 +42580,205 @@ function topSections() {
 		);
 
 	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
-		trigger: epTriggers[2],
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			ep02_01InTl.restart();
-		},
-		onEnterBack: (self) => {
-			ep02_01_02Tl.reverse();
-		},
-		// markers: true,
-	});
-
-	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "about_02Tl",
 		trigger: epTriggers[2],
 		start: "center top",
 		// end: "bottom top",
 		onEnter: (self) => {
-			ep02_01_02Tl.restart();
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			about_02Tl.restart();
 		},
-		// markers: true,
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			about_02Tl.reverse();
+		},
 	});
 
 	/* 
-		---------- ep02_02 ----------
+		---------- aboutLink ----------
 	*/
 
-	const ep02_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+	const aboutLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[3], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".ep__02-02 .link-section",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.25,
+				ease: "power2.out",
+				autoAlpha: 1,
+			}
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "aboutLinkTl",
+		trigger: epTriggers[3],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			aboutLinkTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			aboutLinkTl.reverse();
+		},
+	});
+
+	/* 
+		---------- .ep__03-01----------
+	*/
+
+	const mfbmFieldTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.fromTo(
+			eps[4],
+			{
+				autoAlpha: 0,
+			},
+			{
+				autoAlpha: 1,
+			}
+		)
+		.fromTo(
+			".mfbm-field__map img[src*='top-section-03-park-building']",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+				},
+			},
+			{
+				duration: 1,
+				ease: "power2.inOut",
+				autoAlpha: 1,
+				y: 0,
+				force3D: true,
+			},
+			"<50%"
+		)
+		.fromTo(
+			".mfbm-field__map img[src*='top-section-03-park-grass']",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 0.65,
+				ease: "power2.out",
+				autoAlpha: 1,
+			},
+			"<25%"
+		)
+		.fromTo(
+			".mfbm-field__map img[src*='top-section-03-park-people']",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 0.65,
+				ease: "power2.out",
+				autoAlpha: 1,
+			},
+			"<25%"
+		)
+		.fromTo(
+			".mfbm-field__map img[src*='top-section-03-building-02']",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+				},
+			},
+			{
+				duration: 1.5,
+				ease: "power2.inOut",
+				autoAlpha: 1,
+				y: 0,
+				force3D: true,
+			},
+			"<50%"
+		)
+		.fromTo(
+			".mfbm-field__map img[src*='top-section-03-building-03']",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+				},
+			},
+			{
+				duration: 0.85,
+				ease: "power2.inOut",
+				autoAlpha: 1,
+				y: 0,
+				force3D: true,
+			},
+			"<50%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "mfbmFieldTl",
+		trigger: epTriggers[4],
+		start: "top top",
+		end: "center top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, { passive: false });
+			window.addEventListener("wheel", noscroll, { passive: false });
+			mfbmFieldTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, { passive: false });
+			window.addEventListener("wheel", noscroll, { passive: false });
+			mfbmFieldTl.reverse();
+		},
+	});
+
+	const mfbmField_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
 			onStart: () => {
@@ -34134,11 +42792,86 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.set(eps[3], {
+		.fromTo(
+			".mfbm-field__map-inner",
+			{
+				x: 0,
+			},
+			{
+				duration: 1.25,
+				ease: "power2.inOut",
+				x: "40vw",
+				force3D: true,
+			}
+		)
+		.fromTo(
+			".mfbm-field__lead-title",
+			{
+				autoAlpha: 0,
+				y: "5rem",
+			},
+			{
+				duration: 0.75,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+			},
+			"<50%"
+		)
+		.fromTo(
+			".mfbm-field__lead-body p",
+			{
+				autoAlpha: 0,
+				y: "5rem",
+			},
+			{
+				duration: 0.75,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+				stagger: 0.1,
+			},
+			"<35%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "mfbmField_02Tl",
+		trigger: epTriggers[4],
+		start: "center top",
+		end: "bottom top",
+		onEnter: (self) => {
+			mfbmField_02Tl.restart();
+		},
+		onLeaveBack: (self) => {
+			mfbmField_02Tl.reverse();
+		},
+	});
+
+	/* 
+		---------- businessLink ----------
+	*/
+
+	const businessLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[5], {
 			autoAlpha: 1,
 		})
 		.fromTo(
-			".link-section",
+			".ep__03-02 .link-section",
 			{
 				autoAlpha: 0,
 			},
@@ -34150,27 +42883,1031 @@ function topSections() {
 		);
 
 	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
-		trigger: epTriggers[3],
+		id: "businessLinkTl",
+		trigger: epTriggers[5],
 		start: "top top",
 		end: "bottom top",
 		onEnter: (self) => {
-			ep02_02Tl.restart();
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			businessLinkTl.restart();
 		},
 		onLeaveBack: (self) => {
-			ep02_02Tl.reverse();
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			businessLinkTl.reverse();
 		},
-		// onEnterBack: (self) => {
-		// 	ep02_01_02Tl.reverse();
-		// },
-		markers: true,
 	});
+
+	/* 
+		---------- topJob ----------
+	*/
+
+	const topJobTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.to(eps[6], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".top-job__peoples-item img",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+				},
+			},
+			{
+				duration: 0.75,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+				stagger: {
+					// wrap advanced options in an object
+					each: 0.1,
+					from: "random",
+					// grid: "auto",
+					ease: "power2.in",
+				},
+			},
+			"<25%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topJobTl",
+		trigger: epTriggers[6],
+		start: "top top",
+		end: "center top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topJobTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topJobTl.reverse();
+		},
+	});
+
+	const topJob_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.fromTo(
+			".top-job__lead",
+			{
+				autoAlpha: 0,
+				x: "50%",
+			},
+			{
+				duration: 1.125,
+				ease: "power2.out",
+				autoAlpha: 1,
+				x: 0,
+			}
+		)
+		.fromTo(
+			".top-job__lead-title",
+			{
+				autoAlpha: 0,
+				y: "5rem",
+			},
+			{
+				duration: 0.75,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+			},
+			"<50%"
+		)
+		.fromTo(
+			".top-job__lead-body p",
+			{
+				autoAlpha: 0,
+				y: "5rem",
+			},
+			{
+				duration: 0.75,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+				stagger: 0.1,
+			},
+			"<35%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topJob_02Tl",
+		trigger: epTriggers[6],
+		start: "center top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topJob_02Tl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topJob_02Tl.reverse();
+		},
+	});
+
+	/* 
+		---------- jobLink ----------
+	*/
+
+	const jobLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[7], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".ep__04-02 .link-section",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.25,
+				ease: "power2.out",
+				autoAlpha: 1,
+			}
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "jobLinkTl",
+		trigger: epTriggers[7],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			jobLinkTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			jobLinkTl.reverse();
+		},
+	});
+
+	/* 
+		---------- topProject ----------
+	*/
+
+	const textP1 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#p-1-1", "#p-1-2"]);
+	const textR1 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#r-1-1", "#r-1-2", "#r-1-3"]);
+	const textO1 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#o-1"]);
+	const textJ = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#j"]);
+	const textE = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#e-1", "#e-2"]);
+	const textC = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#c"]);
+	const textT1 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#t-1-1", "#t-1-2"]);
+	const textS = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#s"]);
+	const textT2 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#t-2-1", "#t-2-2"]);
+	const textO2 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#o-2"]);
+	const textR2 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#r-2-1", "#r-2-2", "#r-2-3"]);
+	const textY = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.toArray(["#y-1-1", "#y-1-2", "#y-1-3"]);
+
+	const topProjectTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.5, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.to(eps[8], {
+			autoAlpha: 1,
+		})
+		//　line animation
+		.from(
+			textP1,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textR1,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textO1,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textJ,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textE,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textC,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textT1,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textS,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textT2,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textO2,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textR2,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			textY,
+			{
+				drawSVG: 0,
+			},
+			`<${gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.utils.random([0, 10])}%`
+		)
+		.from(
+			".top-project__bg",
+			{
+				duration: 3,
+				autoAlpha: 0,
+				// ease: "expo.inOut",
+			},
+			"<50%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topProjectTl",
+		trigger: epTriggers[8],
+		start: "top top",
+		end: "center top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topProjectTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topProjectTl.reverse();
+		},
+	});
+
+	const topProject_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.5, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.from(".top-project__lead-sub-title", {
+			autoAlpha: 0,
+		});
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topProject_02Tl",
+		trigger: epTriggers[8],
+		start: "center top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topProject_02Tl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topProject_02Tl.reverse();
+		},
+	});
+
+	/* 
+		---------- projectLink ----------
+	*/
+
+	const projectLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[9], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".ep__05-02 .link-section",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.25,
+				ease: "power2.out",
+				autoAlpha: 1,
+			}
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "projectLinkTl",
+		trigger: epTriggers[9],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			projectLinkTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			projectLinkTl.reverse();
+		},
+	});
+
+	/* 
+		---------- topPerson ----------
+	*/
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.set(".persons__bg", {
+		autoAlpha: 0,
+	});
+
+	const topPersonTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[10], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".persons__solo-item",
+			{
+				clipPath: "inset(100% 0 0 0)",
+			},
+			{
+				duration: 0.5,
+				ease: "power2.out",
+				clipPath: "inset(0% 0 0 0)",
+				stagger: {
+					// wrap advanced options in an object
+					each: 0.25,
+					// from: "random",
+					// grid: "auto",
+					ease: "none",
+				},
+			},
+			"<"
+		)
+		.to(
+			".persons__solo",
+			{
+				duration: 0.75,
+				ease: "power2.inOut",
+				clipPath: "inset(0 0 100% 0)",
+			},
+			"<+=1.75"
+		)
+		.set(
+			".persons__bg",
+			{
+				autoAlpha: 1,
+			},
+			"<"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topPersonTl",
+		trigger: epTriggers[10],
+		start: "top top",
+		end: "center top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topPersonTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topPersonTl.reverse();
+		},
+	});
+
+	const topPerson_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(".persons__title", {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".persons__title__bg",
+			{
+				clipPath: "inset(0 0 100% 0)",
+			},
+			{
+				duration: 1.125,
+				clipPath: "inset(0 0 0% 0)",
+			}
+		)
+		.to(
+			".persons__bg-images-wrap",
+			{
+				scale: 0.8424,
+				transformOrigin: "bottom",
+				yPercent: 4,
+			},
+			"<"
+		)
+		.to(
+			".persons__bg-images-wrap img[src*='person-all-01']",
+			{
+				yPercent: 9,
+				xPercent: -3,
+			},
+			"<"
+		)
+		.to(
+			".persons__bg-images-wrap img[src*='person-all-02']",
+			{
+				yPercent: 9,
+				xPercent: 1,
+			},
+			"<"
+		)
+		.to(
+			".persons__bg-images-wrap img[src*='person-all-03']",
+			{
+				yPercent: 3,
+			},
+			"<"
+		)
+		.to(
+			".persons__bg-images-wrap img[src*='person-all-04']",
+			{
+				xPercent: 13,
+				yPercent: -7,
+			},
+			"<"
+		)
+		.to(
+			".persons__bg-images-wrap img[src*='person-all-05']",
+			{
+				xPercent: -10,
+			},
+			"<"
+		)
+		.fromTo(
+			".persons__title-text",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 0.75,
+				ease: "power2.out",
+				autoAlpha: 1,
+			},
+			"<50%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topPerson_02Tl",
+		trigger: epTriggers[10],
+		start: "center top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topPerson_02Tl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topPerson_02Tl.reverse();
+		},
+	});
+
+	/* 
+		---------- personLink ----------
+	*/
+
+	const personLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[11], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".ep__06-02 .link-section",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.25,
+				ease: "power2.out",
+				autoAlpha: 1,
+			}
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "personLinkTl",
+		trigger: epTriggers[11],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			personLinkTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			personLinkTl.reverse();
+		},
+	});
+
+	/* 
+		---------- topCulture ----------
+	*/
+
+	const topCultureTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.to(eps[12], {
+			autoAlpha: 1,
+		});
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topCultureTl",
+		trigger: epTriggers[12],
+		start: "top top",
+		end: "center top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topCultureTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topCultureTl.reverse();
+		},
+	});
+
+	const topCulture_02Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.fromTo(
+			".top-culture__copy-list",
+			{
+				x: "100%",
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.125,
+				x: "0",
+				autoAlpha: 1,
+			}
+		)
+		.fromTo(
+			".top-culture__lead",
+			{
+				x: "-100%",
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.125,
+				x: "0",
+				autoAlpha: 1,
+			},
+			"<"
+		)
+		.fromTo(
+			".top-culture__lead-body p",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+				},
+			},
+			{
+				duration: 1,
+				autoAlpha: 1,
+				y: 0,
+				stagger: 0.2,
+			},
+			"<50%"
+		)
+		.fromTo(
+			".top-culture__copy-list-item",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+				},
+			},
+			{
+				duration: 1,
+				autoAlpha: 1,
+				y: 0,
+				stagger: 0.1,
+			},
+			"<50%"
+		);
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "topCulture_02Tl",
+		trigger: epTriggers[12],
+		start: "center top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topCulture_02Tl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			topCulture_02Tl.reverse();
+		},
+	});
+
+	/* 
+		---------- cultureLink ----------
+	*/
+
+	const cultureLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.set(eps[13], {
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".ep__07-02 .link-section",
+			{
+				autoAlpha: 0,
+			},
+			{
+				duration: 1.25,
+				ease: "power2.out",
+				autoAlpha: 1,
+			}
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "cultureLinkTl",
+		trigger: epTriggers[13],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			cultureLinkTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			cultureLinkTl.reverse();
+		},
+	});
+
+	/* 
+		---------- epilogue ----------
+	*/
+
+	const epilogueTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+			defaults: { duration: 1.25, ease: "power2.out" },
+			paused: true,
+			onComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+			onReverseComplete: () => {
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+			},
+		})
+		.to(eps[14], {
+			duration: 2,
+			autoAlpha: 1,
+		})
+		.fromTo(
+			".top-epilogue__lead-title",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+				},
+			},
+			{
+				duration: 1,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+			},
+			"<25%"
+		)
+		.fromTo(
+			".top-epilogue__lead-body p",
+			{
+				autoAlpha: 0,
+				y: () => {
+					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+				},
+			},
+			{
+				duration: 1.5,
+				ease: "power2.out",
+				autoAlpha: 1,
+				y: 0,
+				stagger: 0.25,
+			},
+			"<25%"
+		);
+
+	gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.create({
+		id: "epilogueTl",
+		trigger: epTriggers[14],
+		start: "top top",
+		end: "bottom top",
+		onEnter: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			epilogueTl.restart();
+		},
+		onLeaveBack: (self) => {
+			window.addEventListener("touchmove", noscroll, {
+				passive: false,
+			});
+			window.addEventListener("wheel", noscroll, { passive: false });
+			epilogueTl.reverse();
+		},
+	});
+
+	// const footerTween = gsap.fromTo(
+	// 	".top-lead__body",
+	// 	{
+	// 		y: 0,
+	// 	},
+	// 	{
+	// 		y: "-100%",
+	// 	}
+	// );
+
+	// ScrollTrigger.create({
+	// 	id: "footerTween",
+	// 	trigger: epTriggers[14],
+	// 	animation: footerTween,
+	// 	pin: true,
+	// 	pinSpacing: false,
+	// 	start: "top -1", // 反応を遅らせる
+	// 	end: "bottom 1", // 反応を遅らせる
+	// 	scrub: 1,
+	// 	markers: true,
+	// });
 }
 
 
 
 
 /***/ }),
-/* 29 */
+/* 43 */
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34198,7 +43935,7 @@ function topVideo() {
 	video.setAttribute("loop", "");
 	// video.setAttribute("autoplay", "");
 	wrapper.appendChild(video);
-	video.play();
+	// video.play();
 	image.remove();
 }
 
@@ -34284,8 +44021,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _include_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var _include_smoothScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-/* harmony import */ var _include_topSections__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(28);
-/* harmony import */ var _include_topVideo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(29);
+/* harmony import */ var _include_topSections__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(42);
+/* harmony import */ var _include_topVideo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(43);
 /* bace import */
 
 
@@ -34294,6 +44031,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // import "./libs/css_browser_selector.min";
 // import { fadeUp } from "./include/scrollTrigger";
+
 
 
 
@@ -34324,6 +44062,8 @@ function init() {
 
 // top
 function top() {
+	// document.querySelector(".top-cover").remove(); // 開発用
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_4__.topCover)();
 	(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_5__.topVideo)();
 	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_4__.topSections)();
 }

@@ -6,6 +6,7 @@ import Chart from "chart.js/auto";
 import { smoothScroll } from "./include/smoothScroll";
 // import "./libs/css_browser_selector.min";
 // import { fadeUp } from "./include/scrollTrigger";
+import { topCover } from "./include/topSections";
 import { topSections } from "./include/topSections";
 import { topVideo } from "./include/topVideo";
 
@@ -36,6 +37,8 @@ function init() {
 
 // top
 function top() {
+	// document.querySelector(".top-cover").remove(); // 開発用
+	topCover();
 	topVideo();
 	topSections();
 }

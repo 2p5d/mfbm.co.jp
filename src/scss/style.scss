@@ -21,13 +21,14 @@
 // @import "common/_media.scss";
 
 /* top */
+@import "top/_top-cover.scss";
 @import "top/_top-section.scss";
 @import "top/_top-lead.scss";
 @import "top/_top-about.scss";
 @import "top/_ep.scss";
 @import "top/_link-section.scss";
 @import "top/_mfbm-field.scss";
-@import "top/_top-business.scss";
+@import "top/_top-job.scss";
 @import "top/_top-project.scss";
 @import "top/_persons.scss";
 @import "top/_top-culture.scss";
