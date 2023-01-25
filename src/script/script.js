@@ -6,8 +6,8 @@ import Chart from "chart.js/auto";
 import { smoothScroll } from "./include/smoothScroll";
 // import "./libs/css_browser_selector.min";
 // import { fadeUp } from "./include/scrollTrigger";
-import { topCover } from "./include/topSections";
-import { topSections } from "./include/topSections";
+// import { topCover,topSections } from "./include/topSections";
+import { topCover, topSections3 } from "./include/topSections3";
 import { topVideo } from "./include/topVideo";
 
 if (
@@ -38,7 +38,7 @@ function init() {
 // top
 function top() {
 	// document.querySelector(".top-cover").remove(); // 開発用
-	topCover();
+	// topCover();
 	topVideo();
-	topSections();
+	topSections3();
 }
