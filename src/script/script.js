@@ -10,6 +10,10 @@ import { smoothScroll } from "./include/smoothScroll";
 import { topCover, topSections3 } from "./include/topSections3";
 import { topVideo } from "./include/topVideo";
 
+/* person import */
+import { personSlider } from "./include/personSlider";
+import { personScheduleAccordion } from "./include/personScheduleAccordion";
+
 if (
 	document.readyState === "interactive" ||
 	document.readyState === "complete"
@@ -28,8 +32,15 @@ function init() {
 	// fadeUp();
 	modal();
 	smoothScroll();
-	if (document.body.classList.contains("page-top")) {
-		top();
+	switch (true) {
+		case document.body.classList.contains("page-top"):
+			top();
+			break;
+		case document.body.classList.value.includes("page-person0"): // elm.classList.valueで文字列取得してincludes()で部分一致
+			personSingle();
+			break;
+		default:
+			break;
 	}
 }
 
@@ -41,4 +52,10 @@ function top() {
 	// topCover();
 	topVideo();
 	topSections3();
+}
+
+// top
+function personSingle() {
+	personSlider();
+	personScheduleAccordion();
 }

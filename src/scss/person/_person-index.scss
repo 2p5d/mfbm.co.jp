@@ -1,0 +1,399 @@
+/* .person-index
+
+	indexと各詳細ページで、インクルードして共通化するので、出し分け
+
+   ========================================================================== */
+
+.person-index__item {
+	position: relative;
+	height: 52.6rem;
+	@include mq-down() {
+		height: auto;
+	}
+}
+
+.person-index__item-cover {
+	// display: none; // 開発用
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	height: 100%;
+	transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+	@include mq-down() {
+		position: relative;
+		transition: none;
+		height: 48rem;
+	}
+	.person-index__item:hover & {
+		// cursor: pointer;
+		opacity: 0;
+		visibility: hidden;
+		@include mq-down() {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.person-index__item-cover-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+	@include mq-down() {
+		position: static;
+		transform: none;
+		padding-top: 6.6rem;
+		padding-bottom: 17.6rem;
+	}
+}
+p.person-index__item-cover-label {
+	color: white;
+	text-align: center;
+	> * {
+		display: block;
+	}
+	svg {
+		width: 7.5rem;
+		margin-right: auto;
+		margin-left: auto;
+		line-height: 0;
+		fill: currentColor;
+	}
+	span {
+		font-family: var(--font-cormorant);
+		font-size: 7.8rem;
+		line-height: 0.5;
+		&::before,
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 0.25em;
+			height: 1px;
+			background-color: currentColor;
+			vertical-align: 0.2em;
+		}
+		&::before {
+			margin-right: 0.125em;
+		}
+		&::after {
+			margin-left: 0.125em;
+		}
+	}
+}
+.person-index__item-cover-title {
+	margin-top: 5.8rem;
+	img {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	img[src*="person-index-01-title-centering"] {
+		width: 49.6rem;
+	}
+	img[src*="person-index-02-title-centering"] {
+		width: 54.1rem;
+	}
+	img[src*="person-index-03-title-centering"] {
+		width: 55.9rem;
+	}
+	img[src*="person-index-04-title-centering"] {
+		width: 57.3rem;
+	}
+	img[src*="person-index-05-title-centering"] {
+		width: 52.6rem;
+	}
+}
+
+.person-index__item-cover-link {
+	display: flex;
+	margin-top: 6.8rem;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		display: none;
+	}
+}
+
+.person-index__item-cover-bg {
+	position: relative;
+	height: 100%;
+	@include mq-down() {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		background-color: #4809b1;
+		// opacity: 0.7;
+
+		/*
+			各personページのスライダーでは自身のスライドが無くなるので、swiper側で(.person-index__item-cover-label span）の番号で判定して、クラス付与して、キーカラーを固定する。
+
+		*/
+		.person-index .person-index__item:nth-of-type(1) &,
+		.person-index__item.--person-01 & {
+			background-color: #4809b1;
+			opacity: 0.7;
+		}
+		.person-index .person-index__item:nth-of-type(2) &,
+		.person-index__item.--person-02 & {
+			background-color: #0a3c6b;
+			opacity: 0.96;
+			mix-blend-mode: multiply;
+		}
+		.person-index .person-index__item:nth-of-type(3) &,
+		.person-index__item.--person-03 & {
+			background-color: #722c12;
+			opacity: 0.7;
+		}
+		.person-index .person-index__item:nth-of-type(4) &,
+		.person-index__item.--person-04 & {
+			background-color: #054e2f;
+			mix-blend-mode: multiply;
+		}
+		.person-index .person-index__item:nth-of-type(5) &,
+		.person-index__item.--person-05 & {
+			background-color: #84305d;
+			opacity: 0.7;
+		}
+	}
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.person-index__item-person {
+	display: flex;
+	background-color: var(--key-color-blue);
+	color: white;
+	height: 100%;
+	@media screen and (min-width: 1920px) {
+		.person-index & {
+			padding-left: calc((100% - 140rem) / 2);
+		}
+	}
+	@include mq-down() {
+		--person-index__item-person-photo-sp-width: 21rem;
+		padding-left: 0;
+		display: block;
+	}
+	.person-index .person-index__item:nth-of-type(even) &,
+	.person-index__item.--swiper-slide-even & {
+		flex-direction: row-reverse;
+		background-color: #c4cbeb;
+		color: var(--key-color-black);
+		@media screen and (min-width: 1920px) {
+			padding-left: 0;
+			padding-right: calc((100% - 140rem) / 2);
+		}
+		@include mq-down() {
+			padding-right: 0;
+		}
+	}
+}
+
+.person-index__item-person-photo {
+	flex-shrink: 0;
+	width: 45.8rem;
+	// height: 100%;
+	@include mq-down() {
+		transform: translateY(-50%);
+		position: relative;
+		z-index: 1;
+		width: var(--person-index__item-person-photo-sp-width);
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.person-slider & {
+		width: 35.8rem;
+		@include mq-down() {
+			width: var(--person-index__item-person-photo-sp-width);
+		}
+	}
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.person-index__item-person-content-wrapper {
+	flex: 1;
+	display: flex;
+	@include mq-down() {
+		margin-top: calc(var(--person-index__item-person-photo-sp-width) / 2 * -1);
+		display: block;
+	}
+	.person-index .person-index__item:nth-of-type(even) &,
+	.person-index__item.--swiper-slide-even & {
+		justify-content: flex-end;
+	}
+}
+
+.person-index__item-person-content {
+	display: grid;
+	grid-template-columns: 46.3rem 1fr;
+	grid-template-rows: auto auto;
+	--person-index__item-person-content-horizontal-gap: 8rem;
+	gap: 5.8rem var(--person-index__item-person-content-horizontal-gap);
+	padding-top: 7.2rem;
+	padding-right: 5.6rem;
+	padding-bottom: 6.8rem;
+	padding-left: 5.6rem;
+	@include mq-down() {
+		padding-top: 0;
+
+		display: block;
+	}
+	.person-index .person-index__item:nth-of-type(even) &,
+	.person-index__item.--swiper-slide-even & {
+		justify-items: end;
+	}
+}
+
+.person-index__item-person-description {
+	width: 46.3rem;
+	@include mq-down() {
+		display: none;
+	}
+}
+
+.person-index__item-person-description-title {
+	img[src*="person-index-01-title-left"] {
+		width: 36rem;
+	}
+	img[src*="person-index-02-title-left"] {
+		width: 39rem;
+	}
+	img[src*="person-index-03-title-left"] {
+		width: 40.6rem;
+	}
+	img[src*="person-index-04-title-left"] {
+		width: 41.3rem;
+	}
+	img[src*="person-index-05-title-left"] {
+		width: 37.9rem;
+	}
+}
+
+.person-index__item-person-description-text {
+	margin-top: 3em;
+	text-align: justify;
+	font-family: var(--font-sans);
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: calc(28 / 15);
+	.person-slider & {
+		font-size: 1.4rem;
+	}
+}
+
+.person-index__item-person-data {
+	grid-row: 1 / span 2;
+	grid-column: 2;
+	position: relative;
+	.person-index .person-index__item:nth-of-type(even) &,
+	.person-index__item.--swiper-slide-even & {
+		grid-row: 1;
+		grid-column: 2;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: calc(
+			var(--person-index__item-person-content-horizontal-gap) / 2 * -1
+		);
+		width: 1px;
+		height: 100%;
+		background-color: currentColor;
+		opacity: 0.5;
+		@include mq-down() {
+			content: none;
+		}
+	}
+}
+p.person-index__item-person-data-label {
+	width: fit-content;
+	@include mq-down() {
+		display: none;
+	}
+	> * {
+		display: block;
+	}
+	svg {
+		width: 5.1rem;
+		fill: currentColor;
+	}
+	span {
+		text-align: center;
+		font-family: var(--font-cormorant);
+		font-size: 5.9rem;
+		font-weight: 300;
+		line-height: 0.5;
+	}
+}
+.person-index__item-person-data-name {
+	margin-top: 1.85em;
+	@include mq-down() {
+		display: flex;
+		align-items: center;
+		gap: 0.85em;
+	}
+	> * {
+		display: block;
+	}
+}
+
+.person-index__item-person-data-name-jp {
+	font-size: 2rem;
+	line-height: 1.3;
+	@include mq-down() {
+		font-size: 4.6rem;
+	}
+}
+.person-index__item-person-data-name-en {
+	margin-top: 0.65em;
+	font-family: var(--font-sans);
+	line-height: 1.3;
+	font-size: 1.2rem;
+	font-weight: 400;
+	@include mq-down() {
+		margin-top: 0;
+		font-size: 2.4rem;
+	}
+}
+.person-index__item-person-data-text {
+	margin-top: 2.5em;
+	line-height: calc(21 / 12);
+	font-family: var(--font-sans);
+	font-size: 1.2rem;
+	font-weight: 400;
+	@include mq-down() {
+		margin-top: 1.5em;
+		line-height: calc(50 / 26);
+		font-size: 2.6rem;
+	}
+}
+
+.person-index__item-person-footer {
+	.person-index .person-index__item:nth-of-type(even) &,
+	.person-index__item.--swiper-slide-even & {
+		grid-column: 1 / span 2;
+	}
+	@include mq-down() {
+		margin-top: 2.65em;
+		.button__icon.button__icon--arrow {
+			right: 3.25em;
+		}
+	}
+}

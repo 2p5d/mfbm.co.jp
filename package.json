@@ -5,6 +5,7 @@
   "dependencies": {
     "body-scroll-lock": "^3.1.5",
     "chart.js": "^4.1.2",
-    "gsap": "npm:@gsap/shockingly@^3.11.4"
+    "gsap": "npm:@gsap/shockingly@^3.11.4",
+    "swiper": "^8.4.6"
   }
 }

@@ -1,0 +1,137 @@
+/* .person-schedule
+   ========================================================================== */
+
+.person-slider {
+	width: var(--content-width-large);
+	margin-top: 17.8rem;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		margin-top: 15.6rem;
+	}
+}
+
+.person-slider__header {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	@include mq-down() {
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+	}
+}
+
+.person-slider__header-title {
+	font-size: 5.7rem;
+	letter-spacing: -0.025em;
+	line-height: 1;
+	@include mq-down() {
+		font-size: 5.4rem;
+	}
+}
+
+.person-slider__header-back-to-index {
+	font-family: var(--font-sans);
+	font-size: 1.8rem;
+	font-weight: 400;
+	transition: opacity 0.25s ease-out;
+	@include mq-down() {
+		display: none;
+	}
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+.person-slider__content {
+	position: relative;
+	margin-top: 1.6rem;
+	height: 52.6rem;
+	@include mq-down() {
+		margin-top: 3.2rem;
+
+		height: auto;
+	}
+}
+
+.person-slider__prev,
+.person-slider__next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3.2rem;
+	height: 3.2rem;
+	@include mq-down() {
+		top: 48rem;
+		width: 8.4rem;
+		height: 9.2rem;
+		background-color: rgba(0, 15, 60, 0.8);
+		color: white;
+	}
+}
+
+.person-slider__prev-icon,
+.person-slider__next-icon {
+	width: 3.2rem;
+	height: 3.2rem;
+	border-left: 1px solid currentColor;
+	border-bottom: 1px solid currentColor;
+	@include mq-down() {
+		width: 2.8rem;
+		height: 2.8rem;
+	}
+}
+
+.person-slider__prev {
+	left: -2.4rem;
+	transform: translate(-100%, -50%);
+	@include mq-down() {
+		left: 0;
+		transform: translate(0, -50%);
+	}
+}
+
+.person-slider__next {
+	right: -2.4rem;
+	transform: translate(100%, -50%);
+	@include mq-down() {
+		right: 0;
+		transform: translate(0, -50%);
+	}
+}
+
+.person-slider__prev-icon {
+	transform: translateX(25%) rotate(45deg);
+}
+
+.person-slider__next-icon {
+	transform: translateX(-25%) rotate(-135deg);
+}
+
+// .swiper-wrapper {
+// 	align-items: stretch !important;
+// }
+// .swiper-slide {
+// 	height: auto;
+// }
+
+/*
+swiperの高さ揃える
+*/
+.person-slider {
+	.swiper {
+		height: 100%;
+	}
+	.swiper-slide {
+		@include mq-down() {
+			height: auto !important;
+			.person-index__item-person {
+				height: calc(100% - 48rem);
+			}
+		}
+	}
+}

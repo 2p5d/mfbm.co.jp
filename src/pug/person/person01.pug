@@ -1,0 +1,240 @@
+extends ../include/_layout.pug
+
+block vars
+	include ../include/_vars.pug
+	- var key = "person01"
+	- var page = pages[key]
+	- var root_path = '../';
+	- var assets_path = '../assets/';
+
+
+block contents
+
+	main.main
+
+		.person-hero
+			h2.person-hero__title
+				+picture({filename:'person01-hero-title'},{type:'svg',fallbackType:''},{alt:'日本橋エリアの街づくりに携わる誇りを胸に'},{classes:['']},{width:'418'},{height:'223'},{breakpoint:true},{lazyload:false},{retina:false})
+			.person-hero__data
+				p.person-hero__data-label
+					svg(aria-label="PERSON" viewBox="0 0 159 32")
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
+					span
+						| 01
+				p.person-hero__data-name
+					span.person-hero__data-name-jp
+						| 市川 和輝
+					span.person-hero__data-name-en
+						| KAZUKI ICHIKAWA
+				p.person-hero__data-text
+					| オフィス事業推進本部
+					br
+					| エリアマネジメント事業部
+					br
+					| 日本橋エリアマネジメント グループ2
+					br
+					| 総合職　2019年入社
+			.person-hero__bg
+				+picture({filename:'person01-hero'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:true})
+
+		section.person-lead
+			.person-lead__text
+				p.person-lead__lead
+					| MFBMに入社を決めた理由
+				h2.person-lead__title
+					| 接する人たちの
+					br 
+					| 素晴らしさに惹かれMFBMへ
+			
+				.person-lead__body
+					p
+						| 就職活動に本格的に取り組み始めたのはニュージーランド留学から戻った大学4年の春のこと。同期よりも遅いスタートになってしまい最初は苦戦を強いられましたが、夏採用に注力している企業の中で自分に合いそうな企業を見つけました。
+						br
+						| それがMFBMです。もともと父親と同じ不動産に関係する仕事に就きたいという希望もあって、不動産関連の企業を中心に回っていたのですが、その中でテナントの誘致、収支計画の立案、設備の維持管理などを通じて、ビルの資産価値を最大化するプロパティマネジメント（PM）という業態を知り、もっと詳しく知りたいと興味を持ったのがこの世界に入るきっかけになりました。
+					p
+						| PM業の中でもとくにMFBMに惹かれたのは、事業内容の幅広さもさることながら面接などで接してくださる社員の人柄の素晴らしさに感銘を受けたからです。この会社なら安心してビルのプロになれる。そう感じたので迷わず入社を決めました。
+			.person-lead__photo
+				+picture({filename:'person01-image-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'586'},{breakpoint:true},{lazyload:true},{retina:true})
+				
+
+		section.person-middle
+			.person-middle__header
+				p.person-middle__header-lead
+					| 現在の仕事内容
+				h2.person-middle__header-title
+					| 総務からの転身で不安もあったが、
+					br
+					| 知識が身につき仕事を楽しむ余裕も
+			
+				.person-middle__header-body
+					p
+						| 4年目となった2022年4月から、東京都中央区に立地する「COREDO（コレド）室町」の中で、最大規模を誇る複合ビル「COREDO室町1」のPMを担当するようになりました。それ以前は、総務部で広報業務や防災業務、リスクマネジメント業務に携わっていたので異動したばかりのころは、経験のない自分が日本橋再開発の一角を担う大規模なビルのPMとして、お客様の期待に応えられるのかわからず、不安ばかりが先立っていました。
+					p
+						| でももう不安はありません。フットワークの軽さや得意のコミュニケーション力を発揮してお客様に貢献できる部分がないか模索し続けた結果、お客様に感謝される機会が少しずつ増えているからです。上司や先輩、協力会社やテナントの皆さんから吸収した知識を活かす場面が増えたおかげで、仕事を楽しむ余裕も出てきました。今はPMとして業務に携われるのが楽しくて仕方がありません。
+			
+			.person-middle__body
+				.person-middle__body-text
+					p.person-middle__body-lead
+						| 今後どのようなことに挑戦していくのか
+					h2.person-middle__body-title
+						| 新しいことに
+						br.active-sp
+						| 積極的にチャレンジし、
+						br
+						| お客様の期待を越えるPMになる
+				
+					.person-middle__body-body
+						p
+							| いつか運営管理を委託されたビルの専門家として数多くの人たちに認められ、「このビルのことなら市川に聞け」と言われるようなPMになるのが目標です。
+							br
+							| そのためにも、ご入居いただいているテナントのニーズをつかみ、ビルの運営管理に必要な業務を網羅できるようにならなければなりません。
+						p
+							| 最近では、ビジネスソリューション部門のメンバーと協力して、総務業務の効率化や従業員の福利厚生に役立つさまざまな商材の提案のほか、COREDO室町で開催されるイベント企画のご紹介など、ビルの運営管理以外でもお客様に喜んでいただく機会が増えはじめています。MFBMが長年積み重ねてきた信頼と実績を活かし、お客様のご期待を上回るサービスを提供できるPMになるためにも、今まで以上に新しいことにチャレンジしていかなければと思っています。
+
+				.person-middle__body-photo
+					+picture({filename:'person01-image-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'420'},{breakpoint:true},{lazyload:true},{retina:true})
+
+		section.person-schedule
+			h2.person-schedule__title 
+				| Oneday Schedule
+
+			.person-schedule__list-wrapper
+
+				ul.person-schedule__list 
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 9:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 業務開始
+							p.person-schedule__list-item-text-body
+								| 掲示板とスケジュール帳を見比べ、本日対応する業務を確認。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 10:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 問い合わせ対応
+							p.person-schedule__list-item-text-body
+								| メールや電話でテナントからの問い合わせに対応。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 10:30
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 清掃や警備会社と打ち合わせ
+							p.person-schedule__list-item-text-body
+								| 課題や案件の進捗を共有する。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 12:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 昼食
+							p.person-schedule__list-item-text-body
+								| 同僚と職場近くで昼食。忙しい日はコンビニ弁当を食べながら資料を読むことも。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 13:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 施工会社と打ち合わせ
+							p.person-schedule__list-item-text-body
+								| 来月予定されている工事内容の最終確認のため施工会社の担当者と打ち合わせ。
+
+				ul.person-schedule__list 
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 14:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| サービス提案
+							p.person-schedule__list-item-text-body
+								| 問い合わせのあった受付サービスについてご説明するためテナントを訪問。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 15:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 現場立ち会い
+							p.person-schedule__list-item-text-body
+								| 空調設備の状況を確認するためメンテナンス担当者を伴い現場に足を運ぶ。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 17:30
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 資料・報告書作成
+							p.person-schedule__list-item-text-body
+								| 工事発注資料や作業報告書をまとめ明日に備える。
+
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 19:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 業務終了
+							p.person-schedule__list-item-text-body
+								| 明日中にやるべきタスクを再確認し帰宅の途に。
+			.person-schedule__sp-more
+				.person-schedule__sp-more-icon
+					<?xml version="1.0" encoding="UTF-8"?>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.01 33">
+								<g>
+									<path d="m2,4c-.52,0-1.04-.22-1.41-.59-.09-.09-.18-.19-.25-.3-.07-.11-.13-.23-.18-.35-.05-.12-.09-.24-.12-.37-.02-.13-.03-.26-.03-.39C.01,1.47.22.95.59.58c.09-.09.19-.17.3-.25.11-.07.23-.13.35-.18.12-.05.25-.09.37-.11C1.87-.01,2.14-.01,2.39.04c.13.02.26.06.38.11.12.05.24.11.34.18.11.08.22.16.31.25.37.37.58.89.58,1.42,0,.13-.01.26-.04.39-.02.13-.06.25-.11.37-.05.12-.11.24-.18.35-.08.11-.16.21-.25.3-.09.09-.2.18-.31.25-.1.07-.22.13-.34.18-.12.05-.25.09-.38.12-.12.02-.26.04-.39.04Z" fill="#003383"/>
+									<path d="m0,21.33c0-1.1.9-2,2-2h0c1.11,0,2.01.9,2.01,2h0c0,1.1-.9,2-2.01,2h0c-1.1,0-2-.9-2-2Zm0-9.67c0-1.1.9-2,2-2h0c1.11,0,2.01.9,2.01,2h0c0,1.11-.9,2-2.01,2h0c-1.1,0-2-.89-2-2Z" fill="#003383"/>
+									<path d="m2.01,33c-.53,0-1.05-.22-1.42-.59-.37-.37-.59-.89-.59-1.41s.22-1.04.59-1.42c.74-.74,2.09-.74,2.83,0,.09.1.17.2.25.31.07.11.13.22.18.34.05.12.09.25.12.38.02.13.03.26.03.39,0,.53-.21,1.04-.58,1.41-.09.09-.2.18-.31.25-.1.07-.22.13-.34.18-.12.05-.25.09-.37.12-.13.02-.26.04-.39.04Z" fill="#003383"/>
+								</g>
+						</svg>
+				.person-schedule__sp-more-button
+					| more
+
+		section.person-message
+			.person-message__photo
+				+picture({filename:'person01-image-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'580'},{breakpoint:true},{lazyload:true},{retina:true})
+			.person-message__text 
+				.person-message__text-inner
+					p.person-message__text-lead 
+						| 学生の皆さんにメッセージ
+					h2.person-message__text-title 
+						| PMは、成長意欲の高い人、
+						br
+						| 好奇心の強い人にお勧めです
+					.person-message__text-body
+						p
+							| PMはさまざまな立場の皆さんと接する機会が多い仕事です。私が担当するCOREDO室町1には、銀行や証券会社、弁護士事務所、医療機器メーカーなど、多種多様な業種のお客様にご入居いただいており、ご担当者と話をするだけで毎日新しい発見があり刺激的です。
+							br
+							| テナント以外にも工事関係者や警備、清掃をはじめ協力会社の皆さんと一緒に働くことも多く、PMが知っておくべき専門知識や仕事のコツなどについて教えていただくことも少なくありません。知識を身につける機会には事欠かないので、PMは成長意欲の高い人、好奇心の強い人にとってぴったりの仕事だと思います。
+				.person-message__text__border-top
+				.person-message__text__border-bottom
+
+		section.person-slider
+			.person-slider__header
+				h2.person-slider__header-title
+					| NEXT PERSON 
+				a(href=root_path + "person/").person-slider__header-back-to-index
+					| PERSON一覧へ戻る
+			.person-slider__content
+				button.person-slider__prev(data-slider-prev)
+					.person-slider__prev-icon
+				button.person-slider__next(data-slider-next)
+					.person-slider__next-icon
+				.swiper 
+					.swiper-wrapper
+						include ../include/_person-index-content.pug

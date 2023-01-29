@@ -1,6 +1,7 @@
 /*  global vars
 ================================================= */
-const spmql = window.matchMedia("screen and (max-width: 767px)");
+const spBreakPoint = "767px";
+const spmql = window.matchMedia(`screen and (max-width: ${spBreakPoint})`);
 const pclgmql = window.matchMedia(
 	"screen and (min-width: 768px) and (max-width: 1439px)"
 );
@@ -12,7 +13,7 @@ const touchDevice =
 const remUnit = (coef) => {
 	// ブレイクポイントごとに_wrap.scssのrooのfont-sizeの係数を反映
 	if (spmql.matches) {
-		return (window.innerWidth * 0.015625 * coef).toFixed(3);
+		return (window.innerWidth * 0.0133333 * coef).toFixed(3);
 	} else if (pclgmql.matches) {
 		return (window.innerWidth * 0.00714286 * coef).toFixed(3);
 	} else {
@@ -23,4 +24,4 @@ const remUnit = (coef) => {
 	}
 };
 const header = document.querySelector(".header");
-export { spmql, touchDevice, remUnit, header };
+export { spBreakPoint, spmql, touchDevice, remUnit, header };

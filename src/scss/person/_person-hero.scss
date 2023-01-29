@@ -1,0 +1,168 @@
+/* .person
+   ========================================================================== */
+
+.person-hero {
+	position: relative;
+	@include mq-down() {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+}
+
+.person-hero__title {
+	position: absolute;
+	top: calc((158 / 750) * 100%);
+	left: calc((677 / 1400) * 100%);
+	@include mq-down() {
+		top: 88.5rem; // bgのheight
+		// bottom: 7.3rem;
+		left: 0;
+		transform: translateY(calc(-100% - 7.3rem));
+	}
+	img {
+		&[src*="person01-hero-title"] {
+			width: calc((418 / 1400) * 100vw);
+			@include mq-down() {
+				width: 49.8rem;
+			}
+		}
+		&[src*="person02-hero-title"] {
+			width: calc((542 / 1400) * 100vw);
+			@include mq-down() {
+				width: 61.6rem;
+			}
+		}
+		&[src*="person03-hero-title"] {
+			width: calc((532 / 1400) * 100vw);
+			@include mq-down() {
+				width: 58.3rem;
+			}
+		}
+		&[src*="person04-hero-title"] {
+			width: calc((443 / 1400) * 100vw);
+			@include mq-down() {
+				width: 50.5rem;
+			}
+		}
+		&[src*="person05-hero-title"] {
+			width: calc((494 / 1400) * 100vw);
+			@include mq-down() {
+				width: 57.8rem;
+			}
+		}
+	}
+}
+
+.person-hero__data {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	// width: 46.6rem;
+	width: calc(466 / 1400 * 100vw);
+	background-color: var(--key-color-blue);
+	padding-top: 4rem;
+	// padding-left: 5.8rem;
+	padding-left: calc(58 / 1400 * 100vw);
+	padding-bottom: 5rem;
+	color: white;
+	@include mq-down() {
+		position: static;
+		margin-left: auto;
+		width: calc(100% - var(--page-gutter));
+		margin-top: -11rem;
+		padding-top: 7.8rem;
+		padding-right: 6.2rem;
+		padding-bottom: 7.2rem;
+		padding-left: 6.2rem;
+	}
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	right: 0;
+	// 	top: 0;
+	// 	width: calc((100vw - 140rem) / 2);
+	// 	height: 100%;
+	// 	transform: translateX(100%);
+	// 	background-color: inherit;
+	// }
+}
+
+.person-hero__data-label {
+	opacity: 0.5;
+	> * {
+		display: inline-block;
+	}
+	svg {
+		width: 5.3rem;
+		line-height: 0;
+		fill: currentColor;
+		@include mq-down() {
+			width: 10.8rem;
+		}
+	}
+	span {
+		margin-left: 0.3em;
+		vertical-align: -0.065em;
+		font-family: var(--font-cormorant);
+		font-size: 4.6rem;
+		font-weight: 300;
+		line-height: 0;
+		@include mq-down() {
+			font-size: 7rem;
+			vertical-align: -0.035em;
+		}
+		&::before,
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 0.25em;
+			height: 1px;
+			background-color: currentColor;
+			vertical-align: 0.175em;
+		}
+		&::before {
+			margin-right: 0.1em;
+		}
+		&::after {
+			margin-left: 0.1em;
+		}
+	}
+}
+
+.person-hero__data-name {
+	margin-top: 1em;
+}
+
+.person-hero__data-name-jp {
+	font-size: 2.8rem;
+	line-height: 1.3;
+	@include mq-down() {
+		font-size: 4.4rem;
+	}
+}
+.person-hero__data-name-en {
+	margin-left: 0.85em;
+	font-family: var(--font-sans);
+	line-height: 1.3;
+	font-size: 1.4rem;
+	font-weight: 400;
+	@include mq-down() {
+		font-size: 2.2rem;
+	}
+}
+.person-hero__data-text {
+	margin-top: 0.75em;
+	line-height: calc(26 / 16);
+	font-family: var(--font-sans);
+	font-weight: 400;
+	@include mq-down() {
+		margin-top: 1.5em;
+		line-height: calc(46 / 26);
+		font-size: 2.6rem;
+	}
+}
+
+.person-hero__bg {
+	position: relative;
+	z-index: -1;
+}

@@ -1,89 +1,138 @@
 
-include _menu-list.pug
+.menu
 
-//- .modal
-//- 	.modal_inner
-nav(data-modal-content="menu")
-	.menu
-		.menu__inner
-			ul.menu__list
-				li.menu__item(class = key==='top' ? 'menu__item--selected' : '')
-					a.menu_link(href=menu.top.link) #{menu.top.title} #{menu.top.title_jp}
-				li.menu__item
-					a.menu_link(href=menu.subpage.link) #{menu.subpage.title} #{menu.subpage.title_jp}
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
-				li.menu__item
-					a.menu_link(href="#") リンク1
-				li.menu__item
-					a.menu_link(href="#") リンク2
-				li.menu__item
-					a.menu_link(href="#") リンク3
-				li.menu__item
-					a.menu_link(href="#") リンク4
+	ul.menu__list
+		li.menu__list-item
+			a(href=root_path + "")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--top
+						svg(aria-label="TOP" viewBox="0 0 80 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-top')
+					span.menu__list-item-text-jp
+						| トップページ
+		
+		li.menu__list-item
+			a(href=root_path + "about/")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--about
+						svg(aria-label="ABOUT" viewBox="0 0 143 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-about')
+					span.menu__list-item-text-jp
+						| MFBMを知る
+			ul.menu__sub-list
+				li.menu__sub-list-item
+					a(href=root_path + "about/about01.html")
+						p.menu__sub-list-item-text
+							| MFBMの役割
+				li.menu__sub-list-item
+					a(href=root_path + "about/about02.html")
+						p.menu__sub-list-item-text
+							| ブランドビジョン
+				li.menu__sub-list-item
+					a(href=root_path + "about/about03.html")
+						p.menu__sub-list-item-text
+							| MFBMの実績
+
+		li.menu__list-item
+			a(href=root_path + "business.html")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--business
+						svg(aria-label="BUSINESS" viewBox="0 0 193 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-business')
+					span.menu__list-item-text-jp
+						| 事業を知る
+
+		li.menu__list-item
+			a(href=root_path + "job.html")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--job
+						svg(aria-label="JOB" viewBox="0 0 58 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-job')
+					span.menu__list-item-text-jp
+						| 仕事を知る
+
+		li.menu__list-item
+			a(href=root_path + "project.html")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--project
+						svg(aria-label="PROJECT" viewBox="0 0 150 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-project')
+					span.menu__list-item-text-jp
+						| プロジェクトを知る
+
+		li.menu__list-item
+			a(href=root_path + "person.html")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--person
+						svg(aria-label="PERSON" viewBox="0 0 159 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
+					span.menu__list-item-text-jp
+						| 働く人を知る
+
+		li.menu__list-item
+			a(href=root_path + "culture.html")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--culture
+						svg(aria-label="CULTURE" viewBox="0 0 190 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-culture')
+					span.menu__list-item-text-jp
+						| 社風を知る
+
+		li.menu__list-item
+			a(href=root_path + "recruit/")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--recruit
+						svg(aria-label="RECRUIT" viewBox="0 0 190 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-recruit')
+					span.menu__list-item-text-jp
+						| 採用を知る
+			ul.menu__sub-list
+				li.menu__sub-list-item
+					a(href=root_path + "recruit/recruit01.html")
+						p.menu__sub-list-item-text
+							| 研修教育制度
+				li.menu__sub-list-item
+					a(href=root_path + "recruit/recruit02.html")
+						p.menu__sub-list-item-text
+							| FAQ
+				li.menu__sub-list-item
+					a(href=root_path + "recruit/recruit03.html")
+						p.menu__sub-list-item-text
+							| 募集要項
+				li.menu__sub-list-item
+					a(href=root_path + "recruit/recruit04.html")
+						p.menu__sub-list-item-text
+							| お問い合わせ
+
+		li.menu__list-item
+			a(href=root_path + "movie/")
+				p.menu__list-item-text
+					span.menu__list-item-text-en.menu__list-item-text-en--movie
+						svg(aria-label="MOVIE" viewBox="0 0 143 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-movie')
+					span.menu__list-item-text-jp
+						| 動画で知る
+
+	ul.menu__links
+		li.menu__links-item.menu__links-item--entry
+			a(href="https://mfbm.snar.jp/index.aspx?id=X00VqWzmC_k" target="_blank" rel="noopener noreferrer")
+				.menu__links-item-inner
+					svg(aria-label="" viewBox="0 0 146 32").menu__links-item-text
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-entry')
+					svg(aria-label="" viewBox="0 0 34 32").menu__links-item-icon
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+				
+		li.menu__links-item.menu__links-item--mypage
+			a(href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer")
+				.menu__links-item-inner
+					svg(aria-label="" viewBox="0 0 182 32").menu__links-item-text
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-mypage')
+					svg(aria-label="" viewBox="0 0 34 32").menu__links-item-icon
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+		li.menu__links-item.menu__links-item--internship
+			a(href="https://www.mfbm.co.jp/recruit01/internship/" target="_blank" rel="noopener noreferrer")
+				.menu__links-item-inner
+					svg(aria-label="" viewBox="0 0 256 32").menu__links-item-text
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-internship')
+					svg(aria-label="" viewBox="0 0 34 32").menu__links-item-icon
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')

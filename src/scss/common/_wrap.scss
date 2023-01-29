@@ -9,7 +9,7 @@
 		font-size: 0.714286vw !important; // 100vw / 1400(design canvas size);
 	}
 	@include mq-down() {
-		font-size: 1.5625vw !important; // 100vw / 640(design canvas size);
+		font-size: 1.333333vw !important; // 100vw / 640(design canvas size);
 		// font-size: 3.125vw !important; // 100vw / 320;
 	}
 
@@ -20,8 +20,18 @@
 	// size unit
 	--vh: 1vh;
 	// parts
+	--viewport-min-height: 740px;
 	--header-height: 8rem;
 	--header-menu-button-width: 4.5rem;
+	--page-gutter: 4.6rem;
+	--content-width: 100rem;
+	--content-width-large: 118rem;
+	@include mq-down() {
+		--header-menu-button-width: 5.6rem;
+		--header-height: 12.6rem;
+		--content-width-large: 100%;
+		--content-width: 100%;
+	}
 
 	// animation（@keyframes内で使う値はアニメーション化出来ない：animation-tainted）
 	--hover-transition: 0.5s;
@@ -32,17 +42,20 @@
 	--font-serif: "YakuHanMPs_Noto", "Noto Serif JP", serif;
 	--font-serif-yakuhan-all: "YakuHanMP_Noto", "Noto Serif JP", serif;
 	--font-serif-no-yakuhan: "Noto Serif JP", serif;
+	--font-cormorant: "Cormorant", serif;
 	// color
-	--key-color01: #000f3c;
-	--key-color02: #c81212;
-	--key-color03: #003383;
-	--key-color04: #558080;
+	--key-color-black: #000f3c;
+	--key-color-red: #c81212;
+	--key-color-blue: #003383;
+	--key-color-green: #558080;
 }
 
 body {
-	font-family: var(--font-sans);
+	font-family: var(--font-serif);
 	line-height: 1.8;
 	font-size: 1.6em;
+	font-weight: 500;
+	color: var(--key-color-black);
 	@include mq-down() {
 		font-size: 2.6em;
 	}

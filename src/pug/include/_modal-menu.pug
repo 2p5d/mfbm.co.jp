@@ -1,0 +1,14 @@
+
+
+//- .modal.modal--menu
+//- 	.modal_inner
+
+.modal-menu(data-modal-content="menu")
+	.modal-menu__inner(data-modal-close-exclusion)
+		.modal-menu__header
+			h1.modal-menu__title
+				svg(aria-label="MFBM RECRUITING" viewBox="0 0 397 32")
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#site-title')
+			button.modal-menu__close.modal-close
+		.modal-menu__content
+			include _menu.pug

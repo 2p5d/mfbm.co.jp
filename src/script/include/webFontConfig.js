@@ -2,7 +2,11 @@
 ================================================= */
 window.WebFontConfig = {
 	google: {
-		families: ["Noto+Sans+JP:400,500,700", "Noto+Serif+JP:400,500,700"],
+		families: [
+			"Noto+Sans+JP:400,500,700",
+			"Noto+Serif+JP:400,500,700",
+			"Cormorant:300",
+		],
 	},
 	custom: {
 		families: [

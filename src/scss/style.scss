@@ -8,13 +8,16 @@
 /* common */
 @import "common/_utility.scss";
 @import "common/_wrap.scss";
-@import "common/_haeder.scss";
+@import "common/_header.scss";
 @import "common/_footer.scss";
+@import "common/_footer-links.scss";
 @import "common/_modal.scss";
 @import "common/_menu.scss";
+@import "common/_modal-menu.scss";
+@import "common/_sub-index-header.scss";
 
 /* each page common */
-// @import "common/_button.scss";
+@import "common/_button.scss";
 // @import "common/_hero.scss";
 // @import "common/_pop-up.scss";
 // @import "common/_section.scss";
@@ -33,3 +36,12 @@
 @import "top/_persons.scss";
 @import "top/_top-culture.scss";
 @import "top/_top-epilogue.scss";
+
+/* person */
+@import "person/_person-index.scss";
+@import "person/_person-hero.scss";
+@import "person/_person-lead.scss";
+@import "person/_person-middle.scss";
+@import "person/_person-schedule.scss";
+@import "person/_person-message.scss";
+@import "person/_person-slider.scss";

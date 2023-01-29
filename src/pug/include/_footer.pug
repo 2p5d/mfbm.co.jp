@@ -1,68 +1,18 @@
 
 footer.footer#footer
 
-	a.footer__page-top(href="#page-top")
+	a.footer__page-top(href="#to-top")
 		.footer__page-top-arrow
 			svg(aria-label="→" viewBox="0 0 34 32")
 				use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
 		span.footer__page-top-text
 			| PAGE TOP
-
-	.footer__links
-		.footer__links-big
-			a(href=root_path + "recruit/").footer__links-big-item
-				.footer__links-big-item-content
-					p.footer__links-big-item-title
-						span.footer__links-big-item-title-large.footer__links-big-item-title--recruit
-							svg(aria-label="RECRUIT" viewBox="0 0 190 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-recruit')
-						span.footer__links-big-item-title-small
-							| 採用を知る
-					.footer__links-big-item-icon
-						svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				.footer__links-big-item-bg
-					+picture({filename:'top-section-end-bnr-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'140'},{breakpoint:true},{lazyload:true},{retina:true})
-
-			a(href=root_path + "movie/").footer__links-big-item
-				.footer__links-big-item-content
-					p.footer__links-big-item-title
-						span.footer__links-big-item-title-large.footer__links-big-item-title--movie
-							svg(aria-label="MOVIE" viewBox="0 0 143 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-movie')
-						span.footer__links-big-item-title-small
-							| 動画で知る
-					.footer__links-big-item-icon
-						svg(aria-label="→" viewBox="0 0 34 32")
-							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				.footer__links-big-item-bg
-					+picture({filename:'top-section-end-bnr-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'140'},{breakpoint:true},{lazyload:true},{retina:true})
-
-		.footer__links-items
-		
-			a(href="https://mfbm.snar.jp/index.aspx?id=X00VqWzmC_k" target="_blank" rel="noopener noreferrer").footer__links-item.footer__links-item--entry
-				p.footer__links-item-title
-					svg(aria-label="ENTRY" viewBox="0 0 146 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-entry')
-				.footer__links-item-icon
-					svg(aria-label="→" viewBox="0 0 34 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				
-			a(href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer").footer__links-item.footer__links-item--my-page
-				p.footer__links-item-title
-					svg(aria-label="MY PAGE" viewBox="0 0 182 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-mypage')
-				.footer__links-item-icon
-					svg(aria-label="→" viewBox="0 0 34 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				
-			a(href="/" target="_blank" rel="noopener noreferrer").footer__links-item.footer__links-item--internship
-				p.footer__links-item-title
-					svg(aria-label="INTERN SHIP" viewBox="0 0 256 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-internship')
-				.footer__links-item-icon
-					svg(aria-label="→" viewBox="0 0 34 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+	
+	.footer__menu
+		if page === "top"
+			include _footer-links.pug	
+		else
+			include _menu.pug
 			
 	.footer__bottom
 		.footer__bottom-logo

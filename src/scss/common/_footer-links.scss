@@ -1,0 +1,133 @@
+.footer-links {
+	width: 93rem;
+	margin-top: 8.8rem;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.footer-links__big {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+
+.footer-links__big-item {
+	position: relative;
+	height: 14rem;
+	overflow: hidden;
+}
+
+.footer-links__big-item-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+.footer-links__big-item-title {
+	text-align: center;
+	> span {
+		display: block;
+	}
+}
+
+.footer-links__big-item-title-large {
+	fill: currentColor;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 0;
+	&.footer-links__big-item-title--recruit {
+		width: 10.5rem;
+	}
+	&.footer-links__big-item-title--movie {
+		width: 7.9rem;
+	}
+}
+
+.footer-links__big-item-title-small {
+	margin-top: 0.25em;
+	font-family: var(--font-serif);
+	font-size: 1.5rem;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+}
+
+.footer-links__big-item-icon {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(calc(100% + 1em), -50%);
+	width: 3.5rem;
+	fill: currentColor;
+	svg {
+		transition: transform 0.25s ease-out;
+		a:hover & {
+			transform: translateX(0.3em);
+		}
+	}
+}
+
+.footer-links__big-item-bg {
+	transition: transform 0.25s ease-out;
+	a:hover & {
+		transform: scale(1.085);
+	}
+}
+
+.footer-links__items {
+	margin-top: 5.4rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem;
+}
+
+.footer-links__item {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 8rem;
+	color: white !important;
+	&.footer-links__item--entry {
+		background-color: var(--key-color-red);
+	}
+	&.footer-links__item--my-page {
+		background-color: var(--key-color-blue);
+	}
+	&.footer-links__item--internship {
+		background-color: var(--key-color-green);
+	}
+}
+
+.footer-links__item-title {
+	line-height: 0;
+	fill: currentColor;
+	.footer-links__item--entry & {
+		width: 7.7rem;
+	}
+	.footer-links__item--my-page & {
+		width: 10rem;
+	}
+	.footer-links__item--internship & {
+		width: 14.1rem;
+	}
+}
+
+.footer-links__item-icon {
+	width: 2.4rem;
+	line-height: 0;
+	position: absolute;
+	top: 50%;
+	right: 3.2rem;
+	transform: translateY(-50%);
+	z-index: 1;
+	fill: currentColor;
+	svg {
+		transition: transform 0.25s ease-out;
+		a:hover & {
+			transform: translateX(0.3em);
+		}
+	}
+}

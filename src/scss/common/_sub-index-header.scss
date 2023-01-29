@@ -1,0 +1,40 @@
+/* .sub-index-header
+   ========================================================================== */
+
+.sub-index-header {
+	width: var(--content-width-large);
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 18rem;
+	padding-bottom: 13.1rem;
+	@include mq-down() {
+		padding-top: 21rem;
+		padding-left: var(--page-gutter);
+		padding-bottom: 9.4rem;
+	}
+}
+
+.sub-index-header__title {
+	> span {
+		display: block;
+	}
+}
+
+.sub-index-header__title-en {
+	line-height: 0;
+	&.sub-index-header__title-en--about {
+		width: 28.6rem;
+	}
+	&.sub-index-header__title-en--person {
+		width: 31rem;
+	}
+}
+
+.sub-index-header__title-jp {
+	margin-top: 0.125em;
+	font-size: 2.8rem;
+	@include mq-down() {
+		margin-top: 0.25em;
+		font-size: 3.2rem;
+	}
+}
