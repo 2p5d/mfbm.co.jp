@@ -24,6 +24,7 @@
 .person-message__text__border-top {
 	position: absolute;
 	inset: 0;
+	pointer-events: none;
 	&::before,
 	&::after {
 		content: "";
@@ -34,6 +35,21 @@
 		height: 11.8rem;
 		border-top: 1px solid var(--key-color-blue);
 		border-left: 1px solid var(--key-color-blue);
+		body.page-person01 & {
+			border-color: var(--person-01-color);
+		}
+		body.page-person02 & {
+			border-color: var(--person-02-color);
+		}
+		body.page-person03 & {
+			border-color: var(--person-03-color);
+		}
+		body.page-person04 & {
+			border-color: var(--person-04-color);
+		}
+		body.page-person05 & {
+			border-color: var(--person-05-color);
+		}
 		@include mq-down() {
 			width: 9.9rem;
 			height: 9.9rem;
@@ -52,6 +68,7 @@
 .person-message__text__border-bottom {
 	position: absolute;
 	inset: 0;
+	pointer-events: none;
 	&::before,
 	&::after {
 		content: "";
@@ -62,6 +79,21 @@
 		height: 11.8rem;
 		border-bottom: 1px solid var(--key-color-blue);
 		border-left: 1px solid var(--key-color-blue);
+		body.page-person01 & {
+			border-color: var(--person-01-color);
+		}
+		body.page-person02 & {
+			border-color: var(--person-02-color);
+		}
+		body.page-person03 & {
+			border-color: var(--person-03-color);
+		}
+		body.page-person04 & {
+			border-color: var(--person-04-color);
+		}
+		body.page-person05 & {
+			border-color: var(--person-05-color);
+		}
 		@include mq-down() {
 			width: 9.9rem;
 			height: 9.9rem;
@@ -93,12 +125,28 @@
 .person-message__text-lead {
 	text-align: center;
 	line-height: 1.3;
-	font-size: 1.8rem;
+	font-family: var(--font-sans-yakuhan-all);
+	font-size: 1.7rem;
 	text-decoration: underline;
 	text-underline-offset: 0.4em;
 	color: var(--key-color-blue);
 	@include mq-down() {
-		font-size: 2.6rem;
+		font-size: inherit;
+	}
+	body.page-person01 & {
+		color: var(--person-01-color);
+	}
+	body.page-person02 & {
+		color: var(--person-02-color);
+	}
+	body.page-person03 & {
+		color: var(--person-03-color);
+	}
+	body.page-person04 & {
+		color: var(--person-04-color);
+	}
+	body.page-person05 & {
+		color: var(--person-05-color);
 	}
 }
 
@@ -118,6 +166,8 @@
 	margin-top: 3em;
 	text-align: justify;
 	line-height: calc(34 / 16);
+	font-family: var(--font-sans-yakuhan-all);
+	font-weight: 300;
 	@include mq-down() {
 		margin-top: 2.25em;
 		line-height: calc(52 / 26);

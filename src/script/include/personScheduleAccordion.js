@@ -7,6 +7,9 @@ function personScheduleAccordion() {
 	const wrapper = document.querySelector(".person-schedule__list-wrapper"),
 		trigger = document.querySelector(".person-schedule__sp-more-button"),
 		triggerIcon = document.querySelector(".person-schedule__sp-more-icon"),
+		triggerText = document.querySelector(
+			".person-schedule__sp-more-button-text"
+		),
 		items = document.querySelectorAll(".person-schedule__list-item"),
 		itemCount = 3,
 		getDefaultItemsHeight = () => {
@@ -37,7 +40,7 @@ function personScheduleAccordion() {
 						},
 						onComplete: () => {
 							resizeObserver.observe(wrapper);
-							activeTrigger.textContent = "more";
+							triggerText.textContent = "more";
 						},
 					})
 					.to(wrapper, {
@@ -68,7 +71,7 @@ function personScheduleAccordion() {
 							ease: "power2.inOut",
 						},
 						onComplete: () => {
-							activeTrigger.textContent = "close";
+							triggerText.textContent = "close";
 						},
 					})
 					.to(wrapper, {

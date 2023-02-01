@@ -1,243 +1,244 @@
 extends ../include/_layout.pug
 
 block vars
-  include ../include/_vars.pug
-  - var key = "person02"
-  - var page = pages[key]
-  - var root_path = '../';
-  - var assets_path = '../assets/';
+	include ../include/_vars.pug
+	- var key = "person02"
+	- var page = pages[key]
+	- var root_path = '../';
+	- var assets_path = '../assets/';
 
 
 block contents
 
-  main.main
+	main.main
 
-    .person-hero
-      h2.person-hero__title
-        +picture({filename:'person02-hero-title'},{type:'svg',fallbackType:''},{alt:'話題の八重洲エリアに新たな価値を届けるために'},{classes:['']},{width:'542'},{height:'223'},{breakpoint:true},{lazyload:false},{retina:false})
-      .person-hero__data
-        p.person-hero__data-label
-          svg(aria-label="PERSON" viewBox="0 0 159 32")
-            use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
-          span
-            | 02
-        p.person-hero__data-name
-          span.person-hero__data-name-jp
-            | 横山 重政
-          span.person-hero__data-name-en
-            | SHIGEMASA YOKOYAMA
-        p.person-hero__data-text
-          | オフィス事業推進本部
-          br
-          | エリアマネジメント事業部
-          br
-          | ミッドタウン八重洲オフィス
-          br
-          | 2012年入社
-      .person-hero__bg
-        +picture({filename:'person02-hero'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:true})
+		.person-hero
+			h2.person-hero__title
+				+picture({filename:'person02-hero-title'},{type:'svg',fallbackType:''},{alt:'話題の八重洲エリアに新たな価値を届けるために'},{classes:['']},{width:'542'},{height:'223'},{breakpoint:true},{lazyload:false},{retina:false})
+			.person-hero__data
+				p.person-hero__data-label
+					svg(aria-label="PERSON" viewBox="0 0 159 32")
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
+					span
+						| 02
+				p.person-hero__data-name
+					span.person-hero__data-name-jp
+						| 横山 重政
+					span.person-hero__data-name-en
+						| SHIGEMASA YOKOYAMA
+				p.person-hero__data-text
+					| オフィス事業推進本部
+					br
+					| エリアマネジメント事業部
+					br
+					| ミッドタウン八重洲オフィス
+					br
+					| 2012年入社
+			.person-hero__bg
+				+picture({filename:'person02-hero'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:true})
 
-    section.person-lead
-      .person-lead__text
-        p.person-lead__lead
-          | MFBMに入社を決めた理由
-        h2.person-lead__title
-          | PMの使命に共感し、
-          br
-          | MFBMを選んだ
-      
-        .person-lead__body
-          p
-            | オフィスビルの価値を高め収益の最大化を図るプロパティマネジメント（PM）の使命にやりがいを感じ、MFBMを選びました。魅力あるビルをつくるにはオーナーやテナントの皆さんとの信頼関係が欠かせません。
-            br
-            | PMは同じ不動産領域にある売買や賃貸仲介よりも長い期間、お客様と向き合う仕事です。私はコミュニケーションを重ね、相互理解を深めながら関係を築くことが好きで、人の間に立つ「潤滑油」役にやりがいを感じPMを目指すことに決めました。
-          p
-            | そもそも不動産業に関心を持ったのは就職活動を控えた大学時代のことです。開業間もない「ららぽーと横浜」で4年間アルバイトしていたとき、経営母体が三井不動産のグループ会社だと知りました。街の不動産屋さんだけが不動産業のすべてではないと知ったときのちょっとした驚きと、人の流れを変え、地域に賑わいをもたらすダイナミックな仕事に対する好奇心も、PMを選ぶきっかけのひとつになったのだと感じています。
+		section.person-lead
+			.person-lead__text
+				p.person-lead__lead
+					| MFBMに入社を決めた理由
+				h2.person-lead__title
+					| PMの使命に共感し、
+					br
+					| MFBMを選んだ
+			
+				.person-lead__body
+					p
+						| オフィスビルの価値を高め収益の最大化を図るプロパティマネジメント（PM）の使命にやりがいを感じ、MFBMを選びました。魅力あるビルをつくるにはオーナーやテナントの皆さんとの信頼関係が欠かせません。
+						br
+						| PMは同じ不動産領域にある売買や賃貸仲介よりも長い期間、お客様と向き合う仕事です。私はコミュニケーションを重ね、相互理解を深めながら関係を築くことが好きで、人の間に立つ「潤滑油」役にやりがいを感じPMを目指すことに決めました。
+					p
+						| そもそも不動産業に関心を持ったのは就職活動を控えた大学時代のことです。開業間もない「ららぽーと横浜」で4年間アルバイトしていたとき、経営母体が三井不動産のグループ会社だと知りました。街の不動産屋さんだけが不動産業のすべてではないと知ったときのちょっとした驚きと、人の流れを変え、地域に賑わいをもたらすダイナミックな仕事に対する好奇心も、PMを選ぶきっかけのひとつになったのだと感じています。
 
-      .person-lead__photo
-        +picture({filename:'person02-image-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'586'},{breakpoint:true},{lazyload:true},{retina:true})
-        
+			.person-lead__photo
+				+picture({filename:'person02-image-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'586'},{breakpoint:true},{lazyload:true},{retina:true})
+				
 
-    section.person-middle
-      .person-middle__header
-        p.person-middle__header-lead
-          | 現在の仕事内容
-        h2.person-middle__header-title
-          | 「東京ミッドタウン八重洲」という
-          br
-          | 「難題」に挑む
-      
-        .person-middle__header-body
-          p
-            | 私は今、2023年3月10日にグランドオープンを控える「東京ミッドタウン八重洲」を担当するPMの一人として、本格開業に向けた準備に取り組んでいます。具体的には、区分所有者やテナントと関わりながらオフィスビルの運用ルール策定に携わっているほか、テナント入居工事の手配や移転の準備など、入居するテナント企業が快適にオフィスビルを活用できるようにするのが私の仕事です。
-          p
-            | また、東京ミッドタウン八重洲には、ほかの複合ビルにはない特徴を備えているのをご存じでしょうか。メイン棟である八重洲セントラルタワーには、オフィスや飲食店、ホテル、ホールだけでなく、中央区立城東小学校が入居し、隣接する八重洲セントラルスクエアには、認定こども園や住宅用のエリアが用意されるなど、その多様性はほかに類例を見ないほど特別なもの。法人と個人、民間と行政、大人とこどもが利用する施設が共存し、一体感のあるエリアマネジメントを実現するには、異なる意見を取りまとめる「潤滑油が」必要なのは言うまでもありません。私はPMとして、多様な人々が互いの違いを乗り越え、コミュニティの全体最適を探すという「難題」に挑んでいるのです。
+		section.person-middle
+			.person-middle__header
+				p.person-middle__header-lead
+					| 現在の仕事内容
+				h2.person-middle__header-title
+					| 「東京ミッドタウン八重洲」という
+					br
+					| 「難題」に挑む
+			
+				.person-middle__header-body
+					p
+						| 私は今、2023年3月10日にグランドオープンを控える「東京ミッドタウン八重洲」を担当するPMの一人として、本格開業に向けた準備に取り組んでいます。具体的には、区分所有者やテナントと関わりながらオフィスビルの運用ルール策定に携わっているほか、テナント入居工事の手配や移転の準備など、入居するテナント企業が快適にオフィスビルを活用できるようにするのが私の仕事です。
+					p
+						| また、東京ミッドタウン八重洲には、ほかの複合ビルにはない特徴を備えているのをご存じでしょうか。メイン棟である八重洲セントラルタワーには、オフィスや飲食店、ホテル、ホールだけでなく、中央区立城東小学校が入居し、隣接する八重洲セントラルスクエアには、認定こども園や住宅用のエリアが用意されるなど、その多様性はほかに類例を見ないほど特別なもの。法人と個人、民間と行政、大人とこどもが利用する施設が共存し、一体感のあるエリアマネジメントを実現するには、異なる意見を取りまとめる「潤滑油が」必要なのは言うまでもありません。私はPMとして、多様な人々が互いの違いを乗り越え、コミュニティの全体最適を探すという「難題」に挑んでいるのです。
 
-      
-      .person-middle__body
-        .person-middle__body-text
-          p.person-middle__body-lead
-            | 今後どのようなことに挑戦していくのか
-          h2.person-middle__body-title
-            | PM経験を活かし、
-            br
-            | 後進の育成にも貢献したい
-        
-          .person-middle__body-body
-            p
-              | 今年で入社から10年。そんな節目の年に新たなチャレンジに挑めるのはとても幸運なことです。とくにビルの立ち上げは、いくらやりたいと熱望してもタイミングが合わなければ決してできない経験なので、この仕事に携われる喜びはひとしおです。
-            p
-              | 今後はPMとして一線に立ちながら、これまでに培った知恵や経験を若手に伝える役割を果たしたいと思っています。ビルの運営管理に留まらず、街づくりを含むエリアマネジメントへ業務範囲が広がる中、PMに求められるレベルも間違いなく高くなっていきます。
-              br
-              | 担当するビルについて誰よりも詳しく知るのと同じくらい、PMにもエリア全体、社会全体を俯瞰するような高い視座が求められるようになるでしょう。私自身、そんなPMになりたいですし、私と志を同じくする若手を数多く輩出できたら、MFBMは今よりもっと大きな存在になれると確信しています。
+			
+			.person-middle__body
+				.person-middle__body-text
+					p.person-middle__body-lead
+						| 今後どのようなことに挑戦していくのか
+					h2.person-middle__body-title
+						| PM経験を活かし、
+						br
+						| 後進の育成にも貢献したい
+				
+					.person-middle__body-body
+						p
+							| 今年で入社から10年。そんな節目の年に新たなチャレンジに挑めるのはとても幸運なことです。とくにビルの立ち上げは、いくらやりたいと熱望してもタイミングが合わなければ決してできない経験なので、この仕事に携われる喜びはひとしおです。
+						p
+							| 今後はPMとして一線に立ちながら、これまでに培った知恵や経験を若手に伝える役割を果たしたいと思っています。ビルの運営管理に留まらず、街づくりを含むエリアマネジメントへ業務範囲が広がる中、PMに求められるレベルも間違いなく高くなっていきます。
+							br
+							| 担当するビルについて誰よりも詳しく知るのと同じくらい、PMにもエリア全体、社会全体を俯瞰するような高い視座が求められるようになるでしょう。私自身、そんなPMになりたいですし、私と志を同じくする若手を数多く輩出できたら、MFBMは今よりもっと大きな存在になれると確信しています。
 
 
-        .person-middle__body-photo
-          +picture({filename:'person02-image-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'420'},{breakpoint:true},{lazyload:true},{retina:true})
+				.person-middle__body-photo
+					+picture({filename:'person02-image-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'420'},{breakpoint:true},{lazyload:true},{retina:true})
 
-    section.person-schedule
-      h2.person-schedule__title 
-        | Oneday Schedule
+		section.person-schedule
+			h2.person-schedule__title 
+				| Oneday Schedule
 
-      .person-schedule__list-wrapper
+			.person-schedule__list-wrapper
 
-        ul.person-schedule__list 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 9:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 業務開始
-              p.person-schedule__list-item-text-body
-                | 娘を保育園に送り届けてから出社。メールやスケジュールのチェックから業務スタート。
+				ul.person-schedule__list 
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 9:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 業務開始
+							p.person-schedule__list-item-text-body
+								| 娘を保育園に送り届けてから出社。メールやスケジュールのチェックから業務スタート。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 10:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | テナントの担当者と打ち合わせ
-              p.person-schedule__list-item-text-body
-                | 近々入居予定のテナントの担当者とWebミーティング。対応いただく項目の確認とスケジュールを確認する。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 10:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| テナントの担当者と打ち合わせ
+							p.person-schedule__list-item-text-body
+								| 近々入居予定のテナントの担当者とWebミーティング。対応いただく項目の確認とスケジュールを確認する。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 11:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 施工会社と打ち合わせ
-              p.person-schedule__list-item-text-body
-                | 入居工事にあたって確認すべき事項を施工会社と入居予定のテナントの担当者を交え確認する。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 11:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 施工会社と打ち合わせ
+							p.person-schedule__list-item-text-body
+								| 入居工事にあたって確認すべき事項を施工会社と入居予定のテナントの担当者を交え確認する。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 12:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 昼食
-              p.person-schedule__list-item-text-body
-                | 東京駅八重洲口の地下にあるヤエチカで同僚とランチ。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 12:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 昼食
+							p.person-schedule__list-item-text-body
+								| 東京駅八重洲口の地下にあるヤエチカで同僚とランチ。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 13:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 城東小学校へ訪問
-              p.person-schedule__list-item-text-body
-                | 城東小学校の校長と副校長を訪問。困りごとに耳を傾け、学校行事の対応について意見交換する。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 13:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 城東小学校へ訪問
+							p.person-schedule__list-item-text-body
+								| 城東小学校の校長と副校長を訪問。困りごとに耳を傾け、学校行事の対応について意見交換する。
 
-        ul.person-schedule__list 
+				ul.person-schedule__list 
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 14:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 入居予定のお客様と打ち合わせ
-              p.person-schedule__list-item-text-body
-                | 入居を控えたお客様に協力会社の担当者をご紹介。PMの立場から必要な助言を行う。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 14:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 入居予定のお客様と打ち合わせ
+							p.person-schedule__list-item-text-body
+								| 入居を控えたお客様に協力会社の担当者をご紹介。PMの立場から必要な助言を行う。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 16:00
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 問い合わせ対応
-              p.person-schedule__list-item-text-body
-                | 空調設備の状況を確認すオフィスに戻り、離席中に届いたメールに返信。電話対応などを行う。るためメンテナンス担当者を伴い現場に足を運ぶ。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 16:00
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 問い合わせ対応
+							p.person-schedule__list-item-text-body
+								| 空調設備の状況を確認すオフィスに戻り、離席中に届いたメールに返信。電話対応などを行う。るためメンテナンス担当者を伴い現場に足を運ぶ。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 18:30
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 資料・報告書作成
-              p.person-schedule__list-item-text-body
-                | 引き続きオフィスで提案資料や報告書を作成。来年度のビル収支予算の素案作成などを行う。
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 18:30
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 資料・報告書作成
+							p.person-schedule__list-item-text-body
+								| 引き続きオフィスで提案資料や報告書を作成。来年度のビル収支予算の素案作成などを行う。
 
-          li.person-schedule__list-item
-            p.person-schedule__list-item-time
-              span.person-schedule__list-item-time-text
-                | 18:30
-            .person-schedule__list-item-text
-              h3.person-schedule__list-item-text-title
-                | 業務終了
-              p.person-schedule__list-item-text-body
-                | 翌日に控えた打ち合わせの準備やスケジュールの確認を終え次第帰宅。
-      .person-schedule__sp-more
-        .person-schedule__sp-more-icon
-          <?xml version="1.0" encoding="UTF-8"?>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.01 33">
-                <g>
-                  <path d="m2,4c-.52,0-1.04-.22-1.41-.59-.09-.09-.18-.19-.25-.3-.07-.11-.13-.23-.18-.35-.05-.12-.09-.24-.12-.37-.02-.13-.03-.26-.03-.39C.01,1.47.22.95.59.58c.09-.09.19-.17.3-.25.11-.07.23-.13.35-.18.12-.05.25-.09.37-.11C1.87-.01,2.14-.01,2.39.04c.13.02.26.06.38.11.12.05.24.11.34.18.11.08.22.16.31.25.37.37.58.89.58,1.42,0,.13-.01.26-.04.39-.02.13-.06.25-.11.37-.05.12-.11.24-.18.35-.08.11-.16.21-.25.3-.09.09-.2.18-.31.25-.1.07-.22.13-.34.18-.12.05-.25.09-.38.12-.12.02-.26.04-.39.04Z" fill="#003383"/>
-                  <path d="m0,21.33c0-1.1.9-2,2-2h0c1.11,0,2.01.9,2.01,2h0c0,1.1-.9,2-2.01,2h0c-1.1,0-2-.9-2-2Zm0-9.67c0-1.1.9-2,2-2h0c1.11,0,2.01.9,2.01,2h0c0,1.11-.9,2-2.01,2h0c-1.1,0-2-.89-2-2Z" fill="#003383"/>
-                  <path d="m2.01,33c-.53,0-1.05-.22-1.42-.59-.37-.37-.59-.89-.59-1.41s.22-1.04.59-1.42c.74-.74,2.09-.74,2.83,0,.09.1.17.2.25.31.07.11.13.22.18.34.05.12.09.25.12.38.02.13.03.26.03.39,0,.53-.21,1.04-.58,1.41-.09.09-.2.18-.31.25-.1.07-.22.13-.34.18-.12.05-.25.09-.37.12-.13.02-.26.04-.39.04Z" fill="#003383"/>
-                </g>
-            </svg>
-        .person-schedule__sp-more-button
-          | more
+					li.person-schedule__list-item
+						p.person-schedule__list-item-time
+							span.person-schedule__list-item-time-text
+								| 18:30
+						.person-schedule__list-item-text
+							h3.person-schedule__list-item-text-title
+								| 業務終了
+							p.person-schedule__list-item-text-body
+								| 翌日に控えた打ち合わせの準備やスケジュールの確認を終え次第帰宅。
+			.person-schedule__sp-more
+				.person-schedule__sp-more-icon
+					<?xml version="1.0" encoding="UTF-8"?>
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.01 33">
+								<g>
+									<path d="m2,4c-.52,0-1.04-.22-1.41-.59-.09-.09-.18-.19-.25-.3-.07-.11-.13-.23-.18-.35-.05-.12-.09-.24-.12-.37-.02-.13-.03-.26-.03-.39C.01,1.47.22.95.59.58c.09-.09.19-.17.3-.25.11-.07.23-.13.35-.18.12-.05.25-.09.37-.11C1.87-.01,2.14-.01,2.39.04c.13.02.26.06.38.11.12.05.24.11.34.18.11.08.22.16.31.25.37.37.58.89.58,1.42,0,.13-.01.26-.04.39-.02.13-.06.25-.11.37-.05.12-.11.24-.18.35-.08.11-.16.21-.25.3-.09.09-.2.18-.31.25-.1.07-.22.13-.34.18-.12.05-.25.09-.38.12-.12.02-.26.04-.39.04Z"/>
+									<path d="m0,21.33c0-1.1.9-2,2-2h0c1.11,0,2.01.9,2.01,2h0c0,1.1-.9,2-2.01,2h0c-1.1,0-2-.9-2-2Zm0-9.67c0-1.1.9-2,2-2h0c1.11,0,2.01.9,2.01,2h0c0,1.11-.9,2-2.01,2h0c-1.1,0-2-.89-2-2Z"/>
+									<path d="m2.01,33c-.53,0-1.05-.22-1.42-.59-.37-.37-.59-.89-.59-1.41s.22-1.04.59-1.42c.74-.74,2.09-.74,2.83,0,.09.1.17.2.25.31.07.11.13.22.18.34.05.12.09.25.12.38.02.13.03.26.03.39,0,.53-.21,1.04-.58,1.41-.09.09-.2.18-.31.25-.1.07-.22.13-.34.18-.12.05-.25.09-.37.12-.13.02-.26.04-.39.04Z"/>
+								</g>
+						</svg>
+				button.person-schedule__sp-more-button
+					span.person-schedule__sp-more-button-text
+						| more
+					span.person-schedule__sp-more-button-icon
 
-    section.person-message
-      .person-message__photo
-        +picture({filename:'person02-image-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'580'},{breakpoint:true},{lazyload:true},{retina:true})
-      .person-message__text 
-        .person-message__text-inner
-          p.person-message__text-lead 
-            | 学生の皆さんにメッセージ
-          h2.person-message__text-title 
-            | 就活は将来を考える
-            br.active-sp
-            | 貴重な機会。
-            br
-            | 心残りのない会社選びを
-          .person-message__text-body
-            p
-              | 知らなかった企業、知らなかったビジネス、知らなかった仕事について知るまたとない機会が就職活動です。それを踏まえた上で自分がどんな人になりたいのか、どんな人と働きたいかを考えることが、自分にあった会社を選ぶことにつながります。
-              br
-              | わからないこと、不安なこと、詳しく知りたいことがあったら臆せず質問してみてください。就活で出会える人は限られているかもしれませんが、一人一人としっかり向き合えば会社の素顔も見えてきます。五感をフル活用して自分に合う会社を選んでください。
-        .person-message__text__border-top
-        .person-message__text__border-bottom
+		section.person-message
+			.person-message__photo
+				+picture({filename:'person02-image-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'580'},{breakpoint:true},{lazyload:true},{retina:true})
+			.person-message__text 
+				.person-message__text-inner
+					p.person-message__text-lead 
+						| 学生の皆さんにメッセージ
+					h2.person-message__text-title 
+						| 就活は将来を考える
+						br.active-sp
+						| 貴重な機会。
+						br
+						| 心残りのない会社選びを
+					.person-message__text-body
+						p
+							| 知らなかった企業、知らなかったビジネス、知らなかった仕事について知るまたとない機会が就職活動です。それを踏まえた上で自分がどんな人になりたいのか、どんな人と働きたいかを考えることが、自分にあった会社を選ぶことにつながります。
+							br
+							| わからないこと、不安なこと、詳しく知りたいことがあったら臆せず質問してみてください。就活で出会える人は限られているかもしれませんが、一人一人としっかり向き合えば会社の素顔も見えてきます。五感をフル活用して自分に合う会社を選んでください。
+				.person-message__text__border-top
+				.person-message__text__border-bottom
 
-    section.person-slider
-      .person-slider__header
-        h2.person-slider__header-title
-          | NEXT PERSON 
-        a(href=root_path + "person/").person-slider__header-back-to-index
-          | PERSON一覧へ戻る
-      .person-slider__content
-        button.person-slider__prev(data-slider-prev)
-          .person-slider__prev-icon
-        button.person-slider__next(data-slider-next)
-          .person-slider__next-icon
-        .swiper 
-          .swiper-wrapper
-            include ../include/_person-index-content.pug
+		section.person-slider
+			h2.person-slider__header-title
+				| NEXT PERSON 
+			a(href=root_path + "person/").person-slider__header-back-to-index
+				| PERSON一覧へ戻る
+			.person-slider__content
+				button.person-slider__prev(data-slider-prev)
+					.person-slider__prev-icon
+				button.person-slider__next(data-slider-next)
+					.person-slider__next-icon
+				.swiper 
+					.swiper-wrapper
+						include ../include/_person-index-content.pug

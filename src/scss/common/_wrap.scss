@@ -48,16 +48,27 @@
 	--key-color-red: #c81212;
 	--key-color-blue: #003383;
 	--key-color-green: #558080;
+
+	--person-01-color: #5c2d82;
+	--person-02-color: var(--key-color-blue);
+	--person-03-color: #a04100;
+	--person-04-color: #006d00;
+	--person-05-color: #951a4d;
+	--person-01-color-light: #f7f4f9;
+	--person-02-color-light: #f2f6f9;
+	--person-03-color-light: #faf5f2;
+	--person-04-color-light: #f2f8f2;
+	--person-05-color-light: #faf4f6;
 }
 
 body {
-	font-family: var(--font-serif);
+	font-family: var(--font-serif-yakuhan-all);
 	line-height: 1.8;
-	font-size: 1.6em;
-	font-weight: 500;
-	color: var(--key-color-black);
+	font-size: 1.5em;
+	// font-weight: 500;
+	// color: var(--key-color-black);
 	@include mq-down() {
-		font-size: 2.6em;
+		font-size: 2.5em;
 	}
 	&[unresolved] {
 		visibility: hidden;

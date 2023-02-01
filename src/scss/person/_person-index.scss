@@ -9,6 +9,14 @@
 	height: 52.6rem;
 	@include mq-down() {
 		height: auto;
+		background-color: var(--key-color-blue);
+		color: white;
+		padding-bottom: 6.2rem;
+		.person-index &:nth-of-type(even),
+		&.--swiper-slide-even {
+			background-color: #c4cbeb;
+			color: var(--key-color-black);
+		}
 	}
 }
 
@@ -40,6 +48,7 @@
 	left: 50%;
 	z-index: 2;
 	transform: translate(-50%, -50%);
+	padding-bottom: 14.1rem;
 	@include mq-down() {
 		position: static;
 		transform: none;
@@ -106,13 +115,39 @@ p.person-index__item-cover-label {
 	}
 }
 
-.person-index__item-cover-link {
-	display: flex;
-	margin-top: 6.8rem;
-	margin-right: auto;
-	margin-left: auto;
+.person-index__item-link {
+	position: absolute;
+	left: 50%;
+	bottom: 6.8rem;
+	transform: translateX(-50%);
+	background-color: white;
+	z-index: 2;
+	transition: color 0.25s ease-out, border 0.25s ease-out,
+		background-color 0.25s ease-out;
 	@include mq-down() {
-		display: none;
+		position: relative;
+		left: auto;
+		bottom: auto;
+		transform: none;
+		display: flex;
+		width: calc(100% - (var(--page-gutter) * 2));
+		margin-right: auto;
+		margin-left: auto;
+		background-color: transparent;
+		border: 1px solid currentColor;
+	}
+	@include mq-up() {
+		.person-index__item:hover & {
+			color: white !important;
+			border: 1px solid currentColor;
+			background-color: transparent;
+		}
+		.person-index .person-index__item:nth-of-type(even):hover &,
+		.person-index__item.--swiper-slide-even:hover & {
+			color: currentColor !important;
+			border: 1px solid currentColor;
+			background-color: transparent;
+		}
 	}
 }
 
@@ -124,45 +159,45 @@ p.person-index__item-cover-label {
 		inset: 0;
 		z-index: -1;
 	}
-	&::after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		z-index: 1;
-		background-color: #4809b1;
-		// opacity: 0.7;
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	inset: 0;
+	// 	z-index: 1;
+	// 	background-color: #4809b1;
+	// 	// opacity: 0.7;
 
-		/*
-			各personページのスライダーでは自身のスライドが無くなるので、swiper側で(.person-index__item-cover-label span）の番号で判定して、クラス付与して、キーカラーを固定する。
+	// 	/*
+	// 		各personページのスライダーでは自身のスライドが無くなるので、swiper側で(.person-index__item-cover-label span）の番号で判定して、クラス付与して、キーカラーを固定する。
 
-		*/
-		.person-index .person-index__item:nth-of-type(1) &,
-		.person-index__item.--person-01 & {
-			background-color: #4809b1;
-			opacity: 0.7;
-		}
-		.person-index .person-index__item:nth-of-type(2) &,
-		.person-index__item.--person-02 & {
-			background-color: #0a3c6b;
-			opacity: 0.96;
-			mix-blend-mode: multiply;
-		}
-		.person-index .person-index__item:nth-of-type(3) &,
-		.person-index__item.--person-03 & {
-			background-color: #722c12;
-			opacity: 0.7;
-		}
-		.person-index .person-index__item:nth-of-type(4) &,
-		.person-index__item.--person-04 & {
-			background-color: #054e2f;
-			mix-blend-mode: multiply;
-		}
-		.person-index .person-index__item:nth-of-type(5) &,
-		.person-index__item.--person-05 & {
-			background-color: #84305d;
-			opacity: 0.7;
-		}
-	}
+	// 	*/
+	// 	.person-index .person-index__item:nth-of-type(1) &,
+	// 	.person-index__item.--person-01 & {
+	// 		background-color: #4809b1;
+	// 		opacity: 0.7;
+	// 	}
+	// 	.person-index .person-index__item:nth-of-type(2) &,
+	// 	.person-index__item.--person-02 & {
+	// 		background-color: #0a3c6b;
+	// 		opacity: 0.96;
+	// 		mix-blend-mode: multiply;
+	// 	}
+	// 	.person-index .person-index__item:nth-of-type(3) &,
+	// 	.person-index__item.--person-03 & {
+	// 		background-color: #722c12;
+	// 		opacity: 0.7;
+	// 	}
+	// 	.person-index .person-index__item:nth-of-type(4) &,
+	// 	.person-index__item.--person-04 & {
+	// 		background-color: #054e2f;
+	// 		mix-blend-mode: multiply;
+	// 	}
+	// 	.person-index .person-index__item:nth-of-type(5) &,
+	// 	.person-index__item.--person-05 & {
+	// 		background-color: #84305d;
+	// 		opacity: 0.7;
+	// 	}
+	// }
 
 	img {
 		object-fit: cover;
@@ -185,6 +220,7 @@ p.person-index__item-cover-label {
 		--person-index__item-person-photo-sp-width: 21rem;
 		padding-left: 0;
 		display: block;
+		height: auto;
 	}
 	.person-index .person-index__item:nth-of-type(even) &,
 	.person-index__item.--swiper-slide-even & {
@@ -288,9 +324,9 @@ p.person-index__item-cover-label {
 .person-index__item-person-description-text {
 	margin-top: 3em;
 	text-align: justify;
-	font-family: var(--font-sans);
-	font-size: 1.5rem;
-	font-weight: 400;
+	font-family: var(--font-sans-yakuhan-all);
+	font-size: 1.4rem;
+	font-weight: 300;
 	line-height: calc(28 / 15);
 	.person-slider & {
 		font-size: 1.4rem;
@@ -363,10 +399,10 @@ p.person-index__item-person-data-label {
 }
 .person-index__item-person-data-name-en {
 	margin-top: 0.65em;
-	font-family: var(--font-sans);
+	font-family: var(--font-sans-yakuhan-all);
 	line-height: 1.3;
 	font-size: 1.2rem;
-	font-weight: 400;
+	font-weight: 300;
 	@include mq-down() {
 		margin-top: 0;
 		font-size: 2.4rem;
@@ -375,9 +411,9 @@ p.person-index__item-person-data-label {
 .person-index__item-person-data-text {
 	margin-top: 2.5em;
 	line-height: calc(21 / 12);
-	font-family: var(--font-sans);
+	font-family: var(--font-sans-yakuhan-all);
 	font-size: 1.2rem;
-	font-weight: 400;
+	font-weight: 300;
 	@include mq-down() {
 		margin-top: 1.5em;
 		line-height: calc(50 / 26);
@@ -385,15 +421,15 @@ p.person-index__item-person-data-label {
 	}
 }
 
-.person-index__item-person-footer {
-	.person-index .person-index__item:nth-of-type(even) &,
-	.person-index__item.--swiper-slide-even & {
-		grid-column: 1 / span 2;
-	}
-	@include mq-down() {
-		margin-top: 2.65em;
-		.button__icon.button__icon--arrow {
-			right: 3.25em;
-		}
-	}
-}
+// .person-index__item-person-footer {
+// 	.person-index .person-index__item:nth-of-type(even) &,
+// 	.person-index__item.--swiper-slide-even & {
+// 		grid-column: 1 / span 2;
+// 	}
+// 	@include mq-down() {
+// 		margin-top: 2.65em;
+// 		.button__icon.button__icon--arrow {
+// 			right: 3.25em;
+// 		}
+// 	}
+// }

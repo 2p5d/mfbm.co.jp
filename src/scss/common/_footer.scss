@@ -47,6 +47,7 @@
 	font-weight: 500;
 	font-size: 1.7rem;
 	line-height: 1.5;
+	color: var(--key-color-black);
 	@include mq-down() {
 		font-size: 2.4rem;
 	}
@@ -108,7 +109,7 @@
 .footer__bottom-links__item {
 	display: flex;
 	align-items: center;
-	font-family: var(--font-sans);
+	font-family: var(--font-sans-yakuhan-all);
 	@include mq-down() {
 		font-size: 1.6rem;
 		& + &:nth-of-type(3):before,
@@ -129,7 +130,7 @@
 
 .footer__copyright {
 	text-align: right;
-	font-family: var(--font-sans);
+	font-family: var(--font-sans-yakuhan-all);
 	font-size: 1.2rem;
 	font-weight: 500;
 	letter-spacing: 0.06em;

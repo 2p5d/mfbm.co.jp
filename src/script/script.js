@@ -6,8 +6,8 @@ import Chart from "chart.js/auto";
 import { smoothScroll } from "./include/smoothScroll";
 // import "./libs/css_browser_selector.min";
 // import { fadeUp } from "./include/scrollTrigger";
-// import { topCover,topSections } from "./include/topSections";
-import { topCover, topSections3 } from "./include/topSections3";
+import { topCover, topSections } from "./include/topSections";
+// import { topCover, topSections3 } from "./include/topSections3";
 import { topVideo } from "./include/topVideo";
 
 /* person import */
@@ -49,9 +49,10 @@ function init() {
 // top
 function top() {
 	// document.querySelector(".top-cover").remove(); // 開発用
-	// topCover();
+	topCover();
 	topVideo();
-	topSections3();
+	topSections();
+	// topSections3();
 }
 
 // top
