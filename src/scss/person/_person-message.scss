@@ -167,7 +167,6 @@
 	text-align: justify;
 	line-height: calc(34 / 16);
 	font-family: var(--font-sans-yakuhan-all);
-	font-weight: 300;
 	@include mq-down() {
 		margin-top: 2.25em;
 		line-height: calc(52 / 26);

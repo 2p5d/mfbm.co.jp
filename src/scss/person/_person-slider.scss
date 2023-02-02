@@ -14,21 +14,10 @@
 	}
 }
 
-.person-slider__header {
-	// display: flex;
-	// align-items: baseline;
-	// justify-content: space-between;
-	@include mq-down() {
-		padding-right: var(--page-gutter);
-		padding-left: var(--page-gutter);
-	}
-}
-
-.person-slider__header-title {
+.person-slider__title {
 	font-size: 5.7rem;
 	letter-spacing: -0.025em;
 	line-height: 1;
-	color: var(--key-color-black);
 	@include mq-down() {
 		padding-right: var(--page-gutter);
 		padding-left: var(--page-gutter);
@@ -36,13 +25,11 @@
 	}
 }
 
-.person-slider__header-back-to-index {
+.person-slider__back-to-index {
 	justify-self: end;
 	align-self: end;
 	font-family: var(--font-sans-yakuhan-all);
 	font-size: 1.8rem;
-	font-weight: 300;
-	color: var(--key-color-black);
 	transition: opacity 0.25s ease-out;
 	@include mq-down() {
 		order: 3;

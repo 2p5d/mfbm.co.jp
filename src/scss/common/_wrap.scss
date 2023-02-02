@@ -64,11 +64,11 @@
 body {
 	font-family: var(--font-serif-yakuhan-all);
 	line-height: 1.8;
-	font-size: 1.5em;
+	font-size: 1.525em;
 	// font-weight: 500;
 	// color: var(--key-color-black);
 	@include mq-down() {
-		font-size: 2.5em;
+		font-size: 2.6em;
 	}
 	&[unresolved] {
 		visibility: hidden;

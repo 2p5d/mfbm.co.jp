@@ -1,0 +1,109 @@
+/* .job-sections
+   ========================================================================== */
+
+// .job-sections {
+// }
+
+.job-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 7.6rem 6rem;
+	@include mq-down() {
+		display: block;
+	}
+}
+
+.job-list__item {
+	padding-top: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 6rem;
+	padding-left: 3rem;
+	background-color: white;
+	filter: drop-shadow(0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.15));
+	border-radius: 0.5rem;
+	@include mq-down() {
+		padding-top: 4rem;
+		padding-right: 4rem;
+		padding-bottom: 6.4rem;
+		padding-left: 4rem;
+		border-radius: 0.8rem;
+
+		& + & {
+			margin-top: 4rem;
+		}
+	}
+}
+
+.job-list__item-content {
+	margin-top: 2.25em;
+	@include mq-down() {
+		margin-top: 2em;
+	}
+}
+
+.job-list__item-title {
+	text-align: center;
+	line-height: calc(33 / 24);
+	font-family: var(--font-serif);
+	font-weight: 500;
+	font-size: 2.4rem;
+	@include mq-down() {
+		font-size: 3.6rem;
+	}
+	color: var(--job-sections__item--bm-key-color);
+	.job-sections__item.job-sections__item--bm & {
+		color: var(--job-sections__item--bm-key-color);
+	}
+	.job-sections__item.job-sections__item--ss & {
+		color: var(--job-sections__item--ss-key-color);
+	}
+}
+.job-list__item-body {
+	margin-top: 1.75em;
+	text-align: justify;
+	line-height: calc(32 / 15);
+	font-family: var(--font-sans);
+	font-size: 1.53rem;
+	@include mq-down() {
+		margin-top: 1.75em;
+		font-size: inherit;
+	}
+}
+.job-list__item-footer {
+	margin-top: 2em;
+}
+.job-list__item-tags {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.75em 0.4em;
+	@include mq-down() {
+		gap: 2rem;
+		justify-content: center;
+		&:has(.job-list__item-tag:nth-child(n + 4)) {
+			justify-content: flex-start;
+		}
+	}
+}
+.job-list__item-tag {
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	background-color: var(--job-sections__item--bm-key-color);
+	border-radius: 1.5rem;
+	line-height: 3rem;
+	font-family: var(--font-sans);
+	font-size: 1.2rem;
+	color: white;
+	text-align: center;
+	@include mq-down() {
+		border-radius: 2.7rem;
+		line-height: 5.4rem;
+		font-size: 2.2rem;
+	}
+	.job-sections__item.job-sections__item--bm & {
+		background-color: var(--job-sections__item--bm-key-color);
+	}
+	.job-sections__item.job-sections__item--ss & {
+		background-color: var(--job-sections__item--ss-key-color);
+	}
+}

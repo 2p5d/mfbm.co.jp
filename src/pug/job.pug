@@ -1,0 +1,269 @@
+extends include/_layout.pug
+
+block vars
+	include include/_vars.pug
+	- var key = "job"
+	- var page = pages[key]
+	- var root_path = '';
+	- var assets_path = 'assets/';
+
+
+block contents
+
+	main.main
+
+		.job-hero
+			h2.job-hero__title
+				span.job-hero__title-en
+					svg(aria-label="JOB" viewBox="0 0 58 32")
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-job')
+				span.job-hero__title-jpg
+					| 仕事を知る
+			.job-hero__title__bg
+			.job-hero__bg
+				+picture({filename:'job-hero-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'1080'},{breakpoint:true},{lazyload:false},{retina:true})
+
+		.job-lead
+			h2.job-lead__title
+				| 多彩なソリューションで
+				br.active-sp
+				| 「企業」と「個人」を支援し、
+				br
+				| ビジネスシーンの未来を創ります。
+			.job-lead__body
+				p
+					| 私たちMFBMは、お客様の企業価値とビルの価値の最大化に貢献し、働く人々を豊かにするために、
+					br
+					| ビル経営とソリューションサービスを通じて、ビジネスシーンの明日を変えていきます。
+			.job-lead__anchor-links
+				a(href="#bm").job-lead__anchor-link
+					span.job-lead__anchor-link-text
+						| ビル経営事業
+					svg(aria-label="↓" viewBox="0 0 56 32").job-lead__anchor-link-icon
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
+				a(href="#ss").job-lead__anchor-link
+					span.job-lead__anchor-link-text
+						| ソリューションサービス事業
+					svg(aria-label="↓" viewBox="0 0 56 32").job-lead__anchor-link-icon
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
+
+
+		.job-sections
+
+			section.job-sections__item.job-sections__item--bm#bm
+
+				.job-sections__item-inner
+
+					.job-sections__item__header
+				
+						h2.job-sections__item-title
+							span.job-sections__item-title-en
+								| Building Management
+							span.job-sections__item-title-jp
+								| ビル経営事業
+
+						h3.job-sections__item-sub-title
+							| ビルオーナーの視点で
+							br
+							| オフィスビルの収益最大化を図る。
+
+					.job-sections__item-lead
+						p
+							| 私たちは、ビル経営の先駆者として得てきた数多くの実績と知見を活用し、
+							br
+							| オーナー様・テナント企業様双方の満足度向上を実現する
+							br
+							| プロパティマネジメント・ビルマネジメントサービスを提供しています。
+
+					.job-sections__item-content
+						
+						.job-list
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-bm-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| 営業
+									.job-list__item-body
+										p
+											| お客様の経営課題解決をサポートする強固なパートナーシップの構築はもちろん、テナント候補企業へのダイレクトアプローチと三井不動産グループ連携による頼りになるリーシングマネジメントを行います。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| テナント窓口業務
+											li.job-list__item-tag
+												| リーシングマネジメント
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-bm-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| 管理・運営
+									.job-list__item-body
+										p
+											| 24時間監視システム、熟練スタッフの常駐など、お客様に寄り添うアプローチを通して、働く人の安全性・快適性を実現しています。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| 設備関連業務
+											li.job-list__item-tag
+												| 清掃関連業務
+											li.job-list__item-tag
+												| 警備関連業務
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-bm-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| 工事
+									.job-list__item-body
+										p
+											| ビル機能の維持・向上を図るライフサイクルマネジメントを駆使し、オフィスビルの価値向上を実現しています。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| 共用部工事
+											li.job-list__item-tag
+												| 工事管理
+											li.job-list__item-tag
+												| 専用部工事
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-bm-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| 事務・会計
+									.job-list__item-body
+										p
+											| コンプライアンスの遵守はもちろんのこと、オフィスに関わるさまざまな契約をはじめとする諸手続きにおける正確な事務と、的確なレポーティングがビル経営の基盤となっています。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| 契約手続業務
+											li.job-list__item-tag
+												| 事務代行業務
+											li.job-list__item-tag
+												| レポーティング業務
+
+					.job-sections__item-footer
+						a.job-sections__item-footer__button(href="https://www.mfbm.co.jp/owners/index.html" target="_blank" rel="noopener noreferrer")
+							span.job-sections__item-footer__text
+								| ビル経営について詳しく
+								svg(aria-label="" viewBox="0 0 39 32").job-sections__item-footer__icon
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#external')
+
+			section.job-sections__item.job-sections__item--ss#ss
+
+				.job-sections__item-inner
+
+					.job-sections__item__header
+				
+						h2.job-sections__item-title
+							span.job-sections__item-title-en
+								| Solution Service
+							span.job-sections__item-title-jp
+								| ソリューションサービス事業
+
+						h3.job-sections__item-sub-title
+							| 企業の成長・発展を
+							br
+							| 多様なソリューションで支える。
+
+					.job-sections__item-lead
+						p
+							| これまで多くのお客様に一番近い場所で寄り添ってきた特徴を活かし、
+							br
+							| 企業の様々なビジネスシーンを支えるソリューションサービスの提供を行います。
+
+					.job-sections__item-content
+						
+						.job-list
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-ss-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| 業務サポート
+										br
+										| ソリューション
+									.job-list__item-body
+										p
+											| ビジネススピードの速い今、お客様がコア業務に集中するためのさまざまなサービスを提供。企業のパフォーマンス最大化の手助けを図ります。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| レセプションサービス
+											li.job-list__item-tag
+												| 研修サービス
+											li.job-list__item-tag
+												| 庶務業務アウトソーシング
+											li.job-list__item-tag
+												| 紹介斡旋サービス
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-ss-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| オフィスビル付加価値
+										br
+										| ソリューション
+									.job-list__item-body
+										p
+											| 企業や人、情報が集まり「働く場所をもっと好きになる」機会を創出。いつものビルを、街を、さまざまな付加価値で彩ります。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| イベント企画運営
+											li.job-list__item-tag
+												| 損害保険代理店
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-ss-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| ビジネス&ライフ
+										br
+										| ソリューション
+									.job-list__item-body
+										p
+											| 働く人々が、『働く』と『暮らす』を調和し、オフィスの新しいライフスタイルを実現するためのソリューションを提案いたします。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| 働き方改革
+											li.job-list__item-tag
+												| 健康経営
+											li.job-list__item-tag
+												| 女性活躍推進
+							
+							.job-list__item
+								.job-list__item-image
+									+picture({filename:'job-ss-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
+								.job-list__item-content
+									h3.job-list__item-title
+										| 施設運営
+										br
+										| ソリューション
+									.job-list__item-body
+										p
+											| 新たな『つながり』の創出、ワークスタイル・ライフスタイルの支援など、多様な価値を生み出す施設運営により、ビジネスステージに付加価値を提供します。
+									.job-list__item-footer
+										ul.job-list__item-tags
+											li.job-list__item-tag
+												| ホール＆カンファレンス
+											li.job-list__item-tag
+												| ワークスタイリング
+
+					.job-sections__item-footer
+						a.job-sections__item-footer__button(href="https://www.mfbm.co.jp/owners/index.html" target="_blank" rel="noopener noreferrer")
+							span.job-sections__item-footer__text
+								| ソリューションサービスについて詳しく
+								svg(aria-label="" viewBox="0 0 39 32").job-sections__item-footer__icon
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#external')

@@ -43,9 +43,21 @@
 			grid-row: 2 / span 2;
 		}
 	}
-	// &:nth-of-type(3) {
-	// 	grid-row: 1;
-	// }
+	&:nth-of-type(3) {
+		@include mq-down() {
+			transform: translateY(-1.7em);
+		}
+	}
+	&:nth-of-type(4) {
+		@include mq-down() {
+			margin-top: -1.4em;
+		}
+	}
+	&:nth-of-type(5) {
+		@include mq-down() {
+			margin-top: -0.75em;
+		}
+	}
 	&:nth-of-type(6) {
 		@include mq-down() {
 			grid-row: 1;
@@ -240,7 +252,7 @@
 .menu__sub-list {
 	margin-top: 0.8rem;
 	@include mq-down() {
-		margin-top: 1.4em;
+		margin-top: 2.4rem;
 	}
 }
 

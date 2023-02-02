@@ -45,3 +45,38 @@
 .fullscreen-pd-right-item {
 	box-sizing: content-box;
 }
+
+.letter-spacing-pc-plus-0p0005 {
+	letter-spacing: 0.005em !important;
+	@include mq-down() {
+		letter-spacing: normal !important;
+	}
+}
+
+.letter-spacing-pc-negative-0p0005 {
+	letter-spacing: -0.005em !important;
+	@include mq-down() {
+		letter-spacing: normal !important;
+	}
+}
+
+.letter-spacing-sp-plus-0p0005 {
+	letter-spacing: normal !important;
+	@include mq-down() {
+		letter-spacing: 0.005em !important;
+	}
+}
+
+.letter-spacing-sp-plus-0p001 {
+	letter-spacing: normal !important;
+	@include mq-down() {
+		letter-spacing: 0.01em !important;
+	}
+}
+
+.letter-spacing-sp-negative-0p0005 {
+	letter-spacing: normal;
+	@include mq-down() {
+		letter-spacing: -0.005em;
+	}
+}

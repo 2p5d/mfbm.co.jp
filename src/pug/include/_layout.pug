@@ -20,7 +20,14 @@ html(lang="ja")
 
 			block contents
 
+			if key != top
+				a(href="#to-top").to-top
+					.to-top__icon 
+						svg(aria-label="↑" viewBox="0 0 56 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
+
 			include _footer.pug
+			
 
 	include _script.pug
 

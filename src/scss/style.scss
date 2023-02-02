@@ -15,6 +15,7 @@
 @import "common/_menu.scss";
 @import "common/_modal-menu.scss";
 @import "common/_sub-index-header.scss";
+@import "common/_to-top.scss";
 
 /* each page common */
 @import "common/_button.scss";
@@ -45,3 +46,9 @@
 @import "person/_person-schedule.scss";
 @import "person/_person-message.scss";
 @import "person/_person-slider.scss";
+
+/* job */
+@import "job/_job-hero.scss";
+@import "job/_job-lead.scss";
+@import "job/_job-sections.scss";
+@import "job/_job-list.scss";
