@@ -4,6 +4,7 @@ import { modal } from "./include/modal";
 import Chart from "chart.js/auto";
 // import { viewPortHeight } from "./include/viewPortHeight";
 import { smoothScroll } from "./include/smoothScroll";
+import { accordion } from "./include/accordion";
 import { toggleToTop } from "./include/toggleToTop";
 // import "./libs/css_browser_selector.min";
 // import { fadeUp } from "./include/scrollTrigger";
@@ -34,6 +35,7 @@ function init() {
 	modal();
 	smoothScroll();
 	toggleToTop();
+	accordion();
 	switch (true) {
 		case document.body.classList.contains("page-top"):
 			top();

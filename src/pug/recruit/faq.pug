@@ -1,0 +1,79 @@
+extends ../include/_layout.pug
+
+block vars
+	include ../include/_vars.pug
+	- var key = "person"
+	- var page = pages[key]
+	- var root_path = '../';
+	- var assets_path = '../assets/';
+
+
+block contents
+
+	main.main
+
+		.sub-index-header
+			h2.sub-index-header__title
+				span.sub-index-header__title-en.sub-index-header__title-en--person
+					svg(aria-label="PERSON" viewBox="0 0 159 32")
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
+				span.sub-index-header__title-jp
+					| 働く人を知る
+
+		.person-index
+
+			//- アコーディオン入れておきます。実際のサイトはこれです。
+					https://www.meisei-c.co.jp/recruit/employment/?tab=faq
+
+					scss：src/scss/recruit/_faq.scss"
+					js：src/script/include/accordion.js;
+
+			dt.faq-section__q(data-accordion-trigger)
+				span.faq-section__q-icon
+					span.faq-section__q-icon-inner Q
+				span.faq-section__q-text
+					| 資格の有無は採用に有利になりますか？
+			dd.faq-section__a(data-accordion-content)
+				.faq-section__a-inner
+					span.faq-section__a-icon
+						span.faq-section__a-icon-inner A
+					span.faq-section__a-text
+						| 資格の有無は採用基準ではありませんので、有利・不利等はございません。
+						br
+						| 内定後に必ず取得していただく資格も特にございませんが、入社後に必要に応じて資格を取得していただいた場合は、資格手当を支給いたします。（社内規定による）
+
+			dt.faq-section__q(data-accordion-trigger)
+				span.faq-section__q-icon
+					span.faq-section__q-icon-inner Q
+				span.faq-section__q-text
+					| 応募年齢に制限はありますか？
+			dd.faq-section__a(data-accordion-content)
+				.faq-section__a-inner
+					span.faq-section__a-icon
+						span.faq-section__a-icon-inner A
+					span.faq-section__a-text
+						| 長期勤続によるキャリア形成を図る観点により、18歳～30歳までとさせていただいております。
+
+			dt.faq-section__q(data-accordion-trigger)
+				span.faq-section__q-icon
+					span.faq-section__q-icon-inner Q
+				span.faq-section__q-text
+					| 異業種からの応募は可能でしょうか？
+			dd.faq-section__a(data-accordion-content)
+				.faq-section__a-inner
+					span.faq-section__a-icon
+						span.faq-section__a-icon-inner A
+					span.faq-section__a-text
+						| 可能です。通信業界未経験で入社された方の多くが、入社後に大変活躍されています。
+
+			dt.faq-section__q(data-accordion-trigger)
+				span.faq-section__q-icon
+					span.faq-section__q-icon-inner Q
+				span.faq-section__q-text
+					| 英語力は必要でしょうか？
+			dd.faq-section__a(data-accordion-content)
+				.faq-section__a-inner
+					span.faq-section__a-icon
+						span.faq-section__a-icon-inner A
+					span.faq-section__a-text
+						| 特に必要ありません。
