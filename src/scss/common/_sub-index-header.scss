@@ -15,6 +15,7 @@
 }
 
 .sub-index-header__title {
+	color: var(--key-color-blue);
 	> span {
 		display: block;
 	}
@@ -22,8 +23,12 @@
 
 .sub-index-header__title-en {
 	line-height: 0;
+	fill: currentColor;
 	&.sub-index-header__title-en--about {
-		width: 28.6rem;
+		width: 28.2rem;
+		@include mq-down() {
+			width: 26rem;
+		}
 	}
 	&.sub-index-header__title-en--person {
 		width: 31rem;

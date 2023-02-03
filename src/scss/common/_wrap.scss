@@ -65,6 +65,7 @@ body {
 	font-family: var(--font-serif-yakuhan-all);
 	line-height: 1.8;
 	font-size: 1.525em;
+	-webkit-font-smoothing: antialiased;
 	// font-weight: 500;
 	// color: var(--key-color-black);
 	@include mq-down() {
