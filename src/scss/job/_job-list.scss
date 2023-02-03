@@ -80,9 +80,9 @@
 	@include mq-down() {
 		gap: 2rem;
 		justify-content: center;
-		&:has(.job-list__item-tag:nth-child(n + 4)) {
-			justify-content: flex-start;
-		}
+		// &:has(.job-list__item-tag:nth-child(n + 4)) {
+		// 	justify-content: flex-start;
+		// }
 	}
 }
 .job-list__item-tag {

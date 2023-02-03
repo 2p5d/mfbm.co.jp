@@ -380,7 +380,7 @@ p.person-index__item-person-data-label {
 	margin-top: 1.85em;
 	@include mq-down() {
 		display: flex;
-		align-items: center;
+		align-items: baseline;
 		gap: 0.85em;
 	}
 	> * {
