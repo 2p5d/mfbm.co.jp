@@ -2,7 +2,7 @@ extends ../include/_layout.pug
 
 block vars
 	include ../include/_vars.pug
-	- var key = "person"
+	- var key = "recruit-faq"
 	- var page = pages[key]
 	- var root_path = '../';
 	- var assets_path = '../assets/';
@@ -16,11 +16,11 @@ block contents
 			h2.sub-index-header__title
 				span.sub-index-header__title-en.sub-index-header__title-en--person
 					svg(aria-label="PERSON" viewBox="0 0 159 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-recruit')
 				span.sub-index-header__title-jp
 					| 働く人を知る
 
-		.person-index
+		.recruit-index
 
 			//- アコーディオン入れておきます。実際のサイトはこれです。
 					https://www.meisei-c.co.jp/recruit/employment/?tab=faq
