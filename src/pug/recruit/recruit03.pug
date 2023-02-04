@@ -1,0 +1,129 @@
+extends ../include/_layout.pug
+
+block vars
+	include ../include/_vars.pug
+	- var key = "recruit03"
+	- var page = pages[key]
+	- var root_path = '../';
+	- var assets_path = '../assets/';
+
+
+block contents
+
+	main.main
+
+		.recruit-header
+			h2.recruit-header__title
+				span.recruit-header__title-en
+					svg(aria-label="RECRUIT" viewBox="0 0 190 32")
+						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-recruit')
+				span.recruit-header__title-jp
+					| 募集要項
+
+		.recruit-content
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 応募資格
+				dd.recruit-table__td 
+					| 2024年3月に日本または海外の四年制大学・大学院（修士課程）を卒業もしくは修了見込の方
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 職種
+				dd.recruit-table__td 
+					| 総合職 ／ 一般職
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 勤務地
+				dd.recruit-table__td 
+					| 総合職（東京、千葉、神奈川、北海道、静岡、愛知、大阪、広島、福岡）<br>
+					| 一般職（東京、千葉、神奈川）<br>
+					| ※勤務地は非限定となります。
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 勤務時間
+				dd.recruit-table__td 
+					| 9:00～17:30（実働7.5時間）<br>
+					| ※フレックスタイム制度あり（コアタイム10:00～16:00）<br>
+					| ※業務の都合によっては時間外勤務あり<br>
+					| ※総合職のみ配属部署により他勤務時間あり
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 給与
+				dd.recruit-table__td 
+					| ■ 総合職<br>
+					| 大学卒：月給21万2,100円<br>
+					| 大学院卒：月給21万5,100円<br>
+					| <br>
+					| ■ 一般職<br>
+					| 大学卒：月給18万5,900円
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 諸手当
+				dd.recruit-table__td 
+					| 家族手当、住宅手当、時間外勤務手当、休日勤務手当、深夜勤務手当、通勤手当 他
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 昇給
+				dd.recruit-table__td 
+					| 年1回
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 賞与
+				dd.recruit-table__td 
+					| 年2回（7月、12月）
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 休日休暇
+				dd.recruit-table__td 
+					| 完全週休2日制（原則土・日） ただし、休日出勤が発生した場合には、代休を取得していただきます。<br>
+					| 国民の祝日に相当する日数、会社の指定する休日、年末年始休暇、リフレッシュ休暇 ※年間休日123日（2018年実績）<br>
+					| 年次有給休暇（初年度10日）、半休・時間有休取得制度あり、夏期休暇、慶弔休暇、人間ドック休暇、産前産後休暇、育児休業、介護休業 他
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 保険
+				dd.recruit-table__td 
+					| 雇用保険、労災保険、健康保険、厚生年金
+
+			dl.recruit-table 
+				dt.recruit-table__th 
+					| 福利厚生
+				dd.recruit-table__td 
+					| 財形貯蓄、住宅取得補助、グループ会社持株制度、資格取得補助、確定拠出年金、確定給付企業年金、各種保険料補助、各祝金（結婚・出産）、カフェテリアプラン（旅費や宿泊施設等の利用補助）、単身者用借上社宅（諸条件あり）、サークル活動（野球、サッカー、バスケットボール、テニス、釣り、卓球、音楽）
+
+
+			
+		.recruit-content.recruit-return-index 
+			a(href=root_path + "recruit/")
+				| RECRUIT一覧へ戻る
+
+		.recruit-index
+			ul.recruit-index__list
+				li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--01(href=root_path + "recruit/recruit01.html")
+						span 研修教育制度
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--02(href=root_path + "recruit/recruit02.html")
+						span FAQ
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				//- li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--03(href=root_path + "recruit/recruit03.html")
+						span 募集要項
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--04(href=root_path + "recruit/recruit04.html")
+						span お問い合わせ
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
