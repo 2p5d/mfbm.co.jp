@@ -1,0 +1,45 @@
+/* .about-header__title
+   ========================================================================== */
+
+.about-header__title {
+	margin-top: 14.5rem;
+	text-align: center;
+	line-height: calc(67 / 40);
+	font-size: 4rem;
+	font-weight: 500;
+	color: var(--key-color-blue);
+	@include mq-down() {
+		margin-top: 12rem;
+		line-height: calc(66 / 38);
+		font-size: 3.6rem;
+	}
+	img[src*="brand-vision-title"] {
+		width: 43.3rem;
+		margin-right: auto;
+		margin-left: auto;
+		@include mq-down() {
+			width: 38.7rem;
+		}
+	}
+}
+
+.about-header__body {
+	width: var(--content-width);
+	margin-top: 7.6rem;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: justify;
+	line-height: calc(34 / 16);
+	font-family: var(--font-sans-yakuhan-all);
+	font-size: 1.5rem;
+	@include mq-down() {
+		margin-top: 10rem;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		line-height: calc(52 / 26);
+		font-size: inherit;
+	}
+	&.about-header__body--fit-content {
+		width: fit-content;
+	}
+}

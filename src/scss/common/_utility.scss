@@ -53,6 +53,13 @@
 	}
 }
 
+.letter-spacing-pc-plus-0p0025 {
+	letter-spacing: 0.025em !important;
+	@include mq-down() {
+		letter-spacing: normal !important;
+	}
+}
+
 .letter-spacing-pc-negative-0p0005 {
 	letter-spacing: -0.005em !important;
 	@include mq-down() {
@@ -78,5 +85,12 @@
 	letter-spacing: normal;
 	@include mq-down() {
 		letter-spacing: -0.005em;
+	}
+}
+
+.letter-spacing-sp-negative-0p001 {
+	letter-spacing: normal;
+	@include mq-down() {
+		letter-spacing: -0.01em;
 	}
 }

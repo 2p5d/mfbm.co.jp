@@ -1,0 +1,131 @@
+extends ../include/_layout.pug
+
+block vars
+	include ../include/_vars.pug
+	- var key = "about03"
+	- var page = pages[key]
+	- var root_path = '../';
+	- var assets_path = '../assets/';
+
+
+block contents
+
+	main.main
+
+		.about-hero
+			.about-hero__content
+				h2.about-hero__title
+					span.about-hero__title-en
+						svg(aria-label="ABOUT" viewBox="0 0 143 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-about')
+					span.about-hero__title-jp
+						| MFBMの実績
+			.about-hero__bg
+				+picture({filename:'about-03-hero-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'355'},{breakpoint:true},{lazyload:false},{retina:true})
+
+
+		section.about-header
+			
+			h2.about-header__title
+				| 積み重ねてきた
+				br.active-tb-pc
+				| 信頼と
+				br.active-sp
+				| 実績をベースに
+				br
+				| 挑戦・変革を続けるMFBM。
+
+			.about-header__body.about-header__body--fit-content
+				p.letter-spacing-sp-negative-0p001
+					| 1982年の創業以来、私たちは質の高いオフィスビル経営を目指し取り組んできました。
+					br
+					| 経営するオフィスビルの数とともに顧客とするテナント企業も拡がり続け、さらなる飛躍への礎となっています。
+
+
+		section.about03-numbers
+
+			.about03-numbers__item
+				h3.about03-numbers__item-title
+					span.about03-numbers__item-title-content
+						span.about03-numbers__item-large
+							| 受託件数
+						span.about03-numbers__item-small
+							| （2022年8月末）
+				
+				.about03-numbers__item__content-wrap
+					.about03-numbers__item__content
+						.about03-numbers__item-number
+							+picture({filename:'about-03-number-jutakukensu'},{type:'svg',fallbackType:''},{alt:'357棟'},{classes:['']},{width:'346'},{height:'105'},{breakpoint:false},{lazyload:true},{retina:false})
+						.about03-numbers__item-body
+							| 三井不動産グループ所有の物件から、一般企業や機関投資家、
+							br
+							| 個人オーナーが保有する物件まで、様々なオフィスビルの経営に携わっていきます。
+
+			.about03-numbers__item
+				h3.about03-numbers__item-title
+					span.about03-numbers__item-title-content
+						span.about03-numbers__item-large
+							| 受託面積
+						span.about03-numbers__item-small
+							| （2022年8月末）
+				
+				.about03-numbers__item__content-wrap
+					.about03-numbers__item__content
+						.about03-numbers__item-number
+							+picture({filename:'about-03-number-jutakumenseki'},{type:'svg',fallbackType:''},{alt:'844.9万㎡'},{classes:['']},{width:'486'},{height:'108'},{breakpoint:false},{lazyload:true},{retina:false})
+						.about03-numbers__item-body
+							| 経営するオフィスビルの総床面積は、なんと東京ドーム約180個分の広さに相当。
+							br
+							| このフィールドの広さもMFBMの強みです。
+
+			.about03-numbers__item
+				h3.about03-numbers__item-title
+					span.about03-numbers__item-title-content
+						span.about03-numbers__item-large
+							| 売上高
+						span.about03-numbers__item-small
+							| （2021年度）
+				
+				.about03-numbers__item__content-wrap
+					.about03-numbers__item__content
+						.about03-numbers__item-number
+							+picture({filename:'about-03-number-uriage'},{type:'svg',fallbackType:''},{alt:'約277.8億円'},{classes:['']},{width:'518'},{height:'102'},{breakpoint:false},{lazyload:true},{retina:false})
+
+			.about03-numbers__item
+				h3.about03-numbers__item-title
+					span.about03-numbers__item-title-content
+						span.about03-numbers__item-large
+							| 入居テナント数
+						span.about03-numbers__item-small
+							| （2021年度）
+				
+				.about03-numbers__item__content-wrap
+					.about03-numbers__item__content
+						.about03-numbers__item-number
+							+picture({filename:'about-03-number-nyukyo'},{type:'svg',fallbackType:''},{alt:'約3,000社'},{classes:['']},{width:'526'},{height:'116'},{breakpoint:false},{lazyload:true},{retina:false})
+						.about03-numbers__item-body
+							| 成長著しいベンチャー企業から日本を代表する大手企業まで、
+							br
+							| 様々な業種・業態の企業がテナントとして入居しています。
+
+			.about03-numbers__item
+				h3.about03-numbers__item-title
+					span.about03-numbers__item-title-content
+						span.about03-numbers__item-large
+							| 経常利益
+						span.about03-numbers__item-small
+							| （2021年度）
+				
+				.about03-numbers__item__content-wrap
+					.about03-numbers__item__content
+						.about03-numbers__item-number
+							+picture({filename:'about-03-number-rieki'},{type:'svg',fallbackType:''},{alt:'約27.4億円'},{classes:['']},{width:'472'},{height:'107'},{breakpoint:false},{lazyload:true},{retina:false})
+
+		section.about-footer-links
+		
+			.about-footer-links__header
+				a(href=root_path + "about/").about-footer-links__back-to-index
+					| ABOUT一覧へ戻る
+
+			.about-footer-links__content
+				include ../include/_about-index-content.pug

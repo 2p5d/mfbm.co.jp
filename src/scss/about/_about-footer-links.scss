@@ -1,0 +1,37 @@
+/* .about01-slider__item-title
+   ========================================================================== */
+
+.about-footer-links {
+	margin-top: 20rem;
+	@include mq-down() {
+		margin-top: 16rem;
+	}
+}
+
+.about-footer-links__header {
+	display: flex;
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.about-footer-links__back-to-index {
+	margin-left: auto;
+	font-family: var(--font-sans-yakuhan-all);
+	font-size: 1.8rem;
+	transition: opacity 0.25s ease-out;
+	@include mq-down() {
+		order: 3;
+		margin-top: 0.75em;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		font-size: inherit;
+	}
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+.about-footer-links__content {
+	margin-top: 0.75em;
+}

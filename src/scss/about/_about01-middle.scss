@@ -1,0 +1,130 @@
+/* .about01-middle
+   ========================================================================== */
+
+.about01-middle {
+	margin-top: 27rem;
+	padding-bottom: 47.3rem;
+	background: linear-gradient(
+		0deg,
+		rgba(203, 218, 251, 0.4) 0%,
+		rgba(211, 227, 237, 0.4) 100%
+	);
+	@include mq-down() {
+		margin-top: 13.6rem;
+		padding-bottom: 40.9rem;
+	}
+}
+
+.about01-middle__container {
+	transform: translateY(-8rem);
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		transform: translateY(-5.8rem);
+	}
+}
+
+.about01-middle__title-en {
+	width: 83.3rem;
+	transform: translate(-20rem);
+	line-height: 1;
+	@include mq-down() {
+		transform: translate(0.5em);
+		width: 63.8rem;
+	}
+}
+
+.about01-middle__container__inner {
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		width: 100%;
+	}
+}
+
+.about01-middle__title-jp {
+	margin-top: 5.4rem;
+	color: var(--key-color-blue);
+	font-weight: 500;
+	font-size: 4rem;
+	line-height: calc(70 / 40);
+	text-decoration: underline;
+	text-underline-offset: 0.25em;
+	text-decoration-thickness: 1px;
+	text-align: center;
+	@include mq-down() {
+		margin-top: 7.6rem;
+		line-height: calc(68 / 35);
+		font-size: 3.8rem;
+	}
+}
+
+.about01-middle__body {
+	margin-top: 8.8rem;
+	text-align: justify;
+	font-family: var(--font-sans);
+	line-height: calc(34 / 16);
+	@include mq-down() {
+		margin-top: 8rem;
+		line-height: calc(52 / 26);
+	}
+	p + p {
+		margin-top: 2.25em;
+	}
+	.about01-middle__title-middle + & {
+		margin-top: 3.2em;
+		@include mq-down() {
+			margin-top: 2.25em;
+		}
+	}
+}
+
+.about01-middle__title-middle {
+	position: relative;
+	margin-top: 8.8rem;
+	width: fit-content;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: var(--font-sans);
+	font-size: 2.3rem;
+	color: var(--key-color-blue);
+	@include mq-down() {
+		margin-top: 11rem;
+		font-size: 3rem;
+	}
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		display: inline-block;
+		width: calc((((var(--content-width) * 0.9) - 100%) / 2) - 1em);
+		height: 1px;
+		background-color: #b2c2da;
+		@include mq-down() {
+			content: none;
+		}
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -1em;
+		transform: translate(-100%, -50%);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: -1em;
+		transform: translate(100%, -50%);
+	}
+}
+
+.about01-middle__image {
+	margin-top: 4em;
+}

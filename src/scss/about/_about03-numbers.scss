@@ -1,0 +1,153 @@
+/* .about03-numbers
+   ========================================================================== */
+
+.about03-numbers {
+	margin-top: 14rem;
+	padding-top: 16rem;
+	padding-bottom: 15rem;
+	background: linear-gradient(
+		60deg,
+		rgba(139, 190, 219, 1) 0%,
+		rgba(140, 191, 206, 1) 34%,
+		rgba(141, 191, 194, 1) 100%
+	);
+	@include mq-down() {
+		padding-top: 13rem;
+		margin-top: 11rem;
+	}
+}
+
+.about03-numbers__item {
+	position: relative;
+	width: 90rem;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		width: calc(100% - (var(--page-gutter) * 2));
+	}
+	& + & {
+		margin-top: 11rem;
+	}
+}
+
+.about03-numbers__item-title {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 1;
+	transform: translate(-50%, -50%);
+	width: 50rem;
+	line-height: 7rem;
+	border-radius: 4rem;
+	background-color: var(--key-color-blue);
+	text-align: center;
+	font-family: var(--font-sans);
+	color: white;
+	@include mq-down() {
+		line-height: 7.5rem;
+	}
+}
+
+.about03-numbers__item-title-content {
+	position: relative;
+	display: block;
+	width: fit-content;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		transform: translateX(-2em);
+	}
+}
+
+.about03-numbers__item-large {
+	font-size: 3.3rem;
+	font-weight: 500;
+	letter-spacing: -0.0125em;
+	@include mq-down() {
+		font-size: 3.4rem;
+	}
+}
+
+.about03-numbers__item-small {
+	position: absolute;
+	right: 0;
+	bottom: 0.025em;
+	transform: translateX(calc(100% + 0.5em));
+	font-size: 1.6rem;
+	font-weight: 500;
+	white-space: nowrap;
+	@include mq-down() {
+		font-size: 2.2rem;
+	}
+}
+
+.about03-numbers__item__content-wrap {
+	filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 15%));
+}
+
+.about03-numbers__item__content {
+	padding-top: 8rem;
+	padding-bottom: 4.8rem;
+	background-color: white;
+	clip-path: polygon(
+		0% 3.6rem,
+		3.6rem 0%,
+		100% 0,
+		100% calc(100% - 3.6rem),
+		calc(100% - 3.6rem) 100%,
+		0 100%
+	);
+	@include mq-down() {
+		padding-top: 11rem;
+		padding-right: 5rem;
+		padding-left: 5rem;
+		clip-path: polygon(
+			0% 2.5rem,
+			2.5rem 0%,
+			100% 0,
+			100% calc(100% - 2.5rem),
+			calc(100% - 2.5rem) 100%,
+			0 100%
+		);
+	}
+}
+
+.about03-numbers__item-number {
+	width: fit-content;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: 0;
+	img[src*="about-03-number-jutakukensu"] {
+		width: 34.6rem;
+	}
+	img[src*="about-03-number-jutakumenseki"] {
+		width: 48.6rem;
+	}
+	img[src*="about-03-number-uriage"] {
+		width: 51.8rem;
+	}
+	img[src*="about-03-number-nyukyo"] {
+		width: 52.6rem;
+	}
+	img[src*="about-03-number-rieki"] {
+		width: 47.2rem;
+	}
+	&:last-of-type {
+		margin-bottom: 1em;
+	}
+}
+
+.about03-numbers__item-body {
+	margin-top: 3.6rem;
+	text-align: center;
+	line-height: calc(34 / 16);
+	font-family: var(--font-sans-yakuhan-all);
+	@include mq-down() {
+		margin-top: 4.6rem;
+		text-align: left;
+		line-height: calc(52 / 26);
+		br {
+			display: none;
+		}
+	}
+}

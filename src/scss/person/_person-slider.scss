@@ -81,9 +81,15 @@
 	height: 3.2rem;
 	border-left: 1px solid currentColor;
 	border-bottom: 1px solid currentColor;
+	color: var(--key-color-black);
 	@include mq-down() {
 		width: 2.8rem;
 		height: 2.8rem;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		inset: -1em;
 	}
 }
 
