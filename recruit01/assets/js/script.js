@@ -44249,7 +44249,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_effect_creative_effect_creative_js__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(147);
 /* harmony import */ var _modules_effect_cards_effect_cards_js__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(148);
 /**
- * Swiper 8.4.6
+ * Swiper 8.4.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -44257,7 +44257,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Released under the MIT License
  *
- * Released on: January 17, 2023
+ * Released on: January 30, 2023
  */
 
 
@@ -45253,6 +45253,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "transform": function() { return /* binding */ transform; },
 /* harmony export */   "transition": function() { return /* binding */ transition; },
 /* harmony export */   "transitionEnd": function() { return /* binding */ transitionEnd; },
+/* harmony export */   "transitionStart": function() { return /* binding */ transitionStart; },
 /* harmony export */   "trigger": function() { return /* binding */ trigger; },
 /* harmony export */   "val": function() { return /* binding */ val; },
 /* harmony export */   "value": function() { return /* binding */ value; },
@@ -45260,15 +45261,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 /**
- * Dom7 4.0.4
+ * Dom7 4.0.6
  * Minimalistic JavaScript library for DOM manipulation, with a jQuery-compatible API
  * https://framework7.io/docs/dom7.html
  *
- * Copyright 2022, Vladimir Kharlampidi
+ * Copyright 2023, Vladimir Kharlampidi
  *
  * Licensed under MIT
  *
- * Released on: January 11, 2022
+ * Released on: February 2, 2023
  */
 
 
@@ -45764,6 +45765,22 @@ function trigger(...args) {
         delete el.dom7EventData;
       }
     }
+  }
+
+  return this;
+}
+
+function transitionStart(callback) {
+  const dom = this;
+
+  function fireCallBack(e) {
+    if (e.target !== this) return;
+    callback.call(this, e);
+    dom.off('transitionstart', fireCallBack);
+  }
+
+  if (callback) {
+    dom.on('transitionstart', fireCallBack);
   }
 
   return this;
@@ -57045,7 +57062,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _Applications_Prepros_app_Contents_Resources_app_asar_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_Applications_Prepros_app_Contents_Resources_app_asar_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _Applications_Prepros_app_Contents_Resources_app_asar_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/**\n * Swiper 8.4.6\n * Most modern mobile touch slider and framework with hardware accelerated transitions\n * https://swiperjs.com\n *\n * Copyright 2014-2023 Vladimir Kharlampidi\n *\n * Released under the MIT License\n *\n * Released on: January 17, 2023\n */\n\n@font-face{font-family:swiper-icons;src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.swiper{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}.swiper-android .swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-pointer-events{touch-action:pan-y}.swiper-pointer-events.swiper-vertical{touch-action:pan-x}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-3d,.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top,.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-horizontal.swiper-css-mode>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-vertical.swiper-css-mode>.swiper-wrapper{scroll-snap-type:y mandatory}.swiper-centered>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/**\n * Swiper 8.4.7\n * Most modern mobile touch slider and framework with hardware accelerated transitions\n * https://swiperjs.com\n *\n * Copyright 2014-2023 Vladimir Kharlampidi\n *\n * Released under the MIT License\n *\n * Released on: January 30, 2023\n */\n\n@font-face{font-family:swiper-icons;src:url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}.swiper{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}.swiper-android .swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-pointer-events{touch-action:pan-y}.swiper-pointer-events.swiper-vertical{touch-action:pan-x}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-3d,.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide,.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top,.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-horizontal.swiper-css-mode>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-vertical.swiper-css-mode>.swiper-wrapper{scroll-snap-type:y mandatory}.swiper-centered>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -57371,6 +57388,65 @@ function personScheduleAccordion() {
 
 
 
+/***/ }),
+/* 162 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "about01Slider": function() { return /* binding */ about01Slider; }
+/* harmony export */ });
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47);
+/* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(149);
+
+
+
+
+function about01Slider() {
+	const slider = document.querySelector(".swiper");
+
+	const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"](slider, {
+		modules: [swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_1__.Controller],
+		speed: 700,
+		loop: true,
+		spaceBetween: Number((0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10.25)),
+		slidesPerView: 1.3125,
+		centeredSlides: true,
+		allowTouchMove: true,
+		// spaceBetween: Number(remUnit(3.6)),
+		// autoHeight: true,
+		// preloadImages: false,
+		// lazy: {
+		// 	loadPrevNext: true,
+		// },
+		navigation: {
+			prevEl: "[data-slider-prev]",
+			nextEl: "[data-slider-next]",
+		},
+		on: {
+			resize: function () {
+				if (_vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches) {
+					swiper.params.spaceBetween = Number((0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10.2));
+				} else {
+					swiper.params.spaceBetween = Number((0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-4.8));
+				}
+			},
+		},
+		breakpoints: {
+			768: {
+				centeredSlides: true,
+				slidesPerView: 3,
+				spaceBetween: Number((0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-4.8)),
+			},
+		},
+	});
+}
+
+
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -57490,6 +57566,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _include_topVideo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(45);
 /* harmony import */ var _include_personSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(46);
 /* harmony import */ var _include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(161);
+/* harmony import */ var _include_about01Slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(162);
 /* bace import */
 
 
@@ -57506,6 +57583,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* person import */
 
+
+
+/* about01 import */
 
 
 if (
@@ -57532,6 +57612,9 @@ function init() {
 		case document.body.classList.contains("page-top"):
 			top();
 			break;
+		case document.body.classList.contains("page-about01"):
+			about01();
+			break;
 		case document.body.classList.value.includes("page-person0"): // elm.classList.valueで文字列取得してincludes()で部分一致
 			personSingle();
 			break;
@@ -57551,7 +57634,12 @@ function top() {
 	// topSections3();
 }
 
-// top
+// about01
+function about01() {
+	(0,_include_about01Slider__WEBPACK_IMPORTED_MODULE_10__.about01Slider)();
+}
+
+// person
 function personSingle() {
 	(0,_include_personSlider__WEBPACK_IMPORTED_MODULE_8__.personSlider)();
 	(0,_include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_9__.personScheduleAccordion)();

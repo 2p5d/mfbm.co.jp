@@ -20,6 +20,7 @@
 	// size unit
 	--vh: 1vh;
 	// parts
+	--scroll-bar-width: 15px;
 	--viewport-min-height: 740px;
 	--header-height: 8rem;
 	--header-menu-button-width: 4.5rem;
@@ -27,6 +28,7 @@
 	--content-width: 100rem;
 	--content-width-large: 118rem;
 	@include mq-down() {
+		--page-gutter: 5rem;
 		--header-menu-button-width: 5.6rem;
 		--header-height: 12.6rem;
 		--content-width-large: 100%;

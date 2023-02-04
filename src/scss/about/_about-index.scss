@@ -1,7 +1,4 @@
 /* .about-index
-
-	indexと各詳細ページで、インクルードして共通化するので、出し分け
-
    ========================================================================== */
 
 .about-index__item {
@@ -65,6 +62,11 @@
 	fill: currentColor;
 	@include mq-down() {
 		width: 5.4rem;
+		// .about-footer-links__content & {
+		// 	top: auto;
+		// 	bottom: 0;
+		// 	transform: none;
+		// }
 	}
 }
 

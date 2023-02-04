@@ -2,7 +2,7 @@ extends ../include/_layout.pug
 
 block vars
 	include ../include/_vars.pug
-	- var key = "about"
+	- var key = "about01"
 	- var page = pages[key]
 	- var root_path = '../';
 	- var assets_path = '../assets/';
@@ -12,53 +12,167 @@ block contents
 
 	main.main
 
-		.sub-index-header
-			h2.sub-index-header__title
-				span.sub-index-header__title-en.sub-index-header__title-en--about
-					svg(aria-label="ABOUT" viewBox="0 0 143 32")
-						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-about')
-				span.sub-index-header__title-jp
-					| MFBMを知る
+		.about-hero
+			.about-hero__content
+				h2.about-hero__title
+					span.about-hero__title-en
+						svg(aria-label="ABOUT" viewBox="0 0 143 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-about')
+					span.about-hero__title-jp
+						| MFBMの役割
+			.about-hero__bg
+				+picture({filename:'about-01-hero-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'355'},{breakpoint:true},{lazyload:false},{retina:true})
 
-		.about-index
 
-			.about-index__item
-				a(href=root_path + "about/about01.html") 
-					.about-index__item-content
-						h3.about-index__item-title
-							| MFBMの役割
-						p.about-index__item-text
-							| 三井不動産グループの中核企業として
+		section.about-header
+		
+			h2.about-header__title
+				| 三井不動産グループの
+				br
+				| 中核企業として
+				br
+				| ビジネスシーンから未来を変革します。
+
+		section.about-lead
+
+			.about-lead__content
+
+				.about-lead__image-01
+					+picture({filename:'about-01-image-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'547'},{height:'989'},{breakpoint:false},{lazyload:true},{retina:true})
+
+				.about-lead__body
+					.about-lead__text
+						p
+							| 私たち三井不動産ビルマネジメントは、
 							br
-							| ビジネスシーンから未来を創造します。
-						.about-index__item-icon
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-					.about-index__item-bg
-						+picture({filename:'about-index-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
+							| プロパティマネジメントという言葉が
+							br.active-sp
+							| 業界で浸透する以前から、
+							br
+							| 不動産価値の最大化を目的とした
+							br.active-sp
+							| ビル経営事業に関わる
+							br
+							| すべての業務を実践し地位を確立してきました。
+						p
+							| 社会・経済環境が目まぐるしく変化する現代においては、
+							br
+							| ビル経営事業でこれまでに培ってきた
+							br
+							| ノウハウを活かすだけでなく、
+							br
+							| 「新たな価値」を創出・提供することで、
+							br
+							| オフィスビルからビジネスシーンの未来を創造する
+							br
+							| 挑戦と変革を続けています。
 
-			.about-index__item
-				a(href=root_path + "about/about02.html") 
-					.about-index__item-content
-						h3.about-index__item-title
-							| ブランドビジョン
-						p.about-index__item-text
-							| ビジネスシーンの明日を変えていく
-						.about-index__item-icon
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-					.about-index__item-bg
-						+picture({filename:'about-index-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			.about-index__item
-				a(href=root_path + "about/about03.html") 
-					.about-index__item-content
-						h3.about-index__item-title
-							| MFBMの実績
-						p.about-index__item-text
-							| 挑戦・変革を続け新たな価値を創造します。
-						.about-index__item-icon
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-					.about-index__item-bg
-						+picture({filename:'about-index-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
+					.about-lead__chart
+						+picture({filename:'about-01-image-02'},{type:'webp',fallbackType:'png'},{alt:'三井不動産グループ'},{classes:['']},{width:'427'},{height:'437'},{breakpoint:true},{lazyload:true},{retina:true})
+
+		section.about01-middle
+		
+			.about01-middle__container
+			
+
+				h3.about01-middle__title-en
+					+picture({filename:'about-01-title-our-advantage'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'833'},{height:'164'},{breakpoint:false},{lazyload:true},{retina:false})
+
+
+				.about01-middle__container__inner
+
+					h3.about01-middle__title-jp
+						| 年月を経るたびに魅力を増す
+						br
+						| マネジメントのチカラ。
+
+					.about01-middle__body
+						p
+							| 「不動産事業」は大きく分けると「開発・流通・マネジメント」の３つに分けることができます。
+						p
+							| 「開発」は三井不動産などのディベロッパーと呼ばれる企業が担う役割。開発計画を立て、土地を取得し、ビルやマンションなどを、実際に建築・開発していきます。規模に応じて異なりますが、ひとつの開発案件は概ね3年くらいかけて行います。「流通」は開発した物件の売買、賃貸を行います。この領域はスピードが重要となり、物件ひとつひとつに関わる期間が短い代わりに、つぎつぎと新しい物件を扱います。「マネジメント」は私たちMFBMが担う事業領域です。分かりやすく説明すると「物件の経営・運営・管理」を幅広く担う役割となります。「マネジメント」領域は50年以上と非常に長い期間物件と関わり、当然オーナー、テナントとのつながりも深く、長く、強いものとなります。
+
+					h4.about01-middle__title-middle
+						| 物件は建物が完成したあとが非常に重要になる
+
+					.about01-middle__body
+						p.letter-spacing-pc-plus-0p0025
+							| 不動産事業者は物件に対して「今後どう使われていくか」「人々がどう働き、暮らしていくか」ということを考え、「こんな風に使ってほしい」といった想いを込めています。つまり不動産事業は開発や流通だけで終わったり、建てた時点で成功の可否が確定するものではありません。そこにどんな人や企業が集まり、暮らし、働いていくのか。物件が完成したあとの過程が非常に重要となるのです。
+						p
+							| また、不動産は数十年にわたる長い期間利用されるものです。「開発」の時点で描いた将来像と、時間が経過したあとに求められるものは、必ずしも一致するものではありません。不動産事業における「マネジメント」とは、そうした時代の変化やニーズに物件のあり方を今にアジャストし、経年劣化ではなく、そこで働く人々の環境にあわせた管理やニーズに応えた「経年優化（時間の経過とともに環境に馴染み、年月を経るたびに魅力を増していくこと）」を実現することなのです。
+
+					.about01-middle__image
+						+picture({filename:'about-01-image-03'},{type:'svg',fallbackType:''},{alt:'開発・流通・マネジメント'},{classes:['']},{width:'900'},{height:'408'},{breakpoint:false},{lazyload:true},{retina:false})
+
+
+		section.about01-footer
+			
+			h3.about01-footer__title
+				| ビジネスシーンから街づくりを。
+				br
+				| その根底にある
+				br.active-sp
+				| 「経年優化」という思想。
+
+			.about01-footer__body
+				p
+					| 三井不動産グループには、時を経るにつれてさらに価値を高めていく「経年優化」という街づくりの思想があります。
+				p
+					| たとえば日本初の超高層ビルとして知られる「霞が関ビルディング」。1968年の竣工から50余年を経てもなお、霞が関エリアのシンボルとして親しまれているのも、「経年優化」の思想のもと、私たちがビルオーナーと手を携え、オフィスビルの価値を維持・発展させてきたからにほかなりません。
+				p
+					| その他にも、日本のビジネスの中心拠点、赤坂エリアの再開発によって生まれた「赤坂サカス 赤坂Bizタワー」や、江戸時代から金融と商業の街である日本橋の再開発の象徴ともいえる「日本橋三井タワー」。そして、国際ビジネスと芸術文化の最先端をいく街として長い歴史を持つ日比谷から、“未来志向の新たな体験や価値の創造”を世界に向けて発信する「東京ミッドタウン日比谷」といったオフィスビルの運営も、「経年優化」の思想を体現したものです。
+				p
+					| 私たち三井不動産ビルマネジメントは、三井不動産グループの中核企業として、「ビジネスシーンの未来」を提示するとともに、「経年優化」を進めていきます。
+
+
+		section.about01-slider
+		
+			.about01-slider__items
+
+				button.about01-slider__prev(data-slider-prev)
+					.about01-slider__prev-icon
+				button.about01-slider__next(data-slider-next)
+					.about01-slider__next-icon
+				
+				.swiper
+					.swiper-wrapper
+					
+						.about01-slider__item.swiper-slide
+							.about01-slider__item-image
+								+picture({filename:'about-01-slide-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'303'},{height:'222'},{breakpoint:true},{lazyload:true},{retina:true})
+							h4.about01-slider__item-title
+								| 日本橋三井タワー
+
+						.about01-slider__item.swiper-slide
+							.about01-slider__item-image
+								+picture({filename:'about-01-slide-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'303'},{height:'222'},{breakpoint:true},{lazyload:true},{retina:true})
+							h4.about01-slider__item-title
+								| コレド室町
+
+						.about01-slider__item.swiper-slide
+							.about01-slider__item-image
+								+picture({filename:'about-01-slide-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'303'},{height:'222'},{breakpoint:true},{lazyload:true},{retina:true})
+							h4.about01-slider__item-title
+								| 赤坂サカス 赤坂Bizタワー
+
+						.about01-slider__item.swiper-slide
+							.about01-slider__item-image
+								+picture({filename:'about-01-slide-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'303'},{height:'222'},{breakpoint:true},{lazyload:true},{retina:true})
+							h4.about01-slider__item-title
+								| 飯田橋グランブルーム
+
+						.about01-slider__item.swiper-slide
+							.about01-slider__item-image
+								+picture({filename:'about-01-slide-05'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'303'},{height:'222'},{breakpoint:true},{lazyload:true},{retina:true})
+							h4.about01-slider__item-title
+								| 現在の霞ヶ関ビルディング
+
+		section.about-footer-links
+		
+			.about-footer-links__header
+				a(href=root_path + "about/").about-footer-links__back-to-index
+					| ABOUT一覧へ戻る
+
+			.about-footer-links__content
+				include ../include/_about-index-content.pug
