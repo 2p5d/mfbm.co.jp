@@ -1,0 +1,73 @@
+/* .recruit-table
+   ========================================================================== */
+
+.recruit-table {
+    display: flex;
+    font-family: var(--font-sans);
+
+    &:nth-of-type(odd) {
+        background-color: #eef2f2;
+    }
+
+    &:nth-of-type(even) {
+        background-color: #f2f2f2;
+    }
+
+    &:not(:first-of-type) {
+        margin-top: 2rem;
+    }
+
+    &__th,
+    &__td {
+        display: flex;
+        align-items: center;
+        padding: 4rem 5rem;
+    }
+
+    &__th {
+        position: relative;
+        flex: 0 0 18rem;
+        font-weight: 700;
+        color: var(--key-color-blue);
+        border-right: 1px solid #fff;
+    }
+
+    &__td {
+        flex: 1 1 auto;
+        line-height: calc(3.4rem / 1.6rem);
+    }
+
+
+	@include mq-down() {
+        flex-direction: column;
+
+        &__th {
+            border-right: 0;
+            justify-content: center;
+            padding-top: 6.8rem;
+            padding-bottom: 4rem;
+            width: auto;
+            font-size: 3rem;
+            flex: 0;
+            line-height: 1.2;
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                content: "";
+                display: block;
+                width: calc(100% - 10rem);
+                height: 1px;
+                background-color: #fff;
+                transform: translateX(-50%);
+            }
+        }
+        
+        &__td {
+            font-size: 2.6rem;
+            padding: 5rem;
+            line-height: calc(5.2rem / 2.6rem);
+        }
+	}
+}

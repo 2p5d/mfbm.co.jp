@@ -1,0 +1,11 @@
+/* .recruit-content
+   ========================================================================== */
+
+.recruit-content {
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+        padding: 0 var(--page-gutter);
+	}
+}

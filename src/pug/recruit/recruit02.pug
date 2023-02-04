@@ -2,7 +2,7 @@ extends ../include/_layout.pug
 
 block vars
 	include ../include/_vars.pug
-	- var key = "recruit-faq"
+	- var key = "recruit02"
 	- var page = pages[key]
 	- var root_path = '../';
 	- var assets_path = '../assets/';
@@ -12,68 +12,305 @@ block contents
 
 	main.main
 
-		.sub-index-header
-			h2.sub-index-header__title
-				span.sub-index-header__title-en.sub-index-header__title-en--person
-					svg(aria-label="PERSON" viewBox="0 0 159 32")
+		.recruit-header
+			h2.recruit-header__title
+				span.recruit-header__title-en
+					svg(aria-label="RECRUIT" viewBox="0 0 190 32")
 						use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-recruit')
-				span.sub-index-header__title-jp
-					| 働く人を知る
+				span.recruit-header__title-jp
+					| FAQ
+
+		ul.recruit-faq-anchor
+			li.recruit-faq-anchor__item 
+				a.recruit-faq-anchor__link(href="#faq01") 
+					span.recruit-faq-anchor__text 
+						| 選考について
+					i.recruit-faq-anchor__icon 
+						svg(aria-label="↓" viewBox="0 0 56 32").recruit-faq-anchor__chev 
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron') 
+			li.recruit-faq-anchor__item 
+				a.recruit-faq-anchor__link(href="#faq02") 
+					span.recruit-faq-anchor__text 
+						| 仕事・人事制度について
+					i.recruit-faq-anchor__icon 
+						svg(aria-label="↓" viewBox="0 0 56 32").recruit-faq-anchor__chev 
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron') 
+			li.recruit-faq-anchor__item 
+				a.recruit-faq-anchor__link(href="#faq03") 
+					span.recruit-faq-anchor__text 
+						| 教育・研修制度について
+					i.recruit-faq-anchor__icon 
+						svg(aria-label="↓" viewBox="0 0 56 32").recruit-faq-anchor__chev 
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron') 
+			li.recruit-faq-anchor__item 
+				a.recruit-faq-anchor__link(href="#faq04") 
+					span.recruit-faq-anchor__text 
+						| その他
+					i.recruit-faq-anchor__icon 
+						svg(aria-label="↓" viewBox="0 0 56 32").recruit-faq-anchor__chev 
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron') 
+				
+			
+		.recruit-content.recruit02(id="faq01")
+			h2.recruit02__head 選考について
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 採用職種について教えてください。
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 採用職種としては、総合職・一般職の2職種での採用を行っています。ご自身の希望職種を決定した上でご応募ください。
+			
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 選考スケジュールについて教えてください。	
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 説明会や選考の日程に関しては、基本的にマイページを通じてご案内させていただいております。まずは本ホームページ左下のリンクより
+							a.faq-section-link(href="") エントリー
+							| の手続きをお願いいたします。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 理系・文系で違いはありますか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 理系・文系に分けた採用は行っていません。当社が展開している事業では、文系・理系を問わず様々な分野に挑戦できるフィールドが広がっています。文系・理系と分けるのではなく、一人ひとりが幅広い知識を持ち専門性を高めていくことを目的としているからです。
+			
+		.recruit-content.recruit02(id="faq02")
+			h2.recruit02__head 仕事・人事制度について
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 配属はどのように決められるのですか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 本人の希望、適性、能力を総合的に判断し、今後のキャリア形成を考えたうえで会社が配属先を決定していきます。
+			
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 入社後のキャリアパスはどのようになるのですか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| ジョブローテーションによって様々な経験を積んでいただきます。幅広くかつ専門的な知識を身につけてもらうために、3年〜5年のスパンで複数の部署を経験します。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 仕事をする上で必要な資格はありますか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 総合職、一般職ともに、業務を行う上で必要とされる資格を必須資格として定義して取得の推進を行っています。（宅地建物取引士など）資格については、必ずしも取得することだけが目的ではなく、自ら勉強していくという姿勢を問うために資格取得の奨励を行っています。この姿勢は、業務を行う上でも重要であると考えています。 資格取得に関しては、教材費や受験費等の補助、そして報奨金の支給もあります。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 転勤はありますか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 総合職として採用された場合、転勤の可能性がありますが、入社してすぐ地方支店に配属することはありません。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 配属先・勤務地はいつ決定するのですか？	
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 新入社員研修終了後、決定します。
+			
+		.recruit-content.recruit02(id="faq03")
+			h2.recruit02__head 教育・研修制度について
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 新入社員の研修について教えてください。
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 当HP上の
+							a.faq-section-link-b(href=root_path + "recruit/recruit01.html") 【研修育成制度】
+							|をご覧ください。
+			
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 専門知識はどのように身につけるのでしょうか。
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 当社では、業務知識研修など、社員のスキルをバックアップする研修を用意しており、必要に応じて実施していきます。詳しくは当HP上の
+							a.faq-section-link-b(href=root_path + "recruit/recruit01.html") 【研修育成制度】
+							|をご覧ください。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 配属後の研修はどのようなものがありますか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 当HP上の
+							a.faq-section-link-b(href=root_path + "recruit/recruit01.html") 【研修育成制度】
+							|をご覧ください。
+			
+		.recruit-content.recruit02(id="faq04")
+			h2.recruit02__head その他
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 学部卒と院卒で違いはありますか？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 学部卒と院卒での入社後の待遇に違いはありません。
+			
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 福利厚生について
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 在宅財形貯蓄、住宅取得補助、グループ会社持株制度、各種保険料補助、各祝金（結婚・出産）、リフレッシュ休暇、カフェテリアプラン（旅費や宿泊施設等の利用補助）、部活・サークルなど福利厚生は充実しています。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 独身寮について
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 借上げ社宅制度を実施しています。一般住居を借上げ、社宅として月2万円で利用することができる制度です。30歳未満の単身者で実家からの通勤が著しく困難と会社が認めた場合について適用されます。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| クラブやサークル活動について
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 現在7つの部活と2つの同好会があります。野球部、テニス部、バスケットボール部、釣り部、サッカー部、卓球部、音楽部、水泳同好会、サーフィン同好会。平日の就業時間後や休日に活動しています。社員同士の交流の場として、息抜きとして、多くの社員が参加しています。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 男女の比率は？
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 会社全体でいうと、男女の比率は、ほぼ2:1です。もちろん部署によっても比率は大きく異なります。
+
+			dl.faq-section
+				dt.faq-section__q(data-accordion-trigger)
+					span.faq-section__q-icon
+						span.faq-section__q-icon-inner Q
+					span.faq-section__q-text
+						| 育児休業制度について
+				dd.faq-section__a(data-accordion-content)
+					.faq-section__a-inner
+						span.faq-section__a-icon
+							span.faq-section__a-icon-inner A
+						span.faq-section__a-text
+							| 産前産後休暇、育児休業、育児支援のための措置などの制度があります。産前産後休暇は、産前6週間・産後8週間、育児休業は、育児休業法に基づき原則出産後対象となる子が満一歳に達するまで取得することができます。また復職後は育児短時間勤務制度などを敷くことにより育児のバックアップも行っています。
+
+		.recruit-content.recruit-return-index 
+			a(href=root_path + "recruit/")
+				| RECRUIT一覧へ戻る
 
 		.recruit-index
-
-			//- アコーディオン入れておきます。実際のサイトはこれです。
-					https://www.meisei-c.co.jp/recruit/employment/?tab=faq
-
-					scss：src/scss/recruit/_faq.scss"
-					js：src/script/include/accordion.js;
-
-			dt.faq-section__q(data-accordion-trigger)
-				span.faq-section__q-icon
-					span.faq-section__q-icon-inner Q
-				span.faq-section__q-text
-					| 資格の有無は採用に有利になりますか？
-			dd.faq-section__a(data-accordion-content)
-				.faq-section__a-inner
-					span.faq-section__a-icon
-						span.faq-section__a-icon-inner A
-					span.faq-section__a-text
-						| 資格の有無は採用基準ではありませんので、有利・不利等はございません。
-						br
-						| 内定後に必ず取得していただく資格も特にございませんが、入社後に必要に応じて資格を取得していただいた場合は、資格手当を支給いたします。（社内規定による）
-
-			dt.faq-section__q(data-accordion-trigger)
-				span.faq-section__q-icon
-					span.faq-section__q-icon-inner Q
-				span.faq-section__q-text
-					| 応募年齢に制限はありますか？
-			dd.faq-section__a(data-accordion-content)
-				.faq-section__a-inner
-					span.faq-section__a-icon
-						span.faq-section__a-icon-inner A
-					span.faq-section__a-text
-						| 長期勤続によるキャリア形成を図る観点により、18歳～30歳までとさせていただいております。
-
-			dt.faq-section__q(data-accordion-trigger)
-				span.faq-section__q-icon
-					span.faq-section__q-icon-inner Q
-				span.faq-section__q-text
-					| 異業種からの応募は可能でしょうか？
-			dd.faq-section__a(data-accordion-content)
-				.faq-section__a-inner
-					span.faq-section__a-icon
-						span.faq-section__a-icon-inner A
-					span.faq-section__a-text
-						| 可能です。通信業界未経験で入社された方の多くが、入社後に大変活躍されています。
-
-			dt.faq-section__q(data-accordion-trigger)
-				span.faq-section__q-icon
-					span.faq-section__q-icon-inner Q
-				span.faq-section__q-text
-					| 英語力は必要でしょうか？
-			dd.faq-section__a(data-accordion-content)
-				.faq-section__a-inner
-					span.faq-section__a-icon
-						span.faq-section__a-icon-inner A
-					span.faq-section__a-text
-						| 特に必要ありません。
+			ul.recruit-index__list
+				li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--01(href=root_path + "recruit/recruit01.html")
+						span 研修教育制度
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				//- li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--02(href=root_path + "recruit/recruit02.html")
+						span FAQ
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--03(href=root_path + "recruit/recruit03.html")
+						span 募集要項
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				li.recruit-index__list-item
+					a.recruit-index__link.recruit-index__link--04(href=root_path + "recruit/recruit04.html")
+						span お問い合わせ
+							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')

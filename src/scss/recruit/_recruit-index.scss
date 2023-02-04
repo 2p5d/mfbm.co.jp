@@ -55,6 +55,11 @@
             opacity: .75;
         }
 
+        &:visited,
+        &:focus {
+            color: #fff;
+        }
+
         @include mq-down() {
             height: 12rem;
             font-size: 3.4rem;
@@ -71,6 +76,7 @@
         transform: translateY(-50%);
         width: 3.1rem;
         fill: #fff;
+        
         @include mq-down() {
             right: 6.3rem;
         }
