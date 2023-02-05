@@ -1,0 +1,63 @@
+/* .business-hero
+   ========================================================================== */
+
+.business-hero {
+	position: relative;
+}
+
+.business-hero__content {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: flex-end;
+	width: var(--content-width-large);
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		left: 0;
+		transform: none;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+	}
+}
+
+.business-hero__title {
+	margin-bottom: 21.3rem;
+	color: var(--key-color-blue);
+	@include mq-down() {
+		margin-bottom: 28rem;
+	}
+	> span {
+		display: block;
+	}
+}
+
+.business-hero__title-en {
+	width: 52.3rem;
+	line-height: 0;
+	fill: currentColor;
+	@include mq-down() {
+		width: 35.3rem;
+	}
+}
+
+.business-hero__title-jp {
+	margin-top: 0.125em;
+	font-size: 2.8rem;
+	@include mq-down() {
+		margin-top: 0.25em;
+		font-size: 3.2rem;
+	}
+}
+
+.business-hero__bg {
+	// width: calc((977 / 1400) * 100%);
+	width: 97.7rem;
+	margin-left: auto;
+	@include mq-down() {
+		width: 65rem;
+	}
+}

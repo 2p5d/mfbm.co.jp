@@ -71,3 +71,15 @@ $breakpoint-ratio: (
 @function artBoardRatioSp($value, $viewport) {
 	@return calc((#{$value} / 640) * #{$viewport});
 }
+
+@function containerRatio($value, $containerValue) {
+	@return calc((#{$value} / #{$containerValue}) * 100%);
+}
+
+@function artBoardRatio($value, $viewport) {
+	@return calc((#{$value} / 1400) * #{$viewport});
+}
+
+@function artBoardRatioSp($value, $viewport) {
+	@return calc((#{$value} / 640) * #{$viewport});
+}

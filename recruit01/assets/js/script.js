@@ -57447,6 +57447,80 @@ function about01Slider() {
 
 
 
+/***/ }),
+/* 163 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "businessHover": function() { return /* binding */ businessHover; }
+/* harmony export */ });
+function businessHover() {
+	const navigationTriggers = document.querySelectorAll(
+			".business-fields__navigation [data-modal-trigger]"
+		),
+		mapTriggers = document.querySelectorAll(
+			".business-fields__map-triggers-and-over-images [data-modal-trigger]"
+		),
+		hoverNavigationTrigger = (event) => {
+			const trigger = event.currentTarget,
+				triggerId = trigger.dataset.modalTrigger;
+
+			for (let i = 0; i < mapTriggers.length; i++) {
+				const mapTriggerId = mapTriggers[i].dataset.modalTrigger;
+
+				if (mapTriggers[i].classList.contains("--hover")) {
+					mapTriggers[i].classList.remove("--hover");
+				} else if (triggerId === mapTriggerId) {
+					mapTriggers[i].classList.add("--hover");
+				}
+			}
+		},
+		leaveNavigationTrigger = (event) => {
+			mapTriggers.forEach((trigger) => {
+				if (trigger.classList.contains("--hover")) {
+					trigger.classList.remove("--hover");
+				}
+			});
+		},
+		hoverMapTrigger = (event) => {
+			console.log(event.currentTarget);
+			const trigger = event.currentTarget,
+				triggerId = trigger.dataset.modalTrigger;
+
+			for (let i = 0; i < navigationTriggers.length; i++) {
+				const navigationTriggerId = navigationTriggers[i].dataset.modalTrigger;
+
+				if (navigationTriggers[i].classList.contains("--hover")) {
+					navigationTriggers[i].classList.remove("--hover");
+				} else if (triggerId === navigationTriggerId) {
+					navigationTriggers[i].classList.add("--hover");
+				}
+			}
+		},
+		leaveMapTrigger = (event) => {
+			navigationTriggers.forEach((trigger) => {
+				if (trigger.classList.contains("--hover")) {
+					trigger.classList.remove("--hover");
+				}
+			});
+		};
+
+	navigationTriggers.forEach((trigger) => {
+		trigger.addEventListener("mouseenter", hoverNavigationTrigger);
+		trigger.addEventListener("mouseleave", leaveNavigationTrigger);
+	});
+
+	mapTriggers.forEach((trigger) => {
+		trigger.addEventListener("mouseenter", hoverMapTrigger);
+		trigger.addEventListener("mouseleave", leaveMapTrigger);
+	});
+}
+
+
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -57567,6 +57641,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _include_personSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(46);
 /* harmony import */ var _include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(161);
 /* harmony import */ var _include_about01Slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(162);
+/* harmony import */ var _include_businessHover__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(163);
 /* bace import */
 
 
@@ -57586,6 +57661,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* about01 import */
+
+
+/* business import */
 
 
 if (
@@ -57615,6 +57693,9 @@ function init() {
 		case document.body.classList.contains("page-about01"):
 			about01();
 			break;
+		case document.body.classList.contains("page-business"):
+			business();
+			break;
 		case document.body.classList.value.includes("page-person0"): // elm.classList.valueで文字列取得してincludes()で部分一致
 			personSingle();
 			break;
@@ -57637,6 +57718,11 @@ function top() {
 // about01
 function about01() {
 	(0,_include_about01Slider__WEBPACK_IMPORTED_MODULE_10__.about01Slider)();
+}
+
+// business
+function business() {
+	(0,_include_businessHover__WEBPACK_IMPORTED_MODULE_11__.businessHover)();
 }
 
 // person

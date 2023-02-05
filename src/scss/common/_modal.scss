@@ -14,17 +14,11 @@
 
 .modal__inner {
 	background-color: white;
-	// .modal.modal--menu & {
-	// 	// ↓ヘッダーの重なりを考慮するケース
-	// 	margin-top: 8.8rem;
-	// 	height: calc(100vh - 8.8rem) !important;
-	// }
-	.modal.modal--pop-up & {
-		// ↓ヘッダーの重なりを考慮するケース
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background-color: rgba(0, 0, 0, 0.85);
+	.modal.modal--building &,
+	.modal.modal--solution &,
+	.modal.modal--management & {
+		background-color: rgba(74, 96, 119, 0.9);
+		// mix-blend-mode: multiply;
 	}
 	// ↓ [data-modal-content]の値をmodal.jsでclassにふるので、個別のスタイルの設定
 	// .modal.modal--値 & {

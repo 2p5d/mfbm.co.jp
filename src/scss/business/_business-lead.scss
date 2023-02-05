@@ -1,0 +1,38 @@
+/* .business-lead
+   ========================================================================== */
+
+.business-lead {
+	margin-top: 1.6rem;
+	@include mq-down() {
+		margin-top: 0;
+	}
+}
+
+.business-lead__title {
+	text-align: center;
+	line-height: calc(67 / 40);
+	font-size: 4rem;
+	font-weight: 500;
+	color: var(--key-color-blue);
+	@include mq-down() {
+		line-height: calc(66 / 38);
+		font-size: 3.8rem;
+	}
+}
+
+.business-lead__body {
+	width: var(--content-width);
+	margin-top: 6.4rem;
+	margin-right: auto;
+	margin-left: auto;
+	line-height: calc(34 / 16);
+	text-align: justify;
+	font-family: var(--font-sans-yakuhan-all);
+	// font-weight: 500;
+	@include mq-down() {
+		margin-top: 10rem;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		line-height: calc(52 / 26);
+	}
+}

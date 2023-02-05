@@ -1,0 +1,226 @@
+extends include/_layout.pug
+
+block vars
+	include include/_vars.pug
+	- var key = "business"
+	- var page = pages[key]
+	- var root_path = '';
+	- var assets_path = 'assets/';
+
+
+block contents
+
+	main.main
+
+		.business-wrapper
+
+			.business-hero
+				.business-hero__content
+					h2.business-hero__title
+						span.business-hero__title-en
+							svg(aria-label="BUSINESS" viewBox="0 0 193 32")
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-business')
+						span.business-hero__title-jp
+							| 事業を知る
+				.business-hero__bg
+					+picture({filename:'business-hero-bg'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'977'},{height:'657'},{breakpoint:true},{lazyload:true},{retina:true})
+
+
+			.business-lead
+				h3.business-lead__title
+					| オフィスビル、テナント企業、
+					br.active-sp
+					| そしてオフィスで働く人々。
+					br
+					| ビジネスに関わるすべてが
+					br
+					| MFBMのフィールドです。
+				.business-lead__body
+					p
+						| ビジネスの成長を求める企業。仕事と暮らしの豊かさを望む人々。その姿はオフィスというステージの様々な場面（シーン）の中にあります。お客様のいちばん近くに寄り添い、ともに歩んできた私たちMFBMは、30余年におよぶ歴史のなかで培った「ビル経営事業」とテナント企業の成長・発展に貢献する「ソリューションサービス事業」、そしてオフィスビルを中心とした街づくりを「エリアマネジメント事業」により、オフィスを舞台としたビジネスシーンにおける存在感をさらに高めています。
+
+			.business-fields
+
+				h3.business-fields__title-pc
+					+picture({filename:'business-fields-title'},{type:'svg',fallbackType:''},{alt:'BUSINESS FIELDS'},{classes:['']},{width:'478'},{height:'40'},{breakpoint:false},{lazyload:true},{retina:false})
+
+				.business-fields__container
+
+					.business-fields__navigation
+
+						button.business-fields__navigation-button(data-modal-trigger="building")
+							span.business-fields__navigation-button-text
+								| ビル経営事業
+							svg(aria-label="→" viewBox="0 0 56 32").business-fields__navigation-button-icon
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
+
+						button.business-fields__navigation-button(data-modal-trigger="solution")
+							span.business-fields__navigation-button-text
+								| ソリューションサービス事業
+							svg(aria-label="→" viewBox="0 0 56 32").business-fields__navigation-button-icon
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
+
+						button.business-fields__navigation-button(data-modal-trigger="management")
+							span.business-fields__navigation-button-text
+								| エリアマネジメント事業
+							svg(aria-label="→" viewBox="0 0 56 32").business-fields__navigation-button-icon
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
+		
+					.business-fields__map
+
+
+						.business-fields__map-default-images
+							+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+							+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+							+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+
+
+						.business-fields__map-triggers-and-over-images
+
+							//- 
+								画像の重なりの関係で、hoverがうまく効かない。
+								透過させたボタンを表示用の画像と同ポジで配置し、
+								"management"と"building"をテレコにすることで、
+								ホバーイベントの順序を解決し、トリガーとする。
+								ホバーの判定は兄弟セレクター（トリガー + hover画像）
+
+							//- トリガー
+							button(data-modal-trigger="management")
+								+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+
+							//- //- hover画像
+							+picture({filename:'business-fields-management-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'637.9037'},{height:'458.4343'},{breakpoint:true},{lazyload:true},{retina:true})
+
+							//- トリガー
+							button(data-modal-trigger="building")
+								+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},	{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+
+							//- hover画像
+							+picture({filename:'business-fields-building-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'400.8151'},{height:'391.3909'},{breakpoint:true},{lazyload:true},{retina:true})
+
+							//- トリガー
+							button(data-modal-trigger="solution")
+								+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+						
+							//- hover画像
+							+picture({filename:'business-fields-solution-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+
+
+						.business-fields__sp-map-icons
+							+picture({filename:'business-fields-solution-sp-point'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'86'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
+							+picture({filename:'business-fields-building-sp-point'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'86'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
+							+picture({filename:'business-fields-management-sp-point'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'86'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
+
+
+		//- .modal.modal--business
+		//- 	.modal__inner 
+
+		//-
+				------  building　modal ------ 
+
+		.business-modal(data-modal-content="building" data-modal-close-exclusion)
+			p.business-modal__label
+				| ビル経営事業
+			h2.business-modal__title
+				| ビジネスシーンの拠点となる
+				br
+				| オフィスビルの経営を
+				br.active-sp
+				| 一手に担う
+			.business-modal__body
+				p
+					| 創業以来、大規模、中規模に至るさまざまなオフィスビルに精通し、数千社のテナント企業が入り、数十万人が働くオフィスの最前線にいるMFBMは、ビルオーナーに代わりビルを経営し、テナント企業に対してビジネスシーンの拠点となるオフィスを提供しています。プロパティマネジメント会社に求められるすべてのサービスを提供し、その高い品質で物件収益力を最大限発揮する「ビル経営事業」のプロとして、オフィスビルの経営を一手に担います。
+			.business-modal__body-image
+				+picture({filename:'business-modal-building-image-01'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'474'},{height:'215'},{breakpoint:true},{lazyload:true},{retina:false})
+			.business-modal__point
+				p.business-modal__point-label
+					| POINT
+				h3.business-modal__point-title
+					| ビルオーナーと同じ視座から、
+					br.active-sp
+					| オフィスビルを経営する。
+				.business-modal__point-body
+					.business-modal__point-body-text
+						p
+							| ビル経営事業に必要なのは、ビルを所有するビルオーナー（企業や個人）と同じ視座の高さを持つこと。求められるのはオフィスビルの施設や設備を管理する能力だけではなく、オフィスビル全体の価値を最大化するために中長期的なオフィスビルの在り方を、ビルオーナーに代わって考え実践するチカラ。建てて終わりではない、ビルマネジメントの醍醐味がここにあります。
+					.business-modal__point-image
+						+picture({filename:'business-modal-building-image-02'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'170'},{height:'195'},{breakpoint:false},{lazyload:true},{retina:false})
+				button.business-modal__sp-close-button.modal-close
+					| close
+
+
+			button.business-modal__close.modal-close
+				.business-modal__close-icon
+
+
+		//- 
+				------ solution modal ------ 
+
+		.business-modal(data-modal-content="solution" data-modal-close-exclusion)
+			p.business-modal__label
+				| ソリューションサービス事業
+			h2.business-modal__title
+				| テナント企業の成長・発展を
+				br
+				| 多様なソリューションで支える
+			.business-modal__body
+				p
+					| MFBMは現在「テナントからの評価が最も高いプロパティマネジメント会社」としてのプレゼンスを確立すべく、各テナント企業およびビルオーナーの発展を支援する各種ソリューションサービスを提供しています。単なる“オーナーとPM会社”“テナント企業とPM会社”の関係性を超え、ビジネスをあらゆる角度から支援するビジネスパートナーとして、ビルオーナーや入居テナント企業のニーズに応え続けることはもちろん、環境の変化を先んじて捉え、“働く”ことのいちばん近くにいる私たちMFBMにしかできない、ソリューションを提供します。
+			.business-modal__body-image
+				+picture({filename:'business-modal-solution-image-01'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'479'},{height:'219'},{breakpoint:true},{lazyload:true},{retina:false})
+			.business-modal__point
+				p.business-modal__point-label
+					| POINT
+				h3.business-modal__point-title
+					| 多彩なアイデアで、
+					br.active-sp
+					| 課題の本質を見抜き解決する。
+				.business-modal__point-body
+					.business-modal__point-body-text
+						p
+							| 潜在的な課題やニーズを掘り起こし、さまざまなソリューションで解決するソリューションサービス事業。求められるのはビルオーナーやテナント企業、働く人々に寄り添い、より多くの情報を収集し、課題の本質を見抜き解決するチカラ。三井不動産グループをはじめ、MFBMが有する多彩なリソースを組み合わせることで、新たな価値を生み出すこと。新しい時代のオフィスビルの在り方を提案します。
+					.business-modal__point-image
+						+picture({filename:'business-modal-solution-image-02'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'154'},{height:'192'},{breakpoint:false},{lazyload:true},{retina:false})
+				button.business-modal__sp-close-button.modal-close
+					| close
+
+
+			button.business-modal__close.modal-close
+				.business-modal__close-icon
+
+
+		//- 
+				------ solution modal ------ 
+
+		.business-modal(data-modal-content="management" data-modal-close-exclusion)
+			p.business-modal__label
+				| エリアマネジメント事業
+			h2.business-modal__title
+				| ビジネスシーンを中心とした
+				br
+				| MFBMならではの
+				br.active-sp
+				| 長期的な街づくり
+			.business-modal__body
+				p
+					| オフィスビルを拠点としたビジネスシーンの変革は、そのままオフィスビルを中心としたエリアの発展へと拡がっていきます。MFBMではビルオーナーやテナント企業へ、ビル経営事業とソリューション事業を通じて価値を提供することで、企業で働く人々だけでなく社会や地域とつながり、従来のオフィスビルの役割を超えた、オフィスビルを中心とした新たなコミュニティや街づくりの実現を目指します。
+			.business-modal__body-image
+				+picture({filename:'business-modal-management-image-01'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'457'},{height:'204'},{breakpoint:true},{lazyload:true},{retina:false})
+			.business-modal__point
+				p.business-modal__point-label
+					| POINT
+				h3.business-modal__point-title
+					| 自由な発想で、
+					br.active-sp
+					| ビジネスシーンの未来を描く。
+				.business-modal__point-body
+					.business-modal__point-body-text
+						p.letter-spacing-pc-plus-0p0025
+							| 従来のプロパティマネジメントの領域を超え、オフィスビルを中心としたエリア全体を経営するエリアマネジメント事業。オフィスビル単体ではなく、複数の物件を点ではなく面で捉え、地域や街といった大きなスケールで時間と空間をマネジメントし、既存の事業領域に捉われない自由な発想で、ビジネスシーンの未来を描きます。
+					.business-modal__point-image
+						+picture({filename:'business-modal-management-image-02'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'159'},{height:'198'},{breakpoint:false},{lazyload:true},{retina:false})
+				button.business-modal__sp-close-button.modal-close
+					| close
+
+			button.business-modal__close.modal-close
+				.business-modal__close-icon
