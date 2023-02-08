@@ -11,6 +11,9 @@
 	height: var(--header-height);
 	// background-color: white;
 	z-index: 999;
+	body.--scroll-bar-padding-active & {
+		padding-right: var(--scroll-bar-width);
+	}
 }
 
 .header__inner {
@@ -111,9 +114,10 @@
 }
 
 .header__link {
-	display: block;
+	display: flex;
 	width: 13.5rem;
 	height: 5rem;
+	justify-content: center;
 	text-align: center;
 	@include mq-down() {
 		width: 17rem;

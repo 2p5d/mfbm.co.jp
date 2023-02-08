@@ -1,5 +1,6 @@
 /* bace import */
 import "./include/webFontConfig";
+import { setScrollBarWidth } from "./include/vars";
 import { modal } from "./include/modal";
 import Chart from "chart.js/auto";
 // import { viewPortHeight } from "./include/viewPortHeight";
@@ -42,6 +43,7 @@ function init() {
 	smoothScroll();
 	toggleToTop();
 	accordion();
+	setScrollBarWidth();
 	switch (true) {
 		case document.body.classList.contains("page-top"):
 			top();

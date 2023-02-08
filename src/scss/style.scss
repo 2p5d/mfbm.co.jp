@@ -73,6 +73,12 @@
 @import "job/_job-sections.scss";
 @import "job/_job-list.scss";
 
+/* project */
+@import "project/_project-hero.scss";
+@import "project/_project-lead.scss";
+@import "project/_project-sections.scss";
+@import "project/_project-message.scss";
+
 /* recruit */
 @import "recruit/_recruit-header.scss";
 @import "recruit/_recruit-index.scss";
@@ -85,3 +91,14 @@
 @import "recruit/_recruit-inquiry.scss";
 @import "recruit/_recruit-frame.scss";
 @import "recruit/_recruit-induction.scss";
+
+/* culture */
+@import "culture/_culture-hero.scss";
+@import "culture/_culture-lead.scss";
+@import "culture/_culture-sections.scss";
+
+/* movie */
+@import "movie/_movie-hero.scss";
+@import "movie/_movie-lead.scss";
+@import "movie/_movie-list.scss";
+@import "movie/_modal-movie.scss";

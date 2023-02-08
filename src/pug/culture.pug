@@ -1,0 +1,286 @@
+extends include/_layout.pug
+
+block vars
+	include include/_vars.pug
+	- var key = "culture"
+	- var page = pages[key]
+	- var root_path = '';
+	- var assets_path = 'assets/';
+
+
+block contents
+
+	main.main
+
+		.culture-hero
+			//- h2.culture-hero__title
+			//- 	span.culture-hero__title-en
+			//- 		+picture({filename:'culture-hero-title'},{type:'svg',fallbackType:''},{alt:'culture STORY'},{classes:['']},{width:'901'},{height:'108'},{breakpoint:true},{lazyload:false},{retina:false})
+			//- 	span.culture-hero__title-jp
+			//- 		+picture({filename:'culture-hero-sub-title'},{type:'svg',fallbackType:''},{alt:'東京ミッドタウン'},{classes:['']},{width:'533'},{height:'103'},{breakpoint:true},{lazyload:false},{retina:false})
+			.culture-hero__bg
+				+picture({filename:'culture-hero-bg'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:false})
+
+		section.culture-lead
+
+			.culture-lead__body
+				p
+					| MFBMでは、個人の強みを活かしながらも、個では達成できない目標をチームで成し遂げるため、
+					br
+					| 旧来の発想にとらわれない多様な働き方の整備に力を入れています。
+					br
+					| ビジネスシーンに新たな価値を提供し続ける、MFBMのカルチャーの一端を社員が思う「当社の良いところ」と共に紹介します。
+
+		.culture-sections
+
+			section.culture-sections__item
+				.culture-sections__item-text-wrapper
+					.culture-sections__item-header
+						p.culture-sections__item-header-label
+							span.culture-sections__item-header-label-icon
+								+picture({filename:'loupe-red-brown'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'49'},{height:'44'},{breakpoint:false},{lazyload:true},{retina:false})
+							span.culture-sections__item-header-label-text
+								| 会社の雰囲気について
+						.culture-sections__item-text-header-image
+							+picture({filename:'culture-illust-01'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'150'},{height:'105'},{breakpoint:false},{lazyload:true},{retina:false})
+					h2.culture-sections__item-title
+						| 人間関係がフラットで、
+						br
+						| 自分の意見を率直に言いやすい職場。
+					p.culture-sections__item-body
+						| MFBMは、人間関係がフラットで自分の意見を率直に言いやすい職場です。社内のコミュニケーションが活発になので、社員同士の交流が深まり、意見交換や情報共有がスムーズになる。こうした組織風土が新たなビジネスのアイデアを生み出します。
+				.culture-sections__item-images
+					.culture-sections__item-image-01
+						+picture({filename:'culture-section01-image-01'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'274'},{height:'208'},{breakpoint:true},{lazyload:true},{retina:true})
+					.culture-sections__item-image-02
+						+picture({filename:'culture-section01-image-02'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'396'},{height:'283'},{breakpoint:true},{lazyload:true},{retina:true})
+				.culture-sections__item-voice
+					h3.culture-sections__item-voice-title
+						svg(aria-label="REAL VOICE" viewBox="0 0 270 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#futura-pt-real-voice')
+					.culture-sections__item-voices-items
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-02'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'66'},{height:'119'},{breakpoint:false},{lazyload:true},{retina:false})
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message
+							| みんなフレンドリー
+							br
+							| なんだか楽しい会社
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message
+							| 至るところから
+							br
+							| 笑い声や話し声が聞こえる
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-large.culture-sections__item-voices-item--balloon-message-right
+							| 新しい試みを応援してくれる
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message.culture-sections__item-voices-item--message-small
+							| 考え方が柔軟で変化に強い
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-03'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'80'},{height:'129'},{breakpoint:false},{lazyload:true},{retina:false})
+	
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message
+							| 変わることを恐れない
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-04'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'149'},{height:'130'},{breakpoint:false},{lazyload:true},{retina:false})
+
+			section.culture-sections__item
+				.culture-sections__item-text-wrapper
+					.culture-sections__item-header
+						p.culture-sections__item-header-label
+							span.culture-sections__item-header-label-icon
+								+picture({filename:'loupe-red-brown'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'49'},{height:'44'},{breakpoint:false},{lazyload:true},{retina:false})
+							span.culture-sections__item-header-label-text
+								| 働く環境について
+						.culture-sections__item-text-header-image
+							+picture({filename:'culture-illust-05'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'124'},{height:'179'},{breakpoint:false},{lazyload:true},{retina:false})
+					h2.culture-sections__item-title
+						| 働き方改革を提案する、
+						br
+						| MFBMならではの
+						br
+						| 自慢のワークスペース。
+					p.culture-sections__item-body
+						| 日本橋への本社移転に合わせて自分たちの働き方を改めて見つめ直したMFBM。社内でプロジェクトチームを結成しアイデアを出し合った結果、本社8階の本格的なカフェやフロアごとに異なるテーマの執務エリアなど、クリエイティブな仕掛けが盛りだくさんに。働き方改革を提案するMFBMならではの自慢のオフィスです。
+					a.culture-sections__item-button(href="https://www.mfbm.co.jp/officetour/index.html" target="_blank" rel="noopener noreferrer")
+						span.culture-sections__item-button-text
+							| オフィス移転プロジェクトに
+							br.active-sp
+							| ついてはこちら
+						svg(aria-label="" viewBox="0 0 39 32").culture-sections__item-button-icon
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#external')
+				.culture-sections__item-images
+					.culture-sections__item-image-01
+						+picture({filename:'culture-section02-image-01'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'274'},{height:'208'},{breakpoint:true},{lazyload:true},{retina:true})
+					.culture-sections__item-image-02
+						+picture({filename:'culture-section02-image-02'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'396'},{height:'283'},{breakpoint:true},{lazyload:true},{retina:true})
+				.culture-sections__item-voice
+					h3.culture-sections__item-voice-title
+						svg(aria-label="REAL VOICE" viewBox="0 0 270 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#futura-pt-real-voice')
+					.culture-sections__item-voices-items
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-06'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'95'},{height:'145'},{breakpoint:false},{lazyload:true},{retina:false})
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-large
+							| コミュニケーションを活性化する
+							br
+							| オープンスペース
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message
+							| 植物が多い
+							br
+							| デスクやチェアもキレイ
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-right
+							| 食堂がある
+							br
+							| メニューも豊富
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message.culture-sections__item-voices-item--message-small
+							| 居心地の良いカフェ
+							br
+							| 本社8階の「Cafe8」
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-07'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'95'},{height:'93'},{breakpoint:false},{lazyload:true},{retina:false})
+	
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-right
+							| 考え抜かれた導線設計
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-08'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'187'},{height:'117'},{breakpoint:false},{lazyload:true},{retina:false})
+
+							
+
+			section.culture-sections__item
+				.culture-sections__item-text-wrapper
+					.culture-sections__item-header
+						p.culture-sections__item-header-label
+							span.culture-sections__item-header-label-icon
+								+picture({filename:'loupe-red-brown'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'49'},{height:'44'},{breakpoint:false},{lazyload:true},{retina:false})
+							span.culture-sections__item-header-label-text
+								| 福利厚生について
+						.culture-sections__item-text-header-image
+							+picture({filename:'culture-illust-09'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'104'},{height:'128'},{breakpoint:false},{lazyload:true},{retina:false})
+					h2.culture-sections__item-title
+						| 充実の福利厚生で
+						br
+						| 新しい「ビジネス＆ライフ」を提供
+					p.culture-sections__item-body
+						| 人々の働き方・生き方を充実させることを目指す私たちMFBMは、自社の社員にも同様にいきいきと働いてもらいたいと考えます。社員が健康で充実した生活を送れるよう、ワークとライフの両面からアプローチする、さまざまな福利厚生メニューを設けています。
+				.culture-sections__item-images
+					.culture-sections__item-image-01
+						+picture({filename:'culture-section03-image-01'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'274'},{height:'208'},{breakpoint:true},{lazyload:true},{retina:true})
+					.culture-sections__item-image-02
+						+picture({filename:'culture-section03-image-02'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'396'},{height:'283'},{breakpoint:true},{lazyload:true},{retina:true})
+				.culture-sections__item-voice
+					h3.culture-sections__item-voice-title
+						svg(aria-label="REAL VOICE" viewBox="0 0 270 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#futura-pt-real-voice')
+					.culture-sections__item-voices-items
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-10'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'75'},{height:'113'},{breakpoint:false},{lazyload:true},{retina:false})
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message
+							| 社員同士をつなぐサークル活動
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message.culture-sections__item-voices-item--message-small
+							| 育児のバックアップが豊富で
+							br
+							| 働きやすい
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-right.culture-sections__item-voices-item--balloon-message-large
+							| 働き方をデザインできる
+							br
+							| フレックス制度
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message
+							| 時間や休暇に融通が効く
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-11'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'104'},{height:'111'},{breakpoint:false},{lazyload:true},{retina:false})
+	
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message
+							| ワークスタイリングが利用できる
+							.culture-sections__item-voices-item-balloon-message-colons
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+								svg(aria-label="" viewBox="0 0 41 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#double-colon')
+							.culture-sections__item-voices-item-balloon-message-leg
+								svg(aria-label="" viewBox="0 0 47 32")
+									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust
+							+picture({filename:'culture-illust-12'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'94'},{height:'115'},{breakpoint:false},{lazyload:true},{retina:false})

@@ -19,7 +19,10 @@
 	position: absolute;
 	left: 0;
 	width: 54.7rem;
-	transform: translateX(-20rem);
+	// transform: translateX(-20rem);
+	transform: translateX(
+		calc((100vw - var(--scroll-bar-width) - var(--content-width)) / -2)
+	);
 	@include mq-down() {
 		display: none;
 	}

@@ -6,6 +6,7 @@ window.WebFontConfig = {
 			"Noto+Sans+JP:300,400,500,700",
 			"Noto+Serif+JP:400,500,700",
 			"Cormorant:300",
+			"Poiret+One",
 		],
 	},
 	custom: {

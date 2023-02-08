@@ -1,0 +1,144 @@
+/* .movie-list
+   ========================================================================== */
+
+.movie-list {
+	margin-top: 7.2rem;
+	@include mq-down() {
+		margin-top: 10rem;
+	}
+}
+
+.movie-list__content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4.4rem;
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+	font-family: var(--font-sans-yakuhan-all);
+	@include mq-down() {
+		grid-template-columns: 1fr;
+		gap: 8.4rem;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+	}
+}
+
+.movie-list__item-thumbnail {
+	position: relative;
+	z-index: 1;
+	height: 17.8rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	@include mq-down() {
+		height: 38.6rem;
+	}
+	svg {
+		position: absolute;
+		width: 7.8rem;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		transform: translate(-50%, -50%);
+		fill: white;
+		@include mq-down() {
+			width: 13.4rem;
+		}
+	}
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.25s ease-out;
+		button:hover & {
+			transform: scale(1.065);
+		}
+	}
+}
+
+.movie-list__item-time {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	background-color: var(--key-color-blue);
+	color: white;
+	line-height: 2.8rem;
+	font-weight: 500;
+	border-radius: 1rem 0 1rem 0;
+	padding-right: 1.2em;
+	padding-left: 1.2em;
+	@include mq-down() {
+		line-height: 5.8rem;
+		font-size: 2.4rem;
+	}
+}
+
+.movie-list__item-text {
+	margin-top: 0.75em;
+	text-align: left;
+	@include mq-down() {
+		margin-top: 1.25em;
+	}
+}
+
+.movie-list__item-label {
+	font-size: 1.5rem;
+	color: var(--key-color-blue);
+}
+
+.movie-list__item-label {
+	font-size: 1.5rem;
+	color: var(--key-color-blue) !important;
+	@include mq-down() {
+		display: inline-block;
+		font-size: 2.4rem;
+	}
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 1em;
+		height: 1px;
+		background-color: currentColor;
+		margin-right: 0.5em;
+		vertical-align: 0.175em;
+		@include mq-down() {
+			content: none;
+		}
+	}
+}
+
+.movie-list__item-title {
+	margin-top: 0.125em;
+	font-size: 2.2rem;
+	font-weight: 500;
+	color: var(--key-color-blue) !important;
+	@include mq-down() {
+		display: inline-block;
+		font-size: 3.2rem;
+		.movie-list__item-label + & {
+			&::before {
+				content: "";
+				display: inline-block;
+				width: 1px;
+				height: 0.85em;
+				background-color: currentColor;
+				vertical-align: middle;
+				margin-right: 0.5em;
+				margin-left: 0.5em;
+			}
+		}
+	}
+}
+
+.movie-list__item-body {
+	margin-top: 0.75em;
+	text-align: justify;
+	line-height: 2;
+	font-size: 1.5rem;
+	letter-spacing: -0.02em;
+	@include mq-down() {
+		line-height: calc(52 / 26);
+		font-size: 2.6rem;
+	}
+}

@@ -41,7 +41,6 @@ $recruit02-border-color: #c6cfd4;
 	}
 }
 
-
 .faq-section {
 	border-bottom: 1px solid $recruit02-border-color;
 }
@@ -57,6 +56,8 @@ $recruit02-border-color: #c6cfd4;
 	background-color: var(--key-color02);
 
 	@include mq-down() {
+		gap: 0.75em;
+		white-space: nowrap;
 		height: 13.8rem;
 		padding-top: 0;
 		padding-bottom: 0;
@@ -73,7 +74,7 @@ $recruit02-border-color: #c6cfd4;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		right: .7rem;
+		right: 0.7rem;
 		display: block;
 		width: 1.6rem;
 		height: 1px;
@@ -81,6 +82,8 @@ $recruit02-border-color: #c6cfd4;
 		transition: transform 0.25s ease-out;
 		@include mq-down() {
 			right: 0;
+			width: 3rem;
+			height: 0.2rem;
 		}
 	}
 
@@ -116,9 +119,10 @@ $recruit02-border-color: #c6cfd4;
 
 .faq-section__q-icon {
 	flex-shrink: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	text-align: center;
 	width: 3.1rem;
 	height: 3.1rem;
 	background-color: var(--key-color-blue);
@@ -129,9 +133,9 @@ $recruit02-border-color: #c6cfd4;
 	color: white;
 
 	@include mq-down() {
-		width: 4.2rem;
-		height: 4.2rem;
-		line-height: 4.2rem;
+		width: 5.7rem;
+		height: 5.7rem;
+		line-height: 5.7rem;
 		font-size: 2rem;
 	}
 }
@@ -143,12 +147,13 @@ $recruit02-border-color: #c6cfd4;
 
 .faq-section__q-text {
 	font-weight: 700;
-	font-size: 1.6rem;
+	// font-size: 1.6rem;
 
 	@include mq-down() {
 		font-size: 2.8rem;
 		line-height: 1.47;
 		line-height: calc(4.2rem / 2.8rem);
+		letter-spacing: -0.01em;
 	}
 }
 
@@ -168,9 +173,10 @@ $recruit02-border-color: #c6cfd4;
 
 .faq-section__a-icon {
 	flex-shrink: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	text-align: center;
 	width: 3.1rem;
 	height: 3.1rem;
 	margin-top: 0.175em;
@@ -182,10 +188,10 @@ $recruit02-border-color: #c6cfd4;
 	color: var(--key-color-blue);
 
 	@include mq-down() {
-		width: 4.2rem;
-		height: 4.2rem;
-		line-height: 4.2rem;
-		font-size: 2rem;
+		width: 5.7rem;
+		height: 5.7rem;
+		line-height: 5.7rem;
+		font-size: 2.2rem;
 	}
 }
 
@@ -195,15 +201,16 @@ $recruit02-border-color: #c6cfd4;
 }
 
 .faq-section__a-text {
-	font-size: 1.4rem;
+	// font-size: 1.4rem;
 	font-weight: 500;
 	line-height: 2;
-
+	margin-top: 0.1em;
+	text-align: justify;
 	@include mq-down() {
-		margin-top: 0.125em;
+		// margin-top: 0.125em;
 		line-height: calc(5.2rem / 2.6rem);
-		font-size: 2.3rem;
-		text-align: justify;
+		// font-size: 2.3rem;
+		// text-align: justify;
 		html[lang="en"] & {
 			text-align: left;
 		}
@@ -226,7 +233,7 @@ $recruit02-border-color: #c6cfd4;
 }
 .faq-section-link-b {
 	color: var(--key-color-blue);
-	
+
 	&:hover,
 	&:visited,
 	&:focus {

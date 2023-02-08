@@ -27,7 +27,10 @@
 
 .about01-middle__title-en {
 	width: 83.3rem;
-	transform: translate(-20rem);
+	transform: translateX(
+		calc((100vw - var(--scroll-bar-width) - var(--content-width)) / -2)
+	);
+	// transform: translate(-20rem);
 	line-height: 1;
 	@include mq-down() {
 		transform: translate(0.5em);
@@ -93,8 +96,10 @@
 	font-size: 2.3rem;
 	color: var(--key-color-blue);
 	@include mq-down() {
+		width: auto;
 		margin-top: 11rem;
 		font-size: 3rem;
+		white-space: nowrap;
 	}
 	&::before,
 	&::after {
@@ -115,6 +120,14 @@
 		top: 50%;
 		left: -1em;
 		transform: translate(-100%, -50%);
+		@include mq-down() {
+			position: static;
+			transform: none;
+			height: 1em;
+			width: 1px;
+			vertical-align: -0.125em;
+			margin-right: 0.75em;
+		}
 	}
 	&::after {
 		content: "";
@@ -122,6 +135,9 @@
 		top: 50%;
 		right: -1em;
 		transform: translate(100%, -50%);
+		@include mq-down() {
+			content: none;
+		}
 	}
 }
 

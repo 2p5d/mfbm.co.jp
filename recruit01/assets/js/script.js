@@ -12,6 +12,7 @@ window.WebFontConfig = {
 			"Noto+Sans+JP:300,400,500,700",
 			"Noto+Serif+JP:400,500,700",
 			"Cormorant:300",
+			"Poiret+One",
 		],
 	},
 	custom: {
@@ -50,11 +51,61 @@ window.WebFontConfig = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "header": function() { return /* binding */ header; },
+/* harmony export */   "remUnit": function() { return /* binding */ remUnit; },
+/* harmony export */   "setScrollBarWidth": function() { return /* binding */ setScrollBarWidth; },
+/* harmony export */   "spBreakPoint": function() { return /* binding */ spBreakPoint; },
+/* harmony export */   "spmql": function() { return /* binding */ spmql; },
+/* harmony export */   "touchDevice": function() { return /* binding */ touchDevice; }
+/* harmony export */ });
+/*  global vars
+================================================= */
+const spBreakPoint = "767px";
+const spmql = window.matchMedia(`screen and (max-width: ${spBreakPoint})`);
+const pclgmql = window.matchMedia(
+	"screen and (min-width: 768px) and (max-width: 1439px)"
+);
+// const aspectmql = window.matchMedia("screen and (max-aspect-ratio: 1/1)");
+const touchDevice =
+	"ontouchstart" in document.documentElement ||
+	navigator.maxTouchPoints > 0 ||
+	navigator.msMaxTouchPoints > 0;
+const remUnit = (coef) => {
+	// ブレイクポイントごとに_wrap.scssのrooのfont-sizeの係数を反映
+	if (spmql.matches) {
+		return (window.innerWidth * 0.0133333 * coef).toFixed(3);
+	} else if (pclgmql.matches) {
+		return (window.innerWidth * 0.00714286 * coef).toFixed(3);
+	} else {
+		return (
+			(10 + (16 - 12) * ((window.innerWidth - 1400) / (2560 - 1400))) *
+			coef
+		).toFixed(3);
+	}
+};
+const header = document.querySelector(".header");
+const setScrollBarWidth = () => {
+	const scrollbarWidth = window.innerWidth - document.body.clientWidth;
+	document.documentElement.style.setProperty(
+		"--scroll-bar-width",
+		`${scrollbarWidth}px`
+	);
+};
+
+
+
+/***/ }),
+/* 3 */
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "modal": function() { return /* binding */ modal; },
 /* harmony export */   "modalFlag": function() { return /* binding */ modalFlag; },
 /* harmony export */   "resetModalFlag": function() { return /* binding */ resetModalFlag; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
@@ -71,15 +122,7 @@ function resetModalFlag() {
 }
 
 function modal() {
-	let wrap, wrapInner;
-
-	function setScrollBarWidth() {
-		const scrollbarWidth = window.innerWidth - document.body.clientWidth;
-		document.documentElement.style.setProperty(
-			"--scroll-bar-width",
-			`${scrollbarWidth}px`
-		);
-	}
+	let wrap, wrapInner, movieVideo;
 
 	function disableModal() {
 		const fadeOut = [{ opacity: "0" }];
@@ -91,6 +134,9 @@ function modal() {
 		const content = wrapInner.children[0];
 		(0,body_scroll_lock__WEBPACK_IMPORTED_MODULE_1__.enableBodyScroll)(wrapInner);
 		document.body.classList.remove("--scroll-bar-padding-active");
+		if (movieVideo) {
+			movieVideo.pause();
+		}
 		wrap.animate(fadeOut, fadeOutTiming).onfinish = () => {
 			wrap.after(content);
 			wrap.remove();
@@ -153,7 +199,11 @@ function modal() {
 		wrap.animate(fadeIn, fadeInTiming).onfinish = () => {
 			wrap.style.opacity = "1"; // safariでfadeOut = [{ opacity: "0" }];が効かなくなるので
 		};
-		setScrollBarWidth();
+		movieVideo = content.querySelector("video");
+		if (movieVideo) {
+			movieVideo.play();
+		}
+		(0,_vars__WEBPACK_IMPORTED_MODULE_0__.setScrollBarWidth)();
 		(0,body_scroll_lock__WEBPACK_IMPORTED_MODULE_1__.disableBodyScroll)(wrapInner, body_scroll_lock__WEBPACK_IMPORTED_MODULE_1__.BodyScrollOptions);
 		document.body.classList.add("--scroll-bar-padding-active");
 		modalFlag = true;
@@ -221,48 +271,6 @@ function modal() {
 	// toggleModal(spmql);
 }
 
-
-
-
-/***/ }),
-/* 3 */
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "header": function() { return /* binding */ header; },
-/* harmony export */   "remUnit": function() { return /* binding */ remUnit; },
-/* harmony export */   "spBreakPoint": function() { return /* binding */ spBreakPoint; },
-/* harmony export */   "spmql": function() { return /* binding */ spmql; },
-/* harmony export */   "touchDevice": function() { return /* binding */ touchDevice; }
-/* harmony export */ });
-/*  global vars
-================================================= */
-const spBreakPoint = "767px";
-const spmql = window.matchMedia(`screen and (max-width: ${spBreakPoint})`);
-const pclgmql = window.matchMedia(
-	"screen and (min-width: 768px) and (max-width: 1439px)"
-);
-// const aspectmql = window.matchMedia("screen and (max-aspect-ratio: 1/1)");
-const touchDevice =
-	"ontouchstart" in document.documentElement ||
-	navigator.maxTouchPoints > 0 ||
-	navigator.msMaxTouchPoints > 0;
-const remUnit = (coef) => {
-	// ブレイクポイントごとに_wrap.scssのrooのfont-sizeの係数を反映
-	if (spmql.matches) {
-		return (window.innerWidth * 0.0133333 * coef).toFixed(3);
-	} else if (pclgmql.matches) {
-		return (window.innerWidth * 0.00714286 * coef).toFixed(3);
-	} else {
-		return (
-			(10 + (16 - 12) * ((window.innerWidth - 1400) / (2560 - 1400))) *
-			coef
-		).toFixed(3);
-	}
-};
-const header = document.querySelector(".header");
 
 
 
@@ -41935,7 +41943,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "accordion": function() { return /* binding */ accordion; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 
 
@@ -42023,7 +42031,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "toggleToTop": function() { return /* binding */ toggleToTop; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 
@@ -42093,7 +42101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "topCover": function() { return /* binding */ topCover; },
 /* harmony export */   "topSections": function() { return /* binding */ topSections; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(28);
@@ -44114,7 +44122,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "personSlider": function() { return /* binding */ personSlider; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47);
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(149);
 
@@ -57237,7 +57245,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "personScheduleAccordion": function() { return /* binding */ personScheduleAccordion; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
 
 
@@ -57397,7 +57405,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "about01Slider": function() { return /* binding */ about01Slider; }
 /* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47);
 /* harmony import */ var swiper_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(149);
 
@@ -57456,6 +57464,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "businessHover": function() { return /* binding */ businessHover; }
 /* harmony export */ });
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
 function businessHover() {
 	const navigationTriggers = document.querySelectorAll(
 			".business-fields__navigation [data-modal-trigger]"
@@ -57463,6 +57474,7 @@ function businessHover() {
 		mapTriggers = document.querySelectorAll(
 			".business-fields__map-triggers-and-over-images [data-modal-trigger]"
 		),
+		spIcons = document.querySelectorAll(".business-fields__sp-map-icons img"),
 		hoverNavigationTrigger = (event) => {
 			const trigger = event.currentTarget,
 				triggerId = trigger.dataset.modalTrigger;
@@ -57476,6 +57488,17 @@ function businessHover() {
 					mapTriggers[i].classList.add("--hover");
 				}
 			}
+
+			if (_vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches) {
+				for (let i = 0; i < spIcons.length; i++) {
+					const iconSrc = spIcons[i].src;
+					if (spIcons[i].classList.contains("--hover")) {
+						spIcons[i].classList.remove("--hover");
+					} else if (iconSrc.includes(triggerId)) {
+						spIcons[i].classList.add("--hover");
+					}
+				}
+			}
 		},
 		leaveNavigationTrigger = (event) => {
 			mapTriggers.forEach((trigger) => {
@@ -57483,9 +57506,15 @@ function businessHover() {
 					trigger.classList.remove("--hover");
 				}
 			});
+			if (_vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches) {
+				spIcons.forEach((icon) => {
+					if (icon.classList.contains("--hover")) {
+						icon.classList.remove("--hover");
+					}
+				});
+			}
 		},
 		hoverMapTrigger = (event) => {
-			console.log(event.currentTarget);
 			const trigger = event.currentTarget,
 				triggerId = trigger.dataset.modalTrigger;
 
@@ -57498,6 +57527,17 @@ function businessHover() {
 					navigationTriggers[i].classList.add("--hover");
 				}
 			}
+
+			if (_vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches) {
+				for (let i = 0; i < spIcons.length; i++) {
+					const iconSrc = spIcons[i].src;
+					if (spIcons[i].classList.contains("--hover")) {
+						spIcons[i].classList.remove("--hover");
+					} else if (iconSrc.includes(triggerId)) {
+						spIcons[i].classList.add("--hover");
+					}
+				}
+			}
 		},
 		leaveMapTrigger = (event) => {
 			navigationTriggers.forEach((trigger) => {
@@ -57505,6 +57545,13 @@ function businessHover() {
 					trigger.classList.remove("--hover");
 				}
 			});
+			if (_vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches) {
+				spIcons.forEach((icon) => {
+					if (icon.classList.contains("--hover")) {
+						icon.classList.remove("--hover");
+					}
+				});
+			}
 		};
 
 	navigationTriggers.forEach((trigger) => {
@@ -57631,18 +57678,20 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _include_webFontConfig__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _include_webFontConfig__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_include_webFontConfig__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _include_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
-/* harmony import */ var _include_smoothScroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-/* harmony import */ var _include_accordion__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(42);
-/* harmony import */ var _include_toggleToTop__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(43);
-/* harmony import */ var _include_topSections__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(44);
-/* harmony import */ var _include_topVideo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(45);
-/* harmony import */ var _include_personSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(46);
-/* harmony import */ var _include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(161);
-/* harmony import */ var _include_about01Slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(162);
-/* harmony import */ var _include_businessHover__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(163);
+/* harmony import */ var _include_vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _include_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _include_smoothScroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+/* harmony import */ var _include_accordion__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(42);
+/* harmony import */ var _include_toggleToTop__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(43);
+/* harmony import */ var _include_topSections__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(44);
+/* harmony import */ var _include_topVideo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(45);
+/* harmony import */ var _include_personSlider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(46);
+/* harmony import */ var _include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(161);
+/* harmony import */ var _include_about01Slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(162);
+/* harmony import */ var _include_businessHover__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(163);
 /* bace import */
+
 
 
 
@@ -57682,10 +57731,11 @@ function resolve() {
 
 function init() {
 	// fadeUp();
-	(0,_include_modal__WEBPACK_IMPORTED_MODULE_1__.modal)();
-	(0,_include_smoothScroll__WEBPACK_IMPORTED_MODULE_3__.smoothScroll)();
-	(0,_include_toggleToTop__WEBPACK_IMPORTED_MODULE_5__.toggleToTop)();
-	(0,_include_accordion__WEBPACK_IMPORTED_MODULE_4__.accordion)();
+	(0,_include_modal__WEBPACK_IMPORTED_MODULE_2__.modal)();
+	(0,_include_smoothScroll__WEBPACK_IMPORTED_MODULE_4__.smoothScroll)();
+	(0,_include_toggleToTop__WEBPACK_IMPORTED_MODULE_6__.toggleToTop)();
+	(0,_include_accordion__WEBPACK_IMPORTED_MODULE_5__.accordion)();
+	(0,_include_vars__WEBPACK_IMPORTED_MODULE_1__.setScrollBarWidth)();
 	switch (true) {
 		case document.body.classList.contains("page-top"):
 			top();
@@ -57709,26 +57759,26 @@ function init() {
 // top
 function top() {
 	// document.querySelector(".top-cover").remove(); // 開発用
-	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_6__.topCover)();
-	(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_7__.topVideo)();
-	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_6__.topSections)();
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_7__.topCover)();
+	(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_8__.topVideo)();
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_7__.topSections)();
 	// topSections3();
 }
 
 // about01
 function about01() {
-	(0,_include_about01Slider__WEBPACK_IMPORTED_MODULE_10__.about01Slider)();
+	(0,_include_about01Slider__WEBPACK_IMPORTED_MODULE_11__.about01Slider)();
 }
 
 // business
 function business() {
-	(0,_include_businessHover__WEBPACK_IMPORTED_MODULE_11__.businessHover)();
+	(0,_include_businessHover__WEBPACK_IMPORTED_MODULE_12__.businessHover)();
 }
 
 // person
 function personSingle() {
-	(0,_include_personSlider__WEBPACK_IMPORTED_MODULE_8__.personSlider)();
-	(0,_include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_9__.personScheduleAccordion)();
+	(0,_include_personSlider__WEBPACK_IMPORTED_MODULE_9__.personSlider)();
+	(0,_include_personScheduleAccordion__WEBPACK_IMPORTED_MODULE_10__.personScheduleAccordion)();
 }
 
 }();

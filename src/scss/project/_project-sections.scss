@@ -1,0 +1,296 @@
+/* .project-sections
+   ========================================================================== */
+
+.project-sections {
+	margin-top: 19rem;
+	@include mq-down() {
+		margin-top: 17rem;
+	}
+}
+
+.project-sections__item {
+	display: flex;
+	// grid-template-columns: 50.7rem 1fr;
+	gap: 8.6rem;
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down() {
+		display: grid;
+		gap: 0;
+	}
+	&:nth-of-type(odd) {
+		flex-direction: row-reverse;
+	}
+	& + & {
+		margin-top: 20.5rem;
+	}
+}
+
+.project-sections__item-images {
+	@include mq-down() {
+		display: contents;
+	}
+}
+
+.project-sections__item-image-01 {
+	margin-right: -20rem;
+	@include mq-down() {
+		margin-right: 0;
+	}
+	.project-sections__item:nth-of-type(even) & {
+		margin-left: -20rem;
+		margin-right: 0;
+		@include mq-down() {
+			margin-left: 0;
+		}
+	}
+}
+
+.project-sections__item-image-02 {
+	margin-top: 5.6rem;
+	@include mq-down() {
+		margin-top: -15.7rem;
+		// padding-left: var(--page-gutter);
+		order: 3;
+	}
+	img {
+		display: block;
+		width: 42rem;
+		transform: translateX(9.6rem);
+		@include mq-down() {
+			width: 49rem;
+			transform: none;
+		}
+		.project-sections__item:nth-of-type(even) & {
+			transform: translateX(-9.6rem);
+			@include mq-down() {
+				transform: none;
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.project-sections__item-text {
+	position: relative;
+	flex-shrink: 0;
+	width: 50.7rem;
+	padding-bottom: 11.5rem;
+	@include mq-down() {
+		width: calc(100% - var(--page-gutter));
+		padding-bottom: 0;
+		.project-sections__item:nth-of-type(even) & {
+			margin-left: auto;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		left: calc((100vw - var(--scroll-bar-width) - var(--content-width)) / -2);
+		width: calc(
+			(100vw - var(--scroll-bar-width) - var(--content-width)) / 2 + 91.6rem
+		);
+		height: 69rem;
+		background: linear-gradient(
+			60deg,
+			rgba(161, 202, 238, 1) 0%,
+			rgba(188, 226, 227, 1) 76%
+		);
+		opacity: 0.5;
+		@include mq-down() {
+			content: none;
+		}
+		.project-sections__item:nth-of-type(even) & {
+			left: auto;
+			right: calc(
+				(100vw - var(--scroll-bar-width) - var(--content-width)) / -2
+			);
+			background: linear-gradient(
+				120deg,
+				rgba(237, 197, 215, 1) 0%,
+				rgba(242, 209, 202, 1) 100%
+			);
+		}
+	}
+}
+
+.project-sections__item-label {
+	@include mq-down() {
+		background-color: white;
+		margin-top: -9.8rem;
+		padding-top: 1.5em;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		width: fit-content;
+		.project-sections__item:nth-of-type(even) & {
+			margin-left: auto;
+		}
+	}
+}
+
+.project-sections__item-label-header {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	// width: fit-content;
+	color: var(--key-color-black);
+	@include mq-down() {
+		gap: 1.25em;
+		.project-sections__item:nth-of-type(even) & {
+			justify-content: flex-end;
+		}
+	}
+}
+.project-sections__item-label-chapter {
+	position: relative;
+	line-height: 0;
+	font-family: var(--font-poiret);
+	font-size: 7rem;
+	letter-spacing: 0.05em;
+	@include mq-down() {
+		font-size: 6.6rem;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-48%) rotate(34deg);
+		width: 1px;
+		height: 10.5rem;
+		background-color: currentColor;
+		@include mq-down() {
+			width: 0.11rem;
+		}
+	}
+}
+.project-sections__item-label-chapter-number {
+	transform: translateY(0.35em);
+	img {
+		&[src*="futura-pt-01"] {
+			width: 6.1rem;
+			@include mq-down() {
+				width: 5.8rem;
+			}
+		}
+		&[src*="futura-pt-02"] {
+			width: 7.2rem;
+			@include mq-down() {
+				width: 6.8rem;
+			}
+		}
+	}
+}
+
+.project-sections__item-label-text {
+	display: block;
+	margin-top: 1.25em;
+	font-family: var(--font-sans);
+	line-height: 1;
+	font-size: 2.3rem;
+	color: var(--key-color-black);
+	@include mq-down() {
+		margin-top: 1.5em;
+		font-size: 3rem;
+	}
+	&.project-sections__item-label-text--spacing-large {
+		letter-spacing: 0.16em;
+	}
+}
+
+.project-sections__item-title {
+	margin-top: 2em;
+	line-height: 2.35;
+	font-size: 2.8rem;
+	font-weight: 500;
+	@include mq-down() {
+		line-height: 2.6;
+		font-size: 3.6rem;
+		padding-left: var(--page-gutter);
+		.project-sections__item:nth-of-type(even) & {
+			padding-left: 0;
+			padding-right: var(--page-gutter);
+			text-align: right;
+		}
+	}
+	/*
+	　行ごとのテキストデコレーションでできれば、
+	折返しが楽（スマホでbr入るなど）だとおもったが、左右の余白が取れないので、
+	諦めてspanでくくった（上下余白もきれいにコントロールできるのですごく良さそうではある）
+	*/
+	// line-height: 2;
+	// font-size: 2.8rem;
+	// font-weight: 500;
+	// color: white;
+	// text-decoration: underline;
+	// text-underline-offset: calc(-1em - 0.5rem);
+	// text-decoration-color: var(--key-color-black);
+	// text-decoration-thickness: 4.4rem;
+	span {
+		display: inline-block;
+		line-height: 1;
+		padding-top: 0.4em;
+		padding-right: 0.5em;
+		padding-bottom: 0.45em;
+		padding-left: 0.5em;
+		color: white;
+		background-color: var(--key-color-black);
+		@include mq-down() {
+			padding-top: 0.6em;
+			padding-right: 0.7em;
+			padding-bottom: 0.6em;
+			padding-left: 0.7em;
+		}
+	}
+}
+
+.project-sections__item-body {
+	margin-top: 3.75em;
+	text-align: justify;
+	line-height: calc(34 / 16);
+	font-family: var(--font-sans-yakuhan-all);
+	@include mq-down() {
+		position: relative;
+		margin-top: 2.5em;
+		padding-right: 7rem;
+		padding-left: var(--page-gutter);
+		padding-bottom: 21.8rem;
+		.project-sections__item:nth-of-type(even) & {
+			padding-left: 7rem;
+			padding-right: var(--page-gutter);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: calc(100% + 30rem);
+			background: linear-gradient(
+				60deg,
+				rgba(161, 202, 238, 1) 0%,
+				rgba(188, 226, 227, 1) 76%
+			);
+			opacity: 0.5;
+			.project-sections__item:nth-of-type(even) & {
+				// left: auto;
+				// right: calc(
+				// 	(100vw - var(--scroll-bar-width) - var(--content-width)) / -2
+				// );
+				height: calc(100% + 20.25rem);
+				background: linear-gradient(
+					120deg,
+					rgba(237, 197, 215, 1) 0%,
+					rgba(242, 209, 202, 1) 100%
+				);
+			}
+		}
+	}
+	p + p {
+		margin-top: 2.5em;
+	}
+}

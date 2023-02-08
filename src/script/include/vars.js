@@ -24,4 +24,11 @@ const remUnit = (coef) => {
 	}
 };
 const header = document.querySelector(".header");
-export { spBreakPoint, spmql, touchDevice, remUnit, header };
+const setScrollBarWidth = () => {
+	const scrollbarWidth = window.innerWidth - document.body.clientWidth;
+	document.documentElement.style.setProperty(
+		"--scroll-bar-width",
+		`${scrollbarWidth}px`
+	);
+};
+export { spBreakPoint, spmql, touchDevice, remUnit, header, setScrollBarWidth };

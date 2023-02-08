@@ -12,7 +12,7 @@
 
 .about02-links__lead {
 	font-family: var(--font-sans-yakuhan-all);
-	font-size: 2rem;
+	// font-size: 2rem;
 	text-align: center;
 	@include mq-down() {
 		width: fit-content;
@@ -20,7 +20,7 @@
 		margin-left: auto;
 		text-align: left;
 		line-height: calc(52 / 26);
-		font-size: inherit;
+		// font-size: inherit;
 	}
 }
 

@@ -2,38 +2,36 @@
    ========================================================================== */
 
 .recruit-lead {
-    &__head {
-        margin-bottom: 10rem;
-        text-align: center;
-        color: var(--key-color-blue);
-        font-weight: 500;
-        font-size: 4rem;
-        line-height: calc(6.7rem / 4rem);
+	&__head {
+		margin-bottom: 6.9rem;
+		text-align: center;
+		color: var(--key-color-blue);
+		font-weight: 500;
+		font-size: 4rem;
+		line-height: calc(67 / 40);
 
-        @include mq-down() {
-            margin-bottom: 12.5rem;
-            font-size: 3.8rem;
-            line-height: calc(6.6rem / 3.8rem);
-        }
-    }
+		@include mq-down() {
+			margin-bottom: 12.5rem;
+			font-size: 3.8rem;
+			line-height: calc(66 / 38);
+		}
+	}
 
-    &__body {
-        margin-bottom: 11.2rem; 
-        text-align: center;
-        font-size: 1.8rem;
-        font-family: var(--font-sans);
-        line-height: 4.7rem;
-        line-height: calc(4.7rem / 1.8rem);
+	&__body {
+		margin-bottom: 11.2rem;
+		text-align: center;
+		// font-size: 1.8rem;
+		font-family: var(--font-sans-yakuhan-all);
+		line-height: calc(34 / 16);
+		@include mq-down() {
+			margin-bottom: 9.6rem;
+			text-align: left;
+			// font-size: 2.6rem;
+			line-height: calc(52 / 26);
+		}
+	}
 
-        @include mq-down() {
-            margin-bottom: 9.6rem;
-            text-align: left;
-            font-size: 2.6rem;
-            line-height: calc(5.2rem / 2.6rem);
-        }
-    }
-    
-    &__body--left {
-        text-align: left;
-    }
+	&__body--left {
+		text-align: left;
+	}
 }

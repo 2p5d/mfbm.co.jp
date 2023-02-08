@@ -1,0 +1,23 @@
+/* .movie-lead
+   ========================================================================== */
+
+.movie-lead {
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10rem;
+	@include mq-down() {
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		padding-top: 10.3rem;
+	}
+}
+
+.movie-lead__body {
+	text-align: center;
+	line-height: calc(34 / 16);
+	font-family: var(--font-sans-yakuhan-all);
+	@include mq-down() {
+		line-height: calc(52 / 26);
+	}
+}

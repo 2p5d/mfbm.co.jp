@@ -219,13 +219,14 @@
 		&[src*="business-modal-building-image-02"] {
 			transform: translateY(-0.75rem);
 			width: 17rem !important;
+
 			@include mq-down() {
 				transform: none;
 				width: 28.4rem !important;
 			}
 		}
 		&[src*="business-modal-solution-image-02"] {
-			transform: translateY(-1.2rem);
+			transform: translate(1.8rem, -1.2rem);
 			width: 15.4rem !important;
 			@include mq-down() {
 				transform: none;
@@ -233,7 +234,7 @@
 			}
 		}
 		&[src*="business-modal-management-image-02"] {
-			transform: translateY(-2.8rem);
+			transform: translate(1rem, -2.8rem);
 			width: 15.9rem !important;
 			@include mq-down() {
 				transform: none;
@@ -296,6 +297,6 @@
 		line-height: 10rem;
 		border: 1px solid currentColor;
 		font-size: 3.2rem;
-		font-weight: 600;
+		// font-weight: 600;
 	}
 }

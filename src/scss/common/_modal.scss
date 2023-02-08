@@ -10,6 +10,14 @@
 	&.modal--menu {
 		z-index: 9999;
 	}
+	&.modal--building,
+	&.modal--solution,
+	&.modal--management {
+		z-index: 999999;
+	}
+	&.modal--movie01 {
+		z-index: 999999;
+	}
 }
 
 .modal__inner {
@@ -17,6 +25,10 @@
 	.modal.modal--building &,
 	.modal.modal--solution &,
 	.modal.modal--management & {
+		background-color: rgba(74, 96, 119, 0.9);
+		// mix-blend-mode: multiply;
+	}
+	.modal.modal--movie01 & {
 		background-color: rgba(74, 96, 119, 0.9);
 		// mix-blend-mode: multiply;
 	}

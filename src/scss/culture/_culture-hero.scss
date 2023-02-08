@@ -1,0 +1,43 @@
+/* .culture-hero
+   ========================================================================== */
+
+.culture-hero {
+	position: relative;
+}
+
+// .culture-hero__title {
+// 	position: absolute;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: translate(-50%, calc(-50% - 3.25rem));
+// 	width: 90.1rem;
+// 	@include mq-down() {
+// 		width: 49.2rem;
+// 		transform: translate(-50%, calc(-50% - 1.75rem));
+// 	}
+// 	> span {
+// 		display: block;
+// 	}
+// }
+
+// .culture-hero__title-en {
+// 	width: 100%;
+// 	@include mq-down() {
+// 		width: 40.5rem;
+// 		margin-right: auto;
+// 		margin-left: auto;
+// 	}
+// }
+
+// .culture-hero__title-jp {
+// 	position: relative;
+// 	z-index: -1;
+// 	width: 53.3rem;
+// 	margin-top: -2.25rem;
+// 	margin-right: auto;
+// 	margin-left: auto;
+// 	@include mq-down() {
+// 		margin-top: -2rem;
+// 		width: 100%;
+// 	}
+// }

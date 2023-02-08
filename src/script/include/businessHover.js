@@ -1,3 +1,5 @@
+import { spmql } from "./vars";
+
 function businessHover() {
 	const navigationTriggers = document.querySelectorAll(
 			".business-fields__navigation [data-modal-trigger]"
@@ -5,6 +7,7 @@ function businessHover() {
 		mapTriggers = document.querySelectorAll(
 			".business-fields__map-triggers-and-over-images [data-modal-trigger]"
 		),
+		spIcons = document.querySelectorAll(".business-fields__sp-map-icons img"),
 		hoverNavigationTrigger = (event) => {
 			const trigger = event.currentTarget,
 				triggerId = trigger.dataset.modalTrigger;
@@ -18,6 +21,17 @@ function businessHover() {
 					mapTriggers[i].classList.add("--hover");
 				}
 			}
+
+			if (spmql.matches) {
+				for (let i = 0; i < spIcons.length; i++) {
+					const iconSrc = spIcons[i].src;
+					if (spIcons[i].classList.contains("--hover")) {
+						spIcons[i].classList.remove("--hover");
+					} else if (iconSrc.includes(triggerId)) {
+						spIcons[i].classList.add("--hover");
+					}
+				}
+			}
 		},
 		leaveNavigationTrigger = (event) => {
 			mapTriggers.forEach((trigger) => {
@@ -25,9 +39,15 @@ function businessHover() {
 					trigger.classList.remove("--hover");
 				}
 			});
+			if (spmql.matches) {
+				spIcons.forEach((icon) => {
+					if (icon.classList.contains("--hover")) {
+						icon.classList.remove("--hover");
+					}
+				});
+			}
 		},
 		hoverMapTrigger = (event) => {
-			console.log(event.currentTarget);
 			const trigger = event.currentTarget,
 				triggerId = trigger.dataset.modalTrigger;
 
@@ -40,6 +60,17 @@ function businessHover() {
 					navigationTriggers[i].classList.add("--hover");
 				}
 			}
+
+			if (spmql.matches) {
+				for (let i = 0; i < spIcons.length; i++) {
+					const iconSrc = spIcons[i].src;
+					if (spIcons[i].classList.contains("--hover")) {
+						spIcons[i].classList.remove("--hover");
+					} else if (iconSrc.includes(triggerId)) {
+						spIcons[i].classList.add("--hover");
+					}
+				}
+			}
 		},
 		leaveMapTrigger = (event) => {
 			navigationTriggers.forEach((trigger) => {
@@ -47,6 +78,13 @@ function businessHover() {
 					trigger.classList.remove("--hover");
 				}
 			});
+			if (spmql.matches) {
+				spIcons.forEach((icon) => {
+					if (icon.classList.contains("--hover")) {
+						icon.classList.remove("--hover");
+					}
+				});
+			}
 		};
 
 	navigationTriggers.forEach((trigger) => {

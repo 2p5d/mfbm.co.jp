@@ -133,6 +133,7 @@
 			left: containerRatio(116, var(--containerWidth));
 			top: containerRatio(5, var(--containerHeight));
 			width: containerRatio(397.3152, var(--containerWidth));
+			z-index: 1;
 		}
 		&[data-modal-trigger="management"] {
 			left: containerRatio(0, var(--containerWidth));
@@ -155,11 +156,13 @@
 			left: containerRatio(114.538, var(--containerWidth));
 			top: containerRatio(3.663, var(--containerHeight));
 			width: containerRatio(400.8151, var(--containerWidth));
+			// z-index: -1;
 		}
 		&[src*="management"] {
 			left: containerRatio(-3.4846, var(--containerWidth));
 			top: containerRatio(41.57, var(--containerHeight));
 			width: containerRatio(637.9037, var(--containerWidth));
+			z-index: 1;
 		}
 		&[src*="solution"] {
 			left: containerRatio(362.8685, var(--containerWidth));
@@ -191,12 +194,13 @@
 			left: containerRatio(0, var(--containerWidth));
 			top: containerRatio(45, var(--containerHeight));
 			width: containerRatio(631, var(--containerWidth));
+			z-index: 1;
 		}
 		&[src*="solution"] {
 			left: containerRatio(364.7398, var(--containerWidth));
 			top: containerRatio(0, var(--containerHeight));
 			width: containerRatio(224.1585, var(--containerWidth));
-			z-index: 1; // 調整
+			z-index: 2; // 調整
 		}
 	}
 }
@@ -209,9 +213,11 @@
 		width: 100%;
 		height: 100%;
 		pointer-events: none;
+		z-index: 3;
 		img {
 			position: absolute;
 			display: block;
+			transition: opacity 0.25s ease-out;
 			&[src*="building"] {
 				left: containerRatio(276, var(--containerWidth));
 				top: containerRatio(170, var(--containerHeight));
@@ -227,6 +233,9 @@
 				top: containerRatio(-38, var(--containerHeight));
 				width: containerRatio(73, var(--containerWidth));
 				z-index: 1; // 調整
+			}
+			&.--hover {
+				opacity: 0;
 			}
 		}
 	}

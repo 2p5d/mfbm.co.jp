@@ -1,4 +1,4 @@
-import { spmql } from "./vars";
+import { spmql, setScrollBarWidth } from "./vars";
 import {
 	disableBodyScroll,
 	enableBodyScroll,
@@ -17,15 +17,7 @@ function resetModalFlag() {
 }
 
 function modal() {
-	let wrap, wrapInner;
-
-	function setScrollBarWidth() {
-		const scrollbarWidth = window.innerWidth - document.body.clientWidth;
-		document.documentElement.style.setProperty(
-			"--scroll-bar-width",
-			`${scrollbarWidth}px`
-		);
-	}
+	let wrap, wrapInner, movieVideo;
 
 	function disableModal() {
 		const fadeOut = [{ opacity: "0" }];
@@ -37,6 +29,9 @@ function modal() {
 		const content = wrapInner.children[0];
 		enableBodyScroll(wrapInner);
 		document.body.classList.remove("--scroll-bar-padding-active");
+		if (movieVideo) {
+			movieVideo.pause();
+		}
 		wrap.animate(fadeOut, fadeOutTiming).onfinish = () => {
 			wrap.after(content);
 			wrap.remove();
@@ -99,6 +94,10 @@ function modal() {
 		wrap.animate(fadeIn, fadeInTiming).onfinish = () => {
 			wrap.style.opacity = "1"; // safariでfadeOut = [{ opacity: "0" }];が効かなくなるので
 		};
+		movieVideo = content.querySelector("video");
+		if (movieVideo) {
+			movieVideo.play();
+		}
 		setScrollBarWidth();
 		disableBodyScroll(wrapInner, BodyScrollOptions);
 		document.body.classList.add("--scroll-bar-padding-active");

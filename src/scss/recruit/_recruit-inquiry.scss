@@ -2,72 +2,78 @@
    ========================================================================== */
 
 .recruit-inquiry-links {
-    margin-bottom: 7rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 70rem;
-    grid-gap: 3rem;
+	margin-bottom: 7rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 70rem;
+	grid-gap: 3rem;
 
 	@include mq-down() {
-        max-width: none;
-    }
+		max-width: none;
+	}
 
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: calc(50% - 1.5rem);
-        height: 8.5rem;
-        transition: opacity .25s ease-in-out;
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: calc(50% - 1.5rem);
+		height: 8.5rem;
+		transition: opacity 0.25s ease-in-out;
 
-        &:hover {
-            opacity: .75;
-        }
+		&:hover {
+			opacity: 0.75;
+		}
 
-        @include mq-down() {
-            height: 10rem;
-        }
-    }
-    &__link--entry {
-        background-color: var(--key-color-red);
+		@include mq-down() {
+			height: 10rem;
+		}
+	}
+	&__link--entry {
+		background-color: var(--key-color-red);
 
-        svg {
-            fill: #fff;
-            width: 8.5rem;
-        }
+		svg {
+			fill: #fff;
+			width: 8.5rem;
+		}
 
-        @include mq-down() {
-            svg {
-                width: 9.5rem;
-            }
-        }
-    }
-    &__link--mypage {
-        background-color: var(--key-color-blue);
+		@include mq-down() {
+			svg {
+				width: 9.5rem;
+			}
+		}
+	}
+	&__link--mypage {
+		background-color: var(--key-color-blue);
 
-        svg {
-            fill: #fff;
-            width: 11rem;
-        }
+		svg {
+			fill: #fff;
+			width: 11rem;
+		}
 
-        @include mq-down() {
-            svg {
-                width: 12.4rem;
-            }
-        }
-    }
-    
-    &__link--image {
-        picture {
-            border: 1px solid #c6cfd4;
-        }
-    }
+		@include mq-down() {
+			svg {
+				width: 12.4rem;
+			}
+		}
+	}
+
+	&__link--image {
+		picture {
+			border: 1px solid #c6cfd4;
+		}
+	}
 }
 
 .recruit-inquiry-info {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 500;
-    line-height: calc(2.9rem / 1.3rem);
+	text-align: center;
+	font-family: var(--font-sans-yakuhan-all);
+	font-size: 1.3rem;
+	font-weight: 500;
+	line-height: calc(29 / 13);
+	@include mq-down() {
+		line-height: calc(46 / 24);
+
+		font-size: 2.4rem;
+	}
 }

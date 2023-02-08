@@ -1,0 +1,27 @@
+/* .culture-lead
+   ========================================================================== */
+
+.culture-lead {
+	position: relative;
+	z-index: 1;
+	width: var(--content-width);
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	padding-top: 10rem;
+	@include mq-down() {
+		width: calc(100% - (var(--page-gutter) * 2));
+		padding-top: 8.8rem;
+	}
+}
+
+.culture-lead__body {
+	text-align: center;
+	line-height: calc(34 / 16);
+	font-family: var(--font-sans-yakuhan-all);
+	@include mq-down() {
+		margin-top: 8.4rem;
+		line-height: calc(52 / 26);
+		text-align: justify;
+	}
+}
