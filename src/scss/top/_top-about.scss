@@ -21,7 +21,8 @@
 }
 
 .top-about__lead__title {
-	transform: translate(-100%, -50%);
+	width: 100%;
+	will-change: transform;
 	@include mq-down() {
 		position: absolute;
 
@@ -196,7 +197,7 @@
 		scaleで再調整しなくとも計算でできそうな感じだがとりあえず
 	*/
 	aspect-ratio: 1;
-	clip-path: polygon(0% 54%, 100% 17%, 100% 100%, 0% 100%);
+	clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0% 100%);
 	transform-origin: right;
 	transform: scale(1.4);
 	will-change: transform;
