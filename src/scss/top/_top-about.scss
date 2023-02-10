@@ -3,6 +3,7 @@
 
 .top-about {
 	position: relative;
+	z-index: 1;
 	height: 100vh;
 	overflow: hidden;
 }
@@ -188,7 +189,7 @@
 	// inset: 0;
 	width: 100%;
 
-	z-index: 2;
+	z-index: 3;
 	background-color: #003383;
 	mix-blend-mode: multiply;
 

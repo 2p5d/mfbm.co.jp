@@ -1,6 +1,6 @@
 /* bace import */
 import "./include/webFontConfig";
-import { setScrollBarWidth, touchDevice } from "./include/vars";
+import { setScrollBarWidth, touchDevice, spmql } from "./include/vars";
 import { modal } from "./include/modal";
 import { onceTransition, tlOnce } from "./include/onceTransition";
 // import { viewPortHeight } from "./include/viewPortHeight";
@@ -95,11 +95,18 @@ function init() {
 
 // top
 function top() {
-	// document.querySelector(".top-cover").remove(); // 開発用
-	topCover();
-	topVideo();
 	// video.play();
-	topSections();
+
+	if (!spmql.matches) {
+		topCover();
+		topVideo();
+		topSections();
+	} else {
+		topVideo();
+		topCover();
+		// video.play();
+		// document.querySelector(".top-cover").remove(); // 開発用
+	}
 	// topSections3();
 }
 

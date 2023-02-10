@@ -42944,11 +42944,18 @@ function init() {
 
 // top
 function top() {
-	// document.querySelector(".top-cover").remove(); // 開発用
-	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
-	(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
 	// video.play();
-	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topSections)();
+
+	if (!_include_vars__WEBPACK_IMPORTED_MODULE_1__.spmql.matches) {
+		(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
+		(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
+		(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topSections)();
+	} else {
+		(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
+		(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
+		// video.play();
+		// document.querySelector(".top-cover").remove(); // 開発用
+	}
 	// topSections3();
 }
 
