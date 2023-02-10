@@ -1,4 +1,5 @@
 import { spmql, setScrollBarWidth } from "./vars";
+import { topScrollObserver } from "./topSections";
 import {
 	disableBodyScroll,
 	enableBodyScroll,
@@ -8,6 +9,9 @@ import { BodyScrollOptions } from "body-scroll-lock";
 BodyScrollOptions = {
 	reserveScrollBarGap: true,
 };
+import { gsap } from "gsap/all";
+import { Observer } from "gsap/Observer";
+gsap.registerPlugin(Observer);
 
 let modalFlag;
 
@@ -27,7 +31,15 @@ function modal() {
 			// fill: "forwards",
 		};
 		const content = wrapInner.children[0];
+
+		if (topScrollObserver) {
+			if (!topScrollObserver.isEnabled) {
+				topScrollObserver.enable();
+			}
+		}
+
 		enableBodyScroll(wrapInner);
+
 		document.body.classList.remove("--scroll-bar-padding-active");
 		if (movieVideo) {
 			movieVideo.pause();
@@ -57,6 +69,12 @@ function modal() {
 	}
 
 	function activeModal(content, id) {
+		if (topScrollObserver) {
+			if (topScrollObserver.isEnabled) {
+				topScrollObserver.disable();
+			}
+		}
+
 		wrap = document.createElement("div");
 		wrap.className = "modal";
 		Object.assign(wrap.style, {
@@ -94,6 +112,7 @@ function modal() {
 		wrap.animate(fadeIn, fadeInTiming).onfinish = () => {
 			wrap.style.opacity = "1"; // safariでfadeOut = [{ opacity: "0" }];が効かなくなるので
 		};
+
 		movieVideo = content.querySelector("video");
 		if (movieVideo) {
 			movieVideo.play();

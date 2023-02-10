@@ -31,4 +31,17 @@ const setScrollBarWidth = () => {
 		`${scrollbarWidth}px`
 	);
 };
-export { spBreakPoint, spmql, touchDevice, remUnit, header, setScrollBarWidth };
+
+const noscroll = (event) => {
+	event.preventDefault();
+};
+
+export {
+	spBreakPoint,
+	spmql,
+	touchDevice,
+	remUnit,
+	header,
+	setScrollBarWidth,
+	noscroll,
+};

@@ -18,7 +18,6 @@ import {
 	scrollRevealGroups,
 } from "./include/scrollReveal";
 import { topCover, topSections } from "./include/topSections";
-// import { topCover, topSections3 } from "./include/topSections3";
 import { topVideo, video } from "./include/topVideo";
 
 /* person import */
@@ -95,8 +94,6 @@ function init() {
 
 // top
 function top() {
-	// video.play();
-
 	if (!spmql.matches) {
 		topCover();
 		topVideo();
@@ -107,7 +104,6 @@ function top() {
 		// video.play();
 		// document.querySelector(".top-cover").remove(); // 開発用
 	}
-	// topSections3();
 }
 
 // about01

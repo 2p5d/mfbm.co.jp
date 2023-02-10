@@ -1,14 +1,26 @@
-import { touchDevice, remUnit, spmql, header } from "./vars";
+import { touchDevice, remUnit, spmql, header, noscroll } from "./vars";
+
+import {
+	prologueInit,
+	prologueInTl,
+	prologueBackTl,
+	topLeadTl,
+} from "./top-animations/prologueInit";
+import { aboutInit, aboutTl } from "./top-animations/aboutInit";
+import { mfbmFieldInit, mfbmFieldTl } from "./top-animations/mfbmFieldInit";
+import { topJobInit, topJobTl } from "./top-animations/topJobInit";
+import { topProjectInit, topProjectTl } from "./top-animations/topProjectInit";
+import { topPersonInit, topPersonTl } from "./top-animations/topPersonInit";
+import { topCultureInit, topCultureTl } from "./top-animations/topCultureInit";
+import { epilogueInit, epilogueTl } from "./top-animations/epilogueInit";
+
 import { gsap, ScrollTrigger } from "gsap/all";
+import { Observer } from "gsap/Observer";
 import DrawSVGPlugin from "gsap/DrawSVGPlugin";
-gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(ScrollTrigger, Observer, DrawSVGPlugin);
 import { video } from "./topVideo";
 
 let firstSt;
-
-const noscroll = (event) => {
-	event.preventDefault();
-};
 
 function topCover() {
 	window.addEventListener("touchmove", noscroll, {
@@ -35,8 +47,25 @@ function topCover() {
 }
 export { topCover };
 
+let topScrollObserver;
+
 function topSections() {
 	window.onbeforeunload = () => window.scrollTo(0, 0);
+
+	// topScrollObserver = Observer.create({
+	// 	type: "wheel,touch,pointer",
+	// 	wheelSpeed: -1,
+	// 	onDown: () => {
+	// 		console.log("onDown");
+	// 	},
+	// 	onUp: () => {
+	// 		console.log("onUp");
+	// 	},
+	// 	// onDown: () => !animating && gotoSection(currentIndex - 1, -1),
+	// 	// onUp: () => !animating && gotoSection(currentIndex + 1, 1),
+	// 	tolerance: 10,
+	// 	preventDefault: true,
+	// });
 
 	// ScrollTrigger.normalizeScroll(true);
 
@@ -289,65 +318,21 @@ function topSections() {
 		});
 	});
 
+	const animationsInit = () => {
+		prologueInit();
+		aboutInit();
+		mfbmFieldInit();
+		topJobInit();
+		topProjectInit();
+		topPersonInit();
+		topCultureInit();
+		epilogueInit();
+	};
+	animationsInit();
+
 	/* 
 		---------- prologue ----------
 	*/
-
-	const section01Title = document.querySelector(".top-section__title");
-	const section01Scroll = document.querySelector(".top-section__scroll");
-	const section01Items = gsap.utils.toArray([
-		".header__menu-button",
-		".header__link",
-		".ep__navigation",
-		".top-section__5minute",
-	]);
-
-	video.play(); // 開発用
-
-	const prologueInTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set("[data-ep='prologue']", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			section01Title,
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-			}
-		)
-		.fromTo(
-			section01Items,
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-				stagger: 0.1,
-			},
-			"<50%"
-		)
-		.fromTo(
-			section01Scroll,
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-			},
-			"<"
-		);
 
 	// gsap.set(".top-lead__body-inner", {
 	// 	marginTop: "20vh",
@@ -355,41 +340,6 @@ function topSections() {
 	// 	// 	ScrollTrigger.refresh();
 	// 	// },
 	// });
-
-	const prologueBackTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to([".top-lead__title img"], {
-			y: "10vh",
-			autoAlpha: 0,
-		})
-		.to(
-			".ep__01-02-bg",
-			{
-				filter: "blur(0px)",
-			},
-			"<"
-		)
-		.to(
-			[
-				section01Title,
-				".header__link",
-				".top-section__5minute",
-				section01Scroll,
-			],
-			{
-				autoAlpha: 1,
-			},
-			"<25%"
-		);
 
 	firstSt = ScrollTrigger.create({
 		id: "prologue",
@@ -411,62 +361,7 @@ function topSections() {
 			}
 		},
 	});
-	// firstSt.disable();
-
-	/* 
-		---------- topLead ----------
-	*/
-
-	const topLeadTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set("[data-ep='prologue-2']", {
-			autoAlpha: 1,
-		})
-		.to(
-			[
-				section01Title,
-				".header__link",
-				".top-section__5minute",
-				section01Scroll,
-			],
-			{
-				autoAlpha: 0,
-			}
-		)
-		.to(
-			".ep__01-02-bg",
-			{
-				filter: "blur(30px)",
-			},
-			"<"
-		)
-		.fromTo(
-			[".top-lead__title img"],
-			{
-				y: "10vh",
-				autoAlpha: 0,
-			},
-			{
-				y: 0,
-				autoAlpha: 1,
-			},
-			"<25%"
-		);
+	firstSt.disable();
 
 	ScrollTrigger.create({
 		id: "topLeadTl",
@@ -490,267 +385,9 @@ function topSections() {
 		},
 	});
 
-	const topLeadBodyTl1 = gsap.timeline({
-		scrollTrigger: {
-			id: "topLeadBodyTl1",
-			trigger: "#prologue-2",
-			start: "top top",
-			end: "25% top",
-			scrub: true,
-			// markers: true,
-			toggleActions: "play reverse play reverse",
-		},
-	});
-
-	const topLeadBodyTl2 = gsap.timeline({
-		scrollTrigger: {
-			id: "topLeadBodyTl2",
-			trigger: "#prologue-2",
-			start: "75% top",
-			end: "bottom top-=200px",
-			scrub: true,
-			// markers: true,
-			toggleActions: "play reverse play reverse",
-		},
-	});
-
-	gsap.set("#prologue-2 .top-lead__body", {
-		opacity: 0,
-	});
-
-	topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
-		opacity: 1,
-		duration: 0.5,
-	});
-
-	topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
-		opacity: 0,
-		duration: 0.5,
-	});
-
-	// const topLeadBodyTween = gsap.fromTo(
-	// 	".top-lead__body",
-	// 	{
-	// 		y: 0,
-	// 	},
-	// 	{
-	// 		y: "-100%",
-	// 	}
-	// );
-
-	// ScrollTrigger.create({
-	// 	id: "topLeadBodyTween",
-	// 	trigger: epTriggers[1],
-	// 	animation: topLeadBodyTween,
-	// 	pin: true,
-	// 	pinSpacing: false,
-	// 	start: "top -1", // 反応を遅らせる
-	// 	end: "bottom 1", // 反応を遅らせる
-	// 	scrub: 1,
-	// });
-
 	/* 
 		---------- about ----------
 	*/
-
-	const aboutTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				if (video) {
-					video.pause();
-				}
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				if (video) {
-					video.play();
-				}
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to("[data-ep='about']", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-about__bg",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 2,
-				autoAlpha: 1,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(1) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(-20),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(2) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(-10),
-				x: () => remUnit(10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(3) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(10),
-				x: () => remUnit(10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(4) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(20),
-				x: () => remUnit(20),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(5) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(20),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(6) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(10),
-				x: () => remUnit(-10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(7) img",
-			{
-				autoAlpha: 0,
-				y: () => remUnit(-10),
-				x: () => remUnit(-10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__bg-fill",
-			{
-				y: () => remUnit(24),
-				x: () => remUnit(24),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__bg-fill",
-			{
-				// scale: "1.4",
-				scale: "1",
-			},
-			{
-				duration: 0.75,
-				ease: "none",
-				scale: "3",
-			},
-			"> .25"
-		)
-		.fromTo(
-			".top-about__lead__title",
-			{
-				autoAlpha: 0,
-				y: "10vh",
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-about__lead__body p",
-			{
-				autoAlpha: 0,
-				y: "10vh",
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<25%"
-		);
 
 	ScrollTrigger.create({
 		id: "aboutTl",
@@ -772,152 +409,8 @@ function topSections() {
 	});
 
 	/* 
-		---------- .ep__03-01----------
+		---------- mfbmField ----------
 	*/
-
-	const mfbmFieldTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.fromTo(
-			"[data-ep='business']",
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-			}
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-park-building']",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(-7);
-				},
-			},
-			{
-				duration: 1,
-				ease: "power2.inOut",
-				autoAlpha: 1,
-				y: 0,
-				force3D: true,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-park-grass']",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 0.65,
-				ease: "power2.out",
-				autoAlpha: 1,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-park-people']",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 0.65,
-				ease: "power2.out",
-				autoAlpha: 1,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-building-02']",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(-7);
-				},
-			},
-			{
-				duration: 1.5,
-				ease: "power2.inOut",
-				autoAlpha: 1,
-				y: 0,
-				force3D: true,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-building-03']",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(-7);
-				},
-			},
-			{
-				duration: 0.85,
-				ease: "power2.inOut",
-				autoAlpha: 1,
-				y: 0,
-				force3D: true,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__map-inner",
-			{
-				x: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.inOut",
-				x: "40vw",
-				force3D: true,
-			},
-			">"
-		)
-		.fromTo(
-			".mfbm-field__lead-title",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__lead-body p",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<35%"
-		);
 
 	ScrollTrigger.create({
 		id: "mfbmFieldTl",
@@ -939,92 +432,6 @@ function topSections() {
 	/* 
 		---------- topJob ----------
 	*/
-
-	const topJobTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to("[data-ep='job']", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-job__peoples-item img",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: {
-					// wrap advanced options in an object
-					each: 0.1,
-					from: "random",
-					// grid: "auto",
-					ease: "power2.in",
-				},
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-job__lead",
-			{
-				autoAlpha: 0,
-				x: "50%",
-			},
-			{
-				duration: 1.125,
-				ease: "power2.out",
-				autoAlpha: 1,
-				x: 0,
-			}
-		)
-		.fromTo(
-			".top-job__lead-title",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".top-job__lead-body p",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<35%"
-		);
 
 	ScrollTrigger.create({
 		id: "topJobTl",
@@ -1051,137 +458,6 @@ function topSections() {
 		---------- topProject ----------
 	*/
 
-	const textP1 = gsap.utils.toArray(["#p-1-1", "#p-1-2"]);
-	const textR1 = gsap.utils.toArray(["#r-1-1", "#r-1-2", "#r-1-3"]);
-	const textO1 = gsap.utils.toArray(["#o-1"]);
-	const textJ = gsap.utils.toArray(["#j"]);
-	const textE = gsap.utils.toArray(["#e-1", "#e-2"]);
-	const textC = gsap.utils.toArray(["#c"]);
-	const textT1 = gsap.utils.toArray(["#t-1-1", "#t-1-2"]);
-	const textS = gsap.utils.toArray(["#s"]);
-	const textT2 = gsap.utils.toArray(["#t-2-1", "#t-2-2"]);
-	const textO2 = gsap.utils.toArray(["#o-2"]);
-	const textR2 = gsap.utils.toArray(["#r-2-1", "#r-2-2", "#r-2-3"]);
-	const textY = gsap.utils.toArray(["#y-1-1", "#y-1-2", "#y-1-3"]);
-
-	const topProjectTl = gsap
-		.timeline({
-			defaults: { duration: 1.5, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to("[data-ep='project']", {
-			autoAlpha: 1,
-		})
-		//　line animation
-		.from(
-			textP1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textR1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textO1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textJ,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textE,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textC,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textT1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textS,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textT2,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textO2,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textR2,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textY,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			".top-project__bg",
-			{
-				duration: 3,
-				autoAlpha: 0,
-				// ease: "expo.inOut",
-			},
-			"<50%"
-		)
-		.from(".top-project__lead-sub-title", {
-			autoAlpha: 0,
-		});
-
 	ScrollTrigger.create({
 		id: "topProjectTl",
 		trigger: "#project",
@@ -1206,138 +482,6 @@ function topSections() {
 	/* 
 		---------- topPerson ----------
 	*/
-
-	gsap.set(".persons__bg", {
-		autoAlpha: 0,
-	});
-
-	const topPersonTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set("[data-ep='person']", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".persons__solo-item",
-			{
-				clipPath: "inset(100% 0 0 0)",
-			},
-			{
-				duration: 0.5,
-				ease: "power2.out",
-				clipPath: "inset(0% 0 0 0)",
-				stagger: {
-					// wrap advanced options in an object
-					each: 0.25,
-					// from: "random",
-					// grid: "auto",
-					ease: "none",
-				},
-			},
-			"<"
-		)
-		.to(
-			".persons__solo",
-			{
-				duration: 0.75,
-				ease: "power2.inOut",
-				clipPath: "inset(0 0 100% 0)",
-			},
-			"<+=1.75"
-		)
-		.set(
-			".persons__bg",
-			{
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.set(".persons__title", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".persons__title__bg",
-			{
-				clipPath: "inset(0 0 100% 0)",
-			},
-			{
-				duration: 1.125,
-				clipPath: "inset(0 0 0% 0)",
-			}
-		)
-		.to(
-			".persons__bg-images-wrap",
-			{
-				scale: 0.8424,
-				transformOrigin: "bottom",
-				yPercent: 4,
-			},
-			"<"
-		)
-		.to(
-			".persons__bg-images-wrap img[src*='person-all-01']",
-			{
-				yPercent: 9,
-				xPercent: -3,
-			},
-			"<"
-		)
-		.to(
-			".persons__bg-images-wrap img[src*='person-all-02']",
-			{
-				yPercent: 9,
-				xPercent: 1,
-			},
-			"<"
-		)
-		.to(
-			".persons__bg-images-wrap img[src*='person-all-03']",
-			{
-				yPercent: 3,
-			},
-			"<"
-		)
-		.to(
-			".persons__bg-images-wrap img[src*='person-all-04']",
-			{
-				xPercent: 13,
-				yPercent: -7,
-			},
-			"<"
-		)
-		.to(
-			".persons__bg-images-wrap img[src*='person-all-05']",
-			{
-				xPercent: -10,
-			},
-			"<"
-		)
-		.fromTo(
-			".persons__title-text",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-			},
-			"<50%"
-		);
 
 	ScrollTrigger.create({
 		id: "topPersonTl",
@@ -1364,84 +508,6 @@ function topSections() {
 		---------- topCulture ----------
 	*/
 
-	const topCultureTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to("[data-ep='culture']", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-culture__copy-list",
-			{
-				x: "100%",
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.125,
-				x: "0",
-				autoAlpha: 1,
-			}
-		)
-		.fromTo(
-			".top-culture__lead",
-			{
-				x: "-100%",
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.125,
-				x: "0",
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-culture__lead-body p",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
-			},
-			{
-				duration: 1,
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.2,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".top-culture__copy-list-item",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
-			},
-			{
-				duration: 1,
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<50%"
-		);
-
 	ScrollTrigger.create({
 		id: "topCultureTl",
 		trigger: "#culture",
@@ -1466,87 +532,6 @@ function topSections() {
 	/* 
 		---------- epilogue ----------
 	*/
-
-	const epilogueTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.to("[data-ep='epilogue']", {
-			duration: 2,
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-epilogue__lead-title",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
-			},
-			{
-				duration: 1,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-epilogue__lead-body p",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
-			},
-			{
-				duration: 1.5,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.25,
-			},
-			"<25%"
-		);
-
-	// const lastTl = gsap
-	// 	.timeline({
-	// 		defaults: { duration: 1.25, ease: "power2.out" },
-	// 		paused: true,
-	// 		onComplete: () => {
-	// 			// window.removeEventListener("touchmove", noscroll, {
-	// 			// 	passive: false,
-	// 			// });
-	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
-	// 		},
-	// 		onReverseComplete: () => {
-	// 			// window.removeEventListener("touchmove", noscroll, {
-	// 			// 	passive: false,
-	// 			// });
-	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
-	// 		},
-	// 	})
-	// 	.to(".ep__section-scroll", {
-	// 		autoAlpha: 0,
-	// 		duration: 1,
-	// 	})
-	// 	.to(".ep__bottom-gradient", {
-	// 		autoAlpha: 0,
-	// 		duration: 1,
-	// 	});
 
 	ScrollTrigger.create({
 		id: "epilogueTl",
@@ -1576,4 +561,4 @@ function topSections() {
 	});
 }
 
-export { topSections };
+export { topSections, topScrollObserver };
