@@ -12,7 +12,9 @@
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-	visibility: hidden; // 開発用
+	@include mq-down() {
+		visibility: hidden; // 開発用
+	}
 }
 
 .persons__solo-item {

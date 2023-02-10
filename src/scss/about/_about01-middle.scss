@@ -58,6 +58,7 @@
 	text-decoration: underline;
 	text-underline-offset: 0.25em;
 	text-decoration-thickness: 1px;
+	// border-bottom: 1px solid currentColor;
 	text-align: center;
 	@include mq-down() {
 		margin-top: 7.6rem;
