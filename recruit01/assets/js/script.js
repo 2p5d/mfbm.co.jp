@@ -42944,11 +42944,11 @@ function init() {
 
 // top
 function top() {
-	document.querySelector(".top-cover").remove(); // 開発用
-	// topCover();
-	// topVideo();
+	// document.querySelector(".top-cover").remove(); // 開発用
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
+	(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
 	// video.play();
-	// topSections();
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topSections)();
 	// topSections3();
 }
 

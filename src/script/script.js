@@ -95,11 +95,11 @@ function init() {
 
 // top
 function top() {
-	document.querySelector(".top-cover").remove(); // 開発用
-	// topCover();
-	// topVideo();
+	// document.querySelector(".top-cover").remove(); // 開発用
+	topCover();
+	topVideo();
 	// video.play();
-	// topSections();
+	topSections();
 	// topSections3();
 }
 
