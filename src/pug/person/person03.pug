@@ -35,16 +35,16 @@ block contents
 			.person-hero__bg
 				+picture({filename:'person03-hero'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:true})
 
-		section.person-lead
+		section.person-lead(data-scroll-reveal-group)
 			.person-lead__text
-				p.person-lead__lead
+				p.person-lead__lead(data-scroll-reveal-group-item)
 					| MFBMに入社を決めた理由
-				h2.person-lead__title
+				h2.person-lead__title(data-scroll-reveal-group-item)
 					| 変革を恐れない企業で働きたい。
 					br
 					| それがMFBMを選んだ理由
 			
-				.person-lead__body
+				.person-lead__body(data-scroll-reveal-group-item)
 					p
 						| 就職活動中、こだわったのは業界でも職種でもありません。目指したのは確かな事業基盤を持ちつつ、その地位に甘んじることなく自己変革に挑もうとしている会社。
 						br
@@ -53,39 +53,39 @@ block contents
 					p
 						| 「変革」を掲げる企業の中でMFBMがベストだと思ったのは「ビジネスシーンの明日を変えていく」というブランドビジョンのもと、快適なオフィスビルの維持管理に加え、賑わいのある街づくりやテナント企業をサポートするビジネスソリューションの提供によって、オフィスのあり方や働き方そのものをアップデートしようとしていたからです。そうした取り組みの数々を知ったとき、私もこの変革の輪に加わりたいと思いました。それがMFBMを選んだ理由です。
 
-			.person-lead__photo
+			.person-lead__photo(data-scroll-reveal-group-item)
 				+picture({filename:'person03-image-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'586'},{breakpoint:true},{lazyload:true},{retina:true})
 				
 
 		section.person-middle
-			.person-middle__header
-				p.person-middle__header-lead
+			.person-middle__header(data-scroll-reveal-group)
+				p.person-middle__header-lead(data-scroll-reveal-group-item)
 					| 現在の仕事内容
-				h2.person-middle__header-title
+				h2.person-middle__header-title(data-scroll-reveal-group-item)
 					| 完成をイメージしながら
 					br
 					| 課題と向き合い
 					br.active-sp
 					| 施設の新規立ち上げに臨む
 			
-				.person-middle__header-body
+				.person-middle__header-body(data-scroll-reveal-group-item)
 					p
 						| 今、私が所属するミクストシーングループには、コワーキングスペースやフィットネス施設などの運営、イベント企画、オフィススタッフのアウトソーシングなどを手掛けるチームがあり、私は貸ホールや貸会議室の運営や立ち上げに携わっています。任せてもらっている主な担当は、三井不動産グループが保有するホール&カンファレンスの統括運営と2023年3月に開業する東京ミッドタウン八重洲内に開設予定のカンファレンス施設の新規立ち上げです。
 					p
 						| とりわけ新規立ち上げにおいては、オペレーション設計やスタッフ集め、設備や什器の購入、工事の発注、進捗管理、広報や営業のすべてに関わるため、各方面との調整に苦労を強いられることも少なくありません。しかしオーナーの願いや自分のアイデアが詰まった施設を完成に導くために避けて通れない障害であれば喜んで立ち向かいます。重ねた努力は裏切りませんし、数々の困難を乗り越えた先にこそ大きな喜びがあるのを知っているからです。
 			
-			.person-middle__body
+			.person-middle__body(data-scroll-reveal-group)
 				.person-middle__body-text
-					p.person-middle__body-lead
+					p.person-middle__body-lead(data-scroll-reveal-group-item)
 						| 今後どのようなことに挑戦していくのか
-					h2.person-middle__body-title
+					h2.person-middle__body-title(data-scroll-reveal-group-item)
 						| 若手を信じて任せ、
 						br
 						| サポートする企業だから
 						br
 						| 交渉力や調整力が身についた
 				
-					.person-middle__body-body
+					.person-middle__body-body(data-scroll-reveal-group-item)
 						p
 							| 今後グループの総力を結集した街づくりへの取り組みがますます増えていきます。ホール＆カンファレンスの運営や立ち上げに携わる者の一人として挑戦したいのは、こうした全社的な動きと足並みを揃え、街で働く人々、街に訪れる人々にとって過ごしやすい場所を1つでも多く実現すること。
 						p
@@ -93,16 +93,16 @@ block contents
 							br
 							| 自分が発見した課題を自ら手で解決したい人にとって、これほどやりがいを感じられる会社はほかにないと思えるほど、多くのチャンスに恵まれています。私自身もアグレッシブで前向きな先輩たちを見習って、これからも成長の手応えを感じられるようチャレンジを続けるつもりです。
 
-				.person-middle__body-photo
+				.person-middle__body-photo(data-scroll-reveal-group-item)
 					+picture({filename:'person03-image-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'420'},{breakpoint:true},{lazyload:true},{retina:true})
 
-		section.person-schedule
-			h2.person-schedule__title 
+		section.person-schedule(data-scroll-reveal-group)
+			h2.person-schedule__title(data-scroll-reveal-group-item)
 				| Oneday Schedule
 
-			.person-schedule__list-wrapper
+			.person-schedule__list-wrapper(data-scroll-reveal-group-item)
 
-				ul.person-schedule__list 
+				ul.person-schedule__list(data-scroll-reveal-group-item) 
 					li.person-schedule__list-item
 						p.person-schedule__list-item-time
 							span.person-schedule__list-item-time-text
@@ -153,7 +153,7 @@ block contents
 							p.person-schedule__list-item-text-body
 								| 午後に予定されているプレゼン用の資料の内容をチェック。本番に備える。
 
-				ul.person-schedule__list 
+				ul.person-schedule__list(data-scroll-reveal-group-item)
 
 					li.person-schedule__list-item
 						p.person-schedule__list-item-time
@@ -205,7 +205,7 @@ block contents
 							p.person-schedule__list-item-text-body
 								| 明日のスケジュールを確認し帰宅。
 
-			.person-schedule__sp-more
+			.person-schedule__sp-more(data-scroll-reveal-group-item)
 				.person-schedule__sp-more-icon
 					<?xml version="1.0" encoding="UTF-8"?>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.01 33">
@@ -220,19 +220,19 @@ block contents
 						| more
 					span.person-schedule__sp-more-button-icon
 		section.person-message
-			.person-message__photo
+			.person-message__photo(data-scroll-reveal) 
 				+picture({filename:'person03-image-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'580'},{breakpoint:true},{lazyload:true},{retina:true})
-			.person-message__text 
+			.person-message__text(data-scroll-reveal-group="fade-up")
 				.person-message__text-inner
-					p.person-message__text-lead 
+					p.person-message__text-lead(data-scroll-reveal-group-item)
 						| 学生の皆さんにメッセージ
-					h2.person-message__text-title 
+					h2.person-message__text-title(data-scroll-reveal-group-item)
 						| 多様な選択肢から
 						br
 						| ベストと思える仕事を
 						br.active-sp
 						| 選んでください
-					.person-message__text-body
+					.person-message__text-body(data-scroll-reveal-group-item)
 						p
 							| MFBMにはオフィスビル経営を支えるPMだけでなく、私たちのようなオフィス用途以外の施設運営や立ち上げに携わるメンバーもいれば、イベント企画に携わるメンバー、テナント企業の皆さんの業務効率化や社員の福利厚生のための商材を販売する営業もおり非常に多彩です。さまざまな可能性を前に悩みは尽きないと思いますが、選択肢の多さは人生の幅を広げます。
 							br
@@ -240,12 +240,12 @@ block contents
 				.person-message__text__border-top
 				.person-message__text__border-bottom
 
-		section.person-slider
-			h2.person-slider__title
+		section.person-slider(data-scroll-reveal-group)
+			h2.person-slider__title(data-scroll-reveal-group-item)
 				| NEXT PERSON 
-			a(href=root_path + "person/").person-slider__back-to-index
+			a(href=root_path + "person/" data-scroll-reveal-group-item).person-slider__back-to-index
 				| PERSON一覧へ戻る
-			.person-slider__content
+			.person-slider__content(data-scroll-reveal-group-item)
 				button.person-slider__prev(data-slider-prev)
 					.person-slider__prev-icon
 				button.person-slider__next(data-slider-next)

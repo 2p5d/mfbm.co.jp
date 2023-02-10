@@ -23,9 +23,10 @@
 		// font-size: 1.8rem;
 		font-family: var(--font-sans-yakuhan-all);
 		line-height: calc(34 / 16);
+
 		@include mq-down() {
 			margin-bottom: 9.6rem;
-			text-align: left;
+			text-align: justify;
 			// font-size: 2.6rem;
 			line-height: calc(52 / 26);
 		}

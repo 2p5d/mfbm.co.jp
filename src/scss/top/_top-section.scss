@@ -13,6 +13,9 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 35rem;
+	@include mq-down() {
+		width: 46.7rem;
+	}
 }
 
 .top-section__5minute {
@@ -37,27 +40,4 @@
 	&:hover img[src*="top-5-minute-invert"] {
 		opacity: 1;
 	}
-}
-
-.top-section__scroll {
-	--top-slide-01-section-01-scroll-bottom-margin: 5.7rem;
-	position: absolute;
-	left: 50%;
-	bottom: var(--top-slide-01-section-01-scroll-bottom-margin);
-	transform: translateX(-50%);
-	font-family: var(--font-serif);
-	color: white;
-	&::after {
-		content: "";
-		position: absolute;
-		left: 50%;
-		bottom: calc(var(--top-slide-01-section-01-scroll-bottom-margin) * -1);
-		width: 1px;
-		height: var(--top-slide-01-section-01-scroll-bottom-margin);
-		background-color: currentColor;
-	}
-}
-
-.top-section__section-01-scroll-text {
-	margin-bottom: 0.25em;
 }

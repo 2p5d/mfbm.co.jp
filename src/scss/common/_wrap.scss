@@ -78,29 +78,13 @@ body {
 	@include mq-down() {
 		font-size: 2.6em;
 	}
-	&[unresolved] {
+	&.contents-hidden {
 		visibility: hidden;
 	}
 }
 
-// @keyframes fade_in_content {
-//     0% {
-//         visibility: hidden;
-//         opacity: 0;
-//     }
-
-//     100% {
-//         visibility: visible;
-//         opacity: 1;
-//     }
-// }
-
 #content {
-	// opacity: 0;
-	// visibility: hidden;
-	// &.visible {
-	//   animation: fade_in_content 1s cubic-bezier(0,.9,.9,1) 1 forwards;
-	// }
+	// will-change: opacity;
 }
 
 .main {

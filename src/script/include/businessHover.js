@@ -1,11 +1,11 @@
-import { spmql } from "./vars";
+import { spmql, touchDevice } from "./vars";
 
 function businessHover() {
 	const navigationTriggers = document.querySelectorAll(
 			".business-fields__navigation [data-modal-trigger]"
 		),
 		mapTriggers = document.querySelectorAll(
-			".business-fields__map-triggers-and-over-images [data-modal-trigger]"
+			".business-fields__map [data-modal-trigger]"
 		),
 		spIcons = document.querySelectorAll(".business-fields__sp-map-icons img"),
 		hoverNavigationTrigger = (event) => {

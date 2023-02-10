@@ -52,6 +52,9 @@
 	width: 3.2rem;
 	height: 3.2rem;
 	color: var(--key-color-black);
+	html:not(.touch-device) & {
+		transition: translate 0.25s ease-out;
+	}
 	@include mq-down() {
 		top: calc(50% - 4rem);
 	}
@@ -84,6 +87,9 @@
 		left: var(--page-gutter);
 		transform: translate(-25%, -50%);
 	}
+	html:not(.touch-device) &:hover {
+		translate: -25% 0;
+	}
 }
 
 .about01-slider__next {
@@ -95,6 +101,9 @@
 	@include mq-down() {
 		right: var(--page-gutter);
 		transform: translate(25%, -50%);
+	}
+	html:not(.touch-device) &:hover {
+		translate: 25% 0;
 	}
 }
 

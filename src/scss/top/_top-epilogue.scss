@@ -20,6 +20,9 @@
 	width: 37.9rem;
 	margin-right: auto;
 	margin-left: auto;
+	@include mq-down() {
+		width: 40rem;
+	}
 }
 
 .top-epilogue__lead-body {
@@ -28,8 +31,11 @@
 	line-height: calc(34 / 15);
 	font-family: var(--font-serif);
 	font-weight: 500;
-	font-size: 1.4rem;
 	color: #000f3c;
+	@include mq-down() {
+		ine-height: calc(57 / 26);
+		white-space: nowrap;
+	}
 	p + p {
 		margin-top: 2.25em;
 	}

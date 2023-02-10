@@ -14,6 +14,7 @@
 	overflow: hidden;
 	font-family: var(--font-sans-yakuhan-all);
 	@include mq-down() {
+		margin-bottom: 24rem;
 		--business-modal-gutter: 5rem;
 		width: calc(100% - (var(--page-gutter) * 2));
 		margin-top: calc(var(--header-height) + 6rem);

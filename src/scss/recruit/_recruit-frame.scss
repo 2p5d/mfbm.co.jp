@@ -52,6 +52,7 @@
 		font-family: var(--font-sans-yakuhan-all);
 		line-height: calc(34 / 16);
 		letter-spacing: 0.01em;
+		text-align: justify;
 		@include mq-down() {
 			line-height: calc(52 / 26);
 		}
@@ -62,6 +63,7 @@
 			text-decoration: underline;
 			text-underline-offset: 0.3em;
 			font-weight: 700;
+			text-align: left;
 		}
 	}
 

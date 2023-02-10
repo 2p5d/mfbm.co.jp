@@ -21,16 +21,16 @@ block contents
 			.project-hero__bg
 				+picture({filename:'project-hero'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:true})
 
-		section.project-lead
+		section.project-lead(data-scroll-reveal-group="fade-up")
 
-			h2.project-lead__title
+			h2.project-lead__title(data-scroll-reveal-group-item)
 				| 『東京ミッドタウン日比谷』を舞台に
 				br
 				| 多様な角度からお客様に応え続ける
 				br
 				| MFBMの提供価値とは？
 
-			.project-lead__body
+			.project-lead__body(data-scroll-reveal-group-item)
 				p
 					| オフィスや商業施設などで構成される大規模複合施設である『東京ミッドタウン日比谷』。
 					br
@@ -40,18 +40,18 @@ block contents
 					br
 					| “未来志向の新たな体験や価値の創造”を指しています。
 					br
-					| その実現の一端を担う「ビル経営」、「ソリューションサービス」をご紹介します。？
+					| その実現の一端を担う「ビル経営」、「ソリューションサービス」をご紹介します。
 
 		.project-sections
 			
-			section.project-sections__item
+			section.project-sections__item(data-scroll-reveal)
 				.project-sections__item-images
-					.project-sections__item-image-01
+					.project-sections__item-image-01(data-scroll-reveal)
 						+picture({filename:'project-chapter01-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'605'},{height:'465'},{breakpoint:true},{lazyload:true},{retina:true})
-					.project-sections__item-image-02
+					.project-sections__item-image-02(data-scroll-reveal)
 						+picture({filename:'project-chapter01-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'420'},{height:'290'},{breakpoint:true},{lazyload:true},{retina:true})
 				.project-sections__item-text
-					p.project-sections__item-label
+					p.project-sections__item-label(data-scroll-reveal)
 						span.project-sections__item-label-header
 							span.project-sections__item-label-chapter
 								| Chapter
@@ -59,7 +59,7 @@ block contents
 								+picture({filename:'futura-pt-01'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'61'},{height:'49'},{breakpoint:false},{lazyload:true},{retina:false})
 						span.project-sections__item-label-text.project-sections__item-label-text--spacing-large
 							| ビル経営事業
-					h3.project-sections__item-title
+					h3.project-sections__item-title(data-scroll-reveal)
 						span お客様に一番近い場所で
 						br
 						span 様々なニーズや想いを受けとめ
@@ -67,21 +67,21 @@ block contents
 						span 新たなオフィスビルの
 						br
 						span あり方を創造する。
-					.project-sections__item-body
+					.project-sections__item-body(data-scroll-reveal)
 						p
 							| 当社のビル経営とは、計画立案から維持管理・運営・BCP、会計業務に至るまでオフィスビルに関わる全般を担い、ビルオーナーに代わってビルを経営することです。また、ビルに入居するテナント企業に対しては、ビジネスの成長を支援する提案も行います。
 						p
 							| さまざまな業務をMFBMが集約することでビル全体で起こっていることをすべて把握し、より俯瞰的な視点でビルを経営しているのです。『東京ミッドタウン日比谷』ではこの点をさらに強化し、一連のソリューションをワンストップで提供しています。『東京ミッドタウン日比谷』という“街”でお客様に寄り添い、ともに価値を高めていくことで、世界に向けて発信する新しいオフィスビルのあり方を創造しています。
 
-			section.project-sections__item
+			section.project-sections__item(data-scroll-reveal)
 				.project-sections__item-images
-					.project-sections__item-image-01
+					.project-sections__item-image-01(data-scroll-reveal)
 						+picture({filename:'project-chapter02-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'605'},{height:'465'},{breakpoint:true},{lazyload:true},{retina:true})
-					.project-sections__item-image-02
+					.project-sections__item-image-02(data-scroll-reveal)
 						+picture({filename:'project-chapter02-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'420'},{height:'290'},{breakpoint:true},{lazyload:true},{retina:true})
 
 				.project-sections__item-text
-					p.project-sections__item-label
+					p.project-sections__item-label(data-scroll-reveal)
 						span.project-sections__item-label-header
 							span.project-sections__item-label-chapter
 								| Chapter
@@ -90,21 +90,21 @@ block contents
 						span.project-sections__item-label-text.project-sections__item-label-text--spacing-large
 							| ソリューションサービス
 
-					h3.project-sections__item-title
+					h3.project-sections__item-title(data-scroll-reveal)
 						span 建物に制限されない
 						br
 						span 多種多様な側面からアプローチし
 						br
 						span より良い“働き方”を提案する。
-					.project-sections__item-body
+					.project-sections__item-body(data-scroll-reveal)
 						p
 							| ワークスペースやイベント、アウトソーシング、ビジネスマッチングなど多種多様なサービスを、ビルオーナーやテナント企業に企画・提供するMFBMが『東京ミッドタウン日比谷』プロジェクトで掲げたテーマは、「働く人のパフォーマンスの向上」というものでした。毎日多くの利用者が訪れる『東京ミッドタウン日比谷』で最も割合を占めるのは“働く人”です。その働く人にどんな価値を提供するか。
-						p
+						p.letter-spacing-pc-negative-0p0005
 							| 働く人が主役になる空間を実現するためにカンファレンスホールやコワーキングスペース、フィットネス施設などさまざまな企画をかたちにしましたが、つくって終わりではありません。利用者の声に耳を傾け改善を繰り返したり、イベントの企画運営など新たなソリューションを常に提供し続けることで、テナント企業で「働く人のパフォーマンスの向上」に寄与し、オフィスビルの価値を高め続けているのです。
 
 
-		.project-message
-			.project-message__text
+		.project-message(data-scroll-reveal-group)
+			.project-message__text(data-scroll-reveal-group-item)
 				p 
 					| 互いに異なるアプローチとなる
 					br

@@ -66,12 +66,14 @@
 	justify-content: center;
 	width: 3.2rem;
 	height: 3.2rem;
+	html:not(.touch-device) & {
+		transition: translate 0.25s ease-out;
+	}
 	@include mq-down() {
 		top: 48rem;
 		width: 8.4rem;
 		height: 9.2rem;
 		background-color: rgba(0, 15, 60, 0.8);
-		color: white;
 	}
 }
 
@@ -85,6 +87,7 @@
 	@include mq-down() {
 		width: 2.8rem;
 		height: 2.8rem;
+		color: white;
 	}
 	&:before {
 		content: "";
@@ -100,6 +103,9 @@
 		left: 0;
 		transform: translate(0, -50%);
 	}
+	html:not(.touch-device) &:hover {
+		translate: -25% 0;
+	}
 }
 
 .person-slider__next {
@@ -108,6 +114,9 @@
 	@include mq-down() {
 		right: 0;
 		transform: translate(0, -50%);
+	}
+	html:not(.touch-device) &:hover {
+		translate: 25% 0;
 	}
 }
 

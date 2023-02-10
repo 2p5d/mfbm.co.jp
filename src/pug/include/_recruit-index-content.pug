@@ -1,0 +1,43 @@
+
+.recruit-index(data-scroll-reveal)
+  ul.recruit-index__list(data-scroll-reveal-group="fade-up")
+
+    if key !== "recruit01"
+
+      li.recruit-index__list-item(data-scroll-reveal-group-item)
+        a.recruit-index__link.recruit-index__link--01(href=root_path + "recruit/recruit01.html")
+          span 研修教育制度
+            svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+            svg(aria-label="→" viewBox="0 0 35 32").recruit-index__arrow-sp
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+
+    if key !== "recruit02"
+    
+      li.recruit-index__list-item(data-scroll-reveal-group-item)
+        a.recruit-index__link.recruit-index__link--02(href=root_path + "recruit/recruit02.html")
+          span FAQ
+            svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+            svg(aria-label="→" viewBox="0 0 35 32").recruit-index__arrow-sp
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+
+    if key !== "recruit03"
+      
+      li.recruit-index__list-item(data-scroll-reveal-group-item)
+        a.recruit-index__link.recruit-index__link--03(href=root_path + "recruit/recruit03.html")
+          span 募集要項
+            svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+            svg(aria-label="→" viewBox="0 0 35 32").recruit-index__arrow-sp
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+
+    if key !== "recruit04"
+            
+      li.recruit-index__list-item(data-scroll-reveal-group-item)
+        a.recruit-index__link.recruit-index__link--04(href=root_path + "recruit/recruit04.html")
+          span お問い合わせ
+            svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+            svg(aria-label="→" viewBox="0 0 35 32").recruit-index__arrow-sp
+              use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')

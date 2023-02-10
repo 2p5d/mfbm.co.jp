@@ -20,7 +20,7 @@ block contents
 				span.recruit-header__title-jp
 					| FAQ
 
-		ul.recruit-faq-anchor
+		ul.recruit-faq-anchor(data-scroll-reveal)
 			li.recruit-faq-anchor__item 
 				a.recruit-faq-anchor__link(href="#faq01") 
 					span.recruit-faq-anchor__text 
@@ -51,7 +51,7 @@ block contents
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron') 
 				
 			
-		.recruit-content.recruit02(id="faq01")
+		.recruit-content.recruit02#faq01(data-scroll-reveal)
 			h2.recruit02__head 選考について
 			dl.faq-section
 				dt.faq-section__q(data-accordion-trigger)
@@ -94,7 +94,7 @@ block contents
 						span.faq-section__a-text
 							| 理系・文系に分けた採用は行っていません。当社が展開している事業では、文系・理系を問わず様々な分野に挑戦できるフィールドが広がっています。文系・理系と分けるのではなく、一人ひとりが幅広い知識を持ち専門性を高めていくことを目的としているからです。
 			
-		.recruit-content.recruit02(id="faq02")
+		.recruit-content.recruit02#faq02(data-scroll-reveal)
 			h2.recruit02__head 仕事・人事制度について
 			dl.faq-section
 				dt.faq-section__q(data-accordion-trigger)
@@ -163,7 +163,7 @@ block contents
 						span.faq-section__a-text
 							| 新入社員研修終了後、決定します。
 			
-		.recruit-content.recruit02(id="faq03")
+		.recruit-content.recruit02#faq03(data-scroll-reveal)
 			h2.recruit02__head 教育・研修制度について
 			dl.faq-section
 				dt.faq-section__q(data-accordion-trigger)
@@ -214,7 +214,7 @@ block contents
 							a.faq-section-link-b(href=root_path + "recruit/recruit01.html") 【研修育成制度】
 							|をご覧ください。
 			
-		.recruit-content.recruit02(id="faq04")
+		.recruit-content.recruit02#faq04(data-scroll-reveal)
 			h2.recruit02__head その他
 			dl.faq-section
 				dt.faq-section__q(data-accordion-trigger)
@@ -294,29 +294,8 @@ block contents
 						span.faq-section__a-text
 							| 産前産後休暇、育児休業、育児支援のための措置などの制度があります。産前産後休暇は、産前6週間・産後8週間、育児休業は、育児休業法に基づき原則出産後対象となる子が満一歳に達するまで取得することができます。また復職後は育児短時間勤務制度などを敷くことにより育児のバックアップも行っています。
 
-		.recruit-content.recruit-return-index 
+		.recruit-content.recruit-return-index(data-scroll-reveal)
 			a(href=root_path + "recruit/")
 				| RECRUIT一覧へ戻る
 
-		.recruit-index
-			ul.recruit-index__list
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--01(href=root_path + "recruit/recruit01.html")
-						span 研修教育制度
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				//- li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--02(href=root_path + "recruit/recruit02.html")
-						span FAQ
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--03(href=root_path + "recruit/recruit03.html")
-						span 募集要項
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--04(href=root_path + "recruit/recruit04.html")
-						span お問い合わせ
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+		include ../include/_recruit-index-content.pug

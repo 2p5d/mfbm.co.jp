@@ -16,9 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net/">
-    <link rel="stylesheet" href="../assets/css/style.css?ver=230209">
+    <link rel="stylesheet" href="../assets/css/style.css?ver=230210">
   </head>
-  <body class="page-about02" unresolved>
+  <body class="contents-hidden page-about02">
     <div id="content">
       <div id="to-top"></div>
       <header class="header">
@@ -123,6 +123,9 @@
                       <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                       </svg>
+                      <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                      </svg>
                     </div></a></li>
                 <li class="menu__links-item menu__links-item--mypage"><a href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer">
                     <div class="menu__links-item-inner">
@@ -132,6 +135,9 @@
                       <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                       </svg>
+                      <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                      </svg>
                     </div></a></li>
                 <li class="menu__links-item menu__links-item--internship"><a href="https://www.mfbm.co.jp/recruit01/internship/" target="_blank" rel="noopener noreferrer">
                     <div class="menu__links-item-inner">
@@ -140,6 +146,9 @@
                       </svg>
                       <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                      </svg>
+                      <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                       </svg>
                     </div></a></li>
               </ul>
@@ -165,29 +174,30 @@
           </div>
         </div>
         <section class="about-header">
-          <h2 class="about-header__title">
+          <h2 class="about-header__title" data-scroll-reveal>
             <picture>
               <source type="image/svg+xml" srcset="../assets/images/brand-vision-title.svg"/><img src="../assets/images/brand-vision-title.svg" width="433" height="132" alt="ビジネスシーンの明日を変えていく" loading="lazy"/>
             </picture>
           </h2>
-          <div class="about-header__body">
+          <div class="about-header__body" data-scroll-reveal>
             <p>
                ビジネスの成長を求める企業、仕事と生活の充実を望む人々。その姿はオフィスというステージの、様々な場面（シーン）の中にあります。<br>企業に成長をもたらし、働く人を豊かにする。私たちはそんなビジネスシーンを追求し続ける、挑戦者でありたい。お客様のいちばん近くに寄り添い、ともに歩んできた私たちだからこそ、実現できることがあります。企業と働く人々の未来に向けた、私たちMFBMの「3つの提供価値」をご紹介します。</p>
           </div>
         </section>
         <div class="about02-sections">
-          <section class="about02-sections__item">
-            <div class="about02-sections__item-content">
-              <div class="about02-sections__item-label">
+          <section class="about02-sections__item" data-scroll-reveal>
+            <div class="about02-sections__item-content" data-scroll-reveal-group="fade-up">
+              <div class="about02-sections__item-label" data-scroll-reveal-group-item>
                 <picture>
-                  <source type="image/svg+xml" srcset="../assets/images/our-value-01.svg"/><img src="../assets/images/our-value-01.svg" width="102" height="96" alt="Our Value 01" loading="lazy"/>
+                  <source type="image/svg+xml" media="(min-width: 768px)" srcset="../assets/images/our-value-01.svg"/>
+                  <source type="image/svg+xml" media="(max-width: 767px)" srcset="../assets/images/our-value-01-sp.svg"/><img src="../assets/images/our-value-01.svg" width="102" height="96" alt="Our Value 01" loading="lazy"/>
                 </picture>
               </div>
-              <h3 class="about02-sections__item-title">ビジネスステージの進化</h3>
-              <div class="about02-sections__item-body">
+              <h3 class="about02-sections__item-title" data-scroll-reveal-group-item>ビジネスステージの進化</h3>
+              <div class="about02-sections__item-body" data-scroll-reveal-group-item>
                 <p>ビジネスにおけるワークスタイル・ワークプレイスは、ハード・ソフトの両面で日々そのかたちを変えています。企業の経営戦略の拠点であるオフィスも、ビジネスのステージとしての役割と機能のさらなる進化が求められていくと考えます。私たちは、プロフェッショナルとして培ってきた力を活かし、お客様の「安心・快適・便利」に貢献します。</p>
               </div>
-              <div class="about02-sections__item-footer"><a class="about02-sections__item-button" href="https://www.mfbm.co.jp/brand/value1/" target="_blank" rel="noopener noreferrer"><span class="about02-sections__item-button-text">もっと詳しく見る
+              <div class="about02-sections__item-footer" data-scroll-reveal-group-item><a class="about02-sections__item-button" href="https://www.mfbm.co.jp/brand/value1/" target="_blank" rel="noopener noreferrer"><span class="about02-sections__item-button-text">もっと詳しく見る
                     <svg class="about02-sections__item-button-icon" aria-label="" viewBox="0 0 39 32">
                       <use xlink:href="../assets/images/sprite.svg#external"></use>
                     </svg></span></a></div>
@@ -201,18 +211,19 @@
               </picture>
             </div>
           </section>
-          <section class="about02-sections__item">
-            <div class="about02-sections__item-content">
-              <div class="about02-sections__item-label">
+          <section class="about02-sections__item" data-scroll-reveal>
+            <div class="about02-sections__item-content" data-scroll-reveal-group="fade-up">
+              <div class="about02-sections__item-label" data-scroll-reveal-group-item>
                 <picture>
-                  <source type="image/svg+xml" srcset="../assets/images/our-value-02.svg"/><img src="../assets/images/our-value-02.svg" width="102" height="96" alt="Our Value 02" loading="lazy"/>
+                  <source type="image/svg+xml" media="(min-width: 768px)" srcset="../assets/images/our-value-02.svg"/>
+                  <source type="image/svg+xml" media="(max-width: 767px)" srcset="../assets/images/our-value-02-sp.svg"/><img src="../assets/images/our-value-02.svg" width="102" height="96" alt="Our Value 02" loading="lazy"/>
                 </picture>
               </div>
-              <h3 class="about02-sections__item-title">ビジネスソリューションの共創</h3>
-              <div class="about02-sections__item-body">
+              <h3 class="about02-sections__item-title" data-scroll-reveal-group-item>ビジネスソリューションの共創</h3>
+              <div class="about02-sections__item-body" data-scroll-reveal-group-item>
                 <p>ビジネスの最前線であるオフィスには、「企業・人・情報・文化・アイディア」が満ちあふれています。そこに集う多種多様な可能性が融合することで、誰も見たことのない価値あるソリューションが創り出されていくと考えます。私たちは、ビジネスの効率化と業務支援を軸に、お客様の課題の解決を力強くアシストします。</p>
               </div>
-              <div class="about02-sections__item-footer"><a class="about02-sections__item-button" href="https://www.mfbm.co.jp/brand/value2/" target="_blank" rel="noopener noreferrer"><span class="about02-sections__item-button-text">もっと詳しく見る
+              <div class="about02-sections__item-footer" data-scroll-reveal-group-item><a class="about02-sections__item-button" href="https://www.mfbm.co.jp/brand/value2/" target="_blank" rel="noopener noreferrer"><span class="about02-sections__item-button-text">もっと詳しく見る
                     <svg class="about02-sections__item-button-icon" aria-label="" viewBox="0 0 39 32">
                       <use xlink:href="../assets/images/sprite.svg#external"></use>
                     </svg></span></a></div>
@@ -226,18 +237,19 @@
               </picture>
             </div>
           </section>
-          <section class="about02-sections__item">
-            <div class="about02-sections__item-content">
-              <div class="about02-sections__item-label">
+          <section class="about02-sections__item" data-scroll-reveal>
+            <div class="about02-sections__item-content" data-scroll-reveal-group="fade-up">
+              <div class="about02-sections__item-label" data-scroll-reveal-group-item>
                 <picture>
-                  <source type="image/svg+xml" srcset="../assets/images/our-value-03.svg"/><img src="../assets/images/our-value-03.svg" width="102" height="96" alt="Our Value 03" loading="lazy"/>
+                  <source type="image/svg+xml" media="(min-width: 768px)" srcset="../assets/images/our-value-03.svg"/>
+                  <source type="image/svg+xml" media="(max-width: 767px)" srcset="../assets/images/our-value-03-sp.svg"/><img src="../assets/images/our-value-03.svg" width="102" height="96" alt="Our Value 03" loading="lazy"/>
                 </picture>
               </div>
-              <h3 class="about02-sections__item-title">ビジネス＆ライフの提供</h3>
-              <div class="about02-sections__item-body">
+              <h3 class="about02-sections__item-title" data-scroll-reveal-group-item>ビジネス＆ライフの提供</h3>
+              <div class="about02-sections__item-body" data-scroll-reveal-group-item>
                 <p>働く人の多様化やICTの進歩などによって、一人ひとりが「働き方を自分らしくデザイン」できる時代を迎えています。そのビジネスシーンでは、『働く』と『暮らす』が調和する、オフィスの新しいライフスタイルが実現していくと考えます。私たちは、自由闊達でクリエイティブなマインドを発揮し、お客様に魅力的なビジネス＆ライフを提供します。</p>
               </div>
-              <div class="about02-sections__item-footer"><a class="about02-sections__item-button" href="https://www.mfbm.co.jp/brand/value3/" target="_blank" rel="noopener noreferrer"><span class="about02-sections__item-button-text">もっと詳しく見る
+              <div class="about02-sections__item-footer" data-scroll-reveal-group-item><a class="about02-sections__item-button" href="https://www.mfbm.co.jp/brand/value3/" target="_blank" rel="noopener noreferrer"><span class="about02-sections__item-button-text">もっと詳しく見る
                     <svg class="about02-sections__item-button-icon" aria-label="" viewBox="0 0 39 32">
                       <use xlink:href="../assets/images/sprite.svg#external"></use>
                     </svg></span></a></div>
@@ -252,7 +264,7 @@
             </div>
           </section>
         </div>
-        <section class="about02-links">
+        <section class="about02-links" data-scroll-reveal>
           <div class="about02-links__lead">
             <p>当社ブランドビジョンについて<br class="active-sp">詳しくはこちらをご覧ください。</p>
           </div>
@@ -266,17 +278,22 @@
                 </picture></a></div>
           </div>
         </section>
-        <section class="about-footer-links">
+        <section class="about-footer-links" data-scroll-reveal>
           <div class="about-footer-links__header"><a class="about-footer-links__back-to-index" href="../about/">ABOUT一覧へ戻る</a></div>
           <div class="about-footer-links__content">
-            <div class="about-index">
-              <div class="about-index__item"><a href="../about/about01.html"> 
+            <div class="about-index" data-scroll-reveal-group>
+              <div class="about-index__item" data-scroll-reveal-group-item><a href="../about/about01.html"> 
                   <div class="about-index__item-content">
                     <h3 class="about-index__item-title">MFBMの役割</h3>
                     <p class="about-index__item-text">三井不動産グループの中核企業として<br>ビジネスシーンから未来を創造します。</p>
                     <div class="about-index__item-icon">
                       <svg aria-label="→" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                      </svg>
+                    </div>
+                    <div class="about-index__item-icon-sp"> 
+                      <svg aria-label="→" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                       </svg>
                     </div>
                   </div>
@@ -288,13 +305,18 @@
                       <source type="image/jpeg" media="(max-width: 767px)" srcset="../assets/images/about-index-01-sp.jpg"/><img src="../assets/images/about-index-01.jpg" width="1400" height="300" alt="" loading="lazy"/>
                     </picture>
                   </div></a></div>
-              <div class="about-index__item"><a href="../about/about03.html"> 
+              <div class="about-index__item" data-scroll-reveal-group-item><a href="../about/about03.html"> 
                   <div class="about-index__item-content">
                     <h3 class="about-index__item-title">MFBMの実績</h3>
                     <p class="about-index__item-text">挑戦・変革を続け新たな価値を創造します。</p>
                     <div class="about-index__item-icon">
                       <svg aria-label="→" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                      </svg>
+                    </div>
+                    <div class="about-index__item-icon-sp"> 
+                      <svg aria-label="→" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                       </svg>
                     </div>
                   </div>
@@ -317,8 +339,11 @@
         </div></a>
       <footer class="footer" id="footer"><a class="footer__page-top" href="#to-top">
           <div class="footer__page-top-arrow">
-            <svg aria-label="→" viewBox="0 0 34 32">
+            <svg class="footer__page-top-arrow-icon-pc" aria-label="→" viewBox="0 0 34 32">
               <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+            </svg>
+            <svg class="footer__page-top-arrow-icon-sp" aria-label="→" viewBox="0 0 35 32">
+              <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
             </svg>
           </div><span class="footer__page-top-text">PAGE TOP</span></a>
         <div class="footer__menu">
@@ -399,6 +424,9 @@
                     <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                       <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                     </svg>
+                    <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                      <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                    </svg>
                   </div></a></li>
               <li class="menu__links-item menu__links-item--mypage"><a href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer">
                   <div class="menu__links-item-inner">
@@ -408,6 +436,9 @@
                     <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                       <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                     </svg>
+                    <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                      <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                    </svg>
                   </div></a></li>
               <li class="menu__links-item menu__links-item--internship"><a href="https://www.mfbm.co.jp/recruit01/internship/" target="_blank" rel="noopener noreferrer">
                   <div class="menu__links-item-inner">
@@ -416,6 +447,9 @@
                     </svg>
                     <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                       <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                    </svg>
+                    <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                      <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                     </svg>
                   </div></a></li>
             </ul>
@@ -429,11 +463,11 @@
           </div>
           <div class="footer__bottom-content">
             <div class="footer__bottom-links">
-              <div class="footer__bottom-links__item"><a href="#">個人情報保護方針</a></div>
-              <div class="footer__bottom-links__item"><a href="#">特定個人情報保護方針</a></div>
-              <div class="footer__bottom-links__item"><a href="#">個人情報の取り扱いについて</a></div>
-              <div class="footer__bottom-links__item"><a href="#">Cookieおよびアクセスログについて</a></div>
-              <div class="footer__bottom-links__item"><a href="#">サイトご利用上の注意</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer">個人情報保護方針</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/basic-privacy-policy/index.html" target="_blank" rel="noopener noreferrer">特定個人情報保護方針</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/privacy/" target="_blank" rel="noopener noreferrer">個人情報の取り扱いについて</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/cookie/index.html" target="_blank" rel="noopener noreferrer">Cookieおよびアクセスログについて</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/terms/" target="_blank" rel="noopener noreferrer">サイトご利用上の注意</a></div>
             </div>
             <p class="footer__copyright">Copyright © Mitsui Fudosan Building Management Co., Ltd. All rights reserved.</p>
           </div>
@@ -441,5 +475,5 @@
       </footer>
     </div>
   </body>
-  <script src="../assets/js/script.js?ver=230209" defer></script>
+  <script src="../assets/js/script.js?ver=230210" defer></script>
 </html>

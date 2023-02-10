@@ -20,7 +20,6 @@
 	line-height: calc(34 / 16);
 	font-family: var(--font-sans-yakuhan-all);
 	@include mq-down() {
-		margin-top: 8.4rem;
 		line-height: calc(52 / 26);
 		text-align: justify;
 	}

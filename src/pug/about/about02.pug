@@ -26,10 +26,10 @@ block contents
 
 		section.about-header
 			
-			h2.about-header__title
+			h2.about-header__title(data-scroll-reveal)
 				+picture({filename:'brand-vision-title'},{type:'svg',fallbackType:''},{alt:'ビジネスシーンの明日を変えていく'},{classes:['']},{width:'433'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
 
-			.about-header__body
+			.about-header__body(data-scroll-reveal)
 				p 
 					| ビジネスの成長を求める企業、仕事と生活の充実を望む人々。その姿はオフィスというステージの、様々な場面（シーン）の中にあります。
 					br
@@ -38,21 +38,21 @@ block contents
 
 		.about02-sections
 		
-			section.about02-sections__item
+			section.about02-sections__item(data-scroll-reveal)
 
-				.about02-sections__item-content
+				.about02-sections__item-content(data-scroll-reveal-group="fade-up")
 				
-					.about02-sections__item-label
-						+picture({filename:'our-value-01'},{type:'svg',fallbackType:''},{alt:'Our Value 01'},{classes:['']},{width:'102'},{height:'96'},{breakpoint:false},{lazyload:true},{retina:false})
+					.about02-sections__item-label(data-scroll-reveal-group-item)
+						+picture({filename:'our-value-01'},{type:'svg',fallbackType:''},{alt:'Our Value 01'},{classes:['']},{width:'102'},{height:'96'},{breakpoint:true},{lazyload:true},{retina:false})
 
-					h3.about02-sections__item-title
+					h3.about02-sections__item-title(data-scroll-reveal-group-item)
 						| ビジネスステージの進化
 
-					.about02-sections__item-body
+					.about02-sections__item-body(data-scroll-reveal-group-item)
 						p
 							| ビジネスにおけるワークスタイル・ワークプレイスは、ハード・ソフトの両面で日々そのかたちを変えています。企業の経営戦略の拠点であるオフィスも、ビジネスのステージとしての役割と機能のさらなる進化が求められていくと考えます。私たちは、プロフェッショナルとして培ってきた力を活かし、お客様の「安心・快適・便利」に貢献します。
 
-					.about02-sections__item-footer
+					.about02-sections__item-footer(data-scroll-reveal-group-item)
 						a.about02-sections__item-button(href="https://www.mfbm.co.jp/brand/value1/" target="_blank" rel="noopener noreferrer")
 							span.about02-sections__item-button-text
 								| もっと詳しく見る
@@ -62,21 +62,21 @@ block contents
 				.about02-sections__item-bg
 					+picture({filename:'about-02-section-01-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'705'},{breakpoint:true},{lazyload:true},{retina:true})
 		
-			section.about02-sections__item
+			section.about02-sections__item(data-scroll-reveal)
 
-				.about02-sections__item-content
+				.about02-sections__item-content(data-scroll-reveal-group="fade-up")
 				
-					.about02-sections__item-label
-						+picture({filename:'our-value-02'},{type:'svg',fallbackType:''},{alt:'Our Value 02'},{classes:['']},{width:'102'},{height:'96'},{breakpoint:false},{lazyload:true},{retina:false})
+					.about02-sections__item-label(data-scroll-reveal-group-item)
+						+picture({filename:'our-value-02'},{type:'svg',fallbackType:''},{alt:'Our Value 02'},{classes:['']},{width:'102'},{height:'96'},{breakpoint:true},{lazyload:true},{retina:false})
 
-					h3.about02-sections__item-title
+					h3.about02-sections__item-title(data-scroll-reveal-group-item)
 						| ビジネスソリューションの共創
 
-					.about02-sections__item-body
+					.about02-sections__item-body(data-scroll-reveal-group-item)
 						p
 							| ビジネスの最前線であるオフィスには、「企業・人・情報・文化・アイディア」が満ちあふれています。そこに集う多種多様な可能性が融合することで、誰も見たことのない価値あるソリューションが創り出されていくと考えます。私たちは、ビジネスの効率化と業務支援を軸に、お客様の課題の解決を力強くアシストします。
 
-					.about02-sections__item-footer
+					.about02-sections__item-footer(data-scroll-reveal-group-item)
 						a.about02-sections__item-button(href="https://www.mfbm.co.jp/brand/value2/" target="_blank" rel="noopener noreferrer")
 							span.about02-sections__item-button-text
 								| もっと詳しく見る
@@ -86,21 +86,21 @@ block contents
 				.about02-sections__item-bg
 					+picture({filename:'about-02-section-02-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'705'},{breakpoint:true},{lazyload:true},{retina:true})
 		
-			section.about02-sections__item
+			section.about02-sections__item(data-scroll-reveal)
 
-				.about02-sections__item-content
+				.about02-sections__item-content(data-scroll-reveal-group="fade-up")
 				
-					.about02-sections__item-label
-						+picture({filename:'our-value-03'},{type:'svg',fallbackType:''},{alt:'Our Value 03'},{classes:['']},{width:'102'},{height:'96'},{breakpoint:false},{lazyload:true},{retina:false})
+					.about02-sections__item-label(data-scroll-reveal-group-item)
+						+picture({filename:'our-value-03'},{type:'svg',fallbackType:''},{alt:'Our Value 03'},{classes:['']},{width:'102'},{height:'96'},{breakpoint:true},{lazyload:true},{retina:false})
 
-					h3.about02-sections__item-title
+					h3.about02-sections__item-title(data-scroll-reveal-group-item)
 						| ビジネス＆ライフの提供
 
-					.about02-sections__item-body
+					.about02-sections__item-body(data-scroll-reveal-group-item)
 						p
 							| 働く人の多様化やICTの進歩などによって、一人ひとりが「働き方を自分らしくデザイン」できる時代を迎えています。そのビジネスシーンでは、『働く』と『暮らす』が調和する、オフィスの新しいライフスタイルが実現していくと考えます。私たちは、自由闊達でクリエイティブなマインドを発揮し、お客様に魅力的なビジネス＆ライフを提供します。
 
-					.about02-sections__item-footer
+					.about02-sections__item-footer(data-scroll-reveal-group-item)
 						a.about02-sections__item-button(href="https://www.mfbm.co.jp/brand/value3/" target="_blank" rel="noopener noreferrer")
 							span.about02-sections__item-button-text
 								| もっと詳しく見る
@@ -111,7 +111,7 @@ block contents
 					+picture({filename:'about-02-section-03-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'705'},{breakpoint:true},{lazyload:true},{retina:true})
 		
 
-		section.about02-links
+		section.about02-links(data-scroll-reveal)
 			.about02-links__lead
 				p
 					| 当社ブランドビジョンについて
@@ -123,7 +123,7 @@ block contents
 						+picture({filename:'about-02-brand-vision-bnr'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'741'},{height:'237'},{breakpoint:true},{lazyload:true},{retina:true}) 
 
 
-		section.about-footer-links
+		section.about-footer-links(data-scroll-reveal)
 		
 			.about-footer-links__header
 				a(href=root_path + "about/").about-footer-links__back-to-index

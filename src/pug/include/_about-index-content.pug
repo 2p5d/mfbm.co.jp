@@ -1,11 +1,11 @@
 
 
 
-.about-index
+.about-index(data-scroll-reveal-group)
 
 	if key !== "about01"
 
-		.about-index__item
+		.about-index__item(data-scroll-reveal-group-item)
 			a(href=root_path + "about/about01.html") 
 				.about-index__item-content
 					h3.about-index__item-title
@@ -17,12 +17,15 @@
 					.about-index__item-icon
 						svg(aria-label="→" viewBox="0 0 34 32")
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+					.about-index__item-icon-sp 
+						svg(aria-label="→" viewBox="0 0 35 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
 				.about-index__item-bg
 					+picture({filename:'about-index-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
 
 	if key !== "about02"
 
-		.about-index__item
+		.about-index__item(data-scroll-reveal-group-item)
 			a(href=root_path + "about/about02.html") 
 				.about-index__item-content
 					h3.about-index__item-title
@@ -32,12 +35,15 @@
 					.about-index__item-icon
 						svg(aria-label="→" viewBox="0 0 34 32")
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+					.about-index__item-icon-sp 
+						svg(aria-label="→" viewBox="0 0 35 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
 				.about-index__item-bg
 					+picture({filename:'about-index-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
 
 	if key !== "about03"
 
-		.about-index__item
+		.about-index__item(data-scroll-reveal-group-item)
 			a(href=root_path + "about/about03.html") 
 				.about-index__item-content
 					h3.about-index__item-title
@@ -47,5 +53,8 @@
 					.about-index__item-icon
 						svg(aria-label="→" viewBox="0 0 34 32")
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+					.about-index__item-icon-sp 
+						svg(aria-label="→" viewBox="0 0 35 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
 				.about-index__item-bg
 					+picture({filename:'about-index-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})

@@ -54,8 +54,9 @@
 	width: fit-content;
 	margin-right: auto;
 	margin-left: auto;
+	transform: translateY(0.1em);
 	@include mq-down() {
-		transform: translateX(-2em);
+		transform: translate(-2em, 0);
 	}
 }
 
@@ -77,6 +78,8 @@
 	font-weight: 500;
 	white-space: nowrap;
 	@include mq-down() {
+		transform: translate(calc(100% + 0.5em), 0.075em);
+
 		font-size: 2.2rem;
 	}
 }

@@ -5,8 +5,12 @@
    ========================================================================== */
 
 .person-index__item {
+	display: block;
 	position: relative;
 	height: 52.6rem;
+	html.touch-device & {
+		pointer-events: none;
+	}
 	@include mq-down() {
 		height: auto;
 		background-color: var(--key-color-blue);
@@ -68,11 +72,17 @@ p.person-index__item-cover-label {
 		margin-left: auto;
 		line-height: 0;
 		fill: currentColor;
+		@include mq-down() {
+			width: 10.6rem;
+		}
 	}
 	span {
 		font-family: var(--font-cormorant);
 		font-size: 7.8rem;
 		line-height: 0.5;
+		@include mq-down() {
+			margin-top: 0.05em;
+		}
 		&::before,
 		&::after {
 			content: "";
@@ -122,8 +132,13 @@ p.person-index__item-cover-label {
 	transform: translateX(-50%);
 	background-color: white;
 	z-index: 2;
-	transition: color 0.25s ease-out, border 0.25s ease-out,
-		background-color 0.25s ease-out;
+	border: 1px solid transparent;
+	transition: color 0.5s ease-out, border 0.5s ease-out,
+		background-color 0.5s ease-out !important;
+	pointer-events: auto;
+	html:not(.touch-device) & {
+		pointer-events: none;
+	}
 	@include mq-down() {
 		position: relative;
 		left: auto;

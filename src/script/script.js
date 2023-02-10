@@ -1,17 +1,28 @@
 /* bace import */
 import "./include/webFontConfig";
-import { setScrollBarWidth } from "./include/vars";
+import { setScrollBarWidth, touchDevice } from "./include/vars";
 import { modal } from "./include/modal";
-import Chart from "chart.js/auto";
+import { onceTransition, tlOnce } from "./include/onceTransition";
 // import { viewPortHeight } from "./include/viewPortHeight";
 import { smoothScroll } from "./include/smoothScroll";
 import { accordion } from "./include/accordion";
 import { toggleToTop } from "./include/toggleToTop";
+import { topTest } from "./include/topTest";
 // import "./libs/css_browser_selector.min";
-// import { fadeUp } from "./include/scrollTrigger";
+import {
+	scrollRevealInit,
+	scrollReveal,
+	scrollRevealItems,
+	scrollRevealGroupInit,
+	scrollRevealGroup,
+	scrollRevealGroups,
+} from "./include/scrollReveal";
 import { topCover, topSections } from "./include/topSections";
 // import { topCover, topSections3 } from "./include/topSections3";
-import { topVideo } from "./include/topVideo";
+import { topVideo, video } from "./include/topVideo";
+
+/* person import */
+import { personIndex } from "./include/personIndex";
 
 /* person import */
 import { personSlider } from "./include/personSlider";
@@ -23,24 +34,36 @@ import { about01Slider } from "./include/about01Slider";
 /* business import */
 import { businessHover } from "./include/businessHover";
 
-if (
-	document.readyState === "interactive" ||
-	document.readyState === "complete"
-) {
-	resolve();
-} else {
-	window.addEventListener("DOMContentLoaded", resolve);
+window.addEventListener("DOMContentLoaded", resolve);
+
+if (touchDevice) {
+	document.documentElement.classList.add("touch-device");
 }
 
 function resolve() {
-	document.body.removeAttribute("unresolved");
+	document.body.classList.remove("contents-hidden");
 	init();
 }
 
 function init() {
-	// fadeUp();
+	if (
+		!document.body.classList.contains("page-top") &&
+		!document.body.classList.contains("page-index_test")
+	) {
+		onceTransition();
+		tlOnce.play();
+		scrollRevealInit();
+		if (scrollRevealItems.length) {
+			tlOnce.add(scrollReveal(), "<75%");
+		}
+		scrollRevealGroupInit();
+		if (scrollRevealGroups.length) {
+			tlOnce.add(scrollRevealGroup(), "<75%");
+		}
+		smoothScroll();
+	}
+
 	modal();
-	smoothScroll();
 	toggleToTop();
 	accordion();
 	setScrollBarWidth();
@@ -48,11 +71,17 @@ function init() {
 		case document.body.classList.contains("page-top"):
 			top();
 			break;
+		case document.body.classList.contains("page-index_test"):
+			topTest();
+			break;
 		case document.body.classList.contains("page-about01"):
 			about01();
 			break;
 		case document.body.classList.contains("page-business"):
 			business();
+			break;
+		case document.body.classList.contains("page-person"): // elm.classList.valueで文字列取得してincludes()で部分一致
+			personIndex();
 			break;
 		case document.body.classList.value.includes("page-person0"): // elm.classList.valueで文字列取得してincludes()で部分一致
 			personSingle();
@@ -66,10 +95,11 @@ function init() {
 
 // top
 function top() {
-	// document.querySelector(".top-cover").remove(); // 開発用
-	topCover();
-	topVideo();
-	topSections();
+	document.querySelector(".top-cover").remove(); // 開発用
+	// topCover();
+	// topVideo();
+	// video.play();
+	// topSections();
 	// topSections3();
 }
 

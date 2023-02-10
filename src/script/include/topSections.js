@@ -41,7 +41,7 @@ function topSections() {
 	// ScrollTrigger.normalizeScroll(true);
 
 	const epsWrapper = document.querySelector(".ep"),
-		eps = document.querySelectorAll(".ep > section > section"),
+		eps = document.querySelectorAll(".ep > section"),
 		scroller = document.createElement("div");
 
 	/* 
@@ -56,67 +56,58 @@ function topSections() {
 		scroller.style.pointerEvents = "none";
 		epsWrapper.appendChild(scroller);
 
-		let autoHeightEps = [];
-		let autoTriggers = [];
+		// let autoHeightEps = [];
+		// let autoTriggers = [];
 		eps.forEach((ep, index) => {
 			index = index + 1;
 			const epTrigger = document.createElement("div");
-			epTrigger.className = `ep-trigger-${index.toString().padStart(2, "0")}`;
-			if (!ep.previousElementSibling) {
-				const parentElm = ep.parentElement;
-				const id = parentElm.id;
-				epTrigger.id = id;
-				parentElm.id = "";
-			}
+
+			const id = ep.id;
+			epTrigger.id = id;
+			ep.id = "";
+
+			ep.dataset.ep = `${id}`;
+
 			scroller.appendChild(epTrigger);
 			epTriggers.push(epTrigger);
-			switch (index) {
-				case 1:
-					epTrigger.style.height = "50vh";
+			switch (id) {
+				case "prologue":
+					epTrigger.style.height = "500vh";
 					break;
-				case 2:
-					epTrigger.style.height = `${ep.clientHeight}px`;
-					autoHeightEps.push(ep);
-					autoTriggers.push(epTrigger);
+				case "prologue-2":
+					// epTrigger.style.height = `${ep.clientHeight}px`;
+					const scrollContent = ep.querySelector(".top-lead__body");
+					gsap.set(scrollContent, {
+						paddingTop: "50vh",
+						// marginBottom: "50vh",
+					});
+					epTrigger.appendChild(scrollContent);
+					// autoHeightEps.push(ep);
+					// autoTriggers.push(epTrigger);
 					break;
-				case 3:
-					epTrigger.style.height = "200vh";
+				case "about":
+					epTrigger.style.height = "500vh";
 					break;
-				case 4:
-					epTrigger.style.height = "100vh";
+				case "business":
+					epTrigger.style.height = "500vh";
 					break;
-				case 5:
-					epTrigger.style.height = "125vh";
+				case "job":
+					epTrigger.style.height = "500vh";
 					break;
-				case 6:
-					epTrigger.style.height = "100vh";
+				case "project":
+					epTrigger.style.height = "500vh";
 					break;
-				case 7:
-					epTrigger.style.height = "125vh";
+				case "person":
+					epTrigger.style.height = "500vh";
 					break;
-				case 8:
-					epTrigger.style.height = "100vh";
+				case "culture":
+					epTrigger.style.height = "500vh";
 					break;
-				case 9:
-					epTrigger.style.height = "125vh";
-					break;
-				case 10:
-					epTrigger.style.height = "100vh";
-					break;
-				case 11:
-					epTrigger.style.height = "125vh";
-					break;
-				case 12:
-					epTrigger.style.height = "100vh";
-					break;
-				case 13:
-					epTrigger.style.height = "50vh";
-					break;
-				case 14:
-					epTrigger.style.height = "75vh";
+				case "epilogue":
+					epTrigger.style.height = "500vh";
 					break;
 				default:
-					epTrigger.style.height = "100vh";
+					epTrigger.style.height = "300";
 			}
 		});
 
@@ -124,11 +115,11 @@ function topSections() {
 			ダミーのスクローラーとheight:autoのセクションの高さを同期
 		*/
 
-		ScrollTrigger.addEventListener("refreshInit", () => {
-			autoTriggers.forEach((trigger, index) => {
-				trigger.style.height = `${autoHeightEps[index].clientHeight}px`;
-			});
-		});
+		// ScrollTrigger.addEventListener("refreshInit", () => {
+		// 	autoTriggers.forEach((trigger, index) => {
+		// 		trigger.style.height = `${autoHeightEps[index].clientHeight}px`;
+		// 	});
+		// });
 	};
 
 	createTriggers();
@@ -163,16 +154,45 @@ function topSections() {
 		paused: true,
 	});
 
+	const navigationLinks = document.querySelectorAll(".ep__navigation-link");
 	const navigationInit = () => {
-		const navigationLinks = document.querySelectorAll(".ep__navigation-link");
 		navigationLinks.forEach((link) => {
 			link.addEventListener("click", (event) => {
-				// event.preventDefault;
-				// const triggers = ScrollTrigger.getAll();
-				// triggers.forEach((trigger) => {
-				// 	trigger.disable();
-				// });
+				const triggers = ScrollTrigger.getAll();
+				triggers.forEach((trigger) => {
+					trigger.disable();
+				});
 				// epsWrapperTween.play();
+
+				event.preventDefault();
+
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
+
+				const href = event.currentTarget.getAttribute("href");
+				const target = document.querySelector(href);
+				console.log(target);
+				gsap.to(window, {
+					duration: 0,
+					scrollTo: {
+						y: target,
+						// offsetY: () => {
+						// 	if (header) {
+						// 		return header.clientHeight;
+						// 	}
+						// },
+					},
+					onComplete: () => {
+						triggers.forEach((trigger) => {
+							trigger.enable(true);
+						});
+						ScrollTrigger.refresh();
+					},
+				});
+
+				// event.preventDefault;
 
 				// setTimeout(() => {
 				// 	triggers.forEach((trigger) => {
@@ -182,14 +202,92 @@ function topSections() {
 				// 	// epsWrapperTween.reverse();
 				// }, 100);
 
-				navigationLinks.forEach((link) => {
-					link.classList.remove("--active");
-				});
-				event.currentTarget.classList.add("--active");
+				// navigationLinks.forEach((link) => {
+				// 	link.classList.remove("--active");
+				// });
+				// event.currentTarget.classList.add("--active");
 			});
 		});
 	};
 	navigationInit();
+
+	const sectionLinksWRapper = document.querySelector(".ep__section-label");
+	const sectionLinksInit = () => {
+		gsap.set(sectionLinksWRapper, {
+			autoAlpha: 0,
+		});
+	};
+	sectionLinksInit();
+
+	const sectionsLinks = document.querySelectorAll(
+		".ep__section-label__links-item"
+	);
+	const sectionChange = (section) => {
+		const sectionId = section.id,
+			sectionLinkChange = (sectionId) => {
+				sectionsLinks.forEach((sectionsLink) => {
+					const linkId = sectionsLink.dataset.topTo;
+
+					if (sectionId === linkId) {
+						sectionsLink.classList.add("--active");
+					} else if (sectionsLink.classList.contains("--active")) {
+						sectionsLink.classList.remove("--active");
+					}
+				});
+			},
+			navigationChange = (sectionId) => {
+				navigationLinks.forEach((navigationLink) => {
+					const linkId = navigationLink.href.split("#")[1];
+					if (sectionId === linkId) {
+						navigationLink.classList.add("--active");
+					} else if (navigationLink.classList.contains("--active")) {
+						navigationLink.classList.remove("--active");
+					}
+				});
+			},
+			toggleSectionLink = (section) => {
+				const index = epTriggers.indexOf(section);
+
+				console.log(index);
+				console.log(epTriggers.length - 1);
+
+				if (index > 1 && index != epTriggers.length - 1) {
+					gsap.to(sectionLinksWRapper, {
+						duration: 1,
+						autoAlpha: 1,
+					});
+				} else {
+					gsap.to(sectionLinksWRapper, {
+						duration: 1,
+						autoAlpha: 0,
+					});
+				}
+			};
+
+		toggleSectionLink(section);
+
+		console.log(sectionId);
+
+		if (sectionId && sectionId != "prologue-2") {
+			sectionLinkChange(sectionId);
+			navigationChange(sectionId);
+		} else {
+			return false;
+		}
+	};
+
+	epTriggers.forEach((section, index) => {
+		ScrollTrigger.create({
+			id: `sectionChange-${index}`,
+			trigger: section,
+			start: "top top",
+			end: "bottom top",
+			// markers: true,
+			onToggle: (self) => {
+				sectionChange(self.trigger);
+			},
+		});
+	});
 
 	/* 
 		---------- prologue ----------
@@ -200,9 +298,11 @@ function topSections() {
 	const section01Items = gsap.utils.toArray([
 		".header__menu-button",
 		".header__link",
-		".top-sections__navigation",
+		".ep__navigation",
 		".top-section__5minute",
 	]);
+
+	video.play(); // 開発用
 
 	const prologueInTl = gsap
 		.timeline({
@@ -215,7 +315,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.set(eps[0], {
+		.set("[data-ep='prologue']", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -249,12 +349,12 @@ function topSections() {
 			"<"
 		);
 
-	gsap.set(".top-lead__body-inner", {
-		marginTop: "20vh",
-		// onComplete: () => {
-		// 	ScrollTrigger.refresh();
-		// },
-	});
+	// gsap.set(".top-lead__body-inner", {
+	// 	marginTop: "20vh",
+	// 	// onComplete: () => {
+	// 	// 	ScrollTrigger.refresh();
+	// 	// },
+	// });
 
 	const prologueBackTl = gsap
 		.timeline({
@@ -267,12 +367,12 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to([".top-lead__title img, .top-lead__body-inner"], {
+		.to([".top-lead__title img"], {
 			y: "10vh",
 			autoAlpha: 0,
 		})
 		.to(
-			".ep__01-bg",
+			".ep__01-02-bg",
 			{
 				filter: "blur(0px)",
 			},
@@ -293,24 +393,25 @@ function topSections() {
 
 	firstSt = ScrollTrigger.create({
 		id: "prologue",
-		trigger: epTriggers[0],
+		trigger: "#prologue",
 		start: "top center",
 		end: "bottom top",
+		// markers: true,
 		onToggle: (self) => {
 			window.addEventListener("touchmove", noscroll, { passive: false });
 			window.addEventListener("wheel", noscroll, { passive: false });
 			if (self.direction === 1) {
 				prologueInTl.play();
 			} else {
-				window.addEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.addEventListener("wheel", noscroll, { passive: false });
+				// window.addEventListener("touchmove", noscroll, {
+				// 	passive: false,
+				// });
+				// window.addEventListener("wheel", noscroll, { passive: false });
 				prologueBackTl.restart();
 			}
 		},
 	});
-	firstSt.disable();
+	// firstSt.disable();
 
 	/* 
 		---------- topLead ----------
@@ -333,7 +434,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.set(eps[1], {
+		.set("[data-ep='prologue-2']", {
 			autoAlpha: 1,
 		})
 		.to(
@@ -348,14 +449,14 @@ function topSections() {
 			}
 		)
 		.to(
-			".ep__01-bg",
+			".ep__01-02-bg",
 			{
 				filter: "blur(30px)",
 			},
 			"<"
 		)
 		.fromTo(
-			[".top-lead__title img, .top-lead__body-inner"],
+			[".top-lead__title img"],
 			{
 				y: "10vh",
 				autoAlpha: 0,
@@ -369,9 +470,10 @@ function topSections() {
 
 	ScrollTrigger.create({
 		id: "topLeadTl",
-		trigger: epTriggers[1],
+		trigger: "#prologue-2",
 		start: "top top",
 		end: "bottom top",
+		// markers: true,
 		onEnter: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
@@ -388,26 +490,64 @@ function topSections() {
 		},
 	});
 
-	const topLeadBodyTween = gsap.fromTo(
-		".top-lead__body",
-		{
-			y: 0,
+	const topLeadBodyTl1 = gsap.timeline({
+		scrollTrigger: {
+			id: "topLeadBodyTl1",
+			trigger: "#prologue-2",
+			start: "top top",
+			end: "25% top",
+			scrub: true,
+			// markers: true,
+			toggleActions: "play reverse play reverse",
 		},
-		{
-			y: "-100%",
-		}
-	);
-
-	ScrollTrigger.create({
-		id: "topLeadBodyTween",
-		trigger: epTriggers[1],
-		animation: topLeadBodyTween,
-		pin: true,
-		pinSpacing: false,
-		start: "top -1", // 反応を遅らせる
-		end: "bottom 1", // 反応を遅らせる
-		scrub: 1,
 	});
+
+	const topLeadBodyTl2 = gsap.timeline({
+		scrollTrigger: {
+			id: "topLeadBodyTl2",
+			trigger: "#prologue-2",
+			start: "75% top",
+			end: "bottom top-=200px",
+			scrub: true,
+			// markers: true,
+			toggleActions: "play reverse play reverse",
+		},
+	});
+
+	gsap.set("#prologue-2 .top-lead__body", {
+		opacity: 0,
+	});
+
+	topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
+		opacity: 1,
+		duration: 0.5,
+	});
+
+	topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
+		opacity: 0,
+		duration: 0.5,
+	});
+
+	// const topLeadBodyTween = gsap.fromTo(
+	// 	".top-lead__body",
+	// 	{
+	// 		y: 0,
+	// 	},
+	// 	{
+	// 		y: "-100%",
+	// 	}
+	// );
+
+	// ScrollTrigger.create({
+	// 	id: "topLeadBodyTween",
+	// 	trigger: epTriggers[1],
+	// 	animation: topLeadBodyTween,
+	// 	pin: true,
+	// 	pinSpacing: false,
+	// 	start: "top -1", // 反応を遅らせる
+	// 	end: "bottom 1", // 反応を遅らせる
+	// 	scrub: 1,
+	// });
 
 	/* 
 		---------- about ----------
@@ -436,7 +576,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to(eps[2], {
+		.to("[data-ep='about']", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -572,54 +712,19 @@ function topSections() {
 				x: 0,
 			},
 			"<"
-		);
-
-	ScrollTrigger.create({
-		id: "aboutTl",
-		trigger: epTriggers[2],
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			aboutTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, { passive: false });
-			window.addEventListener("wheel", noscroll, { passive: false });
-			aboutTl.reverse();
-		},
-	});
-
-	const about_02Tl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
+		)
 		.fromTo(
 			".top-about__bg-fill",
 			{
-				scale: "1.4",
+				// scale: "1.4",
+				scale: "1",
 			},
 			{
 				duration: 0.75,
 				ease: "none",
 				scale: "3",
-			}
+			},
+			"> .25"
 		)
 		.fromTo(
 			".top-about__lead__title",
@@ -648,80 +753,21 @@ function topSections() {
 		);
 
 	ScrollTrigger.create({
-		id: "about_02Tl",
-		trigger: epTriggers[2],
-		start: "center top",
-		// end: "bottom top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			about_02Tl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			about_02Tl.reverse();
-		},
-	});
-
-	/* 
-		---------- aboutLink ----------
-	*/
-
-	const aboutLinkTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set(eps[3], {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".ep__02-02 .link-section",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.out",
-				autoAlpha: 1,
-			}
-		);
-
-	ScrollTrigger.create({
-		id: "aboutLinkTl",
-		trigger: epTriggers[3],
+		id: "aboutTl",
+		trigger: "#about",
 		start: "top top",
-		end: "bottom top",
+		end: "center top",
 		onEnter: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			aboutLinkTl.restart();
+			aboutTl.restart();
 		},
 		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
+			window.addEventListener("touchmove", noscroll, { passive: false });
 			window.addEventListener("wheel", noscroll, { passive: false });
-			aboutLinkTl.reverse();
+			aboutTl.reverse();
 		},
 	});
 
@@ -747,7 +793,7 @@ function topSections() {
 			},
 		})
 		.fromTo(
-			eps[4],
+			"[data-ep='business']",
 			{
 				autoAlpha: 0,
 			},
@@ -829,40 +875,7 @@ function topSections() {
 				force3D: true,
 			},
 			"<50%"
-		);
-
-	ScrollTrigger.create({
-		id: "mfbmFieldTl",
-		trigger: epTriggers[4],
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, { passive: false });
-			window.addEventListener("wheel", noscroll, { passive: false });
-			mfbmFieldTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, { passive: false });
-			window.addEventListener("wheel", noscroll, { passive: false });
-			mfbmFieldTl.reverse();
-		},
-	});
-
-	const mfbmField_02Tl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onStart: () => {
-				window.addEventListener("touchmove", noscroll, { passive: false });
-				window.addEventListener("wheel", noscroll, { passive: false });
-			},
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
+		)
 		.fromTo(
 			".mfbm-field__map-inner",
 			{
@@ -873,7 +886,8 @@ function topSections() {
 				ease: "power2.inOut",
 				x: "40vw",
 				force3D: true,
-			}
+			},
+			">"
 		)
 		.fromTo(
 			".mfbm-field__lead-title",
@@ -906,72 +920,19 @@ function topSections() {
 		);
 
 	ScrollTrigger.create({
-		id: "mfbmField_02Tl",
-		trigger: epTriggers[4],
-		start: "center top",
-		end: "bottom top",
-		onEnter: (self) => {
-			mfbmField_02Tl.restart();
-		},
-		onLeaveBack: (self) => {
-			mfbmField_02Tl.reverse();
-		},
-	});
-
-	/* 
-		---------- businessLink ----------
-	*/
-
-	const businessLinkTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set(eps[5], {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".ep__03-02 .link-section",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.out",
-				autoAlpha: 1,
-			}
-		);
-
-	ScrollTrigger.create({
-		id: "businessLinkTl",
-		trigger: epTriggers[5],
+		id: "mfbmFieldTl",
+		trigger: "#business",
 		start: "top top",
-		end: "bottom top",
+		end: "center top",
 		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
+			window.addEventListener("touchmove", noscroll, { passive: false });
 			window.addEventListener("wheel", noscroll, { passive: false });
-			businessLinkTl.restart();
+			mfbmFieldTl.restart();
 		},
 		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
+			window.addEventListener("touchmove", noscroll, { passive: false });
 			window.addEventListener("wheel", noscroll, { passive: false });
-			businessLinkTl.reverse();
+			mfbmFieldTl.reverse();
 		},
 	});
 
@@ -996,7 +957,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to(eps[6], {
+		.to("[data-ep='job']", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -1021,46 +982,7 @@ function topSections() {
 				},
 			},
 			"<25%"
-		);
-
-	ScrollTrigger.create({
-		id: "topJobTl",
-		trigger: epTriggers[6],
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topJobTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topJobTl.reverse();
-		},
-	});
-
-	const topJob_02Tl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
+		)
 		.fromTo(
 			".top-job__lead",
 			{
@@ -1105,80 +1027,23 @@ function topSections() {
 		);
 
 	ScrollTrigger.create({
-		id: "topJob_02Tl",
-		trigger: epTriggers[6],
-		start: "center top",
-		end: "bottom top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topJob_02Tl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topJob_02Tl.reverse();
-		},
-	});
-
-	/* 
-		---------- jobLink ----------
-	*/
-
-	const jobLinkTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set(eps[7], {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".ep__04-02 .link-section",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.out",
-				autoAlpha: 1,
-			}
-		);
-
-	ScrollTrigger.create({
-		id: "jobLinkTl",
-		trigger: epTriggers[7],
+		id: "topJobTl",
+		trigger: "#job",
 		start: "top top",
-		end: "bottom top",
+		end: "center top",
 		onEnter: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			jobLinkTl.restart();
+			topJobTl.restart();
 		},
 		onLeaveBack: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			jobLinkTl.reverse();
+			topJobTl.reverse();
 		},
 	});
 
@@ -1216,7 +1081,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to(eps[8], {
+		.to("[data-ep='project']", {
 			autoAlpha: 1,
 		})
 		//　line animation
@@ -1312,11 +1177,14 @@ function topSections() {
 				// ease: "expo.inOut",
 			},
 			"<50%"
-		);
+		)
+		.from(".top-project__lead-sub-title", {
+			autoAlpha: 0,
+		});
 
 	ScrollTrigger.create({
 		id: "topProjectTl",
-		trigger: epTriggers[8],
+		trigger: "#project",
 		start: "top top",
 		end: "center top",
 		onEnter: (self) => {
@@ -1332,105 +1200,6 @@ function topSections() {
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
 			topProjectTl.reverse();
-		},
-	});
-
-	const topProject_02Tl = gsap
-		.timeline({
-			defaults: { duration: 1.5, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.from(".top-project__lead-sub-title", {
-			autoAlpha: 0,
-		});
-
-	ScrollTrigger.create({
-		id: "topProject_02Tl",
-		trigger: epTriggers[8],
-		start: "center top",
-		end: "bottom top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topProject_02Tl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topProject_02Tl.reverse();
-		},
-	});
-
-	/* 
-		---------- projectLink ----------
-	*/
-
-	const projectLinkTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set(eps[9], {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".ep__05-02 .link-section",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.out",
-				autoAlpha: 1,
-			}
-		);
-
-	ScrollTrigger.create({
-		id: "projectLinkTl",
-		trigger: epTriggers[9],
-		start: "top top",
-		end: "bottom top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			projectLinkTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			projectLinkTl.reverse();
 		},
 	});
 
@@ -1459,7 +1228,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.set(eps[10], {
+		.set("[data-ep='person']", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -1496,46 +1265,7 @@ function topSections() {
 				autoAlpha: 1,
 			},
 			"<"
-		);
-
-	ScrollTrigger.create({
-		id: "topPersonTl",
-		trigger: epTriggers[10],
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topPersonTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topPersonTl.reverse();
-		},
-	});
-
-	const topPerson_02Tl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
+		)
 		.set(".persons__title", {
 			autoAlpha: 1,
 		})
@@ -1610,80 +1340,23 @@ function topSections() {
 		);
 
 	ScrollTrigger.create({
-		id: "topPerson_02Tl",
-		trigger: epTriggers[10],
-		start: "center top",
-		end: "bottom top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topPerson_02Tl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topPerson_02Tl.reverse();
-		},
-	});
-
-	/* 
-		---------- personLink ----------
-	*/
-
-	const personLinkTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set(eps[11], {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".ep__06-02 .link-section",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.out",
-				autoAlpha: 1,
-			}
-		);
-
-	ScrollTrigger.create({
-		id: "personLinkTl",
-		trigger: epTriggers[11],
+		id: "topPersonTl",
+		trigger: "#person",
 		start: "top top",
-		end: "bottom top",
+		end: "center top",
 		onEnter: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			personLinkTl.restart();
+			topPersonTl.restart();
 		},
 		onLeaveBack: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			personLinkTl.reverse();
+			topPersonTl.reverse();
 		},
 	});
 
@@ -1708,47 +1381,8 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to(eps[12], {
+		.to("[data-ep='culture']", {
 			autoAlpha: 1,
-		});
-
-	ScrollTrigger.create({
-		id: "topCultureTl",
-		trigger: epTriggers[12],
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topCultureTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topCultureTl.reverse();
-		},
-	});
-
-	const topCulture_02Tl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
 		})
 		.fromTo(
 			".top-culture__copy-list",
@@ -1807,81 +1441,25 @@ function topSections() {
 			},
 			"<50%"
 		);
-	ScrollTrigger.create({
-		id: "topCulture_02Tl",
-		trigger: epTriggers[12],
-		start: "center top",
-		end: "bottom top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topCulture_02Tl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topCulture_02Tl.reverse();
-		},
-	});
-
-	/* 
-		---------- cultureLink ----------
-	*/
-
-	const cultureLinkTl = gsap
-		.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-		})
-		.set(eps[13], {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".ep__07-02 .link-section",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.out",
-				autoAlpha: 1,
-			}
-		);
 
 	ScrollTrigger.create({
-		id: "cultureLinkTl",
-		trigger: epTriggers[13],
+		id: "topCultureTl",
+		trigger: "#culture",
 		start: "top top",
-		end: "bottom top",
+		end: "center top",
 		onEnter: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			cultureLinkTl.restart();
+			topCultureTl.restart();
 		},
 		onLeaveBack: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
 			});
 			window.addEventListener("wheel", noscroll, { passive: false });
-			cultureLinkTl.reverse();
+			topCultureTl.reverse();
 		},
 	});
 
@@ -1906,7 +1484,7 @@ function topSections() {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to(eps[14], {
+		.to("[data-ep='epilogue']", {
 			duration: 2,
 			autoAlpha: 1,
 		})
@@ -1944,11 +1522,37 @@ function topSections() {
 			"<25%"
 		);
 
+	// const lastTl = gsap
+	// 	.timeline({
+	// 		defaults: { duration: 1.25, ease: "power2.out" },
+	// 		paused: true,
+	// 		onComplete: () => {
+	// 			// window.removeEventListener("touchmove", noscroll, {
+	// 			// 	passive: false,
+	// 			// });
+	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
+	// 		},
+	// 		onReverseComplete: () => {
+	// 			// window.removeEventListener("touchmove", noscroll, {
+	// 			// 	passive: false,
+	// 			// });
+	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
+	// 		},
+	// 	})
+	// 	.to(".ep__section-scroll", {
+	// 		autoAlpha: 0,
+	// 		duration: 1,
+	// 	})
+	// 	.to(".ep__bottom-gradient", {
+	// 		autoAlpha: 0,
+	// 		duration: 1,
+	// 	});
+
 	ScrollTrigger.create({
 		id: "epilogueTl",
-		trigger: epTriggers[14],
+		trigger: "#epilogue",
 		start: "top top",
-		end: "bottom top",
+		end: "bottom bottom",
 		onEnter: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
@@ -1956,6 +1560,9 @@ function topSections() {
 			window.addEventListener("wheel", noscroll, { passive: false });
 			epilogueTl.restart();
 		},
+		// onLeave: (self) => {
+		// 	lastTl.play();
+		// },
 		onLeaveBack: (self) => {
 			window.addEventListener("touchmove", noscroll, {
 				passive: false,
@@ -1963,29 +1570,10 @@ function topSections() {
 			window.addEventListener("wheel", noscroll, { passive: false });
 			epilogueTl.reverse();
 		},
+		// onEnterBack: (self) => {
+		// 	lastTl.reverse();
+		// },
 	});
-
-	// const footerTween = gsap.fromTo(
-	// 	".top-lead__body",
-	// 	{
-	// 		y: 0,
-	// 	},
-	// 	{
-	// 		y: "-100%",
-	// 	}
-	// );
-
-	// ScrollTrigger.create({
-	// 	id: "footerTween",
-	// 	trigger: epTriggers[14],
-	// 	animation: footerTween,
-	// 	pin: true,
-	// 	pinSpacing: false,
-	// 	start: "top -1", // 反応を遅らせる
-	// 	end: "bottom 1", // 反応を遅らせる
-	// 	scrub: 1,
-	// 	markers: true,
-	// });
 }
 
 export { topSections };

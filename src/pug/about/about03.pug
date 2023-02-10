@@ -24,9 +24,9 @@ block contents
 				+picture({filename:'about-03-hero-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'355'},{breakpoint:true},{lazyload:false},{retina:true})
 
 
-		section.about-header
+		section.about-header(data-scroll-reveal-group)
 			
-			h2.about-header__title
+			h2.about-header__title(data-scroll-reveal-group-item)
 				| 積み重ねてきた
 				br.active-tb-pc
 				| 信頼と
@@ -35,7 +35,7 @@ block contents
 				br
 				| 挑戦・変革を続けるMFBM。
 
-			.about-header__body.about-header__body--fit-content
+			.about-header__body.about-header__body--fit-content(data-scroll-reveal-group-item)
 				p.letter-spacing-sp-negative-0p001
 					| 1982年の創業以来、私たちは質の高いオフィスビル経営を目指し取り組んできました。
 					br
@@ -44,8 +44,8 @@ block contents
 
 		section.about03-numbers
 
-			.about03-numbers__item
-				h3.about03-numbers__item-title
+			.about03-numbers__item(data-scroll-reveal-group="fade-up")
+				h3.about03-numbers__item-title(data-scroll-reveal-group-item)
 					span.about03-numbers__item-title-content
 						span.about03-numbers__item-large
 							| 受託件数
@@ -54,15 +54,15 @@ block contents
 				
 				.about03-numbers__item__content-wrap
 					.about03-numbers__item__content
-						.about03-numbers__item-number
+						.about03-numbers__item-number(data-scroll-reveal-group-item)
 							+picture({filename:'about-03-number-jutakukensu'},{type:'svg',fallbackType:''},{alt:'357棟'},{classes:['']},{width:'346'},{height:'105'},{breakpoint:false},{lazyload:true},{retina:false})
-						.about03-numbers__item-body
+						.about03-numbers__item-body(data-scroll-reveal-group-item)
 							| 三井不動産グループ所有の物件から、一般企業や機関投資家、
 							br
 							| 個人オーナーが保有する物件まで、様々なオフィスビルの経営に携わっていきます。
 
-			.about03-numbers__item
-				h3.about03-numbers__item-title
+			.about03-numbers__item(data-scroll-reveal-group="fade-up")
+				h3.about03-numbers__item-title(data-scroll-reveal-group-item)
 					span.about03-numbers__item-title-content
 						span.about03-numbers__item-large
 							| 受託面積
@@ -71,15 +71,15 @@ block contents
 				
 				.about03-numbers__item__content-wrap
 					.about03-numbers__item__content
-						.about03-numbers__item-number
+						.about03-numbers__item-number(data-scroll-reveal-group-item)
 							+picture({filename:'about-03-number-jutakumenseki'},{type:'svg',fallbackType:''},{alt:'844.9万㎡'},{classes:['']},{width:'486'},{height:'108'},{breakpoint:false},{lazyload:true},{retina:false})
-						.about03-numbers__item-body
+						.about03-numbers__item-body(data-scroll-reveal-group-item)
 							| 経営するオフィスビルの総床面積は、なんと東京ドーム約180個分の広さに相当。
 							br
 							| このフィールドの広さもMFBMの強みです。
 
-			.about03-numbers__item
-				h3.about03-numbers__item-title
+			.about03-numbers__item(data-scroll-reveal-group="fade-up")
+				h3.about03-numbers__item-title(data-scroll-reveal-group-item)
 					span.about03-numbers__item-title-content
 						span.about03-numbers__item-large
 							| 売上高
@@ -88,11 +88,11 @@ block contents
 				
 				.about03-numbers__item__content-wrap
 					.about03-numbers__item__content
-						.about03-numbers__item-number
+						.about03-numbers__item-number(data-scroll-reveal-group-item)
 							+picture({filename:'about-03-number-uriage'},{type:'svg',fallbackType:''},{alt:'約277.8億円'},{classes:['']},{width:'518'},{height:'102'},{breakpoint:false},{lazyload:true},{retina:false})
 
-			.about03-numbers__item
-				h3.about03-numbers__item-title
+			.about03-numbers__item(data-scroll-reveal-group="fade-up")
+				h3.about03-numbers__item-title(data-scroll-reveal-group-item)
 					span.about03-numbers__item-title-content
 						span.about03-numbers__item-large
 							| 入居テナント数
@@ -101,15 +101,15 @@ block contents
 				
 				.about03-numbers__item__content-wrap
 					.about03-numbers__item__content
-						.about03-numbers__item-number
+						.about03-numbers__item-number(data-scroll-reveal-group-item)
 							+picture({filename:'about-03-number-nyukyo'},{type:'svg',fallbackType:''},{alt:'約3,000社'},{classes:['']},{width:'526'},{height:'116'},{breakpoint:false},{lazyload:true},{retina:false})
-						.about03-numbers__item-body
+						.about03-numbers__item-body(data-scroll-reveal-group-item)
 							| 成長著しいベンチャー企業から日本を代表する大手企業まで、
 							br
 							| 様々な業種・業態の企業がテナントとして入居しています。
 
-			.about03-numbers__item
-				h3.about03-numbers__item-title
+			.about03-numbers__item(data-scroll-reveal-group="fade-up")
+				h3.about03-numbers__item-title(data-scroll-reveal-group-item)
 					span.about03-numbers__item-title-content
 						span.about03-numbers__item-large
 							| 経常利益
@@ -118,10 +118,10 @@ block contents
 				
 				.about03-numbers__item__content-wrap
 					.about03-numbers__item__content
-						.about03-numbers__item-number
+						.about03-numbers__item-number(data-scroll-reveal-group-item)
 							+picture({filename:'about-03-number-rieki'},{type:'svg',fallbackType:''},{alt:'約27.4億円'},{classes:['']},{width:'472'},{height:'107'},{breakpoint:false},{lazyload:true},{retina:false})
 
-		section.about-footer-links
+		section.about-footer-links(data-scroll-reveal)
 		
 			.about-footer-links__header
 				a(href=root_path + "about/").about-footer-links__back-to-index

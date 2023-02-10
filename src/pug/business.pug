@@ -27,7 +27,7 @@ block contents
 
 
 			.business-lead
-				h3.business-lead__title
+				h3.business-lead__title(data-scroll-reveal)
 					| オフィスビル、テナント企業、
 					br.active-sp
 					| そしてオフィスで働く人々。
@@ -35,11 +35,11 @@ block contents
 					| ビジネスに関わるすべてが
 					br
 					| MFBMのフィールドです。
-				.business-lead__body
+				.business-lead__body(data-scroll-reveal)
 					p
 						| ビジネスの成長を求める企業。仕事と暮らしの豊かさを望む人々。その姿はオフィスというステージの様々な場面（シーン）の中にあります。お客様のいちばん近くに寄り添い、ともに歩んできた私たちMFBMは、30余年におよぶ歴史のなかで培った「ビル経営事業」とテナント企業の成長・発展に貢献する「ソリューションサービス事業」、そしてオフィスビルを中心とした街づくりを「エリアマネジメント事業」により、オフィスを舞台としたビジネスシーンにおける存在感をさらに高めています。
 
-			.business-fields
+			.business-fields(data-scroll-reveal)
 
 				h3.business-fields__title-pc
 					+picture({filename:'business-fields-title'},{type:'svg',fallbackType:''},{alt:'BUSINESS FIELDS'},{classes:['']},{width:'478'},{height:'40'},{breakpoint:false},{lazyload:true},{retina:false})
@@ -66,44 +66,45 @@ block contents
 							svg(aria-label="→" viewBox="0 0 56 32").business-fields__navigation-button-icon
 								use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
 		
-					.business-fields__map
+					.business-fields__map(ontouchstart="")
+
+						include include/svg/business-fields.svg
+
+						//- .business-fields__map-default-images
+						//- 	+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- 	+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- 	+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
 
 
-						.business-fields__map-default-images
-							+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
-							+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
-							+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- .business-fields__map-triggers-and-over-images
 
+						//- 	//- 
+						//- 		画像の重なりの関係で、hoverがうまく効かない。
+						//- 		透過させたボタンを表示用の画像と同ポジで配置し、
+						//- 		"management"と"building"をテレコにすることで、
+						//- 		ホバーイベントの順序を解決し、トリガーとする。
+						//- 		ホバーの判定は兄弟セレクター（トリガー + hover画像）
 
-						.business-fields__map-triggers-and-over-images
+						//- 	//- トリガー
+						//- 	button(data-modal-trigger="management")
+						//- 		+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
 
-							//- 
-								画像の重なりの関係で、hoverがうまく効かない。
-								透過させたボタンを表示用の画像と同ポジで配置し、
-								"management"と"building"をテレコにすることで、
-								ホバーイベントの順序を解決し、トリガーとする。
-								ホバーの判定は兄弟セレクター（トリガー + hover画像）
+						//- 	//- //- hover画像
+						//- 	+picture({filename:'business-fields-management-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'637.9037'},{height:'458.4343'},{breakpoint:true},{lazyload:true},{retina:true})
 
-							//- トリガー
-							button(data-modal-trigger="management")
-								+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- 	//- トリガー
+						//- 	button(data-modal-trigger="building")
+						//- 		+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},	{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
 
-							//- //- hover画像
-							+picture({filename:'business-fields-management-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'637.9037'},{height:'458.4343'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- 	//- hover画像
+						//- 	+picture({filename:'business-fields-building-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'400.8151'},{height:'391.3909'},{breakpoint:true},{lazyload:true},{retina:true})
 
-							//- トリガー
-							button(data-modal-trigger="building")
-								+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},	{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
-
-							//- hover画像
-							+picture({filename:'business-fields-building-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'400.8151'},{height:'391.3909'},{breakpoint:true},{lazyload:true},{retina:true})
-
-							//- トリガー
-							button(data-modal-trigger="solution")
-								+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- 	//- トリガー
+						//- 	button(data-modal-trigger="solution")
+						//- 		+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
 						
-							//- hover画像
-							+picture({filename:'business-fields-solution-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- 	//- hover画像
+						//- 	+picture({filename:'business-fields-solution-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
 
 
 						.business-fields__sp-map-icons

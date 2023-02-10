@@ -37,16 +37,16 @@ block contents
 			.person-hero__bg
 				+picture({filename:'person02-hero'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:true})
 
-		section.person-lead
+		section.person-lead(data-scroll-reveal-group)
 			.person-lead__text
-				p.person-lead__lead
+				p.person-lead__lead(data-scroll-reveal-group-item)
 					| MFBMに入社を決めた理由
-				h2.person-lead__title
+				h2.person-lead__title(data-scroll-reveal-group-item)
 					| PMの使命に共感し、
 					br
 					| MFBMを選んだ
 			
-				.person-lead__body
+				.person-lead__body(data-scroll-reveal-group-item)
 					p
 						| オフィスビルの価値を高め収益の最大化を図るプロパティマネジメント（PM）の使命にやりがいを感じ、MFBMを選びました。魅力あるビルをつくるにはオーナーやテナントの皆さんとの信頼関係が欠かせません。
 						br
@@ -54,36 +54,36 @@ block contents
 					p
 						| そもそも不動産業に関心を持ったのは就職活動を控えた大学時代のことです。開業間もない「ららぽーと横浜」で4年間アルバイトしていたとき、経営母体が三井不動産のグループ会社だと知りました。街の不動産屋さんだけが不動産業のすべてではないと知ったときのちょっとした驚きと、人の流れを変え、地域に賑わいをもたらすダイナミックな仕事に対する好奇心も、PMを選ぶきっかけのひとつになったのだと感じています。
 
-			.person-lead__photo
+			.person-lead__photo(data-scroll-reveal-group-item)
 				+picture({filename:'person02-image-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'450'},{height:'586'},{breakpoint:true},{lazyload:true},{retina:true})
 				
 
 		section.person-middle
-			.person-middle__header
-				p.person-middle__header-lead
+			.person-middle__header(data-scroll-reveal-group)
+				p.person-middle__header-lead(data-scroll-reveal-group-item)
 					| 現在の仕事内容
-				h2.person-middle__header-title
+				h2.person-middle__header-title(data-scroll-reveal-group-item)
 					| 「東京ミッドタウン八重洲」という
 					br
 					| 「難題」に挑む
 			
-				.person-middle__header-body
+				.person-middle__header-body(data-scroll-reveal-group-item)
 					p
 						| 私は今、2023年3月10日にグランドオープンを控える「東京ミッドタウン八重洲」を担当するPMの一人として、本格開業に向けた準備に取り組んでいます。具体的には、区分所有者やテナントと関わりながらオフィスビルの運用ルール策定に携わっているほか、テナント入居工事の手配や移転の準備など、入居するテナント企業が快適にオフィスビルを活用できるようにするのが私の仕事です。
 					p
 						| また、東京ミッドタウン八重洲には、ほかの複合ビルにはない特徴を備えているのをご存じでしょうか。メイン棟である八重洲セントラルタワーには、オフィスや飲食店、ホテル、ホールだけでなく、中央区立城東小学校が入居し、隣接する八重洲セントラルスクエアには、認定こども園や住宅用のエリアが用意されるなど、その多様性はほかに類例を見ないほど特別なもの。法人と個人、民間と行政、大人とこどもが利用する施設が共存し、一体感のあるエリアマネジメントを実現するには、異なる意見を取りまとめる「潤滑油が」必要なのは言うまでもありません。私はPMとして、多様な人々が互いの違いを乗り越え、コミュニティの全体最適を探すという「難題」に挑んでいるのです。
 
 			
-			.person-middle__body
+			.person-middle__body(data-scroll-reveal-group)
 				.person-middle__body-text
-					p.person-middle__body-lead
+					p.person-middle__body-lead(data-scroll-reveal-group-item)
 						| 今後どのようなことに挑戦していくのか
-					h2.person-middle__body-title
+					h2.person-middle__body-title(data-scroll-reveal-group-item)
 						| PM経験を活かし、
 						br
 						| 後進の育成にも貢献したい
 				
-					.person-middle__body-body
+					.person-middle__body-body(data-scroll-reveal-group-item)
 						p
 							| 今年で入社から10年。そんな節目の年に新たなチャレンジに挑めるのはとても幸運なことです。とくにビルの立ち上げは、いくらやりたいと熱望してもタイミングが合わなければ決してできない経験なので、この仕事に携われる喜びはひとしおです。
 						p
@@ -92,16 +92,16 @@ block contents
 							| 担当するビルについて誰よりも詳しく知るのと同じくらい、PMにもエリア全体、社会全体を俯瞰するような高い視座が求められるようになるでしょう。私自身、そんなPMになりたいですし、私と志を同じくする若手を数多く輩出できたら、MFBMは今よりもっと大きな存在になれると確信しています。
 
 
-				.person-middle__body-photo
+				.person-middle__body-photo(data-scroll-reveal-group-item)
 					+picture({filename:'person02-image-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'420'},{breakpoint:true},{lazyload:true},{retina:true})
 
-		section.person-schedule
-			h2.person-schedule__title 
+		section.person-schedule(data-scroll-reveal-group)
+			h2.person-schedule__title(data-scroll-reveal-group-item)
 				| Oneday Schedule
 
-			.person-schedule__list-wrapper
+			.person-schedule__list-wrapper(data-scroll-reveal-group-item)
 
-				ul.person-schedule__list 
+				ul.person-schedule__list(data-scroll-reveal-group-item)
 					li.person-schedule__list-item
 						p.person-schedule__list-item-time
 							span.person-schedule__list-item-time-text
@@ -152,7 +152,7 @@ block contents
 							p.person-schedule__list-item-text-body
 								| 城東小学校の校長と副校長を訪問。困りごとに耳を傾け、学校行事の対応について意見交換する。
 
-				ul.person-schedule__list 
+				ul.person-schedule__list(data-scroll-reveal-group-item)
 
 					li.person-schedule__list-item
 						p.person-schedule__list-item-time
@@ -193,7 +193,7 @@ block contents
 								| 業務終了
 							p.person-schedule__list-item-text-body
 								| 翌日に控えた打ち合わせの準備やスケジュールの確認を終え次第帰宅。
-			.person-schedule__sp-more
+			.person-schedule__sp-more(data-scroll-reveal-group-item)
 				.person-schedule__sp-more-icon
 					<?xml version="1.0" encoding="UTF-8"?>
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.01 33">
@@ -209,19 +209,19 @@ block contents
 					span.person-schedule__sp-more-button-icon
 
 		section.person-message
-			.person-message__photo
+			.person-message__photo(data-scroll-reveal)
 				+picture({filename:'person02-image-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'580'},{breakpoint:true},{lazyload:true},{retina:true})
-			.person-message__text 
+			.person-message__text(data-scroll-reveal-group="fade-up")
 				.person-message__text-inner
-					p.person-message__text-lead 
+					p.person-message__text-lead(data-scroll-reveal-group-item)
 						| 学生の皆さんにメッセージ
-					h2.person-message__text-title 
+					h2.person-message__text-title(data-scroll-reveal-group-item)
 						| 就職活動は将来を考える
 						br.active-sp
 						| 貴重な機会。
 						br
 						| 心残りのない会社選びを
-					.person-message__text-body
+					.person-message__text-body(data-scroll-reveal-group-item)
 						p
 							| 知らなかった企業、知らなかったビジネス、知らなかった仕事について知るまたとない機会が就職活動です。それを踏まえた上で自分がどんな人になりたいのか、どんな人と働きたいかを考えることが、自分にあった会社を選ぶことにつながります。
 							br
@@ -229,12 +229,12 @@ block contents
 				.person-message__text__border-top
 				.person-message__text__border-bottom
 
-		section.person-slider
-			h2.person-slider__title
+		section.person-slider(data-scroll-reveal-group)
+			h2.person-slider__title(data-scroll-reveal-group-item)
 				| NEXT PERSON 
-			a(href=root_path + "person/").person-slider__back-to-index
+			a(href=root_path + "person/" data-scroll-reveal-group-item).person-slider__back-to-index
 				| PERSON一覧へ戻る
-			.person-slider__content
+			.person-slider__content(data-scroll-reveal-group-item)
 				button.person-slider__prev(data-slider-prev)
 					.person-slider__prev-icon
 				button.person-slider__next(data-slider-next)

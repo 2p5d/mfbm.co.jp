@@ -13,11 +13,23 @@
 	top: 50%;
 	left: calc(50% - 3rem);
 	transform: translate(-100%, -50%);
+	@include mq-down() {
+		inset: 0;
+		width: 100%;
+		transform: none;
+	}
 }
 
 .top-about__lead__title {
-	width: 100%;
-	will-change: transform;
+	transform: translate(-100%, -50%);
+	@include mq-down() {
+		position: absolute;
+
+		top: calc(var(--header-height) + 5vh);
+		left: var(--page-gutter);
+		width: 61rem;
+		transform: none;
+	}
 }
 
 .top-about__lead__body {
@@ -29,8 +41,30 @@
 	font-weight: 500;
 	color: white;
 	will-change: transform;
+	@include mq-down() {
+		visibility: hidden;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-top: 0;
+		padding-right: var(--page-gutter);
+		padding-left: var(--page-gutter);
+		position: absolute;
+		inset: 0;
+		z-index: 99;
+		background-color: rgba(255, 255, 255, 0.95);
+		font-size: 2.8rem;
+		line-height: calc(64 / 28);
+		color: var(--key-color-black);
+		letter-spacing: 0.02em;
+	}
 	p {
 		width: 47.7rem;
+		@include mq-down() {
+			width: 100%;
+		}
 		& + p {
 			margin-top: 2.5em;
 		}
@@ -44,6 +78,13 @@
 	transform: translateY(-50%);
 	left: calc(50% - 8.5rem);
 	width: 85.7rem;
+	@include mq-down() {
+		top: auto;
+		bottom: -4.7rem;
+		left: -5.5rem;
+		width: 90.1rem;
+		transform: none;
+	}
 	// height: 100%;
 }
 
@@ -51,7 +92,10 @@
 	--containerWidth: 844;
 	--containerHeight: 1051;
 	position: relative;
-	// transform: translateY(-50%);
+	@include mq-down() {
+		--containerWidth: 904;
+		--containerHeight: 865;
+	}
 	aspect-ratio: var(--containerWidth) / var(--containerHeight);
 	@supports not (aspect-ratio: var(--containerWidth) / var(--containerHeight)) {
 		padding-top: calc((var(--containerHeight) / var(--containerWidth)) * 100%);
@@ -65,36 +109,70 @@
 		left: containerRatio(250.8089, var(--containerWidth));
 		top: containerRatio(0, var(--containerHeight));
 		width: containerRatio(372, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(427, var(--containerWidth));
+			width: containerRatio(221, var(--containerWidth));
+		}
 	}
 	&:nth-of-type(2) {
 		left: containerRatio(451.8089, var(--containerWidth));
 		top: containerRatio(185, var(--containerHeight));
 		width: containerRatio(405, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(69, var(--containerHeight));
+			left: containerRatio(558, var(--containerWidth));
+			width: containerRatio(346, var(--containerWidth));
+		}
 	}
 	&:nth-of-type(3) {
 		left: containerRatio(390.8089, var(--containerWidth));
 		top: containerRatio(476, var(--containerHeight));
 		width: containerRatio(240, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(519, var(--containerWidth));
+			top: containerRatio(356, var(--containerHeight));
+			width: containerRatio(235, var(--containerWidth));
+		}
 	}
 	&:nth-of-type(4) {
 		left: containerRatio(525.9354, var(--containerWidth));
 		top: containerRatio(611, var(--containerHeight));
 		width: containerRatio(240, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(653.8753, var(--containerWidth));
+			top: containerRatio(487.4863, var(--containerHeight));
+			width: containerRatio(235.2506, var(--containerWidth));
+		}
 	}
 	&:nth-of-type(5) {
 		left: containerRatio(155.9354, var(--containerWidth));
 		top: containerRatio(611, var(--containerHeight));
 		width: containerRatio(440, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(314.3004, var(--containerWidth));
+			top: containerRatio(489.7055, var(--containerHeight));
+			width: containerRatio(374.8703, var(--containerWidth));
+		}
 	}
 	&:nth-of-type(6) {
 		left: containerRatio(12.9354, var(--containerWidth));
 		top: containerRatio(611, var(--containerHeight));
 		width: containerRatio(220, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(0, var(--containerWidth));
+			top: containerRatio(450.777, var(--containerHeight));
+			width: containerRatio(333.5605, var(--containerWidth));
+		}
 	}
 	&:nth-of-type(7) {
 		left: containerRatio(0, var(--containerWidth));
 		top: containerRatio(213.2284, var(--containerHeight));
 		width: containerRatio(496, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(76, var(--containerHeight));
+			left: containerRatio(93, var(--containerWidth));
+			width: containerRatio(524, var(--containerWidth));
+		}
 	}
 }
 
@@ -118,10 +196,15 @@
 		scaleで再調整しなくとも計算でできそうな感じだがとりあえず
 	*/
 	aspect-ratio: 1;
-	clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0% 100%);
+	clip-path: polygon(0% 54%, 100% 17%, 100% 100%, 0% 100%);
 	transform-origin: right;
 	transform: scale(1.4);
 	will-change: transform;
+	@include mq-down() {
+		// clip-path: polygon(0 86%, 100% 29%, 100% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+		height: 100%;
+	}
 }
 
 .top-about__bg-image {
@@ -133,5 +216,10 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: left center;
+		@include mq-down() {
+			width: 100%;
+			height: 100%;
+			background-color: #003383;
+		}
 	}
 }

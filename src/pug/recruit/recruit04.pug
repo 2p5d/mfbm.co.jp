@@ -20,7 +20,7 @@ block contents
 				span.recruit-header__title-jp
 					| お問い合わせ
 
-		.recruit-content.recruit-lead
+		.recruit-content.recruit-lead(data-scroll-reveal)
 			p.recruit-lead__head 
 				| 当社採用ホームページへの<br>
 				| アクセスありがとうございます。
@@ -30,47 +30,34 @@ block contents
 				| 会社説明会等、当社の採用に関するお知らせは「MyPage」を通じてご案内いたします。<br>
 				| みなさまのエントリーをお待ちしております。
 		
-		.recruit-content.recruit-inquiry-links 
+		.recruit-content.recruit-inquiry-links(data-scroll-reveal)
 			a(href="https://mfbm.snar.jp/index.aspx?id=X00VqWzmC_k" target="_blank").recruit-inquiry-links__link.recruit-inquiry-links__link--entry
-				svg(aria-label="" viewBox="0 0 146 32")
+				svg(aria-label="" viewBox="0 0 146 32").recruit-inquiry-links__link-text
 					use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-entry')
+				svg(aria-label="" viewBox="0 0 34 32").recruit-inquiry-links__link-icon-pc
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				svg(aria-label="" viewBox="0 0 34 32").recruit-inquiry-links__link-icon-sp
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
 			a(href="https://mfbm.snar.jp/login.aspx" target="_blank").recruit-inquiry-links__link.recruit-inquiry-links__link--mypage
-				svg(aria-label="" viewBox="0 0 182 32")
+				svg(aria-label="" viewBox="0 0 34 32").recruit-inquiry-links__link-icon-pc
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				svg(aria-label="" viewBox="0 0 34 32").recruit-inquiry-links__link-icon-sp
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+				svg(aria-label="" viewBox="0 0 182 32").recruit-inquiry-links__link-text
 					use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-mypage') 
 			a(href="https://job.mynavi.jp/24/pc/search/corp51841/outline.html" target="_blank").recruit-inquiry-links__link.recruit-inquiry-links__link--image
 				+picture({filename:'recruit-link-mynavi'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'503'},{height:'128'},{breakpoint:true},{lazyload:true},{retina:true})
 			a(href="https://job.rikunabi.com/2024/company/r628700093/" target="_blank").recruit-inquiry-links__link.recruit-inquiry-links__link--image
 				+picture({filename:'recruit-link-recnavi'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'503'},{height:'128'},{breakpoint:true},{lazyload:true},{retina:true})
 
-		.recruit-content.recruit-inquiry-info
+		.recruit-content.recruit-inquiry-info(data-scroll-reveal)
 			p
 				| 三井不動産ビルマネジメント 新卒採用事務局<br>
 				| Tel: 03-6281-5639（平日10:00～18:00）<br>
 				| Mail: mfbm_r@e-recruit.jp
 
-		.recruit-content.recruit-return-index 
+		.recruit-content.recruit-return-index(data-scroll-reveal)
 			a(href=root_path + "recruit/")
 				| RECRUIT一覧へ戻る
 
-		.recruit-index
-			ul.recruit-index__list
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--01(href=root_path + "recruit/recruit01.html")
-						span 研修教育制度
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--02(href=root_path + "recruit/recruit02.html")
-						span FAQ
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--03(href=root_path + "recruit/recruit03.html")
-						span 募集要項
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				//- li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--04(href=root_path + "recruit/recruit04.html")
-						span お問い合わせ
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+		include ../include/_recruit-index-content.pug

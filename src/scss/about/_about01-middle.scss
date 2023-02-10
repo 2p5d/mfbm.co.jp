@@ -71,6 +71,7 @@
 	text-align: justify;
 	font-family: var(--font-sans);
 	line-height: calc(34 / 16);
+	text-align: justify;
 	@include mq-down() {
 		margin-top: 8rem;
 		line-height: calc(52 / 26);
@@ -109,7 +110,7 @@
 		display: inline-block;
 		width: calc((((var(--content-width) * 0.9) - 100%) / 2) - 1em);
 		height: 1px;
-		background-color: #b2c2da;
+		background-color: currentColor;
 		@include mq-down() {
 			content: none;
 		}

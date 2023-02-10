@@ -1,7 +1,7 @@
 let video;
 
 function topVideo() {
-	const wrapper = document.querySelector(".ep__01-bg");
+	const wrapper = document.querySelector(".ep__01-02-bg");
 	const image = wrapper.querySelector("img");
 	video = document.createElement("video");
 	// video.className = "top-hero__video";

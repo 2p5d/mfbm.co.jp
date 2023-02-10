@@ -113,7 +113,7 @@
 	&.menu__list-item-text-en--job {
 		width: 5.8rem;
 		@include mq-down() {
-			width: 7.6rem;
+			width: 7.7rem;
 		}
 	}
 	&.menu__list-item-text-en--project {
@@ -244,8 +244,19 @@
 	transform: translateY(-50%);
 	width: 2.5rem;
 	@include mq-down() {
+		display: none;
+	}
+}
+
+.menu__links-item-icon-sp {
+	display: none;
+	@include mq-down() {
+		position: absolute;
+		top: 50%;
 		right: 0;
-		transform: translate(200%, -50%);
+		display: block;
+		width: 3.5rem;
+		transform: translate(160%, -50%);
 	}
 }
 

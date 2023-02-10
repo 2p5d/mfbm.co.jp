@@ -52,6 +52,12 @@
 	&.button__icon--arrow {
 		width: 1.45rem;
 		@include mq-down() {
+			display: none;
+		}
+	}
+	&.button__icon--arrow-sp {
+		display: none;
+		@include mq-down() {
 			width: 3rem;
 		}
 	}

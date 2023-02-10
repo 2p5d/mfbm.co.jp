@@ -22,17 +22,32 @@
 	padding-right: 4rem;
 	padding-left: 5.4rem;
 	background-color: rgba(255, 255, 255, 0.95);
+	@include mq-down() {
+		// visibility: hidden; // 開発用
+		width: 50vw;
+		padding-right: 5.4rem;
+		padding-left: 7.2rem;
+	}
 }
 
 .top-culture__copy-list-item {
 	&:nth-of-type(1) {
 		flex: 6.4;
+		@include mq-down() {
+			flex: 8.4;
+		}
 	}
 	&:nth-of-type(2) {
 		flex: 5.8;
+		@include mq-down() {
+			flex: 7.6;
+		}
 	}
 	&:nth-of-type(3) {
 		flex: 5.5;
+		@include mq-down() {
+			flex: 7.2;
+		}
 	}
 }
 
@@ -50,6 +65,12 @@
 	padding-bottom: 7vh;
 	padding-left: 4.8rem;
 	background-color: rgba(255, 255, 255, 0.95);
+	@include mq-down() {
+		visibility: hidden; // 開発用
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 .top-culture__lead-body {
@@ -61,6 +82,12 @@
 	line-height: calc(32 / 14);
 	letter-spacing: 0.2em;
 	color: var(--key-color-black);
+	@include mq-down() {
+		margin-top: 0;
+		font-size: 2.8rem;
+		line-height: calc(64 / 28);
+		color: var(--key-color-black);
+	}
 }
 
 .top-culture__bg {
@@ -69,6 +96,11 @@
 	transform: translateY(-50%);
 	width: 100%;
 	background-color: var(--key-color-blue);
+	@include mq-down() {
+		width: 170rem;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 .top-culture__bg-items {

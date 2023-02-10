@@ -9,24 +9,27 @@ html(lang="ja")
 
 	block append preload
 
-	body(class="page-" + key unresolved)
+	body.contents-hidden(class="page-" + key)
 		#content
 
 			#to-top
-			
-			include _header.pug
 
-			include _modal-menu.pug
+			if key != "index_test"
+			
+				include _header.pug
+
+				include _modal-menu.pug
 
 			block contents
 
-			if key != top
+			if key != "top" && key != "index_test"
 				a(href="#to-top").to-top
 					.to-top__icon 
 						svg(aria-label="↑" viewBox="0 0 56 32")
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
 
-			include _footer.pug
+			if key != "index_test"
+				include _footer.pug
 			
 
 	include _script.pug

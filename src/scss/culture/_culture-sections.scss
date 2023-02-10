@@ -325,13 +325,13 @@
 		border-radius: 50em; // heightがautoなので、確実の超えるような大きな固定値を入れると俵型を保つ
 		background-color: var(--culture-sections-color-blue);
 		text-align: center;
-		line-height: calc(37 / 23);
+		line-height: calc(37 / 26);
 		font-size: 2.3rem;
 		font-weight: 500;
 		color: white;
 		letter-spacing: -0.02em;
 		@include mq-down() {
-			line-height: calc(38 / 26);
+			line-height: calc(54 / 36);
 			font-size: inherit;
 		}
 		&.culture-sections__item-voices-item--balloon-message-large {
@@ -577,10 +577,10 @@
 			}
 		}
 		.culture-sections__item:nth-of-type(3) & {
-			margin-top: -28.4rem;
+			margin-top: -22rem;
 			margin-left: -4.8rem;
 			@include mq-down() {
-				margin-top: -54rem;
+				margin-top: -48.5rem;
 				margin-left: 0;
 			}
 		}
@@ -610,7 +610,7 @@
 		.culture-sections__item:nth-of-type(3) & {
 			width: 42.8rem;
 			height: 10rem;
-			margin-top: 24rem;
+			margin-top: 19rem;
 			margin-left: 7.6rem;
 			@include mq-down() {
 				width: 52.8rem;

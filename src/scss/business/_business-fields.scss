@@ -119,97 +119,130 @@
 		margin-left: -3.25%;
 		margin-right: -3.25%;
 	}
+	svg {
+		line-height: 0;
+	}
 }
 
-.business-fields__map-triggers-and-over-images {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	button {
-		position: absolute;
-		display: block;
-		opacity: 0;
-		&[data-modal-trigger="building"] {
-			left: containerRatio(116, var(--containerWidth));
-			top: containerRatio(5, var(--containerHeight));
-			width: containerRatio(397.3152, var(--containerWidth));
-			z-index: 1;
-		}
-		&[data-modal-trigger="management"] {
-			left: containerRatio(0, var(--containerWidth));
-			top: containerRatio(45, var(--containerHeight));
-			width: containerRatio(631, var(--containerWidth));
-		}
-		&[data-modal-trigger="solution"] {
-			left: containerRatio(365, var(--containerWidth));
-			top: containerRatio(0, var(--containerHeight));
-			width: containerRatio(224.1585, var(--containerWidth));
-		}
-	}
-	> picture img {
-		position: absolute;
-		display: block;
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity 0.25s ease-out;
-		&[src*="building"] {
-			left: containerRatio(114.538, var(--containerWidth));
-			top: containerRatio(3.663, var(--containerHeight));
-			width: containerRatio(400.8151, var(--containerWidth));
-			// z-index: -1;
-		}
-		&[src*="management"] {
-			left: containerRatio(-3.4846, var(--containerWidth));
-			top: containerRatio(41.57, var(--containerHeight));
-			width: containerRatio(637.9037, var(--containerWidth));
-			z-index: 1;
-		}
-		&[src*="solution"] {
-			left: containerRatio(362.8685, var(--containerWidth));
-			top: containerRatio(-3.1874, var(--containerHeight));
-			width: containerRatio(229.6047, var(--containerWidth));
-			z-index: 2; // 調整
-		}
-	}
-	button:hover + picture img,
-	button.--hover + picture img {
+#management,
+#solution,
+#building {
+	pointer-events: none;
+}
+
+#management-hover,
+#solution-hover,
+#building-hover {
+	opacity: 0;
+	transition: opacity 0.25s ease-out;
+	cursor: pointer;
+	&:hover,
+	&.--hover {
 		opacity: 1;
 	}
 }
 
-.business-fields__map-default-images {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-	img {
-		position: absolute;
-		display: block;
-		&[src*="building"] {
-			left: containerRatio(116, var(--containerWidth));
-			top: containerRatio(5, var(--containerHeight));
-			width: containerRatio(397.3152, var(--containerWidth));
-		}
-		&[src*="management"] {
-			left: containerRatio(0, var(--containerWidth));
-			top: containerRatio(45, var(--containerHeight));
-			width: containerRatio(631, var(--containerWidth));
-			z-index: 1;
-		}
-		&[src*="solution"] {
-			left: containerRatio(364.7398, var(--containerWidth));
-			top: containerRatio(0, var(--containerHeight));
-			width: containerRatio(224.1585, var(--containerWidth));
-			z-index: 2; // 調整
-		}
-	}
-}
+/*
+あたり判定のこともあり、インラインSVGにしたので、座標配置はスマホのアイコンだけになった
+*/
+
+// #solution-hover {
+// 	#solution:hover + & {
+// 		opacity: 1;
+// 	}
+// }
+
+// .business-fields__map-triggers-and-over-images {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	button {
+// 		position: absolute;
+// 		display: block;
+// 		opacity: 0;
+// 		&[data-modal-trigger="building"] {
+// 			left: containerRatio(116, var(--containerWidth));
+// 			top: containerRatio(5, var(--containerHeight));
+// 			width: containerRatio(397.3152, var(--containerWidth));
+// 			z-index: 1;
+// 		}
+// 		&[data-modal-trigger="management"] {
+// 			left: containerRatio(0, var(--containerWidth));
+// 			top: containerRatio(45, var(--containerHeight));
+// 			width: containerRatio(631, var(--containerWidth));
+// 		}
+// 		&[data-modal-trigger="solution"] {
+// 			left: containerRatio(365, var(--containerWidth));
+// 			top: containerRatio(0, var(--containerHeight));
+// 			width: containerRatio(224.1585, var(--containerWidth));
+// 		}
+// 	}
+// 	> picture img {
+// 		position: absolute;
+// 		display: block;
+// 		opacity: 0;
+// 		pointer-events: none;
+// 		transition: opacity 0.25s ease-out;
+// 		&[src*="building"] {
+// 			left: containerRatio(114.538, var(--containerWidth));
+// 			top: containerRatio(3.663, var(--containerHeight));
+// 			width: containerRatio(400.8151, var(--containerWidth));
+// 			// z-index: -1;
+// 		}
+// 		&[src*="management"] {
+// 			left: containerRatio(-3.4846, var(--containerWidth));
+// 			top: containerRatio(40, var(--containerHeight));
+// 			width: containerRatio(637.9037, var(--containerWidth));
+// 			z-index: 1;
+// 		}
+// 		&[src*="solution"] {
+// 			left: containerRatio(362.8685, var(--containerWidth));
+// 			top: containerRatio(-3.1874, var(--containerHeight));
+// 			width: containerRatio(229.6047, var(--containerWidth));
+// 			z-index: 2; // 調整
+// 		}
+// 	}
+// 	button:hover + picture img,
+// 	button.--hover + picture img {
+// 		opacity: 1;
+// 	}
+// }
+
+// .business-fields__map-default-images {
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	pointer-events: none;
+// 	img {
+// 		position: absolute;
+// 		display: block;
+// 		&[src*="building"] {
+// 			left: containerRatio(116, var(--containerWidth));
+// 			top: containerRatio(5, var(--containerHeight));
+// 			width: containerRatio(397.3152, var(--containerWidth));
+// 		}
+// 		&[src*="management"] {
+// 			left: containerRatio(0, var(--containerWidth));
+// 			top: containerRatio(45, var(--containerHeight));
+// 			width: containerRatio(631, var(--containerWidth));
+// 			z-index: 1;
+// 		}
+// 		&[src*="solution"] {
+// 			left: containerRatio(364.7398, var(--containerWidth));
+// 			top: containerRatio(0, var(--containerHeight));
+// 			width: containerRatio(224.1585, var(--containerWidth));
+// 			z-index: 2; // 調整
+// 		}
+// 	}
+// }
 
 .business-fields__sp-map-icons {
 	display: none;
 	@include mq-down() {
 		display: block;
 		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
 		height: 100%;
 		pointer-events: none;

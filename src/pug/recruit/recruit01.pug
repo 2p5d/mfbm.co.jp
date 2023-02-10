@@ -20,14 +20,14 @@ block contents
 				span.recruit-header__title-jp
 					| 研修教育制度
 
-		.recruit-content.recruit-lead
-			p.recruit-lead__head 
+		.recruit-content.recruit-lead(data-scroll-reveal-group)
+			p.recruit-lead__head(data-scroll-reveal-group-item)
 				| 社員一人ひとりが、<br class="active-sp">能動的に自らの能力を高め、<br>
 				| ステップアップできる<br class="active-sp">サポート体制を整えています。
-			p.recruit-lead__body.recruit-lead__body--left 
+			p.recruit-lead__body(data-scroll-reveal-group-item)
 				| MFBMでは、常に「自ら考え、自ら行動する」姿勢や能力、そして専門的な技術、知識が求められます。入社してから一歩一歩着実にそれらの能力を身に付けていくためには、「経験」と「学習」をバランスよく積むことが大切です。そのために当社ではそれぞれの等級や職位に応じて求められる能力基準を設定し、それに合わせた研修プログラムを構築しています。
 		
-		.recruit-content.recruit-induction
+		.recruit-content.recruit-induction(data-scroll-reveal)
 			+picture({filename:'recruit-induction'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'503'},{height:'128'},{breakpoint:true},{lazyload:true},{retina:true})
 			.recruit-induction__links
 				a.recruit-induction-link.recruit-induction-link--1(href="#induction01")
@@ -66,8 +66,8 @@ block contents
 						svg(aria-label="↓" viewBox="0 0 56 32").recruit-faq-anchor__chev 
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
 
-		.recruit-content.recruit-frame
-			.recruit-frame__group
+		.recruit-content.recruit-frame(data-scroll-reveal)
+			.recruit-frame__group(data-scroll-reveal)
 				h2.recruit-frame__title 
 					| 入社1年目の研修プログラム
 				dl.recruit-frame-table(id="induction01")
@@ -91,7 +91,7 @@ block contents
 						h3 さらなる活躍への準備を整える
 						| 入社後9〜10か月後に実施します。業務の整理や同期との情報交換を通じて1年を振り返り、仕事をするうえでの自身の特性や課題点を明確にします。また、当社の社員として必要な「成長力」を身につけ、自身の課題を克服し更なるステップアップを目指します。
 
-			.recruit-frame__group
+			.recruit-frame__group(data-scroll-reveal)
 				h2.recruit-frame__title 
 					| その他の研修プログラム
 				dl.recruit-frame-table(id="induction04")
@@ -122,7 +122,7 @@ block contents
 						h3 個々の課題に応じて学ぶ
 						| 社員の向学心に応えるため、選択式の研修プログラムを広く社員に開放しています。講座内容は、マネジメントスキル、専門スキル、ベーシックスキルなどの分野にわかれ、全150講座のなかから、職種や階層、現在抱える課題に応じて講座を選択することが可能です。
 
-			.recruit-frame__group
+			.recruit-frame__group(data-scroll-reveal)
 				h2.recruit-frame__title 
 					| ほかにもこんな仕組みを用意しています
 				dl.recruit-frame-table
@@ -138,29 +138,8 @@ block contents
 						| 当社では、オフィスビル経営のプロフェッショナルを育成するため、3年から5年のスパンで部署を異動するジョブローテーション制を取り入れています。異動先はその都度、各自の希望を聞き、中長期的なキャリアプランや適性、事業戦略を加味して判断しますが、大事なのは現状に安住せず、多様化する顧客ニーズに応えるプロを育てることにあると考えています。私たちはジョブローテーションを通じて、業務を多面的に捉える力を養い、難易度の高いフィールドに挑戦し続ける心を育んでいるのです。
 
 
-		.recruit-content.recruit-return-index 
+		.recruit-content.recruit-return-index(data-scroll-reveal)
 			a(href=root_path + "recruit/")
 				| RECRUIT一覧へ戻る
 
-		.recruit-index
-			ul.recruit-index__list
-				//- li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--01(href=root_path + "recruit/recruit01.html")
-						span 研修教育制度
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--02(href=root_path + "recruit/recruit02.html")
-						span FAQ
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--03(href=root_path + "recruit/recruit03.html")
-						span 募集要項
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-				li.recruit-index__list-item
-					a.recruit-index__link.recruit-index__link--04(href=root_path + "recruit/recruit04.html")
-						span お問い合わせ
-							svg(aria-label="→" viewBox="0 0 34 32").recruit-index__arrow
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+		include ../include/_recruit-index-content.pug

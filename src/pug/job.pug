@@ -23,19 +23,19 @@ block contents
 			.job-hero__bg
 				+picture({filename:'job-hero-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'1080'},{breakpoint:true},{lazyload:false},{retina:true})
 
-		.job-lead
-			h2.job-lead__title
+		.job-lead(data-scroll-reveal-group)
+			h2.job-lead__title(data-scroll-reveal-group-item)
 				| 多彩なソリューションで
 				br.active-sp
 				| 「企業」と「個人」を支援し、
 				br
 				| ビジネスシーンの未来を創ります。
-			.job-lead__body
+			.job-lead__body(data-scroll-reveal-group-item)
 				p
 					| 私たちMFBMは、お客様の企業価値とビルの価値の最大化に貢献し、働く人々を豊かにするために、
 					br
 					| ビル経営とソリューションサービスを通じて、ビジネスシーンの明日を変えていきます。
-			.job-lead__anchor-links
+			.job-lead__anchor-links(data-scroll-reveal-group-item)
 				a(href="#bm").job-lead__anchor-link
 					span.job-lead__anchor-link-text
 						| ビル経営事業
@@ -52,22 +52,22 @@ block contents
 
 			section.job-sections__item.job-sections__item--bm#bm
 
-				.job-sections__item-inner
+				.job-sections__item-inner(data-scroll-reveal-group)
 
 					.job-sections__item__header
 				
-						h2.job-sections__item-title
+						h2.job-sections__item-title(data-scroll-reveal-group-item)
 							span.job-sections__item-title-en
 								| Building Management
 							span.job-sections__item-title-jp
 								| ビル経営事業
 
-						h3.job-sections__item-sub-title
+						h3.job-sections__item-sub-title(data-scroll-reveal-group-item)
 							| ビルオーナーの視点で
 							br
 							| オフィスビルの収益最大化を図る。
 
-					.job-sections__item-lead
+					.job-sections__item-lead(data-scroll-reveal-group-item)
 						p
 							| 私たちは、ビル経営の先駆者として得てきた数多くの実績と知見を活用し、
 							br
@@ -79,7 +79,7 @@ block contents
 						
 						.job-list
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-bm-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -95,7 +95,7 @@ block contents
 											li.job-list__item-tag
 												| リーシングマネジメント
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-bm-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -113,7 +113,7 @@ block contents
 											li.job-list__item-tag
 												| 警備関連業務
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-bm-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -131,7 +131,7 @@ block contents
 											li.job-list__item-tag
 												| 専用部工事
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-bm-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -149,7 +149,7 @@ block contents
 											li.job-list__item-tag
 												| レポーティング業務
 
-					.job-sections__item-footer
+					.job-sections__item-footer(data-scroll-reveal)
 						a.job-sections__item-footer__button(href="https://www.mfbm.co.jp/owners/index.html" target="_blank" rel="noopener noreferrer")
 							span.job-sections__item-footer__text
 								| ビル経営について詳しく
@@ -158,22 +158,22 @@ block contents
 
 			section.job-sections__item.job-sections__item--ss#ss
 
-				.job-sections__item-inner
+				.job-sections__item-inner(data-scroll-reveal-group)
 
-					.job-sections__item__header
+					.job-sections__item__header(data-scroll-reveal-group-item)
 				
-						h2.job-sections__item-title
+						h2.job-sections__item-title(data-scroll-reveal-group-item)
 							span.job-sections__item-title-en
 								| Solution Service
 							span.job-sections__item-title-jp
 								| ソリューションサービス事業
 
-						h3.job-sections__item-sub-title
+						h3.job-sections__item-sub-title(data-scroll-reveal-group-item)
 							| 企業の成長・発展を
 							br
 							| 多様なソリューションで支える。
 
-					.job-sections__item-lead
+					.job-sections__item-lead(data-scroll-reveal-group-item)
 						p
 							| これまで多くのお客様に一番近い場所で寄り添ってきた特徴を活かし、
 							br
@@ -183,7 +183,7 @@ block contents
 						
 						.job-list
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-ss-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -205,7 +205,7 @@ block contents
 											li.job-list__item-tag
 												| 紹介斡旋サービス
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-ss-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -223,7 +223,7 @@ block contents
 											li.job-list__item-tag
 												| 損害保険代理店
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-ss-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -243,7 +243,7 @@ block contents
 											li.job-list__item-tag
 												| 女性活躍推進
 							
-							.job-list__item
+							.job-list__item(data-scroll-reveal)
 								.job-list__item-image
 									+picture({filename:'job-ss-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'410'},{height:'275'},{breakpoint:true},{lazyload:true},{retina:true})
 								.job-list__item-content
@@ -261,7 +261,7 @@ block contents
 											li.job-list__item-tag
 												| ワークスタイリング
 
-					.job-sections__item-footer
+					.job-sections__item-footer(data-scroll-reveal)
 						a.job-sections__item-footer__button(href="https://www.mfbm.co.jp/owners/index.html" target="_blank" rel="noopener noreferrer")
 							span.job-sections__item-footer__text
 								| ソリューションサービスについて詳しく

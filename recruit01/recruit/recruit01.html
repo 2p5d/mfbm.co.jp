@@ -16,9 +16,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net/">
-    <link rel="stylesheet" href="../assets/css/style.css?ver=230209">
+    <link rel="stylesheet" href="../assets/css/style.css?ver=230210">
   </head>
-  <body class="page-recruit01" unresolved>
+  <body class="contents-hidden page-recruit01">
     <div id="content">
       <div id="to-top"></div>
       <header class="header">
@@ -123,6 +123,9 @@
                       <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                       </svg>
+                      <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                      </svg>
                     </div></a></li>
                 <li class="menu__links-item menu__links-item--mypage"><a href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer">
                     <div class="menu__links-item-inner">
@@ -132,6 +135,9 @@
                       <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                       </svg>
+                      <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                      </svg>
                     </div></a></li>
                 <li class="menu__links-item menu__links-item--internship"><a href="https://www.mfbm.co.jp/recruit01/internship/" target="_blank" rel="noopener noreferrer">
                     <div class="menu__links-item-inner">
@@ -140,6 +146,9 @@
                       </svg>
                       <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                         <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                      </svg>
+                      <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                        <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                       </svg>
                     </div></a></li>
               </ul>
@@ -154,15 +163,14 @@
                 <use xlink:href="../assets/images/sprite.svg#ryumin-recruit"></use>
               </svg></span><span class="recruit-header__title-jp">研修教育制度</span></h2>
         </div>
-        <div class="recruit-content recruit-lead">
-          <p class="recruit-lead__head">
-             社員一人ひとりが、<br class="active-sp">能動的に自らの能力を高め、<br>
+        <div class="recruit-content recruit-lead" data-scroll-reveal-group>
+          <p class="recruit-lead__head" data-scroll-reveal-group-item>
+            社員一人ひとりが、<br class="active-sp">能動的に自らの能力を高め、<br>
             ステップアップできる<br class="active-sp">サポート体制を整えています。
           </p>
-          <p class="recruit-lead__body recruit-lead__body--left">
-             MFBMでは、常に「自ら考え、自ら行動する」姿勢や能力、そして専門的な技術、知識が求められます。入社してから一歩一歩着実にそれらの能力を身に付けていくためには、「経験」と「学習」をバランスよく積むことが大切です。そのために当社ではそれぞれの等級や職位に応じて求められる能力基準を設定し、それに合わせた研修プログラムを構築しています。</p>
+          <p class="recruit-lead__body" data-scroll-reveal-group-item>MFBMでは、常に「自ら考え、自ら行動する」姿勢や能力、そして専門的な技術、知識が求められます。入社してから一歩一歩着実にそれらの能力を身に付けていくためには、「経験」と「学習」をバランスよく積むことが大切です。そのために当社ではそれぞれの等級や職位に応じて求められる能力基準を設定し、それに合わせた研修プログラムを構築しています。</p>
         </div>
-        <div class="recruit-content recruit-induction">
+        <div class="recruit-content recruit-induction" data-scroll-reveal>
           <picture>
             <source type="image/webp" media="(min-width: 768px)" srcset="../assets/images/recruit-induction.webp 1x,../assets/images/recruit-induction@2x.webp 2x,"/>
             <source type="image/webp" media="(max-width: 767px)" srcset="../assets/images/recruit-induction-sp.webp"/>
@@ -192,8 +200,8 @@
                   <use xlink:href="../assets/images/sprite.svg#chevron"></use>
                 </svg></i></a></div>
         </div>
-        <div class="recruit-content recruit-frame">
-          <div class="recruit-frame__group">
+        <div class="recruit-content recruit-frame" data-scroll-reveal>
+          <div class="recruit-frame__group" data-scroll-reveal>
             <h2 class="recruit-frame__title">
                入社1年目の研修プログラム</h2>
             <dl class="recruit-frame-table" id="induction01">
@@ -215,7 +223,7 @@
               </dd>
             </dl>
           </div>
-          <div class="recruit-frame__group">
+          <div class="recruit-frame__group" data-scroll-reveal>
             <h2 class="recruit-frame__title">
                その他の研修プログラム</h2>
             <dl class="recruit-frame-table" id="induction04">
@@ -243,7 +251,7 @@
               </dd>
             </dl>
           </div>
-          <div class="recruit-frame__group">
+          <div class="recruit-frame__group" data-scroll-reveal>
             <h2 class="recruit-frame__title">
                ほかにもこんな仕組みを用意しています</h2>
             <dl class="recruit-frame-table">
@@ -258,20 +266,29 @@
             </dl>
           </div>
         </div>
-        <div class="recruit-content recruit-return-index"> <a href="../recruit/">RECRUIT一覧へ戻る</a></div>
-        <div class="recruit-index">
-          <ul class="recruit-index__list">
-            <li class="recruit-index__list-item"><a class="recruit-index__link recruit-index__link--02" href="../recruit/recruit02.html"><span>FAQ
+        <div class="recruit-content recruit-return-index" data-scroll-reveal><a href="../recruit/">RECRUIT一覧へ戻る</a></div>
+        <div class="recruit-index" data-scroll-reveal>
+          <ul class="recruit-index__list" data-scroll-reveal-group="fade-up">
+            <li class="recruit-index__list-item" data-scroll-reveal-group-item><a class="recruit-index__link recruit-index__link--02" href="../recruit/recruit02.html"><span>FAQ
                   <svg class="recruit-index__arrow" aria-label="→" viewBox="0 0 34 32">
                     <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                  </svg>
+                  <svg class="recruit-index__arrow-sp" aria-label="→" viewBox="0 0 35 32">
+                    <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                   </svg></span></a></li>
-            <li class="recruit-index__list-item"><a class="recruit-index__link recruit-index__link--03" href="../recruit/recruit03.html"><span>募集要項
+            <li class="recruit-index__list-item" data-scroll-reveal-group-item><a class="recruit-index__link recruit-index__link--03" href="../recruit/recruit03.html"><span>募集要項
                   <svg class="recruit-index__arrow" aria-label="→" viewBox="0 0 34 32">
                     <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                  </svg>
+                  <svg class="recruit-index__arrow-sp" aria-label="→" viewBox="0 0 35 32">
+                    <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                   </svg></span></a></li>
-            <li class="recruit-index__list-item"><a class="recruit-index__link recruit-index__link--04" href="../recruit/recruit04.html"><span>お問い合わせ
+            <li class="recruit-index__list-item" data-scroll-reveal-group-item><a class="recruit-index__link recruit-index__link--04" href="../recruit/recruit04.html"><span>お問い合わせ
                   <svg class="recruit-index__arrow" aria-label="→" viewBox="0 0 34 32">
                     <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                  </svg>
+                  <svg class="recruit-index__arrow-sp" aria-label="→" viewBox="0 0 35 32">
+                    <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                   </svg></span></a></li>
           </ul>
         </div>
@@ -283,8 +300,11 @@
         </div></a>
       <footer class="footer" id="footer"><a class="footer__page-top" href="#to-top">
           <div class="footer__page-top-arrow">
-            <svg aria-label="→" viewBox="0 0 34 32">
+            <svg class="footer__page-top-arrow-icon-pc" aria-label="→" viewBox="0 0 34 32">
               <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+            </svg>
+            <svg class="footer__page-top-arrow-icon-sp" aria-label="→" viewBox="0 0 35 32">
+              <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
             </svg>
           </div><span class="footer__page-top-text">PAGE TOP</span></a>
         <div class="footer__menu">
@@ -365,6 +385,9 @@
                     <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                       <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                     </svg>
+                    <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                      <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                    </svg>
                   </div></a></li>
               <li class="menu__links-item menu__links-item--mypage"><a href="https://mfbm.snar.jp/login.aspx" target="_blank" rel="noopener noreferrer">
                   <div class="menu__links-item-inner">
@@ -374,6 +397,9 @@
                     <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                       <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
                     </svg>
+                    <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                      <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
+                    </svg>
                   </div></a></li>
               <li class="menu__links-item menu__links-item--internship"><a href="https://www.mfbm.co.jp/recruit01/internship/" target="_blank" rel="noopener noreferrer">
                   <div class="menu__links-item-inner">
@@ -382,6 +408,9 @@
                     </svg>
                     <svg class="menu__links-item-icon" aria-label="" viewBox="0 0 34 32">
                       <use xlink:href="../assets/images/sprite.svg#arrow-big"></use>
+                    </svg>
+                    <svg class="menu__links-item-icon-sp" aria-label="" viewBox="0 0 35 32">
+                      <use xlink:href="../assets/images/sprite.svg#arrow-small"></use>
                     </svg>
                   </div></a></li>
             </ul>
@@ -395,11 +424,11 @@
           </div>
           <div class="footer__bottom-content">
             <div class="footer__bottom-links">
-              <div class="footer__bottom-links__item"><a href="#">個人情報保護方針</a></div>
-              <div class="footer__bottom-links__item"><a href="#">特定個人情報保護方針</a></div>
-              <div class="footer__bottom-links__item"><a href="#">個人情報の取り扱いについて</a></div>
-              <div class="footer__bottom-links__item"><a href="#">Cookieおよびアクセスログについて</a></div>
-              <div class="footer__bottom-links__item"><a href="#">サイトご利用上の注意</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer">個人情報保護方針</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/basic-privacy-policy/index.html" target="_blank" rel="noopener noreferrer">特定個人情報保護方針</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/privacy/" target="_blank" rel="noopener noreferrer">個人情報の取り扱いについて</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/cookie/index.html" target="_blank" rel="noopener noreferrer">Cookieおよびアクセスログについて</a></div>
+              <div class="footer__bottom-links__item"><a href="https://www.mfbm.co.jp/terms/" target="_blank" rel="noopener noreferrer">サイトご利用上の注意</a></div>
             </div>
             <p class="footer__copyright">Copyright © Mitsui Fudosan Building Management Co., Ltd. All rights reserved.</p>
           </div>
@@ -407,5 +436,5 @@
       </footer>
     </div>
   </body>
-  <script src="../assets/js/script.js?ver=230209" defer></script>
+  <script src="../assets/js/script.js?ver=230210" defer></script>
 </html>

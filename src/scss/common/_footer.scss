@@ -12,6 +12,9 @@
 		padding-right: var(--page-gutter);
 		padding-left: var(--page-gutter);
 	}
+	&.footer--top {
+		z-index: 99;
+	}
 }
 
 .footer__page-top {
@@ -32,9 +35,21 @@
 		width: 6.9rem;
 	}
 	svg {
+		will-change: transform;
 		transition: transform 0.25s ease-out;
 		a:hover & {
 			transform: translateX(0.35em);
+		}
+	}
+	.footer__page-top-arrow-icon-pc {
+		@include mq-down() {
+			display: none;
+		}
+	}
+	.footer__page-top-arrow-icon-sp {
+		display: none;
+		@include mq-down() {
+			display: block;
 		}
 	}
 }
@@ -57,6 +72,10 @@
 	margin-top: 17.6rem;
 	@include mq-down() {
 		display: none;
+		.footer.footer--top & {
+			margin-top: 9.6rem;
+			display: block;
+		}
 	}
 }
 
@@ -132,7 +151,6 @@
 	text-align: right;
 	font-family: var(--font-sans-yakuhan-all);
 	font-size: 1.2rem;
-	font-weight: 500;
 	letter-spacing: 0.06em;
 	color: #808080;
 	@include mq-down() {

@@ -5,6 +5,12 @@
 	position: relative;
 	padding-top: 6.8rem;
 	padding-bottom: 6.8rem;
+	@include mq-down() {
+		padding-top: 18.6rem;
+		padding-left: var(--page-gutter);
+		padding-bottom: 18.6rem;
+		padding-right: var(--page-gutter);
+	}
 }
 
 .top-lead__body {
@@ -12,8 +18,16 @@
 	line-height: calc(36 / 15);
 	font-family: var(--font-serif);
 	color: white;
+	@include mq-down() {
+		margin-top: 9.6rem;
+		margin-left: 0;
+		text-align: justify;
+	}
 	p {
 		width: 43.6rem;
+		@include mq-down() {
+			width: 100%;
+		}
 		& + p {
 			margin-top: 2.5em;
 		}
@@ -27,7 +41,10 @@
 	left: calc(50% - 2.6rem);
 	transform: translate(-100%, -100%);
 	width: 53.4rem;
-
+	@include mq-down() {
+		position: static;
+		transform: none;
+	}
 	// img {
 	// 	width: 53.4rem;
 	// 	display: block;

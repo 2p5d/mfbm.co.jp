@@ -38,7 +38,7 @@ block contents
 				button.movie-list__item(data-modal-trigger="movie01")
 					.movie-list__item-thumbnail
 						span.movie-list__item-time
-							| 03.43
+							| 03:43
 						svg(aria-label="MOVIE" viewBox="0 0 32 32")
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#movie-play')
 						+picture({filename:'movie-01-thumbnail'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'300'},{height:'178'},{breakpoint:true},{lazyload:true},{retina:true})
@@ -60,5 +60,5 @@ block contents
 					.modal-movie__content(data-modal-close-exclusion)
 						button.modal-movie__close.modal-close
 							.modal-movie__close-icon
-						video(playsinline poster!=assets_path + image_dir + "movie-01-thumbnail.png" controls)
+						video(playsinline poster!=assets_path + image_dir + "movie-01-thumbnail.png" controls preload)
 							source(src!=assets_path + image_dir + "movie-01.mp4", type="video/mp4")
