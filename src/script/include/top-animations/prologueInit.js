@@ -24,14 +24,8 @@ const prologueInit = () => {
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
 		})
-		.set("[data-ep='prologue']", {
+		.set("#prologue", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -76,12 +70,6 @@ const prologueInit = () => {
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
 		})
 		.to([".top-lead__title img"], {
 			y: "10vh",
@@ -111,20 +99,8 @@ const prologueInit = () => {
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
 		})
-		.set("[data-ep='prologue-2']", {
+		.set("#prologue-2", {
 			autoAlpha: 1,
 		})
 		.to(
@@ -146,7 +122,7 @@ const prologueInit = () => {
 			"<"
 		)
 		.fromTo(
-			[".top-lead__title img"],
+			[".top-lead__title img", ".top-lead__body"],
 			{
 				y: "10vh",
 				autoAlpha: 0,
@@ -158,43 +134,43 @@ const prologueInit = () => {
 			"<25%"
 		);
 
-	const topLeadBodyTl1 = gsap.timeline({
-		scrollTrigger: {
-			id: "topLeadBodyTl1",
-			trigger: "#prologue-2",
-			start: "top top",
-			end: "25% top",
-			scrub: true,
-			// markers: true,
-			toggleActions: "play reverse play reverse",
-		},
-	});
+	// const topLeadBodyTl1 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		id: "topLeadBodyTl1",
+	// 		trigger: "#prologue-2",
+	// 		start: "top top",
+	// 		end: "25% top",
+	// 		scrub: true,
+	// 		// markers: true,
+	// 		toggleActions: "play reverse play reverse",
+	// 	},
+	// });
 
-	const topLeadBodyTl2 = gsap.timeline({
-		scrollTrigger: {
-			id: "topLeadBodyTl2",
-			trigger: "#prologue-2",
-			start: "75% top",
-			end: "bottom top-=200px",
-			scrub: true,
-			// markers: true,
-			toggleActions: "play reverse play reverse",
-		},
-	});
+	// const topLeadBodyTl2 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		id: "topLeadBodyTl2",
+	// 		trigger: "#prologue-2",
+	// 		start: "75% top",
+	// 		end: "bottom top-=200px",
+	// 		scrub: true,
+	// 		// markers: true,
+	// 		toggleActions: "play reverse play reverse",
+	// 	},
+	// });
 
-	gsap.set("#prologue-2 .top-lead__body", {
-		opacity: 0,
-	});
+	// gsap.set("#prologue-2 .top-lead__body", {
+	// 	opacity: 0,
+	// });
 
-	topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
-		opacity: 1,
-		duration: 0.5,
-	});
+	// topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
+	// 	opacity: 1,
+	// 	duration: 0.5,
+	// });
 
-	topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
-		opacity: 0,
-		duration: 0.5,
-	});
+	// topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
+	// 	opacity: 0,
+	// 	duration: 0.5,
+	// });
 };
 
 export { prologueInit, prologueInTl, prologueBackTl, topLeadTl };

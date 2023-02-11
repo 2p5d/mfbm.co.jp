@@ -29,7 +29,7 @@ const mfbmFieldInit = () => {
 			},
 		})
 		.fromTo(
-			"[data-ep='business']",
+			"#business",
 			{
 				autoAlpha: 0,
 			},

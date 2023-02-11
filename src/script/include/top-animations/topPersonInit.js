@@ -28,7 +28,7 @@ const topPersonInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.set("[data-ep='person']", {
+		.set("#person", {
 			autoAlpha: 1,
 		})
 		.fromTo(

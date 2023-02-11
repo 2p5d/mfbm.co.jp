@@ -24,7 +24,7 @@ const topJobInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='job']", {
+		.to("#job", {
 			autoAlpha: 1,
 		})
 		.fromTo(

@@ -24,7 +24,7 @@ const epilogueInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='epilogue']", {
+		.to("#epilogue", {
 			duration: 2,
 			autoAlpha: 1,
 		})

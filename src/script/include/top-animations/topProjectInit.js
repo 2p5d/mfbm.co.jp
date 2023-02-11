@@ -37,7 +37,7 @@ const topProjectInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='project']", {
+		.to("#project", {
 			autoAlpha: 1,
 		})
 		//　line animation

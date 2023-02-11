@@ -344,8 +344,6 @@ __webpack_require__.r(__webpack_exports__);
 gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger, gsap_Observer__WEBPACK_IMPORTED_MODULE_11__.Observer, gsap_DrawSVGPlugin__WEBPACK_IMPORTED_MODULE_12__["default"]);
 
 
-let firstSt;
-
 function topCover() {
 	window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
 		passive: false,
@@ -364,283 +362,40 @@ function topCover() {
 			content.classList.add("--disable");
 			_topVideo__WEBPACK_IMPORTED_MODULE_13__.video.play();
 			setTimeout(() => {
-				firstSt.enable();
+				// firstSt.enable();
 			}, 1000);
 		}, 2000);
 	}, 1000);
 }
 
 
-let topScrollObserver;
+let topScrollObserver, sectionId;
 
 function topSections() {
 	window.onbeforeunload = () => window.scrollTo(0, 0);
-
-	// topScrollObserver = Observer.create({
-	// 	type: "wheel,touch,pointer",
-	// 	wheelSpeed: -1,
-	// 	onDown: () => {
-	// 		console.log("onDown");
-	// 	},
-	// 	onUp: () => {
-	// 		console.log("onUp");
-	// 	},
-	// 	// onDown: () => !animating && gotoSection(currentIndex - 1, -1),
-	// 	// onUp: () => !animating && gotoSection(currentIndex + 1, 1),
-	// 	tolerance: 10,
-	// 	preventDefault: true,
-	// });
 
 	// ScrollTrigger.normalizeScroll(true);
 
 	const epsWrapper = document.querySelector(".ep"),
 		eps = document.querySelectorAll(".ep > section"),
-		scroller = document.createElement("div");
-
-	/* 
-		コーディングのしやすさから、段積みで組んだ各セクションをjsでposition:fixedなどして初期化する。
-		スクロール監理は、通常のScrollTriggerと同じ使い方をしたいので、ダミーのdomを生成して、
-		トリガーの位置を指定、または各セクションの高さとシンクロさせる。
-	*/
-
-	let epTriggers = []; // 各epのtimelineのtriggerに指定する配列
-	const createTriggers = () => {
-		scroller.className = "ep-scroller";
-		scroller.style.pointerEvents = "none";
-		epsWrapper.appendChild(scroller);
-
-		// let autoHeightEps = [];
-		// let autoTriggers = [];
-		eps.forEach((ep, index) => {
-			index = index + 1;
-			const epTrigger = document.createElement("div");
-
-			const id = ep.id;
-			epTrigger.id = id;
-			ep.id = "";
-
-			ep.dataset.ep = `${id}`;
-
-			scroller.appendChild(epTrigger);
-			epTriggers.push(epTrigger);
-			switch (id) {
-				case "prologue":
-					epTrigger.style.height = "500vh";
-					break;
-				case "prologue-2":
-					// epTrigger.style.height = `${ep.clientHeight}px`;
-					const scrollContent = ep.querySelector(".top-lead__body");
-					gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.set(scrollContent, {
-						paddingTop: "50vh",
-						// marginBottom: "50vh",
-					});
-					epTrigger.appendChild(scrollContent);
-					// autoHeightEps.push(ep);
-					// autoTriggers.push(epTrigger);
-					break;
-				case "about":
-					epTrigger.style.height = "500vh";
-					break;
-				case "business":
-					epTrigger.style.height = "500vh";
-					break;
-				case "job":
-					epTrigger.style.height = "500vh";
-					break;
-				case "project":
-					epTrigger.style.height = "500vh";
-					break;
-				case "person":
-					epTrigger.style.height = "500vh";
-					break;
-				case "culture":
-					epTrigger.style.height = "500vh";
-					break;
-				case "epilogue":
-					epTrigger.style.height = "500vh";
-					break;
-				default:
-					epTrigger.style.height = "300";
-			}
-		});
-
-		/*
-			ダミーのスクローラーとheight:autoのセクションの高さを同期
-		*/
-
-		// ScrollTrigger.addEventListener("refreshInit", () => {
-		// 	autoTriggers.forEach((trigger, index) => {
-		// 		trigger.style.height = `${autoHeightEps[index].clientHeight}px`;
-		// 	});
-		// });
-	};
-
-	createTriggers();
-
-	const epsInit = () => {
-		eps.forEach((ep) => {
-			gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.set(ep, {
-				position: "fixed",
-				inset: "0",
-				width: "100%",
-				height: "100vh",
-				autoAlpha: 0,
+		epsInit = () => {
+			eps.forEach((ep) => {
+				gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.set(ep, {
+					position: "fixed",
+					inset: "0",
+					width: "100%",
+					height: "100vh",
+					autoAlpha: 0,
+				});
 			});
-		});
-	};
+		},
+		wrap = gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.utils.wrap(0, eps.length - 1);
+
+	let currentIndex = -1,
+		animating,
+		sectionId;
+
 	epsInit();
-
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.defaults({
-		preventOverlaps: true,
-		fastScrollEnd: true,
-		// markers: {
-		// 	startColor: "skyBlue",
-		// 	endColor: "red",
-		// 	fontSize: "18px",
-		// 	fontWeight: "bold",
-		// },
-	});
-
-	const epsWrapperTween = gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.to(epsWrapper, {
-		duration: 0.25,
-		autoAlpha: 0,
-		paused: true,
-	});
-
-	const navigationLinks = document.querySelectorAll(".ep__navigation-link");
-	const navigationInit = () => {
-		navigationLinks.forEach((link) => {
-			link.addEventListener("click", (event) => {
-				const triggers = gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.getAll();
-				triggers.forEach((trigger) => {
-					trigger.disable();
-				});
-				// epsWrapperTween.play();
-
-				event.preventDefault();
-
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-
-				const href = event.currentTarget.getAttribute("href");
-				const target = document.querySelector(href);
-				console.log(target);
-				gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.to(window, {
-					duration: 0,
-					scrollTo: {
-						y: target,
-						// offsetY: () => {
-						// 	if (header) {
-						// 		return header.clientHeight;
-						// 	}
-						// },
-					},
-					onComplete: () => {
-						triggers.forEach((trigger) => {
-							trigger.enable(true);
-						});
-						gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.refresh();
-					},
-				});
-
-				// event.preventDefault;
-
-				// setTimeout(() => {
-				// 	triggers.forEach((trigger) => {
-				// 		trigger.enable(true);
-				// 	});
-
-				// 	// epsWrapperTween.reverse();
-				// }, 100);
-
-				// navigationLinks.forEach((link) => {
-				// 	link.classList.remove("--active");
-				// });
-				// event.currentTarget.classList.add("--active");
-			});
-		});
-	};
-	navigationInit();
-
-	const sectionLinksWRapper = document.querySelector(".ep__section-label");
-	const sectionLinksInit = () => {
-		gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.set(sectionLinksWRapper, {
-			autoAlpha: 0,
-		});
-	};
-	sectionLinksInit();
-
-	const sectionsLinks = document.querySelectorAll(
-		".ep__section-label__links-item"
-	);
-	const sectionChange = (section) => {
-		const sectionId = section.id,
-			sectionLinkChange = (sectionId) => {
-				sectionsLinks.forEach((sectionsLink) => {
-					const linkId = sectionsLink.dataset.topTo;
-
-					if (sectionId === linkId) {
-						sectionsLink.classList.add("--active");
-					} else if (sectionsLink.classList.contains("--active")) {
-						sectionsLink.classList.remove("--active");
-					}
-				});
-			},
-			navigationChange = (sectionId) => {
-				navigationLinks.forEach((navigationLink) => {
-					const linkId = navigationLink.href.split("#")[1];
-					if (sectionId === linkId) {
-						navigationLink.classList.add("--active");
-					} else if (navigationLink.classList.contains("--active")) {
-						navigationLink.classList.remove("--active");
-					}
-				});
-			},
-			toggleSectionLink = (section) => {
-				const index = epTriggers.indexOf(section);
-
-				console.log(index);
-				console.log(epTriggers.length - 1);
-
-				if (index > 1 && index != epTriggers.length - 1) {
-					gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.to(sectionLinksWRapper, {
-						duration: 1,
-						autoAlpha: 1,
-					});
-				} else {
-					gsap_all__WEBPACK_IMPORTED_MODULE_9__.gsap.to(sectionLinksWRapper, {
-						duration: 1,
-						autoAlpha: 0,
-					});
-				}
-			};
-
-		toggleSectionLink(section);
-
-		console.log(sectionId);
-
-		if (sectionId && sectionId != "prologue-2") {
-			sectionLinkChange(sectionId);
-			navigationChange(sectionId);
-		} else {
-			return false;
-		}
-	};
-
-	epTriggers.forEach((section, index) => {
-		gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-			id: `sectionChange-${index}`,
-			trigger: section,
-			start: "top top",
-			end: "bottom top",
-			// markers: true,
-			onToggle: (self) => {
-				sectionChange(self.trigger);
-			},
-		});
-	});
 
 	const animationsInit = () => {
 		(0,_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueInit)();
@@ -654,6 +409,217 @@ function topSections() {
 	};
 	animationsInit();
 
+	function gotoSection(index, direction) {
+		// console.log(index);
+		let fromTop = direction === -1,
+			dFactor = fromTop ? -1 : 1;
+
+		animating = true;
+		sectionId = eps[index].id;
+
+		console.log(sectionId);
+		switch (sectionId) {
+			case "prologue":
+				if (direction == 1) {
+					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueInTl.restart();
+					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueInTl.eventCallback("onComplete", () => {
+						animating = false;
+					});
+				} else {
+					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueBackTl.restart();
+					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueBackTl.eventCallback("onComplete", () => {
+						animating = false;
+					});
+				}
+				break;
+			case "prologue-2":
+				_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.topLeadTl.restart();
+				_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.topLeadTl.eventCallback("onComplete", () => {
+					animating = false;
+				});
+				break;
+			case "about":
+				_top_animations_aboutInit__WEBPACK_IMPORTED_MODULE_2__.aboutTl.restart();
+				_top_animations_aboutInit__WEBPACK_IMPORTED_MODULE_2__.aboutTl.eventCallback("onComplete", () => {
+					animating = false;
+				});
+				break;
+			default:
+				break;
+		}
+
+		// if (currentIndex >= 0) {
+		// 	// The first time this function runs, current is -1
+		// 	prologueInTl.play();
+		// 	prologueInTl.eventCallback("onComplete", () => {
+		// 		animating = false;
+		// 	});
+		// }
+		// gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+		// tl.fromTo(
+		// 	[outerWrappers[index], innerWrappers[index]],
+		// 	{
+		// 		yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
+		// 	},
+		// 	{
+		// 		yPercent: 0,
+		// 	},
+		// 	0
+		// )
+		// 	.fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+		// 	.fromTo(
+		// 		splitHeadings[index].chars,
+		// 		{
+		// 			autoAlpha: 0,
+		// 			yPercent: 150 * dFactor,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			yPercent: 0,
+		// 			duration: 1,
+		// 			ease: "power2",
+		// 			stagger: {
+		// 				each: 0.02,
+		// 				from: "random",
+		// 			},
+		// 		},
+		// 		0.2
+		// 	);
+		currentIndex = index;
+	}
+
+	topScrollObserver = gsap_Observer__WEBPACK_IMPORTED_MODULE_11__.Observer.create({
+		type: "wheel,touch,pointer",
+		wheelSpeed: -1,
+		onDown: () => {
+			console.log(currentIndex);
+			!animating && currentIndex > 0 && gotoSection(currentIndex - 1, -1);
+		},
+		onUp: () => {
+			console.log(currentIndex);
+			!animating &&
+				currentIndex < eps.length - 1 &&
+				gotoSection(currentIndex + 1, 1);
+		},
+		tolerance: 500,
+		preventDefault: true,
+	});
+
+	gotoSection(0, 1);
+
+	// const epsWrapperTween = gsap.to(epsWrapper, {
+	// 	duration: 0.25,
+	// 	autoAlpha: 0,
+	// 	paused: true,
+	// });
+
+	// const navigationLinks = document.querySelectorAll(".ep__navigation-link");
+	// const navigationInit = () => {
+	// 	navigationLinks.forEach((link) => {
+	// 		link.addEventListener("click", (event) => {
+	// 			const triggers = ScrollTrigger.getAll();
+	// 			triggers.forEach((trigger) => {
+	// 				trigger.disable();
+	// 			});
+	// 			// epsWrapperTween.play();
+
+	// 			event.preventDefault();
+
+	// 			window.removeEventListener("touchmove", noscroll, {
+	// 				passive: false,
+	// 			});
+	// 			window.removeEventListener("wheel", noscroll, { passive: false });
+
+	// 			const href = event.currentTarget.getAttribute("href");
+	// 			const target = document.querySelector(href);
+	// 			console.log(target);
+	// 			gsap.to(window, {
+	// 				duration: 0,
+	// 				scrollTo: {
+	// 					y: target,
+	// 					// offsetY: () => {
+	// 					// 	if (header) {
+	// 					// 		return header.clientHeight;
+	// 					// 	}
+	// 					// },
+	// 				},
+	// 				onComplete: () => {
+	// 					triggers.forEach((trigger) => {
+	// 						trigger.enable(true);
+	// 					});
+	// 					ScrollTrigger.refresh();
+	// 				},
+	// 			});
+	// 		});
+	// 	});
+	// };
+	// navigationInit();
+
+	// const sectionLinksWRapper = document.querySelector(".ep__section-label");
+	// const sectionLinksInit = () => {
+	// 	gsap.set(sectionLinksWRapper, {
+	// 		autoAlpha: 0,
+	// 	});
+	// };
+	// sectionLinksInit();
+
+	// const sectionsLinks = document.querySelectorAll(
+	// 	".ep__section-label__links-item"
+	// );
+	// const sectionChange = (section) => {
+	// 	const sectionId = section.id,
+	// 		sectionLinkChange = (sectionId) => {
+	// 			sectionsLinks.forEach((sectionsLink) => {
+	// 				const linkId = sectionsLink.dataset.topTo;
+
+	// 				if (sectionId === linkId) {
+	// 					sectionsLink.classList.add("--active");
+	// 				} else if (sectionsLink.classList.contains("--active")) {
+	// 					sectionsLink.classList.remove("--active");
+	// 				}
+	// 			});
+	// 		},
+	// 		navigationChange = (sectionId) => {
+	// 			navigationLinks.forEach((navigationLink) => {
+	// 				const linkId = navigationLink.href.split("#")[1];
+	// 				if (sectionId === linkId) {
+	// 					navigationLink.classList.add("--active");
+	// 				} else if (navigationLink.classList.contains("--active")) {
+	// 					navigationLink.classList.remove("--active");
+	// 				}
+	// 			});
+	// 		},
+	// 		toggleSectionLink = (section) => {
+	// 			const index = epTriggers.indexOf(section);
+
+	// 			console.log(index);
+	// 			console.log(epTriggers.length - 1);
+
+	// 			if (index > 1 && index != epTriggers.length - 1) {
+	// 				gsap.to(sectionLinksWRapper, {
+	// 					duration: 1,
+	// 					autoAlpha: 1,
+	// 				});
+	// 			} else {
+	// 				gsap.to(sectionLinksWRapper, {
+	// 					duration: 1,
+	// 					autoAlpha: 0,
+	// 				});
+	// 			}
+	// 		};
+
+	// 	toggleSectionLink(section);
+
+	// 	console.log(sectionId);
+
+	// 	if (sectionId && sectionId != "prologue-2") {
+	// 		sectionLinkChange(sectionId);
+	// 		navigationChange(sectionId);
+	// 	} else {
+	// 		return false;
+	// 	}
+	// };
+
 	/* 
 		---------- prologue ----------
 	*/
@@ -665,224 +631,224 @@ function topSections() {
 	// 	// },
 	// });
 
-	firstSt = gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "prologue",
-		trigger: "#prologue",
-		start: "top center",
-		end: "bottom top",
-		// markers: true,
-		onToggle: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			if (self.direction === 1) {
-				_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueInTl.play();
-			} else {
-				// window.addEventListener("touchmove", noscroll, {
-				// 	passive: false,
-				// });
-				// window.addEventListener("wheel", noscroll, { passive: false });
-				_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueBackTl.restart();
-			}
-		},
-	});
-	firstSt.disable();
+	// firstSt = ScrollTrigger.create({
+	// 	id: "prologue",
+	// 	trigger: "#prologue",
+	// 	start: "top center",
+	// 	end: "bottom top",
+	// 	// markers: true,
+	// 	onToggle: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, { passive: false });
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		if (self.direction === 1) {
+	// 			prologueInTl.play();
+	// 		} else {
+	// 			// window.addEventListener("touchmove", noscroll, {
+	// 			// 	passive: false,
+	// 			// });
+	// 			// window.addEventListener("wheel", noscroll, { passive: false });
+	// 			prologueBackTl.restart();
+	// 		}
+	// 	},
+	// });
+	// firstSt.disable();
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "topLeadTl",
-		trigger: "#prologue-2",
-		start: "top top",
-		end: "bottom top",
-		// markers: true,
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.topLeadTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.topLeadTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "topLeadTl",
+	// 	trigger: "#prologue-2",
+	// 	start: "top top",
+	// 	end: "bottom top",
+	// 	// markers: true,
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topLeadTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topLeadTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- about ----------
-	*/
+	// /*
+	// 	---------- about ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "aboutTl",
-		trigger: "#about",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_aboutInit__WEBPACK_IMPORTED_MODULE_2__.aboutTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_aboutInit__WEBPACK_IMPORTED_MODULE_2__.aboutTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "aboutTl",
+	// 	trigger: "#about",
+	// 	start: "top top",
+	// 	end: "center top",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		aboutTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, { passive: false });
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		aboutTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- mfbmField ----------
-	*/
+	// /*
+	// 	---------- mfbmField ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "mfbmFieldTl",
-		trigger: "#business",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_mfbmFieldInit__WEBPACK_IMPORTED_MODULE_3__.mfbmFieldTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_mfbmFieldInit__WEBPACK_IMPORTED_MODULE_3__.mfbmFieldTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "mfbmFieldTl",
+	// 	trigger: "#business",
+	// 	start: "top top",
+	// 	end: "center top",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, { passive: false });
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		mfbmFieldTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, { passive: false });
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		mfbmFieldTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- topJob ----------
-	*/
+	// /*
+	// 	---------- topJob ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "topJobTl",
-		trigger: "#job",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topJobInit__WEBPACK_IMPORTED_MODULE_4__.topJobTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topJobInit__WEBPACK_IMPORTED_MODULE_4__.topJobTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "topJobTl",
+	// 	trigger: "#job",
+	// 	start: "top top",
+	// 	end: "center top",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topJobTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topJobTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- topProject ----------
-	*/
+	// /*
+	// 	---------- topProject ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "topProjectTl",
-		trigger: "#project",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topProjectInit__WEBPACK_IMPORTED_MODULE_5__.topProjectTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topProjectInit__WEBPACK_IMPORTED_MODULE_5__.topProjectTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "topProjectTl",
+	// 	trigger: "#project",
+	// 	start: "top top",
+	// 	end: "center top",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topProjectTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topProjectTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- topPerson ----------
-	*/
+	// /*
+	// 	---------- topPerson ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "topPersonTl",
-		trigger: "#person",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topPersonInit__WEBPACK_IMPORTED_MODULE_6__.topPersonTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topPersonInit__WEBPACK_IMPORTED_MODULE_6__.topPersonTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "topPersonTl",
+	// 	trigger: "#person",
+	// 	start: "top top",
+	// 	end: "center top",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topPersonTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topPersonTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- topCulture ----------
-	*/
+	// /*
+	// 	---------- topCulture ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "topCultureTl",
-		trigger: "#culture",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topCultureInit__WEBPACK_IMPORTED_MODULE_7__.topCultureTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_topCultureInit__WEBPACK_IMPORTED_MODULE_7__.topCultureTl.reverse();
-		},
-	});
+	// ScrollTrigger.create({
+	// 	id: "topCultureTl",
+	// 	trigger: "#culture",
+	// 	start: "top top",
+	// 	end: "center top",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topCultureTl.restart();
+	// 	},
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		topCultureTl.reverse();
+	// 	},
+	// });
 
-	/* 
-		---------- epilogue ----------
-	*/
+	// /*
+	// 	---------- epilogue ----------
+	// */
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_10__.ScrollTrigger.create({
-		id: "epilogueTl",
-		trigger: "#epilogue",
-		start: "top top",
-		end: "bottom bottom",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_epilogueInit__WEBPACK_IMPORTED_MODULE_8__.epilogueTl.restart();
-		},
-		// onLeave: (self) => {
-		// 	lastTl.play();
-		// },
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			_top_animations_epilogueInit__WEBPACK_IMPORTED_MODULE_8__.epilogueTl.reverse();
-		},
-		// onEnterBack: (self) => {
-		// 	lastTl.reverse();
-		// },
-	});
+	// ScrollTrigger.create({
+	// 	id: "epilogueTl",
+	// 	trigger: "#epilogue",
+	// 	start: "top top",
+	// 	end: "bottom bottom",
+	// 	onEnter: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		epilogueTl.restart();
+	// 	},
+	// 	// onLeave: (self) => {
+	// 	// 	lastTl.play();
+	// 	// },
+	// 	onLeaveBack: (self) => {
+	// 		window.addEventListener("touchmove", noscroll, {
+	// 			passive: false,
+	// 		});
+	// 		window.addEventListener("wheel", noscroll, { passive: false });
+	// 		epilogueTl.reverse();
+	// 	},
+	// 	// onEnterBack: (self) => {
+	// 	// 	lastTl.reverse();
+	// 	// },
+	// });
 }
 
 
@@ -930,14 +896,8 @@ const prologueInit = () => {
 	prologueInTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
 		})
-		.set("[data-ep='prologue']", {
+		.set("#prologue", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -981,12 +941,6 @@ const prologueInit = () => {
 	prologueBackTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
 		})
 		.to([".top-lead__title img"], {
 			y: "10vh",
@@ -1015,20 +969,8 @@ const prologueInit = () => {
 	topLeadTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
 		})
-		.set("[data-ep='prologue-2']", {
+		.set("#prologue-2", {
 			autoAlpha: 1,
 		})
 		.to(
@@ -1050,7 +992,7 @@ const prologueInit = () => {
 			"<"
 		)
 		.fromTo(
-			[".top-lead__title img"],
+			[".top-lead__title img", ".top-lead__body"],
 			{
 				y: "10vh",
 				autoAlpha: 0,
@@ -1062,43 +1004,43 @@ const prologueInit = () => {
 			"<25%"
 		);
 
-	const topLeadBodyTl1 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-		scrollTrigger: {
-			id: "topLeadBodyTl1",
-			trigger: "#prologue-2",
-			start: "top top",
-			end: "25% top",
-			scrub: true,
-			// markers: true,
-			toggleActions: "play reverse play reverse",
-		},
-	});
+	// const topLeadBodyTl1 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		id: "topLeadBodyTl1",
+	// 		trigger: "#prologue-2",
+	// 		start: "top top",
+	// 		end: "25% top",
+	// 		scrub: true,
+	// 		// markers: true,
+	// 		toggleActions: "play reverse play reverse",
+	// 	},
+	// });
 
-	const topLeadBodyTl2 = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-		scrollTrigger: {
-			id: "topLeadBodyTl2",
-			trigger: "#prologue-2",
-			start: "75% top",
-			end: "bottom top-=200px",
-			scrub: true,
-			// markers: true,
-			toggleActions: "play reverse play reverse",
-		},
-	});
+	// const topLeadBodyTl2 = gsap.timeline({
+	// 	scrollTrigger: {
+	// 		id: "topLeadBodyTl2",
+	// 		trigger: "#prologue-2",
+	// 		start: "75% top",
+	// 		end: "bottom top-=200px",
+	// 		scrub: true,
+	// 		// markers: true,
+	// 		toggleActions: "play reverse play reverse",
+	// 	},
+	// });
 
-	gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.set("#prologue-2 .top-lead__body", {
-		opacity: 0,
-	});
+	// gsap.set("#prologue-2 .top-lead__body", {
+	// 	opacity: 0,
+	// });
 
-	topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
-		opacity: 1,
-		duration: 0.5,
-	});
+	// topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
+	// 	opacity: 1,
+	// 	duration: 0.5,
+	// });
 
-	topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
-		opacity: 0,
-		duration: 0.5,
-	});
+	// topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
+	// 	opacity: 0,
+	// 	duration: 0.5,
+	// });
 };
 
 
@@ -27774,7 +27716,7 @@ const aboutInit = () => {
 				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='about']", {
+		.to("#about", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -27999,7 +27941,7 @@ const mfbmFieldInit = () => {
 			},
 		})
 		.fromTo(
-			"[data-ep='business']",
+			"#business",
 			{
 				autoAlpha: 0,
 			},
@@ -28169,7 +28111,7 @@ const topJobInit = () => {
 				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='job']", {
+		.to("#job", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -28295,7 +28237,7 @@ const topProjectInit = () => {
 				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='project']", {
+		.to("#project", {
 			autoAlpha: 1,
 		})
 		//　line animation
@@ -28444,7 +28386,7 @@ const topPersonInit = () => {
 				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
 			},
 		})
-		.set("[data-ep='person']", {
+		.set("#person", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -28599,7 +28541,7 @@ const topCultureInit = () => {
 				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='culture']", {
+		.to("#culture", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -28725,7 +28667,7 @@ const epilogueInit = () => {
 				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='epilogue']", {
+		.to("#epilogue", {
 			duration: 2,
 			autoAlpha: 1,
 		})

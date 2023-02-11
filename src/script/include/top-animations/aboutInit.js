@@ -30,7 +30,7 @@ const aboutInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='about']", {
+		.to("#about", {
 			autoAlpha: 1,
 		})
 		.fromTo(

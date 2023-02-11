@@ -24,7 +24,7 @@ const topCultureInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.to("[data-ep='culture']", {
+		.to("#culture", {
 			autoAlpha: 1,
 		})
 		.fromTo(
