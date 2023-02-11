@@ -1,4 +1,5 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
+import { tweenArray, animating, topScrollObserver } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -8,7 +9,7 @@ import { video } from "../topVideo";
 		---------- prologue ----------
 	*/
 
-let prologueInTl, prologueBackTl, topLeadTl;
+let prologueInTl, prologueBackTl, topLeadTl, prologue2St, prologue2stInitTl;
 
 const prologueInit = () => {
 	const section01Title = document.querySelector(".top-section__title");
@@ -58,7 +59,6 @@ const prologueInit = () => {
 			},
 			"<"
 		);
-
 	// gsap.set(".top-lead__body-inner", {
 	// 	marginTop: "20vh",
 	// 	// onComplete: () => {
@@ -71,7 +71,7 @@ const prologueInit = () => {
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
 		})
-		.to([".top-lead__title img"], {
+		.to([".top-lead__title img", ".top-lead__body"], {
 			y: "10vh",
 			autoAlpha: 0,
 		})
@@ -134,43 +134,57 @@ const prologueInit = () => {
 			"<25%"
 		);
 
-	// const topLeadBodyTl1 = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		id: "topLeadBodyTl1",
-	// 		trigger: "#prologue-2",
-	// 		start: "top top",
-	// 		end: "25% top",
-	// 		scrub: true,
-	// 		// markers: true,
-	// 		toggleActions: "play reverse play reverse",
-	// 	},
-	// });
+	prologue2stInitTl = gsap
+		.timeline({
+			paused: true,
+		})
+		// .set(".top-lead__body", {
+		// 	marginTop: "50vh",
+		// 	marginBottom: "100vh",
+		// })
+		.set("#prologue-2", {
+			"--top-scroll-bar": "none",
+			overflowY: "auto",
+		})
+		.set(".top-lead__title", {
+			position: "fixed",
+			pointerEvents: "none",
+		});
 
-	// const topLeadBodyTl2 = gsap.timeline({
-	// 	scrollTrigger: {
-	// 		id: "topLeadBodyTl2",
-	// 		trigger: "#prologue-2",
-	// 		start: "75% top",
-	// 		end: "bottom top-=200px",
-	// 		scrub: true,
-	// 		// markers: true,
-	// 		toggleActions: "play reverse play reverse",
-	// 	},
-	// });
+	/*
+		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
+		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
+	*/
+	const prologue2stContainerInit = gsap.set(".top-lead__body", {
+		marginTop: "40vh",
+		marginBottom: "100vh",
+	});
 
-	// gsap.set("#prologue-2 .top-lead__body", {
-	// 	opacity: 0,
-	// });
+	prologue2St = ScrollTrigger.create({
+		trigger: ".top-lead__body",
+		start: "top center",
+		end: "bottom top",
+		// markers: true,
+		scroller: "#prologue-2",
+		onLeave: () => {
+			topScrollObserver.enable();
+			animating.flag = false;
+		},
+		onLeaveBack: () => {
+			topScrollObserver.enable();
+			animating.flag = false;
+		},
+	});
+	prologue2St.disable();
 
-	// topLeadBodyTl1.to("#prologue-2 .top-lead__body", {
-	// 	opacity: 1,
-	// 	duration: 0.5,
-	// });
-
-	// topLeadBodyTl2.to("#prologue-2 .top-lead__body", {
-	// 	opacity: 0,
-	// 	duration: 0.5,
-	// });
+	tweenArray.push(prologueInTl, topLeadTl);
 };
 
-export { prologueInit, prologueInTl, prologueBackTl, topLeadTl };
+export {
+	prologueInit,
+	prologueInTl,
+	prologueBackTl,
+	topLeadTl,
+	prologue2stInitTl,
+	prologue2St,
+};

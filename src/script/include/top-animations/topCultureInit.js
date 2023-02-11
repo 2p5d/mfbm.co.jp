@@ -1,4 +1,5 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
+import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -85,26 +86,7 @@ const topCultureInit = () => {
 			"<50%"
 		);
 
-	ScrollTrigger.create({
-		id: "topCultureTl",
-		trigger: "#culture",
-		start: "top top",
-		end: "center top",
-		onEnter: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topCultureTl.restart();
-		},
-		onLeaveBack: (self) => {
-			window.addEventListener("touchmove", noscroll, {
-				passive: false,
-			});
-			window.addEventListener("wheel", noscroll, { passive: false });
-			topCultureTl.reverse();
-		},
-	});
+	tweenArray.push(topCultureTl);
 };
 
 export { topCultureInit, topCultureTl };

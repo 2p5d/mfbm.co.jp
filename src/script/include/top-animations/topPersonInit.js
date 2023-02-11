@@ -1,4 +1,5 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
+import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -28,7 +29,7 @@ const topPersonInit = () => {
 				window.removeEventListener("wheel", noscroll, { passive: false });
 			},
 		})
-		.set("#person", {
+		.to("#person", {
 			autoAlpha: 1,
 		})
 		.fromTo(
@@ -48,7 +49,7 @@ const topPersonInit = () => {
 					ease: "none",
 				},
 			},
-			"<"
+			"<25%"
 		)
 		.to(
 			".persons__solo",
@@ -138,6 +139,7 @@ const topPersonInit = () => {
 			},
 			"<50%"
 		);
+	tweenArray.push(topPersonTl);
 };
 
 export { topPersonInit, topPersonTl };

@@ -20,12 +20,18 @@
 }
 
 .top-project__lead-title {
+	position: relative;
+	z-index: 1;
 	width: 100%;
 	will-change: transform;
+	line-height: 0;
 	@include mq-down() {
 		width: 51.3rem;
 		margin-right: auto;
 		margin-left: auto;
+	}
+	svg {
+		height: auto;
 	}
 }
 

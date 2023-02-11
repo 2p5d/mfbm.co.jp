@@ -1,4 +1,5 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
+import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -20,27 +21,11 @@ const topProjectInit = () => {
 	const textR2 = gsap.utils.toArray(["#r-2-1", "#r-2-2", "#r-2-3"]);
 	const textY = gsap.utils.toArray(["#y-1-1", "#y-1-2", "#y-1-3"]);
 
-	topProjectTl = gsap
+	const textTl = gsap
 		.timeline({
 			defaults: { duration: 1.5, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
+			// paused: true,
 		})
-		.to("#project", {
-			autoAlpha: 1,
-		})
-		//　line animation
 		.from(
 			textP1,
 			{
@@ -124,19 +109,32 @@ const topProjectInit = () => {
 				drawSVG: 0,
 			},
 			`<${gsap.utils.random([0, 10])}%`
-		)
+		);
+
+	topProjectTl = gsap
+		.timeline({
+			defaults: { duration: 1.5, ease: "power2.out" },
+			paused: true,
+		})
+		.to("#project", {
+			duration: 1.75,
+			autoAlpha: 1,
+		})
+		// .from(".top-project__bg", {
+		// 	duration: 1,
+		// 	autoAlpha: 0,
+		// 	// ease: "expo.inOut",
+		// })
+		//　line animation
+		.add(textTl, "<50%")
 		.from(
-			".top-project__bg",
+			".top-project__lead-sub-title",
 			{
-				duration: 3,
 				autoAlpha: 0,
-				// ease: "expo.inOut",
 			},
-			"<50%"
-		)
-		.from(".top-project__lead-sub-title", {
-			autoAlpha: 0,
-		});
+			"<60%"
+		);
+	tweenArray.push(topProjectTl);
 };
 
 export { topProjectInit, topProjectTl };

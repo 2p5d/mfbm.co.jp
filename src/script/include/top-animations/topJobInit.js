@@ -1,4 +1,5 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
+import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -92,6 +93,7 @@ const topJobInit = () => {
 			},
 			"<35%"
 		);
+	tweenArray.push(topJobTl);
 };
 
 export { topJobInit, topJobTl };

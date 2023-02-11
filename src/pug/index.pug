@@ -68,7 +68,11 @@ block contents
 								br
 								| さぁ、ともに“新しい未来”に向かって挑戦しよう。
 
-			section.ep__section#about
+			.ep__01-02-bg
+				+picture({filename:'top-section-01-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:false},{lazyload:true},{retina:true})
+
+
+			section.ep__section#about(data-pc-href=root_path + "about/")
 
 				.top-about
 					.top-about__lead
@@ -104,7 +108,7 @@ block contents
 						.top-about__bg-image
 							+picture({filename:'top-section-02-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			section.ep__section#business
+			section.ep__section#business(data-pc-href=root_path + "business.html")
 
 				.mfbm-field
 					.mfbm-field__lead
@@ -130,7 +134,7 @@ block contents
 								+picture({filename:'top-section-03-building-03-over-layer'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'392.6983'},{height:'299.2003'},{breakpoint:false},{lazyload:true},{retina:false})
 
 
-			section.ep__section#job
+			section.ep__section#job(data-pc-href=root_path + "job.html")
 
 				.top-job
 
@@ -179,7 +183,7 @@ block contents
 							.top-job__peoples-item
 								+picture({filename:'top-section-04-photo-15'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
 
-			section.ep__section#project
+			section.ep__section#project(data-pc-href=root_path + "project.html")
 
 				.top-project
 
@@ -227,7 +231,7 @@ block contents
 					.top-project__bg
 						+picture({filename:'top-section-05-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			section.ep__section#person
+			section.ep__section#person(data-pc-href=root_path + "person/")
 
 				.persons
 					.persons__solo
@@ -250,7 +254,7 @@ block contents
 								+picture({filename:'person-all-04'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'624'},{height:'519'},{breakpoint:true},{lazyload:true},{retina:true})
 								+picture({filename:'person-all-05'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'397'},{height:'544'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			section.ep__section#culture
+			section.ep__section#culture(data-pc-href=root_path + "culture.html")
 
 				.top-culture
 
@@ -332,8 +336,8 @@ block contents
 						+picture({filename:'top-section-end-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:true},{retina:true})
 
 
-			.ep__01-02-bg
-				+picture({filename:'top-section-01-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:false},{lazyload:true},{retina:true})
+			section.ep__section#topFooter
+				include include/_footer.pug
 
 			.ep__navigation
 				a(href="#prologue").ep__navigation-link.--active
@@ -356,6 +360,10 @@ block contents
 					span.ep__navigation-link-icon
 					span.ep__navigation-link-text
 						| PROJECT
+				a(href="#person").ep__navigation-link
+					span.ep__navigation-link-icon
+					span.ep__navigation-link-text
+						| PERSON
 				a(href="#culture").ep__navigation-link
 					span.ep__navigation-link-icon
 					span.ep__navigation-link-text
