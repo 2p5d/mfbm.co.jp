@@ -41,6 +41,9 @@
 	left: calc(50% - 2.6rem);
 	transform: translate(-100%, -100%);
 	width: 53.4rem;
+	html:not(.touch-device) {
+		pointer-events: none; // jsでnoneしてるが、はじめからポインターが乗っていると動かすまで反応しなくなるので
+	}
 	@include mq-down() {
 		position: static;
 		transform: none;

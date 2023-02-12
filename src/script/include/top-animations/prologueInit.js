@@ -21,6 +21,95 @@ const prologueInit = () => {
 		".top-section__5minute",
 	]);
 
+	let mm = gsap.matchMedia();
+
+	mm.add("(min-width: 768px)", () => {
+		prologue2stInitTl = gsap
+			.timeline({
+				paused: true,
+			})
+			// .set(".top-lead__body", {
+			// 	marginTop: "50vh",
+			// 	marginBottom: "100vh",
+			// })
+			.set("#prologue2", {
+				"--top-scroll-bar": "none",
+				overflowY: "auto",
+			})
+			.set(".top-lead__title", {
+				position: "fixed",
+				pointerEvents: "none",
+			});
+
+		/*
+		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
+		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
+	*/
+		const prologue2stContainerInit = gsap.set(".top-lead__body", {
+			marginTop: "40vh", // startの値と合わせる
+			marginBottom: "100vh",
+		});
+
+		prologue2St = ScrollTrigger.create({
+			trigger: ".top-lead__body",
+			start: "top 40%",
+			end: "bottom top",
+			// markers: true,
+			scroller: "#prologue2",
+			onLeave: () => {
+				topScrollObserver.enable();
+				animating.flag = false;
+			},
+			onLeaveBack: () => {
+				topScrollObserver.enable();
+				animating.flag = false;
+			},
+		});
+		prologue2St.disable();
+	});
+	mm.add("(max-width: 767px)", () => {
+		/*
+		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
+		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
+	*/
+		const prologue2stContainerInit = gsap.set(".top-lead", {
+			marginBottom: "50vh",
+		});
+
+		prologue2stInitTl = gsap
+			.timeline({
+				paused: true,
+			})
+			// .set(".top-lead__body", {
+			// 	marginTop: "50vh",
+			// 	marginBottom: "100vh",
+			// })
+			.set("#prologue2", {
+				"--top-scroll-bar": "none",
+				overflowY: "auto",
+			});
+
+		prologue2St = ScrollTrigger.create({
+			trigger: ".top-lead",
+			start: "top top",
+			end: "bottom bottom",
+			// markers: true,
+			scroller: "#prologue2",
+			onLeave: () => {
+				topScrollObserver.enable();
+				animating.flag = false;
+			},
+			onLeaveBack: () => {
+				topScrollObserver.enable();
+				animating.flag = false;
+			},
+		});
+		prologue2St.disable();
+	});
+
+	// later, if we need to revert all the animations/ScrollTriggers...
+	// mm.revert();
+
 	prologueInTl = gsap
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
@@ -100,7 +189,7 @@ const prologueInit = () => {
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
 		})
-		.set("#prologue-2", {
+		.set("#prologue2", {
 			autoAlpha: 1,
 		})
 		.to(
@@ -133,49 +222,6 @@ const prologueInit = () => {
 			},
 			"<25%"
 		);
-
-	prologue2stInitTl = gsap
-		.timeline({
-			paused: true,
-		})
-		// .set(".top-lead__body", {
-		// 	marginTop: "50vh",
-		// 	marginBottom: "100vh",
-		// })
-		.set("#prologue-2", {
-			"--top-scroll-bar": "none",
-			overflowY: "auto",
-		})
-		.set(".top-lead__title", {
-			position: "fixed",
-			pointerEvents: "none",
-		});
-
-	/*
-		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
-		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
-	*/
-	const prologue2stContainerInit = gsap.set(".top-lead__body", {
-		marginTop: "40vh",
-		marginBottom: "100vh",
-	});
-
-	prologue2St = ScrollTrigger.create({
-		trigger: ".top-lead__body",
-		start: "top center",
-		end: "bottom top",
-		// markers: true,
-		scroller: "#prologue-2",
-		onLeave: () => {
-			topScrollObserver.enable();
-			animating.flag = false;
-		},
-		onLeaveBack: () => {
-			topScrollObserver.enable();
-			animating.flag = false;
-		},
-	});
-	prologue2St.disable();
 
 	tweenArray.push(prologueInTl, topLeadTl);
 };

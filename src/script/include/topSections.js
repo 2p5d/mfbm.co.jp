@@ -67,7 +67,7 @@ function topSections() {
 	// ScrollTrigger.normalizeScroll(true);
 
 	const epsWrapper = document.querySelector(".ep"),
-		eps = document.querySelectorAll(".ep > section"),
+		eps = document.querySelectorAll("[data-ep]"),
 		epsInit = () => {
 			eps.forEach((ep) => {
 				gsap.set(ep, {
@@ -103,9 +103,9 @@ function topSections() {
 		});
 	};
 
-	// if (!touchDevice) {
-	// 	pcfcLinkInit();
-	// }
+	if (!touchDevice) {
+		pcfcLinkInit();
+	}
 
 	const animationsInit = () => {
 		prologueInit();
@@ -199,7 +199,7 @@ function topSections() {
 		sectionLinkChange(sectionId);
 		navigationChange(sectionId);
 
-		// 	if (sectionId && sectionId != "prologue-2") {
+		// 	if (sectionId && sectionId != "prologue2") {
 		// 		sectionLinkChange(sectionId);
 		// 		navigationChange(sectionId);
 		// 	} else {
@@ -335,13 +335,14 @@ function topSections() {
 						});
 					}, 4000);
 				} else {
+					prologue2St.disable();
 					prologueBackTl.restart();
 					prologueBackTl.eventCallback("onComplete", () => {
 						animating.flag = false;
 					});
 				}
 				break;
-			case "prologue-2":
+			case "prologue2":
 				if (direction == 1) {
 					topLeadTl.restart();
 					topLeadTl.eventCallback("onComplete", () => {
@@ -351,6 +352,7 @@ function topSections() {
 						// animating.flag = false;
 					});
 				} else {
+					toggleNavigation("prologue");
 					hideSectionLink.restart();
 					aboutTl.reverse();
 					// topLeadTl.reverse();
@@ -443,6 +445,16 @@ function topSections() {
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
 						animating.flag = false;
+
+						/*
+							とりあえず対処的だが
+							topleadでfooterが上に来てしますので。
+							ナビゲーションからのジャンプもこのあたりがキモになりそう
+						*/
+
+						gsap.set("#topFooter", {
+							zIndex: "",
+						});
 					});
 				}
 				break;
@@ -456,8 +468,9 @@ function topSections() {
 					});
 				} else {
 					setTimeout(() => {
+						topFooterSt.disable();
 						animating.flag = false;
-					}, 1000);
+					}, 500);
 				}
 				break;
 			case "topFooter":
@@ -525,6 +538,7 @@ function topSections() {
 		// 		0.2
 		// 	);
 	}
+	ScrollTrigger.normalizeScroll(true);
 
 	topScrollObserver = Observer.create({
 		type: "wheel,touch,pointer",

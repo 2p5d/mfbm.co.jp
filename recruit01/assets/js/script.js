@@ -53,6 +53,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "header": function() { return /* binding */ header; },
 /* harmony export */   "noscroll": function() { return /* binding */ noscroll; },
+/* harmony export */   "pcBreakPoint": function() { return /* binding */ pcBreakPoint; },
 /* harmony export */   "remUnit": function() { return /* binding */ remUnit; },
 /* harmony export */   "setScrollBarWidth": function() { return /* binding */ setScrollBarWidth; },
 /* harmony export */   "spBreakPoint": function() { return /* binding */ spBreakPoint; },
@@ -61,6 +62,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /*  global vars
 ================================================= */
+const pcBreakPoint = "768px";
 const spBreakPoint = "767px";
 const spmql = window.matchMedia(`screen and (max-width: ${spBreakPoint})`);
 const pclgmql = window.matchMedia(
@@ -388,7 +390,7 @@ function topSections() {
 	// ScrollTrigger.normalizeScroll(true);
 
 	const epsWrapper = document.querySelector(".ep"),
-		eps = document.querySelectorAll(".ep > section"),
+		eps = document.querySelectorAll("[data-ep]"),
 		epsInit = () => {
 			eps.forEach((ep) => {
 				gsap_all__WEBPACK_IMPORTED_MODULE_10__.gsap.set(ep, {
@@ -424,9 +426,9 @@ function topSections() {
 		});
 	};
 
-	// if (!touchDevice) {
-	// 	pcfcLinkInit();
-	// }
+	if (!_vars__WEBPACK_IMPORTED_MODULE_0__.touchDevice) {
+		pcfcLinkInit();
+	}
 
 	const animationsInit = () => {
 		(0,_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueInit)();
@@ -520,7 +522,7 @@ function topSections() {
 		sectionLinkChange(sectionId);
 		navigationChange(sectionId);
 
-		// 	if (sectionId && sectionId != "prologue-2") {
+		// 	if (sectionId && sectionId != "prologue2") {
 		// 		sectionLinkChange(sectionId);
 		// 		navigationChange(sectionId);
 		// 	} else {
@@ -656,13 +658,14 @@ function topSections() {
 						});
 					}, 4000);
 				} else {
+					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologue2St.disable();
 					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueBackTl.restart();
 					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.prologueBackTl.eventCallback("onComplete", () => {
 						animating.flag = false;
 					});
 				}
 				break;
-			case "prologue-2":
+			case "prologue2":
 				if (direction == 1) {
 					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.topLeadTl.restart();
 					_top_animations_prologueInit__WEBPACK_IMPORTED_MODULE_1__.topLeadTl.eventCallback("onComplete", () => {
@@ -672,6 +675,7 @@ function topSections() {
 						// animating.flag = false;
 					});
 				} else {
+					toggleNavigation("prologue");
 					hideSectionLink.restart();
 					_top_animations_aboutInit__WEBPACK_IMPORTED_MODULE_2__.aboutTl.reverse();
 					// topLeadTl.reverse();
@@ -764,6 +768,16 @@ function topSections() {
 					_top_animations_epilogueInit__WEBPACK_IMPORTED_MODULE_8__.epilogueTl.reverse();
 					_top_animations_epilogueInit__WEBPACK_IMPORTED_MODULE_8__.epilogueTl.eventCallback("onReverseComplete", () => {
 						animating.flag = false;
+
+						/*
+							とりあえず対処的だが
+							topleadでfooterが上に来てしますので。
+							ナビゲーションからのジャンプもこのあたりがキモになりそう
+						*/
+
+						gsap_all__WEBPACK_IMPORTED_MODULE_10__.gsap.set("#topFooter", {
+							zIndex: "",
+						});
 					});
 				}
 				break;
@@ -777,8 +791,9 @@ function topSections() {
 					});
 				} else {
 					setTimeout(() => {
+						_top_animations_topFooterInit__WEBPACK_IMPORTED_MODULE_9__.topFooterSt.disable();
 						animating.flag = false;
-					}, 1000);
+					}, 500);
 				}
 				break;
 			case "topFooter":
@@ -846,6 +861,7 @@ function topSections() {
 		// 		0.2
 		// 	);
 	}
+	gsap_all__WEBPACK_IMPORTED_MODULE_11__.ScrollTrigger.normalizeScroll(true);
 
 	topScrollObserver = gsap_Observer__WEBPACK_IMPORTED_MODULE_12__.Observer.create({
 		type: "wheel,touch,pointer",
@@ -912,6 +928,93 @@ const prologueInit = () => {
 		".ep__navigation",
 		".top-section__5minute",
 	]);
+
+	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.matchMedia();
+
+	mm.add("(min-width: 768px)", () => {
+		prologue2stInitTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				paused: true,
+			})
+			// .set(".top-lead__body", {
+			// 	marginTop: "50vh",
+			// 	marginBottom: "100vh",
+			// })
+			.set("#prologue2", {
+				"--top-scroll-bar": "none",
+				overflowY: "auto",
+			})
+			.set(".top-lead__title", {
+				position: "fixed",
+				pointerEvents: "none",
+			});
+
+		/*
+		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
+		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
+	*/
+		const prologue2stContainerInit = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.set(".top-lead__body", {
+			marginTop: "40vh", // startの値と合わせる
+			marginBottom: "100vh",
+		});
+
+		prologue2St = gsap_all__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger.create({
+			trigger: ".top-lead__body",
+			start: "top 40%",
+			end: "bottom top",
+			// markers: true,
+			scroller: "#prologue2",
+			onLeave: () => {
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.topScrollObserver.enable();
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.animating.flag = false;
+			},
+			onLeaveBack: () => {
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.topScrollObserver.enable();
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.animating.flag = false;
+			},
+		});
+		prologue2St.disable();
+	});
+	mm.add("(max-width: 767px)", () => {
+		/*
+		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
+		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
+	*/
+		const prologue2stContainerInit = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.set(".top-lead", {
+			marginBottom: "50vh",
+		});
+
+		prologue2stInitTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				paused: true,
+			})
+			// .set(".top-lead__body", {
+			// 	marginTop: "50vh",
+			// 	marginBottom: "100vh",
+			// })
+			.set("#prologue2", {
+				"--top-scroll-bar": "none",
+				overflowY: "auto",
+			});
+
+		prologue2St = gsap_all__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger.create({
+			trigger: ".top-lead",
+			start: "top top",
+			end: "bottom bottom",
+			// markers: true,
+			scroller: "#prologue2",
+			onLeave: () => {
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.topScrollObserver.enable();
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.animating.flag = false;
+			},
+			onLeaveBack: () => {
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.topScrollObserver.enable();
+				_topSections__WEBPACK_IMPORTED_MODULE_1__.animating.flag = false;
+			},
+		});
+		prologue2St.disable();
+	});
+
+	// later, if we need to revert all the animations/ScrollTriggers...
+	// mm.revert();
 
 	prologueInTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
@@ -989,7 +1092,7 @@ const prologueInit = () => {
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
 		})
-		.set("#prologue-2", {
+		.set("#prologue2", {
 			autoAlpha: 1,
 		})
 		.to(
@@ -1022,48 +1125,6 @@ const prologueInit = () => {
 			},
 			"<25%"
 		);
-
-	prologue2stInitTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			paused: true,
-		})
-		// .set(".top-lead__body", {
-		// 	marginTop: "50vh",
-		// 	marginBottom: "100vh",
-		// })
-		.set("#prologue-2", {
-			"--top-scroll-bar": "none",
-			overflowY: "auto",
-		})
-		.set(".top-lead__title", {
-			position: "fixed",
-			pointerEvents: "none",
-		});
-
-	/*
-		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
-		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
-	*/
-	const prologue2stContainerInit = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.set(".top-lead__body", {
-		marginTop: "40vh",
-		marginBottom: "100vh",
-	});
-
-	prologue2St = gsap_all__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger.create({
-		trigger: ".top-lead__body",
-		start: "top center",
-		end: "bottom top",
-		// markers: true,
-		scroller: "#prologue-2",
-		onLeave: () => {
-			_topSections__WEBPACK_IMPORTED_MODULE_1__.topScrollObserver.enable();
-			_topSections__WEBPACK_IMPORTED_MODULE_1__.animating.flag = false;
-		},
-		onLeaveBack: () => {
-			_topSections__WEBPACK_IMPORTED_MODULE_1__.topScrollObserver.enable();
-			_topSections__WEBPACK_IMPORTED_MODULE_1__.animating.flag = false;
-		},
-	});
-	prologue2St.disable();
 
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(prologueInTl, topLeadTl);
 };
@@ -27721,203 +27782,376 @@ gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.registerPlugin(gsap_all__WEBPACK_IMPO
 let aboutTl;
 
 const aboutInit = () => {
-	aboutTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				if (_topVideo__WEBPACK_IMPORTED_MODULE_5__.video) {
-					_topVideo__WEBPACK_IMPORTED_MODULE_5__.video.pause();
-				}
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				if (_topVideo__WEBPACK_IMPORTED_MODULE_5__.video) {
-					_topVideo__WEBPACK_IMPORTED_MODULE_5__.video.play();
-				}
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-		})
-		.to("#about", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-about__bg",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 2,
+	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.matchMedia();
+
+	mm.add("(min-width: 768px)", () => {
+		aboutTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+				onComplete: () => {
+					if (_topVideo__WEBPACK_IMPORTED_MODULE_5__.video) {
+						_topVideo__WEBPACK_IMPORTED_MODULE_5__.video.pause();
+					}
+				},
+				onReverseComplete: () => {
+					if (_topVideo__WEBPACK_IMPORTED_MODULE_5__.video) {
+						_topVideo__WEBPACK_IMPORTED_MODULE_5__.video.play();
+					}
+				},
+			})
+			.to("#about", {
 				autoAlpha: 1,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(1) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-20),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
+			})
+			.fromTo(
+				".top-about__bg",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 2,
+					autoAlpha: 1,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(1) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-20),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(2) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(3) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(4) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(5) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(6) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(7) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__bg-fill",
+				{
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(24),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(24),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__bg-fill",
+				{
+					// scale: "1.4",
+					scale: "1",
+				},
+				{
+					duration: 0.75,
+					ease: "none",
+					scale: "3",
+				},
+				"> .25"
+			)
+			.fromTo(
+				".top-about__lead__title",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".top-about__lead__body p",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
+	});
+	mm.add("(max-width: 767px)", () => {
+		aboutTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+				onComplete: () => {
+					if (_topVideo__WEBPACK_IMPORTED_MODULE_5__.video) {
+						_topVideo__WEBPACK_IMPORTED_MODULE_5__.video.pause();
+					}
+				},
+				onReverseComplete: () => {
+					if (_topVideo__WEBPACK_IMPORTED_MODULE_5__.video) {
+						_topVideo__WEBPACK_IMPORTED_MODULE_5__.video.play();
+					}
+				},
+			})
+			.to("#about", {
 				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(2) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(3) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(4) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(5) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(6) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__blocks-item:nth-of-type(7) img",
-			{
-				autoAlpha: 0,
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__bg-fill",
-			{
-				y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(24),
-				x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(24),
-			},
-			{
-				duration: 2,
-				ease: "power4.inOut",
-				y: 0,
-				x: 0,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-about__bg-fill",
-			{
-				// scale: "1.4",
-				scale: "1",
-			},
-			{
-				duration: 0.75,
-				ease: "none",
-				scale: "3",
-			},
-			"> .25"
-		)
-		.fromTo(
-			".top-about__lead__title",
-			{
-				autoAlpha: 0,
-				y: "10vh",
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-about__lead__body p",
-			{
-				autoAlpha: 0,
-				y: "10vh",
-			},
-			{
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<25%"
-		);
+			})
+			.fromTo(
+				".top-about__bg",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 2,
+					autoAlpha: 1,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(1) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-20),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(2) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(3) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(4) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(5) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(6) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__blocks-item:nth-of-type(7) img",
+				{
+					autoAlpha: 0,
+					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					y: 0,
+					x: 0,
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__bg-fill",
+				{
+					clipPath: "inset(0 0 0 100%)",
+				},
+				{
+					duration: 2,
+					ease: "power4.inOut",
+					clipPath: "inset(0 0 0 22%)",
+				},
+				"<"
+			)
+			.fromTo(
+				".top-about__bg-fill",
+				{
+					// scale: "1.4",
+					clipPath: "inset(0 0 0 22%)",
+				},
+				{
+					duration: 0.75,
+					ease: "none",
+					clipPath: "inset(0 0 0 0%)",
+				},
+				"> .25"
+			)
+			.fromTo(
+				".top-about__lead__title",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+				},
+				"<25%"
+			);
+	});
+
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(aboutTl);
 };
 
@@ -27954,148 +28188,261 @@ gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.registerPlugin(gsap_all__WEBPACK_IMPO
 let mfbmFieldTl;
 
 const mfbmFieldInit = () => {
-	mfbmFieldTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-		})
-		.fromTo(
-			"#business",
-			{
-				autoAlpha: 0,
-			},
-			{
-				autoAlpha: 1,
-			}
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-park-building']",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.matchMedia();
+
+	mm.add("(min-width: 768px)", () => {
+		mfbmFieldTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.fromTo(
+				"#business",
+				{
+					autoAlpha: 0,
 				},
-			},
-			{
-				duration: 1,
-				ease: "power2.inOut",
-				autoAlpha: 1,
-				y: 0,
-				force3D: true,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-park-grass']",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 0.65,
-				ease: "power2.out",
-				autoAlpha: 1,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-park-people']",
-			{
-				autoAlpha: 0,
-			},
-			{
-				duration: 0.65,
-				ease: "power2.out",
-				autoAlpha: 1,
-			},
-			"<25%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-building-02']",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+				{
+					autoAlpha: 1,
+				}
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-building']",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+					},
 				},
-			},
-			{
-				duration: 1.5,
-				ease: "power2.inOut",
-				autoAlpha: 1,
-				y: 0,
-				force3D: true,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__map img[src*='top-section-03-building-03']",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+				{
+					duration: 1,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
 				},
-			},
-			{
-				duration: 0.85,
-				ease: "power2.inOut",
-				autoAlpha: 1,
-				y: 0,
-				force3D: true,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__map-inner",
-			{
-				x: 0,
-			},
-			{
-				duration: 1.25,
-				ease: "power2.inOut",
-				x: "40vw",
-				force3D: true,
-			},
-			">"
-		)
-		.fromTo(
-			".mfbm-field__lead-title",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".mfbm-field__lead-body p",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<35%"
-		);
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-grass']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 0.65,
+					ease: "power2.out",
+					autoAlpha: 1,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-people']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 0.65,
+					ease: "power2.out",
+					autoAlpha: 1,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-building-02']",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+					},
+				},
+				{
+					duration: 1.5,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-building-03']",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+					},
+				},
+				{
+					duration: 0.85,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map-inner",
+				{
+					x: 0,
+				},
+				{
+					duration: 1.25,
+					ease: "power2.inOut",
+					x: "40vw",
+					force3D: true,
+				},
+				">"
+			)
+			.fromTo(
+				".mfbm-field__lead-title",
+				{
+					autoAlpha: 0,
+					y: "5rem",
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__lead-body p",
+				{
+					autoAlpha: 0,
+					y: "5rem",
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<35%"
+			);
+	});
+
+	mm.add("(max-width: 767px)", () => {
+		mfbmFieldTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.fromTo(
+				"#business",
+				{
+					autoAlpha: 0,
+				},
+				{
+					autoAlpha: 1,
+				}
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-building']",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+					},
+				},
+				{
+					duration: 1,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-grass']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 0.65,
+					ease: "power2.out",
+					autoAlpha: 1,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-people']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 0.65,
+					ease: "power2.out",
+					autoAlpha: 1,
+				},
+				"<25%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-building-02']",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+					},
+				},
+				{
+					duration: 1.5,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-building-03']",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
+					},
+				},
+				{
+					duration: 0.85,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map-inner",
+				{
+					y: 0,
+				},
+				{
+					duration: 1.25,
+					ease: "power2.inOut",
+					y: () => {
+						return _vars__WEBPACK_IMPORTED_MODULE_0__.header.clientHeight + Number((0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(26));
+					},
+					force3D: true,
+				},
+				">"
+			)
+			.fromTo(
+				".mfbm-field__lead-title",
+				{
+					autoAlpha: 0,
+					y: "5rem",
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+				},
+				"<50%"
+			);
+	});
+
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(mfbmFieldTl);
 };
 
@@ -28128,90 +28475,143 @@ gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.registerPlugin(gsap_all__WEBPACK_IMPO
 let topJobTl;
 
 const topJobInit = () => {
-	topJobTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-		})
-		.to("#job", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-job__peoples-item img",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.matchMedia();
+
+	mm.add("(min-width: 768px)", () => {
+		topJobTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("#job", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				".top-job__peoples-item img",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+					},
 				},
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: {
-					// wrap advanced options in an object
-					each: 0.1,
-					from: "random",
-					// grid: "auto",
-					ease: "power2.in",
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+					stagger: {
+						// wrap advanced options in an object
+						each: 0.1,
+						from: "random",
+						// grid: "auto",
+						ease: "power2.in",
+					},
 				},
-			},
-			"<25%"
-		)
-		.fromTo(
-			".top-job__lead",
-			{
-				autoAlpha: 0,
-				x: "50%",
-			},
-			{
-				duration: 1.125,
-				ease: "power2.out",
+				"<25%"
+			)
+			.fromTo(
+				".top-job__lead",
+				{
+					autoAlpha: 0,
+					x: "50%",
+				},
+				{
+					duration: 1.125,
+					ease: "power2.out",
+					autoAlpha: 1,
+					x: 0,
+				}
+			)
+			.fromTo(
+				".top-job__lead-title",
+				{
+					autoAlpha: 0,
+					y: "5rem",
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".top-job__lead-body p",
+				{
+					autoAlpha: 0,
+					y: "5rem",
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<35%"
+			);
+	});
+
+	mm.add("(max-width: 767px)", () => {
+		topJobTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("#job", {
 				autoAlpha: 1,
-				x: 0,
-			}
-		)
-		.fromTo(
-			".top-job__lead-title",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".top-job__lead-body p",
-			{
-				autoAlpha: 0,
-				y: "5rem",
-			},
-			{
-				duration: 0.75,
-				ease: "power2.out",
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<35%"
-		);
+			})
+			.fromTo(
+				".top-job__peoples-item img",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+					},
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+					stagger: {
+						// wrap advanced options in an object
+						each: 0.1,
+						from: "random",
+						// grid: "auto",
+						ease: "power2.in",
+					},
+				},
+				"<25%"
+			)
+			.fromTo(
+				".top-job__lead",
+				{
+					autoAlpha: 0,
+					y: "100%",
+				},
+				{
+					duration: 1.125,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+				}
+			)
+			.fromTo(
+				".top-job__lead-title",
+				{
+					autoAlpha: 0,
+					y: "5rem",
+				},
+				{
+					duration: 0.75,
+					ease: "power2.out",
+					autoAlpha: 1,
+					y: 0,
+				},
+				"<50%"
+			);
+	});
+
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(topJobTl);
 };
 
@@ -28244,130 +28644,262 @@ gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.registerPlugin(gsap_all__WEBPACK_IMPO
 let topProjectTl;
 
 const topProjectInit = () => {
-	const textP1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#p-1-1", "#p-1-2"]);
-	const textR1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#r-1-1", "#r-1-2", "#r-1-3"]);
-	const textO1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#o-1"]);
-	const textJ = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#j"]);
-	const textE = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#e-1", "#e-2"]);
-	const textC = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#c"]);
-	const textT1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#t-1-1", "#t-1-2"]);
-	const textS = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#s"]);
-	const textT2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#t-2-1", "#t-2-2"]);
-	const textO2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#o-2"]);
-	const textR2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#r-2-1", "#r-2-2", "#r-2-3"]);
-	const textY = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#y-1-1", "#y-1-2", "#y-1-3"]);
+	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.matchMedia();
 
-	const textTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			defaults: { duration: 1.5, ease: "power2.out" },
-			// paused: true,
-		})
-		.from(
-			textP1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textR1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textO1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textJ,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textE,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textC,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textT1,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textS,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textT2,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textO2,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textR2,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		)
-		.from(
-			textY,
-			{
-				drawSVG: 0,
-			},
-			`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
-		);
+	mm.add("(min-width: 768px)", () => {
+		const textP1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#p-1-1", "#p-1-2"]);
+		const textR1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#r-1-1", "#r-1-2", "#r-1-3"]);
+		const textO1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#o-1"]);
+		const textJ = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#j"]);
+		const textE = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#e-1", "#e-2"]);
+		const textC = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#c"]);
+		const textT1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#t-1-1", "#t-1-2"]);
+		const textS = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#s"]);
+		const textT2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#t-2-1", "#t-2-2"]);
+		const textO2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#o-2"]);
+		const textR2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#r-2-1", "#r-2-2", "#r-2-3"]);
+		const textY = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#y-1-1", "#y-1-2", "#y-1-3"]);
 
-	topProjectTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			defaults: { duration: 1.5, ease: "power2.out" },
-			paused: true,
-		})
-		.to("#project", {
-			duration: 1.75,
-			autoAlpha: 1,
-		})
-		// .from(".top-project__bg", {
-		// 	duration: 1,
-		// 	autoAlpha: 0,
-		// 	// ease: "expo.inOut",
-		// })
-		//　line animation
-		.add(textTl, "<50%")
-		.from(
-			".top-project__lead-sub-title",
-			{
-				autoAlpha: 0,
-			},
-			"<60%"
-		);
+		const textTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.5, ease: "power2.out" },
+				// paused: true,
+			})
+			.from(
+				textP1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textR1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textO1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textJ,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textE,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textC,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textT1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textS,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textT2,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textO2,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textR2,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textY,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			);
+
+		topProjectTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.5, ease: "power2.out" },
+				paused: true,
+			})
+			.to("#project", {
+				duration: 1.75,
+				autoAlpha: 1,
+			})
+			// .from(".top-project__bg", {
+			// 	duration: 1,
+			// 	autoAlpha: 0,
+			// 	// ease: "expo.inOut",
+			// })
+			//　line animation
+			.add(textTl, "<50%")
+			.from(
+				".top-project__lead-sub-title",
+				{
+					autoAlpha: 0,
+				},
+				"<60%"
+			);
+	});
+
+	mm.add("(max-width: 767px)", () => {
+		const textP1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#p-1-1-sp", "#p-1-2-sp"]);
+		const textR1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#r-1-1-sp", "#r-1-2-sp", "#r-1-3-sp"]);
+		const textO1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#o-1-sp"]);
+		const textJ = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#j-sp"]);
+		const textE = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#e-1-sp", "#e-2-sp"]);
+		const textC = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#c-sp"]);
+		const textT1 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#t-1-1-sp", "#t-1-2-sp"]);
+		const textS = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#s-sp"]);
+		const textT2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#t-2-1-sp", "#t-2-2-sp"]);
+		const textO2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#o-2-sp"]);
+		const textR2 = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#r-2-1-sp", "#r-2-2-sp", "#r-2-3-sp"]);
+		const textY = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.toArray(["#y-1-1-sp", "#y-1-2-sp", "#y-1-3-sp"]);
+
+		const textTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.5, ease: "power2.out" },
+				// paused: true,
+			})
+			.from(
+				textP1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textR1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textO1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textJ,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textE,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textC,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textT1,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textS,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textT2,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textO2,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textR2,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			)
+			.from(
+				textY,
+				{
+					drawSVG: 0,
+				},
+				`<${gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.utils.random([0, 10])}%`
+			);
+
+		topProjectTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.5, ease: "power2.out" },
+				paused: true,
+			})
+			.to("#project", {
+				duration: 1.75,
+				autoAlpha: 1,
+			})
+			// .from(".top-project__bg", {
+			// 	duration: 1,
+			// 	autoAlpha: 0,
+			// 	// ease: "expo.inOut",
+			// })
+			//　line animation
+			.add(textTl, "<50%")
+			.from(
+				".top-project__lead-sub-title",
+				{
+					autoAlpha: 0,
+				},
+				"<60%"
+			);
+	});
+
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(topProjectTl);
 };
 
@@ -28407,18 +28939,6 @@ const topPersonInit = () => {
 	topPersonTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
 		})
 		.to("#person", {
 			autoAlpha: 1,
@@ -28562,82 +29082,112 @@ gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.registerPlugin(gsap_all__WEBPACK_IMPO
 let topCultureTl;
 
 const topCultureInit = () => {
-	topCultureTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-			defaults: { duration: 1.25, ease: "power2.out" },
-			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-		})
-		.to("#culture", {
-			autoAlpha: 1,
-		})
-		.fromTo(
-			".top-culture__copy-list",
-			{
-				x: "100%",
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.125,
-				x: "0",
+	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.matchMedia();
+
+	mm.add("(min-width: 768px)", () => {
+		topCultureTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("#culture", {
 				autoAlpha: 1,
-			}
-		)
-		.fromTo(
-			".top-culture__lead",
-			{
-				x: "-100%",
-				autoAlpha: 0,
-			},
-			{
-				duration: 1.125,
-				x: "0",
-				autoAlpha: 1,
-			},
-			"<"
-		)
-		.fromTo(
-			".top-culture__lead-body p",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+			})
+			.fromTo(
+				".top-culture__copy-list",
+				{
+					x: "100%",
+					autoAlpha: 0,
 				},
-			},
-			{
-				duration: 1,
-				autoAlpha: 1,
-				y: 0,
-				stagger: 0.2,
-			},
-			"<50%"
-		)
-		.fromTo(
-			".top-culture__copy-list-item",
-			{
-				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+				{
+					duration: 1.125,
+					x: "0",
+					autoAlpha: 1,
+				}
+			)
+			.fromTo(
+				".top-culture__lead",
+				{
+					x: "-100%",
+					autoAlpha: 0,
 				},
-			},
-			{
-				duration: 1,
+				{
+					duration: 1.125,
+					x: "0",
+					autoAlpha: 1,
+				},
+				"<"
+			)
+			.fromTo(
+				".top-culture__lead-body p",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+					},
+				},
+				{
+					duration: 1,
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.2,
+				},
+				"<50%"
+			)
+			.fromTo(
+				".top-culture__copy-list-item",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+					},
+				},
+				{
+					duration: 1,
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<50%"
+			);
+	});
+
+	mm.add("(max-width: 767px)", () => {
+		topCultureTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("#culture", {
 				autoAlpha: 1,
-				y: 0,
-				stagger: 0.1,
-			},
-			"<50%"
-		);
+			})
+			.fromTo(
+				".top-culture__copy-list",
+				{
+					x: "100%",
+					autoAlpha: 0,
+				},
+				{
+					duration: 1.125,
+					x: "0",
+					autoAlpha: 1,
+				}
+			)
+			.fromTo(
+				".top-culture__copy-list-item",
+				{
+					autoAlpha: 0,
+					y: () => {
+						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
+					},
+				},
+				{
+					duration: 1,
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<50%"
+			);
+	});
 
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(topCultureTl);
 };
@@ -28674,18 +29224,6 @@ const epilogueInit = () => {
 	epilogueTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", _vars__WEBPACK_IMPORTED_MODULE_0__.noscroll, { passive: false });
-			},
 		})
 		.to("#epilogue", {
 			duration: 2,
@@ -28725,31 +29263,6 @@ const epilogueInit = () => {
 			"<25%"
 		);
 
-	// const lastTl = gsap
-	// 	.timeline({
-	// 		defaults: { duration: 1.25, ease: "power2.out" },
-	// 		paused: true,
-	// 		onComplete: () => {
-	// 			// window.removeEventListener("touchmove", noscroll, {
-	// 			// 	passive: false,
-	// 			// });
-	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
-	// 		},
-	// 		onReverseComplete: () => {
-	// 			// window.removeEventListener("touchmove", noscroll, {
-	// 			// 	passive: false,
-	// 			// });
-	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
-	// 		},
-	// 	})
-	// 	.to(".ep__section-scroll", {
-	// 		autoAlpha: 0,
-	// 		duration: 1,
-	// 	})
-	// 	.to(".ep__bottom-gradient", {
-	// 		autoAlpha: 0,
-	// 		duration: 1,
-	// 	});
 	_topSections__WEBPACK_IMPORTED_MODULE_1__.tweenArray.push(epilogueTl);
 };
 
@@ -43308,16 +43821,20 @@ function init() {
 
 // top
 function top() {
-	if (!_include_vars__WEBPACK_IMPORTED_MODULE_1__.spmql.matches) {
-		(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
-		(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
-		(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topSections)();
-	} else {
-		(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
-		(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
-		// video.play();
-		// document.querySelector(".top-cover").remove(); // 開発用
-	}
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topCover)();
+	(0,_include_topVideo__WEBPACK_IMPORTED_MODULE_10__.topVideo)();
+	(0,_include_topSections__WEBPACK_IMPORTED_MODULE_9__.topSections)();
+
+	// if (!spmql.matches) {
+	// 	topCover();
+	// 	topVideo();
+	// 	topSections();
+	// } else {
+	// 	topVideo();
+	// 	topCover();
+	// 	// video.play();
+	// 	// document.querySelector(".top-cover").remove(); // 開発用
+	// }
 }
 
 // about01

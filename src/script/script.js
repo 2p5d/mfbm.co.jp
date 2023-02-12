@@ -94,16 +94,20 @@ function init() {
 
 // top
 function top() {
-	if (!spmql.matches) {
-		topCover();
-		topVideo();
-		topSections();
-	} else {
-		topVideo();
-		topCover();
-		// video.play();
-		// document.querySelector(".top-cover").remove(); // 開発用
-	}
+	topCover();
+	topVideo();
+	topSections();
+
+	// if (!spmql.matches) {
+	// 	topCover();
+	// 	topVideo();
+	// 	topSections();
+	// } else {
+	// 	topVideo();
+	// 	topCover();
+	// 	// video.play();
+	// 	// document.querySelector(".top-cover").remove(); // 開発用
+	// }
 }
 
 // about01

@@ -1,5 +1,6 @@
 /*  global vars
 ================================================= */
+const pcBreakPoint = "768px";
 const spBreakPoint = "767px";
 const spmql = window.matchMedia(`screen and (max-width: ${spBreakPoint})`);
 const pclgmql = window.matchMedia(
@@ -38,6 +39,7 @@ const noscroll = (event) => {
 
 export {
 	spBreakPoint,
+	pcBreakPoint,
 	spmql,
 	touchDevice,
 	remUnit,

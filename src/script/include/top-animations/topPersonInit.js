@@ -16,18 +16,6 @@ const topPersonInit = () => {
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
 		})
 		.to("#person", {
 			autoAlpha: 1,

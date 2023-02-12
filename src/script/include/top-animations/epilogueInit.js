@@ -12,18 +12,6 @@ const epilogueInit = () => {
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
-			onComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
-			onReverseComplete: () => {
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
-			},
 		})
 		.to("#epilogue", {
 			duration: 2,
@@ -63,31 +51,6 @@ const epilogueInit = () => {
 			"<25%"
 		);
 
-	// const lastTl = gsap
-	// 	.timeline({
-	// 		defaults: { duration: 1.25, ease: "power2.out" },
-	// 		paused: true,
-	// 		onComplete: () => {
-	// 			// window.removeEventListener("touchmove", noscroll, {
-	// 			// 	passive: false,
-	// 			// });
-	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
-	// 		},
-	// 		onReverseComplete: () => {
-	// 			// window.removeEventListener("touchmove", noscroll, {
-	// 			// 	passive: false,
-	// 			// });
-	// 			// window.removeEventListener("wheel", noscroll, { passive: false });
-	// 		},
-	// 	})
-	// 	.to(".ep__section-scroll", {
-	// 		autoAlpha: 0,
-	// 		duration: 1,
-	// 	})
-	// 	.to(".ep__bottom-gradient", {
-	// 		autoAlpha: 0,
-	// 		duration: 1,
-	// 	});
 	tweenArray.push(epilogueTl);
 };
 
