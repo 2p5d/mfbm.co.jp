@@ -5,7 +5,7 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 import { video } from "../topVideo";
 
-let topJobTl;
+let topJobTl, spJob2Tl, spJobLinkTl;
 
 const topJobInit = () => {
 	let mm = gsap.matchMedia();
@@ -145,9 +145,53 @@ const topJobInit = () => {
 				},
 				"<50%"
 			);
+
+		spJob2Tl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to(".top-job__lead-body", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				".top-job__lead-body p",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
+
+		spJobLinkTl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("[data-ep-sp='jobLink']", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				"[data-ep-sp='jobLink'] .link-section__title, [data-ep-sp='jobLink'] .link-section__arrow",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
 	});
 
 	tweenArray.push(topJobTl);
 };
 
-export { topJobInit, topJobTl };
+export { topJobInit, topJobTl, spJob2Tl, spJobLinkTl };

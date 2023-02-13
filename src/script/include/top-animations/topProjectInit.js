@@ -5,7 +5,7 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 import { video } from "../topVideo";
 
-let topProjectTl;
+let topProjectTl, spProjectLinkTl;
 
 const topProjectInit = () => {
 	let mm = gsap.matchMedia();
@@ -266,9 +266,31 @@ const topProjectInit = () => {
 				},
 				"<60%"
 			);
+
+		spProjectLinkTl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("[data-ep-sp='projectLink']", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				"[data-ep-sp='projectLink'] .link-section__title, [data-ep-sp='projectLink'] .link-section__arrow",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
 	});
 
 	tweenArray.push(topProjectTl);
 };
 
-export { topProjectInit, topProjectTl };
+export { topProjectInit, topProjectTl, spProjectLinkTl };

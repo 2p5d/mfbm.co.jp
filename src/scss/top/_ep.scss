@@ -30,6 +30,14 @@
 }
 
 .ep__section {
+	height: 100vh;
+	height: 100dvh !important;
+	&.ep__section--sp {
+		display: none;
+		@include mq-down() {
+			display: block;
+		}
+	}
 	html:not(.touch-device) &.--linkable {
 		&:hover {
 			cursor: pointer;
@@ -42,6 +50,7 @@
 		&::-webkit-scrollbar {
 			display: var(--top-scroll-bar);
 		}
+		overscroll-behavior-y: none;
 	}
 	&#topFooter {
 		--top-scroll-bar: auto;
@@ -50,6 +59,7 @@
 		&::-webkit-scrollbar {
 			display: var(--top-scroll-bar);
 		}
+		overscroll-behavior-y: none;
 	}
 }
 
@@ -64,6 +74,7 @@
 	height: calc(100vh + (var(--top-slide-01-filter-value) * 2));
 	z-index: -1;
 	will-change: filter;
+	pointer-events: none;
 	// filter: blur(var(--top-slide-01-filter-value)); // 開発用
 	img,
 	video {
@@ -250,6 +261,40 @@
 
 .ep__section-label__click-text {
 	text-align: center;
+}
+
+.ep__section-label__click-icon {
+	position: relative;
+	display: block;
+	height: 1.4rem;
+}
+
+.ep__section-label__click-icon-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.ep__section-label__click-icon-bar {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+}
+
+.ep__section-label__click-icon-arrow {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 1px;
+	height: 100%;
+	background-color: currentColor;
+	transform: rotate(-40deg);
+	transform-origin: bottom right;
 }
 
 .ep__section-scroll {

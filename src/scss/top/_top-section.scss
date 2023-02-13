@@ -4,8 +4,7 @@
 .top-section {
 	position: relative;
 	// width: 100%;
-	height: 100vh; // 100vh調整
-	height: 100svh; // 100vh調整
+	height: 100%; // 100vh調整
 }
 
 .top-section__title {
@@ -20,25 +19,38 @@
 }
 
 .top-section__5minute {
-	width: 18.6rem;
 	position: absolute;
 	right: 5.8rem;
+	width: 18.6rem;
+	height: 18.6rem;
 	bottom: 4.4rem;
-	img {
+	@include mq-down() {
+		width: 21rem;
+		bottom: 12rem;
+	}
+	.top-section__5minute-image {
+		position: relative;
 		transition: opacity 0.25s ease-out;
+		&.top-section__5minute-image--invert {
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			opacity: 0;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
 	}
-	img[src*="top-5-minute-invert"] {
-		position: absolute;
-		width: 100%;
-		top: 0;
-		left: 0;
-		z-index: 1;
+
+	&:hover .top-section__5minute-image {
 		opacity: 0;
 	}
-	&:hover img[src*="top-5-minute"] {
-		opacity: 0;
-	}
-	&:hover img[src*="top-5-minute-invert"] {
+	&:hover .top-section__5minute-image.top-section__5minute-image--invert {
 		opacity: 1;
 	}
 }

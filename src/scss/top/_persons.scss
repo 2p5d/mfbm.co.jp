@@ -3,7 +3,7 @@
 
 .persons {
 	position: relative;
-	height: 100vh; // 100vh調整
+	height: 100%; // 100vh調整
 	background-color: var(--key-color-blue);
 }
 
@@ -141,7 +141,7 @@
 		height: 20vh;
 	}
 	@include mq-down() {
-		--person-all-title-bottom-margin: 79vh;
+		--person-all-title-bottom-margin: 70vh;
 	}
 	// visibility: hidden; // 開発用
 }

@@ -4,7 +4,7 @@
 .top-about {
 	position: relative;
 	z-index: 1;
-	height: 100vh; // 100vh調整
+	height: 100%; // 100vh調整
 	overflow: hidden;
 }
 
@@ -38,10 +38,10 @@
 	margin-top: 7rem;
 	text-align: justify;
 	line-height: calc(36 / 15);
-	font-family: var(--font-serif);
 	font-size: 1.3rem;
 	font-weight: 500;
 	color: white;
+	// letter-spacing: -0.025em;
 	will-change: transform;
 	@include mq-down() {
 		visibility: hidden;
@@ -53,6 +53,7 @@
 		margin-top: 0;
 		padding-right: var(--page-gutter);
 		padding-left: var(--page-gutter);
+		padding-bottom: 10rem;
 		position: absolute;
 		inset: 0;
 		z-index: 99;

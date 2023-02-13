@@ -126,6 +126,9 @@
 		grid-template-columns: 1fr 1fr;
 		margin-top: 8.6rem;
 		gap: 0;
+		.footer.footer--top & {
+			margin-top: 7.2rem;
+		}
 	}
 }
 

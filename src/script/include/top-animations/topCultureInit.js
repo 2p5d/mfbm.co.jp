@@ -5,7 +5,7 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 import { video } from "../topVideo";
 
-let topCultureTl;
+let topCultureTl, spCulture2Tl, spCultureLinkTl;
 
 const topCultureInit = () => {
 	let mm = gsap.matchMedia();
@@ -115,9 +115,53 @@ const topCultureInit = () => {
 				},
 				"<50%"
 			);
+
+		spCulture2Tl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to(".top-culture__lead", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				".top-culture__lead p",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
+
+		spCultureLinkTl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("[data-ep-sp='cultureLink']", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				"[data-ep-sp='cultureLink'] .link-section__title, [data-ep-sp='cultureLink'] .link-section__arrow",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
 	});
 
 	tweenArray.push(topCultureTl);
 };
 
-export { topCultureInit, topCultureTl };
+export { topCultureInit, topCultureTl, spCulture2Tl, spCultureLinkTl };

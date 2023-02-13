@@ -9,7 +9,7 @@ import { video } from "../topVideo";
 		---------- prologue ----------
 	*/
 
-let mfbmFieldTl;
+let mfbmFieldTl, spBusiness2Tl, spBusinessLinkTl;
 
 const mfbmFieldInit = () => {
 	let mm = gsap.matchMedia();
@@ -247,7 +247,7 @@ const mfbmFieldInit = () => {
 					duration: 1.25,
 					ease: "power2.inOut",
 					y: () => {
-						return header.clientHeight + Number(remUnit(26));
+						return header.clientHeight + Number(remUnit(21));
 					},
 					force3D: true,
 				},
@@ -267,9 +267,53 @@ const mfbmFieldInit = () => {
 				},
 				"<50%"
 			);
+
+		spBusiness2Tl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to(".mfbm-field__lead-body", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				".mfbm-field__lead-body p",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
+
+		spBusinessLinkTl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("[data-ep-sp='businessLink']", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				"[data-ep-sp='businessLink'] .link-section__title, [data-ep-sp='businessLink'] .link-section__arrow",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
 	});
 
 	tweenArray.push(mfbmFieldTl);
 };
 
-export { mfbmFieldInit, mfbmFieldTl };
+export { mfbmFieldInit, mfbmFieldTl, spBusiness2Tl, spBusinessLinkTl };

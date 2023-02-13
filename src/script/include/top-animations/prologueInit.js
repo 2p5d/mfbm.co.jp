@@ -9,7 +9,12 @@ import { video } from "../topVideo";
 		---------- prologue ----------
 	*/
 
-let prologueInTl, prologueBackTl, topLeadTl, prologue2St, prologue2stInitTl;
+let prologueInTl,
+	prologueBackTl,
+	topLeadTl,
+	prologue2St,
+	prologue2stInitTl,
+	prologueRepeatTween;
 
 const prologueInit = () => {
 	const section01Title = document.querySelector(".top-section__title");
@@ -20,6 +25,19 @@ const prologueInit = () => {
 		".ep__navigation",
 		".top-section__5minute",
 	]);
+
+	prologueRepeatTween = gsap.to(
+		"img[src*='top-5-minute-lines'],img[src*='top-5-minute-invert-lines']",
+		{
+			duration: 16,
+			paused: true,
+			transformOrigin: "center",
+			rotate: 360,
+			repeat: -1,
+			ease: "none",
+		}
+	);
+	prologueRepeatTween.play();
 
 	let mm = gsap.matchMedia();
 
@@ -223,7 +241,7 @@ const prologueInit = () => {
 			"<25%"
 		);
 
-	tweenArray.push(prologueInTl, topLeadTl);
+	tweenArray.push(prologueInTl, topLeadTl, prologueRepeatTween);
 };
 
 export {
@@ -233,4 +251,5 @@ export {
 	topLeadTl,
 	prologue2stInitTl,
 	prologue2St,
+	prologueRepeatTween,
 };

@@ -3,7 +3,7 @@
 
 .mfbm-field {
 	position: relative;
-	height: 100vh; // 100vh調整
+	height: 100%; // 100vh調整
 	background-color: #ebebeb;
 	overflow: hidden;
 }
@@ -144,6 +144,7 @@
 		margin-top: 0;
 		padding-right: var(--page-gutter);
 		padding-left: var(--page-gutter);
+		padding-bottom: 10rem;
 		position: absolute;
 		inset: 0;
 		z-index: 9999;

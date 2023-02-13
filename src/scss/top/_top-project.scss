@@ -3,7 +3,7 @@
 
 .top-project {
 	position: relative;
-	height: 100vh; // 100vh調整
+	height: 100%; // 100vh調整
 	background-color: black;
 }
 
@@ -26,18 +26,19 @@
 	will-change: transform;
 	line-height: 0;
 	@include mq-down() {
-		width: 51.3rem;
+		// width: 51.3rem;
 		margin-right: auto;
 		margin-left: auto;
 	}
 	svg {
+		display: block;
 		height: auto;
 	}
 }
 
 .top-project__lead-sub-title {
 	width: 53.3rem;
-	margin-top: -2rem;
+	margin-top: -11rem;
 	margin-right: auto;
 	margin-left: auto;
 	@include mq-down() {

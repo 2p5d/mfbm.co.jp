@@ -95,6 +95,7 @@ function modal() {
 			width: "100%",
 			height: "100%",
 			overflowY: "auto",
+			overscrollBehaviorY: "none",
 			paddingRight: `${
 				window.innerWidth - document.documentElement.clientWidth
 			}px`, // 親のガタツキ防止の100vwでスクロールバーを超えるので、その分余白設定

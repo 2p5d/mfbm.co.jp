@@ -4,16 +4,45 @@ import {
 	prologueInit,
 	prologueInTl,
 	prologueBackTl,
+	prologueRepeatTween,
 	topLeadTl,
 	prologue2stInitTl,
 	prologue2St,
 } from "./top-animations/prologueInit";
-import { aboutInit, aboutTl } from "./top-animations/aboutInit";
-import { mfbmFieldInit, mfbmFieldTl } from "./top-animations/mfbmFieldInit";
-import { topJobInit, topJobTl } from "./top-animations/topJobInit";
-import { topProjectInit, topProjectTl } from "./top-animations/topProjectInit";
-import { topPersonInit, topPersonTl } from "./top-animations/topPersonInit";
-import { topCultureInit, topCultureTl } from "./top-animations/topCultureInit";
+import {
+	aboutInit,
+	aboutTl,
+	spAbout2Tl,
+	spAboutLinkTl,
+} from "./top-animations/aboutInit";
+import {
+	mfbmFieldInit,
+	mfbmFieldTl,
+	spBusiness2Tl,
+	spBusinessLinkTl,
+} from "./top-animations/mfbmFieldInit";
+import {
+	topJobInit,
+	topJobTl,
+	spJob2Tl,
+	spJobLinkTl,
+} from "./top-animations/topJobInit";
+import {
+	topProjectInit,
+	topProjectTl,
+	spProjectLinkTl,
+} from "./top-animations/topProjectInit";
+import {
+	topPersonInit,
+	topPersonTl,
+	spPersonLinkTl,
+} from "./top-animations/topPersonInit";
+import {
+	topCultureInit,
+	topCultureTl,
+	spCulture2Tl,
+	spCultureLinkTl,
+} from "./top-animations/topCultureInit";
 import { epilogueInit, epilogueTl } from "./top-animations/epilogueInit";
 import {
 	topFooterInit,
@@ -64,25 +93,32 @@ const animating = {
 function topSections() {
 	window.onbeforeunload = () => window.scrollTo(0, 0);
 
-	// ScrollTrigger.normalizeScroll(true);
-
-	const epsWrapper = document.querySelector(".ep"),
-		eps = document.querySelectorAll("[data-ep]"),
-		epsInit = () => {
-			eps.forEach((ep) => {
-				gsap.set(ep, {
-					position: "fixed",
-					inset: "0",
-					width: "100%",
-					height: "100vh",
-					autoAlpha: 0,
-				});
-			});
-		},
-		wrap = gsap.utils.wrap(0, eps.length - 1);
-
-	let currentIndex = -1,
+	let mm = gsap.matchMedia(),
+		eps,
+		currentIndex = -1,
 		sectionId;
+
+	mm.add("(min-width: 768px)", () => {
+		eps = document.querySelectorAll("[data-ep]");
+	});
+	mm.add("(max-width: 767px)", () => {
+		eps = document.querySelectorAll("[data-ep],[data-ep-sp]");
+	});
+
+	console.log(eps);
+
+	const epsInit = () => {
+		eps.forEach((ep) => {
+			gsap.set(ep, {
+				position: "fixed",
+				inset: "0",
+				width: "100%",
+				height: "100vh",
+				autoAlpha: 0,
+			});
+		});
+	};
+
 	epsInit();
 
 	const pcfcLinkObservers = [];
@@ -134,18 +170,69 @@ function topSections() {
 	};
 	sectionLinksInit();
 
+	const sectionLinkArrowTl = gsap
+		.timeline({
+			paused: true,
+		})
+		.set(".ep__section-label__click-icon", {
+			overflow: "hidden",
+		})
+		.to(".ep__section-label__click-icon-bar", {
+			keyframes: {
+				0: {
+					scaleX: 1,
+				},
+				"50%": {
+					scaleX: 0,
+				},
+				"100%": {
+					scaleX: 1,
+				},
+				easeEach: "none", // ease between keyframes
+				// ease: "power1.inOut",
+			},
+			transformOrigin: "right",
+			duration: 2,
+			repeat: -1,
+			// repeatDelay: 0.25,
+			// yoyo: true,
+			ease: "power2.out",
+		});
+
 	const showSectionLink = gsap.to(sectionLinksWRapper, {
-		delay: 1,
+		delay: 0.5,
 		paused: true,
 		duration: 1,
 		autoAlpha: 1,
 	});
 
 	const hideSectionLink = gsap.to(sectionLinksWRapper, {
-		delay: 1,
+		delay: 0.5,
 		paused: true,
 		duration: 1,
 		autoAlpha: 0,
+	});
+
+	gsap.set(".ep__section-label__click", {
+		autoAlpha: 0,
+	});
+
+	const showSectionLinkIcon = gsap.to(".ep__section-label__click", {
+		paused: true,
+		duration: 1,
+		autoAlpha: 1,
+		onStart: () => {
+			sectionLinkArrowTl.play();
+		},
+	});
+
+	const hideSectionLinkIcon = gsap.to(".ep__section-label__click", {
+		paused: true,
+		duration: 1,
+		autoAlpha: 0,
+		onStart: () => {
+			sectionLinkArrowTl.pause();
+		},
 	});
 
 	const sectionsLinks = document.querySelectorAll(
@@ -209,7 +296,8 @@ function topSections() {
 
 	const getSectionIndex = (sectionId) => {
 		for (let i = 0; i < eps.length; i++) {
-			if (eps[i].id === sectionId) {
+			const targetId = eps[i].dataset.ep || eps[i].dataset.epSp;
+			if (targetId === sectionId) {
 				return i;
 			}
 		}
@@ -217,7 +305,8 @@ function topSections() {
 
 	const getSection = (sectionId) => {
 		for (let i = 0; i < eps.length; i++) {
-			if (eps[i].id === sectionId) {
+			const targetId = eps[i].dataset.ep || eps[i].dataset.epSp;
+			if (targetId === sectionId) {
 				return eps[i];
 			}
 		}
@@ -352,98 +441,142 @@ function topSections() {
 						// animating.flag = false;
 					});
 				} else {
-					toggleNavigation("prologue");
-					hideSectionLink.restart();
 					aboutTl.reverse();
 					// topLeadTl.reverse();
 					aboutTl.eventCallback("onReverseComplete", () => {
+						hideSectionLink.restart();
+						toggleNavigation("prologue");
 						topScrollObserver.disable();
 						// animating.flag = false;
 					});
 				}
 				break;
 			case "about":
-				toggleNavigation(sectionId);
 				if (direction == 1) {
-					showSectionLink.restart();
 					aboutTl.restart();
 					aboutTl.eventCallback("onComplete", () => {
+						showSectionLink.restart();
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
 						animating.flag = false;
 					});
 				} else {
+					hideSectionLinkIcon.restart();
 					mfbmFieldTl.reverse();
 					mfbmFieldTl.eventCallback("onReverseComplete", () => {
+						showSectionLinkIcon.restart();
+						toggleNavigation(sectionId);
 						animating.flag = false;
 					});
 				}
 				break;
 			case "business":
-				toggleNavigation(sectionId);
 				if (direction == 1) {
+					hideSectionLinkIcon.restart();
 					mfbmFieldTl.restart();
 					mfbmFieldTl.eventCallback("onComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
 						animating.flag = false;
 					});
 				} else {
+					hideSectionLinkIcon.restart();
+
 					topJobTl.reverse();
 					topJobTl.eventCallback("onReverseComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
 						animating.flag = false;
 					});
 				}
 				break;
 			case "job":
-				toggleNavigation(sectionId);
 				if (direction == 1) {
+					hideSectionLinkIcon.restart();
 					topJobTl.restart();
 					topJobTl.eventCallback("onComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
 						animating.flag = false;
 					});
 				} else {
+					hideSectionLinkIcon.restart();
+
 					topProjectTl.reverse();
 					topProjectTl.eventCallback("onReverseComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 					});
 				}
 				break;
 			case "project":
-				toggleNavigation(sectionId);
 				if (direction == 1) {
+					hideSectionLinkIcon.restart();
+
 					topProjectTl.restart();
 					topProjectTl.eventCallback("onComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 					});
 				} else {
+					hideSectionLinkIcon.restart();
+
 					topPersonTl.reverse();
 					topPersonTl.eventCallback("onReverseComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 					});
 				}
 				break;
 			case "person":
-				toggleNavigation(sectionId);
 				if (direction == 1) {
+					hideSectionLinkIcon.restart();
+
 					topPersonTl.restart();
 					topPersonTl.eventCallback("onComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 					});
 				} else {
+					hideSectionLinkIcon.restart();
+
 					topCultureTl.reverse();
 					topCultureTl.eventCallback("onReverseComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 					});
 				}
 				break;
 			case "culture":
-				toggleNavigation(sectionId);
 				if (direction == 1) {
+					hideSectionLinkIcon.restart();
+
 					topCultureTl.restart();
 					topCultureTl.eventCallback("onComplete", () => {
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 					});
 				} else {
-					showSectionLink.restart();
+					hideSectionLinkIcon.restart();
+
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
+						showSectionLink.restart();
+						toggleNavigation(sectionId);
+						showSectionLinkIcon.restart();
+
 						animating.flag = false;
 
 						/*
@@ -455,6 +588,288 @@ function topSections() {
 						gsap.set("#topFooter", {
 							zIndex: "",
 						});
+					});
+				}
+				break;
+			case "epilogue":
+				if (direction == 1) {
+					epilogueTl.restart();
+					hideSectionLink.restart();
+					epilogueTl.eventCallback("onComplete", () => {
+						toggleNavigation(sectionId);
+						animating.flag = false;
+					});
+				} else {
+					setTimeout(() => {
+						topFooterSt.disable();
+						animating.flag = false;
+					}, 500);
+				}
+				break;
+			case "topFooter":
+				topScrollObserver.disable();
+				topFooterInitTl.play();
+				topFooterSt.enable();
+				break;
+			default:
+				break;
+		}
+
+		currentIndex = index;
+
+		currentSectionId = sectionId;
+		// console.log(currentSectionId);
+	};
+
+	const spSectionTransition = (sectionId, direction, index) => {
+		switch (sectionId) {
+			case "prologue":
+				if (direction == 1) {
+					setTimeout(() => {
+						prologueInTl.play();
+						prologueInTl.eventCallback("onComplete", () => {
+							animating.flag = false;
+						});
+					}, 4000);
+				} else {
+					prologue2St.disable();
+					prologueBackTl.restart();
+					prologueBackTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "prologue2":
+				if (direction == 1) {
+					/*
+					スクロールの問題、アニメーションとの関係でトラブルになりそうなので、
+					一旦スマホ版だけ反映
+					*/
+
+					topLeadTl.restart();
+					topScrollObserver.disable();
+					prologue2stInitTl.play();
+					prologue2St.enable();
+
+					topLeadTl.eventCallback("onComplete", () => {
+						// animating.flag = false;
+					});
+				} else {
+					hideSectionLink.restart();
+					aboutTl.reverse();
+					// topLeadTl.reverse();
+					topScrollObserver.disable();
+					aboutTl.eventCallback("onReverseComplete", () => {
+						// animating.flag = false;
+					});
+				}
+				break;
+			case "about":
+				if (direction == 1) {
+					aboutTl.restart();
+					aboutTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spAbout2Tl.reverse();
+					spAbout2Tl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "about2":
+				if (direction == 1) {
+					spAbout2Tl.restart();
+					spAbout2Tl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spAboutLinkTl.reverse();
+					spAboutLinkTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "aboutLink":
+				if (direction == 1) {
+					spAboutLinkTl.restart();
+					spAboutLinkTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					mfbmFieldTl.reverse();
+					mfbmFieldTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "business":
+				if (direction == 1) {
+					mfbmFieldTl.restart();
+					mfbmFieldTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spAbout2Tl.reverse();
+					spAbout2Tl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "business2":
+				if (direction == 1) {
+					spBusiness2Tl.restart();
+					spBusiness2Tl.eventCallback("onComplete", () => {
+						console.log("onComplete");
+						animating.flag = false;
+					});
+				} else {
+					spBusinessLinkTl.reverse();
+					spBusinessLinkTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "businessLink":
+				if (direction == 1) {
+					spBusinessLinkTl.restart();
+					spBusinessLinkTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					topJobTl.reverse();
+					topJobTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "job":
+				if (direction == 1) {
+					topJobTl.restart();
+					topJobTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spJob2Tl.reverse();
+					spJob2Tl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "job2":
+				if (direction == 1) {
+					spJob2Tl.restart();
+					spJob2Tl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spJobLinkTl.reverse();
+					spJobLinkTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "jobLink":
+				if (direction == 1) {
+					spJobLinkTl.restart();
+					spJobLinkTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					topProjectTl.reverse();
+					topProjectTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "project":
+				if (direction == 1) {
+					topProjectTl.restart();
+					topProjectTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spProjectLinkTl.reverse();
+					spProjectLinkTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "projectLink":
+				if (direction == 1) {
+					spProjectLinkTl.restart();
+					spProjectLinkTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					topPersonTl.reverse();
+					topPersonTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "person":
+				if (direction == 1) {
+					topPersonTl.restart();
+					topPersonTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spPersonLinkTl.reverse();
+					spPersonLinkTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "personLink":
+				if (direction == 1) {
+					spPersonLinkTl.restart();
+					spPersonLinkTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					topCultureTl.reverse();
+					topCultureTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "culture":
+				if (direction == 1) {
+					topCultureTl.restart();
+					topCultureTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spCulture2Tl.reverse();
+					spCulture2Tl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "culture2":
+				if (direction == 1) {
+					spCulture2Tl.restart();
+					spCulture2Tl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					spCultureLinkTl.reverse();
+					spCultureLinkTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
+					});
+				}
+				break;
+			case "cultureLink":
+				if (direction == 1) {
+					spCultureLinkTl.restart();
+					spCultureLinkTl.eventCallback("onComplete", () => {
+						animating.flag = false;
+					});
+				} else {
+					epilogueTl.reverse();
+					epilogueTl.eventCallback("onReverseComplete", () => {
+						animating.flag = false;
 					});
 				}
 				break;
@@ -494,11 +909,15 @@ function topSections() {
 			dFactor = fromTop ? -1 : 1;
 
 		animating.flag = true;
-		sectionId = eps[index].id;
+		sectionId = eps[index].dataset.ep || eps[index].dataset.epSp;
 
 		console.log(sectionId);
 
-		sectionTransition(sectionId, direction, index);
+		if (spmql.matches) {
+			spSectionTransition(sectionId, direction, index);
+		} else {
+			sectionTransition(sectionId, direction, index);
+		}
 
 		// if (currentIndex >= 0) {
 		// 	// The first time this function runs, current is -1
@@ -538,9 +957,16 @@ function topSections() {
 		// 		0.2
 		// 	);
 	}
-	ScrollTrigger.normalizeScroll(true);
+	// ScrollTrigger.normalizeScroll(true);
 
-	topScrollObserver = Observer.create({
+	/*
+		windowイベントにしかアタッチできないらしい。
+		スクロールのエリアを変える可能性も
+	*/
+
+	// ScrollTrigger.normalizeScroll(true);
+
+	topScrollObserver = ScrollTrigger.observe({
 		type: "wheel,touch,pointer",
 		wheelSpeed: -1,
 		onDown: () => {

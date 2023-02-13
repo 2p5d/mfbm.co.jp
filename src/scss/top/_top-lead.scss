@@ -7,21 +7,21 @@
 	padding-bottom: 6.8rem;
 	@include mq-down() {
 		padding-top: 18.6rem;
-		padding-left: var(--page-gutter);
+		padding-left: calc(var(--page-gutter) - 0.5em);
 		padding-bottom: 18.6rem;
-		padding-right: var(--page-gutter);
+		padding-right: calc(var(--page-gutter) - 0.5em);
 	}
 }
 
 .top-lead__body {
 	margin-left: calc(50% + 7.8rem);
 	line-height: calc(36 / 15);
-	font-family: var(--font-serif);
 	color: white;
 	@include mq-down() {
 		margin-top: 9.6rem;
 		margin-left: 0;
-		text-align: justify;
+		// text-align: justify;
+		letter-spacing: -0.01em;
 	}
 	p {
 		width: 43.6rem;

@@ -5,7 +5,7 @@ import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 import { video } from "../topVideo";
 
-let aboutTl;
+let aboutTl, spAbout2Tl, spAboutLinkTl;
 
 const aboutInit = () => {
 	let mm = gsap.matchMedia();
@@ -174,7 +174,7 @@ const aboutInit = () => {
 					ease: "none",
 					scale: "3",
 				},
-				"> .25"
+				"<"
 			)
 			.fromTo(
 				".top-about__lead__title",
@@ -378,9 +378,53 @@ const aboutInit = () => {
 				},
 				"<25%"
 			);
+
+		spAbout2Tl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to(".top-about__lead__body", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				".top-about__lead__body p",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
+
+		spAboutLinkTl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.to("[data-ep-sp='aboutLink']", {
+				autoAlpha: 1,
+			})
+			.fromTo(
+				"[data-ep-sp='aboutLink'] .link-section__title, [data-ep-sp='aboutLink'] .link-section__arrow",
+				{
+					autoAlpha: 0,
+					y: "10vh",
+				},
+				{
+					autoAlpha: 1,
+					y: 0,
+					stagger: 0.1,
+				},
+				"<25%"
+			);
 	});
 
 	tweenArray.push(aboutTl);
 };
 
-export { aboutInit, aboutTl };
+export { aboutInit, aboutTl, spAbout2Tl, spAboutLinkTl };
