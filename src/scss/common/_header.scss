@@ -119,6 +119,10 @@
 	height: 5rem;
 	justify-content: center;
 	text-align: center;
+	transition: opacity 0.25s ease-out;
+	&:hover {
+		opacity: 0.85;
+	}
 	@include mq-down() {
 		width: 17rem;
 		height: 7.6rem;

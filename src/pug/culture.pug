@@ -13,13 +13,97 @@ block contents
 	main.main
 
 		.culture-hero
-			//- h2.culture-hero__title
-			//- 	span.culture-hero__title-en
-			//- 		+picture({filename:'culture-hero-title'},{type:'svg',fallbackType:''},{alt:'culture STORY'},{classes:['']},{width:'901'},{height:'108'},{breakpoint:true},{lazyload:false},{retina:false})
-			//- 	span.culture-hero__title-jp
-			//- 		+picture({filename:'culture-hero-sub-title'},{type:'svg',fallbackType:''},{alt:'東京ミッドタウン'},{classes:['']},{width:'533'},{height:'103'},{breakpoint:true},{lazyload:false},{retina:false})
-			.culture-hero__bg
-				+picture({filename:'culture-hero-bg'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:false},{retina:false})
+			.culture-hero__bg-items
+				//- .culture-hero__bg-item.culture-hero__bg-item--sample
+				//- 	include include/svg/culture-data-sample.svg
+						
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-purple-01
+					include include/svg/culture-fukidashi-purple.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item.culture-hero__bg-item--circle-graph-01
+					include include/svg/culture-donuts-chart.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--making2-01
+					include include/svg/culture-making2.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-sky-blue-01
+					include include/svg/culture-fukidashi-sky-blue.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-green-01
+					include include/svg/culture-fukidashi-green.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--vertical-bar-graph-01
+					.culture-hero__bg-vertical-bar-graph
+						.culture-hero__bg-vertical-bar-graph-item
+						.culture-hero__bg-vertical-bar-graph-item
+						.culture-hero__bg-vertical-bar-graph-item
+
+				.culture-hero__bg-item.culture-hero__bg-item--bar-graph-01
+					include include/svg/culture-bar-graph.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-deep-green-01
+					include include/svg/culture-fukidashi-deep-green.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-purple-02
+					include include/svg/culture-fukidashi-purple.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item.culture-hero__bg-item--circle-graph-02
+					include include/svg/culture-donuts-chart.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--annai-01
+					include include/svg/culture-annai.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item.culture-hero__bg-item--circle-graph-03
+					include include/svg/culture-donuts-chart.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item.culture-hero__bg-item--title
+					+picture({filename:'culture-hero-title'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'595.7019'},{height:'144.4666'},{breakpoint:true},{lazyload:false},{retina:false})
+
+				.culture-hero__bg-item.culture-hero__bg-item--drawing-01
+					include include/svg/culture-drawing.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-pale-blue-01
+					include include/svg/culture-fukidashi-pale-blue.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-sky-blue-02
+					include include/svg/culture-fukidashi-sky-blue.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--vertical-bar-graph-02
+					.culture-hero__bg-vertical-bar-graph
+						.culture-hero__bg-vertical-bar-graph-item
+						.culture-hero__bg-vertical-bar-graph-item
+						.culture-hero__bg-vertical-bar-graph-item
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-blue-01
+					include include/svg/culture-fukidashi-blue.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item.culture-hero__bg-item--otedama
+					include include/svg/culture-otedama.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--making-01
+					include include/svg/culture-making.svg
+					
+				.culture-hero__bg-item.culture-hero__bg-item--bar-graph-02
+					include include/svg/culture-bar-graph.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--fukidashi-pale-green-01
+					include include/svg/culture-fukidashi-pale-green.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--making2-01
+					include include/svg/culture-making2.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--vertical-bar-graph-03
+					.culture-hero__bg-vertical-bar-graph
+						.culture-hero__bg-vertical-bar-graph-item
+						.culture-hero__bg-vertical-bar-graph-item
+						.culture-hero__bg-vertical-bar-graph-item
+
+				.culture-hero__bg-item.culture-hero__bg-item--bar-graph-03
+					include include/svg/culture-bar-graph.svg
+
+				.culture-hero__bg-item.culture-hero__bg-item--walking-01
+					include include/svg/culture-walking.svg
+
 
 		section.culture-lead
 
@@ -41,14 +125,14 @@ block contents
 								+picture({filename:'loupe-red-brown'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'49'},{height:'44'},{breakpoint:false},{lazyload:true},{retina:false})
 							span.culture-sections__item-header-label-text
 								| 会社の雰囲気について
-						.culture-sections__item-text-header-image(data-scroll-reveal-group-item)
-							+picture({filename:'culture-illust-01'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'150'},{height:'105'},{breakpoint:false},{lazyload:true},{retina:false})
+						.culture-sections__item-text-header-image.culture-sections__item-text-header-image--illust01(data-scroll-reveal-group-item)
+							include include/svg/culture-contents/table-man.svg
 					h2.culture-sections__item-title(data-scroll-reveal-group-item)
 						| 人間関係がフラットで、
 						br
 						| 自分の意見を率直に言いやすい職場。
 					p.culture-sections__item-body(data-scroll-reveal-group-item)
-						| MFBMは、人間関係がフラットで自分の意見を率直に言いやすい職場です。社内のコミュニケーションが活発になので、社員同士の交流が深まり、意見交換や情報共有がスムーズになる。こうした組織風土が新たなビジネスのアイデアを生み出します。
+						| MFBMは、人間関係がフラットで自分の意見を率直に言いやすい職場です。社内のコミュニケーションが活発なので、社員同士の交流が深まり、意見交換や情報共有がスムーズになる。こうした組織風土が新たなビジネスのアイデアを生み出します。
 				.culture-sections__item-images
 					.culture-sections__item-image-01(data-scroll-reveal)
 						+picture({filename:'culture-section01-image-01'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'274'},{height:'208'},{breakpoint:true},{lazyload:true},{retina:true})
@@ -61,7 +145,8 @@ block contents
 					.culture-sections__item-voices-items
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-02'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'66'},{height:'119'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-02
+								include include/svg/culture-contents/hart-man.svg
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message(data-scroll-reveal)
 							| みんなフレンドリー
@@ -96,7 +181,8 @@ block contents
 							| 考え方が柔軟で変化に強い
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-03'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'80'},{height:'129'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-03
+								include include/svg/culture-contents/building-man.svg
 	
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message(data-scroll-reveal)
 							| 変わることを恐れない
@@ -110,7 +196,8 @@ block contents
 									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-04'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'149'},{height:'130'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-04
+								include include/svg/culture-contents/hello-man.svg
 
 			section.culture-sections__item(data-scroll-reveal-group)
 				.culture-sections__item-text-wrapper(data-scroll-reveal-group-item)
@@ -121,7 +208,7 @@ block contents
 							span.culture-sections__item-header-label-text
 								| 働く環境について
 						.culture-sections__item-text-header-image(data-scroll-reveal-group-item)
-							+picture({filename:'culture-illust-05'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'124'},{height:'179'},{breakpoint:false},{lazyload:true},{retina:false})
+							include include/svg/culture-contents/pc-man.svg
 					h2.culture-sections__item-title(data-scroll-reveal-group-item)
 						| 働き方改革を提案する、
 						br
@@ -149,7 +236,8 @@ block contents
 					.culture-sections__item-voices-items
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-06'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'95'},{height:'145'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-06
+								include include/svg/culture-contents/music-man.svg
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-large(data-scroll-reveal)
 							| コミュニケーションを活性化する
@@ -188,7 +276,8 @@ block contents
 							| 本社8階の「Cafe8」
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-07'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'95'},{height:'93'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-07
+								include include/svg/culture-contents/two-cups.svg
 	
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-right(data-scroll-reveal)
 							| 考え抜かれた導線設計
@@ -202,7 +291,8 @@ block contents
 									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-08'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'187'},{height:'117'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-08
+								include include/svg/culture-contents/sitting-man.svg
 
 							
 
@@ -215,7 +305,7 @@ block contents
 							span.culture-sections__item-header-label-text
 								| 福利厚生について
 						.culture-sections__item-text-header-image(data-scroll-reveal-group-item)
-							+picture({filename:'culture-illust-09'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'104'},{height:'128'},{breakpoint:false},{lazyload:true},{retina:false})
+							include include/svg/culture-contents/family.svg
 					h2.culture-sections__item-title(data-scroll-reveal-group-item)
 						| 充実の福利厚生で
 						br
@@ -234,7 +324,8 @@ block contents
 					.culture-sections__item-voices-items
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-10'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'75'},{height:'113'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-10
+								include include/svg/culture-contents/clock-man.svg
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message(data-scroll-reveal)
 							| 社員同士をつなぐサークル活動
@@ -247,10 +338,8 @@ block contents
 								svg(aria-label="" viewBox="0 0 47 32")
 									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
 
-						.culture-sections__item-voices-item.culture-sections__item-voices-item--message.culture-sections__item-voices-item--message-small(data-scroll-reveal)
-							| 育児のバックアップが豊富で
-							br
-							| 働きやすい
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message(data-scroll-reveal)
+							| 時間や休暇に融通が効く
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message.culture-sections__item-voices-item--balloon-message-right.culture-sections__item-voices-item--balloon-message-large(data-scroll-reveal)
 							| 働き方をデザインできる
@@ -265,11 +354,12 @@ block contents
 								svg(aria-label="" viewBox="0 0 47 32")
 									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
 
-						.culture-sections__item-voices-item.culture-sections__item-voices-item--message(data-scroll-reveal)
-							| 時間や休暇に融通が効く
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message.culture-sections__item-voices-item--message-small(data-scroll-reveal)
+							| 育児のバックアップが豊富で働きやすい
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-11'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'104'},{height:'111'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-11
+								include include/svg/culture-contents/ball-game.svg
 	
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--balloon-message(data-scroll-reveal)
 							| ワークスタイリングが利用できる
@@ -283,4 +373,10 @@ block contents
 									use(xlink:href=assets_path + image_dir + 'sprite.svg#balloon-leg')
 
 						.culture-sections__item-voices-item.culture-sections__item-voices-item--illust(data-scroll-reveal)
-							+picture({filename:'culture-illust-12'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'94'},{height:'115'},{breakpoint:false},{lazyload:true},{retina:false})
+							.culture-illust-12
+								include include/svg/culture-contents/hat-man.svg
+
+						.culture-sections__item-voices-item.culture-sections__item-voices-item--message(data-scroll-reveal)
+							| リモートワークと
+							br
+							| オフィスワークの併用

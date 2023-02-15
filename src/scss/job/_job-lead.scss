@@ -33,6 +33,11 @@
 	margin-left: auto;
 	line-height: calc(34 / 16);
 	font-family: var(--font-sans);
+	text-align: center;
+	@include mq-down() {
+		text-align: justify;
+		line-height: calc(52 / 26);
+	}
 }
 
 .job-lead__anchor-links {

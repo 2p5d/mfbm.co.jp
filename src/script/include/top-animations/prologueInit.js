@@ -10,6 +10,7 @@ import { video } from "../topVideo";
 	*/
 
 let prologueInTl,
+	prologueBackFromPrologue2Tl,
 	prologueBackTl,
 	topLeadTl,
 	prologue2St,
@@ -37,7 +38,6 @@ const prologueInit = () => {
 			ease: "none",
 		}
 	);
-	prologueRepeatTween.play();
 
 	let mm = gsap.matchMedia();
 
@@ -84,7 +84,38 @@ const prologueInit = () => {
 			},
 		});
 		prologue2St.disable();
+
+		prologueBackTl = gsap
+			.timeline({
+				defaults: { duration: 1.25, ease: "power2.out" },
+				paused: true,
+			})
+			.add(() => {
+				if (video && video.paused) {
+					video.play();
+				}
+			})
+			.to(
+				".ep__01-02-bg",
+				{
+					filter: "blur(0px)",
+				},
+				"<"
+			)
+			.to(
+				[
+					section01Title,
+					".header__link",
+					".top-section__5minute",
+					section01Scroll,
+				],
+				{
+					autoAlpha: 1,
+				},
+				"<25%"
+			);
 	});
+
 	mm.add("(max-width: 767px)", () => {
 		/*
 		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
@@ -98,10 +129,6 @@ const prologueInit = () => {
 			.timeline({
 				paused: true,
 			})
-			// .set(".top-lead__body", {
-			// 	marginTop: "50vh",
-			// 	marginBottom: "100vh",
-			// })
 			.set("#prologue2", {
 				"--top-scroll-bar": "none",
 				overflowY: "auto",
@@ -173,10 +200,15 @@ const prologueInit = () => {
 	// 	// },
 	// });
 
-	prologueBackTl = gsap
+	prologueBackFromPrologue2Tl = gsap
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
+		})
+		.add(() => {
+			if (video && video.paused) {
+				video.play();
+			}
 		})
 		.to([".top-lead__title img", ".top-lead__body"], {
 			y: "10vh",
@@ -241,13 +273,20 @@ const prologueInit = () => {
 			"<25%"
 		);
 
-	tweenArray.push(prologueInTl, topLeadTl, prologueRepeatTween);
+	tweenArray.push(
+		prologueInTl,
+		topLeadTl,
+		prologueBackTl,
+		prologueBackFromPrologue2Tl,
+		prologueRepeatTween
+	);
 };
 
 export {
 	prologueInit,
 	prologueInTl,
 	prologueBackTl,
+	prologueBackFromPrologue2Tl,
 	topLeadTl,
 	prologue2stInitTl,
 	prologue2St,

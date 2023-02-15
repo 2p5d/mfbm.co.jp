@@ -1,7 +1,7 @@
 
 footer.footer#footer(class=key === "top" ? "footer--top" : "")
 
-	a.footer__page-top(href="#to-top")
+	a.footer__page-top(href=key === "top" ? `${root_path}` : "#to-top")
 		.footer__page-top-arrow
 			svg(aria-label="→" viewBox="0 0 34 32").footer__page-top-arrow-icon-pc
 				use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')

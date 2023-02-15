@@ -17,8 +17,8 @@ import {
 	scrollRevealGroup,
 	scrollRevealGroups,
 } from "./include/scrollReveal";
-import { topCover, topSections } from "./include/topSections";
-import { topVideo, video } from "./include/topVideo";
+import { topSections, topCover } from "./include/topSections";
+import { topVideo } from "./include/topVideo";
 
 /* person import */
 import { personIndex } from "./include/personIndex";
@@ -32,6 +32,10 @@ import { about01Slider } from "./include/about01Slider";
 
 /* business import */
 import { businessHover } from "./include/businessHover";
+
+/* culture import */
+import { cultureHero } from "./include/cultureHero";
+import { cultureContents } from "./include/cultureContents";
 
 window.addEventListener("DOMContentLoaded", resolve);
 
@@ -85,6 +89,10 @@ function init() {
 		case document.body.classList.value.includes("page-person0"): // elm.classList.valueで文字列取得してincludes()で部分一致
 			personSingle();
 			break;
+		case document.body.classList.value.includes("page-culture"): // elm.classList.valueで文字列取得してincludes()で部分一致
+			cultureHero();
+			cultureContents();
+			break;
 		default:
 			break;
 	}
@@ -99,8 +107,8 @@ gsap.registerPlugin(DrawSVGPlugin);
 // top
 function top() {
 	// document.querySelector(".top-cover").remove(); // 開発用
-	topCover();
 	topVideo();
+	topCover();
 	topSections();
 
 	// if (!spmql.matches) {
@@ -197,8 +205,8 @@ function top() {
 
 		gsap
 			.timeline({
-				defaults: { duration: 1, ease: "sine.inOut" },
-				delay: "random([.25, .5, .75])",
+				defaults: { duration: "random([.85, 1, 1.25])", ease: "sine.inOut" },
+				delay: "random([0, 1, 1.5])",
 				repeat: -1,
 				yoyo: true,
 				repeatDelay: 0.25,
@@ -209,7 +217,7 @@ function top() {
 				transformOrigin: "center center",
 			})
 
-			.to(circle, { drawSVG: "0% 85%" });
+			.to(circle, { drawSVG: `0% 85%` });
 	});
 
 	const horizontalBarGraf = gsap
@@ -261,6 +269,7 @@ function top() {
 		const pen = elm.querySelector(".culture-drawing-pencil");
 		const rightHand = elm.querySelector(".culture-drawing-right-hand");
 		const leftHand = elm.querySelector(".culture-drawing-left-hand");
+		const drawLines = elm.querySelector(".culture-drawing-line");
 		const drawingTl = gsap
 			.timeline({
 				delay: "random([.25, .5, .75])",
@@ -278,6 +287,16 @@ function top() {
 					transformOrigin: "center",
 					rotate: -5,
 				}
+			)
+			.fromTo(
+				drawLines,
+				{
+					y: 6,
+				},
+				{
+					y: -4,
+				},
+				0
 			)
 			.fromTo(
 				rightHand,
@@ -393,7 +412,6 @@ function top() {
 
 	cultureMaking.forEach((elm, index) => {
 		const leftHand = elm.querySelector(".culture-making-left-hand");
-		console;
 		const rightHand = elm.querySelector(".culture-making-right-hand");
 		const hagurumaLarge = elm.querySelector(".culture-making-haguruma-large");
 		const hagurumaSmall = elm.querySelector(".culture-making-haguruma-small");
@@ -468,8 +486,6 @@ function top() {
 	});
 
 	const cultureMaking2 = document.querySelectorAll(".culture-making2");
-
-	console.log(cultureMaking2);
 
 	cultureMaking2.forEach((elm, index) => {
 		const leftHand = elm.querySelector(".culture-making2-left-hand");

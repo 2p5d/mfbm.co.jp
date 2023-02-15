@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.29 113.05">
+  <g>
+    <g>
+      <g>
+        <circle cx="42.59" cy="32.7" r="30.81" fill="#fff" stroke="#003383" stroke-miterlimit="10" stroke-width="3.78"/>
+        <line id="clock-man-minute" x1="42.59" y1="13.4" x2="42.59" y2="32.7" fill="#fff" stroke="#003383" stroke-miterlimit="10" stroke-width="3.78"/>
+        <circle cx="19.68" cy="32.7" r="1.41" fill="#003383"/>
+        <circle cx="66.52" cy="32.7" r="1.41" fill="#003383"/>
+        <circle cx="42.45" cy="57.23" r="1.41" fill="#003383"/>
+        <circle cx="42.45" cy="8.62" r="1.41" fill="#003383"/>
+        <circle cx="26.69" cy="16.21" r="1.41" fill="#003383"/>
+        <circle cx="59.82" cy="49.33" r="1.41" fill="#003383"/>
+        <circle cx="25.46" cy="49.65" r="1.41" fill="#003383"/>
+        <circle cx="59.83" cy="15.29" r="1.41" fill="#003383"/>
+        <line id="clock-man-second" x1="42.59" y1="32.7" x2="61.89" y2="32.7" fill="#fff" stroke="#003383" stroke-miterlimit="10" stroke-width="3.78"/>
+        <g id="clock-man-leg">
+          <g id="Group_2492" data-name="Group 2492">
+            <path id="Path_2538" data-name="Path 2538" d="m59.13,101.62l-6.04-5.6,7.2-7.76c2.25,1.75,5.27-.6,6.89-1.38,1.63-.78,4.44,1.26,4.44,1.26l-12.5,13.48Z" fill="#000f3c"/>
+          </g>
+          <polygon points="49.03 76.04 61.18 87.43 51.89 100.28 40.8 90.73 49.03 76.04" fill="#000f3c"/>
+        </g>
+      </g>
+      <g id="Group_2492-2" data-name="Group 2492">
+        <path id="Path_2538-2" data-name="Path 2538" d="m35.54,113.05v-8.23s10.58,0,10.58,0c.25,2.84,4.02,3.45,5.7,4.12,1.68.66,2.1,4.12,2.1,4.12h-18.38Z" fill="#000f3c"/>
+      </g>
+      <path id="Path_2544" data-name="Path 2544" d="m9.13,71.18l16.18-33.51,13.03,5.77,5.1,29.5-34.31-1.77Z" fill="#aeaeae"/>
+      <path id="Path_2547" data-name="Path 2547" d="m10.37,75.55s-2.47,1.68-1.62-16.77c.85-18.44,14.33-23.16,18.94-23.16,4.61,0,8.22,2.94,9.98,4.93s3.8,32.54,3.8,32.54l-31.1,2.46Z" fill="#00559a"/>
+      <g id="Group_2504" data-name="Group 2504">
+        <path id="Ellipse_180" data-name="Ellipse 180" d="m24.61,26.87c0,2.69,2.18,7.02,4.87,7.02,2.69,0,4.87-4.33,4.87-7.02s-2.18-4.87-4.87-4.87-4.87,2.18-4.87,4.87Z" fill="#00559a"/>
+      </g>
+      <rect id="Rectangle_369" data-name="Rectangle 369" x="23.34" y="61.69" width="18.14" height="11.41" fill="#bfcce0"/>
+      <path id="Path_2550" data-name="Path 2550" d="m42.99,73.83l.28-2.11s2.65-20.69-5.6-31.15c-.82-.92-1.74-1.75-2.75-2.46-5.82,10.06-2.4,27.37,8.06,35.73Z" fill="#3a9bbf"/>
+      <path id="Path_2551" data-name="Path 2551" d="m34.43,71.18c9.9,0,15.48.97,18.04,4.16,2.67,3.31,1.37,11.85,1.37,11.85l-5.28,17.64h-14.26v-13.54c-23.15,6.17-25.55-20.11-25.55-20.11h25.68Z" fill="#000f3c"/>
+      <path id="Path_2552" data-name="Path 2552" d="m21.21,80.73c16.64-9.06,13.6-34.48,2.06-44.22-5.83,1.96-14.91,7.87-15.54,22.26-.42,9.48,1.05,14.85,1.15,15.25.83,3.35,2.16,6.55,3.96,9.5,3.21-.53,5.99-1.49,8.37-2.79" fill="#3a9bbf"/>
+      <rect x="7.03" y="91.25" width="25.37" height="6.34" transform="translate(39.44 188.84) rotate(-180)" fill="#000f3c"/>
+      <polygon points="0 77.9 6.82 77.9 13.73 97.59 6.91 97.59 0 77.9" fill="#000f3c"/>
+      <rect x="24.23" y="96.39" width="5.82" height="16.67" transform="translate(54.28 209.44) rotate(-180)" fill="#000f3c"/>
+      <rect x="7.03" y="96.39" width="5.82" height="16.67" transform="translate(19.89 209.44) rotate(-180)" fill="#000f3c"/>
+      <polygon points="22.3 73.09 49.17 73.09 54.16 54.55 27.28 54.55 22.3 73.09" fill="#ff8000"/>
+      <rect x="14.98" y="70.49" width="10.6" height="2.6" transform="translate(40.55 143.59) rotate(-180)" fill="#ff8000"/>
+      <path id="Path_2553" data-name="Path 2553" d="m17.35,66.29c1.52-.63,9.94-2,9.6-.09-.06.33-.09.63.76.84s3.75,2.01,3.36,3.45c-.67,2.49-4.51,2.39-6.65,1.02-2.14-1.38-5.5,0-5.5,0l-1.57-5.2Z" fill="#00559a"/>
+      <path id="Path_2554" data-name="Path 2554" d="m11.32,59.28c-2.59,2.35-3.53,6.55-1.36,9.28,2.17,2.73,11.18,3.48,11.18,3.48l2.19-10.24s-9.42-4.87-12.02-2.52Z" fill="#3a9bbf"/>
+      <rect x="40.7" y="30.81" width="3.78" height="3.78" fill="#003383"/>
+    </g>
+  </g>
+</svg>

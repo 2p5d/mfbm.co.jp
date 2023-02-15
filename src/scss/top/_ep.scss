@@ -44,7 +44,6 @@
 		}
 	}
 	&#prologue2 {
-		--top-scroll-bar: auto;
 		-ms-overflow-style: var(--top-scroll-bar);
 		scrollbar-width: var(--top-scroll-bar);
 		&::-webkit-scrollbar {
@@ -53,7 +52,6 @@
 		overscroll-behavior-y: none;
 	}
 	&#topFooter {
-		--top-scroll-bar: auto;
 		-ms-overflow-style: var(--top-scroll-bar);
 		scrollbar-width: var(--top-scroll-bar);
 		&::-webkit-scrollbar {
@@ -150,6 +148,9 @@
 	transition: background-color 0.125s ease-out, transform 0.125s ease-out;
 	vertical-align: 0.075em;
 	pointer-events: auto;
+	body.--pointer-events-none & {
+		pointer-events: none;
+	}
 	&::before {
 		content: "";
 		position: absolute;

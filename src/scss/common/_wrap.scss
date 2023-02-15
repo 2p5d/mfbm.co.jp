@@ -66,6 +66,8 @@
 	--business-color-blue: #0091c2;
 	--business-color-red: #e26e7a;
 	--business-color-green: #50a76a;
+
+	--top-scroll-bar: auto;
 }
 
 body {
@@ -76,7 +78,18 @@ body {
 	verscroll-behavior-y: none;
 	// font-weight: 500;
 	// color: var(--key-color-black);
-
+	&.--pointer-events-none {
+		pointer-events: none;
+	}
+	&.page-top {
+		--top-scroll-bar: auto;
+		-ms-overflow-style: var(--top-scroll-bar);
+		scrollbar-width: var(--top-scroll-bar);
+		&::-webkit-scrollbar {
+			display: var(--top-scroll-bar);
+		}
+		overscroll-behavior-y: none;
+	}
 	@include mq-down() {
 		font-size: 2.6em;
 	}

@@ -290,14 +290,32 @@
 }
 
 .business-modal__sp-close-button {
-	display: none;
+	width: 100%;
+	margin-top: 5.6rem;
+	line-height: 5.7rem;
+	border: 0.15rem solid currentColor;
+	font-size: 2.1rem;
+	border-radius: 0.4rem;
+	font-weight: 500;
+	[data-modal-content="building"] & {
+		border-color: #99d3e7;
+		color: #b8e0ee;
+	}
+	[data-modal-content="solution"] & {
+		border-color: #f3c5ca;
+		color: #f7d6da;
+	}
+	[data-modal-content="management"] & {
+		border-color: #b9dcc3;
+		color: #cee6d5;
+	}
+	// font-weight: 600;
 	@include mq-down() {
-		display: block;
-		width: 100%;
 		margin-top: 9.3rem;
+		border: 0.25rem solid currentColor;
 		line-height: 10rem;
-		border: 1px solid currentColor;
 		font-size: 3.2rem;
+		border-radius: 0.6rem;
 		// font-weight: 600;
 	}
 }

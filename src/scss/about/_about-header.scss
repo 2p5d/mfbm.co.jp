@@ -41,5 +41,9 @@
 	}
 	&.about-header__body--fit-content {
 		width: fit-content;
+		text-align: center;
+		@include mq-down() {
+			text-align: justify;
+		}
 	}
 }

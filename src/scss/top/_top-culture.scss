@@ -136,12 +136,23 @@
 		left: containerRatio(873.8835, var(--containerWidth));
 		top: containerRatio(823.2694, var(--containerHeight));
 		width: containerRatio(174.6538, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(855.8835, var(--containerWidth));
+			top: containerRatio(750.2694, var(--containerHeight));
+			width: containerRatio(174.6538, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--vertical-bar-graph-01 {
 		left: containerRatio(45.488, var(--containerWidth));
 		top: containerRatio(576.4635, var(--containerHeight));
 		width: containerRatio(68.939, var(--containerWidth));
 		height: containerRatio(69.0205, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(500.488, var(--containerWidth));
+			top: containerRatio(390, var(--containerHeight));
+			width: containerRatio(68.939, var(--containerWidth));
+			height: containerRatio(90, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--bar-graph-01 {
 		left: containerRatio(171.1993, var(--containerWidth));
@@ -162,11 +173,20 @@
 		left: containerRatio(833.4913, var(--containerWidth));
 		top: containerRatio(1103.0929, var(--containerHeight));
 		width: containerRatio(187.3475, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(1175.0687, var(--containerHeight));
+			left: containerRatio(806.4913, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--drawing-01 {
 		left: containerRatio(916.6089, var(--containerWidth));
 		top: containerRatio(649.6681, var(--containerHeight));
 		width: containerRatio(150, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(856.6089, var(--containerWidth));
+			top: containerRatio(505.6681, var(--containerHeight));
+			width: containerRatio(160, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--fukidashi-deep-blue-01 {
 		left: containerRatio(1081.4409, var(--containerWidth));
@@ -182,6 +202,11 @@
 		left: containerRatio(429.0973, var(--containerWidth));
 		top: containerRatio(948.349, var(--containerHeight));
 		width: containerRatio(174.6538, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(399.0973, var(--containerWidth));
+			top: containerRatio(898.349, var(--containerHeight));
+			width: containerRatio(174.6538, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--fukidashi-deep-green-01 {
 		left: containerRatio(392.0366, var(--containerWidth));
@@ -192,6 +217,11 @@
 		left: containerRatio(937.7639, var(--containerWidth));
 		top: containerRatio(947.952, var(--containerHeight));
 		width: containerRatio(255.2817, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(825.7639, var(--containerWidth));
+			top: containerRatio(975.952, var(--containerHeight));
+			width: containerRatio(185.2817, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--fukidashi-pale-green2-01 {
 		left: containerRatio(-19.6787, var(--containerWidth));
@@ -212,11 +242,11 @@
 		left: containerRatio(1163.9648, var(--containerWidth));
 		top: containerRatio(772.1123, var(--containerHeight));
 		width: containerRatio(185.3776, var(--containerWidth));
-	}
-	&.top-culture__bg-item--fukidashi-pale-blue-01 {
-		left: containerRatio(1163.9648, var(--containerWidth));
-		top: containerRatio(772.1123, var(--containerHeight));
-		width: containerRatio(185.3776, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(705.9648, var(--containerWidth));
+			top: containerRatio(1295, var(--containerHeight));
+			width: containerRatio(200.3776, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--making-01 {
 		left: containerRatio(1207.6701, var(--containerWidth));
@@ -233,6 +263,11 @@
 		left: containerRatio(347.6966, var(--containerWidth));
 		top: containerRatio(1042.9345, var(--containerHeight));
 		width: containerRatio(110.0387, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(395.6966, var(--containerWidth));
+			top: containerRatio(1010.9345, var(--containerHeight));
+			width: containerRatio(110.0387, var(--containerWidth));
+		}
 	}
 	&.top-culture__bg-item--walking-02 {
 		transform: scaleX(-1);
@@ -257,11 +292,38 @@
 		width: containerRatio(68.7041, var(--containerWidth));
 		height: containerRatio(72.8546, var(--containerWidth));
 	}
-	&.top-culture__bg-item--circle-graph {
+	&.top-culture__bg-item--circle-graph-01 {
 		left: containerRatio(15, var(--containerWidth));
 		top: containerRatio(780, var(--containerHeight));
 		width: containerRatio(280, var(--containerWidth));
+		stroke: #c81212;
 		z-index: -1;
+		@include mq-down() {
+			left: containerRatio(410, var(--containerWidth));
+			top: containerRatio(1200, var(--containerHeight));
+			width: containerRatio(240, var(--containerWidth));
+		}
+	}
+	&.top-culture__bg-item--circle-graph-02 {
+		left: containerRatio(800.1068, var(--containerWidth));
+		top: containerRatio(420.5209, var(--containerHeight));
+		width: containerRatio(260, var(--containerWidth));
+		z-index: -1;
+		stroke: #ff848b;
+		@include mq-down() {
+			left: containerRatio(700.1068, var(--containerWidth));
+			top: containerRatio(300.5209, var(--containerHeight));
+			width: containerRatio(220, var(--containerWidth));
+		}
+	}
+	&.top-culture__bg-item--fukidashi-sky-blue-01 {
+		left: containerRatio(264.4559, var(--containerWidth));
+		top: containerRatio(771.5148, var(--containerHeight));
+		width: containerRatio(268.7175, var(--containerWidth));
+		z-index: -1;
+		@include mq-down() {
+			display: none;
+		}
 	}
 }
 
