@@ -3,8 +3,6 @@ import { tweenArray, animating, topScrollObserver } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
-import { video } from "../topVideo";
-
 /* 
 		---------- prologue ----------
 	*/
@@ -53,6 +51,7 @@ const prologueInit = () => {
 			.set("#prologue2", {
 				"--top-scroll-bar": "none",
 				overflowY: "auto",
+				overscrollBehavior: "none",
 			})
 			.set(".top-lead__title", {
 				position: "fixed",
@@ -90,11 +89,13 @@ const prologueInit = () => {
 				defaults: { duration: 1.25, ease: "power2.out" },
 				paused: true,
 			})
-			.add(() => {
-				if (video && video.paused) {
-					video.play();
-				}
-			})
+			.to(
+				"#prologue",
+				{
+					autoAlpha: 1,
+				},
+				"<"
+			)
 			.to(
 				".ep__01-02-bg",
 				{
@@ -122,7 +123,7 @@ const prologueInit = () => {
 		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
 	*/
 		const prologue2stContainerInit = gsap.set(".top-lead", {
-			marginBottom: "50vh",
+			marginBottom: "70rem",
 		});
 
 		prologue2stInitTl = gsap
@@ -132,6 +133,7 @@ const prologueInit = () => {
 			.set("#prologue2", {
 				"--top-scroll-bar": "none",
 				overflowY: "auto",
+				overscrollBehavior: "none",
 			});
 
 		prologue2St = ScrollTrigger.create({
@@ -205,10 +207,8 @@ const prologueInit = () => {
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
 		})
-		.add(() => {
-			if (video && video.paused) {
-				video.play();
-			}
+		.set("#prologue", {
+			autoAlpha: 1,
 		})
 		.to([".top-lead__title img", ".top-lead__body"], {
 			y: "10vh",
@@ -238,6 +238,9 @@ const prologueInit = () => {
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
+			onComplete: () => {
+				"topLeadTl";
+			},
 		})
 		.set("#prologue2", {
 			autoAlpha: 1,

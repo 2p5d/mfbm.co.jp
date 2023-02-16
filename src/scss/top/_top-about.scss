@@ -181,46 +181,31 @@
 
 .top-about__bg {
 	position: absolute;
-	inset: 0;
+	width: 100%;
+	height: 100%;
 	z-index: -1;
 }
 
 .top-about__bg-fill {
 	position: absolute;
-	// inset: 0;
-	width: 100%;
-
-	z-index: 3;
-	background-color: #003383;
-	mix-blend-mode: multiply;
 
 	/*
-		斜めの角度を画像と同じく45度にしたいので、正方形をポリゴンでクリップパスすることで、2等辺3角形になるようにした。scaleは位置調整。ウィンドウの縦横比でscaleなど要再調整
-		scaleで再調整しなくとも計算でできそうな感じだがとりあえず
+		斜めの角度を画像と同じく45度にしたいので、
+		ひし形のセンターを右隅に合わせ、高さを覆うようにvmax値にし、
+		clip-pathを50%を初期値として、アニメーションさせる。
 	*/
-	aspect-ratio: 1;
-	clip-path: polygon(100% 0, 100% 0%, 100% 100%, 0% 100%);
-	transform-origin: right;
-	transform: scale(1.4);
-	will-change: transform;
-	@include mq-down() {
-		top: 50%;
-		aspect-ratio: inherit;
-		transform: scale(calc(4512 / 750)) translate(50vw, calc(24%)) rotate(45deg);
-		width: 119.4rem;
-		height: 238rem;
-		bottom: -106rem;
-		left: 50%;
-		clip-path: inset(0 0 0 21%);
-		// clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
-		// transform: scale(1) translateX(8.2rem) rotate(45deg);
-		// width: 119.4rem;
-		// height: 238rem;
-		// bottom: -106rem;
-		// left: 0;
-		// clip-path: inset(0 0 0 0);
-	}
+	transform-origin: right center;
+	transform: rotate(45deg) translate(100%, 50%);
+	z-index: 3;
+	right: 0;
+	bottom: 0;
+	width: 400vmax; // 長い方の辺（値は目視で得た。なぜこうなるのか分からないが、正方形の画角を埋めるときが最大値になるっぽい。）
+	height: 400vmax;
+	// clip-path: inset(0 0 0 50%); //初期状態（js側でセット）
+	background-color: #003383;
+	mix-blend-mode: multiply;
+	will-change: clip-path;
 }
 
 .top-about__bg-image {

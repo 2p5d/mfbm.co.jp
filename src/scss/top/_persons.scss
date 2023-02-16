@@ -141,7 +141,8 @@
 		height: 20vh;
 	}
 	@include mq-down() {
-		--person-all-title-bottom-margin: 70vh;
+		--person-all-title-bottom-margin: 78vh;
+		--person-all-title-bottom-margin: 78dvh;
 	}
 	// visibility: hidden; // 開発用
 }

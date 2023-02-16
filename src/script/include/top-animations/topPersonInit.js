@@ -3,7 +3,6 @@ import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
-import { video } from "../topVideo";
 
 let topPersonTl, spPersonLinkTl;
 
@@ -20,9 +19,15 @@ const topPersonInit = () => {
 				defaults: { duration: 1.25, ease: "power2.out" },
 				paused: true,
 			})
-			.to("#person", {
-				autoAlpha: 1,
-			})
+			.fromTo(
+				"#person",
+				{
+					autoAlpha: 0,
+				},
+				{
+					autoAlpha: 1,
+				}
+			)
 			.fromTo(
 				".persons__solo-item",
 				{
@@ -192,9 +197,9 @@ const topPersonInit = () => {
 			.to(
 				".persons__bg-images-wrap",
 				{
-					scale: 0.8424,
+					scale: 0.9,
 					transformOrigin: "bottom",
-					yPercent: 15,
+					yPercent: 10,
 				},
 				"<"
 			)

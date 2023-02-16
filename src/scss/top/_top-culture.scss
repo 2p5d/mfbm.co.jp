@@ -80,11 +80,9 @@
 .top-culture__lead-body {
 	margin-top: auto;
 	text-align: justify;
-	font-family: var(--font-serif);
 	font-size: 1.3rem;
 	font-weight: 500;
 	line-height: calc(32 / 14);
-	letter-spacing: 0.2em;
 	color: var(--key-color-black);
 	@include mq-down() {
 		margin-top: 0;

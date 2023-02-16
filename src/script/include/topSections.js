@@ -42,6 +42,7 @@ import {
 import {
 	topCultureInit,
 	topCultureTl,
+	cultureTweenArray,
 	spCulture2Tl,
 	spCultureLinkTl,
 } from "./top-animations/topCultureInit";
@@ -71,7 +72,9 @@ function topCover() {
 	const content = document.querySelector(".top-cover"),
 		removeCover = () => {
 			content.classList.add("--disable");
-
+			if (video) {
+				video.play();
+			}
 			content.addEventListener("animationend", (event) => {
 				prologueInTl.play();
 				prologueRepeatTween.play();
@@ -81,10 +84,12 @@ function topCover() {
 					document.body.classList.remove("--pointer-events-none");
 				});
 
-				window.removeEventListener("touchmove", noscroll, {
-					passive: false,
-				});
-				window.removeEventListener("wheel", noscroll, { passive: false });
+				if (!spmql.matches) {
+					window.removeEventListener("touchmove", noscroll, {
+						passive: false,
+					});
+					window.removeEventListener("wheel", noscroll, { passive: false });
+				}
 
 				content.remove();
 			});
@@ -98,9 +103,6 @@ function topCover() {
 
 	prologueInit();
 
-	if (video) {
-		video.play();
-	}
 	setTimeout(removeCover, 3000);
 
 	/*
@@ -366,13 +368,44 @@ function topSections() {
 			}
 		}
 
+		topScrollObserver.enable();
+
+		/*
+
+		対象以外のすべてのセクションをリセットする
+
+		*/
+
 		for (let i = 0; i < eps.length; i++) {
 			const id = eps[i].dataset.ep || eps[i].dataset.epSp;
 			if (id != currentSectionId && id != sectionId) {
-				gsap.set(eps[i], {
-					autoAlpha: 0,
-				});
+				eps[i].style.visibility = "hidden";
+				/*
+
+					gsapで"hidden"するとセクションのアニメーションをキャンセルされるので
+					styleメソッドで非表示した。（overwrite設定を試したが、始めっから動かなかったりしてうまく行かなかった…）
+				*/
+				// gsap.set(eps[i], {
+				// 	autoAlpha: 0,
+				// });
 			}
+		}
+
+		if (sectionId === "prologue" || sectionId === "prologue2") {
+			if (video && video.paused) {
+				video.play();
+			}
+		} else {
+			video.pause();
+		}
+		if (sectionId === "culture") {
+			cultureTweenArray.forEach((tween) => {
+				tween.play();
+			});
+		} else {
+			cultureTweenArray.forEach((tween) => {
+				tween.pause();
+			});
 		}
 
 		switch (sectionId) {
@@ -382,13 +415,15 @@ function topSections() {
 				} else {
 					if (direction == 1) {
 						toggleNavigation(sectionId);
-						topLeadTl.progress(0).pause();
-						ScrollTrigger.refresh();
+
+						// ScrollTrigger.refresh();
 						prologue2St.disable();
 						prologueBackTl.restart();
 						prologueBackTl.eventCallback("onComplete", () => {
+							console.log("test");
 							animating.flag = false;
 							document.body.classList.remove("--pointer-events-none");
+							topLeadTl.progress(0).pause();
 						});
 					} else {
 						prologue2St.disable();
@@ -413,11 +448,11 @@ function topSections() {
 						// animating.flag = false;
 					});
 				} else {
-					console.log("test");
 					toggleNavigation("prologue"); // ナビゲーションとIDが結びつかないので、文字列を渡す
 					prologueBackTl.progress(0).pause();
 
-					topLeadTl.progress(1).pause();
+					topLeadTl.progress(1);
+
 					document.querySelector(
 						"#prologue2"
 					).scrollTop = document.querySelector("#prologue2").clientHeight; // スクロール位置を進めておく
@@ -447,7 +482,7 @@ function topSections() {
 				} else {
 					hideSectionLink.restart();
 					toggleNavigation(sectionId);
-					aboutTl.progress(1).pause(); // ナビゲーションジャンプに備えて、前のアニメーションを完了しておく
+					aboutTl.progress(1); // ナビゲーションジャンプに備えて、前のアニメーションを完了しておく
 					mfbmFieldTl.reverse();
 					mfbmFieldTl.eventCallback("onReverseComplete", () => {
 						showSectionLink.restart();
@@ -470,7 +505,7 @@ function topSections() {
 				} else {
 					hideSectionLink.restart();
 					toggleNavigation(sectionId);
-					mfbmFieldTl.progress(1).pause();
+					mfbmFieldTl.progress(1);
 					topJobTl.reverse();
 					topJobTl.eventCallback("onReverseComplete", () => {
 						showSectionLink.restart();
@@ -493,7 +528,7 @@ function topSections() {
 				} else {
 					hideSectionLink.restart();
 					toggleNavigation(sectionId);
-					topJobTl.progress(1).pause();
+					topJobTl.progress(1);
 					topProjectTl.reverse();
 					topProjectTl.eventCallback("onReverseComplete", () => {
 						showSectionLink.restart();
@@ -516,7 +551,7 @@ function topSections() {
 				} else {
 					hideSectionLink.restart();
 					toggleNavigation(sectionId);
-					topProjectTl.progress(1).pause();
+					topProjectTl.progress(1);
 					topPersonTl.reverse();
 					topPersonTl.eventCallback("onReverseComplete", () => {
 						showSectionLink.restart();
@@ -539,7 +574,7 @@ function topSections() {
 				} else {
 					hideSectionLink.restart();
 					toggleNavigation(sectionId);
-					topPersonTl.progress(1).pause();
+					topPersonTl.progress(1);
 					topCultureTl.reverse();
 					topCultureTl.eventCallback("onReverseComplete", () => {
 						showSectionLink.restart();
@@ -560,7 +595,8 @@ function topSections() {
 						document.body.classList.remove("--pointer-events-none");
 					});
 				} else {
-					topCultureTl.progress(1).pause();
+					console.log("beforetopCultureTl");
+					topCultureTl.progress(1);
 					toggleNavigation(sectionId);
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
@@ -618,21 +654,41 @@ function topSections() {
 		console.log("カレント（前）のセクション：" + currentSectionId);
 		console.log("ターゲット（次）セクション：" + sectionId);
 
+		topScrollObserver.enable();
+
+		if (sectionId === "prologue" || sectionId === "prologue2") {
+			if (video && video.paused) {
+				video.play();
+			}
+		} else {
+			video.pause();
+		}
+		if (sectionId === "culture") {
+			cultureTweenArray.forEach((tween) => {
+				tween.play();
+			});
+		} else {
+			cultureTweenArray.forEach((tween) => {
+				tween.pause();
+			});
+		}
+
 		switch (sectionId) {
 			case "prologue":
 				if (!firstLoad) {
 					firstLoad = true;
 				} else {
+					add;
 					if (direction == 1) {
-						toggleNavigation(sectionId);
-						ScrollTrigger.refresh();
-						prologue2St.disable();
 						prologueBackTl.restart();
 						prologueBackTl.eventCallback("onComplete", () => {
 							animating.flag = false;
 						});
 					} else {
-						prologue2St.disable();
+						window.addEventListener("touchmove", noscroll, {
+							passive: false,
+						});
+						window.addEventListener("wheel", noscroll, { passive: false });
 						prologueBackFromPrologue2Tl.restart();
 						prologueBackFromPrologue2Tl.eventCallback("onComplete", () => {
 							animating.flag = false;
@@ -650,28 +706,47 @@ function topSections() {
 					topLeadTl.restart();
 					topScrollObserver.disable();
 					prologue2stInitTl.play();
-					prologue2St.enable();
 
+					prologue2St.enable();
 					topLeadTl.eventCallback("onComplete", () => {
+						window.removeEventListener("touchmove", noscroll, {
+							passive: false,
+						});
+						window.removeEventListener("wheel", noscroll, { passive: false });
 						// animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
+					prologue2St.enable();
 					aboutTl.reverse();
 					// topLeadTl.reverse();
 					topScrollObserver.disable();
 					aboutTl.eventCallback("onReverseComplete", () => {
-						// animating.flag = false;
+						window.removeEventListener("touchmove", noscroll, {
+							passive: false,
+						});
+						window.removeEventListener("wheel", noscroll, { passive: false });
 					});
 				}
 				break;
 			case "about":
 				if (direction == 1) {
+					window.addEventListener("touchmove", noscroll, {
+						passive: false,
+					});
+					window.addEventListener("wheel", noscroll, {
+						passive: false,
+					});
 					aboutTl.restart();
 					aboutTl.eventCallback("onComplete", () => {
 						animating.flag = false;
 					});
 				} else {
+					window.addEventListener("touchmove", noscroll, {
+						passive: false,
+					});
+					window.addEventListener("wheel", noscroll, {
+						passive: false,
+					});
 					spAbout2Tl.reverse();
 					spAbout2Tl.eventCallback("onReverseComplete", () => {
 						animating.flag = false;
@@ -711,8 +786,9 @@ function topSections() {
 						animating.flag = false;
 					});
 				} else {
-					spAbout2Tl.reverse();
-					spAbout2Tl.eventCallback("onReverseComplete", () => {
+					console.log("test");
+					spBusiness2Tl.reverse();
+					spBusiness2Tl.eventCallback("onReverseComplete", () => {
 						animating.flag = false;
 					});
 				}
@@ -867,6 +943,10 @@ function topSections() {
 						animating.flag = false;
 					});
 				} else {
+					window.addEventListener("touchmove", noscroll, {
+						passive: false,
+					});
+					window.addEventListener("wheel", noscroll, { passive: false });
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
 						animating.flag = false;
@@ -876,7 +956,6 @@ function topSections() {
 			case "epilogue":
 				toggleNavigation(sectionId);
 				if (direction == 1) {
-					hideSectionLink.restart();
 					epilogueTl.restart();
 					epilogueTl.eventCallback("onComplete", () => {
 						animating.flag = false;
@@ -886,6 +965,12 @@ function topSections() {
 						*/
 
 						topScrollObserver.disable();
+
+						window.removeEventListener("touchmove", noscroll, {
+							passive: false,
+						});
+						window.removeEventListener("wheel", noscroll, { passive: false });
+
 						topFooterInitTl.play();
 						topFooterSt.enable();
 					});
@@ -909,8 +994,8 @@ function topSections() {
 
 	function gotoSection(index, direction) {
 		console.log(index);
-		let fromTop = direction === -1,
-			dFactor = fromTop ? -1 : 1;
+		// let fromTop = direction === -1,
+		// 	dFactor = fromTop ? -1 : 1;
 
 		animating.flag = true;
 		sectionId = eps[index].dataset.ep || eps[index].dataset.epSp;
@@ -920,44 +1005,6 @@ function topSections() {
 		} else {
 			sectionTransition(sectionId, direction, index);
 		}
-
-		// if (currentIndex >= 0) {
-		// 	// The first time this function runs, current is -1
-		// 	prologueInTl.play();
-		// 	prologueInTl.eventCallback("onComplete", () => {
-		// 		animating.flag = false;
-		// 	});
-		// }
-		// gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-		// tl.fromTo(
-		// 	[outerWrappers[index], innerWrappers[index]],
-		// 	{
-		// 		yPercent: (i) => (i ? -100 * dFactor : 100 * dFactor),
-		// 	},
-		// 	{
-		// 		yPercent: 0,
-		// 	},
-		// 	0
-		// )
-		// 	.fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-		// 	.fromTo(
-		// 		splitHeadings[index].chars,
-		// 		{
-		// 			autoAlpha: 0,
-		// 			yPercent: 150 * dFactor,
-		// 		},
-		// 		{
-		// 			autoAlpha: 1,
-		// 			yPercent: 0,
-		// 			duration: 1,
-		// 			ease: "power2",
-		// 			stagger: {
-		// 				each: 0.02,
-		// 				from: "random",
-		// 			},
-		// 		},
-		// 		0.2
-		// 	);
 	}
 
 	/*
@@ -971,17 +1018,19 @@ function topSections() {
 		type: "wheel,touch,pointer",
 		wheelSpeed: -1,
 		onDown: () => {
-			console.log(currentIndex);
+			// console.log(currentIndex);
 			!animating.flag && currentIndex > 0 && gotoSection(currentIndex - 1, -1);
 		},
 		onUp: () => {
-			console.log(currentIndex);
+			// console.log(currentIndex);
 			!animating.flag &&
 				currentIndex < eps.length - 1 &&
 				gotoSection(currentIndex + 1, 1);
 		},
 		tolerance: 100,
 		preventDefault: true,
+		// onEnable: (self) => (self.savedScroll = self.scrollY()), // save the scroll position
+		// onChangeY: (self) => self.scrollY(self.savedScroll), // refuse to scroll
 	});
 
 	gotoSection(0, 1);

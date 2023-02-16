@@ -118,15 +118,23 @@ function cultureContents() {
 			},
 		})
 		.fromTo(
-			"#hello-man-hand",
+			"#hello-pink-man-hand",
 			{
-				y: 5,
-				rotation: -10,
+				rotation: 0,
 			},
 			{
-				y: 5,
-				rotation: 6,
+				rotation: 16,
 				transformOrigin: "right top",
+			}
+		)
+		.fromTo(
+			"#hello-orange-man-hand",
+			{
+				rotation: 0,
+			},
+			{
+				rotation: 8,
+				transformOrigin: "95% top",
 			}
 		);
 
@@ -154,6 +162,29 @@ function cultureContents() {
 			}
 		);
 
+	const musicSymbol = gsap.utils.toArray([
+		"#music-man-simbol-01",
+		"#music-man-simbol-02",
+		"#music-man-simbol-03",
+	]);
+
+	musicSymbol.forEach((symbol) => {
+		gsap.fromTo(
+			symbol,
+			{
+				y: 5,
+			},
+			{
+				delay: "random([.25, .35, .5])",
+				duration: ".5",
+				y: -3,
+				repeat: -1,
+				yoyo: true,
+			},
+			0
+		);
+	});
+
 	const musicManTl = gsap
 		.timeline({
 			defaults: { duration: 0.55, ease: "none" },
@@ -164,44 +195,44 @@ function cultureContents() {
 		.fromTo(
 			"#music-man-right-hand",
 			{
-				rotate: -3,
+				rotate: 5,
 			},
 			{
-				transformOrigin: "top center",
-				rotate: 5,
+				transformOrigin: "top left",
+				rotate: -3,
 			},
 			0
 		)
 		.fromTo(
 			"#music-man-left-hand",
 			{
-				rotate: 8,
+				rotate: 0,
 			},
 			{
-				transformOrigin: "top 3%",
-				rotate: -8,
+				transformOrigin: "top 55%",
+				rotate: 8,
 			},
 			0
 		)
 		.fromTo(
 			"#music-man-right-foot",
 			{
-				rotate: -8,
+				rotate: -2,
 			},
 			{
-				transformOrigin: "top left",
-				rotate: -2,
+				transformOrigin: "top 5%",
+				rotate: -8,
 			},
 			0
 		)
 		.fromTo(
 			"#music-man-left-foot",
 			{
-				rotate: 4,
+				rotate: -4,
 			},
 			{
-				transformOrigin: "top 60%",
-				rotate: -4,
+				transformOrigin: "top 93%",
+				rotate: 4,
 			},
 			0
 		);
@@ -306,37 +337,45 @@ function cultureContents() {
 	const familyTl = gsap
 		.timeline({
 			defaults: {
-				duration: 0.35,
+				duration: 0.6,
 				ease: "none",
 				repeat: -1,
 				yoyo: true,
-				repeatDelay: 0.175,
+				// repeatDelay: 0.175,
 				// repeatDelay: 0.25, // 何故かジャンプするので…
 			},
 		})
 		.fromTo(
 			"#family-child-right-hand",
 			{
-				x: 4,
-				rotation: -4,
+				rotation: 0,
 			},
 			{
-				x: 4,
-				rotation: 12,
+				rotation: -14,
 				transformOrigin: "20% top",
 			}
 		)
 		.fromTo(
 			"#family-child-left-hand",
 			{
-				x: -4,
-				rotation: -4,
+				rotation: 0,
 			},
 			{
-				x: -2,
-				rotation: 8,
+				rotation: 14,
 				transformOrigin: "80% top",
-			}
+			},
+			0
+		)
+		.fromTo(
+			"#family-parent-left-hand",
+			{
+				rotation: 0,
+			},
+			{
+				rotation: 10,
+				transformOrigin: "right top",
+			},
+			0
 		);
 
 	// const clockManTl = gsap
@@ -393,6 +432,7 @@ function cultureContents() {
 		.to(
 			"#ball-game-basket",
 			{
+				duration: 1.8,
 				rotate: 360,
 				transformOrigin: "center",
 			},
@@ -401,6 +441,7 @@ function cultureContents() {
 		.to(
 			"#ball-game-soccer",
 			{
+				duration: 1.6,
 				rotate: 360,
 				transformOrigin: "center",
 			},
@@ -431,44 +472,44 @@ function cultureContents() {
 		.fromTo(
 			"#hat-man-right-hand",
 			{
-				rotate: -3,
+				rotate: 5,
 			},
 			{
-				transformOrigin: "top center",
-				rotate: 5,
+				transformOrigin: "top left",
+				rotate: -3,
 			},
 			0
 		)
 		.fromTo(
 			"#hat-man-left-hand",
 			{
-				rotate: 8,
+				rotate: 0,
 			},
 			{
-				transformOrigin: "top 3%",
-				rotate: -8,
+				transformOrigin: "top 55%",
+				rotate: 8,
 			},
 			0
 		)
 		.fromTo(
 			"#hat-man-right-foot",
 			{
-				rotate: -8,
+				rotate: -2,
 			},
 			{
-				transformOrigin: "top left",
-				rotate: -2,
+				transformOrigin: "top 5%",
+				rotate: -8,
 			},
 			0
 		)
 		.fromTo(
 			"#hat-man-left-foot",
 			{
-				rotate: 4,
+				rotate: -4,
 			},
 			{
-				transformOrigin: "top 60%",
-				rotate: -4,
+				transformOrigin: "top 93%",
+				rotate: 4,
 			},
 			0
 		);

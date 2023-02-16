@@ -3,7 +3,6 @@ import { tweenArray, animating, topScrollObserver } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
-import { video } from "../topVideo";
 
 /* 
 		---------- prologue ----------

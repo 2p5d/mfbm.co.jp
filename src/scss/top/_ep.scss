@@ -31,7 +31,8 @@
 
 .ep__section {
 	height: 100vh;
-	height: 100dvh !important;
+	height: 100dvh;
+	overscroll-behavior: none;
 	&.ep__section--sp {
 		display: none;
 		@include mq-down() {
@@ -67,7 +68,10 @@
 .ep__01-02-bg {
 	--top-slide-01-filter-value: 30px;
 	position: fixed;
-	inset: calc(var(--top-slide-01-filter-value) * -1);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	// inset: calc(var(--top-slide-01-filter-value) * -1);
 	width: calc(100% + (var(--top-slide-01-filter-value) * 2));
 	height: calc(100vh + (var(--top-slide-01-filter-value) * 2));
 	z-index: -1;
@@ -108,7 +112,6 @@
 	width: fit-content;
 	position: relative;
 	display: block;
-	font-family: var(--font-serif);
 	font-weight: 500;
 	color: var(--key-color-black) !important;
 	line-height: 1;
@@ -305,7 +308,6 @@
 	left: 50%;
 	bottom: var(--top-slide-01-section-01-scroll-bottom-margin);
 	transform: translateX(-50%);
-	font-family: var(--font-serif);
 	color: white;
 	// mix-blend-mode: difference;
 	&::after {

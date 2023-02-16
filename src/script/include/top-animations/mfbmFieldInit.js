@@ -3,7 +3,6 @@ import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
-import { video } from "../topVideo";
 
 /* 
 		---------- prologue ----------
@@ -20,15 +19,9 @@ const mfbmFieldInit = () => {
 				defaults: { duration: 1.25, ease: "power2.out" },
 				paused: true,
 			})
-			.fromTo(
-				"#business",
-				{
-					autoAlpha: 0,
-				},
-				{
-					autoAlpha: 1,
-				}
-			)
+			.to("#business", {
+				autoAlpha: 1,
+			})
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-building']",
 				{

@@ -29,7 +29,6 @@
 	margin-top: 7.2rem;
 	text-align: center;
 	line-height: calc(34 / 15);
-	font-family: var(--font-serif);
 	font-weight: 500;
 	color: #000f3c;
 	@include mq-down() {
@@ -60,7 +59,6 @@
 	bottom: var(--top-slide-01-section-01-scroll-bottom-margin);
 	z-index: 1;
 	transform: translateX(-50%);
-	font-family: var(--font-serif);
 	color: white;
 	&::after {
 		content: "";
