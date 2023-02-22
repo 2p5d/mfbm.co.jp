@@ -3,7 +3,7 @@
 
 .top-epilogue {
 	position: relative;
-	height: 100%; // 100vh調整
+	height: 100%;
 	background-color: var(--key-color-blue);
 	overflow: hidden;
 }
@@ -14,6 +14,13 @@
 	left: 50%;
 	z-index: 1;
 	transform: translate(-50%, -50%);
+	@include mq-down() {
+		top: calc(var(--header-height) + 2em);
+		transform: translateX(-50%);
+		@media (min-aspect-ratio: 9/16) {
+			top: calc(var(--header-height) + 1em);
+		}
+	}
 }
 
 .top-epilogue__lead-title {
@@ -32,17 +39,29 @@
 	font-weight: 500;
 	color: #000f3c;
 	@include mq-down() {
-		ine-height: calc(57 / 26);
+		margin-top: 5.6rem;
+		ine-height: 2;
 		white-space: nowrap;
+		@media (min-aspect-ratio: 9/16) {
+			line-height: 2;
+			margin-top: 3.2rem;
+		}
 	}
 	p + p {
 		margin-top: 2.25em;
+		@include mq-down() {
+			margin-top: 1.25em;
+			@media (min-aspect-ratio: 9/16) {
+				margin-top: 1em;
+			}
+		}
 	}
 }
 
 .top-epilogue__bg {
 	position: absolute;
-	inset: 0;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	img {

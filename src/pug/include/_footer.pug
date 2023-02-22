@@ -1,44 +1,44 @@
 
 footer.footer#footer(class=key === "top" ? "footer--top" : "")
+	.footer__inner
+		a.footer__page-top(href=key === "top" ? `${root_path}` : "#to-top")
+			.footer__page-top-arrow
+				svg(aria-label="→" viewBox="0 0 34 32").footer__page-top-arrow-icon-pc
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+				svg(aria-label="→" viewBox="0 0 35 32").footer__page-top-arrow-icon-sp
+					use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+			span.footer__page-top-text
+				| PAGE TOP
+		
+		.footer__menu
+			if key === "top"
+				include _footer-links.pug	
+			else
+				include _menu.pug
+				
+		.footer__bottom
+			.footer__bottom-logo
+				+picture({filename:'logo'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'290.0667'},{height:'40.923'},{breakpoint:false},{lazyload:true},{retina:false})
 
-	a.footer__page-top(href=key === "top" ? `${root_path}` : "#to-top")
-		.footer__page-top-arrow
-			svg(aria-label="→" viewBox="0 0 34 32").footer__page-top-arrow-icon-pc
-				use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-			svg(aria-label="→" viewBox="0 0 35 32").footer__page-top-arrow-icon-sp
-				use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
-		span.footer__page-top-text
-			| PAGE TOP
-	
-	.footer__menu
-		if key === "top"
-			include _footer-links.pug	
-		else
-			include _menu.pug
-			
-	.footer__bottom
-		.footer__bottom-logo
-			+picture({filename:'logo'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'290.0667'},{height:'40.923'},{breakpoint:false},{lazyload:true},{retina:false})
-
-		.footer__bottom-content
-			.footer__bottom-links
-				.footer__bottom-links__item
-					a(href="https://www.mfbm.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer")
-						| 個人情報保護方針
-				.footer__bottom-links__item
-					a(href="https://www.mfbm.co.jp/basic-privacy-policy/index.html" target="_blank" rel="noopener noreferrer")
-						| 特定個人情報保護方針
-				.footer__bottom-links__item
-					a(href="https://www.mfbm.co.jp/privacy/" target="_blank" rel="noopener noreferrer")
-						| 個人情報の取り扱いについて
-				.footer__bottom-links__item
-					a(href="https://www.mfbm.co.jp/cookie/index.html" target="_blank" rel="noopener noreferrer")
-						| Cookieおよびアクセスログについて
-				.footer__bottom-links__item
-					a(href="https://www.mfbm.co.jp/terms/" target="_blank" rel="noopener noreferrer")
-						| サイトご利用上の注意
-			p.footer__copyright
-				| Copyright © Mitsui Fudosan Building Management Co., Ltd. All rights reserved.
+			.footer__bottom-content
+				.footer__bottom-links
+					.footer__bottom-links__item
+						a(href="https://www.mfbm.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer")
+							| 個人情報保護方針
+					.footer__bottom-links__item
+						a(href="https://www.mfbm.co.jp/basic-privacy-policy/index.html" target="_blank" rel="noopener noreferrer")
+							| 特定個人情報保護方針
+					.footer__bottom-links__item
+						a(href="https://www.mfbm.co.jp/privacy/" target="_blank" rel="noopener noreferrer")
+							| 個人情報の取り扱いについて
+					.footer__bottom-links__item
+						a(href="https://www.mfbm.co.jp/cookie/index.html" target="_blank" rel="noopener noreferrer")
+							| Cookieおよびアクセスログについて
+					.footer__bottom-links__item
+						a(href="https://www.mfbm.co.jp/terms/" target="_blank" rel="noopener noreferrer")
+							| サイトご利用上の注意
+				p.footer__copyright
+					| Copyright © Mitsui Fudosan Building Management Co., Ltd. All rights reserved.
 			
 
 			

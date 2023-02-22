@@ -2,6 +2,8 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 function cultureHero() {
+	const cultureHeroTweenArray = [];
+
 	const otedamaTl = gsap
 		.timeline({
 			defaults: {
@@ -427,44 +429,42 @@ function cultureHero() {
 	});
 
 	const fukidashi = document.querySelectorAll(
-		".culture-hero__bg-item[class*='fukidashi']"
+		".culture-hero__bg-item[class*='fukidashi'] svg"
 	);
 
 	fukidashi.forEach((item, index) => {
-		gsap.fromTo(
-			item,
-			{
-				scale: "random([.5, .75])",
+		const radomRepeatDelay = gsap.utils.random(0.5, 0.6, 0.7);
+
+		gsap.to(item, {
+			delay: () => {
+				if (index % 3 == 0) {
+					return 0.75;
+				}
+				if (index % 2 == 0) {
+					return 1.5;
+				} else {
+					return 0;
+				}
 			},
-			{
-				delay: () => {
-					if (index % 3 == 0) {
-						return 0.75;
-					}
-					if (index % 2 == 0) {
-						return 1.5;
-					} else {
-						return 0;
-					}
-				},
-				duration: () => {
-					if (index % 3 == 0) {
-						return 0.78125;
-					}
-					if (index % 2 == 0) {
-						return 0.7825;
-					} else {
-						return 0.78375;
-					}
-				},
-				autoAlpha: 1,
-				scale: 1,
-				yoyo: true,
-				repeat: -1,
-				repeatDelay: 1,
-				transformOrigin: "center center",
-			}
-		);
+			duration: () => {
+				if (index % 3 == 0) {
+					return 0.78125;
+				}
+				if (index % 2 == 0) {
+					return 0.7825;
+				} else {
+					return 0.78375;
+				}
+			},
+			duration: "random([.75, .85, 1])",
+			autoAlpha: 0.35,
+			scale: "random([.75, .8, .85])",
+			yoyo: true,
+			repeat: -1,
+			repeatDelay: radomRepeatDelay,
+			transformOrigin: "center center",
+			ease: "power2.inOut",
+		});
 	});
 }
 

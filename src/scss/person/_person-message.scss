@@ -23,7 +23,10 @@
 
 .person-message__text__border-top {
 	position: absolute;
-	inset: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	pointer-events: none;
 	&::before,
 	&::after {
@@ -67,7 +70,10 @@
 
 .person-message__text__border-bottom {
 	position: absolute;
-	inset: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	pointer-events: none;
 	&::before,
 	&::after {

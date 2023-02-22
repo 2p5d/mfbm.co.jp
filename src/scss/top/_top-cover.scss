@@ -3,8 +3,10 @@
 
 .top-cover {
 	position: fixed;
-	width: 100vw;
+	width: 100vw; // スクロールバー分
 	height: 100%;
+	top: 0;
+	left: 0;
 	background-color: white;
 	z-index: 999999;
 	opacity: 1;

@@ -37,7 +37,10 @@ block contents
 					| MFBMのフィールドです。
 				.business-lead__body(data-scroll-reveal)
 					p
-						| ビジネスの成長を求める企業。仕事と暮らしの豊かさを望む人々。その姿はオフィスというステージのさまざまな場面（シーン）の中にあります。お客様のいちばん近くに寄り添い、ともに歩んできた私たちMFBMは、30余年におよぶ歴史のなかで培った「ビル経営事業」とテナント企業の成長・発展に貢献する「ソリューションサービス事業」、そしてオフィスビルを中心とした街づくりを「エリアマネジメント事業」により、オフィスを舞台としたビジネスシーンにおける存在感をさらに高めています。
+						| ビジネスの成長を求める企業。仕事と暮らしの豊かさを望む人々。その姿はオフィスというステージのさまざまな場面（シーン）の中にあります。
+						br
+						| お客様のいちばん近くに寄り添い、ともに歩んできた私たちMFBMは、30余年におよぶ歴史のなかで培った「ビル経営事業」とテナント企業の成長・発展に貢献する「ソリューションサービス事業」、そしてオフィスビルを中心とした街づくりを「エリアマネジメント事業」により、オフィスを舞台としたビジネスシーンにおける存在感をさらに高めています。
+
 
 			.business-fields(data-scroll-reveal)
 
@@ -66,51 +69,55 @@ block contents
 							svg(aria-label="→" viewBox="0 0 56 32").business-fields__navigation-button-icon
 								use(xlink:href=assets_path + image_dir + 'sprite.svg#chevron')
 		
-					.business-fields__map(ontouchstart="")
+					.business-fields__map
 
-						include include/svg/business-fields.svg
-
-						//- .business-fields__map-default-images
-						//- 	+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
-						//- 	+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
-						//- 	+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+						//- include include/svg/business-fields.svg
 
 
-						//- .business-fields__map-triggers-and-over-images
+						.business-fields__map-default-images
+							+picture({filename:'building'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'399.3151'},{height:'390.0662'},{breakpoint:true},{lazyload:true},{retina:true})
+							+picture({filename:'management'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+							+picture({filename:'solution'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
 
-						//- 	//- 
-						//- 		画像の重なりの関係で、hoverがうまく効かない。
-						//- 		透過させたボタンを表示用の画像と同ポジで配置し、
-						//- 		"management"と"building"をテレコにすることで、
-						//- 		ホバーイベントの順序を解決し、トリガーとする。
-						//- 		ホバーの判定は兄弟セレクター（トリガー + hover画像）
 
-						//- 	//- トリガー
-						//- 	button(data-modal-trigger="management")
-						//- 		+picture({filename:'business-fields-management'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+						.business-fields__map-triggers-and-over-images
 
-						//- 	//- //- hover画像
-						//- 	+picture({filename:'business-fields-management-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'637.9037'},{height:'458.4343'},{breakpoint:true},{lazyload:true},{retina:true})
+							//- 
+								画像の重なりの関係で、hoverがうまく効かない。
+								すべて重ねた状態のsvgだと重すぎてスマホで挙動がおかしくなるため、
+								単純化したsvgをマスクにして画像をclip-pathした。
+								マスクのズレは追求せず、透明なボタンとして同ポジで配置した。
+								ホバーの判定は兄弟セレクター（トリガー + hover画像）
 
-						//- 	//- トリガー
-						//- 	button(data-modal-trigger="building")
-						//- 		+picture({filename:'business-fields-building'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'631'},	{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+							//- トリガー
+							button(data-modal-trigger="building")
+								+picture({filename:'building'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'631'},	{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
 
-						//- 	//- hover画像
-						//- 	+picture({filename:'business-fields-building-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'400.8151'},{height:'391.3909'},{breakpoint:true},{lazyload:true},{retina:true})
+							//- hover画像
+							+picture({filename:'building-hover'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'400.8151'},{height:'391.3909'},{breakpoint:true},{lazyload:true},{retina:true})
 
-						//- 	//- トリガー
-						//- 	button(data-modal-trigger="solution")
-						//- 		+picture({filename:'business-fields-solution'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+							//- トリガー
+							button(data-modal-trigger="management")
+								+picture({filename:'management'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'631'},{height:'451'},{breakpoint:true},{lazyload:true},{retina:true})
+
+							//- hover画像
+							+picture({filename:'management-hover'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'637.9037'},{height:'458.4343'},{breakpoint:true},{lazyload:true},{retina:true})
+
+							//- トリガー
+							button(data-modal-trigger="solution")
+								+picture({filename:'solution'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
 						
-						//- 	//- hover画像
-						//- 	+picture({filename:'business-fields-solution-over'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
+							//- hover画像
+							+picture({filename:'solution-hover'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'224'},{height:'190'},{breakpoint:true},{lazyload:true},{retina:true})
 
-
+						//- スマホのみ
 						.business-fields__sp-map-icons
 							+picture({filename:'business-fields-solution-sp-point'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'86'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
 							+picture({filename:'business-fields-building-sp-point'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'86'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
 							+picture({filename:'business-fields-management-sp-point'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'86'},{height:'132'},{breakpoint:false},{lazyload:true},{retina:false})
+
+						//- マスク画像（レスポンシブ対応はこちら参照：https://manamiw.com/clippath-and-responsive/）
+						include include/svg/business-fields-mask.svg
 
 
 		//- .modal.modal--business
@@ -143,7 +150,7 @@ block contents
 				.business-modal__point-body
 					.business-modal__point-body-text
 						p
-							| ビル経営事業に必要なのは、ビルを所有するビルオーナー（企業や個人）と同じ視座の高さを持つこと。求められるのはオフィスビルの施設や設備を管理する能力だけではなく、オフィスビル全体の価値を最大化するために中長期的なオフィスビルのあり方を、ビルオーナーに代わって考え実践するチカラ。建てて終わりではない、ビルマネジメントの醍醐味がここにあります。
+							| ビル経営事業に必要なのは、ビルを所有するビルオーナー（企業や個人）と同じ視座を持つこと。求められるのはオフィスビルの施設や設備を管理する能力だけではなく、オフィスビル全体の価値を最大化するために中長期的なオフィスビルのあり方を、ビルオーナーに代わって考え実践するチカラ。建てて終わりではない、ビルマネジメントの醍醐味がここにあります。
 					.business-modal__point-image
 						+picture({filename:'business-modal-building-image-02'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'170'},{height:'195'},{breakpoint:false},{lazyload:true},{retina:false})
 				button.business-modal__sp-close-button.modal-close

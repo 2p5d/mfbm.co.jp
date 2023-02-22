@@ -1,5 +1,6 @@
 import { spmql, setScrollBarWidth } from "./vars";
 import { topScrollObserver } from "./topSections";
+import { video } from "./topVideo";
 import {
 	disableBodyScroll,
 	enableBodyScroll,
@@ -41,6 +42,11 @@ function modal() {
 		enableBodyScroll(wrapInner);
 
 		document.body.classList.remove("--scroll-bar-padding-active");
+
+		if (video) {
+			video.play();
+		}
+
 		if (movieVideo) {
 			movieVideo.pause();
 		}
@@ -113,6 +119,10 @@ function modal() {
 		wrap.animate(fadeIn, fadeInTiming).onfinish = () => {
 			wrap.style.opacity = "1"; // safariでfadeOut = [{ opacity: "0" }];が効かなくなるので
 		};
+
+		if (video) {
+			video.pause();
+		}
 
 		movieVideo = content.querySelector("video");
 		if (movieVideo) {

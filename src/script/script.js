@@ -7,7 +7,7 @@ import { onceTransition, tlOnce } from "./include/onceTransition";
 import { smoothScroll } from "./include/smoothScroll";
 import { accordion } from "./include/accordion";
 import { toggleToTop } from "./include/toggleToTop";
-// import "./libs/css_browser_selector.min";
+import "./libs/css_browser_selector.min";
 import {
 	scrollRevealInit,
 	scrollReveal,

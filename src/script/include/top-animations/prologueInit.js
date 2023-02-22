@@ -1,5 +1,9 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
-import { tweenArray, animating, topScrollObserver } from "../topSections";
+import {
+	animating,
+	topScrollObserver,
+	spSectionTransition,
+} from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -7,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger, Observer);
 		---------- prologue ----------
 	*/
 
-let prologueInTl,
+let prologueFirstTl,
 	prologueBackFromPrologue2Tl,
 	prologueBackTl,
 	topLeadTl,
@@ -16,14 +20,10 @@ let prologueInTl,
 	prologueRepeatTween;
 
 const prologueInit = () => {
+	let section01Items;
+
 	const section01Title = document.querySelector(".top-section__title");
-	const section01Scroll = document.querySelector(".top-section__scroll");
-	const section01Items = gsap.utils.toArray([
-		".header__menu-button",
-		".header__link",
-		".ep__navigation",
-		".top-section__5minute",
-	]);
+	const section01Scroll = document.querySelector(".ep__section-scroll");
 
 	prologueRepeatTween = gsap.to(
 		"img[src*='top-5-minute-lines'],img[src*='top-5-minute-invert-lines']",
@@ -40,49 +40,59 @@ const prologueInit = () => {
 	let mm = gsap.matchMedia();
 
 	mm.add("(min-width: 768px)", () => {
-		prologue2stInitTl = gsap
-			.timeline({
-				paused: true,
-			})
-			// .set(".top-lead__body", {
-			// 	marginTop: "50vh",
-			// 	marginBottom: "100vh",
-			// })
-			.set("#prologue2", {
-				"--top-scroll-bar": "none",
-				overflowY: "auto",
-				overscrollBehavior: "none",
-			})
-			.set(".top-lead__title", {
-				position: "fixed",
-				pointerEvents: "none",
-			});
+		section01Items = gsap.utils.toArray([
+			".header__menu-button",
+			".header__link",
+			".ep__navigation-link",
+			".ep__top-section-5minute",
+		]);
+
+		// prologue2stInitTl = gsap
+		// 	.timeline({
+		// 		// paused: true,
+		// 	})
+		// 	.set(document.documentElement, {
+		// 	overscrollBehavior: "none",
+		// })
+		// 	// .set(".top-lead__body", {
+		// 	// 	marginTop: "50vh",
+		// 	// 	marginBottom: "100vh",
+		// 	// })
+		// 	.set("#prologue2", {
+		// 		"--top-scroll-bar": "none",
+		// 		overflowY: "auto",
+		// 		overscrollBehavior: "none",
+		// 	})
+		// 	.set(".top-lead__title", {
+		// 		position: "fixed",
+		// 		pointerEvents: "none",
+		// 	});
 
 		/*
 		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
 		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
 	*/
-		const prologue2stContainerInit = gsap.set(".top-lead__body", {
-			marginTop: "40vh", // startの値と合わせる
-			marginBottom: "100vh",
-		});
+		// const prologue2stContainerInit = gsap.set(".top-lead__body", {
+		// 	marginTop: "40vh", // startの値と合わせる
+		// 	marginBottom: "100vh",
+		// });
 
-		prologue2St = ScrollTrigger.create({
-			trigger: ".top-lead__body",
-			start: "top 40%",
-			end: "bottom top",
-			// markers: true,
-			scroller: "#prologue2",
-			onLeave: () => {
-				topScrollObserver.enable();
-				animating.flag = false;
-			},
-			onLeaveBack: () => {
-				topScrollObserver.enable();
-				animating.flag = false;
-			},
-		});
-		prologue2St.disable();
+		// prologue2St = ScrollTrigger.create({
+		// 	trigger: ".top-lead__body",
+		// 	start: "top 40%",
+		// 	end: "bottom top",
+		// 	// markers: true,
+		// 	scroller: "#prologue2",
+		// 	onLeave: () => {
+		// 		topScrollObserver.enable();
+		// 		animating.flag = false;
+		// 	},
+		// 	onLeaveBack: () => {
+		// 		topScrollObserver.enable();
+		// 		animating.flag = false;
+		// 	},
+		// });
+		// prologue2St.disable();
 
 		prologueBackTl = gsap
 			.timeline({
@@ -107,7 +117,7 @@ const prologueInit = () => {
 				[
 					section01Title,
 					".header__link",
-					".top-section__5minute",
+					".ep__top-section-5minute",
 					section01Scroll,
 				],
 				{
@@ -118,17 +128,26 @@ const prologueInit = () => {
 	});
 
 	mm.add("(max-width: 767px)", () => {
+		section01Items = gsap.utils.toArray([
+			".header__menu-button",
+			".header__link",
+			".ep__top-section-5minute",
+		]);
+
 		/*
 		prologue2stInitTlはtopLeadTlのoncompleteで開始するので、
 		スクロールするための余白分ははじめからつけて置く（のでエクスポートもしない）
 	*/
 		const prologue2stContainerInit = gsap.set(".top-lead", {
-			marginBottom: "70rem",
+			paddingBottom: "60vh",
 		});
 
 		prologue2stInitTl = gsap
 			.timeline({
-				paused: true,
+				// paused: true,
+			})
+			.set(document.documentElement, {
+				overscrollBehavior: "none",
 			})
 			.set("#prologue2", {
 				"--top-scroll-bar": "none",
@@ -143,21 +162,21 @@ const prologueInit = () => {
 			// markers: true,
 			scroller: "#prologue2",
 			onLeave: () => {
+				spSectionTransition("about", 1, 2);
 				topScrollObserver.enable();
-				animating.flag = false;
 			},
 			onLeaveBack: () => {
+				spSectionTransition("prologue", -1, 0);
 				topScrollObserver.enable();
-				animating.flag = false;
 			},
 		});
-		prologue2St.disable();
+		// prologue2St.disable();
 	});
 
 	// later, if we need to revert all the animations/ScrollTriggers...
 	// mm.revert();
 
-	prologueInTl = gsap
+	prologueFirstTl = gsap
 		.timeline({
 			defaults: { duration: 1.25, ease: "power2.out" },
 			paused: true,
@@ -225,7 +244,7 @@ const prologueInit = () => {
 			[
 				section01Title,
 				".header__link",
-				".top-section__5minute",
+				".ep__top-section-5minute",
 				section01Scroll,
 			],
 			{
@@ -245,17 +264,9 @@ const prologueInit = () => {
 		.set("#prologue2", {
 			autoAlpha: 1,
 		})
-		.to(
-			[
-				".top-section__title",
-				".header__link",
-				".top-section__5minute",
-				".top-section__scroll",
-			],
-			{
-				autoAlpha: 0,
-			}
-		)
+		.to([".top-section__title", ".header__link", ".ep__top-section-5minute"], {
+			autoAlpha: 0,
+		})
 		.to(
 			".ep__01-02-bg",
 			{
@@ -275,19 +286,11 @@ const prologueInit = () => {
 			},
 			"<25%"
 		);
-
-	tweenArray.push(
-		prologueInTl,
-		topLeadTl,
-		prologueBackTl,
-		prologueBackFromPrologue2Tl,
-		prologueRepeatTween
-	);
 };
 
 export {
 	prologueInit,
-	prologueInTl,
+	prologueFirstTl,
 	prologueBackTl,
 	prologueBackFromPrologue2Tl,
 	topLeadTl,

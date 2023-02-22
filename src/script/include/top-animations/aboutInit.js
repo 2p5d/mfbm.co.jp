@@ -1,5 +1,4 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
-import { tweenArray } from "../topSections";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
@@ -142,13 +141,15 @@ const aboutInit = () => {
 				".top-about__bg-fill",
 				{
 					clipPath: "inset(0 0 0 50%)",
+					autoAlpha: 0.9,
 				},
 				{
-					duration: 4,
+					duration: 2.25,
 					ease: "power4.inOut",
 					clipPath: "inset(0 0 0 0%)",
+					autoAlpha: 1, // firefoxでレンダリング常にレンダリングを促すことで解消
 				},
-				"<"
+				"<50%"
 			)
 			.fromTo(
 				".top-about__lead__title",
@@ -309,13 +310,15 @@ const aboutInit = () => {
 				".top-about__bg-fill",
 				{
 					clipPath: "inset(0 0 0 50%)",
+					autoAlpha: 0.9,
 				},
 				{
-					duration: 4,
+					duration: 2.25,
 					ease: "power4.inOut",
 					clipPath: "inset(0 0 0 0%)",
+					autoAlpha: 1, // firefoxでレンダリング常にレンダリングを促すことで解消
 				},
-				"<"
+				"<50%"
 			)
 			.fromTo(
 				".top-about__lead__title",
@@ -374,8 +377,6 @@ const aboutInit = () => {
 				"<25%"
 			);
 	});
-
-	tweenArray.push(aboutTl);
 };
 
 export { aboutInit, aboutTl, spAbout2Tl, spAboutLinkTl };

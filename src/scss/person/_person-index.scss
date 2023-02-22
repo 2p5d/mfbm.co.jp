@@ -27,8 +27,10 @@
 .person-index__item-cover {
 	// display: none; // 開発用
 	position: absolute;
-	inset: 0;
+	top: 0;
+	left: 0;
 	z-index: 1;
+	width: 100%;
 	height: 100%;
 	transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 	@include mq-down() {
@@ -171,7 +173,9 @@ p.person-index__item-cover-label {
 	height: 100%;
 	@include mq-down() {
 		position: absolute;
-		inset: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
 		z-index: -1;
 	}
 	// &::after {

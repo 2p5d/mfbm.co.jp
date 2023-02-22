@@ -18,62 +18,58 @@ block contents
 
 		.ep
 
+
+			//- #prologue, #prologue2の共通背景はセクション移動のz-index操作の中で、同じ値（1）になったときに常に下に来るように最初に置く
+			.ep__01-02-bg
+				+picture({filename:'top-section-01-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:false},{lazyload:true},{retina:true})
+
+
 			section.ep__section#prologue(data-ep="prologue")
 					
 				.top-section
 					h2.top-section__title
 						+picture({filename:'top-section-01-title-01'},{type:'svg',fallbackType:''},{alt:'ビジネスシーンの明日を変えていく'},{classes:['']},{width:'350'},{height:'107'},{breakpoint:false},{lazyload:true},{retina:false})
-					a.top-section__5minute(href="https://vimeo.com/763741619/0d034fdaf4" target="_blank" rel="noopener noreferrer")
-						.top-section__5minute-image
-							+picture({filename:'top-5-minute'},{type:'svg',fallbackType:''},{alt:'MFBM in 5 minute'},{classes:['']},{width:'186'},{height:'186'},{breakpoint:true},{lazyload:true},{retina:false})
-							+picture({filename:'top-5-minute-lines'},{type:'svg',fallbackType:''},{alt:'MFBM in 5 minute'},{classes:['']},{width:'186'},{height:'186'},{breakpoint:false},{lazyload:true},{retina:false})
-						.top-section__5minute-image.top-section__5minute-image--invert
-							+picture({filename:'top-5-minute-invert'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'186'},{height:'186'},{breakpoint:false},{lazyload:true},{retina:false})
-							+picture({filename:'top-5-minute-invert-lines'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'186'},{height:'186'},{breakpoint:false},{lazyload:true},{retina:false})
 
 			section.ep__section#prologue2(data-ep="prologue2")
 
 				.top-lead
-					h2.top-lead__title
-						+picture({filename:'top-section-01-title-03'},{type:'svg',fallbackType:''},{alt:'5年後、10年後の未来。人々はどのように働き、暮らしているだろうか。'},{classes:['']},{width:'534'},{height:'225'},{breakpoint:false},{lazyload:true},{retina:false})
-					.top-lead__body
-						.top-lead__body-inner
-							p
-								| 次々と起こる技術革新。多様化する市場ニーズ。
-								br
-								| 短期化する事業サイクル。
-								br
-								| 時代や環境の目まぐるしい変化は「働き方」にも影響を与えビジネスシーンは大きく様変わりしました。
-							p
-								| 社会に新しい価値を創出し続けたい「企業」と
-								br.active-sp
-								| 自分らしい働き方、生き方をしたい「個人」。
-							p
-								| 「企業」と「個人」がともに
-								br.active-sp
-								| “新しい働き方”を求める時代に必要なものとは何か？
-							p
-								| その答えは「オフィス」の
-								br.active-sp
-								| さまざまな場面（シーン）の中にあると私たちは考えます。
-							p
-								| 「企業」に成長をもたらし、
-								br.active-tb-pc
-								| 働く「個人」を豊かにする拠点となる
-								br.active-tb-pc
-								| 新しい時代の「オフィスビル」。
-								br
-								| それはオフィスを知り尽くした私たちにしか提供できない
-								br
-								| 従来の価値を超えた「オフィスビル」。
-								br
-								| 私たちはそんな新たな価値を追求し続け、挑戦しています。
-							p
-								| 「ビジネスシーンの明日を変えていく」
-
-			.ep__01-02-bg
-				+picture({filename:'top-section-01-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:false},{lazyload:true},{retina:true})
-
+					.top-lead__inner
+						h2.top-lead__title
+							+picture({filename:'top-section-01-title-03'},{type:'svg',fallbackType:''},{alt:'5年後、10年後の未来。人々はどのように働き、暮らしているだろうか。'},{classes:['']},{width:'534'},{height:'225'},{breakpoint:false},{lazyload:true},{retina:false})
+						.top-lead__body
+							.top-lead__body-inner
+								p
+									| 次々と起こる技術革新。多様化する市場ニーズ。
+									br
+									| 短期化する事業サイクル。
+									br
+									| 時代や環境の目まぐるしい変化は「働き方」にも影響を与えビジネスシーンは大きく様変わりしました。
+								p
+									| 社会に新しい価値を創出し続けたい「企業」と
+									br.active-sp
+									| 自分らしい働き方、生き方をしたい「個人」。
+								p
+									| 「企業」と「個人」がともに
+									br.active-sp
+									| “新しい働き方”を求める時代に必要なものとは何か？
+								p
+									| その答えは「オフィス」の
+									br.active-sp
+									| さまざまな場面（シーン）の中にあると私たちは考えます。
+								p
+									| 「企業」に成長をもたらし、
+									br.active-tb-pc
+									| 働く「個人」を豊かにする拠点となる
+									br.active-tb-pc
+									| 新しい時代の「オフィスビル」。
+									br
+									| それはオフィスを知り尽くした私たちにしか提供できない
+									br
+									| 従来の価値を超えた「オフィスビル」。
+									br
+									| 私たちはそんな新たな価値を追求し続け、挑戦しています。
+								p
+									| 「ビジネスシーンの明日を変えていく」
 
 			section.ep__section#about(data-ep="about" data-pc-href=root_path + "about/")
 
@@ -81,7 +77,7 @@ block contents
 					.top-about__lead
 						h2.top-about__lead__title
 							+picture({filename:'top-section-02-title'},{type:'svg',fallbackType:''},{alt:'新たな価値を提供する'},{classes:['']},{width:'591'},{height:'225'},{breakpoint:false},{lazyload:true},{retina:false})
-						.top-about__lead__body(data-ep-sp="about2")
+						.top-about__lead__body
 							p
 								| ビジネスの成長を求める企業。仕事と暮らしに豊かさを望む人々。その姿はオフィスビルというステージの、さまざまな場面（シーン）の中にあります。私たちMFBMはそんなビジネスシーンに新たな価値を提供するため、挑戦を続けています。
 							p
@@ -112,19 +108,6 @@ block contents
 						.top-about__bg-image
 							+picture({filename:'top-section-02-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			section.ep__section.ep__section--sp(data-ep-sp="aboutLink")
-				.link-section
-					a(href=root_path + "about/").link-section__content
-						h2.link-section__title
-							span.link-section__title-large.link-section__title-large--about
-								svg(aria-label="→" viewBox="0 0 143 32")
-									use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-about')
-							span.link-section__title-small
-								| MFBMを知る
-						.link-section__arrow
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-
 
 			section.ep__section#business(data-ep="business" data-pc-href=root_path + "business.html")
 
@@ -132,7 +115,7 @@ block contents
 					.mfbm-field__lead
 						h2.mfbm-field__lead-title
 							+picture({filename:'top-section-03-title'},{type:'svg',fallbackType:''},{alt:'ビジネスシーンのすべてがMFBMのフィールド'},{classes:['']},{width:'404'},{height:'254'},{breakpoint:false},{lazyload:true},{retina:false})
-						.mfbm-field__lead-body(data-ep-sp="business2")
+						.mfbm-field__lead-body
 							p
 								| 私たちMFBMは、オフィスが入居するビルの運営を担う「ビル経営事業」と、テナント企業の成長・発展に貢献する「ソリューションサービス事業」を軸に、オフィスビルを舞台としたビジネスシーンにおける存在感をさらに高めています。
 							p
@@ -141,7 +124,7 @@ block contents
 					.mfbm-field__map
 						.mfbm-field__map-inner
 							.mfbm-field__map-items
-								+picture({filename:'top-section-03-base'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'1526.9049'},{height:'970.2761'},{breakpoint:false},{lazyload:true},{retina:false})
+								+picture({filename:'top-section-03-base'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'1526.9049'},{height:'970.2761'},{breakpoint:true},{lazyload:true},{retina:true})
 								+picture({filename:'top-section-03-park-grass'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'314.6831'},{height:'196.3943'},{breakpoint:false},{lazyload:true},{retina:false})
 								+picture({filename:'top-section-03-park-building'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'192.2894'},{height:'156.5765'},{breakpoint:false},{lazyload:true},{retina:false})
 								+picture({filename:'top-section-03-park-people'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'244.9394'},{height:'169.4602'},{breakpoint:false},{lazyload:true},{retina:false})
@@ -150,19 +133,6 @@ block contents
 								+picture({filename:'top-section-03-building-02-over-layer'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'316.7965'},{height:'206.9107'},{breakpoint:false},{lazyload:true},{retina:false})
 								+picture({filename:'top-section-03-building-03'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'259.0139'},{height:'182.5404'},{breakpoint:false},{lazyload:true},{retina:false})
 								+picture({filename:'top-section-03-building-03-over-layer'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'392.6983'},{height:'299.2003'},{breakpoint:false},{lazyload:true},{retina:false})
-
-			section.ep__section.ep__section--sp(data-ep-sp="businessLink")
-				.link-section
-					a(href=root_path + "business.html").link-section__content
-						h2.link-section__title
-							span.link-section__title-large.link-section__title-large--business
-								svg(aria-label="→" viewBox="0 0 193 32")
-									use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-business')
-							span.link-section__title-small
-								| 事業を知る
-						.link-section__arrow
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
 
 
 			section.ep__section#job(data-ep="job" data-pc-href=root_path + "job.html")
@@ -173,7 +143,7 @@ block contents
 						.top-job__lead-content
 							h2.top-job__lead-title
 								+picture({filename:'top-section-04-title'},{type:'svg',fallbackType:''},{alt:'多彩なソリューションで企業と個人を支援する'},{classes:['']},{width:'330.2666'},{height:'267.0786'},{breakpoint:false},{lazyload:true},{retina:false})
-							.top-job__lead-body(data-ep-sp="job2")
+							.top-job__lead-body
 								p
 									| 私たちMFBMは、オフィスビル（ビルオーナー）への価値提供に留まらず、オフィスビルに入居しているテナント企業や働く人々を幅広く支援するソリューションを提供しています。
 								p
@@ -182,50 +152,37 @@ block contents
 					.top-job__peoples-wrapper
 						.top-job__peoples
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'317'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'317'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'150'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-03'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'150'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'375'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-04'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'375'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-05'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'187'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-05'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'187'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-06'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'187'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-06'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'187'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-07'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'187'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-07'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'187'},{breakpoint:true},{lazyload:true},{retina:true})
 
 						.top-job__peoples
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-08'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'375'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-08'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'375'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-09'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-09'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-10'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-10'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'233'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-11'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'150'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-11'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'150'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-12'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'317'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-12'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'317'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-13'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'150'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-13'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'150'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-14'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'317'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
+								+picture({filename:'top-section-04-photo-14'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'317'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 							.top-job__peoples-item
-								+picture({filename:'top-section-04-photo-15'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'188'},{breakpoint:false},{lazyload:true},{retina:true})
-
-			section.ep__section.ep__section--sp(data-ep-sp="jobLink")
-				.link-section
-					a(href=root_path + "job.html").link-section__content
-						h2.link-section__title
-							span.link-section__title-large.link-section__title-large--job
-								svg(aria-label="→" viewBox="0 0 58 32")
-									use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-job')
-							span.link-section__title-small
-								| 仕事を知る
-						.link-section__arrow
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+								+picture({filename:'top-section-04-photo-15'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'467'},{height:'188'},{breakpoint:true},{lazyload:true},{retina:true})
 
 			section.ep__section#project(data-ep="project" data-pc-href=root_path + "project.html")
 
@@ -305,18 +262,6 @@ block contents
 					.top-project__bg
 						+picture({filename:'top-section-05-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			section.ep__section.ep__section--sp(data-ep-sp="projectLink")
-				.link-section
-					a(href=root_path + "project.html").link-section__content
-						h2.link-section__title
-							span.link-section__title-large.link-section__title-large--project
-								svg(aria-label="→" viewBox="0 0 150 32")
-									use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-project')
-							span.link-section__title-small
-								| プロジェクトを知る
-						.link-section__arrow
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
 
 			section.ep__section#person(data-ep="person" data-pc-href=root_path + "person/")
 
@@ -341,19 +286,6 @@ block contents
 								+picture({filename:'person-all-04'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'624'},{height:'519'},{breakpoint:true},{lazyload:true},{retina:true})
 								+picture({filename:'person-all-05'},{type:'webp',fallbackType:'png'},{alt:''},{classes:['']},{width:'397'},{height:'544'},{breakpoint:true},{lazyload:true},{retina:true})
 
-			section.ep__section.ep__section--sp(data-ep-sp="personLink")
-				.link-section
-					a(href=root_path + "person/").link-section__content
-						h2.link-section__title
-							span.link-section__title-large.link-section__title-large--person
-								svg(aria-label="→" viewBox="0 0 159 32")
-									use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-person')
-							span.link-section__title-small
-								| 働く人を知る
-						.link-section__arrow
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-
 
 			section.ep__section#culture(data-ep="culture" data-pc-href=root_path + "culture.html")
 
@@ -367,7 +299,7 @@ block contents
 						.top-culture__copy-list-item
 							+picture({filename:'culture-copy-03'},{type:'svg',fallbackType:''},{alt:'高めあうチーム'},{classes:['']},{width:'54.7092'},{height:'474.9152'},{breakpoint:false},{lazyload:true},{retina:false})
 
-					.top-culture__lead(data-ep-sp="culture2")
+					.top-culture__lead
 						.top-culture__lead-body
 							p 
 								| 個人の強みを活かしながらも、個では達成できない目標をチームで成し遂げる。それが私たちMFBMが目指す姿です。環境変化の激しいVUCA時代に柔軟に対応し、ビジネスシーンに新たな価値を提供し続ける、MFBMのカルチャーの一端を紹介します。
@@ -439,21 +371,7 @@ block contents
 							.top-culture__bg-item.top-culture__bg-item.top-culture__bg-item--circle-graph-02
 								include include/svg/culture-donuts-chart.svg
 
-
-			section.ep__section.ep__section--sp(data-ep-sp="cultureLink")
-				.link-section
-					a(href=root_path + "culture/").link-section__content
-						h2.link-section__title
-							span.link-section__title-large.link-section__title-large--person
-								svg(aria-label="→" viewBox="0 0 190 32")
-									use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-culture')
-							span.link-section__title-small
-								| 社風を知る
-						.link-section__arrow
-							svg(aria-label="→" viewBox="0 0 34 32")
-								use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-
-			section.ep__section#epilogue(data-ep="epilogue")
+			section.ep__section#epilogue(data-ep="epilogue" data-pc-href=root_path + "recruit/")
 
 				.top-epilogue
 					.top-epilogue__lead
@@ -482,7 +400,6 @@ block contents
 								| 新たな未来にともに挑戦しよう！
 					.top-epilogue__bg
 						+picture({filename:'top-section-end-bg'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'750'},{breakpoint:true},{lazyload:true},{retina:true})
-
 
 			section.ep__section#topFooter(data-ep="topFooter")
 				include include/_footer.pug
@@ -519,11 +436,11 @@ block contents
 				a(href="#epilogue").ep__navigation-link
 					span.ep__navigation-link-icon
 					span.ep__navigation-link-text
-						| FOOTER
+						| RECRUIT
 
 			.ep__section-label
 				ul.ep__section-label__links
-					li.ep__section-label__links-item.--active(data-top-to="about")
+					li.ep__section-label__links-item(data-top-to="about")
 						a.ep__section-label__link(href=root_path + "about/")
 							svg(aria-label="ABOUT" viewBox="0 0 143 32")
 								use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-about')
@@ -547,6 +464,10 @@ block contents
 						a.ep__section-label__link(href=root_path + "culture.html")
 							svg(aria-label="CULTURE" viewBox="0 0 190 32")
 								use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-culture')
+					li.ep__section-label__links-item(data-top-to="epilogue")
+						a.ep__section-label__link(href=root_path + "recruit/")
+							svg(aria-label="RECRUIT" viewBox="0 0 190 32")
+								use(xlink:href=assets_path + image_dir + 'sprite.svg#ryumin-recruit')
 				p.ep__section-label__click
 					span.ep__section-label__click-text
 						| CLICK
@@ -559,3 +480,21 @@ block contents
 					|	SCROLL
 
 			.ep__bottom-gradient
+
+
+			button.ep__top-section-5minute(data-modal-trigger="movie01")
+				span.ep__top-section-5minute-image
+					+picture({filename:'top-5-minute'},{type:'svg',fallbackType:''},{alt:'MFBM in 5 minute'},{classes:['']},{width:'186'},{height:'186'},{breakpoint:true},{lazyload:true},{retina:false})
+					+picture({filename:'top-5-minute-lines'},{type:'svg',fallbackType:''},{alt:'MFBM in 5 minute'},{classes:['']},{width:'186'},{height:'186'},{breakpoint:false},{lazyload:true},{retina:false})
+				span.ep__top-section-5minute-image.ep__top-section-5minute-image--invert
+					+picture({filename:'top-5-minute-invert'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'186'},{height:'186'},{breakpoint:false},{lazyload:true},{retina:false})
+					+picture({filename:'top-5-minute-invert-lines'},{type:'svg',fallbackType:''},{alt:''},{classes:['']},{width:'186'},{height:'186'},{breakpoint:false},{lazyload:true},{retina:false})
+
+
+			.modal-movie(data-modal-content="movie01")
+				.modal-movie__inner
+					.modal-movie__content(data-modal-close-exclusion)
+						button.modal-movie__close.modal-close
+							.modal-movie__close-icon
+						video(playsinline poster!=assets_path + image_dir + "movie-01-thumbnail.png" controls preload="none")
+							source(src!=assets_path + image_dir + "movie-01.mp4", type="video/mp4")

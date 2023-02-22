@@ -276,8 +276,6 @@ const topPersonInit = () => {
 				"<25%"
 			);
 	});
-
-	tweenArray.push(topPersonTl);
 };
 
 export { topPersonInit, topPersonTl, spPersonLinkTl };
