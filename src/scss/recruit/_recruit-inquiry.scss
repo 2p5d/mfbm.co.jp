@@ -23,7 +23,7 @@
 		transition: opacity 0.25s ease-in-out;
 		fill: #fff;
 		&:hover {
-			opacity: 0.75;
+			opacity: 0.85;
 		}
 
 		@include mq-down() {
@@ -57,6 +57,10 @@
 		transform: translateY(-50%);
 		right: 3.8rem;
 		width: 2.6rem;
+		transition: transform 0.25s ease-out;
+		html:not(.touch-device) a:hover & {
+			transform: translate(0.5rem, -50%);
+		}
 		@include mq-down() {
 			display: none;
 		}
@@ -74,6 +78,9 @@
 	}
 	&__link--image {
 		border: 1px solid #c6cfd4;
+		&:hover {
+			opacity: 0.7;
+		}
 		img[src*="recruit-link-recnavi"] {
 			width: 27.5rem;
 			@include mq-down() {

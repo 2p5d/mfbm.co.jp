@@ -3,13 +3,41 @@
 
 .top-cover {
 	position: fixed;
-	inset: 0;
+	width: 100vw; // スクロールバー分
+	height: 100%;
+	top: 0;
+	left: 0;
 	background-color: white;
 	z-index: 999999;
-	transition: opacity 1s ease-out, visibility 1s ease-out;
+	opacity: 1;
+	visibility: visible;
 	&.--disable {
+		animation-name: fadeOut;
+		animation-fill-mode: forwards;
+		animation-duration: 1.5s;
+		animation-timing-function: ease-out;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	100% {
 		opacity: 0;
 		visibility: hidden;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 
@@ -21,14 +49,13 @@
 	width: 35rem;
 	z-index: 1;
 	line-height: 0;
-	// opacity: 0;
-	// visibility: hidden;
+	opacity: 0;
+	animation-delay: 0.35s;
+	animation-name: fadeIn;
+	animation-fill-mode: forwards;
+	animation-duration: 1.5s;
+	animation-timing-function: ease-out;
 	@include mq-down() {
 		width: 43.2rem;
-	}
-	transition: opacity 1.25s ease-out, visibility 1.25s ease-out;
-	&.--active {
-		opacity: 1;
-		visibility: visible;
 	}
 }

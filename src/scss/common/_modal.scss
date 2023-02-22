@@ -5,10 +5,27 @@
 	}
 }
 
+/*
+トップのパフェーマンスの関係か、
+モーダル内のweb font表示が遅いという指摘があったので、
+visibility: hidden;で調整した
+*/
+[data-modal-content="menu"] {
+	body.page-top & {
+		position: absolute;
+		display: block;
+		visibility: hidden;
+	}
+	body.page-top .modal & {
+		position: static;
+		visibility: visible;
+	}
+}
+
 .modal {
 	z-index: 99;
 	&.modal--menu {
-		z-index: 9999;
+		z-index: 999999;
 	}
 	&.modal--building,
 	&.modal--solution,

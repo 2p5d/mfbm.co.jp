@@ -1,5 +1,6 @@
 /*  global vars
 ================================================= */
+const pcBreakPoint = "768px";
 const spBreakPoint = "767px";
 const spmql = window.matchMedia(`screen and (max-width: ${spBreakPoint})`);
 const pclgmql = window.matchMedia(
@@ -31,4 +32,18 @@ const setScrollBarWidth = () => {
 		`${scrollbarWidth}px`
 	);
 };
-export { spBreakPoint, spmql, touchDevice, remUnit, header, setScrollBarWidth };
+
+const noscroll = (event) => {
+	event.preventDefault();
+};
+
+export {
+	spBreakPoint,
+	pcBreakPoint,
+	spmql,
+	touchDevice,
+	remUnit,
+	header,
+	setScrollBarWidth,
+	noscroll,
+};

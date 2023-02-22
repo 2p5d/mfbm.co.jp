@@ -33,6 +33,9 @@
 	@include mq-down() {
 		width: 27rem;
 	}
+	a {
+		display: block;
+	}
 	svg {
 		fill: var(--key-color-black);
 	}

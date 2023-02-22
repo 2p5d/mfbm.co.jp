@@ -3,41 +3,336 @@
 
 .culture-hero {
 	position: relative;
+	height: 75rem;
+	overflow: hidden;
+	background-color: var(--key-color-blue);
+	@include mq-down() {
+		height: 80rem;
+	}
 }
 
-// .culture-hero__title {
-// 	position: absolute;
-// 	top: 50%;
-// 	left: 50%;
-// 	transform: translate(-50%, calc(-50% - 3.25rem));
-// 	width: 90.1rem;
-// 	@include mq-down() {
-// 		width: 49.2rem;
-// 		transform: translate(-50%, calc(-50% - 1.75rem));
-// 	}
-// 	> span {
-// 		display: block;
-// 	}
-// }
+.culture-hero__bg-items {
+	--containerWidth: 1400;
+	--containerHeight: 750;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	aspect-ratio: var(--containerWidth) / var(--containerHeight);
+	@include mq-down() {
+		--containerWidth: 750;
+		--containerHeight: 800;
+	}
+	@supports not (aspect-ratio: var(--containerWidth) / var(--containerHeight)) {
+		padding-top: calc((var(--containerHeight) / var(--containerWidth)) * 100%);
+		height: 0;
+	}
+}
 
-// .culture-hero__title-en {
-// 	width: 100%;
-// 	@include mq-down() {
-// 		width: 40.5rem;
-// 		margin-right: auto;
-// 		margin-left: auto;
-// 	}
-// }
+.culture-hero__bg-item {
+	position: absolute;
+	display: block;
 
-// .culture-hero__title-jp {
-// 	position: relative;
-// 	z-index: -1;
-// 	width: 53.3rem;
-// 	margin-top: -2.25rem;
-// 	margin-right: auto;
-// 	margin-left: auto;
-// 	@include mq-down() {
-// 		margin-top: -2rem;
-// 		width: 100%;
-// 	}
-// }
+	&.culture-hero__bg-item--fukidashi-purple-01 {
+		left: containerRatio(120, var(--containerWidth));
+		top: containerRatio(36, var(--containerHeight));
+		width: containerRatio(174.6538, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--circle-graph-01 {
+		left: containerRatio(316, var(--containerWidth));
+		top: containerRatio(-118, var(--containerHeight));
+		width: containerRatio(280, var(--containerWidth));
+		stroke: #ffd6a5;
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--making2-01 {
+		left: containerRatio(631, var(--containerWidth));
+		top: containerRatio(22, var(--containerHeight));
+		width: containerRatio(150, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(130, var(--containerWidth));
+			top: containerRatio(24, var(--containerHeight));
+			width: containerRatio(140, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-sky-blue-01 {
+		left: containerRatio(844, var(--containerWidth));
+		top: containerRatio(45, var(--containerHeight));
+		width: containerRatio(251.1825, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(267.6821, var(--containerWidth));
+			top: containerRatio(114.7502, var(--containerHeight));
+			width: containerRatio(244.0045, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-green-01 {
+		left: containerRatio(1239, var(--containerWidth));
+		top: containerRatio(41, var(--containerHeight));
+		width: containerRatio(207.0404, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(619.8584, var(--containerWidth));
+			top: containerRatio(68.3411, var(--containerHeight));
+			width: containerRatio(170.6869, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--vertical-bar-graph-01 {
+		left: containerRatio(52, var(--containerWidth));
+		top: containerRatio(147, var(--containerHeight));
+		width: containerRatio(62.8073, var(--containerWidth));
+		height: containerRatio(62.8815, var(--containerHeight));
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-deep-green-01 {
+		left: containerRatio(429, var(--containerWidth));
+		top: containerRatio(147, var(--containerHeight));
+		width: containerRatio(142.4506, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(-36.8851, var(--containerWidth));
+			top: containerRatio(172.606, var(--containerHeight));
+			width: containerRatio(142.4506, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--circle-graph-02 {
+		left: containerRatio(1178, var(--containerWidth));
+		top: containerRatio(120, var(--containerHeight));
+		width: containerRatio(190, var(--containerWidth));
+		stroke: #ff6961;
+		@include mq-down() {
+			left: containerRatio(620, var(--containerWidth));
+			top: containerRatio(170, var(--containerHeight));
+			width: containerRatio(210, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-purple-02 {
+		left: containerRatio(873.8835, var(--containerWidth));
+		top: containerRatio(823.2694, var(--containerHeight));
+		width: containerRatio(174.6538, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(875.8835, var(--containerWidth));
+			top: containerRatio(750.2694, var(--containerHeight));
+			width: containerRatio(174.6538, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--annai-01 {
+		left: containerRatio(40, var(--containerWidth));
+		top: containerRatio(290, var(--containerHeight));
+		width: containerRatio(109.9107, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(-5, var(--containerWidth));
+			top: containerRatio(290, var(--containerHeight));
+			width: containerRatio(100, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--circle-graph-03 {
+		left: containerRatio(-50, var(--containerWidth));
+		top: containerRatio(380, var(--containerHeight));
+		width: containerRatio(310, var(--containerWidth));
+		stroke: #c81212;
+		z-index: -1;
+		@include mq-down() {
+			left: containerRatio(-110, var(--containerWidth));
+			top: containerRatio(480.4561, var(--containerHeight));
+			width: containerRatio(300, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--bar-graph-02 {
+		left: containerRatio(833.4913, var(--containerWidth));
+		top: containerRatio(1103.0929, var(--containerHeight));
+		width: containerRatio(187.3475, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--title {
+		left: containerRatio(385, var(--containerWidth));
+		top: containerRatio(269, var(--containerHeight));
+		width: containerRatio(595.7019, var(--containerWidth));
+		@include mq-down() {
+			left: containerRatio(121.054, var(--containerWidth));
+			top: containerRatio(307.5359, var(--containerHeight));
+			width: containerRatio(508.3752, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--drawing-01 {
+		left: containerRatio(990, var(--containerWidth));
+		top: containerRatio(213, var(--containerHeight));
+		width: containerRatio(150, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(142.1616, var(--containerHeight));
+			left: containerRatio(508.7008, var(--containerWidth));
+			width: containerRatio(140, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-pale-blue-01 {
+		left: containerRatio(1186, var(--containerWidth));
+		top: containerRatio(312, var(--containerHeight));
+		width: containerRatio(185.3776, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-sky-blue-02 {
+		left: containerRatio(236, var(--containerWidth));
+		top: containerRatio(434, var(--containerHeight));
+		width: containerRatio(197.7785, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-blue-01 {
+		left: containerRatio(305, var(--containerWidth));
+		top: containerRatio(594, var(--containerHeight));
+		width: containerRatio(174.6538, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(471.9045, var(--containerHeight));
+			left: containerRatio(99.3793, var(--containerWidth));
+			width: containerRatio(159.5473, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--vertical-bar-graph-02 {
+		left: containerRatio(518, var(--containerWidth));
+		top: containerRatio(638, var(--containerHeight));
+		width: containerRatio(83.751, var(--containerWidth));
+		height: containerRatio(78.7781, var(--containerHeight));
+		@include mq-down() {
+			top: containerRatio(681.0408, var(--containerHeight));
+			left: containerRatio(174.2608, var(--containerWidth));
+			// 	width: containerRatio(83.751, var(--containerWidth));
+			// height: containerRatio(78.7781, var(--containerHeight));
+		}
+	}
+
+	&.culture-hero__bg-item.culture-hero__bg-item--otedama {
+		left: containerRatio(590, var(--containerWidth));
+		top: containerRatio(405, var(--containerHeight));
+		width: containerRatio(230, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(430, var(--containerHeight));
+			left: containerRatio(265.1979, var(--containerWidth));
+			width: containerRatio(240, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--bar-graph-01 {
+		left: containerRatio(873, var(--containerWidth));
+		top: containerRatio(656, var(--containerHeight));
+		width: containerRatio(187.3475, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(680.7672, var(--containerHeight));
+			left: containerRatio(510, var(--containerWidth));
+			width: containerRatio(172.0628, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-pale-green-01 {
+		left: containerRatio(925, var(--containerWidth));
+		top: containerRatio(445, var(--containerHeight));
+		width: containerRatio(255.2817, var(--containerWidth));
+		@include mq-down() {
+			top: containerRatio(519.3596, var(--containerHeight));
+			left: containerRatio(500, var(--containerWidth));
+			width: containerRatio(210.7243, var(--containerWidth));
+		}
+	}
+
+	&.culture-hero__bg-item--fukidashi-deep-blue-01 {
+		left: containerRatio(1081.4409, var(--containerWidth));
+		top: containerRatio(653.5504, var(--containerHeight));
+		width: containerRatio(142.4506, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+	&.culture-hero__bg-item--making-01 {
+		left: containerRatio(1205, var(--containerWidth));
+		top: containerRatio(581, var(--containerHeight));
+		width: containerRatio(145.1769, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+	&.culture-hero__bg-item--vertical-bar-graph-03 {
+		left: containerRatio(1263, var(--containerWidth));
+		top: containerRatio(458.9999, var(--containerHeight));
+		width: containerRatio(68.7041, var(--containerWidth));
+		height: containerRatio(72.8546, var(--containerHeight));
+		@include mq-down() {
+			left: containerRatio(630.6848, var(--containerWidth));
+			top: containerRatio(420.527, var(--containerHeight));
+			width: containerRatio(68.7041, var(--containerWidth));
+			height: containerRatio(72.8546, var(--containerHeight));
+		}
+	}
+
+	&.culture-hero__bg-item--bar-graph-03 {
+		left: containerRatio(173, var(--containerWidth));
+		top: containerRatio(216.9999, var(--containerHeight));
+		width: containerRatio(187.3475, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+
+	&.culture-hero__bg-item--walking-01 {
+		left: containerRatio(176, var(--containerWidth));
+		top: containerRatio(580.9999, var(--containerHeight));
+		width: containerRatio(110, var(--containerWidth));
+		@include mq-down() {
+			display: none;
+		}
+	}
+}
+
+/*
+  高さ、幅は親のコンテナーに依存
+*/
+.culture-hero__bg-vertical-bar-graph {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: calc((100% / 5) + 0.1vw);
+	align-items: end;
+	height: 100%;
+	// @include mq-down() {
+	// 	display: none;
+	// }
+}
+
+.culture-hero__bg-vertical-bar-graph-item {
+	height: 100%;
+	&:nth-of-type(1) {
+		background-color: var(--key-color-red);
+		height: 40%;
+	}
+	&:nth-of-type(2) {
+		background-color: #ff848b;
+		height: 65%;
+	}
+	&:nth-of-type(3) {
+		background-color: #7cb8b3;
+	}
+}

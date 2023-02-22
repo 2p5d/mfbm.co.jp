@@ -7,8 +7,7 @@ import { onceTransition, tlOnce } from "./include/onceTransition";
 import { smoothScroll } from "./include/smoothScroll";
 import { accordion } from "./include/accordion";
 import { toggleToTop } from "./include/toggleToTop";
-import { topTest } from "./include/topTest";
-// import "./libs/css_browser_selector.min";
+import "./libs/css_browser_selector.min";
 import {
 	scrollRevealInit,
 	scrollReveal,
@@ -17,9 +16,8 @@ import {
 	scrollRevealGroup,
 	scrollRevealGroups,
 } from "./include/scrollReveal";
-import { topCover, topSections } from "./include/topSections";
-// import { topCover, topSections3 } from "./include/topSections3";
-import { topVideo, video } from "./include/topVideo";
+import { topSections, topCover } from "./include/topSections";
+import { topVideo } from "./include/topVideo";
 
 /* person import */
 import { personIndex } from "./include/personIndex";
@@ -34,6 +32,10 @@ import { about01Slider } from "./include/about01Slider";
 /* business import */
 import { businessHover } from "./include/businessHover";
 
+/* culture import */
+import { cultureHero } from "./include/cultureHero";
+import { cultureContents } from "./include/cultureContents";
+
 window.addEventListener("DOMContentLoaded", resolve);
 
 if (touchDevice) {
@@ -46,10 +48,7 @@ function resolve() {
 }
 
 function init() {
-	if (
-		!document.body.classList.contains("page-top") &&
-		!document.body.classList.contains("page-index_test")
-	) {
+	if (!document.body.classList.contains("page-top")) {
 		onceTransition();
 		tlOnce.play();
 		scrollRevealInit();
@@ -71,9 +70,6 @@ function init() {
 		case document.body.classList.contains("page-top"):
 			top();
 			break;
-		case document.body.classList.contains("page-index_test"):
-			topTest();
-			break;
 		case document.body.classList.contains("page-about01"):
 			about01();
 			break;
@@ -86,6 +82,10 @@ function init() {
 		case document.body.classList.value.includes("page-person0"): // elm.classList.valueで文字列取得してincludes()で部分一致
 			personSingle();
 			break;
+		case document.body.classList.value.includes("page-culture"): // elm.classList.valueで文字列取得してincludes()で部分一致
+			cultureHero();
+			cultureContents();
+			break;
 		default:
 			break;
 	}
@@ -93,21 +93,27 @@ function init() {
 
 /* each page */
 
+import { gsap, ScrollTrigger } from "gsap/all";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+gsap.registerPlugin(DrawSVGPlugin);
+
 // top
 function top() {
-	// video.play();
+	// document.querySelector(".top-cover").remove(); // 開発用
+	topVideo();
+	topCover();
+	topSections();
 
-	if (!spmql.matches) {
-		topCover();
-		topVideo();
-		topSections();
-	} else {
-		topVideo();
-		topCover();
-		// video.play();
-		// document.querySelector(".top-cover").remove(); // 開発用
-	}
-	// topSections3();
+	// if (!spmql.matches) {
+	// 	topCover();
+	// 	topVideo();
+	// 	topSections();
+	// } else {
+	// 	topVideo();
+	// 	topCover();
+	// 	// video.play();
+	// 	// document.querySelector(".top-cover").remove(); // 開発用
+	// }
 }
 
 // about01

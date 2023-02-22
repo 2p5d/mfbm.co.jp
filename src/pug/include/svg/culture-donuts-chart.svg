@@ -1,0 +1,8 @@
+<svg class="donuts-chart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+
+
+ <circle class="target1" r="240" cx="500" cy="500" stroke-width="140" fill="none"/>
+  <!-- <circle class="target2" r="240" stroke="#307d40" cx="500" cy="500" fill="none" />
+  <circle class="target3" r="240" stroke="#304f7d" cx="500" cy="500"  fill="none" /> -->
+
+</svg>

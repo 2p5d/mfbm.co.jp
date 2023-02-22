@@ -52,7 +52,7 @@
 		}
 
 		&:hover {
-			opacity: 0.75;
+			opacity: 0.85;
 		}
 
 		&:visited,
@@ -76,6 +76,10 @@
 		transform: translateY(-50%);
 		width: 3.1rem;
 		fill: #fff;
+		transition: transform 0.25s ease-out;
+		html:not(.touch-device) a:hover & {
+			transform: translate(0.75rem, -50%);
+		}
 		@include mq-down() {
 			display: none;
 		}

@@ -106,8 +106,8 @@
 }
 
 .business-fields__map {
-	--containerWidth: 631;
-	--containerHeight: 497;
+	--containerWidth: 637.9046;
+	--containerHeight: 503.1534;
 	position: relative;
 	aspect-ratio: var(--containerWidth) / var(--containerHeight);
 	@supports not (aspect-ratio: var(--containerWidth) / var(--containerHeight)) {
@@ -152,89 +152,99 @@
 // 	}
 // }
 
-// .business-fields__map-triggers-and-over-images {
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100%;
-// 	button {
-// 		position: absolute;
-// 		display: block;
-// 		opacity: 0;
-// 		&[data-modal-trigger="building"] {
-// 			left: containerRatio(116, var(--containerWidth));
-// 			top: containerRatio(5, var(--containerHeight));
-// 			width: containerRatio(397.3152, var(--containerWidth));
-// 			z-index: 1;
-// 		}
-// 		&[data-modal-trigger="management"] {
-// 			left: containerRatio(0, var(--containerWidth));
-// 			top: containerRatio(45, var(--containerHeight));
-// 			width: containerRatio(631, var(--containerWidth));
-// 		}
-// 		&[data-modal-trigger="solution"] {
-// 			left: containerRatio(365, var(--containerWidth));
-// 			top: containerRatio(0, var(--containerHeight));
-// 			width: containerRatio(224.1585, var(--containerWidth));
-// 		}
-// 	}
-// 	> picture img {
-// 		position: absolute;
-// 		display: block;
-// 		opacity: 0;
-// 		pointer-events: none;
-// 		transition: opacity 0.25s ease-out;
-// 		&[src*="building"] {
-// 			left: containerRatio(114.538, var(--containerWidth));
-// 			top: containerRatio(3.663, var(--containerHeight));
-// 			width: containerRatio(400.8151, var(--containerWidth));
-// 			// z-index: -1;
-// 		}
-// 		&[src*="management"] {
-// 			left: containerRatio(-3.4846, var(--containerWidth));
-// 			top: containerRatio(40, var(--containerHeight));
-// 			width: containerRatio(637.9037, var(--containerWidth));
-// 			z-index: 1;
-// 		}
-// 		&[src*="solution"] {
-// 			left: containerRatio(362.8685, var(--containerWidth));
-// 			top: containerRatio(-3.1874, var(--containerHeight));
-// 			width: containerRatio(229.6047, var(--containerWidth));
-// 			z-index: 2; // 調整
-// 		}
-// 	}
-// 	button:hover + picture img,
-// 	button.--hover + picture img {
-// 		opacity: 1;
-// 	}
-// }
+.business-fields__map-triggers-and-over-images {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	button {
+		position: absolute;
+		display: block;
+		opacity: 0;
+		&[data-modal-trigger="building"] {
+			left: containerRatio(118.7983, var(--containerWidth));
+			top: containerRatio(6.5802, var(--containerHeight));
+			width: containerRatio(399.3151, var(--containerWidth));
+			z-index: 1;
+			-webkit-clip-path: url(#building-mask);
+			clip-path: url(#building-mask);
+		}
+		&[data-modal-trigger="management"] {
+			left: containerRatio(3.5009, var(--containerWidth));
+			top: containerRatio(48.2742, var(--containerHeight));
+			width: containerRatio(630.9036, var(--containerWidth));
+			-webkit-clip-path: url(#management-mask);
+			clip-path: url(#management-mask);
+		}
+		&[data-modal-trigger="solution"] {
+			left: containerRatio(367.6026, var(--containerWidth));
+			top: containerRatio(3.5, var(--containerHeight));
+			width: containerRatio(224.1586, var(--containerWidth));
+			-webkit-clip-path: url(#solution-mask);
+			clip-path: url(#solution-mask);
+		}
+	}
+	> picture img {
+		position: absolute;
+		display: block;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.25s ease-out;
+		&[src*="building-hover"] {
+			left: containerRatio(118.7778, var(--containerWidth));
+			top: containerRatio(6.5928, var(--containerHeight));
+			width: containerRatio(399.3152, var(--containerWidth));
+			// z-index: -1;
+		}
+		&[src*="management-hover"] {
+			left: containerRatio(0, var(--containerWidth));
+			top: containerRatio(44.75, var(--containerHeight));
+			width: containerRatio(637.9037, var(--containerWidth));
+			z-index: 1;
+		}
+		&[src*="solution-hover"] {
+			left: containerRatio(365.6379, var(--containerWidth));
+			top: containerRatio(0, var(--containerHeight));
+			width: containerRatio(229.6047, var(--containerWidth));
+			z-index: 2; // 調整
+		}
+	}
+	button:hover + picture img,
+	button.--hover + picture img {
+		opacity: 1;
+	}
+}
 
-// .business-fields__map-default-images {
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100%;
-// 	pointer-events: none;
-// 	img {
-// 		position: absolute;
-// 		display: block;
-// 		&[src*="building"] {
-// 			left: containerRatio(116, var(--containerWidth));
-// 			top: containerRatio(5, var(--containerHeight));
-// 			width: containerRatio(397.3152, var(--containerWidth));
-// 		}
-// 		&[src*="management"] {
-// 			left: containerRatio(0, var(--containerWidth));
-// 			top: containerRatio(45, var(--containerHeight));
-// 			width: containerRatio(631, var(--containerWidth));
-// 			z-index: 1;
-// 		}
-// 		&[src*="solution"] {
-// 			left: containerRatio(364.7398, var(--containerWidth));
-// 			top: containerRatio(0, var(--containerHeight));
-// 			width: containerRatio(224.1585, var(--containerWidth));
-// 			z-index: 2; // 調整
-// 		}
-// 	}
-// }
+.business-fields__map-default-images {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	img {
+		position: absolute;
+		display: block;
+		&[src*="building"] {
+			left: containerRatio(118.7983, var(--containerWidth));
+			top: containerRatio(6.5802, var(--containerHeight));
+			width: containerRatio(399.3151, var(--containerWidth));
+		}
+		&[src*="management"] {
+			left: containerRatio(3.5009, var(--containerWidth));
+			top: containerRatio(48.2742, var(--containerHeight));
+			width: containerRatio(630.9036, var(--containerWidth));
+			z-index: 1;
+		}
+		&[src*="solution"] {
+			left: containerRatio(367.6026, var(--containerWidth));
+			top: containerRatio(3.5, var(--containerHeight));
+			width: containerRatio(224.1586, var(--containerWidth));
+			z-index: 2; // 調整
+		}
+	}
+}
 
 .business-fields__sp-map-icons {
 	display: none;

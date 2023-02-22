@@ -1,96 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.47 173.04">
-  <g class="culture-making2">
-    <g class="culture-making2-left-hand">
-      <g class="Group_2502" data-name="Group 2502">
-        <g class="Group_2501" data-name="Group 2501">
-          <path class="Path_2545" data-name="Path 2545" d="m96.61,69.67c2.52-1.57,18.32-6.24,17.01-3s1.02-.91,2.6-.79c1.57.12,3,3.47,1.81,5.89s-4.44,6.14-8.65,4.33c-4.21-1.81-8.44,2.35-8.44,2.35l-4.32-8.78Z" fill="#fff"/>
-        </g>
-      </g>
-      <g class="Group_2503" data-name="Group 2503">
-        <path class="Path_2546" data-name="Path 2546" d="m58.2,38.19c14.15,10.21,17.06,22.74,21.54,27.37.85.88,20.54-2.56,20.54-2.56l2.1,20.31s-20.83,3.99-24,5.2c-3.17,1.21-18.07-10.26-18.07-10.26" fill="#bfcce0"/>
-      </g>
-    </g>
-    <g class="culture-making2-body">
-      <g class="Group_2495" data-name="Group 2495">
-        <g class="Group_2492" data-name="Group 2492">
-          <path class="Path_2538" data-name="Path 2538" d="m59.29,173.04v-14.82h19.04c.45,5.11,7.23,6.21,10.25,7.41,3.02,1.19,3.77,7.41,3.77,7.41h-33.06Z" fill="#000f3c"/>
-        </g>
-      </g>
-      <g class="Group_2499" data-name="Group 2499">
-        <g class="Group_2496" data-name="Group 2496">
-          <path class="Path_2541" data-name="Path 2541" d="m0,153.1v-11.58h14.82v19.04c-6.7,6.38,4.9,5.5,5,8.75.08,2.64.08,3.47.08,3.47,0,0-12.89,1.66-16.39-3.47-2.12-3.21-3.33-6.94-3.5-10.79v-5.43Z" fill="#000f3c"/>
-        </g>
-      </g>
-      <g class="Group_2500" data-name="Group 2500">
-        <path class="Path_2544" data-name="Path 2544" d="m11.77,97.7l29.11-60.29,23.44,10.38,9.17,53.08-61.72-3.18Z" fill="#aeaeae"/>
-      </g>
-      <path class="Path_2547" data-name="Path 2547" d="m14.01,105.57s-4.45,3.02-2.92-30.17c1.53-33.19,25.79-41.68,34.09-41.68,8.3,0,14.79,5.28,17.95,8.88,3.16,3.59,6.85,58.54,6.85,58.54l-55.96,4.42Z" fill="#fff"/>
-      <path class="Path_2549" data-name="Path 2549" d="m34.01,127.96s-.85,8.98-5.74,11.57c-4.83,2.57-14.26,1.99-14.26,1.99v21.9c8.64,6.3,19.07,9.67,29.76,9.61,18.42,0,24.58-45.08,24.58-45.08h-34.34Z" fill="#000f3c"/>
-      <rect class="Rectangle_369" data-name="Rectangle 369" x="37.33" y="80.63" width="32.64" height="20.53" fill="#bfcce0"/>
-      <g class="Group_2507" data-name="Group 2507">
-        <path class="Path_2550" data-name="Path 2550" d="m72.7,102.47l.5-3.8s-7.29-52.89-10.07-56.05c-1.47-1.66-3.13-3.15-4.94-4.43-10.47,18.09-4.31,49.24,14.51,64.28Z" fill="#bfcce0"/>
-      </g>
-      <path class="Path_2552" data-name="Path 2552" d="m11.32,102.82c1.49,6.03,3.89,11.79,7.12,17.09,46.26-7.67,42.49-64.56,18.77-84.58-10.49,3.53-26.83,14.16-27.96,40.05-.75,17.06,1.88,26.71,2.06,27.43Z" fill="#bfcce0"/>
-      <path class="Path_2551" data-name="Path 2551" d="m57.3,97.7c17.81,0,22.79,1.74,27.41,7.48,4.8,5.96,2.46,21.32,2.46,21.32l-4.45,31.73h-25.65v-24.36c-41.65,11.09-45.97-36.18-45.97-36.18h46.2Z" fill="#000f3c"/>
-    </g>
-    <g class="culture-making2-head">
-      <g class="Group_2506" data-name="Group 2506">
-        <g class="Group_2504" data-name="Group 2504">
-          <path class="Ellipse_180" data-name="Ellipse 180" d="m39.62,17.99c0,4.84,3.92,12.63,8.76,12.63,4.84,0,8.76-7.79,8.76-12.63s-3.92-8.76-8.76-8.76-8.76,3.92-8.76,8.76Z" fill="#fff"/>
-        </g>
-      </g>
-      <g>
-        <path d="m59.58,14.13c0-7.13-5.01-12.9-11.2-12.9-6.19,0-11.2,5.78-11.2,12.9h22.4Z" fill="#c81212"/>
-        <g>
-          <line x1="50.03" y1="10.97" x2="46.73" y2="10.97" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".87"/>
-          <line x1="48.38" y1="12.5" x2="48.38" y2="9.43" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".87"/>
-        </g>
-        <g>
-          <line x1="55.73" y1="11.87" x2="51.38" y2="11.87" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
-          <line x1="55.73" y1="10.23" x2="51.38" y2="10.23" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
-          <g>
-            <line x1="45.38" y1="11.87" x2="41.03" y2="11.87" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
-            <line x1="45.38" y1="10.23" x2="41.03" y2="10.23" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 153.69 201.91">
+  <g>
+    <g class="culture-making2">
+      <g class="culture-making2-left-hand">
+        <g class="Group_2502" data-name="Group 2502">
+          <g class="Group_2501" data-name="Group 2501">
+            <path class="Path_2545" data-name="Path 2545" d="m123.54,94.18c2.52-1.57,18.32-6.24,17.01-3s1.02-.91,2.6-.79c1.57.12,3,3.47,1.81,5.89s-4.44,6.14-8.65,4.33c-4.21-1.81-8.44,2.35-8.44,2.35l-4.32-8.78Z" fill="#fff"/>
           </g>
         </g>
-        <rect x="36.28" y="13.19" width="24.19" height="2.08" transform="translate(96.76 28.47) rotate(-180)" fill="#c81212"/>
-      </g>
-    </g>
-    <g class="culture-making2-structure">
-      <g class="Group_2509" data-name="Group 2509">
-        <rect class="Rectangle_370" data-name="Rectangle 370" x="78.85" y="0" width="29.69" height="29.69" fill="#ea615d"/>
-        <g class="Group_2508" data-name="Group 2508">
-          <rect class="Rectangle_371" data-name="Rectangle 371" x="95.9" y="8.25" width="4.4" height="4.4" fill="#c81212"/>
-          <rect class="Rectangle_372" data-name="Rectangle 372" x="87.1" y="8.25" width="4.4" height="4.4" fill="#c81212"/>
-          <rect class="Rectangle_373" data-name="Rectangle 373" x="95.9" y="17.05" width="4.4" height="4.4" fill="#c81212"/>
-          <rect class="Rectangle_374" data-name="Rectangle 374" x="87.1" y="17.05" width="4.4" height="4.4" fill="#c81212"/>
+        <g class="Group_2503" data-name="Group 2503">
+          <path class="Path_2546" data-name="Path 2546" d="m85.13,62.71c14.15,10.21,17.06,22.74,21.54,27.37.85.88,20.54-2.56,20.54-2.56l2.1,20.31s-20.83,3.99-24,5.2c-3.17,1.21-18.07-10.26-18.07-10.26" fill="#bfcce0"/>
         </g>
       </g>
-      <g class="Group_2511" data-name="Group 2511">
-        <rect class="Rectangle_376" data-name="Rectangle 376" x="72.32" y="29.65" width="42.76" height="42.76" fill="#c81212"/>
-        <g class="Group_2510" data-name="Group 2510">
-          <rect class="Rectangle_377" data-name="Rectangle 377" x="100.29" y="48.83" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_378" data-name="Rectangle 378" x="91.5" y="48.83" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_379" data-name="Rectangle 379" x="100.29" y="57.63" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_380" data-name="Rectangle 380" x="91.5" y="57.63" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_381" data-name="Rectangle 381" x="82.71" y="48.83" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_382" data-name="Rectangle 382" x="82.71" y="57.63" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_383" data-name="Rectangle 383" x="100.29" y="40.03" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_384" data-name="Rectangle 384" x="91.5" y="40.03" width="4.4" height="4.4" fill="#ea615d"/>
-          <rect class="Rectangle_385" data-name="Rectangle 385" x="82.71" y="40.03" width="4.4" height="4.4" fill="#ea615d"/>
+      <g class="culture-making2-body">
+        <g class="Group_2495" data-name="Group 2495">
+          <g class="Group_2492" data-name="Group 2492">
+            <path class="Path_2538" data-name="Path 2538" d="m86.23,197.56v-14.82h19.04c.45,5.11,7.23,6.21,10.25,7.41,3.02,1.19,3.77,7.41,3.77,7.41h-33.06Z" fill="#000f3c"/>
+          </g>
+        </g>
+        <g class="Group_2499" data-name="Group 2499">
+          <g class="Group_2496" data-name="Group 2496">
+            <path class="Path_2541" data-name="Path 2541" d="m26.93,177.62v-11.58h14.82v19.04c-6.7,6.38,4.9,5.5,5,8.75.08,2.64.08,3.47.08,3.47,0,0-12.89,1.66-16.39-3.47-2.12-3.21-3.33-6.94-3.5-10.79v-5.43Z" fill="#000f3c"/>
+          </g>
+        </g>
+        <g class="Group_2500" data-name="Group 2500">
+          <path class="Path_2544" data-name="Path 2544" d="m38.7,122.22l29.11-60.29,23.44,10.38,9.17,53.08-61.72-3.18Z" fill="#aeaeae"/>
+        </g>
+        <path class="Path_2547" data-name="Path 2547" d="m40.95,130.09s-4.45,3.02-2.92-30.17c1.53-33.19,25.79-41.68,34.09-41.68,8.3,0,14.79,5.28,17.95,8.88,3.16,3.59,6.85,58.54,6.85,58.54l-55.96,4.42Z" fill="#fff"/>
+        <path class="Path_2549" data-name="Path 2549" d="m60.94,152.48s-.85,8.98-5.74,11.57c-4.83,2.57-14.26,1.99-14.26,1.99v21.9c8.64,6.3,19.07,9.67,29.76,9.61,18.42,0,24.58-45.08,24.58-45.08h-34.34Z" fill="#000f3c"/>
+        <rect class="Rectangle_369" data-name="Rectangle 369" x="64.27" y="105.14" width="32.64" height="20.53" fill="#bfcce0"/>
+        <g class="Group_2507" data-name="Group 2507">
+          <path class="Path_2550" data-name="Path 2550" d="m99.64,126.98l.5-3.8s-7.29-52.89-10.07-56.05c-1.47-1.66-3.13-3.15-4.94-4.43-10.47,18.09-4.31,49.24,14.51,64.28Z" fill="#bfcce0"/>
+        </g>
+        <path class="Path_2552" data-name="Path 2552" d="m38.25,127.34c1.49,6.03,3.89,11.79,7.12,17.09,46.26-7.67,42.49-64.56,18.77-84.58-10.49,3.53-26.83,14.16-27.96,40.05-.75,17.06,1.88,26.71,2.06,27.43Z" fill="#bfcce0"/>
+        <path class="Path_2551" data-name="Path 2551" d="m84.23,122.22c17.81,0,22.79,1.74,27.41,7.48,4.8,5.96,2.46,21.32,2.46,21.32l-4.45,31.73h-25.65v-24.36c-41.65,11.09-46.78-36.18-46.78-36.18h47.01Z" fill="#000f3c"/>
+      </g>
+      <g class="culture-making2-head">
+        <g class="Group_2506" data-name="Group 2506">
+          <g class="Group_2504" data-name="Group 2504">
+            <path class="Ellipse_180" data-name="Ellipse 180" d="m66.56,42.5c0,4.84,3.92,12.63,8.76,12.63,4.84,0,8.76-7.79,8.76-12.63s-3.92-8.76-8.76-8.76-8.76,3.92-8.76,8.76Z" fill="#fff"/>
+          </g>
+        </g>
+        <g>
+          <path d="m86.51,38.64c0-7.13-5.01-12.9-11.2-12.9-6.19,0-11.2,5.78-11.2,12.9h22.4Z" fill="#c81212"/>
+          <g>
+            <line x1="76.96" y1="35.48" x2="73.66" y2="35.48" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".87"/>
+            <line x1="75.31" y1="37.01" x2="75.31" y2="33.95" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".87"/>
+          </g>
+          <g>
+            <line x1="82.66" y1="36.38" x2="78.31" y2="36.38" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
+            <line x1="82.66" y1="34.74" x2="78.31" y2="34.74" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
+            <g>
+              <line x1="72.31" y1="36.38" x2="67.96" y2="36.38" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
+              <line x1="72.31" y1="34.74" x2="67.96" y2="34.74" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width=".61"/>
+            </g>
+          </g>
+          <rect x="63.21" y="37.71" width="24.19" height="2.08" transform="translate(150.62 77.49) rotate(-180)" fill="#c81212"/>
         </g>
       </g>
-    </g>
-    <g class="culture-making2-right-hand">
-      <g class="Group_2514" data-name="Group 2514">
-        <g class="Group_2513" data-name="Group 2513">
-          <path class="Path_2553" data-name="Path 2553" d="m60.39,75.03c1.8-2.36,13.64-12.11,14.85-8.83.21.57.43,1.06,1.93.62s7.65-.28,8.35,2.32c1.21,4.48-4.85,7.8-9.43,7.6-4.58-.21-8.56,4.97-8.56,4.97l-7.15-6.68Z" fill="#fff"/>
+      <g class="culture-making2-structure">
+        <g class="Group_2509" data-name="Group 2509">
+          <rect class="Rectangle_370" data-name="Rectangle 370" x="105.79" y="24.51" width="29.69" height="29.69" fill="#ea615d"/>
+          <g class="Group_2508" data-name="Group 2508">
+            <rect class="Rectangle_371" data-name="Rectangle 371" x="122.83" y="32.76" width="4.4" height="4.4" fill="#c81212"/>
+            <rect class="Rectangle_372" data-name="Rectangle 372" x="114.04" y="32.76" width="4.4" height="4.4" fill="#c81212"/>
+            <rect class="Rectangle_373" data-name="Rectangle 373" x="122.83" y="41.56" width="4.4" height="4.4" fill="#c81212"/>
+            <rect class="Rectangle_374" data-name="Rectangle 374" x="114.04" y="41.56" width="4.4" height="4.4" fill="#c81212"/>
+          </g>
+        </g>
+        <g class="Group_2511" data-name="Group 2511">
+          <rect class="Rectangle_376" data-name="Rectangle 376" x="99.25" y="54.16" width="42.76" height="42.76" fill="#c81212"/>
+          <g class="Group_2510" data-name="Group 2510">
+            <rect class="Rectangle_377" data-name="Rectangle 377" x="127.23" y="73.34" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_378" data-name="Rectangle 378" x="118.43" y="73.34" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_379" data-name="Rectangle 379" x="127.23" y="82.14" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_380" data-name="Rectangle 380" x="118.43" y="82.14" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_381" data-name="Rectangle 381" x="109.64" y="73.34" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_382" data-name="Rectangle 382" x="109.64" y="82.14" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_383" data-name="Rectangle 383" x="127.23" y="64.54" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_384" data-name="Rectangle 384" x="118.43" y="64.54" width="4.4" height="4.4" fill="#ea615d"/>
+            <rect class="Rectangle_385" data-name="Rectangle 385" x="109.64" y="64.54" width="4.4" height="4.4" fill="#ea615d"/>
+          </g>
         </g>
       </g>
-      <g class="Group_2515" data-name="Group 2515">
-        <path class="Path_2554" data-name="Path 2554" d="m33.45,75.66c-.58,6.27,3.28,12.98,9.47,13.96,6.19.98,30.44-6.04,30.44-6.04l-6.79-16.6s-32.53,2.41-33.11,8.69Z" fill="#bfcce0"/>
+      <g class="culture-making2-right-hand">
+        <g class="Group_2514" data-name="Group 2514">
+          <g class="Group_2513" data-name="Group 2513">
+            <path class="Path_2553" data-name="Path 2553" d="m87.33,99.55c1.8-2.36,13.64-12.11,14.85-8.83.21.57.43,1.06,1.93.62s7.65-.28,8.35,2.32c1.21,4.48-4.85,7.8-9.43,7.6-4.58-.21-8.56,4.97-8.56,4.97l-7.15-6.68Z" fill="#fff"/>
+          </g>
+        </g>
+        <g class="Group_2515" data-name="Group 2515">
+          <path class="Path_2554" data-name="Path 2554" d="m60.39,100.17c-.58,6.27,3.28,12.98,9.47,13.96,6.19.98,30.44-6.04,30.44-6.04l-6.79-16.6s-32.53,2.41-33.11,8.69Z" fill="#bfcce0"/>
+        </g>
       </g>
+      <rect width="153.69" height="201.91" fill="none"/>
     </g>
   </g>
 </svg>
