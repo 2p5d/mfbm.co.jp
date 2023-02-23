@@ -63,6 +63,12 @@
 	@include mq-down() {
 		display: none;
 	}
+	// svg {
+	// 	transition: transform 0.125s ease-out;
+	// 	a:hover & {
+	// 		transform: translateX(1em);
+	// 	}
+	// }
 }
 
 .about-index__item-icon-sp {
@@ -79,6 +85,9 @@
 }
 
 .about-index__item-bg {
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
 	img {
 		display: block;
 		width: 100%;

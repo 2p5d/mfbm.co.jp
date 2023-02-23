@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger, Observer);
 		---------- prologue ----------
 	*/
 
-let mfbmFieldTl, spBusiness2Tl, spBusinessLinkTl;
+let mfbmFieldTl;
 
 const mfbmFieldInit = () => {
 	let mm = gsap.matchMedia();
@@ -20,23 +20,22 @@ const mfbmFieldInit = () => {
 			})
 			.to("#business", {
 				autoAlpha: 1,
+				force3D: true,
 			})
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-building']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(-7);
-					},
+					y: -100,
 				},
 				{
-					duration: 1,
+					duration: 1.75,
 					ease: "power2.inOut",
 					autoAlpha: 1,
 					y: 0,
 					force3D: true,
 				},
-				"<50%"
+				"<35%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-grass']",
@@ -44,11 +43,12 @@ const mfbmFieldInit = () => {
 					autoAlpha: 0,
 				},
 				{
-					duration: 0.65,
-					ease: "power2.out",
+					duration: 1,
+					ease: "power2.inOut",
 					autoAlpha: 1,
+					force3D: true,
 				},
-				"<25%"
+				"<50%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-people']",
@@ -56,19 +56,18 @@ const mfbmFieldInit = () => {
 					autoAlpha: 0,
 				},
 				{
-					duration: 0.65,
-					ease: "power2.out",
+					duration: 1,
+					ease: "power2.inOut",
 					autoAlpha: 1,
+					force3D: true,
 				},
-				"<25%"
+				"<75%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-building-02']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(-7);
-					},
+					y: -100,
 				},
 				{
 					duration: 1.5,
@@ -77,15 +76,13 @@ const mfbmFieldInit = () => {
 					y: 0,
 					force3D: true,
 				},
-				"<50%"
+				"<10%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-building-03']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(-7);
-					},
+					y: -100,
 				},
 				{
 					duration: 0.85,
@@ -113,7 +110,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -127,7 +124,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__lead-body p",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -159,50 +156,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__map img[src*='top-section-03-park-building']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(-7);
-					},
-				},
-				{
-					duration: 1,
-					ease: "power2.inOut",
-					autoAlpha: 1,
-					y: 0,
-					force3D: true,
-				},
-				"<50%"
-			)
-			.fromTo(
-				".mfbm-field__map img[src*='top-section-03-park-grass']",
-				{
-					autoAlpha: 0,
-				},
-				{
-					duration: 0.65,
-					ease: "power2.out",
-					autoAlpha: 1,
-				},
-				"<25%"
-			)
-			.fromTo(
-				".mfbm-field__map img[src*='top-section-03-park-people']",
-				{
-					autoAlpha: 0,
-				},
-				{
-					duration: 0.65,
-					ease: "power2.out",
-					autoAlpha: 1,
-				},
-				"<25%"
-			)
-			.fromTo(
-				".mfbm-field__map img[src*='top-section-03-building-02']",
-				{
-					autoAlpha: 0,
-					y: () => {
-						return remUnit(-7);
-					},
+					y: -100,
 				},
 				{
 					duration: 1.5,
@@ -211,18 +165,57 @@ const mfbmFieldInit = () => {
 					y: 0,
 					force3D: true,
 				},
+				"<25%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-grass']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 0.85,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					force3D: true,
+				},
 				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-people']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 1,
+					ease: "power2.inOut",
+					autoAlpha: 0.85,
+					force3D: true,
+				},
+				"<75%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-building-02']",
+				{
+					autoAlpha: 0,
+					y: -100,
+				},
+				{
+					duration: 1.25,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<5%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-building-03']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(-7);
-					},
+					y: -100,
 				},
 				{
-					duration: 0.85,
+					duration: 1,
 					ease: "power2.inOut",
 					autoAlpha: 1,
 					y: 0,
@@ -249,7 +242,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -260,50 +253,50 @@ const mfbmFieldInit = () => {
 				"<50%"
 			);
 
-		spBusiness2Tl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".mfbm-field__lead-body", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".mfbm-field__lead-body p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spBusiness2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".mfbm-field__lead-body", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".mfbm-field__lead-body p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: 60,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<75%"
+		// 	);
 
-		spBusinessLinkTl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='businessLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='businessLink'] .link-section__title, [data-ep-sp='businessLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spBusinessLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='businessLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='businessLink'] .link-section__title, [data-ep-sp='businessLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<75%"
+		// 	);
 	});
 };
 
-export { mfbmFieldInit, mfbmFieldTl, spBusiness2Tl, spBusinessLinkTl };
+export { mfbmFieldInit, mfbmFieldTl };

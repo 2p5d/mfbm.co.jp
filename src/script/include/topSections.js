@@ -124,7 +124,7 @@ function topSections() {
 					left: "0",
 					width: "100%",
 					height: "100vh",
-					height: "100dvh",
+					height: "100dvh", // css側に書いたからこのままでもいいが、フォールバックが上書きされ、未対応ブラウザはプロパティが設定されない
 					autoAlpha: 0,
 				});
 			});
@@ -190,6 +190,15 @@ function topSections() {
 	}
 	animationsInit();
 	sectionLinksInit();
+
+	if (!spmql.matches) {
+		/*
+		pcSectionTransition（）の中でz-index1が基準になるので、背景動画も初期設定を合わせる
+	*/
+		gsap.set(".ep__01-02-bg", {
+			zIndex: 1,
+		});
+	}
 
 	const sectionLinkArrowTl = gsap
 		.timeline({
@@ -300,17 +309,29 @@ function topSections() {
 					ターゲット（次）のセクションをフェードインできないので、カレント（前）のセクションをフェードアウトする
 				*/
 
-					gsap
-						.timeline()
-						.set(".ep__01-02-bg", {
-							zIndex: 1,
-						})
-						.to(getSection(currentSectionId), {
-							duration: 1,
-							autoAlpha: 0,
-							ease: "power2.out",
-						});
+					gsap.to(getSection(currentSectionId), {
+						duration: 1,
+						autoAlpha: 0,
+						ease: "power2.out",
+					});
 				}
+
+				if (
+					targetSectionId != "prologue" &&
+					currentSectionId != "prologue" &&
+					currentSectionId != "prologue2"
+				) {
+					gsap.set(".ep__01-02-bg", {
+						visibility: "hidden",
+						onComplete: () => {
+							gsap.set(".ep__01-02-bg", {
+								delay: 1,
+								visibility: "",
+							});
+						},
+					});
+				}
+
 				/*
 					プロローグからのジャンプ時にはフェードアウト（プロローグのトランジション対象なので戻すのは必要無い）
 				*/
@@ -432,6 +453,9 @@ function topSections() {
 			case "prologue":
 				if (!firstLoad) {
 					firstLoad = true;
+					gsap.set("#prologue", {
+						zIndex: 1,
+					});
 				} else {
 					if (direction == 1) {
 						toggleNavigation(sectionId);

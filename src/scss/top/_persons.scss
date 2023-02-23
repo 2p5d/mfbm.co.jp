@@ -12,6 +12,7 @@
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+	will-change: clip-path;
 	@include mq-down() {
 		// visibility: hidden; // 開発用
 	}
@@ -21,6 +22,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	will-change: clip-path;
 	img {
 		object-fit: cover;
 		object-position: top;
@@ -37,6 +39,7 @@
 	height: 100%;
 	background-color: var(--key-color-blue);
 	overflow: hidden;
+	will-change: opacity;
 }
 
 // .persons__bg-content {
@@ -75,6 +78,7 @@
 	img {
 		position: absolute;
 		display: block;
+		will-change: transform;
 		&[src*="person-all-01"] {
 			left: containerRatio(39.7299, var(--containerWidth));
 			top: containerRatio(48, var(--containerHeight));
@@ -135,6 +139,7 @@
 	z-index: 1;
 	height: calc(100% - var(--person-all-title-bottom-margin));
 	bottom: var(--person-all-title-bottom-margin);
+	will-change: opacity;
 	@include mq-ratio("16-9") {
 		top: 0;
 		bottom: auto;
@@ -155,6 +160,7 @@
 	height: 100%;
 	z-index: -1;
 	background-color: white;
+	will-change: clip-path;
 }
 
 .persons__title-text {

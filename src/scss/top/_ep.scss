@@ -31,7 +31,7 @@
 .ep__section {
 	height: 100vh;
 	height: 100dvh;
-
+	will-change: opacity;
 	// &.ep__section--sp {
 	// 	display: none;
 	// 	@include mq-down() {
@@ -76,7 +76,7 @@
 		height: calc(100dvh + (var(--top-slide-01-filter-value) * 2));
 	}
 
-	z-index: -1;
+	z-index: -1; // js側でz-indexを1に書き換える
 	will-change: filter;
 	pointer-events: none;
 	// filter: blur(var(--top-slide-01-filter-value)); // 開発用
@@ -218,7 +218,8 @@
 	background-color: #c81212;
 	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 	color: white;
-	transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
+	// will-change: opacity;
+	// transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
 	@include mq-down() {
 		z-index: 99;
 		// display: none;
@@ -239,10 +240,10 @@
 			background-color: rgba(0, 15, 60, 0.75);
 		}
 	}
-	&.--disable {
-		opacity: 0;
-		visibility: hidden;
-	}
+	// &.--disable {
+	// 	opacity: 0;
+	// 	visibility: hidden;
+	// }
 }
 
 .ep__section-label__links {
@@ -394,6 +395,8 @@
 	transform: rotate(-40deg);
 	transform-origin: bottom right;
 	@include mq-down() {
+		top: auto;
+		bottom: 0.2rem;
 		// width: 10.3rem;
 		width: 0.2rem;
 	}

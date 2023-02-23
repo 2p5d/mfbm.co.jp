@@ -135,22 +135,31 @@
 	margin-left: auto;
 	color: white !important;
 	text-align: center;
+	border: 0.2rem solid transparent;
 	background-color: var(--job-sections__item--bm-key-color);
-	transition: opacity 0.25s ease-out;
+	transition: color 0.25s ease-out, border-color 0.25s ease-out,
+		background-color 0.25s ease-out;
 	@include mq-down() {
 		--job-sections__item-footer__button-icon-width: 2.4rem;
 		width: 100%;
 		line-height: 11rem;
 		margin-top: 10rem;
 	}
-	&:hover {
-		opacity: 0.85;
-	}
 	.job-sections__item.job-sections__item--bm & {
 		background-color: var(--job-sections__item--bm-key-color);
+		&:hover {
+			background-color: white;
+			color: var(--job-sections__item--bm-key-color) !important;
+			border-color: var(--job-sections__item--bm-key-color);
+		}
 	}
 	.job-sections__item.job-sections__item--ss & {
 		background-color: var(--job-sections__item--ss-key-color);
+		&:hover {
+			background-color: white;
+			color: var(--job-sections__item--ss-key-color) !important;
+			border-color: var(--job-sections__item--ss-key-color);
+		}
 	}
 }
 

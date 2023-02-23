@@ -230,7 +230,7 @@ const prologueInit = () => {
 			autoAlpha: 1,
 		})
 		.to([".top-lead__title img", ".top-lead__body"], {
-			y: "10vh",
+			y: 40,
 			autoAlpha: 0,
 		})
 		.to(
@@ -277,7 +277,7 @@ const prologueInit = () => {
 		.fromTo(
 			[".top-lead__title img", ".top-lead__body"],
 			{
-				y: "10vh",
+				y: 60,
 				autoAlpha: 0,
 			},
 			{

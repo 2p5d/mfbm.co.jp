@@ -3,6 +3,24 @@
 
 .about-index(data-scroll-reveal-group)
 
+	if key !== "about02"
+
+		.about-index__item(data-scroll-reveal-group-item)
+			a(href=root_path + "about/about02.html") 
+				.about-index__item-content
+					h3.about-index__item-title
+						| ブランドビジョン
+					p.about-index__item-text
+						| ビジネスシーンの明日を変えていく
+					.about-index__item-icon
+						svg(aria-label="→" viewBox="0 0 34 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
+					.about-index__item-icon-sp 
+						svg(aria-label="→" viewBox="0 0 35 32")
+							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
+				.about-index__item-bg
+					+picture({filename:'about-index-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
+
 	if key !== "about01"
 
 		.about-index__item(data-scroll-reveal-group-item)
@@ -22,24 +40,6 @@
 							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
 				.about-index__item-bg
 					+picture({filename:'about-index-01'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
-
-	if key !== "about02"
-
-		.about-index__item(data-scroll-reveal-group-item)
-			a(href=root_path + "about/about02.html") 
-				.about-index__item-content
-					h3.about-index__item-title
-						| ブランドビジョン
-					p.about-index__item-text
-						| ビジネスシーンの明日を変えていく
-					.about-index__item-icon
-						svg(aria-label="→" viewBox="0 0 34 32")
-							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-big')
-					.about-index__item-icon-sp 
-						svg(aria-label="→" viewBox="0 0 35 32")
-							use(xlink:href=assets_path + image_dir + 'sprite.svg#arrow-small')
-				.about-index__item-bg
-					+picture({filename:'about-index-02'},{type:'webp',fallbackType:'jpg'},{alt:''},{classes:['']},{width:'1400'},{height:'300'},{breakpoint:true},{lazyload:true},{retina:true})
 
 	if key !== "about03"
 

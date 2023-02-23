@@ -27,6 +27,7 @@
 	width: 37.9rem;
 	margin-right: auto;
 	margin-left: auto;
+	will-change: transform;
 	@include mq-down() {
 		width: 40rem;
 	}
@@ -46,6 +47,9 @@
 			line-height: 2;
 			margin-top: 3.2rem;
 		}
+	}
+	p {
+		will-change: transform;
 	}
 	p + p {
 		margin-top: 2.25em;

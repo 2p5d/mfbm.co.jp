@@ -39,13 +39,13 @@ const topFooterInit = () => {
 
 	sectionScrollTween = gsap.to(".ep__section-scroll", {
 		paused: true,
-		duration: 0.5,
+		duration: 0.35,
 		autoAlpha: 0,
 		ease: "power2.out",
 	});
 	sectionBottomGradientTween = gsap.to(".ep__bottom-gradient", {
 		paused: true,
-		duration: 0.5,
+		duration: 0.35,
 		autoAlpha: 0,
 		ease: "power2.out",
 	});
@@ -62,7 +62,6 @@ const topFooterInit = () => {
 			sectionBottomGradientTween.restart();
 		},
 		onLeaveBack: () => {
-			console.log("test");
 			/*
 				pc・sp関数切替
 			*/

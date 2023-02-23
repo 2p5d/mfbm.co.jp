@@ -19,9 +19,7 @@ const epilogueInit = () => {
 			".top-epilogue__lead-title",
 			{
 				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
+				y: 60,
 			},
 			{
 				duration: 1,
@@ -35,9 +33,7 @@ const epilogueInit = () => {
 			".top-epilogue__lead-body p",
 			{
 				autoAlpha: 0,
-				y: () => {
-					return remUnit(3);
-				},
+				y: 60,
 			},
 			{
 				duration: 1.5,

@@ -3,7 +3,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 
-let topJobTl, spJob2Tl, spJobLinkTl;
+let topJobTl;
 
 const topJobInit = () => {
 	let mm = gsap.matchMedia();
@@ -21,9 +21,7 @@ const topJobInit = () => {
 				".top-job__peoples-item img",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(3);
-					},
+					y: 50,
 				},
 				{
 					duration: 0.75,
@@ -35,7 +33,7 @@ const topJobInit = () => {
 						each: 0.1,
 						from: "random",
 						// grid: "auto",
-						ease: "power2.in",
+						ease: "power1.in",
 					},
 				},
 				"<25%"
@@ -57,7 +55,7 @@ const topJobInit = () => {
 				".top-job__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -71,7 +69,7 @@ const topJobInit = () => {
 				".top-job__lead-body p",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -97,9 +95,7 @@ const topJobInit = () => {
 				".top-job__peoples-item img",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(3);
-					},
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -108,10 +104,10 @@ const topJobInit = () => {
 					y: 0,
 					stagger: {
 						// wrap advanced options in an object
-						each: 0.1,
+						each: 0.11,
 						from: "random",
 						// grid: "auto",
-						ease: "power2.in",
+						ease: "power1.in",
 					},
 				},
 				"<25%"
@@ -133,7 +129,7 @@ const topJobInit = () => {
 				".top-job__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 40,
 				},
 				{
 					duration: 0.75,
@@ -144,50 +140,50 @@ const topJobInit = () => {
 				"<50%"
 			);
 
-		spJob2Tl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".top-job__lead-body", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".top-job__lead-body p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spJob2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".top-job__lead-body", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".top-job__lead-body p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 
-		spJobLinkTl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='jobLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='jobLink'] .link-section__title, [data-ep-sp='jobLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spJobLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='jobLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='jobLink'] .link-section__title, [data-ep-sp='jobLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 };
 
-export { topJobInit, topJobTl, spJob2Tl, spJobLinkTl };
+export { topJobInit, topJobTl };

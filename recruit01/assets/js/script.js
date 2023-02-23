@@ -452,7 +452,7 @@ function topSections() {
 					left: "0",
 					width: "100%",
 					height: "100vh",
-					height: "100dvh",
+					height: "100dvh", // css側に書いたからこのままでもいいが、フォールバックが上書きされ、未対応ブラウザはプロパティが設定されない
 					autoAlpha: 0,
 				});
 			});
@@ -518,6 +518,15 @@ function topSections() {
 	}
 	animationsInit();
 	sectionLinksInit();
+
+	if (!_vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches) {
+		/*
+		pcSectionTransition（）の中でz-index1が基準になるので、背景動画も初期設定を合わせる
+	*/
+		gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.set(".ep__01-02-bg", {
+			zIndex: 1,
+		});
+	}
 
 	const sectionLinkArrowTl = gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.timeline({
 			paused: true,
@@ -627,16 +636,29 @@ function topSections() {
 					ターゲット（次）のセクションをフェードインできないので、カレント（前）のセクションをフェードアウトする
 				*/
 
-					gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.timeline()
-						.set(".ep__01-02-bg", {
-							zIndex: 1,
-						})
-						.to(getSection(currentSectionId), {
-							duration: 1,
-							autoAlpha: 0,
-							ease: "power2.out",
-						});
+					gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.to(getSection(currentSectionId), {
+						duration: 1,
+						autoAlpha: 0,
+						ease: "power2.out",
+					});
 				}
+
+				if (
+					targetSectionId != "prologue" &&
+					currentSectionId != "prologue" &&
+					currentSectionId != "prologue2"
+				) {
+					gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.set(".ep__01-02-bg", {
+						visibility: "hidden",
+						onComplete: () => {
+							gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.set(".ep__01-02-bg", {
+								delay: 1,
+								visibility: "",
+							});
+						},
+					});
+				}
+
 				/*
 					プロローグからのジャンプ時にはフェードアウト（プロローグのトランジション対象なので戻すのは必要無い）
 				*/
@@ -758,6 +780,9 @@ function topSections() {
 			case "prologue":
 				if (!firstLoad) {
 					firstLoad = true;
+					gsap_all__WEBPACK_IMPORTED_MODULE_11__.gsap.set("#prologue", {
+						zIndex: 1,
+					});
 				} else {
 					if (direction == 1) {
 						toggleNavigation(sectionId);
@@ -1320,11 +1345,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "topVideo": function() { return /* binding */ topVideo; },
 /* harmony export */   "video": function() { return /* binding */ video; }
 /* harmony export */ });
+/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
 let video;
 
 function topVideo() {
 	const wrapper = document.querySelector(".ep__01-02-bg");
-	const image = wrapper.querySelector("img");
+	const image = wrapper.querySelector("picture");
 	video = document.createElement("video");
 	// video.className = "top-hero__video";
 	const source = document.createElement("source");
@@ -1332,7 +1360,9 @@ function topVideo() {
 	(video.poster = `/recruit01/assets/images/top-section-01-bg-video-poster.jpg`),
 		(video.muted = true),
 		// (video.playsinline = true),
-		(source.src = `/recruit01/assets/images/top-section-01-bg.mp4`),
+		(source.src = _vars__WEBPACK_IMPORTED_MODULE_0__.spmql.matches
+			? `/recruit01/assets/images/top-section-01-bg-sp.mp4`
+			: `/recruit01/assets/images/top-section-01-bg.mp4`),
 		(video.width = "1920"),
 		(video.height = "1080");
 	video.setAttribute("playsinline", ""); // setAttributeで付与しないとsafariで自動再生されない
@@ -1591,7 +1621,7 @@ const prologueInit = () => {
 			autoAlpha: 1,
 		})
 		.to([".top-lead__title img", ".top-lead__body"], {
-			y: "10vh",
+			y: 40,
 			autoAlpha: 0,
 		})
 		.to(
@@ -1637,7 +1667,7 @@ const prologueInit = () => {
 		.fromTo(
 			[".top-lead__title img", ".top-lead__body"],
 			{
-				y: "10vh",
+				y: 60,
 				autoAlpha: 0,
 			},
 			{
@@ -28247,9 +28277,7 @@ SplitText.register = _initCore;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "aboutInit": function() { return /* binding */ aboutInit; },
-/* harmony export */   "aboutTl": function() { return /* binding */ aboutTl; },
-/* harmony export */   "spAbout2Tl": function() { return /* binding */ spAbout2Tl; },
-/* harmony export */   "spAboutLinkTl": function() { return /* binding */ spAboutLinkTl; }
+/* harmony export */   "aboutTl": function() { return /* binding */ aboutTl; }
 /* harmony export */ });
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
@@ -28260,7 +28288,7 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_Observer__WEBPACK_IMPORTED_MODULE_3__.Observer);
 
-let aboutTl, spAbout2Tl, spAboutLinkTl;
+let aboutTl;
 
 const aboutInit = () => {
 	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.matchMedia();
@@ -28270,7 +28298,7 @@ const aboutInit = () => {
 				defaults: { duration: 1.25, ease: "power2.out", force3D: true },
 				paused: true,
 			})
-			.to("#about", {
+			.set("#about", {
 				autoAlpha: 1,
 			})
 			.fromTo(
@@ -28281,14 +28309,13 @@ const aboutInit = () => {
 				{
 					duration: 2,
 					autoAlpha: 1,
-				},
-				"<25%"
+				}
 			)
 			.fromTo(
 				".top-about__blocks-item:nth-of-type(1) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-20),
+					y: -300,
 				},
 				{
 					duration: 2,
@@ -28302,8 +28329,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(2) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					y: -150,
+					x: 150,
 				},
 				{
 					duration: 2,
@@ -28318,8 +28345,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(3) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					y: 150,
+					x: 150,
 				},
 				{
 					duration: 2,
@@ -28334,8 +28361,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(4) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+					y: 300,
+					x: 300,
 				},
 				{
 					duration: 2,
@@ -28350,7 +28377,7 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(5) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+					y: 300,
 				},
 				{
 					duration: 2,
@@ -28365,8 +28392,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(6) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					y: 150,
+					x: -150,
 				},
 				{
 					duration: 2,
@@ -28381,8 +28408,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(7) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					y: -150,
+					x: -150,
 				},
 				{
 					duration: 2,
@@ -28400,18 +28427,18 @@ const aboutInit = () => {
 					autoAlpha: 0.9,
 				},
 				{
-					duration: 2.25,
+					duration: 2,
 					ease: "power4.inOut",
 					clipPath: "inset(0 0 0 0%)",
 					autoAlpha: 1, // firefoxでレンダリング常にレンダリングを促すことで解消
 				},
-				"<50%"
+				"<35%"
 			)
 			.fromTo(
 				".top-about__lead__title",
 				{
 					autoAlpha: 0,
-					y: "10vh",
+					y: 60,
 				},
 				{
 					autoAlpha: 1,
@@ -28423,7 +28450,7 @@ const aboutInit = () => {
 				".top-about__lead__body p",
 				{
 					autoAlpha: 0,
-					y: "10vh",
+					y: 60,
 				},
 				{
 					autoAlpha: 1,
@@ -28449,14 +28476,13 @@ const aboutInit = () => {
 				{
 					duration: 2,
 					autoAlpha: 1,
-				},
-				"<25%"
+				}
 			)
 			.fromTo(
 				".top-about__blocks-item:nth-of-type(1) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-20),
+					y: -200,
 				},
 				{
 					duration: 2,
@@ -28470,8 +28496,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(2) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					y: -100,
+					x: 100,
 				},
 				{
 					duration: 2,
@@ -28486,8 +28512,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(3) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
+					y: 100,
+					x: 100,
 				},
 				{
 					duration: 2,
@@ -28502,8 +28528,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(4) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+					y: 200,
+					x: 200,
 				},
 				{
 					duration: 2,
@@ -28518,7 +28544,7 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(5) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(20),
+					y: 200,
 				},
 				{
 					duration: 2,
@@ -28533,8 +28559,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(6) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					y: 100,
+					x: -100,
 				},
 				{
 					duration: 2,
@@ -28549,8 +28575,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(7) img",
 				{
 					autoAlpha: 0,
-					y: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
-					x: () => (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-10),
+					y: -100,
+					x: -100,
 				},
 				{
 					duration: 2,
@@ -28568,18 +28594,18 @@ const aboutInit = () => {
 					autoAlpha: 0.9,
 				},
 				{
-					duration: 2.25,
+					duration: 2.5,
 					ease: "power4.inOut",
 					clipPath: "inset(0 0 0 0%)",
 					autoAlpha: 1, // firefoxでレンダリング常にレンダリングを促すことで解消
 				},
-				"<50%"
+				"<25%"
 			)
 			.fromTo(
 				".top-about__lead__title",
 				{
 					autoAlpha: 0,
-					y: "10vh",
+					y: 60,
 				},
 				{
 					autoAlpha: 1,
@@ -28588,47 +28614,49 @@ const aboutInit = () => {
 				"<50%"
 			);
 
-		spAbout2Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".top-about__lead__body", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".top-about__lead__body p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spAbout2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".top-about__lead__body", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".top-about__lead__body p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: 60,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 
-		spAboutLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='aboutLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='aboutLink'] .link-section__title, [data-ep-sp='aboutLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spAboutLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='aboutLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='aboutLink'] .link-section__title, [data-ep-sp='aboutLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: 60,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 };
 
@@ -28643,9 +28671,7 @@ const aboutInit = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "mfbmFieldInit": function() { return /* binding */ mfbmFieldInit; },
-/* harmony export */   "mfbmFieldTl": function() { return /* binding */ mfbmFieldTl; },
-/* harmony export */   "spBusiness2Tl": function() { return /* binding */ spBusiness2Tl; },
-/* harmony export */   "spBusinessLinkTl": function() { return /* binding */ spBusinessLinkTl; }
+/* harmony export */   "mfbmFieldTl": function() { return /* binding */ mfbmFieldTl; }
 /* harmony export */ });
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
@@ -28660,7 +28686,7 @@ gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_all__WEBPACK_IMPO
 		---------- prologue ----------
 	*/
 
-let mfbmFieldTl, spBusiness2Tl, spBusinessLinkTl;
+let mfbmFieldTl;
 
 const mfbmFieldInit = () => {
 	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.matchMedia();
@@ -28672,23 +28698,22 @@ const mfbmFieldInit = () => {
 			})
 			.to("#business", {
 				autoAlpha: 1,
+				force3D: true,
 			})
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-building']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
-					},
+					y: -100,
 				},
 				{
-					duration: 1,
+					duration: 1.75,
 					ease: "power2.inOut",
 					autoAlpha: 1,
 					y: 0,
 					force3D: true,
 				},
-				"<50%"
+				"<35%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-grass']",
@@ -28696,11 +28721,12 @@ const mfbmFieldInit = () => {
 					autoAlpha: 0,
 				},
 				{
-					duration: 0.65,
-					ease: "power2.out",
+					duration: 1,
+					ease: "power2.inOut",
 					autoAlpha: 1,
+					force3D: true,
 				},
-				"<25%"
+				"<50%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-park-people']",
@@ -28708,19 +28734,18 @@ const mfbmFieldInit = () => {
 					autoAlpha: 0,
 				},
 				{
-					duration: 0.65,
-					ease: "power2.out",
+					duration: 1,
+					ease: "power2.inOut",
 					autoAlpha: 1,
+					force3D: true,
 				},
-				"<25%"
+				"<75%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-building-02']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
-					},
+					y: -100,
 				},
 				{
 					duration: 1.5,
@@ -28729,15 +28754,13 @@ const mfbmFieldInit = () => {
 					y: 0,
 					force3D: true,
 				},
-				"<50%"
+				"<10%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-building-03']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
-					},
+					y: -100,
 				},
 				{
 					duration: 0.85,
@@ -28765,7 +28788,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -28779,7 +28802,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__lead-body p",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -28810,50 +28833,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__map img[src*='top-section-03-park-building']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
-					},
-				},
-				{
-					duration: 1,
-					ease: "power2.inOut",
-					autoAlpha: 1,
-					y: 0,
-					force3D: true,
-				},
-				"<50%"
-			)
-			.fromTo(
-				".mfbm-field__map img[src*='top-section-03-park-grass']",
-				{
-					autoAlpha: 0,
-				},
-				{
-					duration: 0.65,
-					ease: "power2.out",
-					autoAlpha: 1,
-				},
-				"<25%"
-			)
-			.fromTo(
-				".mfbm-field__map img[src*='top-section-03-park-people']",
-				{
-					autoAlpha: 0,
-				},
-				{
-					duration: 0.65,
-					ease: "power2.out",
-					autoAlpha: 1,
-				},
-				"<25%"
-			)
-			.fromTo(
-				".mfbm-field__map img[src*='top-section-03-building-02']",
-				{
-					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
-					},
+					y: -100,
 				},
 				{
 					duration: 1.5,
@@ -28862,18 +28842,57 @@ const mfbmFieldInit = () => {
 					y: 0,
 					force3D: true,
 				},
+				"<25%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-grass']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 0.85,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					force3D: true,
+				},
 				"<50%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-park-people']",
+				{
+					autoAlpha: 0,
+				},
+				{
+					duration: 1,
+					ease: "power2.inOut",
+					autoAlpha: 0.85,
+					force3D: true,
+				},
+				"<75%"
+			)
+			.fromTo(
+				".mfbm-field__map img[src*='top-section-03-building-02']",
+				{
+					autoAlpha: 0,
+					y: -100,
+				},
+				{
+					duration: 1.25,
+					ease: "power2.inOut",
+					autoAlpha: 1,
+					y: 0,
+					force3D: true,
+				},
+				"<5%"
 			)
 			.fromTo(
 				".mfbm-field__map img[src*='top-section-03-building-03']",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(-7);
-					},
+					y: -100,
 				},
 				{
-					duration: 0.85,
+					duration: 1,
 					ease: "power2.inOut",
 					autoAlpha: 1,
 					y: 0,
@@ -28900,7 +28919,7 @@ const mfbmFieldInit = () => {
 				".mfbm-field__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -28911,47 +28930,49 @@ const mfbmFieldInit = () => {
 				"<50%"
 			);
 
-		spBusiness2Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".mfbm-field__lead-body", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".mfbm-field__lead-body p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spBusiness2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".mfbm-field__lead-body", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".mfbm-field__lead-body p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: 60,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<75%"
+		// 	);
 
-		spBusinessLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='businessLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='businessLink'] .link-section__title, [data-ep-sp='businessLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spBusinessLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='businessLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='businessLink'] .link-section__title, [data-ep-sp='businessLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<75%"
+		// 	);
 	});
 };
 
@@ -28965,8 +28986,6 @@ const mfbmFieldInit = () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "spJob2Tl": function() { return /* binding */ spJob2Tl; },
-/* harmony export */   "spJobLinkTl": function() { return /* binding */ spJobLinkTl; },
 /* harmony export */   "topJobInit": function() { return /* binding */ topJobInit; },
 /* harmony export */   "topJobTl": function() { return /* binding */ topJobTl; }
 /* harmony export */ });
@@ -28979,7 +28998,7 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_Observer__WEBPACK_IMPORTED_MODULE_3__.Observer);
 
-let topJobTl, spJob2Tl, spJobLinkTl;
+let topJobTl;
 
 const topJobInit = () => {
 	let mm = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.matchMedia();
@@ -28996,9 +29015,7 @@ const topJobInit = () => {
 				".top-job__peoples-item img",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-					},
+					y: 50,
 				},
 				{
 					duration: 0.75,
@@ -29010,7 +29027,7 @@ const topJobInit = () => {
 						each: 0.1,
 						from: "random",
 						// grid: "auto",
-						ease: "power2.in",
+						ease: "power1.in",
 					},
 				},
 				"<25%"
@@ -29032,7 +29049,7 @@ const topJobInit = () => {
 				".top-job__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -29046,7 +29063,7 @@ const topJobInit = () => {
 				".top-job__lead-body p",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -29071,9 +29088,7 @@ const topJobInit = () => {
 				".top-job__peoples-item img",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-					},
+					y: 60,
 				},
 				{
 					duration: 0.75,
@@ -29082,10 +29097,10 @@ const topJobInit = () => {
 					y: 0,
 					stagger: {
 						// wrap advanced options in an object
-						each: 0.1,
+						each: 0.11,
 						from: "random",
 						// grid: "auto",
-						ease: "power2.in",
+						ease: "power1.in",
 					},
 				},
 				"<25%"
@@ -29107,7 +29122,7 @@ const topJobInit = () => {
 				".top-job__lead-title",
 				{
 					autoAlpha: 0,
-					y: "5rem",
+					y: 40,
 				},
 				{
 					duration: 0.75,
@@ -29118,47 +29133,49 @@ const topJobInit = () => {
 				"<50%"
 			);
 
-		spJob2Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".top-job__lead-body", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".top-job__lead-body p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spJob2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".top-job__lead-body", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".top-job__lead-body p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 
-		spJobLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='jobLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='jobLink'] .link-section__title, [data-ep-sp='jobLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spJobLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='jobLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='jobLink'] .link-section__title, [data-ep-sp='jobLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 };
 
@@ -29476,7 +29493,6 @@ const topProjectInit = () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "spPersonLinkTl": function() { return /* binding */ spPersonLinkTl; },
 /* harmony export */   "topPersonInit": function() { return /* binding */ topPersonInit; },
 /* harmony export */   "topPersonTl": function() { return /* binding */ topPersonTl; }
 /* harmony export */ });
@@ -29491,7 +29507,7 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_3__.ScrollTrigger, gsap_Observer__WEBPACK_IMPORTED_MODULE_4__.Observer);
 
-let topPersonTl, spPersonLinkTl;
+let topPersonTl;
 
 const topPersonInit = () => {
 	gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.set(".persons__bg", {
@@ -29739,26 +29755,27 @@ const topPersonInit = () => {
 				"<50%"
 			);
 
-		spPersonLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='personLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='personLink'] .link-section__title, [data-ep-sp='personLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spPersonLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='personLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='personLink'] .link-section__title, [data-ep-sp='personLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 };
 
@@ -29773,8 +29790,6 @@ const topPersonInit = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "cultureTweenArray": function() { return /* binding */ cultureTweenArray; },
-/* harmony export */   "spCulture2Tl": function() { return /* binding */ spCulture2Tl; },
-/* harmony export */   "spCultureLinkTl": function() { return /* binding */ spCultureLinkTl; },
 /* harmony export */   "topCultureInit": function() { return /* binding */ topCultureInit; },
 /* harmony export */   "topCultureTl": function() { return /* binding */ topCultureTl; }
 /* harmony export */ });
@@ -29787,7 +29802,7 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_all__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_Observer__WEBPACK_IMPORTED_MODULE_3__.Observer);
 
-let topCultureTl, spCulture2Tl, spCultureLinkTl;
+let topCultureTl;
 
 const cultureTweenArray = [];
 
@@ -29800,7 +29815,7 @@ const topCultureInit = () => {
 				paused: true,
 			})
 			.to("#culture", {
-				autoAlpha: 1,
+				autoAlpha: 1.25,
 			})
 			.fromTo(
 				".top-culture__copy-list",
@@ -29812,7 +29827,8 @@ const topCultureInit = () => {
 					duration: 1.125,
 					x: "0",
 					autoAlpha: 1,
-				}
+				},
+				">"
 			)
 			.fromTo(
 				".top-culture__lead",
@@ -29831,9 +29847,7 @@ const topCultureInit = () => {
 				".top-culture__lead-body p",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-					},
+					y: 60,
 				},
 				{
 					duration: 1,
@@ -29847,9 +29861,7 @@ const topCultureInit = () => {
 				".top-culture__copy-list-item",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-					},
+					y: 60,
 				},
 				{
 					duration: 1,
@@ -29867,7 +29879,7 @@ const topCultureInit = () => {
 				paused: true,
 			})
 			.to("#culture", {
-				autoAlpha: 1,
+				autoAlpha: 1.25,
 			})
 			.fromTo(
 				".top-culture__copy-list",
@@ -29879,66 +29891,67 @@ const topCultureInit = () => {
 					duration: 1.125,
 					x: "0",
 					autoAlpha: 1,
-				}
+				},
+				">"
 			)
 			.fromTo(
 				".top-culture__copy-list-item",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-					},
+					y: 30,
 				},
 				{
 					duration: 1,
 					autoAlpha: 1,
 					y: 0,
-					stagger: 0.1,
+					stagger: 0.125,
 				},
 				"<50%"
 			);
 
-		spCulture2Tl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".top-culture__lead", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".top-culture__lead p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spCulture2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".top-culture__lead", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".top-culture__lead p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 
-		spCultureLinkTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='cultureLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='cultureLink'] .link-section__title, [data-ep-sp='cultureLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spCultureLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='cultureLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='cultureLink'] .link-section__title, [data-ep-sp='cultureLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 
 	const otedamaTl = gsap_all__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
@@ -30445,9 +30458,7 @@ const epilogueInit = () => {
 			".top-epilogue__lead-title",
 			{
 				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-				},
+				y: 60,
 			},
 			{
 				duration: 1,
@@ -30461,9 +30472,7 @@ const epilogueInit = () => {
 			".top-epilogue__lead-body p",
 			{
 				autoAlpha: 0,
-				y: () => {
-					return (0,_vars__WEBPACK_IMPORTED_MODULE_0__.remUnit)(3);
-				},
+				y: 60,
 			},
 			{
 				duration: 1.5,
@@ -30532,13 +30541,13 @@ const topFooterInit = () => {
 
 	sectionScrollTween = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".ep__section-scroll", {
 		paused: true,
-		duration: 0.5,
+		duration: 0.35,
 		autoAlpha: 0,
 		ease: "power2.out",
 	});
 	sectionBottomGradientTween = gsap_all__WEBPACK_IMPORTED_MODULE_2__.gsap.to(".ep__bottom-gradient", {
 		paused: true,
-		duration: 0.5,
+		duration: 0.35,
 		autoAlpha: 0,
 		ease: "power2.out",
 	});
@@ -30555,7 +30564,6 @@ const topFooterInit = () => {
 			sectionBottomGradientTween.restart();
 		},
 		onLeaveBack: () => {
-			console.log("test");
 			/*
 				pc・sp関数切替
 			*/

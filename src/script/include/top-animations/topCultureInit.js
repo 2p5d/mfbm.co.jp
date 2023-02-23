@@ -3,7 +3,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 
-let topCultureTl, spCulture2Tl, spCultureLinkTl;
+let topCultureTl;
 
 const cultureTweenArray = [];
 
@@ -17,7 +17,7 @@ const topCultureInit = () => {
 				paused: true,
 			})
 			.to("#culture", {
-				autoAlpha: 1,
+				autoAlpha: 1.25,
 			})
 			.fromTo(
 				".top-culture__copy-list",
@@ -29,7 +29,8 @@ const topCultureInit = () => {
 					duration: 1.125,
 					x: "0",
 					autoAlpha: 1,
-				}
+				},
+				">"
 			)
 			.fromTo(
 				".top-culture__lead",
@@ -48,9 +49,7 @@ const topCultureInit = () => {
 				".top-culture__lead-body p",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(3);
-					},
+					y: 60,
 				},
 				{
 					duration: 1,
@@ -64,9 +63,7 @@ const topCultureInit = () => {
 				".top-culture__copy-list-item",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(3);
-					},
+					y: 60,
 				},
 				{
 					duration: 1,
@@ -85,7 +82,7 @@ const topCultureInit = () => {
 				paused: true,
 			})
 			.to("#culture", {
-				autoAlpha: 1,
+				autoAlpha: 1.25,
 			})
 			.fromTo(
 				".top-culture__copy-list",
@@ -97,68 +94,67 @@ const topCultureInit = () => {
 					duration: 1.125,
 					x: "0",
 					autoAlpha: 1,
-				}
+				},
+				">"
 			)
 			.fromTo(
 				".top-culture__copy-list-item",
 				{
 					autoAlpha: 0,
-					y: () => {
-						return remUnit(3);
-					},
+					y: 30,
 				},
 				{
 					duration: 1,
 					autoAlpha: 1,
 					y: 0,
-					stagger: 0.1,
+					stagger: 0.125,
 				},
 				"<50%"
 			);
 
-		spCulture2Tl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".top-culture__lead", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".top-culture__lead p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spCulture2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".top-culture__lead", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".top-culture__lead p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 
-		spCultureLinkTl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='cultureLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='cultureLink'] .link-section__title, [data-ep-sp='cultureLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spCultureLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='cultureLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='cultureLink'] .link-section__title, [data-ep-sp='cultureLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 
 	const otedamaTl = gsap
@@ -639,10 +635,4 @@ const topCultureInit = () => {
 	});
 };
 
-export {
-	topCultureInit,
-	topCultureTl,
-	spCulture2Tl,
-	spCultureLinkTl,
-	cultureTweenArray,
-};
+export { topCultureInit, topCultureTl, cultureTweenArray };

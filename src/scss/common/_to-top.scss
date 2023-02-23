@@ -18,6 +18,9 @@
 		width: 10.7rem;
 		height: 10.7rem;
 	}
+	body.--scroll-bar-padding-active & {
+		margin-right: var(--scroll-bar-width);
+	}
 }
 
 .to-top__icon {

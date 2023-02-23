@@ -3,7 +3,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 
-let aboutTl, spAbout2Tl, spAboutLinkTl;
+let aboutTl;
 
 const aboutInit = () => {
 	let mm = gsap.matchMedia();
@@ -14,7 +14,7 @@ const aboutInit = () => {
 				defaults: { duration: 1.25, ease: "power2.out", force3D: true },
 				paused: true,
 			})
-			.to("#about", {
+			.set("#about", {
 				autoAlpha: 1,
 			})
 			.fromTo(
@@ -25,14 +25,13 @@ const aboutInit = () => {
 				{
 					duration: 2,
 					autoAlpha: 1,
-				},
-				"<25%"
+				}
 			)
 			.fromTo(
 				".top-about__blocks-item:nth-of-type(1) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(-20),
+					y: -300,
 				},
 				{
 					duration: 2,
@@ -46,8 +45,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(2) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(-10),
-					x: () => remUnit(10),
+					y: -150,
+					x: 150,
 				},
 				{
 					duration: 2,
@@ -62,8 +61,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(3) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(10),
-					x: () => remUnit(10),
+					y: 150,
+					x: 150,
 				},
 				{
 					duration: 2,
@@ -78,8 +77,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(4) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(20),
-					x: () => remUnit(20),
+					y: 300,
+					x: 300,
 				},
 				{
 					duration: 2,
@@ -94,7 +93,7 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(5) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(20),
+					y: 300,
 				},
 				{
 					duration: 2,
@@ -109,8 +108,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(6) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(10),
-					x: () => remUnit(-10),
+					y: 150,
+					x: -150,
 				},
 				{
 					duration: 2,
@@ -125,8 +124,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(7) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(-10),
-					x: () => remUnit(-10),
+					y: -150,
+					x: -150,
 				},
 				{
 					duration: 2,
@@ -144,18 +143,18 @@ const aboutInit = () => {
 					autoAlpha: 0.9,
 				},
 				{
-					duration: 2.25,
+					duration: 2,
 					ease: "power4.inOut",
 					clipPath: "inset(0 0 0 0%)",
 					autoAlpha: 1, // firefoxでレンダリング常にレンダリングを促すことで解消
 				},
-				"<50%"
+				"<35%"
 			)
 			.fromTo(
 				".top-about__lead__title",
 				{
 					autoAlpha: 0,
-					y: "10vh",
+					y: 60,
 				},
 				{
 					autoAlpha: 1,
@@ -167,7 +166,7 @@ const aboutInit = () => {
 				".top-about__lead__body p",
 				{
 					autoAlpha: 0,
-					y: "10vh",
+					y: 60,
 				},
 				{
 					autoAlpha: 1,
@@ -194,14 +193,13 @@ const aboutInit = () => {
 				{
 					duration: 2,
 					autoAlpha: 1,
-				},
-				"<25%"
+				}
 			)
 			.fromTo(
 				".top-about__blocks-item:nth-of-type(1) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(-20),
+					y: -200,
 				},
 				{
 					duration: 2,
@@ -215,8 +213,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(2) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(-10),
-					x: () => remUnit(10),
+					y: -100,
+					x: 100,
 				},
 				{
 					duration: 2,
@@ -231,8 +229,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(3) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(10),
-					x: () => remUnit(10),
+					y: 100,
+					x: 100,
 				},
 				{
 					duration: 2,
@@ -247,8 +245,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(4) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(20),
-					x: () => remUnit(20),
+					y: 200,
+					x: 200,
 				},
 				{
 					duration: 2,
@@ -263,7 +261,7 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(5) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(20),
+					y: 200,
 				},
 				{
 					duration: 2,
@@ -278,8 +276,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(6) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(10),
-					x: () => remUnit(-10),
+					y: 100,
+					x: -100,
 				},
 				{
 					duration: 2,
@@ -294,8 +292,8 @@ const aboutInit = () => {
 				".top-about__blocks-item:nth-of-type(7) img",
 				{
 					autoAlpha: 0,
-					y: () => remUnit(-10),
-					x: () => remUnit(-10),
+					y: -100,
+					x: -100,
 				},
 				{
 					duration: 2,
@@ -313,18 +311,18 @@ const aboutInit = () => {
 					autoAlpha: 0.9,
 				},
 				{
-					duration: 2.25,
+					duration: 2.5,
 					ease: "power4.inOut",
 					clipPath: "inset(0 0 0 0%)",
 					autoAlpha: 1, // firefoxでレンダリング常にレンダリングを促すことで解消
 				},
-				"<50%"
+				"<25%"
 			)
 			.fromTo(
 				".top-about__lead__title",
 				{
 					autoAlpha: 0,
-					y: "10vh",
+					y: 60,
 				},
 				{
 					autoAlpha: 1,
@@ -333,50 +331,50 @@ const aboutInit = () => {
 				"<50%"
 			);
 
-		spAbout2Tl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to(".top-about__lead__body", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				".top-about__lead__body p",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spAbout2Tl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to(".top-about__lead__body", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		".top-about__lead__body p",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: 60,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 
-		spAboutLinkTl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='aboutLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='aboutLink'] .link-section__title, [data-ep-sp='aboutLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spAboutLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='aboutLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='aboutLink'] .link-section__title, [data-ep-sp='aboutLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: 60,
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 };
 
-export { aboutInit, aboutTl, spAbout2Tl, spAboutLinkTl };
+export { aboutInit, aboutTl };

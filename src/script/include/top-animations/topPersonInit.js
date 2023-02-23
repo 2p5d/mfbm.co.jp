@@ -4,7 +4,7 @@ import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
 gsap.registerPlugin(ScrollTrigger, Observer);
 
-let topPersonTl, spPersonLinkTl;
+let topPersonTl;
 
 const topPersonInit = () => {
 	gsap.set(".persons__bg", {
@@ -254,28 +254,28 @@ const topPersonInit = () => {
 				"<50%"
 			);
 
-		spPersonLinkTl = gsap
-			.timeline({
-				defaults: { duration: 1.25, ease: "power2.out" },
-				paused: true,
-			})
-			.to("[data-ep-sp='personLink']", {
-				autoAlpha: 1,
-			})
-			.fromTo(
-				"[data-ep-sp='personLink'] .link-section__title, [data-ep-sp='personLink'] .link-section__arrow",
-				{
-					autoAlpha: 0,
-					y: "10vh",
-				},
-				{
-					autoAlpha: 1,
-					y: 0,
-					stagger: 0.1,
-				},
-				"<25%"
-			);
+		// spPersonLinkTl = gsap
+		// 	.timeline({
+		// 		defaults: { duration: 1.25, ease: "power2.out" },
+		// 		paused: true,
+		// 	})
+		// 	.to("[data-ep-sp='personLink']", {
+		// 		autoAlpha: 1,
+		// 	})
+		// 	.fromTo(
+		// 		"[data-ep-sp='personLink'] .link-section__title, [data-ep-sp='personLink'] .link-section__arrow",
+		// 		{
+		// 			autoAlpha: 0,
+		// 			y: "10vh",
+		// 		},
+		// 		{
+		// 			autoAlpha: 1,
+		// 			y: 0,
+		// 			stagger: 0.1,
+		// 		},
+		// 		"<25%"
+		// 	);
 	});
 };
 
-export { topPersonInit, topPersonTl, spPersonLinkTl };
+export { topPersonInit, topPersonTl };
