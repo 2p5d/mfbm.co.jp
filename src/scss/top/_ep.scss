@@ -219,7 +219,7 @@
 	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 	color: white;
 	// will-change: opacity;
-	// transition: opacity 0.75s ease-out, visibility 0.75s ease-out;
+	transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 	@include mq-down() {
 		z-index: 99;
 		// display: none;
@@ -240,10 +240,11 @@
 			background-color: rgba(0, 15, 60, 0.75);
 		}
 	}
-	// &.--disable {
-	// 	opacity: 0;
-	// 	visibility: hidden;
-	// }
+	&.--disable {
+		pointer-events: none;
+		opacity: 0;
+		visibility: hidden;
+	}
 }
 
 .ep__section-label__links {

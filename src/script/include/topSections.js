@@ -38,7 +38,8 @@ let topScrollObserver,
 	currentSectionId,
 	firstLoad,
 	pcSectionTransition,
-	spSectionTransition;
+	spSectionTransition,
+	scrollableSectionFlag;
 
 const /*
 アニメーションモジュールで書き換えするので、参照渡し
@@ -63,12 +64,12 @@ function topCover() {
 					document.body.classList.remove("--pointer-events-none");
 				});
 
-				if (!spmql.matches) {
-					window.removeEventListener("touchmove", noscroll, {
-						passive: false,
-					});
-					window.removeEventListener("wheel", noscroll, { passive: false });
-				}
+				// if (!spmql.matches) {
+				// 	window.removeEventListener("touchmove", noscroll, {
+				// 		passive: false,
+				// 	});
+				// 	window.removeEventListener("wheel", noscroll, { passive: false });
+				// }
 
 				// content.remove();
 			});
@@ -158,10 +159,39 @@ function topSections() {
 			topFooterInit();
 		},
 		sectionLinksWRapper = document.querySelector(".ep__section-label"),
-		sectionLinksInit = () => {
-			gsap.set(sectionLinksWRapper, {
-				autoAlpha: 0,
-			});
+		sectionLinkArrowTl = gsap
+			.timeline({
+				paused: true,
+			})
+			.set(".ep__section-label__click-icon", {
+				overflow: "hidden",
+			})
+			.to(".ep__section-label__click-icon-bar", {
+				keyframes: {
+					0: {
+						scaleX: 1,
+					},
+					"50%": {
+						scaleX: 0,
+					},
+					"100%": {
+						scaleX: 1,
+					},
+					easeEach: "none",
+					// ease: "power1.inOut",
+				},
+				transformOrigin: "right",
+				duration: 2,
+				repeat: -1,
+				ease: "power2.out",
+			}),
+		showSectionLink = () => {
+			sectionLinksWRapper.classList.remove("--disable");
+			sectionLinkArrowTl.play();
+		},
+		hideSectionLink = () => {
+			sectionLinksWRapper.classList.add("--disable");
+			sectionLinkArrowTl.pause();
 		};
 
 	/*
@@ -189,7 +219,7 @@ function topSections() {
 		pcfcLinkInit();
 	}
 	animationsInit();
-	sectionLinksInit();
+	hideSectionLink();
 
 	if (!spmql.matches) {
 		/*
@@ -199,83 +229,6 @@ function topSections() {
 			zIndex: 1,
 		});
 	}
-
-	const sectionLinkArrowTl = gsap
-		.timeline({
-			paused: true,
-		})
-		.set(".ep__section-label__click-icon", {
-			overflow: "hidden",
-		})
-		.to(".ep__section-label__click-icon-bar", {
-			keyframes: {
-				0: {
-					scaleX: 1,
-				},
-				"50%": {
-					scaleX: 0,
-				},
-				"100%": {
-					scaleX: 1,
-				},
-				easeEach: "none",
-				// ease: "power1.inOut",
-			},
-			transformOrigin: "right",
-			duration: 2,
-			repeat: -1,
-			ease: "power2.out",
-		});
-
-	const toggleSectionLink = (sectionId) => {
-		sectionsLinks.forEach((sectionsLink) => {
-			const linkId = sectionsLink.dataset.topTo;
-
-			if (sectionId === linkId) {
-				sectionsLink.classList.add("--active");
-			} else if (sectionsLink.classList.contains("--active")) {
-				sectionsLink.classList.remove("--active");
-			}
-		});
-	};
-
-	const showSectionLink = gsap.to(sectionLinksWRapper, {
-		// delay: 0.5,
-		paused: true,
-		duration: 0.35,
-		autoAlpha: 1,
-		overwrite: "auto", // hideSectionLinkを上書き
-		ease: "power2.out",
-		onStart: () => {
-			sectionLinkArrowTl.play();
-		},
-	});
-
-	const hideSectionLink = gsap.to(sectionLinksWRapper, {
-		// delay: 0.5,
-		paused: true,
-		duration: 0.35,
-		autoAlpha: 0,
-		ease: "power2.out",
-		// overwrite: "auto", // showSectionLinkが上書きされる場合があったので、設定しない
-		onStart: (self) => {
-			sectionLinkArrowTl.pause();
-		},
-	});
-
-	const sectionsLinks = document.querySelectorAll(
-		".ep__section-label__links-item"
-	);
-	const toggleNavigation = (sectionId) => {
-		navigationLinks.forEach((navigationLink) => {
-			const linkId = navigationLink.href.split("#")[1];
-			if (sectionId === linkId) {
-				navigationLink.classList.add("--active");
-			} else if (navigationLink.classList.contains("--active")) {
-				navigationLink.classList.remove("--active");
-			}
-		});
-	};
 
 	const getSectionIndex = (sectionId) => {
 		for (let i = 0; i < eps.length; i++) {
@@ -295,7 +248,32 @@ function topSections() {
 		}
 	};
 
+	const sectionsLinks = document.querySelectorAll(
+		".ep__section-label__links-item"
+	);
+	const toggleSectionLink = (sectionId) => {
+		sectionsLinks.forEach((sectionsLink) => {
+			const linkId = sectionsLink.dataset.topTo;
+
+			if (sectionId === linkId) {
+				sectionsLink.classList.add("--active");
+			} else if (sectionsLink.classList.contains("--active")) {
+				sectionsLink.classList.remove("--active");
+			}
+		});
+	};
+
 	const navigationLinks = document.querySelectorAll(".ep__navigation-link");
+	const toggleNavigation = (sectionId) => {
+		navigationLinks.forEach((navigationLink) => {
+			const linkId = navigationLink.href.split("#")[1];
+			if (sectionId === linkId) {
+				navigationLink.classList.add("--active");
+			} else if (navigationLink.classList.contains("--active")) {
+				navigationLink.classList.remove("--active");
+			}
+		});
+	};
 	const navigationInit = () => {
 		navigationLinks.forEach((link) => {
 			link.addEventListener("click", (event) => {
@@ -352,6 +330,7 @@ function topSections() {
 						passive: false,
 					}); // スクロール禁止
 					window.addEventListener("wheel", noscroll, { passive: false }); //　スクロール禁止
+					scrollableSectionFlag = false; // モーダルで判定用
 					topFooterSt.disable(); // スクロールトリガー停止
 					gsap.to("#topFooter", {
 						duration: 1,
@@ -374,8 +353,8 @@ function topSections() {
 				/*
 					リンクが無いセクションの処理
 				*/
-				if (targetSectionId === "prologue" || targetSectionId === "epilogue") {
-					hideSectionLink.restart();
+				if (targetSectionId === "prologue") {
+					hideSectionLink();
 				}
 
 				pcSectionTransition(
@@ -387,11 +366,6 @@ function topSections() {
 		});
 	};
 	navigationInit();
-
-	/*
-	残件：
-	・z-indexの関係で、トップに戻ったときに、5minuteがクリックできない
-	*/
 
 	pcSectionTransition = (sectionId, direction, index) => {
 		console.log("ディレクション：" + direction);
@@ -427,13 +401,16 @@ function topSections() {
 			ループするコンテンツの処理。
 			各トランジションに書いていたが、ナビゲーションでジャンプするので、共通処理に変更
 		*/
-		if (sectionId === "prologue" || sectionId === "prologue2") {
-			if (video && video.paused) {
-				video.play();
+		if (firstLoad) {
+			if (sectionId === "prologue" || sectionId === "prologue2") {
+				if (video && video.paused) {
+					video.play();
+				}
+			} else {
+				video.pause();
 			}
-		} else {
-			video.pause();
 		}
+
 		if (sectionId === "prologue") {
 			prologueRepeatTween.play();
 		} else {
@@ -498,7 +475,7 @@ function topSections() {
 					// document.querySelector(
 					// 	"#prologue2"
 					// ).scrollTop = document.querySelector("#prologue2").clientHeight; // スクロール位置を進めておく
-					hideSectionLink.restart();
+					hideSectionLink();
 					topLeadTl.progress(1);
 					aboutTl.reverse();
 					// topLeadTl.reverse();
@@ -518,17 +495,17 @@ function topSections() {
 					mfbmFieldTl.progress(0).pause(); // 次のトランジションを準備（ナビゲーションジャンプに対応）
 					aboutTl.restart(); // トランジション
 					aboutTl.eventCallback("onComplete", (self) => {
-						showSectionLink.restart(); // リンクラベル表示切替
+						showSectionLink(); // リンクラベル表示切替
 						animating.flag = false; // セクション移動を許可
 						document.body.classList.remove("--pointer-events-none"); // クリックを許可
 					});
 				} else {
 					toggleNavigation(sectionId); // ナビゲーションの切替
-					hideSectionLink.restart(); // リンクラベル表示切替
+					hideSectionLink(); // リンクラベル表示切替
 					aboutTl.progress(1); // 次のトランジションを準備（ナビゲーションジャンプに対応）
 					mfbmFieldTl.reverse(); // トランジション
 					mfbmFieldTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart(); // リンクラベル表示切替
+						showSectionLink(); // リンクラベル表示切替
 						toggleSectionLink(sectionId); // リンクラベルの切替
 						animating.flag = false; // セクション移動を許可
 						document.body.classList.remove("--pointer-events-none"); // クリックを許可
@@ -538,22 +515,22 @@ function topSections() {
 			case "business":
 				if (direction == 1) {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topJobTl.progress(0).pause();
 					mfbmFieldTl.restart();
 					mfbmFieldTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
 					});
 				} else {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					mfbmFieldTl.progress(1);
 					topJobTl.reverse();
 					topJobTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
@@ -563,22 +540,22 @@ function topSections() {
 			case "job":
 				if (direction == 1) {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topProjectTl.progress(0).pause();
 					topJobTl.restart();
 					topJobTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
 					});
 				} else {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topJobTl.progress(1);
 					topProjectTl.reverse();
 					topProjectTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
@@ -588,22 +565,22 @@ function topSections() {
 			case "project":
 				if (direction == 1) {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topPersonTl.progress(0).pause();
 					topProjectTl.restart();
 					topProjectTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						document.body.classList.remove("--pointer-events-none");
 						animating.flag = false;
 					});
 				} else {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topProjectTl.progress(1);
 					topPersonTl.reverse();
 					topPersonTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
@@ -613,22 +590,22 @@ function topSections() {
 			case "person":
 				if (direction == 1) {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topCultureTl.progress(0).pause();
 					topPersonTl.restart();
 					topPersonTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
 					});
 				} else {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					topPersonTl.progress(1);
 					topCultureTl.reverse();
 					topCultureTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
@@ -638,22 +615,21 @@ function topSections() {
 			case "culture":
 				if (direction == 1) {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					epilogueTl.progress(0).pause();
 					topCultureTl.restart();
 					topCultureTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
 					});
 				} else {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
 					topCultureTl.progress(1);
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
@@ -663,11 +639,11 @@ function topSections() {
 			case "epilogue":
 				if (direction == 1) {
 					toggleNavigation(sectionId);
-					hideSectionLink.restart();
+					hideSectionLink();
 					document.querySelector("#topFooter").scrollTop = 0; // スクロール位置リセット
 					epilogueTl.restart();
 					epilogueTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						document.body.classList.remove("--pointer-events-none");
@@ -677,19 +653,21 @@ function topSections() {
 						passive: false,
 					}); // スクロール禁止
 					window.addEventListener("wheel", noscroll, { passive: false }); //　スクロール禁止
+					scrollableSectionFlag = false; // モーダルで判定用
 					topFooterSt.disable(); // スクロールトリガー停止
-					// showSectionLink.restart(); // タイミングが微妙なので一旦なし
+					// showSectionLink(); // タイミングが微妙なので一旦なし
 					animating.flag = false;
 				}
 				break;
 			case "topFooter":
-				hideSectionLink.restart();
+				hideSectionLink();
 				toggleNavigation(sectionId);
 				topScrollObserver.disable(); // スクロールイベント監視停止
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
 				}); // スクロール許可
 				window.removeEventListener("wheel", noscroll, { passive: false }); // スクロール許可
+				scrollableSectionFlag = true; // モーダルで判定用
 				topFooterInitTl.restart();
 				document.body.classList.remove("--pointer-events-none");
 				topFooterSt.enable(); // スクロールトリガー開始（スクロールトリガーはイベントコールバックのメソッドが無いので処理内容はモジュール内で確認）
@@ -711,12 +689,14 @@ function topSections() {
 			ループするコンテンツの処理。
 			各トランジションに書いていたが、ナビゲーションでジャンプするので、共通処理に変更
 		*/
-		if (sectionId === "prologue" || sectionId === "prologue2") {
-			if (video && video.paused) {
-				video.play();
+		if (firstLoad) {
+			if (sectionId === "prologue" || sectionId === "prologue2") {
+				if (video && video.paused) {
+					video.play();
+				}
+			} else {
+				video.pause();
 			}
-		} else {
-			video.pause();
 		}
 		if (sectionId === "prologue") {
 			prologueRepeatTween.play();
@@ -748,6 +728,7 @@ function topSections() {
 							passive: false,
 						}); // スクロール禁止
 						window.addEventListener("wheel", noscroll, { passive: false }); // スクロール禁止
+						scrollableSectionFlag = false; // モーダルで判定用
 						// prologue2St.disable(); // スクロールトリガー停止
 						document.querySelector("#prologue2").scrollTop = 0; // スクロール位置リセット
 						prologueBackFromPrologue2Tl.restart();
@@ -773,10 +754,11 @@ function topSections() {
 							passive: false,
 						}); // スクロール許可
 						window.removeEventListener("wheel", noscroll, { passive: false }); // スクロール許可
+						scrollableSectionFlag = true; // モーダルで判定用
 						// prologue2St.enable(); // スクロールトリガー開始（スクロールトリガーはイベントコールバックのメソッドが無いので処理内容はモジュール内で確認）
 					});
 				} else {
-					hideSectionLink.restart();
+					hideSectionLink();
 					aboutTl.reverse();
 					aboutTl.eventCallback("onReverseComplete", () => {
 						topScrollObserver.disable(); // スクロールイベント監視停止
@@ -785,6 +767,7 @@ function topSections() {
 							passive: false,
 						}); // スクロール許可
 						window.removeEventListener("wheel", noscroll, { passive: false }); // スクロール許可
+						scrollableSectionFlag = true; // モーダルで判定用
 						// prologue2St.enable(); // スクロールトリガー開始（スクロールトリガーはイベントコールバックのメソッドが無いので処理内容はモジュール内で確認）
 					});
 				}
@@ -798,24 +781,19 @@ function topSections() {
 						passive: false,
 					}); // スクロール禁止
 					window.addEventListener("wheel", noscroll, { passive: false }); // スクロール禁止
+					scrollableSectionFlag = false; // モーダルで判定用
 					// prologue2St.disable(); // スクロールトリガー停止
 					toggleSectionLink(sectionId);
 					aboutTl.restart();
 					aboutTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
-					window.addEventListener("touchmove", noscroll, {
-						passive: false,
-					});
-					window.addEventListener("wheel", noscroll, {
-						passive: false,
-					});
+					hideSectionLink();
 					mfbmFieldTl.reverse();
 					mfbmFieldTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
@@ -823,18 +801,18 @@ function topSections() {
 				break;
 			case "business":
 				if (direction == 1) {
-					hideSectionLink.restart();
+					hideSectionLink();
 					mfbmFieldTl.restart();
 					mfbmFieldTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topJobTl.reverse();
 					topJobTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
@@ -842,18 +820,18 @@ function topSections() {
 				break;
 			case "job":
 				if (direction == 1) {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topJobTl.restart();
 					topJobTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topProjectTl.reverse();
 					topProjectTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
@@ -861,18 +839,18 @@ function topSections() {
 				break;
 			case "project":
 				if (direction == 1) {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topProjectTl.restart();
 					topProjectTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topPersonTl.reverse();
 					topPersonTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
@@ -880,18 +858,18 @@ function topSections() {
 				break;
 			case "person":
 				if (direction == 1) {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topPersonTl.restart();
 					topPersonTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topCultureTl.reverse();
 					topCultureTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
@@ -899,20 +877,20 @@ function topSections() {
 				break;
 			case "culture":
 				if (direction == 1) {
-					hideSectionLink.restart();
+					hideSectionLink();
 					epilogueTl.progress(0).pause();
 					topCultureTl.restart();
 					topCultureTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
 				} else {
-					hideSectionLink.restart();
+					hideSectionLink();
 					topCultureTl.progress(1);
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 					});
@@ -920,10 +898,10 @@ function topSections() {
 				break;
 			case "epilogue":
 				if (direction == 1) {
-					hideSectionLink.restart();
+					hideSectionLink();
 					epilogueTl.restart();
 					epilogueTl.eventCallback("onComplete", () => {
-						showSectionLink.restart();
+						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
 						spSectionTransition("topFooter", 1, 9);
@@ -933,21 +911,23 @@ function topSections() {
 						passive: false,
 					}); // スクロール禁止
 					window.addEventListener("wheel", noscroll, { passive: false }); //　スクロール禁止
+					scrollableSectionFlag = false; // モーダルで判定用
 					topFooterSt.disable(); // スクロールトリガー停止
 					setTimeout(() => {
-						showSectionLink.restart();
+						showSectionLink();
 					}, 500);
 					animating.flag = false;
 				}
 				break;
 			case "topFooter":
 				sectionScrollTween.eventCallback("onStart", () => {
-					hideSectionLink.restart();
+					hideSectionLink();
 				});
 				topScrollObserver.disable(); // スクロールイベント監視停止
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
 				}); // スクロール許可
+				scrollableSectionFlag = true; // モーダルで判定用
 				window.removeEventListener("wheel", noscroll, { passive: false }); // スクロール許可
 				topFooterInitTl.restart();
 				topFooterSt.enable(); // スクロールトリガー開始（スクロールトリガーはイベントコールバックのメソッドが無いので処理内容はモジュール内で確認）
@@ -1001,7 +981,6 @@ function topSections() {
 		// onEnable: (self) => (self.savedScroll = self.scrollY()), // save the scroll position
 		// onChangeY: (self) => self.scrollY(self.savedScroll), // refuse to scroll
 	});
-
 	gotoSection(0, 1);
 }
 
@@ -1011,4 +990,5 @@ export {
 	animating,
 	pcSectionTransition,
 	spSectionTransition,
+	scrollableSectionFlag,
 };

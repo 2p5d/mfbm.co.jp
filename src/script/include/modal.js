@@ -1,5 +1,5 @@
-import { spmql, setScrollBarWidth } from "./vars";
-import { topScrollObserver } from "./topSections";
+import { spmql, setScrollBarWidth, noscroll } from "./vars";
+import { topScrollObserver, scrollableSectionFlag } from "./topSections";
 import { video } from "./topVideo";
 import {
 	disableBodyScroll,
@@ -33,9 +33,13 @@ function modal() {
 		};
 		const content = wrapInner.children[0];
 
-		if (topScrollObserver) {
+		if (topScrollObserver && !scrollableSectionFlag) {
 			if (!topScrollObserver.isEnabled) {
 				topScrollObserver.enable();
+				window.addEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.addEventListener("wheel", noscroll, { passive: false });
 			}
 		}
 
@@ -75,9 +79,13 @@ function modal() {
 	}
 
 	function activeModal(content, id) {
-		if (topScrollObserver) {
+		if (topScrollObserver && !scrollableSectionFlag) {
 			if (topScrollObserver.isEnabled) {
 				topScrollObserver.disable();
+				window.removeEventListener("touchmove", noscroll, {
+					passive: false,
+				});
+				window.removeEventListener("wheel", noscroll, { passive: false });
 			}
 		}
 

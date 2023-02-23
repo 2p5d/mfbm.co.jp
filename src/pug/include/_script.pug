@@ -1,5 +1,25 @@
-//- header pug
+
 
 block script
 
-script(src=assets_path + js_dir + 'script.js' + version, defer)
+//- script(src=assets_path + js_dir + 'script.js' + version, defer)
+script(src=assets_path + js_dir + 'vendor.js' + version, defer)
+script(src=assets_path + js_dir + 'common.js' + version, defer)
+
+if key != "top"
+  script(src=assets_path + js_dir + 'common_second.js' + version, defer)
+
+if key === "top"
+  script(src=assets_path + js_dir + 'top.js' + version, defer)
+
+if key === "about01"
+  script(src=assets_path + js_dir + 'about01.js' + version, defer)
+
+if key === "business"
+  script(src=assets_path + js_dir + 'business.js' + version, defer)
+
+if key.includes("person")
+  script(src=assets_path + js_dir + 'person.js' + version, defer)
+
+if key === "culture"
+  script(src=assets_path + js_dir + 'culture.js' + version, defer)

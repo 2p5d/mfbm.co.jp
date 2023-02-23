@@ -46,12 +46,12 @@ head
 	if og_image !== ''
 		meta(
 			property="og:image",
-			content=domain + assets_path + favicon_dir + og_image
+			content=domain + 'assets/' + favicon_dir + og_image
 		)
 	if twitter_card !== ''
 		meta(
 			property="twitter:card",
-			content=domain + assets_path + favicon_dir + twitter_card
+			content=domain + 'assets/' + favicon_dir + twitter_card
 		)
 
 	//- preconnect

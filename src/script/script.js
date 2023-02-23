@@ -93,10 +93,6 @@ function init() {
 
 /* each page */
 
-import { gsap, ScrollTrigger } from "gsap/all";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
-gsap.registerPlugin(DrawSVGPlugin);
-
 // top
 function top() {
 	// document.querySelector(".top-cover").remove(); // 開発用
