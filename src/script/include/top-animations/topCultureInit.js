@@ -1,7 +1,8 @@
 import { touchDevice, remUnit, spmql, header, noscroll } from "../vars";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
-gsap.registerPlugin(ScrollTrigger, Observer);
+import DrawSVGPlugin from "gsap/DrawSVGPlugin";
+gsap.registerPlugin(ScrollTrigger, Observer, DrawSVGPlugin);
 
 let topCultureTl;
 

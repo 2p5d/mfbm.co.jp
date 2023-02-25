@@ -1,5 +1,6 @@
-import { gsap, ScrollTrigger } from "gsap/all";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { gsap } from "gsap/all";
+import DrawSVGPlugin from "gsap/DrawSVGPlugin";
+gsap.registerPlugin(DrawSVGPlugin);
 
 function cultureHero() {
 	const cultureHeroTweenArray = [];

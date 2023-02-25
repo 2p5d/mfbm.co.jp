@@ -151,7 +151,7 @@
 	img {
 		display: block;
 		object-fit: cover;
-		width: 100%;
+		width: calc(100% + 2px); // 何故かすができるので
 		height: 100%;
 		will-change: transform, opacity;
 	}

@@ -31,8 +31,6 @@ import {
 
 import { gsap, ScrollTrigger } from "gsap/all";
 import { Observer } from "gsap/Observer";
-import DrawSVGPlugin from "gsap/DrawSVGPlugin";
-gsap.registerPlugin(ScrollTrigger, Observer, DrawSVGPlugin);
 
 let topScrollObserver,
 	currentSectionId,
@@ -279,6 +277,11 @@ function topSections() {
 			link.addEventListener("click", (event) => {
 				event.preventDefault();
 
+				/*
+					セクション間移動禁止
+				*/
+				animating.flag = true;
+
 				const targetSectionId = event.currentTarget.href.split("#")[1];
 
 				if (targetSectionId === "prologue") {
@@ -344,11 +347,6 @@ function topSections() {
 						},
 					}); // フッターはz-indexはそのままでフェードアウトして、コールバックで戻す
 				}
-
-				/*
-					セクション間移動禁止
-				*/
-				animating.flag = true;
 
 				/*
 					リンクが無いセクションの処理
@@ -603,8 +601,14 @@ function topSections() {
 					toggleNavigation(sectionId);
 					hideSectionLink();
 					topPersonTl.progress(1);
+					cultureTweenArray.forEach((tween) => {
+						tween.play(); // ループアニメーションを継続（共通処理をキャンセル）
+					});
 					topCultureTl.reverse();
 					topCultureTl.eventCallback("onReverseComplete", () => {
+						cultureTweenArray.forEach((tween) => {
+							tween.pause(); // ループアニメーションを停止
+						});
 						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
@@ -626,6 +630,7 @@ function topSections() {
 					});
 				} else {
 					toggleNavigation(sectionId);
+					hideSectionLink();
 					topCultureTl.progress(1);
 					epilogueTl.reverse();
 					epilogueTl.eventCallback("onReverseComplete", () => {
@@ -641,8 +646,14 @@ function topSections() {
 					toggleNavigation(sectionId);
 					hideSectionLink();
 					document.querySelector("#topFooter").scrollTop = 0; // スクロール位置リセット
+					cultureTweenArray.forEach((tween) => {
+						tween.play(); // ループアニメーションを継続（共通処理をキャンセル）
+					});
 					epilogueTl.restart();
 					epilogueTl.eventCallback("onComplete", () => {
+						cultureTweenArray.forEach((tween) => {
+							tween.play(); // ループアニメーションを停止
+						});
 						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
@@ -661,7 +672,7 @@ function topSections() {
 				break;
 			case "topFooter":
 				hideSectionLink();
-				toggleNavigation(sectionId);
+				// toggleNavigation(sectionId); // 不要
 				topScrollObserver.disable(); // スクロールイベント監視停止
 				window.removeEventListener("touchmove", noscroll, {
 					passive: false,
@@ -867,8 +878,14 @@ function topSections() {
 					});
 				} else {
 					hideSectionLink();
+					cultureTweenArray.forEach((tween) => {
+						tween.play(); // ループアニメーションを継続（共通処理をキャンセル）
+					});
 					topCultureTl.reverse();
 					topCultureTl.eventCallback("onReverseComplete", () => {
+						cultureTweenArray.forEach((tween) => {
+							tween.pause(); // ループアニメーションを停止
+						});
 						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;
@@ -899,8 +916,14 @@ function topSections() {
 			case "epilogue":
 				if (direction == 1) {
 					hideSectionLink();
+					cultureTweenArray.forEach((tween) => {
+						tween.play(); // ループアニメーションを継続（共通処理をキャンセル）
+					});
 					epilogueTl.restart();
 					epilogueTl.eventCallback("onComplete", () => {
+						cultureTweenArray.forEach((tween) => {
+							tween.pause(); // ループアニメーションを停止
+						});
 						showSectionLink();
 						toggleSectionLink(sectionId);
 						animating.flag = false;

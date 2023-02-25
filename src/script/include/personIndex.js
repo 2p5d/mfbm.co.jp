@@ -3,16 +3,16 @@ import { remUnit } from "./vars";
 gsap.registerPlugin(ScrollTrigger);
 
 const personIndex = () => {
-	const parents = document.querySelectorAll(".person-index__item"),
+	const parents = document.querySelectorAll(
+			".person-index__item:not(.swiper-slide)"
+		),
 		personIndexInit = () => {
-			if (parents.length) {
-				parents.forEach((parent) => {
-					const items = parent.querySelectorAll(
-						".person-index__item-cover-content,.person-index__item-cover-label.person-index__item-cover-title,.person-index__item-link,.person-index__item-person-photo,.person-index__item-person-description-title,.person-index__item-person-description-text,.person-index__item-person-data-label,.person-index__item-person-data-name,.person-index__item-person-data-text"
-					);
-					gsap.set(items, { autoAlpha: 0 });
-				});
-			}
+			parents.forEach((parent) => {
+				const items = parent.querySelectorAll(
+					".person-index__item-cover-content,.person-index__item-cover-label.person-index__item-cover-title,.person-index__item-link,.person-index__item-person-photo,.person-index__item-person-description-title,.person-index__item-person-description-text,.person-index__item-person-data-label,.person-index__item-person-data-name,.person-index__item-person-data-text"
+				);
+				gsap.set(items, { autoAlpha: 0 });
+			});
 		},
 		personIndexAnim = () => {
 			ScrollTrigger.batch(parents, {
@@ -46,7 +46,9 @@ const personIndex = () => {
 			});
 		};
 
-	personIndexInit();
-	personIndexAnim();
+	if (parents.length) {
+		personIndexInit();
+		personIndexAnim();
+	}
 };
 export { personIndex };
