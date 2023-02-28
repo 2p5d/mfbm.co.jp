@@ -51,7 +51,11 @@ function topCover() {
 		removeCover = () => {
 			content.classList.add("--disable");
 			if (video) {
-				video.play();
+				/*
+					動画の再生ヘッドを頭に
+				*/
+				video.currentTime = 0;
+				// video.play();
 			}
 			content.addEventListener("animationend", (event) => {
 				prologueFirstTl.play();
@@ -62,14 +66,7 @@ function topCover() {
 					document.body.classList.remove("--pointer-events-none");
 				});
 
-				// if (!spmql.matches) {
-				// 	window.removeEventListener("touchmove", noscroll, {
-				// 		passive: false,
-				// 	});
-				// 	window.removeEventListener("wheel", noscroll, { passive: false });
-				// }
-
-				// content.remove();
+				content.remove();
 			});
 		};
 
@@ -81,6 +78,12 @@ function topCover() {
 
 	prologueInit();
 
+	/*
+		動画が重め（iphoneで一瞬coverじゃないサイズで表示されてしまう）なので、ここでプレイして一旦再生させる
+	*/
+	if (video) {
+		video.play();
+	}
 	setTimeout(removeCover, 3000);
 
 	/*
@@ -227,6 +230,40 @@ function topSections() {
 			zIndex: 1,
 		});
 	}
+
+	/*
+		ルートをposition:fixedすることで、iosのui変化を起こさせない
+	*/
+
+	Object.assign(document.documentElement.style, {
+		position: "fixed",
+		top: "0",
+		left: "0",
+		width: "100%",
+		height: "100%",
+		overscrollBehaviorY: "none",
+	});
+
+	Object.assign(document.body.style, {
+		position: "fixed",
+		top: "0",
+		left: "0",
+		width: "100%",
+		height: "100%",
+		overscrollBehaviorY: "none",
+	});
+
+	// ScrollTrigger.normalizeScroll(true); // バウンスやアドレスバーの変化など防げるが、ノーマルスクロールの反応が微妙になるので見送り
+
+	/*
+	headerを触るとバウンスしてしまう対応
+	→それでも下記で許可しているUI（button、a）でタッチムーブするとバウンス動作してしまう（レアなので諦めた）
+	*/
+	header.style.pointerEvents = "none";
+	const headerLinks = header.querySelectorAll("header a, header button");
+	headerLinks.forEach((link) => {
+		link.style.pointerEvents = "auto";
+	});
 
 	const getSectionIndex = (sectionId) => {
 		for (let i = 0; i < eps.length; i++) {
@@ -983,8 +1020,6 @@ function topSections() {
 			pcSectionTransition(sectionId, direction, index);
 		}
 	}
-
-	// ScrollTrigger.normalizeScroll(true); // windowイベントにしかアタッチできないので、使えない
 
 	topScrollObserver = Observer.create({
 		type: "wheel,touch,pointer",
